@@ -32,13 +32,20 @@ func start():
 		currentDial = dict._Dialogues[currentDial].next
 	
 	
-	# Gestion des dialogues de ref 2 [REPONSES]
-	for i in range(dict._Dialogues[currentDial].content.size()):
+	# Gestion des dialogues de ref 2 [REPONSES CHOIX MULTIPLES]
+	if dict._Dialogues[currentDial].ref == 2:
 		print("Réponses choix multiples")
-		get_node(str("Bouton",i)).set_text(str("[",currentDial,"] : ",dict._Dialogues[currentDial].content[i]))
-		get_node(str("Bouton",i)).set_ignore_mouse(false)
-		get_node(str("Bouton",i)).set_flat(false)
+		for i in range(dict._Dialogues[currentDial].content.size()):
+			get_node(str("Bouton",i)).set_text(str("[",currentDial,"] : ",dict._Dialogues[currentDial].content[i]))
+			get_node(str("Bouton",i)).set_ignore_mouse(false)
+			get_node(str("Bouton",i)).set_flat(false)
 	
+	
+	# Gestion des dialogues de ref 3 [REPONSES VIA TEXTE PRECIS]
+	if dict._Dialogues[currentDial].ref == 3:
+		print("Réponses via texte")
+		get_node("TextEdit").show()
+		get_node("TextEdit").clear()
 	
 	# Gestion des boutons de choix multipes
 	# BOUTON 0
@@ -79,10 +86,24 @@ func _on_Bouton3_pressed():
 	
 	# Nettoyage des boutons inutiles
 func clean():
-	for i in range(3):
+	for i in range(4):
 		print("Suppression bouton")
 		get_node(str("Bouton",i)).set_text("")
 		get_node(str("Bouton",i)).set_ignore_mouse(true)
 		get_node(str("Bouton",i)).set_flat(true)
 
 
+func _on_TextEdit_input_event(enter):
+	pass
+
+
+func _on_TextEdit_text_entered( text ):
+	if get_node("TextEdit").get_text() == dict._Dialogues[currentDial].content[0]:
+		get_node("Dialogues").push_align(2)
+		get_node("Dialogues").add_text(str("\n[",currentDial,"] : ",dict._Dialogues[currentDial].content[0]))
+		currentDial = dict._Dialogues[currentDial].next[0]
+		get_node("TextEdit").hide()
+		start()
+	else:
+		currentDial = dict._Dialogues[currentDial].next[1]
+		start()

@@ -6,12 +6,12 @@
     "Disclaimer" : "L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).",
     "Contact Leifer" : "leifer.kopf@gmail.com",
     "Contact Nootilus" : "",
-    "Version" : "v0.15"
+    "Version" : "v0.16"
     },
 
     "_Dialogues" : {
             "_Comment" : {
-                "Ref" : "Dialogue = 1 ; Reponse = 2"
+                "Ref" : "Dialogue = 1 ; Reponse choix multiple = 2 ; Reponse text précis = 3"
             },
             "dial001" : {
                 "ref" : 1,
@@ -35,7 +35,17 @@
             },
             "dial005" : {
                 "ref" : 1,
-                "content" : "Premiere mission, mange une pomme rouge!",
+                "content" : "Premiere mission, ecrivez le mot 'Trahison' dans la boite de dialogue !",
+                "next" : "rep003"
+            },
+            "dial006" : {
+                "ref" : 1,
+                "content" : "Parfait tu as rempli ta mission avec succes",
+                "next" : "rep004"
+            },
+            "dial007" : {
+                "ref" : 1,
+                "content" : "Je pense que tu as du faire une erreur, recommence",
                 "next" : "rep003"
             },
             
@@ -55,6 +65,11 @@
                 "next" : ["dial004"]
             },
             "rep003" : {
+                "ref" : 3,
+                "content" : ["Trahison"],
+                "next" : ["dial006", "dial007"]
+            },
+            "rep004" : {
                 "ref" : 2,
                 "content" : ["FIN"],
                 "next" : ["dial001"]
