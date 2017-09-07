@@ -1,0 +1,64 @@
+{
+    "_Credits" : {
+    "Developpeur" : "Leifer Kopf",
+    "Scenariste" : "Nootilus",
+    "Moteur" : "GodotEngine",
+    "Disclaimer" : "L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).",
+    "Contact Leifer" : "leifer.kopf@gmail.com",
+    "Contact Nootilus" : "",
+    "Version" : "v0.15"
+    },
+
+    "_Dialogues" : {
+            "_Comment" : {
+                "Ref" : "Dialogue = 1 ; Reponse = 2"
+            },
+            "dial001" : {
+                "ref" : 1,
+                "content" : "Bonjour et bienvenue dans cette aventure magique ! Voulez vous commencer ?",
+                "next" : "rep001"
+            },
+            "dial002" : {
+                "ref" : 1,
+                "content" : "Alors c'est parti.",
+                "next" : "dial004"
+            },
+            "dial003" : {
+                "ref" : 1,
+                "content" : "D'accord previens moi quand tu sera pret.",
+                "next" : "rep002"
+            },
+            "dial004" : {
+                "ref" : 1,
+                "content" : "Ta premiere mission te sera communiqué dans 5 minutes",
+                "next" : "dial005"
+            },
+            "dial005" : {
+                "ref" : 1,
+                "content" : "Premiere mission, mange une pomme rouge!",
+                "next" : "rep003"
+            },
+            
+        
+            "_Reponses" : {
+                "_Comment" : "..."
+            },
+            
+            "rep001" : {
+                "ref" : 2,
+                "content" : ["oui", "non"],
+                "next" : ["dial002", "dial003"]
+            },
+            "rep002" : {
+                "ref" : 2,
+                "content" : ["Je suis pret"],
+                "next" : ["dial004"]
+            },
+            "rep003" : {
+                "ref" : 2,
+                "content" : ["FIN"],
+                "next" : ["dial001"]
+            }
+    }
+            
+}
