@@ -24,22 +24,29 @@ func start():
 	file.open("res://json/credit.json", file.READ)
 	dict.parse_json(file.get_as_text())
 	file.close()
-	
+
+
 # Timer
 	time_delay = dict._Dialogues[currentDial].time
 	timer = get_node("Timer")
 	timer.set_wait_time(time_delay)
 	timer.start()
+	if dict._Dialogues[currentDial].ref == 1:
+		get_node("Status").set_text("Ecrit un message")
 
+# A la fin du timer
 func _on_Timer_timeout():
 	print("timer")
 	write = true
-
+	get_node("Status").clear()
+	
+	
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	while currentDial in dict._Dialogues and dict._Dialogues[currentDial].ref == 1 and write :
 		print("Dialogues")
+		get_node("Dialogues").newline()
 		get_node("Dialogues").push_align(0)
-		get_node("Dialogues").add_text(str("\n [",currentDial,"] : ",dict._Dialogues[currentDial].content))
+		get_node("Dialogues").add_text(str("[",currentDial,"] : ",dict._Dialogues[currentDial].content))
 		currentDial = dict._Dialogues[currentDial].next
 		write = false
 		start()
@@ -48,6 +55,7 @@ func _on_Timer_timeout():
 	if dict._Dialogues[currentDial].ref == 2 :
 		print("Réponses choix multiples")
 		for i in range(dict._Dialogues[currentDial].content.size()):
+			get_node("Dialogues").newline()
 			get_node(str("Bouton",i)).set_text(str("[",currentDial,"] : ",dict._Dialogues[currentDial].content[i]))
 			get_node(str("Bouton",i)).set_ignore_mouse(false)
 			get_node(str("Bouton",i)).set_flat(false)
