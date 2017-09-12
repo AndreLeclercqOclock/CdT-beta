@@ -6,12 +6,15 @@
     "Disclaimer" : "L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).",
     "Contact Leifer" : "leifer.kopf@gmail.com",
     "Contact Nootilus" : "",
-    "Version" : "v0.21"
+    "Version" : "v0.27"
     },
 
     "_Dialogues" : {
             "_Comment" : {
                 "Ref" : "Dialogue = 1 ; Reponse choix multiple = 2 ; Reponse text précis = 3", "Time" : "En secondes"
+            },
+            "name" : {
+                "name" : "Narrateur"
             },
             "dial001" : {
                 "ref" : 1,

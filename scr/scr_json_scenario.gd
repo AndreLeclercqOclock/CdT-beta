@@ -2,15 +2,16 @@
 # Script par LEIFER KOPF // leifer.kopf@gmail.com
 # Scénario par NOOTILUS //
 # Disclaimer : L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).
-# version : 0.26
+# version : 0.41
 
 extends Control
 
 var dict = {}
 var currentDial = "dial001"
 var timer = null
-var time_delay = null
+var time_delay = 1
 var write = false
+var wait = false
 
 func _ready():
 	print("ready")
@@ -21,33 +22,44 @@ func start():
 	
 # Ouverture / Parse / Fermeture du fichier JSON
 	var file = File.new()
-	file.open("res://json/credit.json", file.READ)
+	file.open("res://json/dial_fr.json", file.READ)
 	dict.parse_json(file.get_as_text())
 	file.close()
-
-
+	timer()
+	
+func timer():
 # Timer
-	time_delay = dict._Dialogues[currentDial].time
 	timer = get_node("Timer")
 	timer.set_wait_time(time_delay)
 	timer.start()
-	if dict._Dialogues[currentDial].ref == 1:
-		get_node("Status").set_text("Ecrit un message")
+	
 
 # A la fin du timer
 func _on_Timer_timeout():
 	print("timer")
-	write = true
+	if wait == false:
+		wait = true
+		start()
+	elif wait and write == false:
+		write = true
+		wait = false
 	get_node("Status").clear()
+	
+# Affiche un texte quand l'interlocuteur écrit
+	if dict._Dialogues[currentDial].ref == 1 and wait:
+		get_node("Status").set_text(str(dict._Dialogues.name.name," écrit un message"))
+		time_delay = dict._Dialogues[currentDial].time
 	
 	
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	while currentDial in dict._Dialogues and dict._Dialogues[currentDial].ref == 1 and write :
 		print("Dialogues")
+		get_node("Dialogues").set_scroll_follow(true)
 		get_node("Dialogues").newline()
 		get_node("Dialogues").push_align(0)
-		get_node("Dialogues").add_text(str("[",currentDial,"] : ",dict._Dialogues[currentDial].content))
+		get_node("Dialogues").add_text(str(dict._Dialogues.name.name," : ",dict._Dialogues[currentDial].content))
 		currentDial = dict._Dialogues[currentDial].next
+		time_delay = 2
 		write = false
 		start()
 	
@@ -56,7 +68,7 @@ func _on_Timer_timeout():
 		print("Réponses choix multiples")
 		for i in range(dict._Dialogues[currentDial].content.size()):
 			get_node("Dialogues").newline()
-			get_node(str("Bouton",i)).set_text(str("[",currentDial,"] : ",dict._Dialogues[currentDial].content[i]))
+			get_node(str("Bouton",i)).set_text(str(dict._Dialogues[currentDial].content[i]))
 			get_node(str("Bouton",i)).set_ignore_mouse(false)
 			get_node(str("Bouton",i)).set_flat(false)
 		timer.stop()
@@ -74,8 +86,9 @@ func _on_Timer_timeout():
 func _on_Bouton0_pressed():
 	print("Bouton 0")
 	get_node("Dialogues").push_align(2)
-	get_node("Dialogues").add_text(str("\n[",currentDial,"] : ",dict._Dialogues[currentDial].content[0]))
+	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
 	currentDial = dict._Dialogues[currentDial].next[0]
+	time_delay = 2
 	clean()
 	start()
 	
@@ -83,8 +96,9 @@ func _on_Bouton0_pressed():
 func _on_Bouton1_pressed():
 	print("Bouton 1")
 	get_node("Dialogues").push_align(2)
-	get_node("Dialogues").add_text(str("\n[",currentDial,"] : ",dict._Dialogues[currentDial].content[1]))
+	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[1]))
 	currentDial = dict._Dialogues[currentDial].next[1]
+	time_delay = 2
 	clean()
 	start()
 	
@@ -92,8 +106,9 @@ func _on_Bouton1_pressed():
 func _on_Bouton2_pressed():
 	print("Bouton 2")
 	get_node("Dialogues").push_align(2)
-	get_node("Dialogues").add_text(str("\n [",currentDial,"] : ",dict._Dialogues[currentDial].content[2]))
+	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[2]))
 	currentDial = dict._Dialogues[currentDial].next[2]
+	time_delay = 2
 	clean()
 	start()
 	
@@ -101,8 +116,9 @@ func _on_Bouton2_pressed():
 func _on_Bouton3_pressed():
 	print("Bouton 3")
 	get_node("Dialogues").push_align(2)
-	get_node("Dialogues").add_text(str("\n [",currentDial,"] : ",dict._Dialogues[currentDial].content[3]))
+	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[3]))
 	currentDial = dict._Dialogues[currentDial].next[3]
+	time_delay = 2
 	clean()
 	start()
 	
@@ -118,12 +134,14 @@ func clean():
 func _on_TextEdit_text_entered( text ):
 	if get_node("TextEdit").get_text() == dict._Dialogues[currentDial].content[0]:
 		get_node("Dialogues").push_align(2)
-		get_node("Dialogues").add_text(str("\n[",currentDial,"] : ",dict._Dialogues[currentDial].content[0]))
+		get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
 		currentDial = dict._Dialogues[currentDial].next[0]
+		time_delay = 2
 		get_node("TextEdit").hide()
 		start()
 	else:
 		currentDial = dict._Dialogues[currentDial].next[1]
+		time_delay = 2
 		start()
 		
 		

@@ -1,20 +1,206 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="2" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
+<resource_file type="PackedScene" subresource_count="19" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
+	<ext_resource path="res://img/cross-small.png" type="Texture" index="3"></ext_resource>
 	<ext_resource path="res://scr/scr_json_scenario.gd" type="Script" index="0"></ext_resource>
+	<ext_resource path="res://font/coolvetica rg.fnt" type="BitmapFont" index="1"></ext_resource>
+	<ext_resource path="res://scr/scr_ui.gd" type="Script" index="2"></ext_resource>
+	<resource type="StyleBoxFlat" path="local://2">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.242081, 0.306587, 0.371094, 1 </color>
+		<color name="light_color"> 0.262745, 0.32549, 0.388235, 1 </color>
+		<color name="dark_color"> 0.372549, 0.423529, 0.478431, 1 </color>
+		<int name="border_size"> 2 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://9">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.87451, 0.411765, 0.101961, 1 </color>
+		<color name="light_color"> 0.9375, 0.531694, 0.26001, 1 </color>
+		<color name="dark_color"> 0.792969, 0.334691, 0.0278778, 1 </color>
+		<int name="border_size"> 0 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://1">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.305882, 0.364706, 0.423529, 1 </color>
+		<color name="light_color"> 0.373489, 0.426979, 0.480469, 1 </color>
+		<color name="dark_color"> 0.263977, 0.327301, 0.390625, 1 </color>
+		<int name="border_size"> 2 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://6">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.242081, 0.306587, 0.371094, 1 </color>
+		<color name="light_color"> 0.262745, 0.32549, 0.388235, 1 </color>
+		<color name="dark_color"> 0.372549, 0.423529, 0.478431, 1 </color>
+		<int name="border_size"> 2 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://10">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.87451, 0.411765, 0.101961, 1 </color>
+		<color name="light_color"> 0.9375, 0.531694, 0.26001, 1 </color>
+		<color name="dark_color"> 0.792969, 0.334691, 0.0278778, 1 </color>
+		<int name="border_size"> 0 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://3">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.305882, 0.364706, 0.423529, 1 </color>
+		<color name="light_color"> 0.373489, 0.426979, 0.480469, 1 </color>
+		<color name="dark_color"> 0.263977, 0.327301, 0.390625, 1 </color>
+		<int name="border_size"> 2 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://7">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.242081, 0.306587, 0.371094, 1 </color>
+		<color name="light_color"> 0.262745, 0.32549, 0.388235, 1 </color>
+		<color name="dark_color"> 0.372549, 0.423529, 0.478431, 1 </color>
+		<int name="border_size"> 2 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://11">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.87451, 0.411765, 0.101961, 1 </color>
+		<color name="light_color"> 0.9375, 0.531694, 0.26001, 1 </color>
+		<color name="dark_color"> 0.792969, 0.334691, 0.0278778, 1 </color>
+		<int name="border_size"> 0 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://4">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.305882, 0.364706, 0.423529, 1 </color>
+		<color name="light_color"> 0.373489, 0.426979, 0.480469, 1 </color>
+		<color name="dark_color"> 0.263977, 0.327301, 0.390625, 1 </color>
+		<int name="border_size"> 2 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://8">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.242081, 0.306587, 0.371094, 1 </color>
+		<color name="light_color"> 0.262745, 0.32549, 0.388235, 1 </color>
+		<color name="dark_color"> 0.372549, 0.423529, 0.478431, 1 </color>
+		<int name="border_size"> 2 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://12">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.87451, 0.411765, 0.101961, 1 </color>
+		<color name="light_color"> 0.9375, 0.531694, 0.26001, 1 </color>
+		<color name="dark_color"> 0.792969, 0.334691, 0.0278778, 1 </color>
+		<int name="border_size"> 0 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://5">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.6, 0.6, 0.6, 1 </color>
+		<color name="light_color"> 0.8, 0.8, 0.8, 1 </color>
+		<color name="dark_color"> 0.8, 0.8, 0.8, 1 </color>
+		<int name="border_size"> 0 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://14">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.242081, 0.306587, 0.371094, 1 </color>
+		<color name="light_color"> 0.262745, 0.32549, 0.388235, 1 </color>
+		<color name="dark_color"> 0.372549, 0.423529, 0.478431, 1 </color>
+		<int name="border_size"> 2 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
+	<resource type="StyleBoxFlat" path="local://13">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+		<color name="bg_color"> 0.305882, 0.364706, 0.423529, 1 </color>
+		<color name="light_color"> 0.373489, 0.426979, 0.480469, 1 </color>
+		<color name="dark_color"> 0.263977, 0.327301, 0.390625, 1 </color>
+		<int name="border_size"> 2 </int>
+		<bool name="border_blend"> True </bool>
+		<bool name="draw_bg"> True </bool>
+
+	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
-			<int> 6 </int>
+			<int> 7 </int>
 			<string> "conns" </string>
-			<int_array  len="36"> 				3, 1, 43, 42, 2, 0, 4, 1, 43, 44, 2, 0, 5, 1, 43, 45, 2, 0, 6, 1, 43, 46, 2, 0, 7, 1, 48, 47, 2, 0, 8, 1, 50, 49, 2, 0 </int_array>
+			<int_array  len="42"> 				3, 1, 66, 65, 2, 0, 4, 1, 66, 67, 2, 0, 5, 1, 66, 68, 2, 0, 6, 1, 66, 69, 2, 0, 7, 1, 71, 70, 2, 0, 8, 1, 73, 72, 2, 0, 11, 10, 66, 74, 2, 0 </int_array>
 			<string> "editable_instances" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="51">
+			<string_array  len="75">
 				<string> "World" </string>
 				<string> "Node" </string>
 				<string> "Interpreteur JSON Scénario" </string>
+				<string> "editor/display_folded" </string>
 				<string> "focus/ignore_mouse" </string>
 				<string> "focus/stop_mouse" </string>
 				<string> "size_flags/horizontal" </string>
@@ -26,12 +212,21 @@
 				<string> "script/script" </string>
 				<string> "Control" </string>
 				<string> "Dialogues" </string>
+				<string> "custom_fonts/normal_font" </string>
+				<string> "custom_colors/default_color" </string>
+				<string> "custom_colors/selection_color" </string>
+				<string> "custom_colors/font_color_selected" </string>
 				<string> "bbcode/enabled" </string>
 				<string> "bbcode/bbcode" </string>
 				<string> "visible_characters" </string>
 				<string> "percent_visible" </string>
 				<string> "RichTextLabel" </string>
 				<string> "Bouton0" </string>
+				<string> "custom_styles/hover" </string>
+				<string> "custom_styles/pressed" </string>
+				<string> "custom_styles/normal" </string>
+				<string> "custom_fonts/font" </string>
+				<string> "custom_colors/font_color" </string>
 				<string> "toggle_mode" </string>
 				<string> "enabled_focus_mode" </string>
 				<string> "shortcut" </string>
@@ -43,6 +238,7 @@
 				<string> "Bouton3" </string>
 				<string> "TextEdit" </string>
 				<string> "visibility/visible" </string>
+				<string> "custom_styles/focus" </string>
 				<string> "placeholder/alpha" </string>
 				<string> "focus_mode" </string>
 				<string> "caret/caret_blink" </string>
@@ -54,6 +250,18 @@
 				<string> "one_shot" </string>
 				<string> "autostart" </string>
 				<string> "Status" </string>
+				<string> "UI" </string>
+				<string> "quit_button" </string>
+				<string> "Sprite" </string>
+				<string> "transform/pos" </string>
+				<string> "transform/scale" </string>
+				<string> "texture" </string>
+				<string> "version" </string>
+				<string> "custom_colors/font_color_shadow" </string>
+				<string> "text" </string>
+				<string> "lines_skipped" </string>
+				<string> "max_lines_visible" </string>
+				<string> "Label" </string>
 				<string> "_on_Bouton0_pressed" </string>
 				<string> "pressed" </string>
 				<string> "_on_Bouton1_pressed" </string>
@@ -63,55 +271,90 @@
 				<string> "text_entered" </string>
 				<string> "_on_Timer_timeout" </string>
 				<string> "timeout" </string>
+				<string> "_on_quit_button_pressed" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 10 </int>
+			<int> 14 </int>
 			<string> "node_paths" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="270"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 12, 2, -1, 9, 3, 0, 4, 1, 5, 2, 6, 2, 7, 3, 8, 4, 9, 5, 10, 6, 11, 7, 0, 1, 0, 18, 13, -1, 12, 3, 0, 4, 1, 5, 2, 6, 2, 7, 8, 8, 8, 9, 9, 10, 10, 14, 0, 15, 11, 16, 12, 17, 13, 0, 1, 0, 25, 19, -1, 12, 3, 1, 4, 1, 5, 2, 6, 2, 7, 14, 8, 15, 9, 16, 10, 17, 20, 0, 21, 18, 22, 19, 23, 1, 1, 24, 1, 0, 25, 26, -1, 12, 3, 1, 4, 1, 5, 2, 6, 2, 7, 14, 8, 20, 9, 21, 10, 22, 20, 0, 21, 18, 22, 19, 23, 1, 1, 24, 1, 0, 25, 27, -1, 12, 3, 1, 4, 1, 5, 2, 6, 2, 7, 23, 8, 24, 9, 25, 10, 26, 20, 0, 21, 18, 22, 19, 23, 1, 1, 24, 1, 0, 25, 28, -1, 12, 3, 1, 4, 1, 5, 2, 6, 2, 7, 27, 8, 28, 9, 21, 10, 29, 20, 0, 21, 18, 22, 19, 23, 1, 1, 24, 1, 0, 35, 29, -1, 13, 30, 0, 3, 0, 4, 1, 5, 2, 6, 2, 7, 30, 8, 31, 9, 32, 10, 33, 31, 34, 32, 2, 33, 0, 34, 35, 0, 1, 0, 36, 36, -1, 4, 37, 36, 38, 13, 39, 1, 40, 0, 0, 1, 0, 18, 41, -1, 12, 3, 0, 4, 1, 5, 2, 6, 2, 7, 37, 8, 9, 9, 38, 10, 39, 14, 0, 15, 11, 16, 12, 17, 13, 0 </int_array>
+			<int_array  len="440"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 13, 2, -1, 10, 3, 0, 4, 1, 5, 0, 6, 2, 7, 2, 8, 3, 9, 4, 10, 5, 11, 6, 12, 7, 0, 1, 0, 23, 14, -1, 16, 4, 1, 5, 0, 6, 2, 7, 2, 8, 8, 9, 9, 10, 10, 11, 11, 15, 12, 16, 13, 17, 13, 18, 13, 19, 1, 20, 14, 21, 15, 22, 8, 0, 1, 0, 35, 24, -1, 17, 4, 0, 5, 0, 6, 2, 7, 2, 8, 16, 9, 17, 10, 18, 11, 19, 25, 20, 26, 21, 27, 22, 28, 12, 29, 13, 30, 1, 31, 23, 32, 24, 33, 0, 1, 34, 1, 0, 35, 36, -1, 17, 4, 0, 5, 0, 6, 2, 7, 2, 8, 16, 9, 25, 10, 26, 11, 27, 25, 28, 26, 29, 27, 30, 28, 12, 29, 13, 30, 1, 31, 23, 32, 24, 33, 0, 1, 34, 1, 0, 35, 37, -1, 17, 4, 0, 5, 0, 6, 2, 7, 2, 8, 31, 9, 32, 10, 33, 11, 34, 25, 35, 26, 36, 27, 37, 28, 12, 29, 13, 30, 1, 31, 23, 32, 24, 33, 0, 1, 34, 1, 0, 35, 38, -1, 17, 4, 0, 5, 0, 6, 2, 7, 2, 8, 38, 9, 39, 10, 26, 11, 40, 25, 41, 26, 42, 27, 43, 28, 12, 29, 13, 30, 1, 31, 23, 32, 24, 33, 0, 1, 34, 1, 0, 46, 39, -1, 17, 40, 1, 4, 1, 5, 0, 6, 2, 7, 2, 8, 44, 9, 45, 10, 46, 11, 47, 41, 48, 27, 49, 28, 12, 29, 13, 42, 50, 43, 2, 44, 1, 45, 51, 0, 1, 0, 47, 47, -1, 4, 48, 52, 49, 8, 50, 0, 51, 1, 0, 1, 0, 23, 52, -1, 14, 4, 1, 5, 0, 6, 2, 7, 2, 8, 53, 9, 54, 10, 55, 11, 56, 15, 12, 16, 57, 19, 1, 20, 14, 21, 15, 22, 8, 0, 0, 0, 13, 53, -1, 10, 3, 0, 4, 1, 5, 0, 6, 2, 7, 2, 8, 58, 9, 58, 10, 59, 11, 59, 12, 60, 0, 10, 0, 35, 54, -1, 12, 4, 1, 5, 0, 6, 2, 7, 2, 8, 61, 9, 62, 10, 63, 11, 64, 30, 1, 31, 2, 32, 24, 33, 0, 0, 11, 0, 55, 55, -1, 3, 56, 65, 57, 66, 58, 67, 0, 0, 0, 64, 59, -1, 15, 4, 0, 5, 0, 6, 2, 7, 23, 8, 53, 9, 68, 10, 69, 11, 70, 28, 12, 29, 71, 60, 72, 61, 73, 22, 8, 62, 23, 63, 15, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="40" shared="false">
-				<bool> False </bool>
+			<array  len="74" shared="false">
 				<bool> True </bool>
+				<bool> False </bool>
 				<int> 2 </int>
 				<real> 27 </real>
 				<real> 24 </real>
 				<real> 87 </real>
 				<real> 70 </real>
 				<resource  external="0">  </resource>
-				<real> 0 </real>
-				<real> 588 </real>
+				<real> 1 </real>
+				<real> 39 </real>
+				<real> 589 </real>
 				<real> 575 </real>
+				<resource  external="1">  </resource>
+				<color> 1, 0.972549, 0.972549, 1 </color>
 				<string> "" </string>
 				<int> -1 </int>
-				<real> 1 </real>
 				<real> -1 </real>
 				<real> 647 </real>
 				<real> 587 </real>
 				<real> 711 </real>
+				<resource  resource_type="StyleBox" path="local://2">  </resource>
+				<resource  resource_type="StyleBox" path="local://9">  </resource>
+				<resource  resource_type="StyleBox" path="local://1">  </resource>
 				<int> 0 </int>
 				<resource name=""></resource>				<real> 717 </real>
 				<real> 586 </real>
 				<real> 783 </real>
+				<resource  resource_type="StyleBox" path="local://6">  </resource>
+				<resource  resource_type="StyleBox" path="local://10">  </resource>
+				<resource  resource_type="StyleBox" path="local://3">  </resource>
 				<real> -3 </real>
 				<real> 790 </real>
 				<real> 584 </real>
 				<real> 857 </real>
+				<resource  resource_type="StyleBox" path="local://7">  </resource>
+				<resource  resource_type="StyleBox" path="local://11">  </resource>
+				<resource  resource_type="StyleBox" path="local://4">  </resource>
 				<real> -2 </real>
 				<real> 863 </real>
 				<real> 931 </real>
+				<resource  resource_type="StyleBox" path="local://8">  </resource>
+				<resource  resource_type="StyleBox" path="local://12">  </resource>
+				<resource  resource_type="StyleBox" path="local://5">  </resource>
 				<real> 26 </real>
 				<real> 851 </real>
 				<real> 561 </real>
-				<real> 896 </real>
+				<real> 878 </real>
+				<resource  resource_type="StyleBox" path="local://14">  </resource>
+				<resource  resource_type="StyleBox" path="local://13">  </resource>
 				<real> 0.6 </real>
 				<real> 0.65 </real>
 				<int> 1 </int>
-				<real> 390 </real>
-				<real> 599 </real>
-				<real> 632 </real>
+				<real> 7 </real>
+				<real> 580 </real>
+				<real> 520 </real>
+				<real> 624 </real>
+				<color> 0.87451, 0.411765, 0.101961, 1 </color>
+				<real> 0 </real>
+				<real> 40 </real>
+				<resource  external="2">  </resource>
+				<real> 570 </real>
+				<real> 8 </real>
+				<real> 626 </real>
+				<real> 58 </real>
+				<vector2> 28.5223, 24.9029 </vector2>
+				<vector2> 0.322637, 0.317093 </vector2>
+				<resource  external="3">  </resource>
+				<real> 2 </real>
+				<real> 94 </real>
+				<real> 28 </real>
+				<color> 0.941406, 0.941406, 0.941406, 1 </color>
+				<color> 0.238281, 0.215942, 0.215942, 1 </color>
+				<string> "alpha 0.0.1" </string>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>
