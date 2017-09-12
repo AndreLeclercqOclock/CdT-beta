@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="19" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
-	<ext_resource path="res://img/cross-small.png" type="Texture" index="3"></ext_resource>
+<resource_file type="PackedScene" subresource_count="18" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
 	<ext_resource path="res://scr/scr_json_scenario.gd" type="Script" index="0"></ext_resource>
 	<ext_resource path="res://font/coolvetica rg.fnt" type="BitmapFont" index="1"></ext_resource>
 	<ext_resource path="res://scr/scr_ui.gd" type="Script" index="2"></ext_resource>
@@ -191,12 +190,12 @@
 			<string> "conn_count" </string>
 			<int> 7 </int>
 			<string> "conns" </string>
-			<int_array  len="42"> 				3, 1, 66, 65, 2, 0, 4, 1, 66, 67, 2, 0, 5, 1, 66, 68, 2, 0, 6, 1, 66, 69, 2, 0, 7, 1, 71, 70, 2, 0, 8, 1, 73, 72, 2, 0, 11, 10, 66, 74, 2, 0 </int_array>
+			<int_array  len="42"> 				3, 1, 62, 61, 2, 0, 4, 1, 62, 63, 2, 0, 5, 1, 62, 64, 2, 0, 6, 1, 62, 65, 2, 0, 7, 1, 67, 66, 2, 0, 8, 1, 69, 68, 2, 0, 11, 10, 62, 70, 2, 0 </int_array>
 			<string> "editable_instances" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="75">
+			<string_array  len="71">
 				<string> "World" </string>
 				<string> "Node" </string>
 				<string> "Interpreteur JSON Scénario" </string>
@@ -252,13 +251,9 @@
 				<string> "Status" </string>
 				<string> "UI" </string>
 				<string> "quit_button" </string>
-				<string> "Sprite" </string>
-				<string> "transform/pos" </string>
-				<string> "transform/scale" </string>
-				<string> "texture" </string>
+				<string> "text" </string>
 				<string> "version" </string>
 				<string> "custom_colors/font_color_shadow" </string>
-				<string> "text" </string>
 				<string> "lines_skipped" </string>
 				<string> "max_lines_visible" </string>
 				<string> "Label" </string>
@@ -274,14 +269,14 @@
 				<string> "_on_quit_button_pressed" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 14 </int>
+			<int> 13 </int>
 			<string> "node_paths" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="440"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 13, 2, -1, 10, 3, 0, 4, 1, 5, 0, 6, 2, 7, 2, 8, 3, 9, 4, 10, 5, 11, 6, 12, 7, 0, 1, 0, 23, 14, -1, 16, 4, 1, 5, 0, 6, 2, 7, 2, 8, 8, 9, 9, 10, 10, 11, 11, 15, 12, 16, 13, 17, 13, 18, 13, 19, 1, 20, 14, 21, 15, 22, 8, 0, 1, 0, 35, 24, -1, 17, 4, 0, 5, 0, 6, 2, 7, 2, 8, 16, 9, 17, 10, 18, 11, 19, 25, 20, 26, 21, 27, 22, 28, 12, 29, 13, 30, 1, 31, 23, 32, 24, 33, 0, 1, 34, 1, 0, 35, 36, -1, 17, 4, 0, 5, 0, 6, 2, 7, 2, 8, 16, 9, 25, 10, 26, 11, 27, 25, 28, 26, 29, 27, 30, 28, 12, 29, 13, 30, 1, 31, 23, 32, 24, 33, 0, 1, 34, 1, 0, 35, 37, -1, 17, 4, 0, 5, 0, 6, 2, 7, 2, 8, 31, 9, 32, 10, 33, 11, 34, 25, 35, 26, 36, 27, 37, 28, 12, 29, 13, 30, 1, 31, 23, 32, 24, 33, 0, 1, 34, 1, 0, 35, 38, -1, 17, 4, 0, 5, 0, 6, 2, 7, 2, 8, 38, 9, 39, 10, 26, 11, 40, 25, 41, 26, 42, 27, 43, 28, 12, 29, 13, 30, 1, 31, 23, 32, 24, 33, 0, 1, 34, 1, 0, 46, 39, -1, 17, 40, 1, 4, 1, 5, 0, 6, 2, 7, 2, 8, 44, 9, 45, 10, 46, 11, 47, 41, 48, 27, 49, 28, 12, 29, 13, 42, 50, 43, 2, 44, 1, 45, 51, 0, 1, 0, 47, 47, -1, 4, 48, 52, 49, 8, 50, 0, 51, 1, 0, 1, 0, 23, 52, -1, 14, 4, 1, 5, 0, 6, 2, 7, 2, 8, 53, 9, 54, 10, 55, 11, 56, 15, 12, 16, 57, 19, 1, 20, 14, 21, 15, 22, 8, 0, 0, 0, 13, 53, -1, 10, 3, 0, 4, 1, 5, 0, 6, 2, 7, 2, 8, 58, 9, 58, 10, 59, 11, 59, 12, 60, 0, 10, 0, 35, 54, -1, 12, 4, 1, 5, 0, 6, 2, 7, 2, 8, 61, 9, 62, 10, 63, 11, 64, 30, 1, 31, 2, 32, 24, 33, 0, 0, 11, 0, 55, 55, -1, 3, 56, 65, 57, 66, 58, 67, 0, 0, 0, 64, 59, -1, 15, 4, 0, 5, 0, 6, 2, 7, 23, 8, 53, 9, 68, 10, 69, 11, 70, 28, 12, 29, 71, 60, 72, 61, 73, 22, 8, 62, 23, 63, 15, 0 </int_array>
+			<int_array  len="431"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 13, 2, -1, 10, 3, 0, 4, 1, 5, 0, 6, 2, 7, 2, 8, 3, 9, 4, 10, 5, 11, 6, 12, 7, 0, 1, 0, 23, 14, -1, 16, 4, 1, 5, 0, 6, 2, 7, 2, 8, 8, 9, 9, 10, 10, 11, 11, 15, 12, 16, 13, 17, 13, 18, 13, 19, 1, 20, 14, 21, 15, 22, 8, 0, 1, 0, 35, 24, -1, 17, 4, 0, 5, 0, 6, 2, 7, 2, 8, 16, 9, 17, 10, 18, 11, 19, 25, 20, 26, 21, 27, 22, 28, 12, 29, 13, 30, 1, 31, 23, 32, 24, 33, 0, 1, 34, 1, 0, 35, 36, -1, 17, 4, 0, 5, 0, 6, 2, 7, 2, 8, 16, 9, 25, 10, 26, 11, 27, 25, 28, 26, 29, 27, 30, 28, 12, 29, 13, 30, 1, 31, 23, 32, 24, 33, 0, 1, 34, 1, 0, 35, 37, -1, 17, 4, 0, 5, 0, 6, 2, 7, 2, 8, 31, 9, 32, 10, 33, 11, 34, 25, 35, 26, 36, 27, 37, 28, 12, 29, 13, 30, 1, 31, 23, 32, 24, 33, 0, 1, 34, 1, 0, 35, 38, -1, 17, 4, 0, 5, 0, 6, 2, 7, 2, 8, 38, 9, 39, 10, 26, 11, 40, 25, 41, 26, 42, 27, 43, 28, 12, 29, 13, 30, 1, 31, 23, 32, 24, 33, 0, 1, 34, 1, 0, 46, 39, -1, 17, 40, 1, 4, 1, 5, 0, 6, 2, 7, 2, 8, 44, 9, 45, 10, 46, 11, 47, 41, 48, 27, 49, 28, 12, 29, 13, 42, 50, 43, 2, 44, 1, 45, 51, 0, 1, 0, 47, 47, -1, 4, 48, 52, 49, 8, 50, 0, 51, 1, 0, 1, 0, 23, 52, -1, 14, 4, 1, 5, 0, 6, 2, 7, 2, 8, 53, 9, 54, 10, 55, 11, 56, 15, 12, 16, 57, 19, 1, 20, 14, 21, 15, 22, 8, 0, 0, 0, 13, 53, -1, 10, 3, 0, 4, 1, 5, 0, 6, 2, 7, 2, 8, 58, 9, 58, 10, 59, 11, 59, 12, 60, 0, 10, 0, 35, 54, -1, 14, 4, 1, 5, 0, 6, 2, 7, 2, 8, 61, 9, 62, 10, 63, 11, 64, 28, 12, 30, 1, 31, 2, 32, 24, 55, 65, 33, 1, 0, 0, 0, 60, 56, -1, 15, 4, 0, 5, 0, 6, 2, 7, 23, 8, 53, 9, 66, 10, 67, 11, 68, 28, 12, 29, 69, 57, 70, 55, 71, 22, 8, 58, 23, 59, 15, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="74" shared="false">
+			<array  len="72" shared="false">
 				<bool> True </bool>
 				<bool> False </bool>
 				<int> 2 </int>
@@ -342,13 +337,11 @@
 				<real> 0 </real>
 				<real> 40 </real>
 				<resource  external="2">  </resource>
-				<real> 570 </real>
-				<real> 8 </real>
-				<real> 626 </real>
-				<real> 58 </real>
-				<vector2> 28.5223, 24.9029 </vector2>
-				<vector2> 0.322637, 0.317093 </vector2>
-				<resource  external="3">  </resource>
+				<real> 533 </real>
+				<real> 9 </real>
+				<real> 629 </real>
+				<real> 45 </real>
+				<string> "QUITTER" </string>
 				<real> 2 </real>
 				<real> 94 </real>
 				<real> 28 </real>
