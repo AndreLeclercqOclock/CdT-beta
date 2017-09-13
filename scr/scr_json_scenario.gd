@@ -2,16 +2,18 @@
 # Script par LEIFER KOPF // leifer.kopf@gmail.com
 # Scénario par NOOTILUS //
 # Disclaimer : L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).
-# version : 0.41
+# version : 0.45
 
 extends Control
 
+# Déclaration de Variables
 var dict = {}
 var currentDial = "dial001"
 var timer = null
 var time_delay = 1
 var write = false
 var wait = false
+var image = null
 
 func _ready():
 	print("ready")
@@ -27,8 +29,8 @@ func start():
 	file.close()
 	timer()
 	
-func timer():
 # Timer
+func timer():
 	timer = get_node("Timer")
 	timer.set_wait_time(time_delay)
 	timer.start()
@@ -48,7 +50,7 @@ func _on_Timer_timeout():
 # Affiche un texte quand l'interlocuteur écrit
 	if dict._Dialogues[currentDial].ref == 1 and wait:
 		get_node("Status").set_text(str(dict._Dialogues.name.name," écrit un message"))
-		time_delay = dict._Dialogues[currentDial].time
+		time_delay = 2
 	
 	
 # Gestion des dialogues de ref 1 [DIALOGUES]
@@ -59,7 +61,18 @@ func _on_Timer_timeout():
 		get_node("Dialogues").push_align(0)
 		get_node("Dialogues").add_text(str(dict._Dialogues.name.name," : ",dict._Dialogues[currentDial].content))
 		currentDial = dict._Dialogues[currentDial].next
-		time_delay = 2
+		time_delay = dict._Dialogues[currentDial].time
+		write = false
+		start()
+
+# Gestion des images dialogues de ref 4 [IMAGES]
+	if dict._Dialogues[currentDial].ref == 4 and write:
+		image = load(str("res://img/",dict._Dialogues[currentDial].content))
+		get_node("Dialogues").newline()
+		get_node("Dialogues").push_align(0)
+		get_node("Dialogues").add_image(image)
+		currentDial = dict._Dialogues[currentDial].next
+		time_delay = dict._Dialogues[currentDial].time
 		write = false
 		start()
 	
@@ -88,7 +101,7 @@ func _on_Bouton0_pressed():
 	get_node("Dialogues").push_align(2)
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
 	currentDial = dict._Dialogues[currentDial].next[0]
-	time_delay = 2
+	time_delay = dict._Dialogues[currentDial].time
 	clean()
 	start()
 	
@@ -98,7 +111,7 @@ func _on_Bouton1_pressed():
 	get_node("Dialogues").push_align(2)
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[1]))
 	currentDial = dict._Dialogues[currentDial].next[1]
-	time_delay = 2
+	time_delay = dict._Dialogues[currentDial].time
 	clean()
 	start()
 	
@@ -108,7 +121,7 @@ func _on_Bouton2_pressed():
 	get_node("Dialogues").push_align(2)
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[2]))
 	currentDial = dict._Dialogues[currentDial].next[2]
-	time_delay = 2
+	time_delay = dict._Dialogues[currentDial].time
 	clean()
 	start()
 	
@@ -118,7 +131,7 @@ func _on_Bouton3_pressed():
 	get_node("Dialogues").push_align(2)
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[3]))
 	currentDial = dict._Dialogues[currentDial].next[3]
-	time_delay = 2
+	time_delay = dict._Dialogues[currentDial].time
 	clean()
 	start()
 	
@@ -136,12 +149,12 @@ func _on_TextEdit_text_entered( text ):
 		get_node("Dialogues").push_align(2)
 		get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
 		currentDial = dict._Dialogues[currentDial].next[0]
-		time_delay = 2
+		time_delay = dict._Dialogues[currentDial].time
 		get_node("TextEdit").hide()
 		start()
 	else:
 		currentDial = dict._Dialogues[currentDial].next[1]
-		time_delay = 2
+		time_delay = dict._Dialogues[currentDial].time
 		start()
 		
 		
