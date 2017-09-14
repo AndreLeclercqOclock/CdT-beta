@@ -2,7 +2,7 @@
 # Script par LEIFER KOPF // leifer.kopf@gmail.com
 # Scénario par VINCENT CORLAIX  // vcorlaix@nootilus.com
 # Disclaimer : L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).
-# version : 0.47
+# version : 0.58
 
 extends Control
 
@@ -13,6 +13,7 @@ var timer = null
 var time_delay = 1
 var image = null
 var video = null
+var content = null
 
 func _ready():
 	print("ready")
@@ -90,15 +91,8 @@ func start():
 		video = load("res://vid/sample.ogv")
 		get_node("VideoPlayer").set_stream(video)
 		get_node("VideoPlayer").play()
-		currentDial = dict._Dialogues[currentDial].next
-		time_delay = dict._Dialogues[currentDial].time
-	
-	
-	if get_node("VideoPlayer").is_playing() == true:
-		get_node("VideoPlayer").show()
+
 		
-	if get_node("VideoPlayer").is_paused() == true:
-		get_node("VideoPlayer").hide()
 	
 	
 # Gestion des boutons de choix multipes
