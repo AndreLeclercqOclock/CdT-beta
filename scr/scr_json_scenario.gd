@@ -46,7 +46,7 @@ func start():
 			# Affiche le status "Ecrit un message"
 			get_node("Status").add_text(str(dict._Dialogues.name.name," écrit un message"))
 			dial = [dict._Dialogues[currentDial].content[i]]
-			size = (dial[0].length())/8
+			size = (dial[0].length())/20
 			print(size)
 			if size <= 0:
 				size = 0.5
