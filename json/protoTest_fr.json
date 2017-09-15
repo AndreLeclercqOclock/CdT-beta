@@ -20,14 +20,14 @@
 			"ref": 1,
 			"time": 1,
 			"content": [
-				"Ah, bon sang, comment marche ce truc ?…",
+				"Ah, bon sang, comment marche ce truc ?...",
 				"Allô ?",
-				"Oh…",
-				"C’est génial ! Je vois ce que je dis sur l’écran !",
-				"Je n’ai pas besoin de taper.",
+				"Oh...",
+				"C'est génial ! Je vois ce que je dis sur l'écran !",
+				"Je n'ai pas besoin de taper.",
 				"Bon.",
-				"Mais, je ne sais même pas quelqu’un me reçoit…",
-				"Y’a quelqu’un ?"
+				"Mais, je ne sais même pas si quelqu'un me reçoit...",
+				"Y'a quelqu'un ?"
 			],
 			"next": "rep101"
 		},
@@ -36,9 +36,9 @@
 			"time": 2,
 			"content": [
 				"Oh, quelle chance !",
-				"J’étais presque sûr de ne pas accrocher de réseau, ici.",
-				"À moins que…",
-				"Vous n’êtes pas dans le souterrain avec moi, quand-même ?"
+				"J'étais presque sûr de ne pas accrocher de réseau, ici.",
+				"À moins que...",
+				"Vous n'êtes pas dans le souterrain avec moi, quand-même ?"
 			],
 			"next": "rep102"
 		},
@@ -46,8 +46,8 @@
 			"ref": 1,
 			"time": 2,
 			"content": [
-				"Oui, j’aurai dû commencer par là, désolé.",
-				"C’est à dire que je ne suis pas dans une situation qui pousse aux civilités."
+				"Oui, j'aurai dû commencer par là, désolé.",
+				"C'est à dire que je ne suis pas dans une situation qui pousse aux civilités."
 			],
 			"next": "dial200"
 		},
@@ -55,7 +55,7 @@
 			"ref": 1,
 			"time": 2,
 			"content": [
-				"C’est un peu long à raconter, mais pour faire court…",
+				"C'est un peu long à raconter, mais pour faire court...",
 				"Je suis dans des catacombes, et je me suis perdu.",
 				"Mais je manque à toutes les politesses."
 			],
@@ -65,9 +65,10 @@
 			"ref": 1,
 			"time": 2,
 			"content": [
-				"Je m’appelle Michel Latrémon, et je suis historien.",
-				"Je sais que, quand je dis ma profession, on pense à un homme prématurément vieilli le nez dans des bouquins aussi moisis que lui.",
-				"Et, croyez-moi, c’est habituellement le cas.",
+				"Je m'appelle Michel Latrémon, et je suis historien.",
+				"Je sais que, quand je dis ma profession, on pense à un homme prématurément vieilli,",
+				"le nez dans des bouquins aussi moisis que lui.",
+				"Et, croyez-moi, c'est habituellement le cas.",
 				"Mais, je suis tombé il y a quelques mois sur un manuscrit intéressant.",
 				"Connaissez-vous Jean de Malemont ?"
 			],
@@ -77,11 +78,11 @@
 			"ref": 1,
 			"time": 2,
 			"content": [
-				"Jean de Malemort était sergent du Temple à Limoges, de 1304 à 1310.",
-				"Lorsque l’ordre des Templiers a été détruit, il a été fait prisonnier.",
+				"Jean de Malemont était sergent du Temple à Limoges, de 1304 à 1310.",
+				"Lorsque l'ordre des Templiers a été détruit, il a été fait prisonnier.",
 				"Mais il a échappé mystérieusement au bûcher.",
-				"J’ai retrouvé sa trace par accident.",
-				"Et je n’ai pas pu résister à l’envie de venir moi-même voir si son tombeau est bien là où le manuscrit le mentionnait."
+				"J'ai retrouvé sa trace par accident.",
+				"Et je n'ai pas pu résister à l'envie de venir moi-même voir si son tombeau est bien là où le manuscrit le mentionnait."
 			],
 			"next": "rep201"
 		},
@@ -90,8 +91,8 @@
 			"time": 2,
 			"content": [
 				"Hahaha, oui.",
-				"Mais ce n’est qu’un nom. Ce n’était pas un «méchant».",
-				"Enfin, je ne crois pas…"
+				"Mais ce n'est qu'un nom. Ce n'était pas un «méchant».",
+				"Enfin, je ne crois pas..."
 			],
 			"next": "dial300"
 		},
@@ -101,9 +102,10 @@
 			"content": [
 				"Si, exactement !",
 				"Whow, vous ne seriez pas historien, vous aussi ?",
-				"Hum…",
-				"Ou alors vous avez regardé sur Google, n’est ce pas ?",
-				"Peu importe."
+				"Hum...",
+				"Ou alors vous avez regardé sur Google, n'est ce pas ?",
+				"Ha ha ha !",
+				"Je ne vous en veux pas."
 			],
 			"next": "dial300"
 		},
@@ -111,11 +113,13 @@
 			"ref": 1,
 			"time": 2,
 			"content": [
-				"Il m’est arrivé une guigne pas possible.",
-				"J’avoue, j’ai commencé mon exploration comme le vieil universitaire que je suis.",
-				"Je ne suis ni archéologue, ni spéléologe.",
-				"Je me suis simplement dit que si c’était trop dangereux ou compliqué, je ferais demi-tour et reviendrais avec une équipe d’étudiants. Après tout, il faut bien qu’ils aient une utilité.",
-				"Peu importe."
+				"Il m'est arrivé une guigne pas possible.",
+				"J'avoue, j'ai commencé mon exploration comme le vieil universitaire que je suis.",
+				"Je ne suis ni archéologue, ni spéléologue.",
+				"Je me suis simplement dit que si c'était trop dangereux ou compliqué,",
+				"je ferais demi-tour et reviendrais avec une équipe d'étudiants.",
+				"Après tout, il faut bien qu'ils aient une utilité.",
+				"Enfin bref…"
 			],
 			"next": "dial301"
 		},
@@ -123,15 +127,15 @@
 			"ref": 1,
 			"time": 2,
 			"content": [
-				"Si je vous ai contacté, c’est un accident.",
+				"Si je vous ai contacté, c'est par accident.",
 				"Un heureux accident pour moi.",
 				"Peut-être un accident ennuyeux pour vous.",
 				"Néanmoins, je voulais appeler des secours sur mon portable.",
-				"Et… Bon… Comment dire ?",
-				"Je n’aime pas ces appareils, c’est compliqué.",
-				"Donc, au lieu de composer le bon numéro, j’ai appuyé où il ne fallait pas, sans doute.",
-				"Et j’ai lancé cette application de discussion en réseau.",
-				"Mais si vous pouviez m’aider, ce serait tellement aimable de votre part…"
+				"Et... Bon... Comment dire ?",
+				"Je n'aime pas ces appareils, c'est compliqué.",
+				"Donc, au lieu de composer le bon numéro, j'ai appuyé où il ne fallait pas, sans doute.",
+				"Et j'ai lancé cette application de discussion en réseau.",
+				"Mais si vous pouviez m'aider, ce serait tellement aimable de votre part..."
 			],
 			"next": "rep301"
 		},
@@ -152,18 +156,18 @@
 			"time": 2,
 			"content": [
 				"Oh, merveilleux ! Merci, merci !",
-				"Je suis soulagé, vous n’imaginez pas à quel point.",
+				"Vous n'imaginez pas à quel point je suis soulagé.",
 				"Bon, je vous explique ma situation.",
-				"J’ai trouvé les catacombes, comme décrit dans le manuscrit.",
-				"J’ai commencé à explorer, c’est un vrai dédale.",
-				"J’ai noté mes déplacements dans un petit carnet.",
-				"Mais je suis passé par une section où l’eau s’est infiltrée.",
+				"J'ai trouvé les catacombes, comme décrit dans le manuscrit.",
+				"J'ai commencé à les explorer, mais c'est un vrai dédale.",
+				"J'ai noté mes déplacements dans un petit carnet.",
+				"Mais je suis passé par une section où l'eau s'est infiltrée.",
 				"Le sol était boueux sur plusieurs centimètres.",
-				"Avec ma petite lampe je n’ai rien vu.",
-				"Bref. J’ai glissé.",
+				"Avec ma petite lampe je n'ai rien vu.",
+				"Bref. J'ai glissé.",
 				"Et mon carnet est tombé.",
-				"Trempé, l’encre délavée.",
-				"Pour vous le dire clairement : je n’ai plus de carte.",
+				"Trempé, l'encre délavée.",
+				"Pour vous le dire clairement : je n'ai plus de carte.",
 				"Et je ne trouve plus mes repères.",
 				"Je suis perdu."
 			],
@@ -173,10 +177,10 @@
 			"ref": 1,
 			"time": 2,
 			"content": [
-				"Je n’en ai guère.",
+				"Je n'en ai guère.",
 				"Je suis dans un couloir qui forme un coude devant et derrière moi.",
 				"Il y a un effondrement du sol dans lequel je peux me glisser.",
-				"Mais j’ignore s’il s’agit d’un passage.",
+				"Mais j'ignore s'il s'agit d'un passage.",
 				"Vous feriez quoi, à ma place ?"
 			],
 			"next": "rep400"
@@ -187,7 +191,7 @@
 			"content": [
 				"Ok. Merci.",
 				"Allons-y, gaiement !",
-				"Je vous ai dit que j’avais été scout ?",
+				"Je vous ai dit que j'avais été scout ?",
 				"Mais je ne vais pas me mettre à chanter, rassurez-vous.",
 				"Bon, je vais épargner mon souffle.",
 				"Je vous recontacte quand je trouve quelque chose."
@@ -204,13 +208,13 @@
 			"ref": 1,
 			"time": 2,
 			"content": [
-				"Vous n’allez sans doute pas me croire…",
+				"Vous n'allez sans doute pas me croire...",
 				"Je suis revenu à mon point de départ.",
-				"C’est-à-dire, je suis à nouveau à l’endroit du trou.",
+				"C'est-à-dire, je suis à nouveau à l'endroit du trou.",
 				"Là où je vous ai demandé par où aller.",
-				"Et que vous m’avez dit de prendre le couloir.",
-				"J’ai peut-être loupé quelque chose ?",
-				"J’ai du mal à croire que j’ai tourné en rond."
+				"Et que vous m'avez dit de prendre le couloir.",
+				"J'ai peut-être loupé quelque chose ?",
+				"J'ai du mal à croire que j'ai tourné en rond."
 			],
 			"next": "rep403"
 		},
@@ -219,7 +223,7 @@
 			"time": 2,
 			"content": [
 				"Bien. Vous avez probablement raison.",
-				"Et puis qui ne tente rien n’a rien.",
+				"Et puis qui ne tente rien n'a rien.",
 				"Je suis désolé. Je vais arrêter de vous assomer avec mes aphorismes de vieil universitaire.",
 				"Je vous tiens au courant de mon exploration."
 			],
@@ -228,7 +232,7 @@
 		"dial405": {
 			"ref": 1,
 			"time": 300,
-			"content": ["Oh, non…"],
+			"content": ["Oh, non..."],
 			"next": "rep405"
 		},
 		"dial406": {
@@ -236,7 +240,7 @@
 			"time": 2,
 			"content": [
 				"Bingo.",
-				"Je n’y crois pas."
+				"Je n'y crois pas."
 			],
 			"next": "dial407"
 		},
@@ -247,11 +251,11 @@
 				"Je suis à nouveau au même endroit.",
 				"Et, je ne vous cache pas que ça me donne la chair de poule.",
 				"Comment vous dire ?",
-				"Je ne suis pas quelqu’un d’impressionnable.",
-				"Mais ici, j’ai une sensation étrange.",
-				"Comme le sentiment d’être épié.",
+				"Je ne suis pas quelqu'un d'impressionnable.",
+				"Mais ici, j'ai une sensation étrange.",
+				"Comme le sentiment d'être épié.",
 				"Bon.",
-				"Je n’ai plus le choix, n’est-ce pas ?"
+				"Je n'ai plus le choix, n'est-ce pas ?"
 			],
 			"next": "rep407"
 		},
@@ -261,12 +265,896 @@
 			"content": [
 				"Bien.",
 				"Un peu de courage.",
-				"Je suis désolé, mais comme je vais devoir m’aider de mes mains, je vais mettre mon téléphone dans une poche.",
+				"Je suis désolé, mais comme je vais devoir m'aider de mes mains, je vais mettre mon téléphone dans une poche.",
 				"Je vous retrouve en bas.",
-				"Enfin, j’espère.",
+				"Enfin, j'espère.",
 				"À tout de suite !"
 			],
-			"next": "dialFIN01"
+			"next": "dial501"
+		},
+		"dial501": {
+			"ref": 1,
+			"time": 60,
+			"content": ["Oh, bon sang !"],
+			"next": "rep501"
+		},
+		"dial502": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Non, non. Ne vous inquiétez pas.",
+				"Tout va bien.",
+				"C'est juste que...",
+				"C'est fou !",
+				"Vous n'allez pas me croire."
+			],
+			"next": "dial503"
+		},
+		"dial503": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Je suis dans une salle. Mais ça n'a rien à voir avec les catacombes au-dessus.",
+				"Ce lieu est plus ancien que le réseau de tunnels au-dessus de moi.",
+				"Je ne peux bien entendu rien affirmer avec certitude, mais il y a des détails architecturaux qui ne trompent pas.",
+				"Et puis à l'époque, on empilait.",
+				"On construisait rarement en dessous de l'existant.",
+				"Et pourtant, il y a là quelque chose digne de troubler le vieil historien que je suis."
+			],
+			"next": "rep503"
+		},
+		"dial504": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Hum. Vous avez le même humour que mes étudiants.",
+				"Mais pardonnez mon émotion.",
+				"Je suis devant quelque chose d'incompréhensible.",
+				"historiquement parlant."
+			],
+			"next": "dial505"
+		},
+		"dial505": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Comme je vous l'ai dit, cette partie souterraine est forcément plus vieille que la précédente, qui est contemporaine du templier de Malemont.",
+				"Or, j'ai là sous les yeux une fresque peinte à même le mur.",
+				"Et elle représente sans aucun doute Jean de Malemont, dans son armure de Templier.",
+				"Il y est représenté combattant des démons et d'autres créatures impies sortant d'un disque de lumière bleue.",
+				"Malemont tient son épée d'une main et brandit un livre de l'autre.",
+				"Le livre rayonne, et il est représenté comme s'il était plus puissant que l'épée du templier.",
+				"Sur chaque tableau, Jean semble suivi par une grande ombre, un nuage noir.",
+				"Il y a un texte en latin, en dessous.",
+				"Laissez-moi quelques minutes, que je le traduise."
+			],
+			"next": "dial506"
+		},
+		"dial506": {
+			"ref": 1,
+			"time": 60,
+			"content": [
+				"Hum.",
+				"Très intéressant."
+			],
+			"next": "rep506"
+		},
+		"dial507": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Pardonnez-moi. C'est si passionnant !",
+				"Le naturel revient vite au galop devant un tel morceau d'histoire.",
+				"Surtout une histoire si secrète."
+			],
+			"next": "dial508"
+		},
+		"dial508": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Il est décrit comment Jean de Malemont a su échapper à ses ennemis et les terrasser grâce à un livre.",
+				"Ce livre est celui représenté sur la fresque.",
+				"Il porte un nom. Malheureusement, même si ça ressemble à du latin, cela ne veut rien dire.",
+				"Le «libris daemonaticaspius»."
+			],
+			"next": "rep508"
+		},
+		"dial509": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Héhéhé, oui.",
+				"Mais ne vous en formalisez pas trop. Les démons étaient courant à l'époque.",
+				"Surtout dans la littérature religieuse et l'imaginaire collectif.",
+				"Tout ce que l'esprit humain de l'époque ne comprenait pas était soit d'origine divine, soit démoniaque.",
+				"Enfin, bref..."
+			],
+			"next": "dial510"
+		},
+		"dial510": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Le texte explique qu'entre autres pouvoirs, ce livre permet à son possesseur de se rentre dans... «d'autres endroits».",
+				"Je n'arrive pas à traduire ce passage plus clairement.",
+				"Et... Oh !"
+			],
+			"next": "rep510"
+		},
+		"dial511": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"C'est incroyable !",
+				"D'après ce texte, le «libris daemonaticaspius» serait ici même, dans cette crypte.",
+				"C'est inespéré !"
+			],
+			"next": "rep511"
+		},
+		"dial512": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Hahaha ! Vous voilà piqué par le virus de l'historien.",
+				"Oui, certe, c'est un trésor incroyable.",
+				"Mais plus encore.",
+				"Si ses pouvoirs sont réels, je suis sauvé !"
+			],
+			"next": "dial600"
+		},
+		"dial513": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Qui ne tente rien n'a rien, mon jeune ami.",
+				"Et puis, j'ai besoin de me raccrocher à quelque chose.",
+				"Je ne suis pas claustrophobe, mais j'aimerai sortir.",
+				"J'ai l'impression croissante de ne pas être seul, ici.",
+				"Et puis...",
+				"Si je reviens à l'université avec ce précieux manuscrit,",
+				"cela m'évitera sans doute les colibets de mes collègues.",
+				"Quand ils apprendront comment je me suis retouvé enfermé ici,",
+				"les moqueries ne manqueront pas de pleuvoir."
+			],
+			"next": "dial600"
+		},
+		"dial600": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Bien. Peu importe que le livre soit magique ou pas.",
+				"Je n'ai pas d'autre choix que de tenter de trouver cette crypte.",
+				"Il serait fort dommage pour moi qu'il n'y ait pas un passage menant à l'extérieur."
+			],
+			"next": "rep600"
+		},
+		"dial601": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Votre enthousasme me réchauffe le cœur.",
+				"Merci de me soutenir, je me sens moins seul, ici.",
+				"Allez. Hardi, compagnon !"
+			],
+			"next": "dial603"
+		},
+		"dial602": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Ne vous inquiétez pas.",
+				"J'ai beau me trouver dans cette situation étrange, je reste quelqu'un de très prudent.",
+				"Par exemple, je vérifie toujours que mes lacets sont noués avant de sortir.",
+				"Ou encore, je ne prend jamais de frites à la cantine, par peur du cardiologue.",
+				"Je m'égare.",
+				"Mais je tiens à vous remercier pour votre sollicitude.",
+				"Merci de m'accompagner, ça m'aide beaucoup."
+			],
+			"next": "dial603"
+		},
+		"dial603": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Bien. Il est temps de se décider.",
+				"À gauche, un couloir bas conduit à une volée de marches.",
+				"Derrière moi, en face de la frise, il y a une sorte de tunnel.",
+				"Les deux passages semblent aller dans la même direction.",
+				"J'en déduis que les deux mènent à la crypte.",
+				"La volée de marches semble être l'accès le plus simple et sûr.",
+				"Mais un truc me chiffonne ; c'est une crypte que je cherche.",
+				"En général, on descend dans une crypte, et on remonte pour en sortir.",
+				" ",
+				"D'un autre côté, le tunnel est étroit et humide.",
+				"Il m'inspire plus de craintes.",
+				" ",
+				"Qu'est-ce que vous me conseillez ?"
+			],
+			"next": "rep603"
+		},
+		"dial700": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Alors soit, grimpons cet escalier !",
+				"Je vous recontacte quand je suis arrivé... quelque part."
+			],
+			"next": "dial701"
+		},
+		"dial701": {
+			"ref": 1,
+			"time": 60,
+			"content": [
+				"Oh, bon sang.",
+				"Ce n'est plus de mon âge, tout ça.",
+				"Mais me voilà en haut.",
+				"Ça n'était pas haut, mais...",
+				"les architectes de l'époque avaient des mesures de marches un peu étrange.",
+				"Bref, me voilà dans la crypte."
+			],
+			"next": "rep701"
+		},
+		"dial702": {
+			"ref": 1,
+			"time": 2,
+			"content": ["Oui, je le vois. Il est là."],
+			"next": "dial703"
+		},
+		"dial703": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Je surplombe la crypte depuis une mezzanine.",
+				"La crypte elle-même semble immence, mais j'ai du mal à juger.",
+				"Le faisceau de ma lampe se perd dans les profondeurs.",
+				"Je vois le sol, en dessous, à peut-être...",
+				"oui, une dizaine de mètres.",
+				"La crypte est vide, il y a des colonnes à intervalle régulier.",
+				"Et, au centre, un piédestal sur lequel se trouve le [i]libris daemonaticaspius[i].",
+				"Je ne peux le louper, ses dorures reflètent la lumière de ma torche.",
+				"Il est magnifique !"
+			],
+			"next": "rep703"
+		},
+		"dial704": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Hé bien, je...",
+				"Oh...",
+				"Qu'est-ce que...",
+				"Ah !..."
+			],
+			"next": "rep704"
+		},
+		"dial705": {
+			"ref": 1,
+			"time": 15,
+			"content": [
+				"Je...",
+				"Je n'ose plus bouger.",
+				"Il y a ... quelque chose devant moi.",
+				"Sur la mezzanine, à quelques mètres."
+			],
+			"next": "rep705"
+		},
+		"dial706": {
+			"ref": 1,
+			"time": 6,
+			"content": [
+				"C'est... Oh, bon sang !",
+				"C'est l'Ombre !",
+				"Celle de la frise. Celle qui suit Jean de Malemont !",
+				"Alors, tout est vrai !"
+			],
+			"next": "rep706"
+		},
+		"dial707": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Ah ! Oui !",
+				"Je fonce !"
+			],
+			"next": "dial717"
+		},
+		"dial717": {
+			"ref": 1,
+			"time": 15,
+			"content": [
+				"Oh !",
+				"Le sol tremble !",
+				"Bon sang !",
+				"La mezzanine !",
+				"Elle s'effondre, je...",
+				"... haaaa !..."
+			],
+			"next": "dialFIN02"
+		},
+		"dial708": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Ok !",
+				"J'enjambe et je saute !",
+				"Aaaah !..."
+			],
+			"next": "dial718"
+		},
+		"dial718": {
+			"ref": 1,
+			"time": 10,
+			"content": [
+				"Oh, bon sang !",
+				"J'ai dû me fouler la cheville.",
+				"Ça fait un mal de chien !",
+				"Ouch."
+			],
+			"next": "dial728"
+		},
+		"dial728": {
+			"ref": 1,
+			"time": 30,
+			"content": [
+				"Bon.",
+				"Je peux marcher.",
+				"C'est douloureux, mais ça ira.",
+				"Et la bonne nouvelle...",
+				"C'est que notre amie l'Ombre ne m'a pas suivie.",
+				"L'autre bonne nouvelle, c'est que je suis dans la crypte.",
+				"Près du livre."
+			],
+			"next": "dial900"
+		},
+		"dial709": {
+			"ref": 1,
+			"time": 15,
+			"content": [
+				"Ok, je...",
+				"Je ne bouge pas."
+			],
+			"next": "dial719"
+		},
+		"dial719": {
+			"ref": 1,
+			"time": 20,
+			"content": ["Ah, elle..."],
+			"next": "dial729"
+		},
+		"dial729": {
+			"ref": 1,
+			"time": 10,
+			"content": [
+				"Non, elle se déplace...",
+				"Elle fonce sur moi !",
+				"Ahhh, je...",
+				"Ahhhhh !",
+				" ",
+				"...",
+				" ",
+				"Ahhh ha ha ha !",
+				"Héhéhéhéhé... Hiiiiiiiiiii !"
+			],
+			"next": "dialFIN03"
+		},
+		"dial800": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Ok, je vais donc jouer les taupes.",
+				"Brrrr...",
+				"C'est vraiment froid. Et humide.",
+				"Si j'attrappe des rhumatismes, je leur donnerais vore nom.",
+				"Allez, un peu de courage."
+			],
+			"next": "dial801"
+		},
+		"dial801": {
+			"ref": 1,
+			"time": 120,
+			"content": [
+				"Quand je parlais d'humidité...",
+				"J'ai les pieds dans l'eau.",
+				"Je suis obligé d'avancer courbé en avant tellement c'est bas.",
+				"Et maintenant mes chaussures sont trempées.",
+				"Je me demande si c'était une si bonne idée."
+			],
+			"next": "dial802"
+		},
+		"dial802": {
+			"ref": 1,
+			"time": 60,
+			"content": [
+				"Vous me croyez si vous voulez, mais j'ai de l'eau jusqu'à la taille.",
+				"Et je ne vois toujours pas le bout."
+			],
+			"next": "rep802"
+		},
+		"dial803": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Je crois que vous avez raison.",
+				"Je remonte vers la salle de la frise.",
+				"Et j'essayerai l'autre passage."
+			],
+			"next": "rep813"
+		},
+		"dial813": {
+			"ref": 1,
+			"time": 180,
+			"content": [
+				"Voilà. Je suis remonté.",
+				"J'ai les pieds et les fesses trempés et glacés, mais je respire encore.",
+				"Il ne me reste que l'autre passage."
+			],
+			"next": "dial700"
+		},
+		"dial804": {
+			"ref": 1,
+			"time": 2,
+			"content": ["D'accord. Je continue."],
+			"next": "dial814"
+		},
+		"dial814": {
+			"ref": 1,
+			"time": 45,
+			"content": [
+				"Oh, là là !",
+				"J'ai de l'eau jusqu'aux épaules, maintenant.",
+				"Je suis obligé de garder les bras tentus pour éviter de noyer ma lampe et le téléphone.",
+				"Cette situation commence à me préoccuper."
+			],
+			"next": "rep804"
+		},
+		"dial820": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Vous avez raison.",
+				"Si ça se trouve, avec l'escalier je serais déjà dans la crypte.",
+				"Et au sec, surtout.",
+				"Bon, puis-je...",
+				" ",
+				"Une minute..."
+			],
+			"next": "rep821"
+		},
+		"dial821": {
+			"ref": 1,
+			"time": 30,
+			"content": [
+				"Vous avez entendu ?",
+				"Non, bien sûr. Suis-je bête.",
+				"Je..."
+			],
+			"next": "rep822"
+		},
+		"dial822": {
+			"ref": 1,
+			"time": 15,
+			"content": [
+				"Je crois qu'il y a quelque chose derrière moi.",
+				"J'entend des bruits étranges.",
+				"Un clapotis.",
+				"Et comme un souffle.",
+				"Je ne suis pas seul, ici !",
+				"Ça se rapproche.",
+				"Ça vient vers moi !",
+				"Oh mon Dieu !",
+				"Je..."
+			],
+			"next": "rep820"
+		},
+		"dial823": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Facile à dire !",
+				"Oh, non !",
+				"Rien à faire, je file d'ici !"
+			],
+			"next": "rep824"
+		},
+		"dial824": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Allez !",
+				"Ah, ma manche s'accroche !",
+				"Je... Je glisse !",
+				"Je ne peux pas m'agripper !",
+				"Non !",
+				"Je... Glubs...",
+				"Respirer... Gloup...",
+				"Resp... Noy...",
+				"..."
+			],
+			"next": "dialFIN04"
+		},
+		"dial830": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"D'accord.",
+				"Je vais essayer.",
+				"Mais ça devient trop compliqué avec le téléphone et la torche.",
+				"Ne vous formalisez pas,",
+				"mais je préfère voir où je vais que de papoter avec vous.",
+				"Je vous recontacte dès que possible."
+			],
+			"next": "dial831"
+		},
+		"dial831": {
+			"ref": 1,
+			"time": 90,
+			"content": [
+				"Ah, bon sang !",
+				"J'ai vraiment cru ne pas y arriver.",
+				"Et que ce satané tunnel n'ait pas de fin.",
+				"Mais, me voilà.",
+				"Je suis dans la crypte.",
+				"C'est immense.",
+				"Et froid.",
+				"En plus de ce fichu livre, je risque de ramener également une pneumonie.",
+				"En parlant du livre.",
+				"Oh, mon ami, il est là !",
+				"Il repose au centre de la crypte, sur un piédestal.",
+				"Il est magnifique. La couverture est sertie de plaques dorées ouvragées.",
+				"Lorsque je l'éclaire avec ma torche, cela jette des éclats merveilleux.",
+				"Je m'approche."
+			],
+			"next": "dial900"
+		},
+		"dial900": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Il est encore plus beau de près.",
+				"Sa couverture semble faite de bois sombre, sertie de plaques d'or.",
+				"Au centre, on a gravé le titre.",
+				"[i]Libris Daemonaticaspius[/i]",
+				"C'est bien lui.",
+				"Mon cœur bat la chamade.",
+				"J'espère qu'il va tenir."
+			],
+			"next": "rep900"
+		},
+		"dial901": {
+			"ref": 1,
+			"time": 6,
+			"content": [
+				"Hmmm. Il y a un fermoir.",
+				"Ça n'est qu'un loquet.",
+				"Oh, quel magnifique vélin.",
+				"Ou est-ce du parchemin ?",
+				"Je n'arrive pas bien à voir, dans cette pénombre.",
+				"Peu importe.",
+				"Voyons..."
+			],
+			"next": "rep902"
+		},
+		"dial902": {
+			"ref": 1,
+			"time": 35,
+			"content": [
+				"Ah, voilà.",
+				"Ce passage est illustré de la même image du disque bleu que sur la frise.",
+				"Je pense qu'il d'agit du moyen qu'employait Jean de Malemont pour s'échapper."
+			],
+			"next": "rep904"
+		},
+		"dial903": {
+			"ref": 1,
+			"time": 3,
+			"content": [
+				"Oui, vous avez raison.",
+				"Mieux vaut le sortir d'ici, hors de toute cette humidité.",
+				"Et trouver un coin tranquille pour bouquiner.",
+				"Han !",
+				"Bouh qu'il est lourd !"
+			],
+			"next": "rep904"
+		},
+		"dial904": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Voyons, je...",
+				"Qu'est-ce que...",
+				"Oh, non !"
+			],
+			"next": "rep904"
+		},
+		"dial905": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Non, ce n'est pas ça, je...",
+				"L'Ombre. Celle des peintures.",
+				"Elle est ici.",
+				"Devant moi.",
+				"On dirait un tourbillon de fumée, s'enroulant sur lui même à l'infini.",
+				"C'est hypnotique.",
+				"Et atroce à regarder trop longtemps.",
+				"Je ne sais pas quoi faire.",
+				"Elle est là, devant moi.",
+				"On dirait qu'elle attend quelque chose.",
+				"Le livre peut-être ?"
+			],
+			"next": "rep905"
+		},
+		"dial910": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Oui, vous avez raison.",
+				"Je cherche le passage."
+			],
+			"next": "dial911"
+		},
+		"dial911": {
+			"ref": 1,
+			"time": 45,
+			"content": [
+				"Le voilà.",
+				"Oh, bon sang.",
+				"L'Ombre ne bouge pas, mais elle me flanque une frousse !"
+			],
+			"next": "rep910"
+		},
+		"dial912": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Oui, oui !",
+				"Ah, voilà..."
+			],
+			"next": "rep914"
+		},
+		"dial913": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Vous avez raison.",
+				"J'ai l'impression que ça pourrait me rendre fou."
+			],
+			"next": "rep914"
+		},
+		"dial914": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"[i]Mau[/i]...[i]nai[/i], [i]ihim[/i]...",
+				"Hum.",
+				"Étrange, ça ne semble pas être du latin.",
+				"Bon...",
+				"«[i]Maunai ihim tireurepa te,[/i]",
+				"[i]Artlu ihim tipicca non ![/i]»"
+			],
+			"next": "rep915"
+		},
+		"dial915": {
+			"ref": 1,
+			"time": 10,
+			"content": [
+				"L'Ombre s'est figée.",
+				"Je veux dire, même le mouvement de fumée qui l'anime s'est ralenti.",
+				"Oh !",
+				"Elle grandit. Elle enfle.",
+				"Et elle s'arrondit.",
+				"La fumée semble se solidifier à mesure qu'elle forme un disque.",
+				"Et... Ouch !"
+			],
+			"next": "rep916"
+		},
+		"dial916": {
+			"ref": 1,
+			"time": 7,
+			"content": [
+				"Ça s'est ouvert. En son centre.",
+				"L'Ombre s'est transformée en grand disque noir.",
+				"Et maintenant, son centre s'est creusé, comme un syphon.",
+				"Il se met à briller.",
+				"C'est magnifique.",
+				"La lueur est d'un bleu doux, comme un ciel d'été.",
+				"C'est la sortie ! Je vais pouvoir sortir !"
+			],
+			"next": "rep916"
+		},
+		"dial917": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Oui !",
+				"Merci, mon ami !",
+				"Je vous retrouve de l'autre côté."
+			],
+			"next": "rep919"
+		},
+		"dial918": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Oui !",
+				"Merci, mon ami !",
+				"Je vous retrouve de l'autre côté."
+			],
+			"next": "rep919"
+		},
+		"dial919": {
+			"ref": 1,
+			"time": 3,
+			"content": [
+				"Je vais garder le téléphone à la main, peut-être ne seront-nous pas coupés.",
+				"J'y vais."
+			],
+			"next": "rep920"
+		},
+		"dial920": {
+			"ref": 1,
+			"time": 20,
+			"content": [
+				"Plus je m'approche, et plus je me sens tiré.",
+				"Comme si le disque exercait sa propre gravité.",
+				"C'est hypnotique, mais pas effrayant, comme l'Ombre avant sa transformations."
+			],
+			"next": "rep921"
+		},
+		"dial921": {
+			"ref": 1,
+			"time": 12,
+			"content": [
+				"Je crois que je ne vais plus pouvoir résister longtemps.",
+				"Je vais être aspiré.",
+				"Merci, merci pour votre aide !",
+				"Je commence à voir l'autre côté.",
+				"C'est...",
+				"L'attraction est trop forte, maintenant.",
+				"Mais...",
+				"Ça ne ressemble pas...",
+				"Ce n'est pas notre monde !",
+				"Noooon !",
+				"..."
+			],
+			"next": "dialFIN05"
+		},
+		"dial950": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Vous avez peut-être raison.",
+				"Je vais lui parler.",
+				"Ça a beau être un fantôme,",
+				"ou un ectoplasme,",
+				"ou le spectre de Malemont..."
+			],
+			"next": "rep950"
+		},
+		"dial951": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Oui, pardon.",
+				"Désolé, je m'égare.",
+				"Allons-y.",
+				"Je prend une bonne respiration."
+			],
+			"next": "rep952"
+		},
+		"dial952": {
+			"ref": 1,
+			"time": 6,
+			"content": ["Salutations, ô Entité !"],
+			"next": "rep952"
+		},
+		"dial953": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Chut, taisez-vous !",
+				"Ne la vexez pas."
+			],
+			"next": "rep954"
+		},
+		"dial954": {
+			"ref": 1,
+			"time": 3,
+			"content": [
+				"Je ne désire pas vous déranger.",
+				"Peut-être protégez-vous le trésor de Malemont.",
+				"Je ne cherche qu'à sortir d'ici."
+			],
+			"next": "rep955"
+		},
+		"dial955": {
+			"ref": 1,
+			"time": 8,
+			"content": [
+				"Je crois qu'elle m'a compris.",
+				"Elle...",
+				"Elle bouge."
+			],
+			"next": "rep956"
+		},
+		"dial956": {
+			"ref": 1,
+			"time": 4,
+			"content": [
+				"Elle...",
+				"Elle fonce sur moi !",
+				"Je ne sais pas où...",
+				"Oh, non !",
+				"Elle m'enveloppe !",
+				"Quelle horreur !",
+				"Ahhhhh... !",
+				"..."
+			],
+			"next": "rep957"
+		},
+		"dial957": {
+			"ref": 1,
+			"time": 4,
+			"content": [
+				"...",
+				"Ahhhh !",
+				"Ahhh ha ha ha !",
+				"Héhéhéhéhé...",
+				"Il est bleu !",
+				"Tout est bleu !",
+				"Un bleu horrible, sanguin !",
+				"Ha ha ha ha !"
+			],
+			"next": "dialFIN03"
+		},
+		"dial980": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Oui !",
+				"Je vais la contourner."
+			],
+			"next": "dial981"
+		},
+		"dial981": {
+			"ref": 1,
+			"time": 3,
+			"content": ["...Courir..."],
+			"next": "dial982"
+		},
+		"dial982": {
+			"ref": 1,
+			"time": 2,
+			"content": ["...Pas de sortie..."],
+			"next": "dial983"
+		},
+		"dial983": {
+			"ref": 1,
+			"time": 3,
+			"content": [
+				"...Je glisse...",
+				"Ahhhh !",
+				"Ma cheville !",
+				"...Peut plus marcher..."
+			],
+			"next": "dial984"
+		},
+		"dial984": {
+			"ref": 1,
+			"time": 5,
+			"content": [
+				"Elle arrive !",
+				"...Peut pas me défendre...",
+				"...Je...",
+				"Oh mon Dieu !",
+				"Elle m'attrappe !",
+				"Ahhh ! La douleur !",
+				"Elle me tire ! J'ai mal !",
+				"Ahhhh !",
+				"..."
+			],
+			"next": "dialFIN06"
 		},
 		"dialFIN01": {
 			"ref": 1,
@@ -275,7 +1163,77 @@
 				"Le jeu se termine (temporairement) ici",
 				"Taper «reboot» pour recommencer la partie."
 			],
-			"next": "rep999"
+			"next": "rep9999"
+		},
+		"dialFIN02": {
+			"ref": 1,
+			"time": 20,
+			"content": [
+				"<Connection perdue>",
+				" ",
+				"Michel Latrémon est mort, écrasé par un éboulement.",
+				"Il aurait pu aller plus loin avec votre aide.",
+				"Voulez-vous recommencer et faire d'autres choix ?",
+				" ",
+				"Taper «reboot» pour recommencer la partie."
+			],
+			"next": "rep9999"
+		},
+		"dialFIN03": {
+			"ref": 1,
+			"time": 20,
+			"content": [
+				"<Connection perdue>",
+				" ",
+				"Michel Latrémon a été retrouvé errant, quelques jours plus tard.",
+				"Il a été interné, le pauvre homme avait complètement perdu l'esprit",
+				"Il aurait pu aller plus loin avec votre aide.",
+				"Voulez-vous recommencer et faire d'autres choix ?",
+				" ",
+				"Taper «reboot» pour recommencer la partie."
+			],
+			"next": "rep9999"
+		},
+		"dialFIN04": {
+			"ref": 1,
+			"time": 20,
+			"content": [
+				"<Connection perdue>",
+				" ",
+				"Michel Latrémon est mort noyé.",
+				"Il aurait pu aller plus loin avec votre aide.",
+				"Voulez-vous recommencer et faire d'autres choix ?",
+				" ",
+				"Taper «reboot» pour recommencer la partie."
+			],
+			"next": "rep9999"
+		},
+		"dialFIN05": {
+			"ref": 1,
+			"time": 20,
+			"content": [
+				"<Connection perdue>",
+				" ",
+				"Michel Latrémon a disparu dans une autre dimention.",
+				"Malgré sa disparition, vous l'avez aidé à rester vivant et, qui sait, peut-être trouvera-t-il le moyen de rentrer dans notre monde ?",
+				"Voulez-vous recommencer et faire d'autres choix ?",
+				" ",
+				"Taper «reboot» pour recommencer la partie."
+			],
+			"next": "rep9999"
+		},
+		"dialFIN06": {
+			"ref": 1,
+			"time": 20,
+			"content": [
+				"<Connection perdue>",
+				" ",
+				"Le corps de Michel Latrémon a été retrouvé éventré et atrocement mutilé.",
+				"Voulez-vous recommencer et faire d'autres choix ?",
+				" ",
+				"Taper «reboot» pour recommencer la partie."
+			],
+			"next": "rep9999"
 		},
 		"_Reponses": {
 			"_Comment": "..."
@@ -305,7 +1263,7 @@
 			],
 			"content": [
 				"Non, je suis chez moi. De quels souterrains vous parlez ?",
-				"Mais, qui êtes-vous au juste ? Et c’est quoi, cette histoire de souterrains ?"
+				"Mais, qui êtes-vous au juste ? Et c'est quoi, cette histoire de souterrains ?"
 			],
 			"next": [
 				"dial104",
@@ -318,12 +1276,12 @@
 			"button": [
 				"Pas du tout.",
 				"Quel nom affreux !",
-				"Ce n’est pas un templier ?"
+				"Ce n'est pas un templier ?"
 			],
 			"content": [
 				"Non. Ça ne me dit rien du tout.",
 				"Quel nom affreux !",
-				"Le nom me dis quelque chose. Ce n’était pas un Templier ?"
+				"Le nom me dis quelque chose. Ce n'était pas un Templier ?"
 			],
 			"next": [
 				"dial201",
@@ -335,12 +1293,12 @@
 			"ref": 2,
 			"time": 2,
 			"button": [
-				"Qu’est-ce qui vous arrive ?",
-				"Pourquoi vous m’avez contacté ?"
+				"Qu'est-ce qui vous arrive ?",
+				"Pourquoi vous m'avez contacté ?"
 			],
 			"content": [
-				"Et que vous est-il arrivé ? On dirait que vous avez besoin d’aide.",
-				"Pourquoi vous me contactez ? Qu’est-ce que je peux faire pour vous ?"
+				"Et que vous est-il arrivé ? On dirait que vous avez besoin d'aide.",
+				"Pourquoi vous me contactez ? Qu'est-ce que je peux faire pour vous ?"
 			],
 			"next": [
 				"dial300",
@@ -352,22 +1310,22 @@
 			"time": 2,
 			"button": [
 				"Volontiers.",
-				"Je n’ai pas le temps."
+				"Je n'ai pas le temps."
 			],
 			"content": [
 				"Je veux bien vous aider, même si je ne suis pas sûr de pouvoir faire grand-chose.",
-				"Désolé, je n’ai pas le temps. Essayez d’appeler les secours, plutôt."
+				"Désolé, je n'ai pas le temps. Essayez d'appeler les secours, plutôt."
 			],
 			"next": [
-				"dial300",
-				"dial301"
+				"dial303",
+				"dial302"
 			]
 		},
 		"rep302": {
 			"ref": 2,
 			"time": 2,
 			"button": [
-				"Hum, attendez…",
+				"Hum, attendez...",
 				"Adieux."
 			],
 			"content": [
@@ -383,7 +1341,7 @@
 			"ref": 2,
 			"time": 2,
 			"button": ["Quels choix avez-vous ?"],
-			"content": ["Quelles directions s’offrent à vous, maintenant ?"],
+			"content": ["Quelles directions s'offrent à vous, maintenant ?"],
 			"next": ["dial400"]
 		},
 		"rep400": {
@@ -411,7 +1369,7 @@
 			],
 			"content": [
 				"Oui, Michel. Je suis là.",
-				"Qu’y-a-t’il ? Vous avez trouvé quelque chose ?"
+				"Qu'y-a-t'il ? Vous avez trouvé quelque chose ?"
 			],
 			"next": [
 				"dial403",
@@ -457,8 +1415,373 @@
 			"content": ["Il vous faut descendre dans le puits."],
 			"next": ["dial500"]
 		},
-		"rep999": {
-			"ref": 3,
+		"rep501": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Michel ? ça va ?",
+				"Que se passe-t-il ?"
+			],
+			"content": [
+				"Michel, vous allez bien ? Vous ne vous êtes pas blessé ?",
+				"Qu'est-ce qui se passe ? Vous avez trouvé quelque chose ?"
+			],
+			"next": [
+				"dial502",
+				"dial503"
+			]
+		},
+		"rep503": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Qu'avez-vous trouvé ?",
+				"Vous êtes sûr d'aller bien ?"
+			],
+			"content": [
+				"Qu'est-ce qui vous étonne tant dans votre découverte, Michel ?",
+				"Vous êtes sûr de ne pas vous être cogné la tête en descendant ?"
+			],
+			"next": [
+				"dial505",
+				"dial504"
+			]
+		},
+		"rep506": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Qu'est-ce que ça dit ?",
+				"Arrêtez ce suspence !"
+			],
+			"content": [
+				"Alors, vous avez pu tout lire ? Qu'est-ce que ça raconte ?",
+				"Ne jouez pas avec mes nerfs, Michel. Dites-moi ce que vous avez lu !"
+			],
+			"next": [
+				"dial508",
+				"dial507"
+			]
+		},
+		"rep508": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Il y a «daemon» dedans.",
+				"Et ensuite ?"
+			],
+			"content": [
+				"Il y a le mot «daemon». ça ressemble beaucoup à «démon», non ?",
+				"Qu'est-ce que le texte dit d'autre ?"
+			],
+			"next": [
+				"dial509",
+				"dial510"
+			]
+		},
+		"rep510": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Michel ?",
+				"Quoi encore ?"
+			],
+			"content": [
+				"Michel, qu'y a-t-il ?",
+				"Qu'avez-vous déniché encore ?"
+			],
+			"next": [
+				"dial511",
+				"dial511"
+			]
+		},
+		"rep511": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"C'est un trésor historique !",
+				"Vous comptez l'utiliser ?"
+			],
+			"content": [
+				"Vous devez le retrouver ! C'est une relique inestimable.",
+				"Vous pensez qu'il va vous aider à sortir d'ici par magie ? Vous êtes fou !"
+			],
+			"next": [
+				"dial512",
+				"dial513"
+			]
+		},
+		"rep600": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"C'est certain.",
+				"Peut-être."
+			],
+			"content": [
+				"Vous avez raison. Il faut aller explorer cet endroit, il doit y avoir une issue.",
+				"C'est possible, mais risqué. Restez prudent."
+			],
+			"next": [
+				"dial601",
+				"dial602"
+			]
+		},
+		"rep603": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"L'escalier.",
+				"Le tunnel."
+			],
+			"content": [
+				"Je suggère l'escalier. C'est le choix le plus prudent.",
+				"Je prendrais le tunnel. Je ne pense pas que l'autre passage mène à la crypte."
+			],
+			"next": [
+				"dial700",
+				"dial800"
+			]
+		},
+		"rep701": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Que voyez-vous ?",
+				"Et le livre ?"
+			],
+			"content": [
+				"Qu'est-ce que vous voyez ?",
+				"Vous voyez le livre ? Vous pouvez l'atteindre ?"
+			],
+			"next": [
+				"dial702",
+				"dial703"
+			]
+		},
+		"rep703": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Qu'allez-vous faire ?",
+				"Vous pouvez l'atteindre ?"
+			],
+			"content": [
+				"Qu'allez-vous faire ?",
+				"Vous pouvez l'atteindre ?"
+			],
+			"next": [
+				"dial704",
+				"dial704"
+			]
+		},
+		"rep704": {
+			"ref": 2,
+			"time": 2,
+			"button": ["Michel ? Ça va ?"],
+			"content": ["Michel ? Ça va ? Vous allez bien ? Répondez-moi !"],
+			"next": ["dial705"]
+		},
+		"rep705": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Michel, parlez-moi !",
+				"Qu'est-ce que c'est ?"
+			],
+			"content": [
+				"Michel, parlez-moi !",
+				"Qu'est-ce que c'est ? Que voyez-vous ?"
+			],
+			"next": [
+				"dial706",
+				"dial706"
+			]
+		},
+		"rep706": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Ne restez pas là !",
+				"Descendez de là !",
+				"Ne bougez pas !"
+			],
+			"content": [
+				"Fuyez ! Ne restez pas là ! Foncez !",
+				"Sautez, c'est la seule issue !",
+				"Ne bougez surtout pas ! Ne faites pas un geste, pas un bruit."
+			],
+			"next": [
+				"dial707",
+				"dial708",
+				"dial709"
+			]
+		},
+		"rep802": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Faites demi-tour.",
+				"Insistez."
+			],
+			"content": [
+				"Rebroussez chemin. C'est plus prudent.",
+				"Essayez de continuer tant que vous pouvez. Ça serait bête de renoncer maintenant."
+			],
+			"next": [
+				"dial803",
+				"dial804"
+			]
+		},
+		"rep804": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Insistez !",
+				"Une minute."
+			],
+			"content": [
+				"Tant que vous le pouvez, avancez. Ça ne peut pas continuer comme ça encore longtemps.",
+				"Faites une pause. Il est peut-etre plus prudent de réfléchir un peu."
+			],
+			"next": [
+				"dial830",
+				"dial820"
+			]
+		},
+		"rep820": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Ne paniquez pas !",
+				"Filez de là !"
+			],
+			"content": [
+				"Ne paniquez pas !",
+				"Filez de là !"
+			],
+			"next": [
+				"dial823",
+				"dial824"
+			]
+		},
+		"rep900": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Ouvrez-le.",
+				"Prenez-le."
+			],
+			"content": [
+				"Allez-y, ouvrez-le et cherchez le passage qui parle du portail de sortie.",
+				"Prenez-le, vous aurez le temps de le lire plus tard."
+			],
+			"next": [
+				"dial901",
+				"dial903"
+			]
+		},
+		"rep904": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Le livre est abimé ?",
+				"Que se passe-t-il ?"
+			],
+			"content": [
+				"Qu'y a-t-il ? Vous l'avez endommagé ?",
+				"Michel ? Que se passe-t-il ? Parlez-moi !"
+			],
+			"next": [
+				"dial905",
+				"dial905"
+			]
+		},
+		"rep905": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Lisez le livre !",
+				"Parlez-lui.",
+				"Fonçez !"
+			],
+			"content": [
+				"Ne perdez pas une minute, Michel. Lisez le passage sur le moyen de vous échapper.",
+				"Peut-être n'est-elle pas hostile ? Essayez de communiquer.",
+				"Filez de là, sauvez-vous ! Vite !"
+			],
+			"next": [
+				"dial910",
+				"dial950",
+				"dial980"
+			]
+		},
+		"rep910": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Ressaisissez-vous !",
+				"Ne la regardez pas !"
+			],
+			"content": [
+				"Ressaisissez-vous !",
+				"Ne la regardez pas !"
+			],
+			"next": [
+				"dial912",
+				"dial913"
+			]
+		},
+		"rep916": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Allez-y !",
+				"Attendez !"
+			],
+			"content": [
+				"Allez-y, Michel ! Et quand vous serez libre, appelez-moi !",
+				"Soyez prudent ! Qui vous dit que c'est bien ce que vous pensez ?"
+			],
+			"next": [
+				"dial917",
+				"dial918"
+			]
+		},
+		"rep950": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Parlez-lui.",
+				"Dépéchez-vous !"
+			],
+			"content": [
+				"Allez-y. Parlez-lui, bon sang !",
+				"Ne perdez pas de temps. Parlez-lui !"
+			],
+			"next": [
+				"dial951",
+				"dial951"
+			]
+		},
+		"rep952": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Quelle intro !",
+				"Entité ?"
+			],
+			"content": [
+				"Quelle intro !",
+				"Entité ?"
+			],
+			"next": [
+				"dial953",
+				"dial953"
+			]
+		},
+		"rep9999": {
+			"ref": 2,
 			"time": 10,
 			"content": ["reboot"],
 			"next": [

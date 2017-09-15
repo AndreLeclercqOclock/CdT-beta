@@ -2,7 +2,7 @@
 # Script par LEIFER KOPF // leifer.kopf@gmail.com
 # Scénario par VINCENT CORLAIX  // vcorlaix@nootilus.com
 # Disclaimer : L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).
-# version : 0.58
+# version : 0.69
 
 extends Control
 
@@ -46,14 +46,38 @@ func start():
 			get_node("Status").add_text(str(dict._Dialogues.name.name," écrit un message"))
 			dial = [dict._Dialogues[currentDial].content[i]]
 			size = (dial[0].length())/20
-			# Fourchettes en fonction de la taille du texte. (a venir)
+			print(size)
+
+			# Fourchettes en fonction de la taille du texte.
+			# Inférieur à 0 seconde
 			if size <= 0:
 				size = 0.5
+			# Entre 0 & 2 secondes
+			elif size > 0 and size <= 2:
+				size = 1.5
+			# Entre 2 & 5 secondes
+			elif size > 2 and size <= 5:
+				size = 3.5
+			# Entre 5 & 10 secondes
+			elif size > 5 and size <= 10:
+				size = 5
+			# Supérieur à 10 secondes
+			elif size > 10:
+				size = 7
+
+			# Lance le timer en fonction du nombre de char dans le content
+			print(size)
 			time_delay = size
 			timer.set_wait_time(time_delay)
 			timer.start()
 			yield(get_node("Timer"), "timeout")
 			get_node("Status").clear()
+
+			# Temporisation courte entre le message système et le texte
+			time_delay = 0.2
+			timer.set_wait_time(time_delay)
+			timer.start()
+			yield(get_node("Timer"), "timeout")
 
 # Ecrit la ligne de dialogue
 			get_node("Dialogues").newline()
@@ -62,6 +86,8 @@ func start():
 			timer.set_wait_time(time_delay)
 			timer.start()
 			yield(get_node("Timer"), "timeout")
+
+		# Clos la boucle et passe au next
 		currentDial = dict._Dialogues[currentDial].next
 		time_delay = dict._Dialogues[currentDial].time
 		timer.set_wait_time(time_delay)
