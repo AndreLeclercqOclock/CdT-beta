@@ -354,11 +354,11 @@
 				<real> 45 </real>
 				<string> "QUITTER" </string>
 				<real> 2 </real>
-				<real> 94 </real>
-				<real> 28 </real>
+				<real> 127 </real>
+				<real> 49 </real>
 				<color> 0.941406, 0.941406, 0.941406, 1 </color>
 				<color> 0.238281, 0.215942, 0.215942, 1 </color>
-				<string> "alpha 0.0.1" </string>
+				<string> "alpha 0.0.1.5" </string>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>
