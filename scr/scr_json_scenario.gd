@@ -64,6 +64,10 @@ func start():
 			yield(get_node("Timer"), "timeout")
 			print("FIN FOR")
 		currentDial = dict._Dialogues[currentDial].next
+		time_delay = dict._Dialogues[currentDial].time
+		timer.set_wait_time(time_delay)
+		timer.start()
+		yield(get_node("Timer"), "timeout")
 		start()
 		print("FIN IF")
 
