@@ -18,12 +18,12 @@ var wait = false
 var dial = []
 var size = null
 
+# Lancement du script en jeu
 func _ready():
-	print("ready")
 	start()
 
+# Fonction ou reboucle le script quand il repart du début
 func start():
-	print("start")
 
 # Ouverture / Parse / Fermeture du fichier JSON
 	var file = File.new()
@@ -31,23 +31,21 @@ func start():
 	dict.parse_json(file.get_as_text())
 	file.close()
 
-# Timer
+# Initialisation du Timer
 	timer = get_node("Timer")
 	timer.set_wait_time(time_delay)
-	print("TIMER")
 
+									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	if dict._Dialogues[currentDial].ref == 1 :
-		print("IF")
 		get_node("Dialogues").set_scroll_follow(true)
 		get_node("Dialogues").push_align(0)
 		for i in range(dict._Dialogues[currentDial].content.size()):
-			print("FOR")
-			# Affiche le status "Ecrit un message"
+
+# Affiche le status "Ecrit un message"
 			get_node("Status").add_text(str(dict._Dialogues.name.name," écrit un message"))
 			dial = [dict._Dialogues[currentDial].content[i]]
 			size = (dial[0].length())/20
-			print(size)
 			if size <= 0:
 				size = 0.5
 			time_delay = size
@@ -55,26 +53,25 @@ func start():
 			timer.start()
 			yield(get_node("Timer"), "timeout")
 			get_node("Status").clear()
-			# Ecrit la ligne de dialogue
+
+# Ecrit la ligne de dialogue
 			get_node("Dialogues").newline()
 			get_node("Dialogues").add_text(str(dict._Dialogues.name.name," : ",dict._Dialogues[currentDial].content[i]))
 			time_delay = dict._Dialogues[currentDial].time
 			timer.set_wait_time(time_delay)
 			timer.start()
 			yield(get_node("Timer"), "timeout")
-			print("FIN FOR")
 		currentDial = dict._Dialogues[currentDial].next
 		time_delay = dict._Dialogues[currentDial].time
 		timer.set_wait_time(time_delay)
 		timer.start()
 		yield(get_node("Timer"), "timeout")
 		start()
-		print("FIN IF")
 
 
+									## REPONSES ##
 # Gestion des dialogues de ref 2 [REPONSES CHOIX MULTIPLES]
 	if dict._Dialogues[currentDial].ref == 2 :
-		print("Réponses choix multiples")
 		for i in range(dict._Dialogues[currentDial].content.size()):
 			get_node(str("Bouton",i)).set_text(str(dict._Dialogues[currentDial].button[i]))
 			get_node(str("Bouton",i)).set_ignore_mouse(false)
@@ -84,12 +81,11 @@ func start():
 
 # Gestion des dialogues de ref 3 [REPONSES VIA TEXTE PRECIS]
 	if dict._Dialogues[currentDial].ref == 3:
-		print("Réponses via texte")
 		get_node("TextEdit").show()
 		get_node("TextEdit").clear()
 		timer.stop()
 
-
+									## MEDIAS ##
 # Gestion des images dialogues de ref 4 [IMAGES]
 	if dict._Dialogues[currentDial].ref == 4:
 		image = load(str("res://img/",dict._Dialogues[currentDial].content))
@@ -118,11 +114,10 @@ func start():
 			start()
 
 
-
+										## BOUTONS REPONSES ##
 # Gestion des boutons de choix multipes
 # BOUTON 0
 func _on_Bouton0_pressed():
-	print("Bouton 0")
 	clean()
 	get_node("Dialogues").push_align(2)
 	get_node("Dialogues").newline()
@@ -136,7 +131,6 @@ func _on_Bouton0_pressed():
 
 # BOUTON 1
 func _on_Bouton1_pressed():
-	print("Bouton 1")
 	clean()
 	get_node("Dialogues").push_align(2)
 	get_node("Dialogues").newline()
@@ -150,7 +144,6 @@ func _on_Bouton1_pressed():
 
 # BOUTON 2
 func _on_Bouton2_pressed():
-	print("Bouton 2")
 	clean()
 	get_node("Dialogues").push_align(2)
 	get_node("Dialogues").newline()
@@ -164,7 +157,6 @@ func _on_Bouton2_pressed():
 
 # BOUTON 3
 func _on_Bouton3_pressed():
-	print("Bouton 3")
 	get_node("Dialogues").push_align(2)
 	get_node("Dialogues").newline()
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[3]))
@@ -179,12 +171,11 @@ func _on_Bouton3_pressed():
 # Nettoyage des boutons inutiles
 func clean():
 	for i in range(4):
-		print("Suppression bouton")
 		get_node(str("Bouton",i)).set_text("")
 		get_node(str("Bouton",i)).set_ignore_mouse(true)
 		get_node(str("Bouton",i)).set_flat(true)
 
-
+									## BOITE DE DIALOGUE REPONSES ECRITE ##
 # Boite de dialogue pour écrire la réponse demandée.
 func _on_TextEdit_text_entered( text ):
 	if get_node("TextEdit").get_text() == dict._Dialogues[currentDial].content[0]:
