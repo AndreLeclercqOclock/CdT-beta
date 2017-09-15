@@ -49,7 +49,7 @@ func start():
 			size = (dial[0].length())/8
 			print(size)
 			if size <= 0:
-				size = 1
+				size = 0.5
 			time_delay = size
 			timer.set_wait_time(time_delay)
 			timer.start()
