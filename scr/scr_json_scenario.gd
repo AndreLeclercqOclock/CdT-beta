@@ -21,21 +21,21 @@ var size = null
 func _ready():
 	print("ready")
 	start()
-	
+
 func start():
 	print("start")
-	
+
 # Ouverture / Parse / Fermeture du fichier JSON
 	var file = File.new()
 	file.open("res://json/protoTest_fr.json", file.READ)
 	dict.parse_json(file.get_as_text())
 	file.close()
-	
+
 # Timer
 	timer = get_node("Timer")
 	timer.set_wait_time(time_delay)
 	print("TIMER")
-	
+
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	if dict._Dialogues[currentDial].ref == 1 :
 		print("IF")
@@ -66,8 +66,8 @@ func start():
 		currentDial = dict._Dialogues[currentDial].next
 		start()
 		print("FIN IF")
-	
-	
+
+
 # Gestion des dialogues de ref 2 [REPONSES CHOIX MULTIPLES]
 	if dict._Dialogues[currentDial].ref == 2 :
 		print("Réponses choix multiples")
@@ -76,16 +76,16 @@ func start():
 			get_node(str("Bouton",i)).set_ignore_mouse(false)
 			get_node(str("Bouton",i)).set_flat(false)
 		timer.stop()
-	
-	
+
+
 # Gestion des dialogues de ref 3 [REPONSES VIA TEXTE PRECIS]
 	if dict._Dialogues[currentDial].ref == 3:
 		print("Réponses via texte")
 		get_node("TextEdit").show()
 		get_node("TextEdit").clear()
 		timer.stop()
-	
-	
+
+
 # Gestion des images dialogues de ref 4 [IMAGES]
 	if dict._Dialogues[currentDial].ref == 4:
 		image = load(str("res://img/",dict._Dialogues[currentDial].content))
@@ -95,9 +95,9 @@ func start():
 		currentDial = dict._Dialogues[currentDial].next
 		time_delay = dict._Dialogues[currentDial].time
 		start()
-	
-	
-	
+
+
+
 # Gestion des vidéos dialogues de ref 5 [VIDEOS]
 	if dict._Dialogues[currentDial].ref == 5:
 		if wait == false:
@@ -112,9 +112,9 @@ func start():
 			currentDial = dict._Dialogues[currentDial].next
 			time_delay = dict._Dialogues[currentDial].time
 			start()
-	
-	
-	
+
+
+
 # Gestion des boutons de choix multipes
 # BOUTON 0
 func _on_Bouton0_pressed():
@@ -129,7 +129,7 @@ func _on_Bouton0_pressed():
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	start()
-	
+
 # BOUTON 1
 func _on_Bouton1_pressed():
 	print("Bouton 1")
@@ -143,7 +143,7 @@ func _on_Bouton1_pressed():
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	start()
-	
+
 # BOUTON 2
 func _on_Bouton2_pressed():
 	print("Bouton 2")
@@ -157,7 +157,7 @@ func _on_Bouton2_pressed():
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	start()
-	
+
 # BOUTON 3
 func _on_Bouton3_pressed():
 	print("Bouton 3")
@@ -170,8 +170,8 @@ func _on_Bouton3_pressed():
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	start()
-	
-	
+
+
 # Nettoyage des boutons inutiles
 func clean():
 	for i in range(4):
@@ -179,8 +179,8 @@ func clean():
 		get_node(str("Bouton",i)).set_text("")
 		get_node(str("Bouton",i)).set_ignore_mouse(true)
 		get_node(str("Bouton",i)).set_flat(true)
-	
-	
+
+
 # Boite de dialogue pour écrire la réponse demandée.
 func _on_TextEdit_text_entered( text ):
 	if get_node("TextEdit").get_text() == dict._Dialogues[currentDial].content[0]:
