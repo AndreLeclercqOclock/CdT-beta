@@ -46,6 +46,7 @@ func start():
 			get_node("Status").add_text(str(dict._Dialogues.name.name," écrit un message"))
 			dial = [dict._Dialogues[currentDial].content[i]]
 			size = (dial[0].length())/20
+			# Fourchettes en fonction de la taille du texte. (a venir)
 			if size <= 0:
 				size = 0.5
 			time_delay = size
@@ -57,7 +58,7 @@ func start():
 # Ecrit la ligne de dialogue
 			get_node("Dialogues").newline()
 			get_node("Dialogues").add_text(str(dict._Dialogues.name.name," : ",dict._Dialogues[currentDial].content[i]))
-			time_delay = dict._Dialogues[currentDial].time
+			time_delay = 0.75
 			timer.set_wait_time(time_delay)
 			timer.start()
 			yield(get_node("Timer"), "timeout")
