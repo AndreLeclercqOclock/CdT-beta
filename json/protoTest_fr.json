@@ -1,0 +1,479 @@
+{
+	"_Credits": {
+		"Developpeur": "Leifer Kopf",
+		"Scenariste": "Vincent Corlaix",
+		"Moteur": "GodotEngine",
+		"Disclaimer": "L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).",
+		"Contact Leifer": "leifer.kopf@gmail.com",
+		"Contact Nootilus": "vcorlaix@nootilus.com",
+		"Version": "v0.36"
+	},
+	"_Dialogues": {
+		"_Comment": {
+			"Ref": "Dialogue = 1 ; Reponse choix multiple = 2 ; Reponse text précis = 3 ; Image = 4",
+			"Time": "En secondes"
+		},
+		"name": {
+			"name": "Pr. Latrémon"
+		},
+		"dial001": {
+			"ref": 1,
+			"time": 1,
+			"content": [
+				"Ah, bon sang, comment marche ce truc ?…",
+				"Allô ?",
+				"Oh…",
+				"C’est génial ! Je vois ce que je dis sur l’écran !",
+				"Je n’ai pas besoin de taper.",
+				"Bon.",
+				"Mais, je ne sais même pas quelqu’un me reçoit…",
+				"Y’a quelqu’un ?"
+			],
+			"next": "rep101"
+		},
+		"dial102": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Oh, quelle chance !",
+				"J’étais presque sûr de ne pas accrocher de réseau, ici.",
+				"À moins que…",
+				"Vous n’êtes pas dans le souterrain avec moi, quand-même ?"
+			],
+			"next": "rep102"
+		},
+		"dial103": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Oui, j’aurai dû commencer par là, désolé.",
+				"C’est à dire que je ne suis pas dans une situation qui pousse aux civilités."
+			],
+			"next": "dial200"
+		},
+		"dial104": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"C’est un peu long à raconter, mais pour faire court…",
+				"Je suis dans des catacombes, et je me suis perdu.",
+				"Mais je manque à toutes les politesses."
+			],
+			"next": "dial200"
+		},
+		"dial200": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Je m’appelle Michel Latrémon, et je suis historien.",
+				"Je sais que, quand je dis ma profession, on pense à un homme prématurément vieilli le nez dans des bouquins aussi moisis que lui.",
+				"Et, croyez-moi, c’est habituellement le cas.",
+				"Mais, je suis tombé il y a quelques mois sur un manuscrit intéressant.",
+				"Connaissez-vous Jean de Malemont ?"
+			],
+			"next": "rep200"
+		},
+		"dial201": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Jean de Malemort était sergent du Temple à Limoges, de 1304 à 1310.",
+				"Lorsque l’ordre des Templiers a été détruit, il a été fait prisonnier.",
+				"Mais il a échappé mystérieusement au bûcher.",
+				"J’ai retrouvé sa trace par accident.",
+				"Et je n’ai pas pu résister à l’envie de venir moi-même voir si son tombeau est bien là où le manuscrit le mentionnait."
+			],
+			"next": "rep201"
+		},
+		"dial202": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Hahaha, oui.",
+				"Mais ce n’est qu’un nom. Ce n’était pas un «méchant».",
+				"Enfin, je ne crois pas…"
+			],
+			"next": "dial300"
+		},
+		"dial203": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Si, exactement !",
+				"Whow, vous ne seriez pas historien, vous aussi ?",
+				"Hum…",
+				"Ou alors vous avez regardé sur Google, n’est ce pas ?",
+				"Peu importe."
+			],
+			"next": "dial300"
+		},
+		"dial300": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Il m’est arrivé une guigne pas possible.",
+				"J’avoue, j’ai commencé mon exploration comme le vieil universitaire que je suis.",
+				"Je ne suis ni archéologue, ni spéléologe.",
+				"Je me suis simplement dit que si c’était trop dangereux ou compliqué, je ferais demi-tour et reviendrais avec une équipe d’étudiants. Après tout, il faut bien qu’ils aient une utilité.",
+				"Peu importe."
+			],
+			"next": "dial301"
+		},
+		"dial301": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Si je vous ai contacté, c’est un accident.",
+				"Un heureux accident pour moi.",
+				"Peut-être un accident ennuyeux pour vous.",
+				"Néanmoins, je voulais appeler des secours sur mon portable.",
+				"Et… Bon… Comment dire ?",
+				"Je n’aime pas ces appareils, c’est compliqué.",
+				"Donc, au lieu de composer le bon numéro, j’ai appuyé où il ne fallait pas, sans doute.",
+				"Et j’ai lancé cette application de discussion en réseau.",
+				"Mais si vous pouviez m’aider, ce serait tellement aimable de votre part…"
+			],
+			"next": "rep301"
+		},
+		"dial302": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Ah.",
+				"Très bien.",
+				"Désolé de vous avoir dérangé.",
+				"Je vais essayer de me débrouiller par moi-même.",
+				"Adieu."
+			],
+			"next": "rep302"
+		},
+		"dial303": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Oh, merveilleux ! Merci, merci !",
+				"Je suis soulagé, vous n’imaginez pas à quel point.",
+				"Bon, je vous explique ma situation.",
+				"J’ai trouvé les catacombes, comme décrit dans le manuscrit.",
+				"J’ai commencé à explorer, c’est un vrai dédale.",
+				"J’ai noté mes déplacements dans un petit carnet.",
+				"Mais je suis passé par une section où l’eau s’est infiltrée.",
+				"Le sol était boueux sur plusieurs centimètres.",
+				"Avec ma petite lampe je n’ai rien vu.",
+				"Bref. J’ai glissé.",
+				"Et mon carnet est tombé.",
+				"Trempé, l’encre délavée.",
+				"Pour vous le dire clairement : je n’ai plus de carte.",
+				"Et je ne trouve plus mes repères.",
+				"Je suis perdu."
+			],
+			"next": "rep303"
+		},
+		"dial400": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Je n’en ai guère.",
+				"Je suis dans un couloir qui forme un coude devant et derrière moi.",
+				"Il y a un effondrement du sol dans lequel je peux me glisser.",
+				"Mais j’ignore s’il s’agit d’un passage.",
+				"Vous feriez quoi, à ma place ?"
+			],
+			"next": "rep400"
+		},
+		"dial401": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Ok. Merci.",
+				"Allons-y, gaiement !",
+				"Je vous ai dit que j’avais été scout ?",
+				"Mais je ne vais pas me mettre à chanter, rassurez-vous.",
+				"Bon, je vais épargner mon souffle.",
+				"Je vous recontacte quand je trouve quelque chose."
+			],
+			"next": "dial402"
+		},
+		"dial402": {
+			"ref": 1,
+			"time": 300,
+			"content": ["Heu, vous êtes là ?"],
+			"next": "rep402"
+		},
+		"dial403": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Vous n’allez sans doute pas me croire…",
+				"Je suis revenu à mon point de départ.",
+				"C’est-à-dire, je suis à nouveau à l’endroit du trou.",
+				"Là où je vous ai demandé par où aller.",
+				"Et que vous m’avez dit de prendre le couloir.",
+				"J’ai peut-être loupé quelque chose ?",
+				"J’ai du mal à croire que j’ai tourné en rond."
+			],
+			"next": "rep403"
+		},
+		"dial404": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Bien. Vous avez probablement raison.",
+				"Et puis qui ne tente rien n’a rien.",
+				"Je suis désolé. Je vais arrêter de vous assomer avec mes aphorismes de vieil universitaire.",
+				"Je vous tiens au courant de mon exploration."
+			],
+			"next": "dial405"
+		},
+		"dial405": {
+			"ref": 1,
+			"time": 300,
+			"content": ["Oh, non…"],
+			"next": "rep405"
+		},
+		"dial406": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Bingo.",
+				"Je n’y crois pas."
+			],
+			"next": "dial407"
+		},
+		"dial407": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Je suis à nouveau au même endroit.",
+				"Et, je ne vous cache pas que ça me donne la chair de poule.",
+				"Comment vous dire ?",
+				"Je ne suis pas quelqu’un d’impressionnable.",
+				"Mais ici, j’ai une sensation étrange.",
+				"Comme le sentiment d’être épié.",
+				"Bon.",
+				"Je n’ai plus le choix, n’est-ce pas ?"
+			],
+			"next": "rep407"
+		},
+		"dial500": {
+			"ref": 1,
+			"time": 2,
+			"content": [
+				"Bien.",
+				"Un peu de courage.",
+				"Je suis désolé, mais comme je vais devoir m’aider de mes mains, je vais mettre mon téléphone dans une poche.",
+				"Je vous retrouve en bas.",
+				"Enfin, j’espère.",
+				"À tout de suite !"
+			],
+			"next": "dialFIN01"
+		},
+		"dialFIN01": {
+			"ref": 1,
+			"time": 20,
+			"content": [
+				"Le jeu se termine (temporairement) ici",
+				"Taper «reboot» pour recommencer la partie."
+			],
+			"next": "rep999"
+		},
+		"_Reponses": {
+			"_Comment": "..."
+		},
+		"rep101": {
+			"ref": 2,
+			"time": 1,
+			"button": [
+				"Oui",
+				"Qui êtes-vous ?"
+			],
+			"content": [
+				"Oui. Je vous reçois.",
+				"Je vous capte, mais qui êtes-vous au juste ?"
+			],
+			"next": [
+				"dial102",
+				"dial103"
+			]
+		},
+		"rep102": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Non, je suis chez moi.",
+				"Mais, qui êtes-vous ?"
+			],
+			"content": [
+				"Non, je suis chez moi. De quels souterrains vous parlez ?",
+				"Mais, qui êtes-vous au juste ? Et c’est quoi, cette histoire de souterrains ?"
+			],
+			"next": [
+				"dial104",
+				"dial103"
+			]
+		},
+		"rep200": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Pas du tout.",
+				"Quel nom affreux !",
+				"Ce n’est pas un templier ?"
+			],
+			"content": [
+				"Non. Ça ne me dit rien du tout.",
+				"Quel nom affreux !",
+				"Le nom me dis quelque chose. Ce n’était pas un Templier ?"
+			],
+			"next": [
+				"dial201",
+				"dial202",
+				"dial203"
+			]
+		},
+		"rep201": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Qu’est-ce qui vous arrive ?",
+				"Pourquoi vous m’avez contacté ?"
+			],
+			"content": [
+				"Et que vous est-il arrivé ? On dirait que vous avez besoin d’aide.",
+				"Pourquoi vous me contactez ? Qu’est-ce que je peux faire pour vous ?"
+			],
+			"next": [
+				"dial300",
+				"dial301"
+			]
+		},
+		"rep301": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Volontiers.",
+				"Je n’ai pas le temps."
+			],
+			"content": [
+				"Je veux bien vous aider, même si je ne suis pas sûr de pouvoir faire grand-chose.",
+				"Désolé, je n’ai pas le temps. Essayez d’appeler les secours, plutôt."
+			],
+			"next": [
+				"dial300",
+				"dial301"
+			]
+		},
+		"rep302": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Hum, attendez…",
+				"Adieux."
+			],
+			"content": [
+				"Je ne sais pas trop ce que je peux faire, mais dites toujours ce que vous attendez de moi.",
+				"Adieux."
+			],
+			"next": [
+				"dial303",
+				"dialFIN01"
+			]
+		},
+		"rep303": {
+			"ref": 2,
+			"time": 2,
+			"button": ["Quels choix avez-vous ?"],
+			"content": ["Quelles directions s’offrent à vous, maintenant ?"],
+			"next": ["dial400"]
+		},
+		"rep400": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Suivez le couloir.",
+				"Descendez dans le puits."
+			],
+			"content": [
+				"Essayez de suivre le couloir. Ça semble le plus prudent.",
+				"Peut-être que ce trou mène plus facilement dehors."
+			],
+			"next": [
+				"dial401",
+				"dial500"
+			]
+		},
+		"rep402": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Oui.",
+				"Que se passe-t-il ?"
+			],
+			"content": [
+				"Oui, Michel. Je suis là.",
+				"Qu’y-a-t’il ? Vous avez trouvé quelque chose ?"
+			],
+			"next": [
+				"dial403",
+				"dial403"
+			]
+		},
+		"rep403": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Recommencez.",
+				"Essayez le trou."
+			],
+			"content": [
+				"Vous avez dû louper un passage. Retournez-y.",
+				"Laissez tomber. Essayez de descendre dans le puits."
+			],
+			"next": [
+				"dial404",
+				"dial500"
+			]
+		},
+		"rep405": {
+			"ref": 2,
+			"time": 2,
+			"button": [
+				"Quoi ?",
+				"Retour au départ ?"
+			],
+			"content": [
+				"Vous avez trouvé quelque chose ?",
+				"Ne me dites rien. Vous êtes encore revenu au début ?"
+			],
+			"next": [
+				"dial406",
+				"dial407"
+			]
+		},
+		"rep407": {
+			"ref": 2,
+			"time": 2,
+			"button": ["Le trou."],
+			"content": ["Il vous faut descendre dans le puits."],
+			"next": ["dial500"]
+		},
+		"rep999": {
+			"ref": 3,
+			"time": 10,
+			"content": ["reboot"],
+			"next": [
+				"dial001",
+				"dialFIN01"
+			]
+		},
+		"_Medias_Vidéos": {
+			"_Comment": "Inutilisé pour cette version"
+		},
+		"vid001": {
+			"ref": 5,
+			"time": 2,
+			"content": "sample.ogv",
+			"next": "rep005"
+		}
+	}
+}

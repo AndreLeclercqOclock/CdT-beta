@@ -25,7 +25,7 @@ func start():
 	
 # Ouverture / Parse / Fermeture du fichier JSON
 	var file = File.new()
-	file.open("res://json/dial_fr.json", file.READ)
+	file.open("res://json/protoTest_fr.json", file.READ)
 	dict.parse_json(file.get_as_text())
 	file.close()
 	
@@ -41,7 +41,7 @@ func start():
 		for i in range(dict._Dialogues[currentDial].content.size()):
 			print("FOR")
 			# Affiche le status "Ecrit un message"
-			get_node("Status").set_text(str(dict._Dialogues.name.name," écrit un message"))
+			get_node("Status").add_text(str(dict._Dialogues.name.name," écrit un message"))
 			time_delay = 2
 			timer.start()
 			yield(get_node("Timer"), "timeout")
