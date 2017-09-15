@@ -15,6 +15,8 @@ var image = null
 var video = null
 var content = null
 var wait = false
+var dial = []
+var size = null
 
 func _ready():
 	print("ready")
@@ -32,6 +34,7 @@ func start():
 # Timer
 	timer = get_node("Timer")
 	timer.set_wait_time(time_delay)
+	print("TIMER")
 	
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	if dict._Dialogues[currentDial].ref == 1 :
@@ -42,14 +45,21 @@ func start():
 			print("FOR")
 			# Affiche le status "Ecrit un message"
 			get_node("Status").add_text(str(dict._Dialogues.name.name," écrit un message"))
-			time_delay = 2
+			dial = [dict._Dialogues[currentDial].content[i]]
+			size = (dial[0].length())/8
+			print(size)
+			if size <= 0:
+				size = 1
+			time_delay = size
+			timer.set_wait_time(time_delay)
 			timer.start()
 			yield(get_node("Timer"), "timeout")
 			get_node("Status").clear()
 			# Ecrit la ligne de dialogue
 			get_node("Dialogues").newline()
 			get_node("Dialogues").add_text(str(dict._Dialogues.name.name," : ",dict._Dialogues[currentDial].content[i]))
-			time_delay = 1
+			time_delay = dict._Dialogues[currentDial].time
+			timer.set_wait_time(time_delay)
 			timer.start()
 			yield(get_node("Timer"), "timeout")
 			print("FIN FOR")
@@ -115,6 +125,7 @@ func _on_Bouton0_pressed():
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
 	currentDial = dict._Dialogues[currentDial].next[0]
 	time_delay = dict._Dialogues[currentDial].time
+	timer.set_wait_time(time_delay)
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	start()
@@ -128,6 +139,7 @@ func _on_Bouton1_pressed():
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[1]))
 	currentDial = dict._Dialogues[currentDial].next[1]
 	time_delay = dict._Dialogues[currentDial].time
+	timer.set_wait_time(time_delay)
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	start()
@@ -141,6 +153,7 @@ func _on_Bouton2_pressed():
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[2]))
 	currentDial = dict._Dialogues[currentDial].next[2]
 	time_delay = dict._Dialogues[currentDial].time
+	timer.set_wait_time(time_delay)
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	start()
@@ -153,6 +166,7 @@ func _on_Bouton3_pressed():
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[3]))
 	currentDial = dict._Dialogues[currentDial].next[3]
 	time_delay = dict._Dialogues[currentDial].time
+	timer.set_wait_time(time_delay)
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	start()
@@ -174,9 +188,11 @@ func _on_TextEdit_text_entered( text ):
 		get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
 		currentDial = dict._Dialogues[currentDial].next[0]
 		time_delay = dict._Dialogues[currentDial].time
+		timer.set_wait_time(time_delay)
 		get_node("TextEdit").hide()
 		start()
 	else:
 		currentDial = dict._Dialogues[currentDial].next[1]
 		time_delay = dict._Dialogues[currentDial].time
+		timer.set_wait_time(time_delay)
 		start()
