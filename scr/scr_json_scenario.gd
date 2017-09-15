@@ -14,6 +14,7 @@ var time_delay = 1
 var image = null
 var video = null
 var content = null
+var wait = false
 
 func _ready():
 	print("ready")
@@ -86,13 +87,22 @@ func start():
 		start()
 	
 	
+	
 # Gestion des vidéos dialogues de ref 5 [VIDEOS]
 	if dict._Dialogues[currentDial].ref == 5:
-		video = load("res://vid/sample.ogv")
-		get_node("VideoPlayer").set_stream(video)
-		get_node("VideoPlayer").play()
-
-		
+		if wait == false:
+			get_node("VideoPlayer").show()
+			video = load("res://vid/sample.ogv")
+			get_node("VideoPlayer").set_stream(video)
+			get_node("VideoPlayer").play()
+			print("PLAY")
+			yield(get_node("VideoPlayer"),"stopped")
+			print("STOP")
+			get_node("VideoPlayer").hide()
+			currentDial = dict._Dialogues[currentDial].next
+			time_delay = dict._Dialogues[currentDial].time
+			start()
+	
 	
 	
 # Gestion des boutons de choix multipes
