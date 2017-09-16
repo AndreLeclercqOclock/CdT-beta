@@ -23,7 +23,8 @@ func _ready():
 	print("Crédits")
 	print("Script par LEIFER KOPF // leifer.kopf@gmail.com")
 	print("Scénario par VINCENT CORLAIX  // vcorlaix@nootilus.com")
-	print("Disclaimer : L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).")
+	print("Disclaimer : L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé,
+	même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).")
 	print("...................................................................................")
 	print("#### LANCEMENT DU JEU ####")
 	print("Initialisation du script")
