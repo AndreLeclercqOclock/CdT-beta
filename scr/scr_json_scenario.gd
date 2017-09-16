@@ -18,115 +18,153 @@ var wait = false
 var dial = []
 var size = null
 
-# Lancement du script en jeu
+# Initialisation des bases du script
 func _ready():
-	start()
-
-# Fonction ou reboucle le script quand il repart du début
-func start():
-
+	print("Crédits")
+	print("Script par LEIFER KOPF // leifer.kopf@gmail.com")
+	print("Scénario par VINCENT CORLAIX  // vcorlaix@nootilus.com")
+	print("Disclaimer : L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).")
+	print("...................................................................................")
+	print("#### LANCEMENT DU JEU ####")
+	print("Initialisation du script")
 # Ouverture / Parse / Fermeture du fichier JSON
+	print("Ouverture du JSON")
 	var file = File.new()
 	file.open("res://json/protoTest_fr.json", file.READ)
 	dict.parse_json(file.get_as_text())
 	file.close()
+	print("Fermeture du JSON")
 
 # Initialisation du Timer
+	print("Initialitation du Timer")
 	timer = get_node("Timer")
 	timer.set_wait_time(time_delay)
+
+# Lancement du script
+	print("Lancement du script")
+	start()
+
+
+# Fonction ou reboucle le script quand il repart du début
+func start():
+	print("Début du processus d'interpretation du JSON")
 
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	if dict._Dialogues[currentDial].ref == 1 :
+		print("#### DIALOGUES REF : 1 ####")
 		get_node("Dialogues").set_scroll_follow(true)
 		get_node("Dialogues").push_align(0)
+
+		print("Traitement du Dialogue")
 		for i in range(dict._Dialogues[currentDial].content.size()):
 
 # Affiche le status "Ecrit un message"
+			print("Message système 'Ecrit un message'")
 			get_node("Status").add_text(str(dict._Dialogues.name.name," écrit un message"))
+			print("Calcule du nombre de charactère dans la phrase")
 			dial = [dict._Dialogues[currentDial].content[i]]
 			size = (dial[0].length())/20
-			print(size)
+			print("Définition du temps d'écriture en secondes")
 
-			# Fourchettes en fonction de la taille du texte.
-			# Inférieur à 0 seconde
+# Fourchettes en fonction de la taille du texte.
+# Inférieur à 0 seconde
 			if size <= 0:
 				size = 0.5
-			# Entre 0 & 2 secondes
+# Entre 0 & 2 secondes
 			elif size > 0 and size <= 2:
 				size = 1.5
-			# Entre 2 & 5 secondes
+# Entre 2 & 5 secondes
 			elif size > 2 and size <= 5:
 				size = 3.5
-			# Entre 5 & 10 secondes
+# Entre 5 & 10 secondes
 			elif size > 5 and size <= 10:
 				size = 5
-			# Supérieur à 10 secondes
+# Supérieur à 10 secondes
 			elif size > 10:
 				size = 7
+			print("Temps d'écriture : ",size," seconde(s)")
 
-			# Lance le timer en fonction du nombre de char dans le content
-			print(size)
+# Lance le timer en fonction du nombre de char dans le content
+			print("Lancement du timer",time_delay," seconde(s)")
 			time_delay = size
 			timer.set_wait_time(time_delay)
 			timer.start()
 			yield(get_node("Timer"), "timeout")
+			print("Fin du timer")
 			get_node("Status").clear()
 
-			# Temporisation courte entre le message système et le texte
+# Temporisation courte entre le message système et le texte
+			print("Temporisation : ",time_delay," seconde(s)")
 			time_delay = 0.2
 			timer.set_wait_time(time_delay)
 			timer.start()
 			yield(get_node("Timer"), "timeout")
+			print("Fin du timer")
 
 # Ecrit la ligne de dialogue
+			print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[i])
 			get_node("Dialogues").newline()
 			get_node("Dialogues").add_text(str(dict._Dialogues.name.name," : ",dict._Dialogues[currentDial].content[i]))
 			time_delay = 0.75
+			print("Temporisation : ",time_delay," seconde(s)")
 			timer.set_wait_time(time_delay)
 			timer.start()
 			yield(get_node("Timer"), "timeout")
-
-		# Clos la boucle et passe au next
+			print("Fin du timer")
+			print("Fin de la ligne")
+# Clos la boucle et passe au next
+		print("Fin du dialogue")
 		currentDial = dict._Dialogues[currentDial].next
 		time_delay = dict._Dialogues[currentDial].time
 		timer.set_wait_time(time_delay)
+		print("Lancement du timer",time_delay," seconde(s)")
 		timer.start()
 		yield(get_node("Timer"), "timeout")
+		print("Fin du timer")
 		start()
 
 
 									## REPONSES ##
 # Gestion des dialogues de ref 2 [REPONSES CHOIX MULTIPLES]
 	if dict._Dialogues[currentDial].ref == 2 :
+		print("#### DIALOGUES REF : 2 ####")
+		print("Création de ",dict._Dialogues[currentDial].content.size()," bouton(s)")
 		for i in range(dict._Dialogues[currentDial].content.size()):
+			print("Création du bouton n°",dict._Dialogues[currentDial].button[i])
 			get_node(str("Bouton",i)).set_text(str(dict._Dialogues[currentDial].button[i]))
 			get_node(str("Bouton",i)).set_ignore_mouse(false)
 			get_node(str("Bouton",i)).set_flat(false)
 		timer.stop()
-
+		print("Fin de la création des boutons")
 
 # Gestion des dialogues de ref 3 [REPONSES VIA TEXTE PRECIS]
 	if dict._Dialogues[currentDial].ref == 3:
+		print("#### DIALOGUES REF : 3 ####")
+		print("Affichage boite de dialogue")
 		get_node("TextEdit").show()
+		print("Nettoyage de la boite de dialogue")
 		get_node("TextEdit").clear()
 		timer.stop()
 
 									## MEDIAS ##
 # Gestion des images dialogues de ref 4 [IMAGES]
 	if dict._Dialogues[currentDial].ref == 4:
+		print("#### DIALOGUES REF : 4 ####")
+		print("Chargement de l'image")
 		image = load(str("res://img/",dict._Dialogues[currentDial].content))
 		get_node("Dialogues").newline()
 		get_node("Dialogues").push_align(0)
+		print("Envoi de l'image")
 		get_node("Dialogues").add_image(image)
 		currentDial = dict._Dialogues[currentDial].next
 		time_delay = dict._Dialogues[currentDial].time
 		start()
 
 
-
 # Gestion des vidéos dialogues de ref 5 [VIDEOS]
 	if dict._Dialogues[currentDial].ref == 5:
+		print("#### DIALOGUES REF : 5 ####")
 		if wait == false:
 			get_node("VideoPlayer").show()
 			video = load("res://vid/sample.ogv")
@@ -146,57 +184,71 @@ func start():
 # BOUTON 0
 func _on_Bouton0_pressed():
 	clean()
+	print("Bouton n°0 activé")
 	get_node("Dialogues").push_align(2)
 	get_node("Dialogues").newline()
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
 	currentDial = dict._Dialogues[currentDial].next[0]
 	time_delay = dict._Dialogues[currentDial].time
 	timer.set_wait_time(time_delay)
+	print("Lancement du timer",time_delay," seconde(s)")
 	timer.start()
 	yield(get_node("Timer"), "timeout")
+	print("Fin du timer")
 	start()
 
 # BOUTON 1
 func _on_Bouton1_pressed():
 	clean()
+	print("Bouton n°1 activé")
 	get_node("Dialogues").push_align(2)
 	get_node("Dialogues").newline()
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[1]))
 	currentDial = dict._Dialogues[currentDial].next[1]
 	time_delay = dict._Dialogues[currentDial].time
 	timer.set_wait_time(time_delay)
+	print("Lancement du timer",time_delay," seconde(s)")
 	timer.start()
 	yield(get_node("Timer"), "timeout")
+	print("Fin du timer")
 	start()
 
 # BOUTON 2
 func _on_Bouton2_pressed():
 	clean()
+	print("Bouton n°2 activé")
 	get_node("Dialogues").push_align(2)
 	get_node("Dialogues").newline()
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[2]))
 	currentDial = dict._Dialogues[currentDial].next[2]
 	time_delay = dict._Dialogues[currentDial].time
 	timer.set_wait_time(time_delay)
+	print("Lancement du timer",time_delay," seconde(s)")
 	timer.start()
 	yield(get_node("Timer"), "timeout")
+	print("Fin du timer")
 	start()
 
 # BOUTON 3
 func _on_Bouton3_pressed():
+	clean()
+	print("Bouton n°3 activé")
 	get_node("Dialogues").push_align(2)
 	get_node("Dialogues").newline()
 	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[3]))
 	currentDial = dict._Dialogues[currentDial].next[3]
 	time_delay = dict._Dialogues[currentDial].time
 	timer.set_wait_time(time_delay)
+	print("Lancement du timer",time_delay," seconde(s)")
 	timer.start()
 	yield(get_node("Timer"), "timeout")
+	print("Fin du timer")
 	start()
 
 
 # Nettoyage des boutons inutiles
 func clean():
+	print("Suppression des boutons")
 	for i in range(4):
 		get_node(str("Bouton",i)).set_text("")
 		get_node(str("Bouton",i)).set_ignore_mouse(true)
@@ -211,10 +263,18 @@ func _on_TextEdit_text_entered( text ):
 		currentDial = dict._Dialogues[currentDial].next[0]
 		time_delay = dict._Dialogues[currentDial].time
 		timer.set_wait_time(time_delay)
+		print("Lancement du timer",time_delay," seconde(s)")
+		timer.start()
+		yield(get_node("Timer"), "timeout")
+		print("Fin du timer")
 		get_node("TextEdit").hide()
 		start()
 	else:
 		currentDial = dict._Dialogues[currentDial].next[1]
 		time_delay = dict._Dialogues[currentDial].time
 		timer.set_wait_time(time_delay)
+		print("Lancement du timer",time_delay," seconde(s)")
+		timer.start()
+		yield(get_node("Timer"), "timeout")
+		print("Fin du timer")
 		start()
