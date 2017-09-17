@@ -17,14 +17,14 @@ var content = null
 var wait = false
 var dial = []
 var size = null
+var online = 1
 
 # Initialisation des bases du script
 func _ready():
 	print("Crédits")
 	print("Script par LEIFER KOPF // leifer.kopf@gmail.com")
 	print("Scénario par VINCENT CORLAIX  // vcorlaix@nootilus.com")
-	print("Disclaimer : L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé,
-	même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).")
+	print("Disclaimer : L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé,	même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).")
 	print("...................................................................................")
 	print("#### LANCEMENT DU JEU ####")
 	print("Initialisation du script")
@@ -41,6 +41,10 @@ func _ready():
 	timer = get_node("Timer")
 	timer.set_wait_time(time_delay)
 
+	# Affichage du nom de l'interlocuteur
+	print("Affichage du nom")
+	get_node("Name").add_text(str(dict._Dialogues.name.name))
+
 # Lancement du script
 	print("Lancement du script")
 	start()
@@ -49,6 +53,21 @@ func _ready():
 # Fonction ou reboucle le script quand il repart du début
 func start():
 	print("Début du processus d'interpretation du JSON")
+
+# Status de l'interlocuteur
+	# En ligne = 1
+	# Occupé = 2
+	# Absent = 3
+	# Hors Ligne = 4
+	print("Status de l'interlocuteur")
+	if online == 1:
+		get_node("Etat").set_text("En ligne")
+	elif online == 2:
+		get_node("Etat").set_text("Occupé")
+	elif online == 3:
+		get_node("Etat").set_text("Absent")
+	elif online == 4:
+		get_node("Etat").set_text("Hors Ligne")
 
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
@@ -62,7 +81,7 @@ func start():
 
 # Affiche le status "Ecrit un message"
 			print("Message système 'Ecrit un message'")
-			get_node("Status").add_text(str(dict._Dialogues.name.name," écrit un message"))
+			get_node("Status").add_text("écrit un message...")
 			print("Calcule du nombre de charactère dans la phrase")
 			dial = [dict._Dialogues[currentDial].content[i]]
 			size = (dial[0].length())/20
@@ -106,7 +125,7 @@ func start():
 # Ecrit la ligne de dialogue
 			print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[i])
 			get_node("Dialogues").newline()
-			get_node("Dialogues").add_text(str(dict._Dialogues.name.name," : ",dict._Dialogues[currentDial].content[i]))
+			get_node("Dialogues").add_text(str(dict._Dialogues[currentDial].content[i]))
 			time_delay = 0.75
 			print("Temporisation : ",time_delay," seconde(s)")
 			timer.set_wait_time(time_delay)

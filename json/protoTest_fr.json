@@ -488,10 +488,11 @@
 			"content": [
 				"Oh, bon sang.",
 				"Ce n'est plus de mon âge, tout ça.",
-				"Mais me voilà en haut.",
+				"Mais me voilà arrivé.",
 				"Ça n'était pas haut, mais...",
-				"les architectes de l'époque avaient des mesures de marches un peu étrange.",
-				"Bref, me voilà dans la crypte."
+				"Les architectes de l'époque avaient des mesures de marches un peu étrange.",
+				"Bref, me voilà dans la crypte.",
+				"Enfin, au dessus, plutôt."
 			],
 			"next": "rep701"
 		},
@@ -833,7 +834,7 @@
 				"Peu importe.",
 				"Voyons..."
 			],
-			"next": "rep902"
+			"next": "dial902"
 		},
 		"dial902": {
 			"ref": 1,
@@ -843,7 +844,7 @@
 				"Ce passage est illustré de la même image du disque bleu que sur la frise.",
 				"Je pense qu'il d'agit du moyen qu'employait Jean de Malemont pour s'échapper."
 			],
-			"next": "rep904"
+			"next": "dial904"
 		},
 		"dial903": {
 			"ref": 1,
@@ -855,7 +856,7 @@
 				"Han !",
 				"Bouh qu'il est lourd !"
 			],
-			"next": "rep904"
+			"next": "dial904"
 		},
 		"dial904": {
 			"ref": 1,
@@ -911,7 +912,7 @@
 				"Oui, oui !",
 				"Ah, voilà..."
 			],
-			"next": "rep914"
+			"next": "dial914"
 		},
 		"dial913": {
 			"ref": 1,
@@ -920,7 +921,7 @@
 				"Vous avez raison.",
 				"J'ai l'impression que ça pourrait me rendre fou."
 			],
-			"next": "rep914"
+			"next": "dial914"
 		},
 		"dial914": {
 			"ref": 1,
@@ -933,7 +934,7 @@
 				"«[i]Maunai ihim tireurepa te,[/i]",
 				"[i]Artlu ihim tipicca non ![/i]»"
 			],
-			"next": "rep915"
+			"next": "dial915"
 		},
 		"dial915": {
 			"ref": 1,
@@ -947,7 +948,7 @@
 				"La fumée semble se solidifier à mesure qu'elle forme un disque.",
 				"Et... Ouch !"
 			],
-			"next": "rep916"
+			"next": "dial916"
 		},
 		"dial916": {
 			"ref": 1,
@@ -971,17 +972,18 @@
 				"Merci, mon ami !",
 				"Je vous retrouve de l'autre côté."
 			],
-			"next": "rep919"
+			"next": "dial919"
 		},
 		"dial918": {
 			"ref": 1,
 			"time": 1,
 			"content": [
-				"Oui !",
-				"Merci, mon ami !",
-				"Je vous retrouve de l'autre côté."
+				"Ne vous inquiétez pas.",
+				"Je suis confiant.",
+				"Je suis sûr que c'est le passage.",
+				"Jean a dû l'utiliser un bon nombre de fois."
 			],
-			"next": "rep919"
+			"next": "dial919"
 		},
 		"dial919": {
 			"ref": 1,
@@ -990,7 +992,7 @@
 				"Je vais garder le téléphone à la main, peut-être ne seront-nous pas coupés.",
 				"J'y vais."
 			],
-			"next": "rep920"
+			"next": "dial920"
 		},
 		"dial920": {
 			"ref": 1,
@@ -1000,7 +1002,7 @@
 				"Comme si le disque exercait sa propre gravité.",
 				"C'est hypnotique, mais pas effrayant, comme l'Ombre avant sa transformations."
 			],
-			"next": "rep921"
+			"next": "dial921"
 		},
 		"dial921": {
 			"ref": 1,
@@ -1555,8 +1557,8 @@
 				"Vous voyez le livre ? Vous pouvez l'atteindre ?"
 			],
 			"next": [
-				"dial702",
-				"dial703"
+				"dial703",
+				"dial702"
 			]
 		},
 		"rep703": {
@@ -1781,7 +1783,7 @@
 			]
 		},
 		"rep9999": {
-			"ref": 2,
+			"ref": 3,
 			"time": 10,
 			"content": ["reboot"],
 			"next": [
