@@ -43,7 +43,7 @@ func _ready():
 
 	# Affichage du nom de l'interlocuteur
 	print("Affichage du nom")
-	get_node("Name").add_text(str(dict._Dialogues.name.name))
+	get_node("vbox/Top/Name").add_text(str(dict._Dialogues.name.name))
 
 # Lancement du script
 	print("Lancement du script")
@@ -61,31 +61,31 @@ func start():
 	# Hors Ligne = 4
 	print("Status de l'interlocuteur")
 	if online == 1:
-		get_node("Etat").add_text("En ligne")
+		get_node("vbox/Top/Etat").add_text("En ligne")
 		online = 0
 	elif online == 2:
-		get_node("Etat").add_text("Occupé")
+		get_node("vbox/Top/Etat").add_text("Occupé")
 		online = 0
 	elif online == 3:
-		get_node("Etat").add_text("Absent")
+		get_node("vbox/Top/Etat").add_text("Absent")
 		online = 0
 	elif online == 4:
-		get_node("Etat").add_text("Hors Ligne")
+		get_node("vbox/Top/Etat").add_text("Hors Ligne")
 		online = 0
 
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	if dict._Dialogues[currentDial].ref == 1 :
 		print("#### DIALOGUES REF : 1 ####")
-		get_node("Dialogues").set_scroll_follow(true)
-		get_node("Dialogues").push_align(0)
+		get_node("vbox/Mid/Patch/Dialogues").set_scroll_follow(true)
+		get_node("vbox/Mid/Patch/Dialogues").push_align(0)
 
 		print("Traitement du Dialogue")
 		for i in range(dict._Dialogues[currentDial].content.size()):
 
 # Affiche le status "Ecrit un message"
 			print("Message système 'Ecrit un message'")
-			get_node("Status").add_text("écrit un message...")
+			get_node("vbox/Top/Status").add_text("écrit un message...")
 			print("Calcule du nombre de charactère dans la phrase")
 			dial = [dict._Dialogues[currentDial].content[i]]
 			size = (dial[0].length())/20
@@ -116,7 +116,7 @@ func start():
 			timer.start()
 			yield(get_node("Timer"), "timeout")
 			print("Fin du timer")
-			get_node("Status").clear()
+			get_node("vbox/Top/Status").clear()
 
 # Temporisation courte entre le message système et le texte
 			print("Temporisation : ",time_delay," seconde(s)")
@@ -128,8 +128,8 @@ func start():
 
 # Ecrit la ligne de dialogue
 			print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[i])
-			get_node("Dialogues").newline()
-			get_node("Dialogues").add_text(str(dict._Dialogues[currentDial].content[i]))
+			get_node("vbox/Mid/Patch/Dialogues").newline()
+			get_node("vbox/Mid/Patch/Dialogues").add_text(str(dict._Dialogues[currentDial].content[i]))
 			time_delay = 0.75
 			print("Temporisation : ",time_delay," seconde(s)")
 			timer.set_wait_time(time_delay)
@@ -156,9 +156,9 @@ func start():
 		print("Création de ",dict._Dialogues[currentDial].content.size()," bouton(s)")
 		for i in range(dict._Dialogues[currentDial].content.size()):
 			print("Création du bouton n°",dict._Dialogues[currentDial].button[i])
-			get_node(str("Bouton",i)).set_text(str(dict._Dialogues[currentDial].button[i]))
-			get_node(str("Bouton",i)).set_ignore_mouse(false)
-			get_node(str("Bouton",i)).set_flat(false)
+			get_node(str("vbox/Bot/Bouton",i)).set_text(str(dict._Dialogues[currentDial].button[i]))
+			get_node(str("vbox/Bot/Bouton",i)).set_ignore_mouse(false)
+			get_node(str("vbox/Bot/Bouton",i)).set_flat(false)
 		timer.stop()
 		print("Fin de la création des boutons")
 
@@ -166,9 +166,9 @@ func start():
 	if dict._Dialogues[currentDial].ref == 3:
 		print("#### DIALOGUES REF : 3 ####")
 		print("Affichage boite de dialogue")
-		get_node("TextEdit").show()
+		get_node("vbox/Bot/TextEdit").show()
 		print("Nettoyage de la boite de dialogue")
-		get_node("TextEdit").clear()
+		get_node("vbox/Bot/TextEdit").clear()
 		timer.stop()
 
 									## MEDIAS ##
@@ -177,10 +177,10 @@ func start():
 		print("#### DIALOGUES REF : 4 ####")
 		print("Chargement de l'image")
 		image = load(str("res://img/",dict._Dialogues[currentDial].content))
-		get_node("Dialogues").newline()
-		get_node("Dialogues").push_align(0)
+		get_node("vbox/Mid/Patch/Dialogues").newline()
+		get_node("vbox/Mid/Patch/Dialogues").push_align(0)
 		print("Envoi de l'image")
-		get_node("Dialogues").add_image(image)
+		get_node("vbox/Mid/Patch/Dialogues").add_image(image)
 		currentDial = dict._Dialogues[currentDial].next
 		time_delay = dict._Dialogues[currentDial].time
 		start()
@@ -209,9 +209,9 @@ func start():
 func _on_Bouton0_pressed():
 	clean()
 	print("Bouton n°0 activé")
-	get_node("Dialogues").push_align(2)
-	get_node("Dialogues").newline()
-	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
+	get_node("vbox/Mid/Patch/Dialogues").push_align(2)
+	get_node("vbox/Mid/Patch/Dialogues").newline()
+	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
 	currentDial = dict._Dialogues[currentDial].next[0]
 	time_delay = dict._Dialogues[currentDial].time
 	timer.set_wait_time(time_delay)
@@ -225,9 +225,9 @@ func _on_Bouton0_pressed():
 func _on_Bouton1_pressed():
 	clean()
 	print("Bouton n°1 activé")
-	get_node("Dialogues").push_align(2)
-	get_node("Dialogues").newline()
-	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[1]))
+	get_node("vbox/Mid/Patch/Dialogues").push_align(2)
+	get_node("vbox/Mid/Patch/Dialogues").newline()
+	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[1]))
 	currentDial = dict._Dialogues[currentDial].next[1]
 	time_delay = dict._Dialogues[currentDial].time
 	timer.set_wait_time(time_delay)
@@ -241,9 +241,9 @@ func _on_Bouton1_pressed():
 func _on_Bouton2_pressed():
 	clean()
 	print("Bouton n°2 activé")
-	get_node("Dialogues").push_align(2)
-	get_node("Dialogues").newline()
-	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[2]))
+	get_node("vbox/Mid/Patch/Dialogues").push_align(2)
+	get_node("vbox/Mid/Patch/Dialogues").newline()
+	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[2]))
 	currentDial = dict._Dialogues[currentDial].next[2]
 	time_delay = dict._Dialogues[currentDial].time
 	timer.set_wait_time(time_delay)
@@ -257,9 +257,9 @@ func _on_Bouton2_pressed():
 func _on_Bouton3_pressed():
 	clean()
 	print("Bouton n°3 activé")
-	get_node("Dialogues").push_align(2)
-	get_node("Dialogues").newline()
-	get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[3]))
+	get_node("vbox/Mid/Patch/Dialogues").push_align(2)
+	get_node("vbox/Mid/Patch/Dialogues").newline()
+	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[3]))
 	currentDial = dict._Dialogues[currentDial].next[3]
 	time_delay = dict._Dialogues[currentDial].time
 	timer.set_wait_time(time_delay)
@@ -274,16 +274,16 @@ func _on_Bouton3_pressed():
 func clean():
 	print("Suppression des boutons")
 	for i in range(4):
-		get_node(str("Bouton",i)).set_text("")
-		get_node(str("Bouton",i)).set_ignore_mouse(true)
-		get_node(str("Bouton",i)).set_flat(true)
+		get_node(str("vbox/Bot/Bouton",i)).set_text("")
+		get_node(str("vbox/Bot/Bouton",i)).set_ignore_mouse(true)
+		get_node(str("vbox/Bot/Bouton",i)).set_flat(true)
 
 									## BOITE DE DIALOGUE REPONSES ECRITE ##
 # Boite de dialogue pour écrire la réponse demandée.
 func _on_TextEdit_text_entered( text ):
-	if get_node("TextEdit").get_text() == dict._Dialogues[currentDial].content[0]:
-		get_node("Dialogues").push_align(2)
-		get_node("Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
+	if get_node("vbox/Bot/TextEdit").get_text() == dict._Dialogues[currentDial].content[0]:
+		get_node("vbox/Mid/Patch/Dialogues").push_align(2)
+		get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
 		currentDial = dict._Dialogues[currentDial].next[0]
 		time_delay = dict._Dialogues[currentDial].time
 		timer.set_wait_time(time_delay)
@@ -291,7 +291,7 @@ func _on_TextEdit_text_entered( text ):
 		timer.start()
 		yield(get_node("Timer"), "timeout")
 		print("Fin du timer")
-		get_node("TextEdit").hide()
+		get_node("vbox/Bot/TextEdit").hide()
 		start()
 	else:
 		currentDial = dict._Dialogues[currentDial].next[1]
