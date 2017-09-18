@@ -1173,7 +1173,7 @@
 				"D'autant que personne ne l'a revu depuis.",
 				"Vous avez sa disparitions sur la conscience...",
 				" ",
-				"Taper « rejouer » pour recommencer la partie."
+				"Taper « Rejouer » pour recommencer la partie."
 			],
 			"next": "rep9999"
 		},
@@ -1187,7 +1187,7 @@
 				"Il aurait pu aller plus loin avec votre aide.",
 				"Voulez-vous recommencer et faire d'autres choix ?",
 				" ",
-				"Taper « rejouer » pour recommencer la partie."
+				"Taper « Rejouer » pour recommencer la partie."
 			],
 			"next": "rep9998"
 		},
@@ -1202,7 +1202,7 @@
 				"Il aurait pu aller plus loin avec votre aide.",
 				"Voulez-vous recommencer et faire d'autres choix ?",
 				" ",
-				"Taper « rejouer » pour recommencer la partie."
+				"Taper « Rejouer » pour recommencer la partie."
 			],
 			"next": "rep9998"
 		},
@@ -1217,7 +1217,7 @@
 				"Il aurait pu aller plus loin avec votre aide.",
 				"Voulez-vous recommencer et faire d'autres choix ?",
 				" ",
-				"Taper « rejouer » pour recommencer la partie."
+				"Taper « Rejouer » pour recommencer la partie."
 			],
 			"next": "rep9996"
 		},
@@ -1231,7 +1231,7 @@
 				"Il aurait pu aller plus loin avec votre aide.",
 				"Voulez-vous recommencer et faire d'autres choix ?",
 				" ",
-				"Taper « rejouer » pour recommencer la partie."
+				"Taper « Rejouer » pour recommencer la partie."
 			],
 			"next": "rep9997"
 		},
@@ -1246,7 +1246,7 @@
 				"Qui sait, peut-être trouvera-t-il le moyen de rentrer dans notre monde ?",
 				"Voulez-vous recommencer et faire d'autres choix ?",
 				" ",
-				"Taper « rejouer » pour recommencer la partie."
+				"Taper « Rejouer » pour recommencer la partie."
 			],
 			"next": "rep9999"
 		},
@@ -1260,7 +1260,7 @@
 				"Personne n'a été capable d'expliquer sa présence ici, ni l'état de son cadavre.",
 				"Voulez-vous recommencer et faire d'autres choix ?",
 				" ",
-				"Taper « rejouer » pour recommencer la partie."
+				"Taper « Rejouer » pour recommencer la partie."
 			],
 			"next": "rep9996"
 		},
@@ -1812,7 +1812,7 @@
 		"rep9999": {
 			"ref": 3,
 			"time": 10,
-			"content": ["rejouer"],
+			"content": ["Rejouer"],
 			"next": [
 				"dial001",
 				"dial001"
@@ -1821,7 +1821,7 @@
 		"rep9998": {
 			"ref": 3,
 			"time": 10,
-			"content": ["rejouer"],
+			"content": ["Rejouer"],
 			"next": [
 				"dial701",
 				"dial001"
@@ -1830,7 +1830,7 @@
 		"rep9997": {
 			"ref": 3,
 			"time": 10,
-			"content": ["rejouer"],
+			"content": ["Rejouer"],
 			"next": [
 				"dial814",
 				"dial001"
@@ -1839,7 +1839,7 @@
 		"rep9996": {
 			"ref": 3,
 			"time": 10,
-			"content": ["rejouer"],
+			"content": ["Rejouer"],
 			"next": [
 				"dial905",
 				"dial001"

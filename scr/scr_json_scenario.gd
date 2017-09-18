@@ -284,6 +284,8 @@ func _on_TextEdit_text_entered( text ):
 	if get_node("vbox/Bot/TextEdit").get_text() == dict._Dialogues[currentDial].content[0]:
 		get_node("vbox/Mid/Patch/Dialogues").push_align(2)
 		get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
+		get_node("vbox/Bot/TextEdit").hide()
+		get_node("vbox/Bot/TextEdit").clear()
 		currentDial = dict._Dialogues[currentDial].next[0]
 		time_delay = dict._Dialogues[currentDial].time
 		timer.set_wait_time(time_delay)
@@ -291,7 +293,6 @@ func _on_TextEdit_text_entered( text ):
 		timer.start()
 		yield(get_node("Timer"), "timeout")
 		print("Fin du timer")
-		get_node("vbox/Bot/TextEdit").hide()
 		start()
 	else:
 		currentDial = dict._Dialogues[currentDial].next[1]
