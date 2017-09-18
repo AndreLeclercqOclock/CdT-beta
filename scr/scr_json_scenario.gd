@@ -61,13 +61,13 @@ func start():
 	# Hors Ligne = 4
 	print("Status de l'interlocuteur")
 	if online == 1:
-		get_node("Etat").set_text("En ligne")
+		get_node("Etat").add_text("En ligne")
 	elif online == 2:
-		get_node("Etat").set_text("Occupé")
+		get_node("Etat").add_text("Occupé")
 	elif online == 3:
-		get_node("Etat").set_text("Absent")
+		get_node("Etat").add_text("Absent")
 	elif online == 4:
-		get_node("Etat").set_text("Hors Ligne")
+		get_node("Etat").add_text("Hors Ligne")
 
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
