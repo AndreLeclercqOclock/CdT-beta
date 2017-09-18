@@ -2,7 +2,7 @@
 # Script par LEIFER KOPF // leifer.kopf@gmail.com
 # Scénario par VINCENT CORLAIX  // vcorlaix@nootilus.com
 # Disclaimer : L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).
-# version : 0.125
+# version : 0.128
 
 extends Control
 
