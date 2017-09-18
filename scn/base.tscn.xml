@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="22" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
+<resource_file type="PackedScene" subresource_count="23" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
 	<ext_resource path="res://scr/scr_json_scenario.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://scr/scr_ui.gd" type="Script" index="5"></ext_resource>
-	<ext_resource path="res://img/avatar01.png" type="Texture" index="6"></ext_resource>
-	<ext_resource path="res://font/asimov.fnt" type="BitmapFont" index="3"></ext_resource>
-	<ext_resource path="res://font/coolvetica rg.fnt" type="BitmapFont" index="2"></ext_resource>
-	<ext_resource path="res://font/rubik_medium.fnt" type="BitmapFont" index="4"></ext_resource>
+	<ext_resource path="res://scr/scr_ui.gd" type="Script" index="6"></ext_resource>
+	<ext_resource path="res://img/avatar01.png" type="Texture" index="7"></ext_resource>
+	<ext_resource path="res://font/asimov.fnt" type="BitmapFont" index="4"></ext_resource>
+	<ext_resource path="res://font/coolvetica rg.fnt" type="BitmapFont" index="3"></ext_resource>
+	<ext_resource path="res://font/rubik_medium.fnt" type="BitmapFont" index="5"></ext_resource>
+	<ext_resource path="res://font/rubik_bold.fnt" type="BitmapFont" index="2"></ext_resource>
 	<ext_resource path="res://font/rubik_large.fnt" type="BitmapFont" index="1"></ext_resource>
 	<resource type="StyleBoxFlat" path="local://2">
 		<real name="content_margin/left"> -1 </real>
@@ -194,12 +195,12 @@
 			<string> "conn_count" </string>
 			<int> 6 </int>
 			<string> "conns" </string>
-			<int_array  len="36"> 				3, 1, 80, 79, 2, 0, 4, 1, 80, 81, 2, 0, 5, 1, 80, 82, 2, 0, 6, 1, 80, 83, 2, 0, 7, 1, 85, 84, 2, 0, 14, 13, 80, 86, 2, 0 </int_array>
+			<int_array  len="36"> 				3, 1, 79, 78, 2, 0, 4, 1, 79, 80, 2, 0, 5, 1, 79, 81, 2, 0, 6, 1, 79, 82, 2, 0, 7, 1, 84, 83, 2, 0, 14, 13, 79, 85, 2, 0 </int_array>
 			<string> "editable_instances" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="87">
+			<string_array  len="86">
 				<string> "World" </string>
 				<string> "Node" </string>
 				<string> "Interpreteur JSON Scénario" </string>
@@ -265,7 +266,6 @@
 				<string> "Name" </string>
 				<string> "rect/scale" </string>
 				<string> "UI" </string>
-				<string> "editor/display_folded" </string>
 				<string> "quit_button" </string>
 				<string> "text" </string>
 				<string> "TextureFrame" </string>
@@ -294,9 +294,9 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="598"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 12, 2, -1, 9, 3, 0, 4, 1, 5, 2, 6, 2, 7, 3, 8, 4, 9, 5, 10, 6, 11, 7, 0, 1, 0, 22, 13, -1, 16, 3, 0, 4, 1, 5, 2, 6, 2, 7, 8, 8, 9, 9, 10, 10, 11, 14, 12, 15, 13, 16, 13, 17, 13, 18, 1, 19, 14, 20, 15, 21, 16, 0, 1, 0, 35, 23, -1, 18, 3, 1, 4, 1, 5, 2, 6, 2, 7, 17, 8, 18, 9, 19, 10, 20, 24, 21, 25, 22, 26, 23, 27, 24, 28, 13, 29, 25, 30, 0, 31, 26, 32, 27, 33, 1, 1, 34, 1, 0, 35, 36, -1, 18, 3, 1, 4, 1, 5, 2, 6, 2, 7, 17, 8, 28, 9, 19, 10, 29, 24, 30, 25, 31, 26, 32, 27, 24, 28, 13, 29, 25, 30, 0, 31, 26, 32, 27, 33, 1, 1, 34, 1, 0, 35, 37, -1, 18, 3, 1, 4, 1, 5, 2, 6, 2, 7, 17, 8, 33, 9, 19, 10, 34, 24, 35, 25, 36, 26, 37, 27, 24, 28, 13, 29, 25, 30, 0, 31, 26, 32, 27, 33, 1, 1, 34, 1, 0, 35, 38, -1, 19, 39, 38, 3, 1, 4, 1, 5, 2, 6, 2, 7, 17, 8, 39, 9, 19, 10, 40, 24, 41, 25, 42, 26, 43, 27, 24, 28, 13, 29, 25, 30, 0, 31, 26, 32, 27, 33, 1, 1, 34, 1, 0, 47, 40, -1, 17, 41, 0, 3, 0, 4, 1, 5, 2, 6, 2, 7, 44, 8, 45, 9, 46, 10, 47, 42, 48, 26, 49, 27, 24, 28, 13, 43, 50, 44, 2, 45, 0, 46, 51, 0, 1, 0, 48, 48, -1, 4, 49, 52, 50, 16, 51, 1, 52, 0, 0, 1, 0, 53, 53, -1, 15, 41, 0, 3, 0, 4, 1, 5, 2, 6, 2, 7, 53, 8, 54, 9, 55, 10, 56, 54, 26, 55, 27, 56, 4, 57, 0, 58, 0, 59, 1, 0, 1, 0, 22, 60, -1, 14, 3, 0, 4, 1, 5, 2, 6, 2, 7, 57, 8, 58, 9, 59, 10, 60, 14, 61, 15, 62, 18, 0, 19, 14, 20, 15, 21, 16, 0, 1, 0, 22, 61, -1, 13, 3, 0, 4, 1, 5, 2, 6, 2, 7, 57, 8, 63, 9, 64, 10, 65, 14, 66, 18, 0, 19, 14, 20, 15, 21, 16, 0, 1, 0, 22, 62, -1, 14, 63, 67, 3, 0, 4, 1, 5, 2, 6, 2, 7, 57, 8, 68, 9, 69, 10, 70, 14, 66, 18, 1, 19, 14, 20, 15, 21, 16, 0, 0, 0, 12, 64, -1, 10, 65, 1, 3, 0, 4, 1, 5, 2, 6, 2, 7, 71, 8, 72, 9, 73, 10, 74, 11, 75, 0, 13, 0, 35, 66, -1, 14, 3, 0, 4, 1, 5, 2, 6, 2, 7, 76, 8, 77, 9, 78, 10, 73, 27, 24, 30, 0, 31, 2, 32, 27, 67, 79, 33, 0, 0, 13, 0, 70, 68, -1, 9, 3, 1, 4, 1, 5, 2, 6, 2, 7, 80, 8, 9, 9, 81, 10, 82, 69, 83, 0, 13, 0, 68, 71, -1, 11, 3, 1, 4, 1, 5, 2, 6, 2, 7, 84, 8, 85, 9, 86, 10, 60, 72, 87, 59, 1, 73, 26, 0, 0, 0, 78, 74, -1, 15, 3, 1, 4, 1, 5, 2, 6, 26, 7, 4, 8, 88, 9, 89, 10, 90, 27, 24, 28, 91, 75, 92, 67, 93, 21, 16, 76, 26, 77, 15, 0 </int_array>
+			<int_array  len="596"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 12, 2, -1, 9, 3, 0, 4, 1, 5, 2, 6, 2, 7, 3, 8, 4, 9, 5, 10, 6, 11, 7, 0, 1, 0, 22, 13, -1, 16, 3, 0, 4, 1, 5, 2, 6, 2, 7, 8, 8, 9, 9, 10, 10, 11, 14, 12, 15, 13, 16, 13, 17, 13, 18, 1, 19, 14, 20, 15, 21, 16, 0, 1, 0, 35, 23, -1, 18, 3, 1, 4, 1, 5, 2, 6, 2, 7, 17, 8, 18, 9, 19, 10, 20, 24, 21, 25, 22, 26, 23, 27, 24, 28, 13, 29, 25, 30, 0, 31, 26, 32, 27, 33, 1, 1, 34, 1, 0, 35, 36, -1, 18, 3, 1, 4, 1, 5, 2, 6, 2, 7, 17, 8, 28, 9, 19, 10, 29, 24, 30, 25, 31, 26, 32, 27, 24, 28, 13, 29, 25, 30, 0, 31, 26, 32, 27, 33, 1, 1, 34, 1, 0, 35, 37, -1, 18, 3, 1, 4, 1, 5, 2, 6, 2, 7, 17, 8, 33, 9, 19, 10, 34, 24, 35, 25, 36, 26, 37, 27, 24, 28, 13, 29, 25, 30, 0, 31, 26, 32, 27, 33, 1, 1, 34, 1, 0, 35, 38, -1, 19, 39, 38, 3, 1, 4, 1, 5, 2, 6, 2, 7, 17, 8, 39, 9, 19, 10, 40, 24, 41, 25, 42, 26, 43, 27, 24, 28, 13, 29, 25, 30, 0, 31, 26, 32, 27, 33, 1, 1, 34, 1, 0, 47, 40, -1, 17, 41, 0, 3, 0, 4, 1, 5, 2, 6, 2, 7, 44, 8, 45, 9, 46, 10, 47, 42, 48, 26, 49, 27, 50, 28, 13, 43, 51, 44, 2, 45, 0, 46, 52, 0, 1, 0, 48, 48, -1, 4, 49, 53, 50, 16, 51, 1, 52, 0, 0, 1, 0, 53, 53, -1, 15, 41, 0, 3, 0, 4, 1, 5, 2, 6, 2, 7, 54, 8, 55, 9, 56, 10, 57, 54, 26, 55, 27, 56, 4, 57, 0, 58, 0, 59, 1, 0, 1, 0, 22, 60, -1, 14, 3, 0, 4, 1, 5, 2, 6, 2, 7, 58, 8, 59, 9, 60, 10, 61, 14, 62, 15, 63, 18, 0, 19, 14, 20, 15, 21, 16, 0, 1, 0, 22, 61, -1, 13, 3, 0, 4, 1, 5, 2, 6, 2, 7, 58, 8, 64, 9, 65, 10, 66, 14, 67, 18, 0, 19, 14, 20, 15, 21, 16, 0, 1, 0, 22, 62, -1, 14, 63, 68, 3, 0, 4, 1, 5, 2, 6, 2, 7, 58, 8, 69, 9, 70, 10, 71, 14, 67, 18, 1, 19, 14, 20, 15, 21, 16, 0, 0, 0, 12, 64, -1, 9, 3, 0, 4, 1, 5, 2, 6, 2, 7, 72, 8, 73, 9, 74, 10, 75, 11, 76, 0, 13, 0, 35, 65, -1, 14, 3, 0, 4, 1, 5, 2, 6, 2, 7, 77, 8, 78, 9, 79, 10, 74, 27, 50, 30, 0, 31, 2, 32, 27, 66, 80, 33, 0, 0, 13, 0, 69, 67, -1, 9, 3, 1, 4, 1, 5, 2, 6, 2, 7, 81, 8, 9, 9, 82, 10, 83, 68, 84, 0, 13, 0, 67, 70, -1, 11, 3, 1, 4, 1, 5, 2, 6, 2, 7, 85, 8, 86, 9, 87, 10, 61, 71, 88, 59, 1, 72, 26, 0, 0, 0, 77, 73, -1, 15, 3, 1, 4, 1, 5, 2, 6, 26, 7, 4, 8, 89, 9, 90, 10, 91, 27, 50, 28, 92, 74, 93, 66, 94, 21, 16, 75, 26, 76, 15, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="94" shared="false">
+			<array  len="95" shared="false">
 				<bool> False </bool>
 				<bool> True </bool>
 				<int> 2 </int>
@@ -346,6 +346,7 @@
 				<real> 878 </real>
 				<resource  resource_type="StyleBox" path="local://14">  </resource>
 				<resource  resource_type="StyleBox" path="local://13">  </resource>
+				<resource  external="3">  </resource>
 				<real> 0.6 </real>
 				<real> 0.65 </real>
 				<int> 1 </int>
@@ -357,12 +358,12 @@
 				<real> 83 </real>
 				<real> 618 </real>
 				<real> 116 </real>
-				<resource  external="3">  </resource>
+				<resource  external="4">  </resource>
 				<color> 0.87451, 0.411765, 0.101961, 1 </color>
 				<real> 62 </real>
 				<real> 386 </real>
 				<real> 88 </real>
-				<resource  external="4">  </resource>
+				<resource  external="5">  </resource>
 				<vector2> 1.5, 1.5 </vector2>
 				<real> 35 </real>
 				<real> 402 </real>
@@ -371,7 +372,7 @@
 				<real> -2 </real>
 				<real> 45 </real>
 				<real> 38 </real>
-				<resource  external="5">  </resource>
+				<resource  external="6">  </resource>
 				<real> 533 </real>
 				<real> 9 </real>
 				<real> 629 </real>
@@ -383,13 +384,13 @@
 				<real> 68 </real>
 				<real> 16 </real>
 				<real> 168 </real>
-				<resource  external="6">  </resource>
+				<resource  external="7">  </resource>
 				<real> 941 </real>
 				<real> 120 </real>
 				<real> 988 </real>
 				<color> 0.941406, 0.941406, 0.941406, 1 </color>
 				<color> 0.238281, 0.215942, 0.215942, 1 </color>
-				<string> "alpha 0.0.1.8" </string>
+				<string> "alpha 0.0.1.9" </string>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>
