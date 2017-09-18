@@ -62,12 +62,16 @@ func start():
 	print("Status de l'interlocuteur")
 	if online == 1:
 		get_node("Etat").add_text("En ligne")
+		online = 0
 	elif online == 2:
 		get_node("Etat").add_text("Occupé")
+		online = 0
 	elif online == 3:
 		get_node("Etat").add_text("Absent")
+		online = 0
 	elif online == 4:
 		get_node("Etat").add_text("Hors Ligne")
+		online = 0
 
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
