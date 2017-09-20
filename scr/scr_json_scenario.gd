@@ -29,6 +29,7 @@ var dataDial = null
 var dataRep = null
 var firstDial = null
 var temp = null
+var currentRep = null
 
 
 # Initialisation des bases du script
@@ -95,6 +96,7 @@ func _ready():
 			print("Ecriture des textes")
 			for i in range(save._Save.dial.size()):
 				currentDial = save._Save.dial[i]
+				currentRep = save._Save.rep[i]
 				get_node("vbox/Mid/Patch/Dialogues").set_scroll_follow(true)
 				if dict._Dialogues[currentDial].ref == 1:
 					print("Ecriture du Dialogue")
@@ -102,12 +104,13 @@ func _ready():
 					for y in range(dict._Dialogues[currentDial].content.size()):
 						get_node("vbox/Mid/Patch/Dialogues").newline()
 						get_node("vbox/Mid/Patch/Dialogues").add_text(str(dict._Dialogues[currentDial].content[y]))
+					currentDial = dict._Dialogues[currentDial].next
 				elif dict._Dialogues[currentDial].ref == 2:
 					print("Ecriture de la réponse")
 					get_node("vbox/Mid/Patch/Dialogues").push_align(2)
 					get_node("vbox/Mid/Patch/Dialogues").newline()
-					get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[i]))
-				currentDial = dict._Dialogues[currentDial].next
+					get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[currentRep]))
+
 			print("Fin du chargement")
 		else:
 # AUTO SAVE
@@ -167,16 +170,8 @@ func start():
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	if dict._Dialogues[currentDial].ref == 1 :
 		print("#### DIALOGUES REF : 1 ####")
-# AUTO SAVE
-		if currentDial != firstDial:
-			print("Auto-Sauvegarde")
-			dataDial = str(dataDial,'","',currentDial)
-			dataRep = str(dataRep,',',9)
-			data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
-			var file = File.new()
-			file.open("res://json/savelogs.json", file.WRITE)
-			file.store_string(data)
-			file.close()
+
+
 
 		get_node("vbox/Mid/Patch/Dialogues").set_scroll_follow(true)
 		get_node("vbox/Mid/Patch/Dialogues").push_align(0)
@@ -325,6 +320,17 @@ func _on_Bouton0_pressed():
 	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
 	currentDial = dict._Dialogues[currentDial].next[0]
 	time_delay = dict._Dialogues[currentDial].time
+
+# AUTO SAVE
+	print("Auto-Sauvegarde")
+	dataDial = str(dataDial,'","',currentDial)
+	dataRep = str(dataRep,',',9)
+	data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
+	var file = File.new()
+	file.open("res://json/savelogs.json", file.WRITE)
+	file.store_string(data)
+	file.close()
+
 	timer.set_wait_time(time_delay)
 	print("Lancement du timer",time_delay," seconde(s)")
 	timer.start()
