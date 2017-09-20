@@ -8,6 +8,7 @@ extends Control
 
 # Déclaration de Variables
 var dict = {}
+var save = {}
 var currentDial = null
 var timer = null
 var time_delay = 1
@@ -21,6 +22,13 @@ var online = 1
 var configFile = "config.json"
 var scenarioFile = null
 var version = null
+var stateSave = null
+var date = null
+var data = null
+var dataDial = null
+var dataRep = null
+var firstDial = null
+
 
 # Initialisation des bases du script
 func _ready():
@@ -31,19 +39,20 @@ func _ready():
 	print("...................................................................................")
 	print("#### LANCEMENT DU JEU ####")
 
-	print("Récupération de la configutation")
 # Récupération de la config
+	print("Récupération de la configutation")
 	print("Ouverture du JSON")
 	var file = File.new()
 	file.open(str("res://json/",configFile), file.READ)
 	dict.parse_json(file.get_as_text())
 	file.close()
 	print("Fermeture du JSON")
-#Récupération des variables dans le fichiers de configuration
+# Récupération des variables dans le fichiers de configuration
 	scenarioFile = dict._Config.scenarioFile
 	currentDial = dict._Config.firstDial
+	firstDial = dict._Config.firstDial
+	stateSave = dict._Config.stateSave
 	version = dict._Config.version
-
 
 # Ouverture / Parse / Fermeture du fichier JSON
 	print("Initialisation du scénario")
@@ -54,11 +63,53 @@ func _ready():
 	file.close()
 	print("Fermeture du JSON")
 
+# Récupération de la sauvegarde
+	print("Chargement de la sauvegarde")
+	print("Ouverture du JSON")
+	var file = File.new()
+	file.open("res://json/savelogs.json", file.READ)
+	save.parse_json(file.get_as_text())
+	file.close()
+	print("Fermeture du JSON")
+# Chargement de la sauvegarde
+	if stateSave == 1:
+		if save._Save.dial.size() > 1:
+			print("Chargement de la sauvegarde")
+			dataDial = save._Save.dial
+			dataRep = save._Save.rep
+			for i in range(save._Save.dial.size()):
+				currentDial = save._Save.dial[i]
+				get_node("vbox/Mid/Patch/Dialogues").set_scroll_follow(true)
+				if dict._Dialogues[currentDial].ref == 1:
+					get_node("vbox/Mid/Patch/Dialogues").push_align(0)
+					for y in range(dict._Dialogues[currentDial].content.size()):
+						get_node("vbox/Mid/Patch/Dialogues").newline()
+						get_node("vbox/Mid/Patch/Dialogues").add_text(str(dict._Dialogues[currentDial].content[y]))
+				elif dict._Dialogues[currentDial].ref == 2:
+					get_node("vbox/Mid/Patch/Dialogues").push_align(2)
+					get_node("vbox/Mid/Patch/Dialogues").newline()
+					get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[i]))
+				currentDial = dict._Dialogues[currentDial].next
+			print("Fin du chargement")
+		else:
+# AUTO SAVE
+			print("Auto-Sauvegarde")
+			dataDial = currentDial
+			dataRep = 9
+			data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
+			var file = File.new()
+			file.open("res://json/savelogs.json", file.WRITE)
+			file.store_string(data)
+			file.close()
+
+
+
 # Initialisation du Timer
 	print("Initialitation du Timer")
 	timer = get_node("Timer")
 	timer.set_wait_time(time_delay)
-	# Affichage du nom de l'interlocuteur
+
+# Affichage du nom de l'interlocuteur
 	print("Affichage du nom")
 	get_node("vbox/Top/Name").add_text(str(dict._Dialogues.name.name))
 
@@ -98,6 +149,17 @@ func start():
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	if dict._Dialogues[currentDial].ref == 1 :
 		print("#### DIALOGUES REF : 1 ####")
+# AUTO SAVE
+		if currentDial != firstDial:
+			print("Auto-Sauvegarde")
+			dataDial = str(dataDial,'","',currentDial)
+			dataRep = str(dataRep,',',9)
+			data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
+			var file = File.new()
+			file.open("res://json/savelogs.json", file.WRITE)
+			file.store_string(data)
+			file.close()
+
 		get_node("vbox/Mid/Patch/Dialogues").set_scroll_follow(true)
 		get_node("vbox/Mid/Patch/Dialogues").push_align(0)
 
@@ -230,6 +292,16 @@ func start():
 func _on_Bouton0_pressed():
 	clean()
 	print("Bouton n°0 activé")
+# AUTO SAVE
+	print("Auto-Sauvegarde")
+	dataDial = str(dataDial,'","',currentDial)
+	dataRep = str(dataRep,',',0)
+	data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
+	var file = File.new()
+	file.open("res://json/savelogs.json", file.WRITE)
+	file.store_string(data)
+	file.close()
+
 	get_node("vbox/Mid/Patch/Dialogues").push_align(2)
 	get_node("vbox/Mid/Patch/Dialogues").newline()
 	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
