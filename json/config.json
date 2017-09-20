@@ -1,0 +1,7 @@
+{
+  "_Config" : {
+    "scenarioFile" : "protoTest_fr.json",
+    "firstDial" : "dial001",
+    "version" : "alpha 2.1"
+  }
+}

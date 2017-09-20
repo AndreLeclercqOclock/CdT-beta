@@ -8,7 +8,7 @@ extends Control
 
 # Déclaration de Variables
 var dict = {}
-var currentDial = "dial001"
+var currentDial = null
 var timer = null
 var time_delay = 1
 var image = null
@@ -18,6 +18,9 @@ var wait = false
 var dial = []
 var size = null
 var online = 1
+var configFile = "config.json"
+var scenarioFile = null
+var version = null
 
 # Initialisation des bases du script
 func _ready():
@@ -27,11 +30,26 @@ func _ready():
 	print("Disclaimer : L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé,	même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).")
 	print("...................................................................................")
 	print("#### LANCEMENT DU JEU ####")
-	print("Initialisation du script")
-# Ouverture / Parse / Fermeture du fichier JSON
+
+	print("Récupération de la configutation")
+# Récupération de la config
 	print("Ouverture du JSON")
 	var file = File.new()
-	file.open("res://json/protoTest_fr.json", file.READ)
+	file.open(str("res://json/",configFile), file.READ)
+	dict.parse_json(file.get_as_text())
+	file.close()
+	print("Fermeture du JSON")
+#Récupération des variables dans le fichiers de configuration
+	scenarioFile = dict._Config.scenarioFile
+	currentDial = dict._Config.firstDial
+	version = dict._Config.version
+
+
+# Ouverture / Parse / Fermeture du fichier JSON
+	print("Initialisation du scénario")
+	print("Ouverture du JSON")
+	var file = File.new()
+	file.open(str("res://json/",scenarioFile), file.READ)
 	dict.parse_json(file.get_as_text())
 	file.close()
 	print("Fermeture du JSON")
@@ -40,10 +58,13 @@ func _ready():
 	print("Initialitation du Timer")
 	timer = get_node("Timer")
 	timer.set_wait_time(time_delay)
-
 	# Affichage du nom de l'interlocuteur
 	print("Affichage du nom")
 	get_node("vbox/Top/Name").add_text(str(dict._Dialogues.name.name))
+
+# Affichage de la version de dev en JEU
+	print("Affichage version en jeu")
+	get_node("vbox/Top/version").set_text(str(version))
 
 # Lancement du script
 	print("Lancement du script")
