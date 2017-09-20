@@ -110,7 +110,6 @@ func _ready():
 					get_node("vbox/Mid/Patch/Dialogues").push_align(2)
 					get_node("vbox/Mid/Patch/Dialogues").newline()
 					get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[currentRep]))
-
 			print("Fin du chargement")
 		else:
 # AUTO SAVE
@@ -342,11 +341,32 @@ func _on_Bouton0_pressed():
 func _on_Bouton1_pressed():
 	clean()
 	print("Bouton n°1 activé")
+# AUTO SAVE
+	print("Auto-Sauvegarde")
+	dataDial = str(dataDial,'","',currentDial)
+	dataRep = str(dataRep,',',1)
+	data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
+	var file = File.new()
+	file.open("res://json/savelogs.json", file.WRITE)
+	file.store_string(data)
+	file.close()
+
 	get_node("vbox/Mid/Patch/Dialogues").push_align(2)
 	get_node("vbox/Mid/Patch/Dialogues").newline()
 	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[1]))
 	currentDial = dict._Dialogues[currentDial].next[1]
 	time_delay = dict._Dialogues[currentDial].time
+
+# AUTO SAVE
+	print("Auto-Sauvegarde")
+	dataDial = str(dataDial,'","',currentDial)
+	dataRep = str(dataRep,',',9)
+	data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
+	var file = File.new()
+	file.open("res://json/savelogs.json", file.WRITE)
+	file.store_string(data)
+	file.close()
+
 	timer.set_wait_time(time_delay)
 	print("Lancement du timer",time_delay," seconde(s)")
 	timer.start()
@@ -358,11 +378,32 @@ func _on_Bouton1_pressed():
 func _on_Bouton2_pressed():
 	clean()
 	print("Bouton n°2 activé")
+# AUTO SAVE
+	print("Auto-Sauvegarde")
+	dataDial = str(dataDial,'","',currentDial)
+	dataRep = str(dataRep,',',2)
+	data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
+	var file = File.new()
+	file.open("res://json/savelogs.json", file.WRITE)
+	file.store_string(data)
+	file.close()
+
 	get_node("vbox/Mid/Patch/Dialogues").push_align(2)
 	get_node("vbox/Mid/Patch/Dialogues").newline()
 	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[2]))
 	currentDial = dict._Dialogues[currentDial].next[2]
 	time_delay = dict._Dialogues[currentDial].time
+
+# AUTO SAVE
+	print("Auto-Sauvegarde")
+	dataDial = str(dataDial,'","',currentDial)
+	dataRep = str(dataRep,',',9)
+	data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
+	var file = File.new()
+	file.open("res://json/savelogs.json", file.WRITE)
+	file.store_string(data)
+	file.close()
+
 	timer.set_wait_time(time_delay)
 	print("Lancement du timer",time_delay," seconde(s)")
 	timer.start()
@@ -374,11 +415,32 @@ func _on_Bouton2_pressed():
 func _on_Bouton3_pressed():
 	clean()
 	print("Bouton n°3 activé")
+# AUTO SAVE
+	print("Auto-Sauvegarde")
+	dataDial = str(dataDial,'","',currentDial)
+	dataRep = str(dataRep,',',3)
+	data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
+	var file = File.new()
+	file.open("res://json/savelogs.json", file.WRITE)
+	file.store_string(data)
+	file.close()
+
 	get_node("vbox/Mid/Patch/Dialogues").push_align(2)
 	get_node("vbox/Mid/Patch/Dialogues").newline()
 	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[3]))
 	currentDial = dict._Dialogues[currentDial].next[3]
 	time_delay = dict._Dialogues[currentDial].time
+
+# AUTO SAVE
+	print("Auto-Sauvegarde")
+	dataDial = str(dataDial,'","',currentDial)
+	dataRep = str(dataRep,',',9)
+	data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
+	var file = File.new()
+	file.open("res://json/savelogs.json", file.WRITE)
+	file.store_string(data)
+	file.close()
+
 	timer.set_wait_time(time_delay)
 	print("Lancement du timer",time_delay," seconde(s)")
 	timer.start()
