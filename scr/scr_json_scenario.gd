@@ -169,6 +169,22 @@ func start():
 	if dict._Dialogues[currentDial].ref == 1 :
 		print("#### DIALOGUES REF : 1 ####")
 
+#Création de la node LABEL
+		for i in range(dict._Dialogues[currentDial].content.size()):
+			print("Création du label")
+			var labelbase = get_node("vbox/Mid/Patch/DialBox/VBoxMid/LabelBase")
+			var label = labelbase.duplicate()
+
+			label.set_name(str("label",dict._Dialogues[currentDial],i))
+			get_node("vbox/Mid/Patch/DialBox/VBoxMid").add_child(label)
+			label.set_text(str(dict._Dialogues[currentDial].content[i]))
+
+
+
+
+
+
+
 		get_node("vbox/Mid/Patch/Dialogues").set_scroll_follow(true)
 		get_node("vbox/Mid/Patch/Dialogues").push_align(0)
 

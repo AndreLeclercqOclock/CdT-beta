@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="29" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
+<resource_file type="PackedScene" subresource_count="31" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
 	<ext_resource path="res://scr/scr_json_scenario.gd" type="Script" index="0"></ext_resource>
 	<ext_resource path="res://img/avatar01-small.png" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://font/rubik_bold.fnt" type="BitmapFont" index="4"></ext_resource>
-	<ext_resource path="res://font/coolvetica rg.fnt" type="BitmapFont" index="5"></ext_resource>
-	<ext_resource path="res://font/rubik_large.fnt" type="BitmapFont" index="2"></ext_resource>
+	<ext_resource path="res://font/Montserrat-Regular.ttf" type="DynamicFontData" index="5"></ext_resource>
 	<ext_resource path="res://font/rubik_medium.fnt" type="BitmapFont" index="3"></ext_resource>
+	<ext_resource path="res://font/rubik_bold.fnt" type="BitmapFont" index="4"></ext_resource>
+	<ext_resource path="res://font/coolvetica rg.fnt" type="BitmapFont" index="6"></ext_resource>
+	<ext_resource path="res://font/rubik_large.fnt" type="BitmapFont" index="2"></ext_resource>
+	<resource type="DynamicFont" path="local://28">
+		<int name="font/size"> 30 </int>
+		<bool name="font/use_mipmaps"> False </bool>
+		<bool name="font/use_filter"> True </bool>
+		<resource name="font/font" external="5">  </resource>
+		<resource name="fallback/0"></resource>
+	</resource>
 	<resource type="StyleBoxFlat" path="local://14">
 		<real name="content_margin/left"> -1 </real>
 		<real name="content_margin/right"> -1 </real>
@@ -225,12 +233,12 @@
 			<string> "conn_count" </string>
 			<int> 5 </int>
 			<string> "conns" </string>
-			<int_array  len="30"> 				15, 1, 95, 94, 2, 0, 16, 1, 97, 96, 2, 0, 17, 1, 97, 98, 2, 0, 18, 1, 97, 99, 2, 0, 19, 1, 97, 100, 2, 0 </int_array>
+			<int_array  len="30"> 				18, 1, 96, 95, 2, 0, 19, 1, 98, 97, 2, 0, 20, 1, 98, 99, 2, 0, 21, 1, 98, 100, 2, 0, 22, 1, 98, 101, 2, 0 </int_array>
 			<string> "editable_instances" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="101">
+			<string_array  len="102">
 				<string> "World" </string>
 				<string> "Node" </string>
 				<string> "Interpreteur JSON Scénario" </string>
@@ -254,7 +262,6 @@
 				<string> "alignment" </string>
 				<string> "VBoxContainer" </string>
 				<string> "Top" </string>
-				<string> "editor/display_folded" </string>
 				<string> "Container" </string>
 				<string> "TextureFrame 2" </string>
 				<string> "texture" </string>
@@ -284,14 +291,23 @@
 				<string> "color" </string>
 				<string> "ColorFrame" </string>
 				<string> "Mid" </string>
-				<string> "visibility/visible" </string>
 				<string> "Patch" </string>
 				<string> "Patch9Frame" </string>
 				<string> "Dialogues" </string>
+				<string> "visibility/visible" </string>
 				<string> "custom_colors/selection_color" </string>
 				<string> "custom_colors/font_color_selected" </string>
-				<string> "TextureFrame1" </string>
+				<string> "DialBox" </string>
+				<string> "scroll/horizontal" </string>
+				<string> "scroll/vertical" </string>
+				<string> "ScrollContainer" </string>
+				<string> "VBoxMid" </string>
+				<string> "LabelBase" </string>
+				<string> "rect/min_size" </string>
+				<string> "autowrap" </string>
 				<string> "Bot" </string>
+				<string> "editor/display_folded" </string>
+				<string> "TextureFrame1" </string>
 				<string> "TextEdit" </string>
 				<string> "custom_styles/focus" </string>
 				<string> "custom_styles/normal" </string>
@@ -318,13 +334,6 @@
 				<string> "wait_time" </string>
 				<string> "one_shot" </string>
 				<string> "autostart" </string>
-				<string> "VideoPlayer" </string>
-				<string> "stream/audio_track" </string>
-				<string> "stream/stream" </string>
-				<string> "stream/volume_db" </string>
-				<string> "stream/autoplay" </string>
-				<string> "stream/paused" </string>
-				<string> "expand" </string>
 				<string> "_on_TextEdit_text_entered" </string>
 				<string> "text_entered" </string>
 				<string> "_on_Bouton0_pressed" </string>
@@ -334,14 +343,14 @@
 				<string> "_on_Bouton3_pressed" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 22 </int>
+			<int> 24 </int>
 			<string> "node_paths" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="772"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 18, 2, -1, 15, 3, 0, 4, 0, 5, 1, 6, 2, 7, 3, 8, 3, 9, 4, 10, 4, 11, 4, 12, 4, 13, 5, 14, 5, 15, 5, 16, 5, 17, 6, 0, 1, 0, 21, 19, -1, 9, 5, 1, 6, 1, 7, 3, 8, 3, 9, 7, 10, 7, 11, 8, 12, 9, 20, 10, 0, 2, 0, 24, 22, -1, 9, 23, 2, 5, 1, 6, 1, 7, 11, 8, 11, 9, 4, 10, 4, 11, 12, 12, 4, 0, 3, 0, 28, 25, -1, 10, 5, 2, 6, 2, 7, 11, 8, 11, 9, 13, 10, 14, 11, 15, 12, 16, 26, 17, 27, 10, 0, 3, 0, 37, 29, -1, 16, 30, 3, 3, 3, 31, 18, 5, 1, 6, 2, 7, 11, 8, 11, 9, 19, 10, 20, 11, 21, 12, 22, 32, 23, 33, 2, 34, 24, 35, 25, 36, 26, 0, 3, 0, 37, 38, -1, 18, 30, 3, 39, 3, 3, 3, 4, 3, 31, 27, 5, 1, 6, 2, 7, 11, 8, 11, 9, 19, 10, 28, 11, 29, 12, 30, 32, 31, 33, 2, 34, 24, 35, 25, 36, 26, 0, 3, 0, 37, 40, -1, 19, 30, 3, 39, 0, 3, 3, 4, 0, 31, 32, 5, 1, 6, 2, 7, 11, 8, 11, 9, 19, 10, 33, 11, 34, 12, 35, 32, 36, 41, 37, 33, 2, 34, 24, 35, 25, 36, 26, 0, 3, 0, 49, 42, -1, 16, 31, 38, 5, 2, 6, 2, 7, 11, 8, 10, 9, 39, 10, 40, 11, 41, 12, 16, 43, 23, 44, 42, 45, 43, 46, 11, 36, 26, 47, 10, 48, 25, 0, 3, 0, 51, 28, -1, 13, 30, 3, 39, 3, 3, 3, 4, 3, 5, 2, 6, 2, 7, 11, 8, 11, 9, 44, 10, 45, 11, 46, 12, 47, 50, 48, 0, 2, 0, 24, 52, -1, 10, 23, 2, 53, 1, 5, 1, 6, 2, 7, 11, 8, 11, 9, 4, 10, 14, 11, 12, 12, 14, 0, 10, 0, 55, 54, -1, 12, 30, 3, 39, 3, 3, 3, 4, 3, 5, 2, 6, 2, 7, 11, 8, 11, 9, 4, 10, 4, 11, 4, 12, 4, 0, 11, 0, 37, 56, -1, 21, 30, 3, 39, 3, 3, 3, 4, 3, 31, 32, 5, 1, 6, 2, 7, 11, 8, 11, 9, 49, 10, 50, 11, 51, 12, 52, 32, 23, 41, 53, 57, 53, 58, 53, 33, 2, 34, 24, 35, 25, 36, 26, 0, 11, 0, 51, 59, -1, 13, 30, 3, 39, 3, 3, 3, 4, 3, 5, 2, 6, 2, 7, 11, 8, 11, 9, 54, 10, 55, 11, 56, 12, 57, 50, 48, 0, 2, 0, 24, 60, -1, 9, 23, 2, 5, 1, 6, 1, 7, 11, 8, 11, 9, 4, 10, 14, 11, 12, 12, 14, 0, 14, 0, 68, 61, -1, 18, 53, 1, 31, 18, 5, 1, 6, 2, 7, 11, 8, 11, 9, 58, 10, 59, 11, 60, 12, 61, 62, 62, 63, 63, 43, 64, 44, 53, 64, 65, 65, 11, 66, 1, 67, 66, 0, 14, 0, 78, 69, -1, 20, 31, 32, 5, 2, 6, 2, 7, 11, 8, 11, 9, 67, 10, 68, 11, 69, 12, 70, 70, 71, 71, 72, 62, 73, 72, 74, 63, 75, 43, 36, 44, 53, 73, 1, 74, 10, 75, 76, 76, 2, 1, 77, 14, 0, 78, 79, -1, 20, 31, 32, 5, 2, 6, 2, 7, 11, 8, 11, 9, 67, 10, 77, 11, 69, 12, 78, 70, 79, 71, 80, 62, 81, 72, 82, 63, 83, 43, 36, 44, 53, 73, 1, 74, 10, 75, 76, 76, 2, 1, 77, 14, 0, 78, 80, -1, 20, 31, 32, 5, 2, 6, 2, 7, 11, 8, 11, 9, 13, 10, 84, 11, 85, 12, 86, 70, 87, 71, 88, 62, 89, 72, 90, 63, 91, 43, 36, 44, 53, 73, 1, 74, 10, 75, 76, 76, 2, 1, 77, 14, 0, 78, 81, -1, 20, 31, 32, 5, 2, 6, 2, 7, 11, 8, 11, 9, 67, 10, 92, 11, 69, 12, 93, 70, 94, 71, 95, 62, 96, 72, 97, 63, 98, 43, 36, 44, 53, 73, 1, 74, 10, 75, 76, 76, 2, 1, 77, 1, 0, 82, 82, -1, 4, 83, 0, 84, 26, 85, 2, 86, 1, 0, 1, 0, 87, 87, -1, 15, 53, 1, 5, 1, 6, 2, 7, 11, 8, 11, 9, 7, 10, 7, 11, 8, 12, 9, 88, 10, 89, 76, 90, 4, 91, 1, 92, 1, 93, 2, 0 </int_array>
+			<int_array  len="818"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 18, 2, -1, 15, 3, 0, 4, 0, 5, 1, 6, 2, 7, 3, 8, 3, 9, 4, 10, 4, 11, 4, 12, 4, 13, 5, 14, 5, 15, 5, 16, 5, 17, 6, 0, 1, 0, 21, 19, -1, 9, 5, 1, 6, 1, 7, 3, 8, 3, 9, 7, 10, 7, 11, 8, 12, 9, 20, 10, 0, 2, 0, 23, 22, -1, 8, 5, 1, 6, 1, 7, 11, 8, 11, 9, 4, 10, 4, 11, 12, 12, 4, 0, 3, 0, 27, 24, -1, 10, 5, 2, 6, 2, 7, 11, 8, 11, 9, 13, 10, 14, 11, 15, 12, 16, 25, 17, 26, 10, 0, 3, 0, 36, 28, -1, 16, 29, 3, 3, 3, 30, 18, 5, 1, 6, 2, 7, 11, 8, 11, 9, 19, 10, 20, 11, 21, 12, 22, 31, 23, 32, 2, 33, 24, 34, 25, 35, 26, 0, 3, 0, 36, 37, -1, 18, 29, 3, 38, 3, 3, 3, 4, 3, 30, 27, 5, 1, 6, 2, 7, 11, 8, 11, 9, 19, 10, 28, 11, 29, 12, 30, 31, 31, 32, 2, 33, 24, 34, 25, 35, 26, 0, 3, 0, 36, 39, -1, 19, 29, 3, 38, 0, 3, 3, 4, 0, 30, 32, 5, 1, 6, 2, 7, 11, 8, 11, 9, 19, 10, 33, 11, 34, 12, 35, 31, 36, 40, 37, 32, 2, 33, 24, 34, 25, 35, 26, 0, 3, 0, 48, 41, -1, 16, 30, 38, 5, 2, 6, 2, 7, 11, 8, 10, 9, 39, 10, 40, 11, 41, 12, 42, 42, 23, 43, 43, 44, 44, 45, 11, 35, 26, 46, 10, 47, 25, 0, 3, 0, 50, 27, -1, 13, 29, 3, 38, 3, 3, 3, 4, 3, 5, 2, 6, 2, 7, 11, 8, 11, 9, 45, 10, 46, 11, 47, 12, 48, 49, 49, 0, 2, 0, 23, 51, -1, 8, 5, 1, 6, 2, 7, 11, 8, 11, 9, 4, 10, 14, 11, 12, 12, 14, 0, 10, 0, 53, 52, -1, 12, 29, 3, 38, 3, 3, 3, 4, 3, 5, 2, 6, 2, 7, 11, 8, 11, 9, 4, 10, 4, 11, 4, 12, 4, 0, 11, 0, 36, 54, -1, 22, 55, 1, 29, 3, 38, 3, 3, 3, 4, 3, 30, 32, 5, 1, 6, 2, 7, 11, 8, 11, 9, 50, 10, 51, 11, 52, 12, 53, 31, 23, 40, 54, 56, 54, 57, 54, 32, 2, 33, 24, 34, 25, 35, 26, 0, 11, 0, 61, 58, -1, 10, 5, 1, 6, 2, 7, 11, 8, 11, 9, 55, 10, 56, 11, 57, 12, 58, 59, 1, 60, 2, 0, 13, 0, 21, 62, -1, 9, 5, 1, 6, 1, 7, 11, 8, 11, 9, 4, 10, 4, 11, 59, 12, 60, 20, 10, 0, 14, 0, 48, 63, -1, 14, 64, 61, 5, 2, 6, 2, 7, 3, 8, 3, 9, 4, 10, 4, 11, 59, 12, 60, 42, 62, 65, 2, 35, 26, 46, 10, 47, 25, 0, 2, 0, 23, 66, -1, 9, 67, 2, 5, 1, 6, 1, 7, 11, 8, 11, 9, 4, 10, 63, 11, 12, 12, 63, 0, 16, 0, 50, 68, -1, 13, 29, 3, 38, 3, 3, 3, 4, 3, 5, 2, 6, 2, 7, 11, 8, 11, 9, 64, 10, 65, 11, 66, 12, 67, 49, 49, 0, 16, 0, 76, 69, -1, 18, 55, 1, 30, 18, 5, 1, 6, 2, 7, 11, 8, 11, 9, 68, 10, 69, 11, 70, 12, 71, 70, 72, 71, 73, 42, 74, 43, 54, 72, 75, 73, 11, 74, 1, 75, 76, 0, 16, 0, 86, 77, -1, 20, 30, 32, 5, 2, 6, 2, 7, 11, 8, 11, 9, 77, 10, 78, 11, 79, 12, 80, 78, 81, 79, 82, 70, 83, 80, 84, 71, 85, 42, 36, 43, 54, 81, 1, 82, 10, 83, 86, 84, 2, 1, 85, 16, 0, 86, 87, -1, 20, 30, 32, 5, 2, 6, 2, 7, 11, 8, 11, 9, 77, 10, 87, 11, 79, 12, 88, 78, 89, 79, 90, 70, 91, 80, 92, 71, 93, 42, 36, 43, 54, 81, 1, 82, 10, 83, 86, 84, 2, 1, 85, 16, 0, 86, 88, -1, 20, 30, 32, 5, 2, 6, 2, 7, 11, 8, 11, 9, 13, 10, 94, 11, 95, 12, 96, 78, 97, 79, 98, 70, 99, 80, 100, 71, 101, 42, 36, 43, 54, 81, 1, 82, 10, 83, 86, 84, 2, 1, 85, 16, 0, 86, 89, -1, 20, 30, 32, 5, 2, 6, 2, 7, 11, 8, 11, 9, 77, 10, 102, 11, 79, 12, 103, 78, 104, 79, 105, 70, 106, 80, 107, 71, 108, 42, 36, 43, 54, 81, 1, 82, 10, 83, 86, 84, 2, 1, 85, 1, 0, 90, 90, -1, 4, 91, 0, 92, 26, 93, 2, 94, 1, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="99" shared="false">
+			<array  len="109" shared="false">
 				<int> 1 </int>
 				<bool> False </bool>
 				<bool> True </bool>
@@ -364,7 +373,7 @@
 				<real> 324 </real>
 				<real> 11 </real>
 				<real> 33 </real>
-				<real> 61 </real>
+				<real> 68 </real>
 				<resource  external="2">  </resource>
 				<string> "" </string>
 				<int> -1 </int>
@@ -384,11 +393,12 @@
 				<real> 681 </real>
 				<real> 114 </real>
 				<real> 934 </real>
+				<real> 164 </real>
 				<color> 0.941406, 0.941406, 0.941406, 1 </color>
 				<color> 0.238281, 0.215942, 0.215942, 1 </color>
 				<real> 543.5 </real>
 				<real> -164 </real>
-				<real> -536.5 </real>
+				<real> -536 </real>
 				<real> -167 </real>
 				<color> 0.305882, 0.321569, 0.380392, 1 </color>
 				<real> 516 </real>
@@ -396,17 +406,26 @@
 				<real> -1 </real>
 				<real> -799 </real>
 				<color> 1, 0.972549, 0.972549, 1 </color>
+				<real> -520 </real>
+				<real> 182 </real>
+				<real> 517 </real>
+				<real> 1418 </real>
+				<real> 1030 </real>
+				<real> 40 </real>
+				<vector2> 1030, 40 </vector2>
+				<resource  resource_type="DynamicFont" path="local://28">  </resource>
+				<real> 8 </real>
 				<real> 544 </real>
-				<real> -1437 </real>
+				<real> -1433 </real>
 				<real> -537 </real>
-				<real> -1440 </real>
+				<real> -1436 </real>
 				<real> 50 </real>
 				<real> 1464 </real>
 				<real> 363 </real>
 				<real> 1490 </real>
 				<resource  resource_type="StyleBox" path="local://14">  </resource>
 				<resource  resource_type="StyleBox" path="local://13">  </resource>
-				<resource  external="5">  </resource>
+				<resource  external="6">  </resource>
 				<real> 0.6 </real>
 				<real> 0.65 </real>
 				<real> 25 </real>
