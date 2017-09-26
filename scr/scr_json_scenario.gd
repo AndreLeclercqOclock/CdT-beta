@@ -70,57 +70,56 @@ func _ready():
 	print("Ouverture du JSON")
 	var file = File.new()
 	file.open("res://json/savelogs.json", file.READ)
-	save.parse_json(file.get_as_text())
+	save.parse_json(file.get_line())
 	file.close()
 	print("Fermeture du JSON")
 # Chargement de la sauvegarde
-	if stateSave == 1:
-		if save._Save.dial.size() > 1:
-			print("Chargement de la sauvegarde")
-			print("Réécriture de la sauvegarde")
-			print("Réécriture Dialogues dans le JSON")
-			for i in range(save._Save.dial.size()):
-				temp = str(save._Save.dial[i])
-				if dataDial != null:
-					dataDial = str(dataDial,'","',temp)
-				elif dataDial == null:
-					dataDial = str(temp)
-			print("Réécriture Réponses dans le JSON")
-			for i in range(save._Save.rep.size()):
-				temp = str(save._Save.rep[i])
-				if dataRep != null:
-					dataRep = str(dataRep,',',temp)
-				elif dataRep == null:
-					dataRep = str(temp)
+	if save._Save.dial.size() > 1 and stateSave == 1:
+		print("Chargement de la sauvegarde")
+		print("Réécriture de la sauvegarde")
+		print("Réécriture Dialogues dans le JSON")
+		for i in range(save._Save.dial.size()):
+			temp = str(save._Save.dial[i])
+			if dataDial != null:
+				dataDial = str(dataDial,'","',temp)
+			elif dataDial == null:
+				dataDial = str(temp)
+		print("Réécriture Réponses dans le JSON")
+		for i in range(save._Save.rep.size()):
+			temp = str(save._Save.rep[i])
+			if dataRep != null:
+				dataRep = str(dataRep,',',temp)
+			elif dataRep == null:
+				dataRep = str(temp)
 
-			print("Ecriture des textes")
-			for i in range(save._Save.dial.size()):
-				currentDial = save._Save.dial[i]
-				currentRep = save._Save.rep[i]
-				get_node("vbox/Mid/Patch/Dialogues").set_scroll_follow(true)
-				if dict._Dialogues[currentDial].ref == 1:
-					print("Ecriture du Dialogue")
-					get_node("vbox/Mid/Patch/Dialogues").push_align(0)
-					for y in range(dict._Dialogues[currentDial].content.size()):
-						get_node("vbox/Mid/Patch/Dialogues").newline()
-						get_node("vbox/Mid/Patch/Dialogues").add_text(str(dict._Dialogues[currentDial].content[y]))
-					currentDial = dict._Dialogues[currentDial].next
-				elif dict._Dialogues[currentDial].ref == 2:
-					print("Ecriture de la réponse")
-					get_node("vbox/Mid/Patch/Dialogues").push_align(2)
+		print("Ecriture des textes")
+		for i in range(save._Save.dial.size()):
+			currentDial = save._Save.dial[i]
+			currentRep = save._Save.rep[i]
+			get_node("vbox/Mid/Patch/Dialogues").set_scroll_follow(true)
+			if dict._Dialogues[currentDial].ref == 1:
+				print("Ecriture du Dialogue")
+				get_node("vbox/Mid/Patch/Dialogues").push_align(0)
+				for y in range(dict._Dialogues[currentDial].content.size()):
 					get_node("vbox/Mid/Patch/Dialogues").newline()
-					get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[currentRep]))
-			print("Fin du chargement")
-		else:
+					get_node("vbox/Mid/Patch/Dialogues").add_text(str(dict._Dialogues[currentDial].content[y]))
+				currentDial = dict._Dialogues[currentDial].next
+			elif dict._Dialogues[currentDial].ref == 2:
+				print("Ecriture de la réponse")
+				get_node("vbox/Mid/Patch/Dialogues").push_align(2)
+				get_node("vbox/Mid/Patch/Dialogues").newline()
+				get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[currentRep]))
+		print("Fin du chargement")
+	else:
 # AUTO SAVE
-			print("Auto-Sauvegarde")
-			dataDial = currentDial
-			dataRep = 9
-			data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
-			var file = File.new()
-			file.open("res://json/savelogs.json", file.WRITE)
-			file.store_string(data)
-			file.close()
+		print("Auto-Sauvegarde")
+		dataDial = currentDial
+		dataRep = 9
+		data = str('{"_Save" : {"dial" : ["',dataDial,'"],"rep" : [',dataRep,']}}')
+		var file = File.new()
+		file.open("res://json/savelogs.json", file.WRITE)
+		file.store_string(data)
+		file.close()
 
 
 
