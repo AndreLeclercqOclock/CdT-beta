@@ -2,7 +2,7 @@
   "_Config" : {
     "scenarioFile" : "protoTest_fr.json",
     "firstDial" : "dial001",
-    "stateSave" : true,
+    "stateSave" : false,
     "version" : "alpha 2.1"
   }
 }

@@ -169,8 +169,6 @@ func start():
 	if dict._Dialogues[currentDial].ref == 1 :
 		print("#### DIALOGUES REF : 1 ####")
 
-
-
 		get_node("vbox/Mid/Patch/Dialogues").set_scroll_follow(true)
 		get_node("vbox/Mid/Patch/Dialogues").push_align(0)
 
@@ -265,36 +263,6 @@ func start():
 		get_node("vbox/Bot/TextEdit").clear()
 		timer.stop()
 
-									## MEDIAS ##
-# Gestion des images dialogues de ref 4 [IMAGES]
-	if dict._Dialogues[currentDial].ref == 4:
-		print("#### DIALOGUES REF : 4 ####")
-		print("Chargement de l'image")
-		image = load(str("res://img/",dict._Dialogues[currentDial].content))
-		get_node("vbox/Mid/Patch/Dialogues").newline()
-		get_node("vbox/Mid/Patch/Dialogues").push_align(0)
-		print("Envoi de l'image")
-		get_node("vbox/Mid/Patch/Dialogues").add_image(image)
-		currentDial = dict._Dialogues[currentDial].next
-		time_delay = dict._Dialogues[currentDial].time
-		start()
-
-
-# Gestion des vidéos dialogues de ref 5 [VIDEOS]
-	if dict._Dialogues[currentDial].ref == 5:
-		print("#### DIALOGUES REF : 5 ####")
-		if wait == false:
-			get_node("VideoPlayer").show()
-			video = load("res://vid/sample.ogv")
-			get_node("VideoPlayer").set_stream(video)
-			get_node("VideoPlayer").play()
-			print("PLAY")
-			yield(get_node("VideoPlayer"),"stopped")
-			print("STOP")
-			get_node("VideoPlayer").hide()
-			currentDial = dict._Dialogues[currentDial].next
-			time_delay = dict._Dialogues[currentDial].time
-			start()
 
 
 										## BOUTONS REPONSES ##
@@ -446,7 +414,6 @@ func _on_Bouton3_pressed():
 	yield(get_node("Timer"), "timeout")
 	print("Fin du timer")
 	start()
-
 
 # Nettoyage des boutons inutiles
 func clean():
