@@ -143,26 +143,7 @@ func _ready():
 # Fonction ou reboucle le script quand il repart du début
 func start():
 	print("Début du processus d'interpretation du JSON")
-
-# Status de l'interlocuteur
-	# En ligne = 1
-	# Occupé = 2
-	# Absent = 3
-	# Hors Ligne = 4
-	print("Status de l'interlocuteur")
-	if time_delay <= 30:
-		get_node("vbox/Top/Etat").set_text("En ligne")
-
-	elif time_delay > 30 and time_delay >= 180:
-		get_node("vbox/Top/Etat").set_text("Occupé")
-
-	elif time_delay > 180 and time_delay >= 300:
-		get_node("vbox/Top/Etat").set_text("Absent")
-
-	elif time_delay > 300:
-		get_node("vbox/Top/Etat").set_text("Hors Ligne")
-
-
+	status()
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	if dict._Dialogues[currentDial].ref == 1 :
@@ -194,10 +175,11 @@ func start():
 # Affichage Smoothie
 			print("Affichage")
 			var visible = 0
+			time_delay = 0.05
+			status()
 			for i in range(9):
 				label.set("visibility/self_opacity",visible)
 				visible = visible + 0.10
-				time_delay = 0.05
 				timer.set_wait_time(time_delay)
 				timer.start()
 				yield(get_node("Timer"), "timeout")
@@ -278,6 +260,7 @@ func start():
 		currentDial = dict._Dialogues[currentDial].next
 		time_delay = dict._Dialogues[currentDial].time
 		timer.set_wait_time(time_delay)
+		status()
 		print("Lancement du timer",time_delay," seconde(s)")
 		timer.start()
 		yield(get_node("Timer"), "timeout")
@@ -589,3 +572,20 @@ func _on_TextEdit_text_entered( text ):
 		yield(get_node("Timer"), "timeout")
 		print("Fin du timer")
 		start()
+
+func status():
+# Status de l'interlocuteur
+	print("Status de l'interlocuteur")
+	# En ligne
+	if time_delay <= 30:
+		get_node("vbox/Top/Etat").set_text("En ligne")
+	# Occupé
+	elif time_delay > 30 and time_delay <= 180:
+		get_node("vbox/Top/Etat").set_text("Occupé")
+	# Absent
+	elif time_delay > 180 and time_delay <= 300:
+		get_node("vbox/Top/Etat").set_text("Absent")
+	# Hors Ligne
+	elif time_delay > 300:
+		get_node("vbox/Top/Etat").set_text("Hors Ligne")
+	return
