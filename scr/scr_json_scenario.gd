@@ -168,29 +168,9 @@ func start():
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	if dict._Dialogues[currentDial].ref == 1 :
 		print("#### DIALOGUES REF : 1 ####")
-
 #Création de la node LABEL
-		for i in range(dict._Dialogues[currentDial].content.size()):
-			print("Création du label")
-			var labelbase = get_node("vbox/Mid/Patch/DialBox/VBoxMid/LabelBase")
-			var label = labelbase.duplicate()
-
-			label.set_name(str("label",dict._Dialogues[currentDial],i))
-			get_node("vbox/Mid/Patch/DialBox/VBoxMid").add_child(label)
-			label.set_text(str(dict._Dialogues[currentDial].content[i]))
-
-
-
-
-
-
-
-		get_node("vbox/Mid/Patch/Dialogues").set_scroll_follow(true)
-		get_node("vbox/Mid/Patch/Dialogues").push_align(0)
-
 		print("Traitement du Dialogue")
 		for i in range(dict._Dialogues[currentDial].content.size()):
-
 # Affiche le status "Ecrit un message"
 			print("Message système 'Ecrit un message'")
 			get_node("vbox/Top/Status").add_text("écrit un message...")
@@ -198,21 +178,20 @@ func start():
 			dial = [dict._Dialogues[currentDial].content[i]]
 			size = (dial[0].length())/20
 			print("Définition du temps d'écriture en secondes")
-
 # Fourchettes en fonction de la taille du texte.
-# Inférieur à 0 seconde
+		# Inférieur à 0 seconde
 			if size <= 0:
 				size = 0.5
-# Entre 0 & 2 secondes
+		# Entre 0 & 2 secondes
 			elif size > 0 and size <= 2:
 				size = 1.5
-# Entre 2 & 5 secondes
+		# Entre 2 & 5 secondes
 			elif size > 2 and size <= 5:
 				size = 3.5
-# Entre 5 & 10 secondes
+		# Entre 5 & 10 secondes
 			elif size > 5 and size <= 10:
 				size = 5
-# Supérieur à 10 secondes
+		# Supérieur à 10 secondes
 			elif size > 10:
 				size = 7
 			print("Temps d'écriture : ",size," seconde(s)")
@@ -235,9 +214,14 @@ func start():
 			print("Fin du timer")
 
 # Ecrit la ligne de dialogue
+			print("Création du label")
+			var labelbase = get_node("vbox/Mid/Patch/DialBox/VBoxMid/LabelDial")
+			var label = labelbase.duplicate()
+			print("Configuration du label")
+			label.set_name(str("label",dict._Dialogues[currentDial],i))
+			get_node("vbox/Mid/Patch/DialBox/VBoxMid").add_child(label)
 			print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[i])
-			get_node("vbox/Mid/Patch/Dialogues").newline()
-			get_node("vbox/Mid/Patch/Dialogues").add_text(str(dict._Dialogues[currentDial].content[i]))
+			label.set_text(str(dict._Dialogues[currentDial].content[i]))
 			time_delay = 0.75
 			print("Temporisation : ",time_delay," seconde(s)")
 			timer.set_wait_time(time_delay)
@@ -245,6 +229,7 @@ func start():
 			yield(get_node("Timer"), "timeout")
 			print("Fin du timer")
 			print("Fin de la ligne")
+
 # Clos la boucle et passe au next
 		print("Fin du dialogue")
 		currentDial = dict._Dialogues[currentDial].next
@@ -297,9 +282,14 @@ func _on_Bouton0_pressed():
 	file.store_string(data)
 	file.close()
 
-	get_node("vbox/Mid/Patch/Dialogues").push_align(2)
-	get_node("vbox/Mid/Patch/Dialogues").newline()
-	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
+	print("Création du label")
+	var labelbase = get_node("vbox/Mid/Patch/DialBox/VBoxMid/LabelRep")
+	var label = labelbase.duplicate()
+	print("Configuration du label")
+	label.set_name(str("label",dict._Dialogues[currentDial],0))
+	get_node("vbox/Mid/Patch/DialBox/VBoxMid").add_child(label)
+	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[0])
+	label.set_text(str(dict._Dialogues[currentDial].content[0]))
 	currentDial = dict._Dialogues[currentDial].next[0]
 	time_delay = dict._Dialogues[currentDial].time
 
