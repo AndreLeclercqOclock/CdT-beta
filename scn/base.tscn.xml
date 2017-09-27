@@ -8,7 +8,7 @@
 	<ext_resource path="res://font/coolvetica rg.fnt" type="BitmapFont" index="5"></ext_resource>
 	<ext_resource path="res://font/rubik_medium.fnt" type="BitmapFont" index="3"></ext_resource>
 	<resource type="DynamicFont" path="local://28">
-		<int name="font/size"> 35 </int>
+		<int name="font/size"> 42 </int>
 		<bool name="font/use_mipmaps"> False </bool>
 		<bool name="font/use_filter"> True </bool>
 		<resource name="font/font" external="4">  </resource>
@@ -384,9 +384,9 @@
 				<real> 1 </real>
 				<vector2> 2.25, 2.25 </vector2>
 				<real> 322 </real>
-				<real> -68 </real>
+				<real> -85 </real>
 				<real> 17 </real>
-				<real> -110 </real>
+				<real> -127 </real>
 				<resource  external="3">  </resource>
 				<vector2> 1.4, 1.4 </vector2>
 				<real> 681 </real>
@@ -404,7 +404,7 @@
 				<real> 175 </real>
 				<real> -525 </real>
 				<real> 1411 </real>
-				<vector2> 1030, 45 </vector2>
+				<vector2> 1030, 50 </vector2>
 				<real> 10 </real>
 				<real> 1040 </real>
 				<real> 45 </real>

@@ -150,18 +150,18 @@ func start():
 	# Absent = 3
 	# Hors Ligne = 4
 	print("Status de l'interlocuteur")
-	if online == 1:
-		get_node("vbox/Top/Etat").add_text("En ligne")
-		online = 0
-	elif online == 2:
-		get_node("vbox/Top/Etat").add_text("Occupé")
-		online = 0
-	elif online == 3:
-		get_node("vbox/Top/Etat").add_text("Absent")
-		online = 0
-	elif online == 4:
-		get_node("vbox/Top/Etat").add_text("Hors Ligne")
-		online = 0
+	if time_delay <= 30:
+		get_node("vbox/Top/Etat").set_text("En ligne")
+
+	elif time_delay > 30 and time_delay >= 180:
+		get_node("vbox/Top/Etat").set_text("Occupé")
+
+	elif time_delay > 180 and time_delay >= 300:
+		get_node("vbox/Top/Etat").set_text("Absent")
+
+	elif time_delay > 300:
+		get_node("vbox/Top/Etat").set_text("Hors Ligne")
+
 
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
