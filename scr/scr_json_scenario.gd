@@ -99,16 +99,16 @@ func _ready():
 			get_node("vbox/Mid/Patch/Dialogues").set_scroll_follow(true)
 			if dict._Dialogues[currentDial].ref == 1:
 				print("Ecriture du Dialogue")
-				get_node("vbox/Mid/Patch/Dialogues").push_align(0)
+				get_node("vbox/Mid/Dialogues").push_align(0)
 				for y in range(dict._Dialogues[currentDial].content.size()):
-					get_node("vbox/Mid/Patch/Dialogues").newline()
-					get_node("vbox/Mid/Patch/Dialogues").add_text(str(dict._Dialogues[currentDial].content[y]))
+					get_node("vbox/Mid/Dialogues").newline()
+					get_node("vbox/Mid/Dialogues").add_text(str(dict._Dialogues[currentDial].content[y]))
 				currentDial = dict._Dialogues[currentDial].next
 			elif dict._Dialogues[currentDial].ref == 2:
 				print("Ecriture de la réponse")
-				get_node("vbox/Mid/Patch/Dialogues").push_align(2)
-				get_node("vbox/Mid/Patch/Dialogues").newline()
-				get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[currentRep]))
+				get_node("vbox/Mid/Dialogues").push_align(2)
+				get_node("vbox/Mid/Dialogues").newline()
+				get_node("vbox/Mid/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[currentRep]))
 		print("Fin du chargement")
 	else:
 # AUTO SAVE
@@ -215,11 +215,11 @@ func start():
 
 # Ecrit la ligne de dialogue
 			print("Création du label")
-			var labelbase = get_node("vbox/Mid/Patch/DialBox/VBoxMid/LabelDial")
+			var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelDial")
 			var label = labelbase.duplicate()
 			print("Configuration du label")
 			label.set_name(str("label",dict._Dialogues[currentDial],i))
-			get_node("vbox/Mid/Patch/DialBox/VBoxMid").add_child(label)
+			get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 			print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[i])
 			label.set_text(str(dict._Dialogues[currentDial].content[i]))
 			time_delay = 0.75
@@ -283,11 +283,11 @@ func _on_Bouton0_pressed():
 	file.close()
 
 	print("Création du label")
-	var labelbase = get_node("vbox/Mid/Patch/DialBox/VBoxMid/LabelRep")
+	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
 	var label = labelbase.duplicate()
 	print("Configuration du label")
 	label.set_name(str("label",dict._Dialogues[currentDial],0))
-	get_node("vbox/Mid/Patch/DialBox/VBoxMid").add_child(label)
+	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[0])
 	label.set_text(str(dict._Dialogues[currentDial].content[0]))
 	currentDial = dict._Dialogues[currentDial].next[0]
@@ -324,9 +324,14 @@ func _on_Bouton1_pressed():
 	file.store_string(data)
 	file.close()
 
-	get_node("vbox/Mid/Patch/Dialogues").push_align(2)
-	get_node("vbox/Mid/Patch/Dialogues").newline()
-	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[1]))
+	print("Création du label")
+	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
+	var label = labelbase.duplicate()
+	print("Configuration du label")
+	label.set_name(str("label",dict._Dialogues[currentDial],1))
+	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[1])
+	label.set_text(str(dict._Dialogues[currentDial].content[1]))
 	currentDial = dict._Dialogues[currentDial].next[1]
 	time_delay = dict._Dialogues[currentDial].time
 
@@ -361,9 +366,14 @@ func _on_Bouton2_pressed():
 	file.store_string(data)
 	file.close()
 
-	get_node("vbox/Mid/Patch/Dialogues").push_align(2)
-	get_node("vbox/Mid/Patch/Dialogues").newline()
-	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[2]))
+	print("Création du label")
+	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
+	var label = labelbase.duplicate()
+	print("Configuration du label")
+	label.set_name(str("label",dict._Dialogues[currentDial],2))
+	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[2])
+	label.set_text(str(dict._Dialogues[currentDial].content[2]))
 	currentDial = dict._Dialogues[currentDial].next[2]
 	time_delay = dict._Dialogues[currentDial].time
 
@@ -398,9 +408,14 @@ func _on_Bouton3_pressed():
 	file.store_string(data)
 	file.close()
 
-	get_node("vbox/Mid/Patch/Dialogues").push_align(2)
-	get_node("vbox/Mid/Patch/Dialogues").newline()
-	get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[3]))
+	print("Création du label")
+	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
+	var label = labelbase.duplicate()
+	print("Configuration du label")
+	label.set_name(str("label",dict._Dialogues[currentDial],3))
+	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[3])
+	label.set_text(str(dict._Dialogues[currentDial].content[3]))
 	currentDial = dict._Dialogues[currentDial].next[3]
 	time_delay = dict._Dialogues[currentDial].time
 
@@ -433,8 +448,8 @@ func clean():
 # Boite de dialogue pour écrire la réponse demandée.
 func _on_TextEdit_text_entered( text ):
 	if get_node("vbox/Bot/TextEdit").get_text() == dict._Dialogues[currentDial].content[0]:
-		get_node("vbox/Mid/Patch/Dialogues").push_align(2)
-		get_node("vbox/Mid/Patch/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
+		get_node("vbox/Mid/Dialogues").push_align(2)
+		get_node("vbox/Mid/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
 		get_node("vbox/Bot/TextEdit").hide()
 		get_node("vbox/Bot/TextEdit").clear()
 		currentDial = dict._Dialogues[currentDial].next[0]
