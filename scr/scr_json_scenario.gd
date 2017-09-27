@@ -122,8 +122,6 @@ func _ready():
 		file.store_string(data)
 		file.close()
 
-
-
 # Initialisation du Timer
 	print("Initialitation du Timer")
 	timer = get_node("Timer")
@@ -141,7 +139,7 @@ func _ready():
 	print("Lancement du script")
 	start()
 
-
+############################### DEBUT DU SCRIPT ###############################
 # Fonction ou reboucle le script quand il repart du début
 func start():
 	print("Début du processus d'interpretation du JSON")
@@ -172,13 +170,38 @@ func start():
 #Création de la node LABEL
 		print("Traitement du Dialogue")
 		for i in range(dict._Dialogues[currentDial].content.size()):
-# Affiche le status "Ecrit un message"
-			print("Message système 'Ecrit un message'")
-			get_node("vbox/Top/Status").add_text("écrit un message...")
+# Calcule le nombre de charactères
 			print("Calcule du nombre de charactère dans la phrase")
 			dial = [dict._Dialogues[currentDial].content[i]]
 			size = (dial[0].length())/20
 			print("Définition du temps d'écriture en secondes")
+# Affiche le status "Ecrit un message"
+			print("Création du label")
+			var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelStat")
+			var label = labelbase.duplicate()
+			print("Configuration du label")
+			label.set_name("LabelStatuts")
+			get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+			label.show()
+			print("Message système 'Ecrit un message'")
+			label.set_text("écrit un message...")
+# Auto Scroll
+			print("Scroll")
+			yield(get_tree(), "idle_frame")
+			get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+			vscroll = vscroll+50
+			get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
+# Affichage Smoothie
+			print("Affichage")
+			var visible = 0
+			for i in range(9):
+				label.set("visibility/self_opacity",visible)
+				visible = visible + 0.10
+				time_delay = 0.05
+				timer.set_wait_time(time_delay)
+				timer.start()
+				yield(get_node("Timer"), "timeout")
+
 # Fourchettes en fonction de la taille du texte.
 		# Inférieur à 0 seconde
 			if size <= 0:
@@ -204,7 +227,6 @@ func start():
 			timer.start()
 			yield(get_node("Timer"), "timeout")
 			print("Fin du timer")
-			get_node("vbox/Top/Status").clear()
 
 # Temporisation courte entre le message système et le texte
 			print("Temporisation : ",time_delay," seconde(s)")
@@ -212,6 +234,7 @@ func start():
 			timer.set_wait_time(time_delay)
 			timer.start()
 			yield(get_node("Timer"), "timeout")
+			label.queue_free()
 			print("Fin du timer")
 
 # Ecrit la ligne de dialogue
