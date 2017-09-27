@@ -224,11 +224,24 @@ func start():
 			label.show()
 			print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[i])
 			label.set_text(str(dict._Dialogues[currentDial].content[i]))
+# Auto Scroll
 			print("Scroll")
 			yield(get_tree(), "idle_frame")
 			get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
 			vscroll = vscroll+50
 			get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
+# Affichage Smoothie
+			print("Affichage")
+			var visible = 0
+			for i in range(9):
+				label.set("visibility/self_opacity",visible)
+				visible = visible + 0.10
+				time_delay = 0.05
+				timer.set_wait_time(time_delay)
+				timer.start()
+				yield(get_node("Timer"), "timeout")
+
+# Temporisation
 			time_delay = 0.75
 			print("Temporisation : ",time_delay," seconde(s)")
 			timer.set_wait_time(time_delay)
@@ -288,7 +301,7 @@ func _on_Bouton0_pressed():
 	file.open("res://json/savelogs.json", file.WRITE)
 	file.store_string(data)
 	file.close()
-
+# Ecrit la ligne de Dialogue
 	print("Création du label")
 	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
 	var label = labelbase.duplicate()
@@ -298,11 +311,24 @@ func _on_Bouton0_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[0])
 	label.set_text(str(dict._Dialogues[currentDial].content[0]))
+
+# Auto Scroll
 	print("Scroll")
 	yield(get_tree(), "idle_frame")
 	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
 	vscroll = vscroll+50
 	get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
+# Affichage Smoothie
+	print("Affichage")
+	var visible = 0
+	for i in range(9):
+		label.set("visibility/self_opacity",visible)
+		visible = visible + 0.10
+		time_delay = 0.05
+		timer.set_wait_time(time_delay)
+		timer.start()
+		yield(get_node("Timer"), "timeout")
+
 	currentDial = dict._Dialogues[currentDial].next[0]
 	time_delay = dict._Dialogues[currentDial].time
 
@@ -336,7 +362,7 @@ func _on_Bouton1_pressed():
 	file.open("res://json/savelogs.json", file.WRITE)
 	file.store_string(data)
 	file.close()
-
+# Ecrit la ligne de Dialogue
 	print("Création du label")
 	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
 	var label = labelbase.duplicate()
@@ -346,11 +372,24 @@ func _on_Bouton1_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[1])
 	label.set_text(str(dict._Dialogues[currentDial].content[1]))
+
+# Auto Scroll
 	print("Scroll")
 	yield(get_tree(), "idle_frame")
 	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
 	vscroll = vscroll+50
 	get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
+# Affichage Smoothie
+	print("Affichage")
+	var visible = 0
+	for i in range(9):
+		label.set("visibility/self_opacity",visible)
+		visible = visible + 0.10
+		time_delay = 0.05
+		timer.set_wait_time(time_delay)
+		timer.start()
+		yield(get_node("Timer"), "timeout")
+
 	currentDial = dict._Dialogues[currentDial].next[1]
 	time_delay = dict._Dialogues[currentDial].time
 
@@ -384,7 +423,7 @@ func _on_Bouton2_pressed():
 	file.open("res://json/savelogs.json", file.WRITE)
 	file.store_string(data)
 	file.close()
-
+# Ecrit une ligne de Dialogue
 	print("Création du label")
 	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
 	var label = labelbase.duplicate()
@@ -394,11 +433,25 @@ func _on_Bouton2_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[2])
 	label.set_text(str(dict._Dialogues[currentDial].content[2]))
+
+# Auto Scroll
 	print("Scroll")
 	yield(get_tree(), "idle_frame")
 	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
 	vscroll = vscroll+50
 	get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
+# Affichage Smoothie
+	print("Affichage")
+	var visible = 0
+	for i in range(9):
+		label.set("visibility/self_opacity",visible)
+		visible = visible + 0.10
+		time_delay = 0.05
+		timer.set_wait_time(time_delay)
+		timer.start()
+		yield(get_node("Timer"), "timeout")
+
+
 	currentDial = dict._Dialogues[currentDial].next[2]
 	time_delay = dict._Dialogues[currentDial].time
 
@@ -432,7 +485,7 @@ func _on_Bouton3_pressed():
 	file.open("res://json/savelogs.json", file.WRITE)
 	file.store_string(data)
 	file.close()
-
+# Ecrit une ligne de Dialogue
 	print("Création du label")
 	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
 	var label = labelbase.duplicate()
@@ -442,11 +495,24 @@ func _on_Bouton3_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[3])
 	label.set_text(str(dict._Dialogues[currentDial].content[3]))
+
+# Auto Scroll
 	print("Scroll")
 	yield(get_tree(), "idle_frame")
 	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
 	vscroll = vscroll+50
 	get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
+# Affichage Smoothie
+	print("Affichage")
+	var visible = 0
+	for i in range(9):
+		label.set("visibility/self_opacity",visible)
+		visible = visible + 0.10
+		time_delay = 0.05
+		timer.set_wait_time(time_delay)
+		timer.start()
+		yield(get_node("Timer"), "timeout")
+
 	currentDial = dict._Dialogues[currentDial].next[3]
 	time_delay = dict._Dialogues[currentDial].time
 
