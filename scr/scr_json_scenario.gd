@@ -30,6 +30,7 @@ var dataRep = null
 var firstDial = null
 var temp = null
 var currentRep = null
+var vscroll = 50
 
 
 # Initialisation des bases du script
@@ -223,6 +224,11 @@ func start():
 			label.show()
 			print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[i])
 			label.set_text(str(dict._Dialogues[currentDial].content[i]))
+			print("Scroll")
+			yield(get_tree(), "idle_frame")
+			get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+			vscroll = vscroll+50
+			get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 			time_delay = 0.75
 			print("Temporisation : ",time_delay," seconde(s)")
 			timer.set_wait_time(time_delay)
@@ -292,6 +298,11 @@ func _on_Bouton0_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[0])
 	label.set_text(str(dict._Dialogues[currentDial].content[0]))
+	print("Scroll")
+	yield(get_tree(), "idle_frame")
+	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+	vscroll = vscroll+50
+	get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 	currentDial = dict._Dialogues[currentDial].next[0]
 	time_delay = dict._Dialogues[currentDial].time
 
@@ -335,6 +346,11 @@ func _on_Bouton1_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[1])
 	label.set_text(str(dict._Dialogues[currentDial].content[1]))
+	print("Scroll")
+	yield(get_tree(), "idle_frame")
+	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+	vscroll = vscroll+50
+	get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 	currentDial = dict._Dialogues[currentDial].next[1]
 	time_delay = dict._Dialogues[currentDial].time
 
@@ -378,6 +394,11 @@ func _on_Bouton2_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[2])
 	label.set_text(str(dict._Dialogues[currentDial].content[2]))
+	print("Scroll")
+	yield(get_tree(), "idle_frame")
+	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+	vscroll = vscroll+50
+	get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 	currentDial = dict._Dialogues[currentDial].next[2]
 	time_delay = dict._Dialogues[currentDial].time
 
@@ -421,6 +442,11 @@ func _on_Bouton3_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[3])
 	label.set_text(str(dict._Dialogues[currentDial].content[3]))
+	print("Scroll")
+	yield(get_tree(), "idle_frame")
+	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+	vscroll = vscroll+50
+	get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 	currentDial = dict._Dialogues[currentDial].next[3]
 	time_delay = dict._Dialogues[currentDial].time
 
