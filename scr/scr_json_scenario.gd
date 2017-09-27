@@ -220,6 +220,7 @@ func start():
 			print("Configuration du label")
 			label.set_name(str("label",dict._Dialogues[currentDial],i))
 			get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+			label.show()
 			print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[i])
 			label.set_text(str(dict._Dialogues[currentDial].content[i]))
 			time_delay = 0.75
@@ -288,6 +289,7 @@ func _on_Bouton0_pressed():
 	print("Configuration du label")
 	label.set_name(str("label",dict._Dialogues[currentDial],0))
 	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[0])
 	label.set_text(str(dict._Dialogues[currentDial].content[0]))
 	currentDial = dict._Dialogues[currentDial].next[0]
@@ -330,6 +332,7 @@ func _on_Bouton1_pressed():
 	print("Configuration du label")
 	label.set_name(str("label",dict._Dialogues[currentDial],1))
 	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[1])
 	label.set_text(str(dict._Dialogues[currentDial].content[1]))
 	currentDial = dict._Dialogues[currentDial].next[1]
@@ -372,6 +375,7 @@ func _on_Bouton2_pressed():
 	print("Configuration du label")
 	label.set_name(str("label",dict._Dialogues[currentDial],2))
 	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[2])
 	label.set_text(str(dict._Dialogues[currentDial].content[2]))
 	currentDial = dict._Dialogues[currentDial].next[2]
@@ -414,6 +418,7 @@ func _on_Bouton3_pressed():
 	print("Configuration du label")
 	label.set_name(str("label",dict._Dialogues[currentDial],3))
 	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[3])
 	label.set_text(str(dict._Dialogues[currentDial].content[3]))
 	currentDial = dict._Dialogues[currentDial].next[3]
