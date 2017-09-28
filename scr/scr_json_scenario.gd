@@ -31,6 +31,9 @@ var firstDial = null
 var temp = null
 var currentRep = null
 var vscroll = 50
+var currentHour = null
+var currentMinute = null
+var currentSecond = null
 
 
 # Initialisation des bases du script
@@ -144,10 +147,43 @@ func _ready():
 func start():
 	print("Début du processus d'interpretation du JSON")
 	status()
+	var currentHour = OS.get_time().hour
+	var currentMinute = OS.get_time().minute
+	var currentSecond = OS.get_time().second
+
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	if dict._Dialogues[currentDial].ref == 1 :
 		print("#### DIALOGUES REF : 1 ####")
+# Horodatage
+		print("Horodatage")
+		print("Création du label")
+		var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelTime")
+		var label = labelbase.duplicate()
+		print("Configuration du label")
+		label.set_name("LabelTime")
+		get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+		label.show()
+		print("Affiche l'heure")
+		label.set_text(str("[",currentHour,":",currentMinute,":",currentSecond,"]"))
+# Auto Scroll
+		print("Scroll")
+		yield(get_tree(), "idle_frame")
+		get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+		vscroll = vscroll+50
+		get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
+# Affichage Smoothie
+		print("Affichage")
+		var visible = 0
+		time_delay = 0.05
+		status()
+		for i in range(9):
+			label.set("visibility/self_opacity",visible)
+			visible = visible + 0.10
+			timer.set_wait_time(time_delay)
+			timer.start()
+			yield(get_node("Timer"), "timeout")
+
 #Création de la node LABEL
 		print("Traitement du Dialogue")
 		for i in range(dict._Dialogues[currentDial].content.size()):
