@@ -304,6 +304,69 @@ func start():
 
 
 
+											## MESSAGES SYSTEM ##
+# Les messages systèmes
+	if dict._Dialogues[currentDial].ref == 4 :
+		print("#### DIALOGUES REF : 4 ####")
+# Ecrit la ligne de Dialogue
+		print("Création du label")
+		var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelSys")
+		var label = labelbase.duplicate()
+		print("Configuration du label")
+		label.set_name(str("labelsys",0))
+		get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+		label.show()
+		print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[0])
+		label.set_text(str(dict._Dialogues[currentDial].content[0]))
+
+# Ajustement de la taille du label
+		var labelsize = label.get_line_count()
+		print(str("Nombre de ligne :",labelsize))
+		if labelsize == 1:
+			label.set_size(Vector2(1030,55))
+			label.set("rect/min_size",Vector2(1030,55))
+		elif labelsize == 2:
+			label.set_size(Vector2(1030,110))
+			label.set("rect/min_size",Vector2(1030,110))
+		print(str("Taille du label :",label.get_size()))
+
+# Auto Scroll
+		print("Scroll")
+		yield(get_tree(), "idle_frame")
+		get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+		vscroll = vscroll+50
+		get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
+# Affichage Smoothie
+		print("Affichage")
+		var visible = 0
+		for i in range(9):
+			label.set("visibility/self_opacity",visible)
+			visible = visible + 0.10
+			time_delay = 0.05
+			timer.set_wait_time(time_delay)
+			timer.start()
+			yield(get_node("Timer"), "timeout")
+
+			currentDial = dict._Dialogues[currentDial].next[0]
+			time_delay = dict._Dialogues[currentDial].time
+
+# Temporisation
+		time_delay = 0.75
+		print("Temporisation : ",time_delay," seconde(s)")
+		timer.set_wait_time(time_delay)
+		timer.start()
+		yield(get_node("Timer"), "timeout")
+		print("Fin du timer")
+		print("Fin de la ligne")
+
+# Clos la boucle et passe au next
+		timer.set_wait_time(time_delay)
+		print("Lancement du timer",time_delay," seconde(s)")
+		timer.start()
+		yield(get_node("Timer"), "timeout")
+		print("Fin du timer")
+		start()
+
 										## BOUTONS REPONSES ##
 # Gestion des boutons de choix multipes
 # BOUTON 0
@@ -596,9 +659,12 @@ func _on_TextEdit_text_entered( text ):
 		print("Fin du timer")
 		start()
 
+		## FONCTIONS DIVERSES ##
+# Toutes les fonctions utiles
 func status():
 # Status de l'interlocuteur
 	print("Status de l'interlocuteur")
+	var statusOld = get_node("vbox/Top/Etat").get_text()
 	# En ligne
 	if time_delay <= 30:
 		get_node("vbox/Top/Etat").clear()
@@ -615,4 +681,5 @@ func status():
 	elif time_delay > 300:
 		get_node("vbox/Top/Etat").clear()
 		get_node("vbox/Top/Etat").add_text("Hors Ligne")
+	var statusNew = get_node("vbox/Top/Etat").get_text()
 	return
