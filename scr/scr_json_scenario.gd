@@ -229,6 +229,18 @@ func start():
 			label.show()
 			print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[i])
 			label.set_text(str(dict._Dialogues[currentDial].content[i]))
+# Ajustement de la taille du label
+			var labelsize = label.get_line_count()
+			print(str("Nombre de ligne :",labelsize))
+			if labelsize == 1:
+				label.set_size(Vector2(1030,55))
+				label.set("rect/min_size",Vector2(1030,55))
+			elif labelsize == 2:
+				label.set_size(Vector2(1030,110))
+				label.set("rect/min_size",Vector2(1030,110))
+			print(str("Taille du label :",label.get_size()))
+
+
 # Auto Scroll
 			print("Scroll")
 			yield(get_tree(), "idle_frame")
@@ -317,6 +329,17 @@ func _on_Bouton0_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[0])
 	label.set_text(str(dict._Dialogues[currentDial].content[0]))
+
+# Ajustement de la taille du label
+	var labelsize = label.get_line_count()
+	print(str("Nombre de ligne :",labelsize))
+	if labelsize == 1:
+		label.set_size(Vector2(1030,55))
+		label.set("rect/min_size",Vector2(1030,55))
+	elif labelsize == 2:
+		label.set_size(Vector2(1030,110))
+		label.set("rect/min_size",Vector2(1030,110))
+	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
 	print("Scroll")
