@@ -601,14 +601,18 @@ func status():
 	print("Status de l'interlocuteur")
 	# En ligne
 	if time_delay <= 30:
-		get_node("vbox/Top/Etat").set_text("En ligne")
+		get_node("vbox/Top/Etat").clear()
+		get_node("vbox/Top/Etat").add_text("En ligne")
 	# Occupé
 	elif time_delay > 30 and time_delay <= 180:
-		get_node("vbox/Top/Etat").set_text("Occupé")
+		get_node("vbox/Top/Etat").clear()
+		get_node("vbox/Top/Etat").add_text("Occupé")
 	# Absent
 	elif time_delay > 180 and time_delay <= 300:
-		get_node("vbox/Top/Etat").set_text("Absent")
+		get_node("vbox/Top/Etat").clear()
+		get_node("vbox/Top/Etat").add_text("Absent")
 	# Hors Ligne
 	elif time_delay > 300:
-		get_node("vbox/Top/Etat").set_text("Hors Ligne")
+		get_node("vbox/Top/Etat").clear()
+		get_node("vbox/Top/Etat").add_text("Hors Ligne")
 	return

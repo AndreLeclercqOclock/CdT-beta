@@ -232,7 +232,7 @@
 		},
 		"dial405": {
 			"ref": 1,
-			"time": 300,
+			"time": 120,
 			"content": ["Oh, non..."],
 			"next": "rep405"
 		},
@@ -510,7 +510,7 @@
 			"time": 2,
 			"content": [
 				"Je surplombe la crypte depuis une mezzanine.",
-				"Le cénotaohe lui-même semble immense, mais j'ai du mal à juger.",
+				"Le cénotaphe lui-même semble immense, mais j'ai du mal à juger.",
 				"Le faisceau de ma lampe se perd dans les profondeurs.",
 				"Je vois le sol, en dessous, à peut-être...",
 				"oui, une dizaine de mètres.",
@@ -1323,7 +1323,7 @@
 			"time": 2,
 			"button": [
 				"Qu'est-ce qui vous arrive ?",
-				"Pourquoi me contactez-vous exactement ?"
+				"Pourquoi me contactez-vous ?"
 			],
 			"content": [
 				"Que vous est-il arrivé ? On dirait que vous avez besoin d'aide.",
