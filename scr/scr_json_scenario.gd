@@ -34,7 +34,8 @@ var vscroll = 50
 var currentHour = null
 var currentMinute = null
 var currentSecond = null
-
+var saveDial = []
+var saveRep = []
 
 # Initialisation des bases du script
 func _ready():
@@ -78,48 +79,91 @@ func _ready():
 	file.close()
 	print("Fermeture du JSON")
 # Chargement de la sauvegarde
+	print("Chargement de la sauvegarde")
 	if save._Save.dial.size() > 1 and stateSave == 1:
-		print("Chargement de la sauvegarde")
+		print("Récupération des dialogues")
+		for i in save._Save.dial:
+			saveDial.append(i)
+		print(saveDial)
+		print("Récupération des réponses")
+		for i in save._Save.rep:
+			saveRep.append(i)
+		print(saveRep)
+# Réécriture de la Sauvegarde
 		print("Réécriture de la sauvegarde")
-		print("Réécriture Dialogues dans le JSON")
-		for i in range(save._Save.dial.size()):
-			temp = str(save._Save.dial[i])
-			if dataDial != null:
-				dataDial = str(dataDial,'","',temp)
-			elif dataDial == null:
-				dataDial = str(temp)
-		print("Réécriture Réponses dans le JSON")
-		for i in range(save._Save.rep.size()):
-			temp = str(save._Save.rep[i])
-			if dataRep != null:
-				dataRep = str(dataRep,',',temp)
-			elif dataRep == null:
-				dataRep = str(temp)
-
-		print("Ecriture des textes")
 		for i in range(save._Save.dial.size()):
 			currentDial = save._Save.dial[i]
 			currentRep = save._Save.rep[i]
-			get_node("vbox/Mid/Patch/Dialogues").set_scroll_follow(true)
 			if dict._Dialogues[currentDial].ref == 1:
-				print("Ecriture du Dialogue")
-				get_node("vbox/Mid/Dialogues").push_align(0)
+		# Ecrit la ligne de dialogue
 				for y in range(dict._Dialogues[currentDial].content.size()):
-					get_node("vbox/Mid/Dialogues").newline()
-					get_node("vbox/Mid/Dialogues").add_text(str(dict._Dialogues[currentDial].content[y]))
-				currentDial = dict._Dialogues[currentDial].next
+					print("Création du label")
+					var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelDial")
+					var label = labelbase.duplicate()
+					print("Configuration du label")
+					label.set_name(str("label",y))
+					get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+					label.show()
+					print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[y])
+					label.set_text(str(dict._Dialogues[currentDial].content[y]))
+				# Ajustement de la taille du label
+					var labelsize = label.get_line_count()
+					if labelsize == 1:
+						label.set_size(Vector2(1030,55))
+						label.set("rect/min_size",Vector2(1030,55))
+					elif labelsize == 2:
+						label.set_size(Vector2(1030,110))
+						label.set("rect/min_size",Vector2(1030,110))
+				# Auto Scroll
+					yield(get_tree(), "idle_frame")
+					get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+					vscroll = vscroll+50
+					get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
+					label.set("visibility/self_opacity",1)
+		# Ecrit la ligne de réponse
 			elif dict._Dialogues[currentDial].ref == 2:
-				print("Ecriture de la réponse")
-				get_node("vbox/Mid/Dialogues").push_align(2)
-				get_node("vbox/Mid/Dialogues").newline()
-				get_node("vbox/Mid/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[currentRep]))
+			# Ecrit la ligne de Dialogue
+				print("Création du label")
+				var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
+				var label = labelbase.duplicate()
+				print("Configuration du label")
+				label.set_name(str("label",dict._Dialogues[currentDial],currentRep))
+				get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+				label.show()
+				print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[currentRep])
+				label.set_text(str(dict._Dialogues[currentDial].content[currentRep]))
+			# Ajustement de la taille du label
+				var labelsize = label.get_line_count()
+				print(str("Nombre de ligne :",labelsize))
+				if labelsize == 1:
+					label.set_size(Vector2(1030,55))
+					label.set("rect/min_size",Vector2(1030,55))
+				elif labelsize == 2:
+					label.set_size(Vector2(1030,110))
+					label.set("rect/min_size",Vector2(1030,110))
+				print(str("Taille du label :",label.get_size()))
+			# Auto Scroll
+				print("Scroll")
+				yield(get_tree(), "idle_frame")
+				get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+				vscroll = vscroll+50
+				get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
+				label.set("visibility/self_opacity",1)
 		print("Fin du chargement")
+		currentDial = dict._Dialogues[currentDial].next
+
+		print("Réécriture Dialogues dans le JSON")
+
 	else:
 # AUTO SAVE
 		print("Auto-Sauvegarde")
 		dataDial = currentDial
 		dataRep = 9
-		data = {"_Save" : {"dial" : [dataDial],"rep" : [dataRep]}}
+		saveDial.push_back(dataDial)
+		saveRep.push_back(dataRep)
+		print(saveDial)
+		print(saveRep)
+		data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 		var file = File.new()
 		file.open("res://json/savelogs.json", File.WRITE)
 		file.store_line(data.to_json())
