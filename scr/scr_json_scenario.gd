@@ -164,8 +164,9 @@ func _ready():
 		print(saveDial)
 		print(saveRep)
 		data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
+		var saveFile = "res://json/savelogs.json"
 		var file = File.new()
-		file.open("res://json/savelogs.json", File.WRITE)
+		file.open(saveFile, File.WRITE)
 		file.store_line(data.to_json())
 		file.close()
 
