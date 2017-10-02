@@ -455,13 +455,18 @@ func _on_Bouton0_pressed():
 	print("Bouton n°0 activé")
 # AUTO SAVE
 	print("Auto-Sauvegarde")
-	dataDial = str(dataDial,'\"',',','\"',currentDial)
-	dataRep = str(dataRep,',',0)
-	data = {"_Save" : {"dial" : [dataDial,currentDial],"rep" : [dataRep]}}
+	dataDial = currentDial
+	dataRep = 0
+	saveDial.push_back(dataDial)
+	saveRep.push_back(dataRep)
+	print(saveDial)
+	print(saveRep)
+	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
 	file.open("res://json/savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
+
 # Ecrit la ligne de Dialogue
 	print("Création du label")
 	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
@@ -506,9 +511,13 @@ func _on_Bouton0_pressed():
 
 # AUTO SAVE
 	print("Auto-Sauvegarde")
-	dataDial = str(dataDial,'"',',','"',currentDial)
-	dataRep = str(dataRep,',',9)
-	data = {"_Save" : {"dial" : [dataDial,currentDial],"rep" : [dataRep]}}
+	dataDial = currentDial
+	dataRep = 9
+	saveDial.push_back(dataDial)
+	saveRep.push_back(dataRep)
+	print(saveDial)
+	print(saveRep)
+	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
 	file.open("res://json/savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
@@ -527,13 +536,18 @@ func _on_Bouton1_pressed():
 	print("Bouton n°1 activé")
 # AUTO SAVE
 	print("Auto-Sauvegarde")
-	dataDial = str(dataDial,'","',currentDial)
-	dataRep = str(dataRep,',',1)
-	data = {"_Save" : {"dial" : [dataDial],"rep" : [dataRep]}}
+	dataDial = currentDial
+	dataRep = 1
+	saveDial.push_back(dataDial)
+	saveRep.push_back(dataRep)
+	print(saveDial)
+	print(saveRep)
+	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
 	file.open("res://json/savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
+
 # Ecrit la ligne de Dialogue
 	print("Création du label")
 	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
@@ -567,9 +581,13 @@ func _on_Bouton1_pressed():
 
 # AUTO SAVE
 	print("Auto-Sauvegarde")
-	dataDial = str(dataDial,'","',currentDial)
-	dataRep = str(dataRep,',',9)
-	data = {"_Save" : {"dial" : [dataDial],"rep" : [dataRep]}}
+	dataDial = currentDial
+	dataRep = 9
+	saveDial.push_back(dataDial)
+	saveRep.push_back(dataRep)
+	print(saveDial)
+	print(saveRep)
+	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
 	file.open("res://json/savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
@@ -586,15 +604,21 @@ func _on_Bouton1_pressed():
 func _on_Bouton2_pressed():
 	clean()
 	print("Bouton n°2 activé")
+
 # AUTO SAVE
 	print("Auto-Sauvegarde")
-	dataDial = str(dataDial,'","',currentDial)
-	dataRep = str(dataRep,',',2)
-	data = {"_Save" : {"dial" : [dataDial],"rep" : [dataRep]}}
+	dataDial = currentDial
+	dataRep = 2
+	saveDial.push_back(dataDial)
+	saveRep.push_back(dataRep)
+	print(saveDial)
+	print(saveRep)
+	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
 	file.open("res://json/savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
+
 # Ecrit une ligne de Dialogue
 	print("Création du label")
 	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
@@ -629,9 +653,13 @@ func _on_Bouton2_pressed():
 
 # AUTO SAVE
 	print("Auto-Sauvegarde")
-	dataDial = str(dataDial,'","',currentDial)
-	dataRep = str(dataRep,',',9)
-	data = {"_Save" : {"dial" : [dataDial],"rep" : [dataRep]}}
+	dataDial = currentDial
+	dataRep = 9
+	saveDial.push_back(dataDial)
+	saveRep.push_back(dataRep)
+	print(saveDial)
+	print(saveRep)
+	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
 	file.open("res://json/savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
@@ -648,11 +676,16 @@ func _on_Bouton2_pressed():
 func _on_Bouton3_pressed():
 	clean()
 	print("Bouton n°3 activé")
+
 # AUTO SAVE
 	print("Auto-Sauvegarde")
-	dataDial = str(dataDial,'","',currentDial)
-	dataRep = str(dataRep,',',3)
-	data = {"_Save" : {"dial" : [dataDial],"rep" : [dataRep]}}
+	dataDial = currentDial
+	dataRep = 3
+	saveDial.push_back(dataDial)
+	saveRep.push_back(dataRep)
+	print(saveDial)
+	print(saveRep)
+	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
 	file.open("res://json/savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
@@ -690,9 +723,13 @@ func _on_Bouton3_pressed():
 
 # AUTO SAVE
 	print("Auto-Sauvegarde")
-	dataDial = str(dataDial,'","',currentDial)
-	dataRep = str(dataRep,',',9)
-	data = {"_Save" : {"dial" : [dataDial],"rep" : [dataRep]}}
+	dataDial = currentDial
+	dataRep = 9
+	saveDial.push_back(dataDial)
+	saveRep.push_back(dataRep)
+	print(saveDial)
+	print(saveRep)
+	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
 	file.open("res://json/savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
