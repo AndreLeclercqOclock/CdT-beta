@@ -85,7 +85,7 @@ func _ready():
 		print("Chargement de la sauvegarde")
 		print("Ouverture du JSON")
 		var file = File.new()
-		file.open_encrypted_with_pass("user://savelogs.json", File.READ, OS.get_unique_ID())
+		file.open_encrypted_with_pass("user://savelogs.json", File.READ, "reg65er9g84zertg1zs9ert8g4")
 		save.parse_json(file.get_line())
 		file.close()
 		print("Fermeture du JSON")
@@ -197,7 +197,7 @@ func _ready():
 		data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 		var saveFile = "user://savelogs.json"
 		var file = File.new()
-		file.open_encrypted_with_pass(saveFile, File.WRITE, OS.get_unique_ID())
+		file.open_encrypted_with_pass(saveFile, File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 		file.store_line(data.to_json())
 		file.close()
 
@@ -499,7 +499,7 @@ func _on_Bouton0_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.store_line(data.to_json())
 	file.close()
 
@@ -561,7 +561,7 @@ func _on_Bouton0_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.store_line(data.to_json())
 	file.close()
 
@@ -589,7 +589,7 @@ func _on_Bouton1_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.store_line(data.to_json())
 	file.close()
 
@@ -603,6 +603,17 @@ func _on_Bouton1_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[1])
 	label.set_text(str(dict._Dialogues[currentDial].content[1]))
+
+# Ajustement de la taille du label
+	var labelsize = label.get_line_count()
+	print(str("Nombre de ligne :",labelsize))
+	if labelsize == 1:
+		label.set_size(Vector2(1030,55))
+		label.set("rect/min_size",Vector2(1030,55))
+	elif labelsize == 2:
+		label.set_size(Vector2(1030,110))
+		label.set("rect/min_size",Vector2(1030,110))
+	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
 	print("Scroll")
@@ -640,7 +651,7 @@ func _on_Bouton1_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.store_line(data.to_json())
 	file.close()
 
@@ -669,7 +680,7 @@ func _on_Bouton2_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.store_line(data.to_json())
 	file.close()
 
@@ -683,6 +694,17 @@ func _on_Bouton2_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[2])
 	label.set_text(str(dict._Dialogues[currentDial].content[2]))
+
+# Ajustement de la taille du label
+	var labelsize = label.get_line_count()
+	print(str("Nombre de ligne :",labelsize))
+	if labelsize == 1:
+		label.set_size(Vector2(1030,55))
+		label.set("rect/min_size",Vector2(1030,55))
+	elif labelsize == 2:
+		label.set_size(Vector2(1030,110))
+		label.set("rect/min_size",Vector2(1030,110))
+	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
 	print("Scroll")
@@ -721,7 +743,7 @@ func _on_Bouton2_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.store_line(data.to_json())
 	file.close()
 
@@ -750,9 +772,10 @@ func _on_Bouton3_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.store_line(data.to_json())
 	file.close()
+
 # Ecrit une ligne de Dialogue
 	print("Création du label")
 	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
@@ -763,6 +786,17 @@ func _on_Bouton3_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[3])
 	label.set_text(str(dict._Dialogues[currentDial].content[3]))
+	
+# Ajustement de la taille du label
+	var labelsize = label.get_line_count()
+	print(str("Nombre de ligne :",labelsize))
+	if labelsize == 1:
+		label.set_size(Vector2(1030,55))
+		label.set("rect/min_size",Vector2(1030,55))
+	elif labelsize == 2:
+		label.set_size(Vector2(1030,110))
+		label.set("rect/min_size",Vector2(1030,110))
+	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
 	print("Scroll")
@@ -800,7 +834,7 @@ func _on_Bouton3_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.store_line(data.to_json())
 	file.close()
 
