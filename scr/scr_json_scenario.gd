@@ -2,7 +2,7 @@
 # Script par LEIFER KOPF // leifer.kopf@gmail.com
 # Scénario par VINCENT CORLAIX  // vcorlaix@nootilus.com
 # Disclaimer : L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).
-# version : 0.128
+# version : 0.253
 
 extends Control
 
@@ -74,7 +74,6 @@ func _ready():
 	print("Check du SaveLog")
 	var file2check = File.new()
 	var fileExists = file2check.file_exists("user://savelogs.json")
-	print(fileExists)
 # Chargement de la sauvegarde
 	print("Chargement de la sauvegarde")
 	if fileExists == true and stateSave == true:
