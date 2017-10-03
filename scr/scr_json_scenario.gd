@@ -85,7 +85,7 @@ func _ready():
 		print("Chargement de la sauvegarde")
 		print("Ouverture du JSON")
 		var file = File.new()
-		file.open("user://savelogs.json", File.READ)
+		file.open_encrypted_with_pass("user://savelogs.json", File.READ, OS.get_unique_ID())
 		save.parse_json(file.get_line())
 		file.close()
 		print("Fermeture du JSON")
@@ -197,7 +197,7 @@ func _ready():
 		data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 		var saveFile = "user://savelogs.json"
 		var file = File.new()
-		file.open(saveFile, File.WRITE)
+		file.open_encrypted_with_pass(saveFile, File.WRITE, OS.get_unique_ID())
 		file.store_line(data.to_json())
 		file.close()
 
@@ -499,7 +499,7 @@ func _on_Bouton0_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open("user://savelogs.json", File.WRITE)
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
 	file.store_line(data.to_json())
 	file.close()
 
@@ -561,7 +561,7 @@ func _on_Bouton0_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open("user://savelogs.json", File.WRITE)
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
 	file.store_line(data.to_json())
 	file.close()
 
@@ -589,7 +589,7 @@ func _on_Bouton1_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open("user://savelogs.json", File.WRITE)
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
 	file.store_line(data.to_json())
 	file.close()
 
@@ -640,7 +640,7 @@ func _on_Bouton1_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open("user://savelogs.json", File.WRITE)
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
 	file.store_line(data.to_json())
 	file.close()
 
@@ -669,7 +669,7 @@ func _on_Bouton2_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open("user://savelogs.json", File.WRITE)
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
 	file.store_line(data.to_json())
 	file.close()
 
@@ -721,7 +721,7 @@ func _on_Bouton2_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open("user://savelogs.json", File.WRITE)
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
 	file.store_line(data.to_json())
 	file.close()
 
@@ -750,7 +750,7 @@ func _on_Bouton3_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open("user://savelogs.json", File.WRITE)
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
 	file.store_line(data.to_json())
 	file.close()
 # Ecrit une ligne de Dialogue
@@ -800,7 +800,7 @@ func _on_Bouton3_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open("user://savelogs.json", File.WRITE)
+	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, OS.get_unique_ID())
 	file.store_line(data.to_json())
 	file.close()
 
