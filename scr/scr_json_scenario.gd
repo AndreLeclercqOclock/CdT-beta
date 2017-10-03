@@ -869,3 +869,8 @@ func status():
 		get_node("vbox/Top/Etat").add_text("Hors Ligne")
 	var statusNew = get_node("vbox/Top/Etat").get_text()
 	return
+
+# Reset de la sauvegarde
+func _on_resetSave_pressed():
+	Directory.new().remove("user://savelogs.json")
+	get_tree().reload_current_scene()
