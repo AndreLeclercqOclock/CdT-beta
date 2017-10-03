@@ -70,17 +70,23 @@ func _ready():
 	file.close()
 	print("Fermeture du JSON")
 
-# Récupération de la sauvegarde
-	print("Chargement de la sauvegarde")
-	print("Ouverture du JSON")
-	var file = File.new()
-	file.open("res://json/savelogs.json", File.READ)
-	save.parse_json(file.get_line())
-	file.close()
-	print("Fermeture du JSON")
+#	Vérification de l'existence du fichier de sauvegarde
+	print("Check du SaveLog")
+	var file2check = File.new()
+	var fileExists = file2check.file_exists("user://savelogs.json")
+	print(fileExists)
 # Chargement de la sauvegarde
 	print("Chargement de la sauvegarde")
-	if save._Save.dial.size() > 1 and stateSave == 1:
+	if fileExists == true and stateSave == true:
+# Récupération de la sauvegarde
+		print("Chargement de la sauvegarde")
+		print("Ouverture du JSON")
+		var file = File.new()
+		file.open("user://savelogs.json", File.READ)
+		save.parse_json(file.get_line())
+		file.close()
+		print("Fermeture du JSON")
+
 		print("Récupération des dialogues")
 		for i in save._Save.dial:
 			saveDial.append(i)
@@ -156,7 +162,7 @@ func _ready():
 
 	else:
 # AUTO SAVE
-		print("Auto-Sauvegarde")
+		print("Création du fichier de sauvegarde")
 		dataDial = currentDial
 		dataRep = 9
 		saveDial.push_back(dataDial)
@@ -164,7 +170,7 @@ func _ready():
 		print(saveDial)
 		print(saveRep)
 		data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
-		var saveFile = "res://json/savelogs.json"
+		var saveFile = "user://savelogs.json"
 		var file = File.new()
 		file.open(saveFile, File.WRITE)
 		file.store_line(data.to_json())
@@ -464,7 +470,7 @@ func _on_Bouton0_pressed():
 	print(saveRep)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
-	file.open("res://json/savelogs.json", File.WRITE)
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -520,7 +526,7 @@ func _on_Bouton0_pressed():
 	print(saveRep)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
-	file.open("res://json/savelogs.json", File.WRITE)
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -545,7 +551,7 @@ func _on_Bouton1_pressed():
 	print(saveRep)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
-	file.open("res://json/savelogs.json", File.WRITE)
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -590,7 +596,7 @@ func _on_Bouton1_pressed():
 	print(saveRep)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
-	file.open("res://json/savelogs.json", File.WRITE)
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -616,7 +622,7 @@ func _on_Bouton2_pressed():
 	print(saveRep)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
-	file.open("res://json/savelogs.json", File.WRITE)
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -662,7 +668,7 @@ func _on_Bouton2_pressed():
 	print(saveRep)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
-	file.open("res://json/savelogs.json", File.WRITE)
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -688,7 +694,7 @@ func _on_Bouton3_pressed():
 	print(saveRep)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
-	file.open("res://json/savelogs.json", File.WRITE)
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 # Ecrit une ligne de Dialogue
@@ -732,7 +738,7 @@ func _on_Bouton3_pressed():
 	print(saveRep)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep}}
 	var file = File.new()
-	file.open("res://json/savelogs.json", File.WRITE)
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
