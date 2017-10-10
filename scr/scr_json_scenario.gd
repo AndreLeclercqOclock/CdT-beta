@@ -40,6 +40,11 @@ var saveDial = []
 var saveRep = []
 var saveTime = []
 var labelH = null
+var hourIG = "0"
+var minuteIG = "0"
+var secondIG = "0"
+var saveNextTime = 0
+var unixTime = OS.get_unix_time()
 
 # Initialisation des bases du script
 func _ready():
@@ -120,6 +125,7 @@ func _ready():
 				label.set_text(str(currentTime))
 				label.set("visibility/self_opacity",1)
 				var labelH = label.get_text()
+				vscroll = get_node("vbox/Mid/DialBox").get_size().height
 			if dict._Dialogues[currentDial].ref == 1:
 		# Ecrit la ligne de dialogue
 				for y in range(dict._Dialogues[currentDial].content.size()):
@@ -217,6 +223,40 @@ func _ready():
 # Lancement du script
 	print("Lancement du script")
 	start()
+
+# Affichage de l'heure
+	set_process(true)
+
+func _process(delta):
+	# Récupération de l'heure du système
+	var timeSys = OS.get_time()
+	var hourSys = timeSys.hour
+	var minuteSys = timeSys.minute
+	var secondSys = timeSys.second
+	unixTime = OS.get_unix_time()
+
+	# Ajustement de l'heure
+	if hourSys < 10:
+		hourIG = str("0",hourSys)
+	else:
+		hourIG = hourSys
+	if minuteSys < 10:
+		minuteIG = str("0",minuteSys)
+	else:
+		minuteIG = minuteSys
+	if secondSys < 10:
+		secondIG = str("0",secondSys)
+	else:
+		secondIG = secondSys
+
+	# Affichage de l'heure
+	get_node("vbox/Top/clock").set_text(str(hourIG,":",minuteIG,":",secondIG))
+
+	if saveNextTime != 0 and unixTime >= int(saveNextTime):
+		print("Fin du timer")
+		saveNextTime = 0
+		start()
+
 
 ############################### DEBUT DU SCRIPT ###############################
 # Fonction ou reboucle le script quand il repart du début
@@ -384,13 +424,10 @@ func start():
 		print("Fin du dialogue")
 		currentDial = dict._Dialogues[currentDial].next
 		time_delay = dict._Dialogues[currentDial].time
-		timer.set_wait_time(time_delay)
-		status()
+		unixTime = OS.get_unix_time()
+		saveNextTime = unixTime + int(time_delay)
 		print("Lancement du timer",time_delay," seconde(s)")
-		timer.start()
-		yield(get_node("Timer"), "timeout")
-		print("Fin du timer")
-		start()
+		status()
 
 
 									## REPONSES ##
@@ -565,12 +602,9 @@ func _on_Bouton0_pressed():
 	file.store_line(data.to_json())
 	file.close()
 
-	timer.set_wait_time(time_delay)
+	unixTime = OS.get_unix_time()
+	saveNextTime = unixTime + int(time_delay)
 	print("Lancement du timer",time_delay," seconde(s)")
-	timer.start()
-	yield(get_node("Timer"), "timeout")
-	print("Fin du timer")
-	start()
 
 # BOUTON 1
 func _on_Bouton1_pressed():
@@ -655,12 +689,9 @@ func _on_Bouton1_pressed():
 	file.store_line(data.to_json())
 	file.close()
 
-	timer.set_wait_time(time_delay)
+	unixTime = OS.get_unix_time()
+	saveNextTime = unixTime + int(time_delay)
 	print("Lancement du timer",time_delay," seconde(s)")
-	timer.start()
-	yield(get_node("Timer"), "timeout")
-	print("Fin du timer")
-	start()
 
 # BOUTON 2
 func _on_Bouton2_pressed():
@@ -747,12 +778,9 @@ func _on_Bouton2_pressed():
 	file.store_line(data.to_json())
 	file.close()
 
-	timer.set_wait_time(time_delay)
+	unixTime = OS.get_unix_time()
+	saveNextTime = unixTime + int(time_delay)
 	print("Lancement du timer",time_delay," seconde(s)")
-	timer.start()
-	yield(get_node("Timer"), "timeout")
-	print("Fin du timer")
-	start()
 
 # BOUTON 3
 func _on_Bouton3_pressed():
@@ -786,7 +814,7 @@ func _on_Bouton3_pressed():
 	label.show()
 	print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[3])
 	label.set_text(str(dict._Dialogues[currentDial].content[3]))
-	
+
 # Ajustement de la taille du label
 	var labelsize = label.get_line_count()
 	print(str("Nombre de ligne :",labelsize))
@@ -838,12 +866,9 @@ func _on_Bouton3_pressed():
 	file.store_line(data.to_json())
 	file.close()
 
-	timer.set_wait_time(time_delay)
+	unixTime = OS.get_unix_time()
+	saveNextTime = unixTime + int(time_delay)
 	print("Lancement du timer",time_delay," seconde(s)")
-	timer.start()
-	yield(get_node("Timer"), "timeout")
-	print("Fin du timer")
-	start()
 
 # Nettoyage des boutons inutiles
 func clean():
