@@ -90,7 +90,8 @@ func _ready():
 		print("Chargement de la sauvegarde")
 		print("Ouverture du JSON")
 		var file = File.new()
-		file.open_encrypted_with_pass("user://savelogs.json", File.READ, "reg65er9g84zertg1zs9ert8g4")
+		#file.open_encrypted_with_pass("user://savelogs.json", File.READ, "reg65er9g84zertg1zs9ert8g4")
+		file.open("user://savelogs.json", File.READ)
 		save.parse_json(file.get_line())
 		file.close()
 		print("Fermeture du JSON")
@@ -203,7 +204,8 @@ func _ready():
 		data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 		var saveFile = "user://savelogs.json"
 		var file = File.new()
-		file.open_encrypted_with_pass(saveFile, File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+		#file.open_encrypted_with_pass(saveFile, File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+		file.open(saveFile, File.WRITE)
 		file.store_line(data.to_json())
 		file.close()
 
@@ -536,7 +538,8 @@ func _on_Bouton0_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -598,7 +601,8 @@ func _on_Bouton0_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -623,7 +627,8 @@ func _on_Bouton1_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -685,7 +690,8 @@ func _on_Bouton1_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -711,7 +717,8 @@ func _on_Bouton2_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -774,7 +781,8 @@ func _on_Bouton2_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -800,7 +808,8 @@ func _on_Bouton3_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
@@ -862,7 +871,8 @@ func _on_Bouton3_pressed():
 	print(saveTime)
 	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
 	var file = File.new()
-	file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 
