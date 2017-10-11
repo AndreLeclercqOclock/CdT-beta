@@ -526,22 +526,10 @@ func _on_Bouton0_pressed():
 	clean()
 	print("Bouton n°0 activé")
 # AUTO SAVE
-	print("Auto-Sauvegarde")
 	dataDial = currentDial
 	dataRep = 0
 	dataTime = null
-	saveDial.push_back(dataDial)
-	saveRep.push_back(dataRep)
-	saveTime.push_back(dataTime)
-	print(saveDial)
-	print(saveRep)
-	print(saveTime)
-	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
-	var file = File.new()
-	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-	file.open("user://savelogs.json", File.WRITE)
-	file.store_line(data.to_json())
-	file.close()
+	system_save()
 
 # Ecrit la ligne de Dialogue
 	print("Création du label")
@@ -584,6 +572,7 @@ func _on_Bouton0_pressed():
 
 	currentDial = dict._Dialogues[currentDial].next[0]
 	time_delay = dict._Dialogues[currentDial].time
+	saveNextTime = OS.get_unix_time() + int(time_delay)
 
 # AUTO SAVE
 	print("Auto-Sauvegarde")
@@ -593,18 +582,7 @@ func _on_Bouton0_pressed():
 	dataTime = str(currentHour,":",currentMinute,":",currentSecond)
 	dataDial = currentDial
 	dataRep = 9
-	saveDial.push_back(dataDial)
-	saveRep.push_back(dataRep)
-	saveTime.push_back(dataTime)
-	print(saveDial)
-	print(saveRep)
-	print(saveTime)
-	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
-	var file = File.new()
-	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-	file.open("user://savelogs.json", File.WRITE)
-	file.store_line(data.to_json())
-	file.close()
+	system_save()
 
 	unixTime = OS.get_unix_time()
 	saveNextTime = unixTime + int(time_delay)
@@ -619,18 +597,7 @@ func _on_Bouton1_pressed():
 	dataDial = currentDial
 	dataRep = 1
 	dataTime = null
-	saveDial.push_back(dataDial)
-	saveRep.push_back(dataRep)
-	saveTime.push_back(dataTime)
-	print(saveDial)
-	print(saveRep)
-	print(saveTime)
-	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
-	var file = File.new()
-	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-	file.open("user://savelogs.json", File.WRITE)
-	file.store_line(data.to_json())
-	file.close()
+	system_save()
 
 # Ecrit la ligne de Dialogue
 	print("Création du label")
@@ -682,18 +649,7 @@ func _on_Bouton1_pressed():
 	dataTime = str(currentHour,":",currentMinute,":",currentSecond)
 	dataDial = currentDial
 	dataRep = 9
-	saveDial.push_back(dataDial)
-	saveRep.push_back(dataRep)
-	saveTime.push_back(dataTime)
-	print(saveDial)
-	print(saveRep)
-	print(saveTime)
-	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
-	var file = File.new()
-	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-	file.open("user://savelogs.json", File.WRITE)
-	file.store_line(data.to_json())
-	file.close()
+	system_save()
 
 	unixTime = OS.get_unix_time()
 	saveNextTime = unixTime + int(time_delay)
@@ -709,18 +665,7 @@ func _on_Bouton2_pressed():
 	dataDial = currentDial
 	dataRep = 2
 	dataTime = null
-	saveDial.push_back(dataDial)
-	saveRep.push_back(dataRep)
-	saveTime.push_back(dataTime)
-	print(saveDial)
-	print(saveRep)
-	print(saveTime)
-	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
-	var file = File.new()
-	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-	file.open("user://savelogs.json", File.WRITE)
-	file.store_line(data.to_json())
-	file.close()
+	system_save()
 
 # Ecrit une ligne de Dialogue
 	print("Création du label")
@@ -773,18 +718,7 @@ func _on_Bouton2_pressed():
 	dataTime = str(currentHour,":",currentMinute,":",currentSecond)
 	dataDial = currentDial
 	dataRep = 9
-	saveDial.push_back(dataDial)
-	saveRep.push_back(dataRep)
-	saveTime.push_back(dataTime)
-	print(saveDial)
-	print(saveRep)
-	print(saveTime)
-	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
-	var file = File.new()
-	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-	file.open("user://savelogs.json", File.WRITE)
-	file.store_line(data.to_json())
-	file.close()
+	system_save()
 
 	unixTime = OS.get_unix_time()
 	saveNextTime = unixTime + int(time_delay)
@@ -800,18 +734,7 @@ func _on_Bouton3_pressed():
 	dataDial = currentDial
 	dataRep = 3
 	dataTime = null
-	saveDial.push_back(dataDial)
-	saveRep.push_back(dataRep)
-	saveTime.push_back(dataTime)
-	print(saveDial)
-	print(saveRep)
-	print(saveTime)
-	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
-	var file = File.new()
-	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-	file.open("user://savelogs.json", File.WRITE)
-	file.store_line(data.to_json())
-	file.close()
+	system_save()
 
 # Ecrit une ligne de Dialogue
 	print("Création du label")
@@ -863,18 +786,7 @@ func _on_Bouton3_pressed():
 	dataTime = str(currentHour,":",currentMinute,":",currentSecond)
 	dataDial = currentDial
 	dataRep = 9
-	saveDial.push_back(dataDial)
-	saveRep.push_back(dataRep)
-	saveTime.push_back(dataTime)
-	print(saveDial)
-	print(saveRep)
-	print(saveTime)
-	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
-	var file = File.new()
-	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-	file.open("user://savelogs.json", File.WRITE)
-	file.store_line(data.to_json())
-	file.close()
+	system_save()
 
 	unixTime = OS.get_unix_time()
 	saveNextTime = unixTime + int(time_delay)
@@ -943,3 +855,20 @@ func status():
 func _on_resetSave_pressed():
 	Directory.new().remove("user://savelogs.json")
 	get_tree().reload_current_scene()
+
+# SYSTEME DE SAUVEGARDE
+func system_save():
+	print("Auto-Sauvegarde")
+	saveDial.push_back(dataDial)
+	saveRep.push_back(dataRep)
+	saveTime.push_back(dataTime)
+	print(saveDial)
+	print(saveRep)
+	print(saveTime)
+	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime, "nexttime" : saveNextTime}}
+	var file = File.new()
+	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	file.open("user://savelogs.json", File.WRITE)
+	file.store_line(data.to_json())
+	file.close()
+	return
