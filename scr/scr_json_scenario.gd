@@ -111,8 +111,6 @@ func _ready():
 # Réécriture de la Sauvegarde
 		print("Réécriture de la sauvegarde")
 		vscroll = get_node("vbox/Mid/DialBox").get_size().height
-		vscroll = vscroll + vscroll
-		print(str("########################### ",vscroll," ###########################"))
 		for i in range(save._Save.dial.size()):
 			currentDial = save._Save.dial[i]
 			currentRep = save._Save.rep[i]
@@ -152,7 +150,7 @@ func _ready():
 				# Auto Scroll
 					yield(get_tree(), "idle_frame")
 					get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-					vscroll = vscroll+50
+					vscroll = vscroll+label.get_size().height+20
 					get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 					label.set("visibility/self_opacity",1)
 		# Ecrit la ligne de réponse
@@ -181,7 +179,7 @@ func _ready():
 				print("Scroll")
 				yield(get_tree(), "idle_frame")
 				get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-				vscroll = vscroll+50
+				vscroll = vscroll+label.get_size().height+20
 				get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 				label.set("visibility/self_opacity",1)
 		print("Fin du chargement")
@@ -279,7 +277,7 @@ func start():
 		print("Scroll")
 		yield(get_tree(), "idle_frame")
 		get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-		vscroll = vscroll+50
+		vscroll = vscroll+label.get_size().height+20
 		get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 # Affichage Smoothie
 		print("Affichage")
@@ -315,7 +313,7 @@ func start():
 			print("Scroll")
 			yield(get_tree(), "idle_frame")
 			get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-			vscroll = vscroll+50
+			vscroll = vscroll+label.get_size().height+20
 			get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 # Affichage Smoothie
 			print("Affichage")
@@ -390,7 +388,7 @@ func start():
 			print("Scroll")
 			yield(get_tree(), "idle_frame")
 			get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-			vscroll = vscroll+50
+			vscroll = vscroll+label.get_size().height+20
 			get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 # Affichage Smoothie
 			print("Affichage")
@@ -476,7 +474,7 @@ func start():
 		print("Scroll")
 		yield(get_tree(), "idle_frame")
 		get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-		vscroll = vscroll+50
+		vscroll = vscroll+label.get_size().height+20
 		get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 # Affichage Smoothie
 		print("Affichage")
@@ -547,7 +545,7 @@ func _on_Bouton0_pressed():
 	print("Scroll")
 	yield(get_tree(), "idle_frame")
 	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-	vscroll = vscroll+50
+	vscroll = vscroll+label.get_size().height+20
 	get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 # Affichage Smoothie
 	print("Affichage")
@@ -602,7 +600,7 @@ func _on_Bouton1_pressed():
 	print("Scroll")
 	yield(get_tree(), "idle_frame")
 	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-	vscroll = vscroll+50
+	vscroll = vscroll+label.get_size().height+20
 	get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 # Affichage Smoothie
 	print("Affichage")
@@ -658,7 +656,7 @@ func _on_Bouton2_pressed():
 	print("Scroll")
 	yield(get_tree(), "idle_frame")
 	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-	vscroll = vscroll+50
+	vscroll = vscroll+label.get_size().height+20
 	get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 # Affichage Smoothie
 	print("Affichage")
@@ -715,7 +713,7 @@ func _on_Bouton3_pressed():
 	print("Scroll")
 	yield(get_tree(), "idle_frame")
 	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-	vscroll = vscroll+50
+	vscroll = vscroll+label.get_size().height+20
 	get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 # Affichage Smoothie
 	print("Affichage")
