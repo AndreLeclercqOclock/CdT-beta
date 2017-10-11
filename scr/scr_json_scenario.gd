@@ -46,6 +46,7 @@ var secondIG = "0"
 var saveNextTime = 0
 var unixTime = OS.get_unix_time()
 var saveUnixTime = 0
+var save_size = null
 
 # Initialisation des bases du script
 func _ready():
