@@ -188,26 +188,9 @@ func _ready():
 		print("Réécriture Dialogues dans le JSON")
 
 	else:
+		pass
 # AUTO SAVE
-		print("Création du fichier de sauvegarde")
-		var currentHour = OS.get_time().hour
-		var currentMinute = OS.get_time().minute
-		var currentSecond = OS.get_time().second
-		dataTime = str(currentHour,":",currentMinute,":",currentSecond)
-		dataDial = currentDial
-		dataRep = 9
-		saveDial.push_back(dataDial)
-		saveRep.push_back(dataRep)
-		saveTime.push_back(dataTime)
-		print(saveDial)
-		print(saveRep)
-		data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime}}
-		var saveFile = "user://savelogs.json"
-		var file = File.new()
-		#file.open_encrypted_with_pass(saveFile, File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-		file.open(saveFile, File.WRITE)
-		file.store_line(data.to_json())
-		file.close()
+
 
 # Initialisation du Timer
 	print("Initialitation du Timer")
@@ -273,6 +256,15 @@ func start():
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	if dict._Dialogues[currentDial].ref == 1 :
 		print("#### DIALOGUES REF : 1 ####")
+# AUTO SAVE
+		print("Auto-Sauvegarde")
+		var currentHour = OS.get_time().hour
+		var currentMinute = OS.get_time().minute
+		var currentSecond = OS.get_time().second
+		dataTime = str(currentHour,":",currentMinute,":",currentSecond)
+		dataDial = currentDial
+		dataRep = 9
+		system_save()
 # Horodatage
 		print("Horodatage")
 		print("Création du label")
@@ -573,19 +565,6 @@ func _on_Bouton0_pressed():
 	currentDial = dict._Dialogues[currentDial].next[0]
 	time_delay = dict._Dialogues[currentDial].time
 	saveNextTime = OS.get_unix_time() + int(time_delay)
-
-# AUTO SAVE
-	print("Auto-Sauvegarde")
-	var currentHour = OS.get_time().hour
-	var currentMinute = OS.get_time().minute
-	var currentSecond = OS.get_time().second
-	dataTime = str(currentHour,":",currentMinute,":",currentSecond)
-	dataDial = currentDial
-	dataRep = 9
-	system_save()
-
-	unixTime = OS.get_unix_time()
-	saveNextTime = unixTime + int(time_delay)
 	print("Lancement du timer",time_delay," seconde(s)")
 
 # BOUTON 1
@@ -779,14 +758,7 @@ func _on_Bouton3_pressed():
 	time_delay = dict._Dialogues[currentDial].time
 
 # AUTO SAVE
-	print("Auto-Sauvegarde")
-	var currentHour = OS.get_time().hour
-	var currentMinute = OS.get_time().minute
-	var currentSecond = OS.get_time().second
-	dataTime = str(currentHour,":",currentMinute,":",currentSecond)
-	dataDial = currentDial
-	dataRep = 9
-	system_save()
+
 
 	unixTime = OS.get_unix_time()
 	saveNextTime = unixTime + int(time_delay)
