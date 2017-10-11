@@ -45,6 +45,7 @@ var minuteIG = "0"
 var secondIG = "0"
 var saveNextTime = 0
 var unixTime = OS.get_unix_time()
+var saveUnixTime = 0
 
 # Initialisation des bases du script
 func _ready():
@@ -804,7 +805,8 @@ func system_save():
 	print(saveDial)
 	print(saveRep)
 	print(saveTime)
-	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime, "nexttime" : saveNextTime}}
+	saveUnixTime = OS.get_unix_time() + int(time_delay)
+	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime, "nexttime" : saveUnixTime}}
 	var file = File.new()
 	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.open("user://savelogs.json", File.WRITE)
