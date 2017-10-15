@@ -116,8 +116,8 @@ func _ready():
 		print(saveTime)
 		print("Récupération des Timers de vérification")
 		for i in save._Save.nexttime:
-			saveUnixTime.append(i)
-		print(saveUnixTime)
+			saveNextTime.append(i)
+		print(saveNextTime)
 # Réécriture de la Sauvegarde
 		print("Réécriture de la sauvegarde")
 		vscroll = get_node("vbox/Mid/DialBox").get_size().height
@@ -209,13 +209,22 @@ func _ready():
 	print("Affichage version en jeu")
 	get_node("vbox/Top/version").set_text(str(version))
 
-# Affichage de l'heure
-	set_process(true)
-
 # Lancement du script
 	print("Lancement du script")
 	if fileExists == false:
+		launch = 0
 		start()
+	else:
+		launch = 1
+		currentDial = dict._Dialogues[currentDial].next
+		time_delay = dict._Dialogues[currentDial].time
+		currentNextTime = OS.get_unix_time() + int(time_delay)
+
+# Affichage de l'heure
+	set_process(true)
+
+
+
 
 func _process(delta):
 	# Récupération de l'heure du système
@@ -254,9 +263,7 @@ func _process(delta):
 func start():
 	print("Début du processus d'interpretation du JSON")
 	status()
-	var currentHour = OS.get_time().hour
-	var currentMinute = OS.get_time().minute
-	var currentSecond = OS.get_time().second
+
 
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
