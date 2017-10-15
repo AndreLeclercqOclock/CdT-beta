@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="34" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
-	<ext_resource path="res://font/Montserrat-Regular.ttf" type="DynamicFontData" index="4"></ext_resource>
-	<ext_resource path="res://font/rubik_large.fnt" type="BitmapFont" index="2"></ext_resource>
-	<ext_resource path="res://font/coolvetica rg.fnt" type="BitmapFont" index="5"></ext_resource>
-	<ext_resource path="res://font/rubik_medium.fnt" type="BitmapFont" index="3"></ext_resource>
-	<ext_resource path="res://font/rubik_bold.fnt" type="BitmapFont" index="6"></ext_resource>
 	<ext_resource path="res://scr/scr_json_scenario.gd" type="Script" index="0"></ext_resource>
 	<ext_resource path="res://img/avatar01-small.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://font/Montserrat-Regular.ttf" type="DynamicFontData" index="4"></ext_resource>
+	<ext_resource path="res://font/coolvetica rg.fnt" type="BitmapFont" index="5"></ext_resource>
+	<ext_resource path="res://font/rubik_medium.fnt" type="BitmapFont" index="3"></ext_resource>
+	<ext_resource path="res://font/rubik_large.fnt" type="BitmapFont" index="2"></ext_resource>
+	<ext_resource path="res://font/rubik_bold.fnt" type="BitmapFont" index="6"></ext_resource>
 	<resource type="DynamicFont" path="local://31">
 		<int name="font/size"> 35 </int>
 		<bool name="font/use_mipmaps"> False </bool>
