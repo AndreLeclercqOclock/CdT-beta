@@ -111,10 +111,6 @@ func _ready():
 			saveRep.append(i)
 		print(saveRep)
 		print("Récupération des Timers")
-		for i in save._Save.time:
-			saveTime.append(i)
-		print(saveTime)
-		print("Récupération des Timers de vérification")
 		for i in save._Save.nexttime:
 			saveNextTime.append(i)
 		print(saveNextTime)
@@ -124,11 +120,13 @@ func _ready():
 		for i in range(save._Save.dial.size()):
 			currentDial = save._Save.dial[i]
 			currentRep = save._Save.rep[i]
-			currentTime = save._Save.time[i]
 			currentNextTime = save._Save.nexttime[i]
-		# Ecrit l'heure
-			if currentTime != null and currentNextTime <= OS.get_unix_time():
+			if dict._Dialogues[currentDial].ref == 1 and currentNextTime <= OS.get_unix_time():
+				# Ecrit l'heure
+				#if currentTime != null:
 				print("Horodatage")
+				currentTime = OS.get_datetime_from_unix_time(currentNextTime)
+				currentTime = str(currentTime.hour,":",currentTime.minute,":",currentTime.second)
 				var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelTime")
 				var label = labelbase.duplicate()
 				label.set_name(str("LabelTime",currentTime))
@@ -138,8 +136,7 @@ func _ready():
 				label.set_text(str(currentTime))
 				label.set("visibility/self_opacity",1)
 				var labelH = label.get_text()
-			if dict._Dialogues[currentDial].ref == 1:
-		# Ecrit la ligne de dialogue
+				# Ecrit la ligne de dialogue
 				for y in range(dict._Dialogues[currentDial].content.size()):
 					print("Création du label")
 					var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelDial")
@@ -213,22 +210,29 @@ func _ready():
 	print("Lancement du script")
 	if fileExists == false:
 		launch = 0
-		start()
-	else:
-		launch = 1
-		currentDial = dict._Dialogues[currentDial].next
+		print("Auto-Sauvegarde")
+		unixTime = OS.get_unix_time()
 		time_delay = dict._Dialogues[currentDial].time
-		currentNextTime = OS.get_unix_time() + int(time_delay)
+		dataDial = currentDial
+		dataRep = 9
+		dataNextTime = unixTime + int(time_delay)
+		currentNextTime = OS.get_unix_time()
+		system_save()
+		start()
+	elif fileExists == true and currentNextTime <= OS.get_unix_time():
+		currentDial = dict._Dialogues[currentDial].next
+		launch = 1
+
+
 
 # Affichage de l'heure
 	set_process(true)
 
 
 
-
 func _process(delta):
 	# Récupération de l'heure du système
-	var timeSys = OS.get_time()
+	var timeSys = OS.get_datetime_from_unix_time(OS.get_unix_time())
 	var hourSys = timeSys.hour
 	var minuteSys = timeSys.minute
 	var secondSys = timeSys.second
@@ -269,19 +273,11 @@ func start():
 # Gestion des dialogues de ref 1 [DIALOGUES]
 	if dict._Dialogues[currentDial].ref == 1 :
 		print("#### DIALOGUES REF : 1 ####")
-# AUTO SAVE
-		print("Auto-Sauvegarde")
-		var currentHour = OS.get_time().hour
-		var currentMinute = OS.get_time().minute
-		var currentSecond = OS.get_time().second
-		dataTime = str(currentHour,":",currentMinute,":",currentSecond)
-		dataDial = currentDial
-		dataRep = 9
-		dataNextTime = OS.get_unix_time() + int(time_delay)
-		system_save()
 # Horodatage
 		print("Horodatage")
 		print("Création du label")
+		currentTime = OS.get_datetime_from_unix_time(currentNextTime)
+		currentTime = str(currentTime.hour,":",currentTime.minute,":",currentTime.second)
 		var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelTime")
 		var label = labelbase.duplicate()
 		print("Configuration du label")
@@ -289,7 +285,7 @@ func start():
 		get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 		label.show()
 		print("Affiche l'heure")
-		label.set_text(str(currentHour,":",currentMinute,":",currentSecond))
+		label.set_text(currentTime)
 		var labelH = label.get_text()
 # Auto Scroll
 		print("Scroll")
@@ -435,6 +431,15 @@ func start():
 		print("Lancement du timer",time_delay," seconde(s)")
 		currentNextTime = OS.get_unix_time() + int(time_delay)
 		launch = 1
+
+		#AUTO SAVE
+		if dict._Dialogues[currentDial].ref == 1 :
+			print("Auto-Sauvegarde")
+			unixTime = OS.get_unix_time()
+			dataDial = currentDial
+			dataRep = 9
+			dataNextTime = unixTime + int(time_delay)
+			system_save()
 		status()
 
 
@@ -534,7 +539,6 @@ func _on_Bouton0_pressed():
 # AUTO SAVE
 	dataDial = currentDial
 	dataRep = 0
-	dataTime = null
 	dataNextTime = OS.get_unix_time() + int(time_delay)
 	system_save()
 
@@ -579,7 +583,11 @@ func _on_Bouton0_pressed():
 
 	currentDial = dict._Dialogues[currentDial].next[0]
 	time_delay = dict._Dialogues[currentDial].time
-	currentNextTime = OS.get_unix_time() + int(time_delay)
+	#AUTO SAVE
+	dataDial = currentDial
+	dataRep = 9
+	dataNextTime = OS.get_unix_time() + int(time_delay)
+	system_save()
 	launch = 1
 	print("Lancement du timer",time_delay," seconde(s)")
 
@@ -591,7 +599,6 @@ func _on_Bouton1_pressed():
 	print("Auto-Sauvegarde")
 	dataDial = currentDial
 	dataRep = 1
-	dataTime = null
 	dataNextTime = OS.get_unix_time() + int(time_delay)
 	system_save()
 
@@ -636,7 +643,11 @@ func _on_Bouton1_pressed():
 
 	currentDial = dict._Dialogues[currentDial].next[1]
 	time_delay = dict._Dialogues[currentDial].time
-	currentNextTime = OS.get_unix_time() + int(time_delay)
+	#AUTO SAVE
+	dataDial = currentDial
+	dataRep = 9
+	dataNextTime = OS.get_unix_time() + int(time_delay)
+	system_save()
 	launch = 1
 	print("Lancement du timer",time_delay," seconde(s)")
 
@@ -649,7 +660,6 @@ func _on_Bouton2_pressed():
 	print("Auto-Sauvegarde")
 	dataDial = currentDial
 	dataRep = 2
-	dataTime = null
 	dataNextTime = OS.get_unix_time() + int(time_delay)
 	system_save()
 
@@ -695,7 +705,11 @@ func _on_Bouton2_pressed():
 
 	currentDial = dict._Dialogues[currentDial].next[2]
 	time_delay = dict._Dialogues[currentDial].time
-	currentNextTime = OS.get_unix_time() + int(time_delay)
+	#AUTO SAVE
+	dataDial = currentDial
+	dataRep = 9
+	dataNextTime = OS.get_unix_time() + int(time_delay)
+	system_save()
 	launch = 1
 	print("Lancement du timer",time_delay," seconde(s)")
 
@@ -708,7 +722,6 @@ func _on_Bouton3_pressed():
 	print("Auto-Sauvegarde")
 	dataDial = currentDial
 	dataRep = 3
-	dataTime = null
 	dataNextTime = OS.get_unix_time() + int(time_delay)
 	system_save()
 
@@ -753,7 +766,11 @@ func _on_Bouton3_pressed():
 
 	currentDial = dict._Dialogues[currentDial].next[3]
 	time_delay = dict._Dialogues[currentDial].time
-	currentNextTime = OS.get_unix_time() + int(time_delay)
+	#AUTO SAVE
+	dataDial = currentDial
+	dataRep = 9
+	dataNextTime = OS.get_unix_time() + int(time_delay)
+	system_save()
 	launch = 1
 	print("Lancement du timer",time_delay," seconde(s)")
 
@@ -826,13 +843,11 @@ func system_save():
 	print("Auto-Sauvegarde")
 	saveDial.push_back(dataDial)
 	saveRep.push_back(dataRep)
-	saveTime.push_back(dataTime)
 	saveNextTime.push_back(dataNextTime)
 	print(saveDial)
 	print(saveRep)
-	print(saveTime)
 	print(saveNextTime)
-	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "time" : saveTime, "nexttime" : saveNextTime}}
+	data = {"_Save" : {"dial" : saveDial,"rep" : saveRep, "nexttime" : saveNextTime}}
 	var file = File.new()
 	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.open("user://savelogs.json", File.WRITE)
