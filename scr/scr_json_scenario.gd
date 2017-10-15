@@ -50,6 +50,7 @@ var unixTime = OS.get_unix_time()
 var saveUnixTime = []
 var save_size = null
 var launch = 1
+var timeIG = null
 
 
 # Initialisation des bases du script
@@ -123,17 +124,16 @@ func _ready():
 			currentNextTime = save._Save.nexttime[i]
 			if dict._Dialogues[currentDial].ref == 1 and currentNextTime <= OS.get_unix_time():
 				# Ecrit l'heure
-				#if currentTime != null:
 				print("Horodatage")
-				currentTime = OS.get_datetime_from_unix_time(currentNextTime)
-				currentTime = str(currentTime.hour,":",currentTime.minute,":",currentTime.second)
+				saveTime = currentNextTime
+				system_time()
 				var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelTime")
 				var label = labelbase.duplicate()
 				label.set_name(str("LabelTime",currentTime))
 				get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 				label.show()
 				print("Affiche l'heure")
-				label.set_text(str(currentTime))
+				label.set_text(str(timeIG))
 				label.set("visibility/self_opacity",1)
 				var labelH = label.get_text()
 				# Ecrit la ligne de dialogue
@@ -214,7 +214,7 @@ func _ready():
 		unixTime = OS.get_unix_time()
 		time_delay = dict._Dialogues[currentDial].time
 		dataDial = currentDial
-		dataRep = 9
+		dataRep = null
 		dataNextTime = unixTime + int(time_delay)
 		currentNextTime = OS.get_unix_time()
 		system_save()
@@ -223,37 +223,16 @@ func _ready():
 		currentDial = dict._Dialogues[currentDial].next
 		launch = 1
 
-
-
 # Affichage de l'heure
 	set_process(true)
 
 
 
 func _process(delta):
-	# Récupération de l'heure du système
-	var timeSys = OS.get_datetime_from_unix_time(OS.get_unix_time())
-	var hourSys = timeSys.hour
-	var minuteSys = timeSys.minute
-	var secondSys = timeSys.second
-	unixTime = OS.get_unix_time()
-
-	# Ajustement de l'heure
-	if hourSys < 10:
-		hourIG = str("0",hourSys)
-	else:
-		hourIG = hourSys
-	if minuteSys < 10:
-		minuteIG = str("0",minuteSys)
-	else:
-		minuteIG = minuteSys
-	if secondSys < 10:
-		secondIG = str("0",secondSys)
-	else:
-		secondIG = secondSys
-
+	saveTime = OS.get_unix_time()
+	system_time()
 	# Affichage de l'heure
-	get_node("vbox/Top/clock").set_text(str(hourIG,":",minuteIG,":",secondIG))
+	get_node("vbox/Top/clock").set_text(timeIG)
 
 	if launch != 0 and currentNextTime <= OS.get_unix_time():
 		print("Fin du timer")
@@ -276,8 +255,8 @@ func start():
 # Horodatage
 		print("Horodatage")
 		print("Création du label")
-		currentTime = OS.get_datetime_from_unix_time(currentNextTime)
-		currentTime = str(currentTime.hour,":",currentTime.minute,":",currentTime.second)
+		saveTime = currentNextTime
+		system_time()
 		var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelTime")
 		var label = labelbase.duplicate()
 		print("Configuration du label")
@@ -285,7 +264,7 @@ func start():
 		get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 		label.show()
 		print("Affiche l'heure")
-		label.set_text(currentTime)
+		label.set_text(timeIG)
 		var labelH = label.get_text()
 # Auto Scroll
 		print("Scroll")
@@ -437,7 +416,7 @@ func start():
 			print("Auto-Sauvegarde")
 			unixTime = OS.get_unix_time()
 			dataDial = currentDial
-			dataRep = 9
+			dataRep = null
 			dataNextTime = unixTime + int(time_delay)
 			system_save()
 		status()
@@ -585,7 +564,7 @@ func _on_Bouton0_pressed():
 	time_delay = dict._Dialogues[currentDial].time
 	#AUTO SAVE
 	dataDial = currentDial
-	dataRep = 9
+	dataRep = null
 	dataNextTime = OS.get_unix_time() + int(time_delay)
 	system_save()
 	launch = 1
@@ -645,7 +624,7 @@ func _on_Bouton1_pressed():
 	time_delay = dict._Dialogues[currentDial].time
 	#AUTO SAVE
 	dataDial = currentDial
-	dataRep = 9
+	dataRep = null
 	dataNextTime = OS.get_unix_time() + int(time_delay)
 	system_save()
 	launch = 1
@@ -707,7 +686,7 @@ func _on_Bouton2_pressed():
 	time_delay = dict._Dialogues[currentDial].time
 	#AUTO SAVE
 	dataDial = currentDial
-	dataRep = 9
+	dataRep = null
 	dataNextTime = OS.get_unix_time() + int(time_delay)
 	system_save()
 	launch = 1
@@ -768,7 +747,7 @@ func _on_Bouton3_pressed():
 	time_delay = dict._Dialogues[currentDial].time
 	#AUTO SAVE
 	dataDial = currentDial
-	dataRep = 9
+	dataRep = null
 	dataNextTime = OS.get_unix_time() + int(time_delay)
 	system_save()
 	launch = 1
@@ -853,4 +832,28 @@ func system_save():
 	file.open("user://savelogs.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
+	return
+
+func system_time():
+	# Récupération de l'heure du système
+	var timeSys = OS.get_datetime_from_unix_time(saveTime)
+	var hourSys = timeSys.hour
+	var minuteSys = timeSys.minute
+	var secondSys = timeSys.second
+
+	# Ajustement de l'heure
+	if hourSys < 10:
+		hourIG = str("0",hourSys)
+	else:
+		hourIG = hourSys
+	if minuteSys < 10:
+		minuteIG = str("0",minuteSys)
+	else:
+		minuteIG = minuteSys
+	if secondSys < 10:
+		secondIG = str("0",secondSys)
+	else:
+		secondIG = secondSys
+
+	timeIG = str(hourIG,":",minuteIG,":",secondIG)
 	return
