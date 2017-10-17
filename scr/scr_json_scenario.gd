@@ -857,3 +857,21 @@ func system_time():
 
 	timeIG = str(hourIG,":",minuteIG,":",secondIG)
 	return
+
+func system_exit():
+	var nextDial = dict._Dialogues[currentDial].next
+	if dict._Dialogues[currentDial].ref == 1 and dict._Dialogues[nextDial].ref == 1:
+		print("Auto-Sauvegarde")
+		unixTime = OS.get_unix_time()
+		time_delay = dict._Dialogues[nextDial].time
+		dataDial = nextDial
+		dataRep = null
+		dataNextTime = unixTime + int(time_delay)
+		system_save()
+
+#func _exit_tree():
+#	system_exit()
+
+func _notification(notification_signal):
+	if notification_signal == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		system_exit()
