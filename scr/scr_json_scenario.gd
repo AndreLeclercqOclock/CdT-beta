@@ -51,6 +51,9 @@ var saveUnixTime = []
 var save_size = null
 var launch = 1
 var timeIG = null
+var calcultime = 0
+var timezone = 0
+var realtime = 0
 
 
 # Initialisation des bases du script
@@ -197,6 +200,11 @@ func _ready():
 	print("Initialitation du Timer")
 	timer = get_node("Timer")
 	timer.set_wait_time(time_delay)
+
+# Calcule time zone
+	timezone = OS.get_datetime_from_unix_time(OS.get_unix_time()).hour
+	realtime = OS.get_time().hour
+	calcultime = realtime - timezone
 
 # Affichage du nom de l'interlocuteur
 	print("Affichage du nom")
@@ -840,6 +848,11 @@ func system_time():
 	var hourSys = timeSys.hour
 	var minuteSys = timeSys.minute
 	var secondSys = timeSys.second
+
+	if calcultime < 0:
+		hourSys = hourSys - calcultime
+	else:
+		hourSys = hourSys + calcultime
 
 	# Ajustement de l'heure
 	if hourSys < 10:
