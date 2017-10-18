@@ -439,7 +439,7 @@ func start():
 			print("Création du bouton n°",dict._Dialogues[currentDial].button[i])
 			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_text(str(dict._Dialogues[currentDial].button[i]))
 			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
-			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_flat(false)
+			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
 		timer.stop()
 		print("Fin de la création des boutons")
 
@@ -767,7 +767,7 @@ func clean():
 	for i in range(4):
 		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_text("")
 		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(true)
-		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_flat(true)
+		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",false)
 
 									## BOITE DE DIALOGUE REPONSES ECRITE ##
 # Boite de dialogue pour écrire la réponse demandée.
