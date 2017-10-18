@@ -180,11 +180,11 @@ func _ready():
 				var labelsize = label.get_line_count()
 				print(str("Nombre de ligne :",labelsize))
 				if labelsize == 1:
-					label.set_size(Vector2(1030,55))
-					label.set("rect/min_size",Vector2(1030,55))
+					label.set_size(Vector2(825,55))
+					label.set("rect/min_size",Vector2(825,55))
 				elif labelsize == 2:
-					label.set_size(Vector2(1030,110))
-					label.set("rect/min_size",Vector2(1030,110))
+					label.set_size(Vector2(825,110))
+					label.set("rect/min_size",Vector2(825,110))
 				print(str("Taille du label :",label.get_size()))
 			# Auto Scroll
 				print("Scroll")
@@ -473,11 +473,11 @@ func start():
 		var labelsize = label.get_line_count()
 		print(str("Nombre de ligne :",labelsize))
 		if labelsize == 1:
-			label.set_size(Vector2(1030,55))
-			label.set("rect/min_size",Vector2(1030,55))
+			label.set_size(Vector2(825,55))
+			label.set("rect/min_size",Vector2(825,55))
 		elif labelsize == 2:
-			label.set_size(Vector2(1030,110))
-			label.set("rect/min_size",Vector2(1030,110))
+			label.set_size(Vector2(825,110))
+			label.set("rect/min_size",Vector2(825,110))
 		print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
@@ -544,11 +544,11 @@ func _on_Bouton0_pressed():
 	var labelsize = label.get_line_count()
 	print(str("Nombre de ligne :",labelsize))
 	if labelsize == 1:
-		label.set_size(Vector2(1030,55))
-		label.set("rect/min_size",Vector2(1030,55))
+		label.set_size(Vector2(825,55))
+		label.set("rect/min_size",Vector2(825,55))
 	elif labelsize == 2:
-		label.set_size(Vector2(1030,110))
-		label.set("rect/min_size",Vector2(1030,110))
+		label.set_size(Vector2(825,110))
+		label.set("rect/min_size",Vector2(825,110))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
@@ -604,11 +604,11 @@ func _on_Bouton1_pressed():
 	var labelsize = label.get_line_count()
 	print(str("Nombre de ligne :",labelsize))
 	if labelsize == 1:
-		label.set_size(Vector2(1030,55))
-		label.set("rect/min_size",Vector2(1030,55))
+		label.set_size(Vector2(825,55))
+		label.set("rect/min_size",Vector2(825,55))
 	elif labelsize == 2:
-		label.set_size(Vector2(1030,110))
-		label.set("rect/min_size",Vector2(1030,110))
+		label.set_size(Vector2(825,110))
+		label.set("rect/min_size",Vector2(825,110))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
@@ -665,11 +665,11 @@ func _on_Bouton2_pressed():
 	var labelsize = label.get_line_count()
 	print(str("Nombre de ligne :",labelsize))
 	if labelsize == 1:
-		label.set_size(Vector2(1030,55))
-		label.set("rect/min_size",Vector2(1030,55))
+		label.set_size(Vector2(825,55))
+		label.set("rect/min_size",Vector2(825,55))
 	elif labelsize == 2:
-		label.set_size(Vector2(1030,110))
-		label.set("rect/min_size",Vector2(1030,110))
+		label.set_size(Vector2(825,110))
+		label.set("rect/min_size",Vector2(825,110))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
@@ -727,11 +727,11 @@ func _on_Bouton3_pressed():
 	var labelsize = label.get_line_count()
 	print(str("Nombre de ligne :",labelsize))
 	if labelsize == 1:
-		label.set_size(Vector2(1030,55))
-		label.set("rect/min_size",Vector2(1030,55))
+		label.set_size(Vector2(825,55))
+		label.set("rect/min_size",Vector2(825,55))
 	elif labelsize == 2:
-		label.set_size(Vector2(1030,110))
-		label.set("rect/min_size",Vector2(1030,110))
+		label.set_size(Vector2(825,110))
+		label.set("rect/min_size",Vector2(825,110))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
