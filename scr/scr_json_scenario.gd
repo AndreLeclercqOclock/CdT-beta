@@ -153,11 +153,11 @@ func _ready():
 				# Ajustement de la taille du label
 					var labelsize = label.get_line_count()
 					if labelsize == 1:
-						label.set_size(Vector2(1030,55))
-						label.set("rect/min_size",Vector2(1030,55))
+						label.set_size(Vector2(825,55))
+						label.set("rect/min_size",Vector2(825,55))
 					elif labelsize == 2:
-						label.set_size(Vector2(1030,110))
-						label.set("rect/min_size",Vector2(1030,110))
+						label.set_size(Vector2(825,110))
+						label.set("rect/min_size",Vector2(825,110))
 				# Auto Scroll
 					yield(get_tree(), "idle_frame")
 					get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
@@ -377,11 +377,11 @@ func start():
 			var labelsize = label.get_line_count()
 			print(str("Nombre de ligne :",labelsize))
 			if labelsize == 1:
-				label.set_size(Vector2(1030,55))
-				label.set("rect/min_size",Vector2(1030,55))
+				label.set_size(Vector2(825,55))
+				label.set("rect/min_size",Vector2(825,55))
 			elif labelsize == 2:
-				label.set_size(Vector2(1030,110))
-				label.set("rect/min_size",Vector2(1030,110))
+				label.set_size(Vector2(825,110))
+				label.set("rect/min_size",Vector2(825,110))
 			print(str("Taille du label :",label.get_size()))
 
 
@@ -804,19 +804,19 @@ func status():
 	# En ligne
 	if time_delay <= 30:
 		get_node("vbox/Top/Etat").clear()
-		get_node("vbox/Top/Etat").add_text("En ligne")
+		get_node("vbox/Top/Etat").add_text("Status : en ligne")
 	# Occupé
 	elif time_delay > 30 and time_delay <= 180:
 		get_node("vbox/Top/Etat").clear()
-		get_node("vbox/Top/Etat").add_text("Occupé")
+		get_node("vbox/Top/Etat").add_text("Status : occupé")
 	# Absent
 	elif time_delay > 180 and time_delay <= 300:
 		get_node("vbox/Top/Etat").clear()
-		get_node("vbox/Top/Etat").add_text("Absent")
+		get_node("vbox/Top/Etat").add_text("Status : absent")
 	# Hors Ligne
 	elif time_delay > 300:
 		get_node("vbox/Top/Etat").clear()
-		get_node("vbox/Top/Etat").add_text("Hors Ligne")
+		get_node("vbox/Top/Etat").add_text("Status : hors-ligne")
 	var statusNew = get_node("vbox/Top/Etat").get_text()
 	return
 

@@ -1,8 +1,8 @@
 {
   "_Config" : {
     "scenarioFile" : "protoTest_fr.json",
-    "firstDial" : "dial400",
+    "firstDial" : "dial001",
     "stateSave" : true,
-    "version" : "alpha 2.6"
+    "version" : "Ver : alpha 2.6"
   }
 }
