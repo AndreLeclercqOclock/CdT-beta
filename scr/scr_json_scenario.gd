@@ -437,9 +437,9 @@ func start():
 		print("Création de ",dict._Dialogues[currentDial].content.size()," bouton(s)")
 		for i in range(dict._Dialogues[currentDial].content.size()):
 			print("Création du bouton n°",dict._Dialogues[currentDial].button[i])
-			get_node(str("vbox/Bot/Bouton",i)).set_text(str(dict._Dialogues[currentDial].button[i]))
-			get_node(str("vbox/Bot/Bouton",i)).set_ignore_mouse(false)
-			get_node(str("vbox/Bot/Bouton",i)).set_flat(false)
+			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_text(str(dict._Dialogues[currentDial].button[i]))
+			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
+			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_flat(false)
 		timer.stop()
 		print("Fin de la création des boutons")
 
@@ -447,9 +447,9 @@ func start():
 	if dict._Dialogues[currentDial].ref == 3:
 		print("#### DIALOGUES REF : 3 ####")
 		print("Affichage boite de dialogue")
-		get_node("vbox/Bot/TextEdit").show()
+		get_node("vbox/Bot/VBoxBot/TextEdit").show()
 		print("Nettoyage de la boite de dialogue")
-		get_node("vbox/Bot/TextEdit").clear()
+		get_node("vbox/Bot/VBoxBot/TextEdit").clear()
 		timer.stop()
 
 
@@ -765,18 +765,18 @@ func _on_Bouton3_pressed():
 func clean():
 	print("Suppression des boutons")
 	for i in range(4):
-		get_node(str("vbox/Bot/Bouton",i)).set_text("")
-		get_node(str("vbox/Bot/Bouton",i)).set_ignore_mouse(true)
-		get_node(str("vbox/Bot/Bouton",i)).set_flat(true)
+		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_text("")
+		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(true)
+		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_flat(true)
 
 									## BOITE DE DIALOGUE REPONSES ECRITE ##
 # Boite de dialogue pour écrire la réponse demandée.
 func _on_TextEdit_text_entered( text ):
-	if get_node("vbox/Bot/TextEdit").get_text() == dict._Dialogues[currentDial].content[0]:
+	if get_node("vbox/Bot/VBoxBot/TextEdit").get_text() == dict._Dialogues[currentDial].content[0]:
 		get_node("vbox/Mid/Dialogues").push_align(2)
 		get_node("vbox/Mid/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
-		get_node("vbox/Bot/TextEdit").hide()
-		get_node("vbox/Bot/TextEdit").clear()
+		get_node("vbox/Bot/VBoxBot/TextEdit").hide()
+		get_node("vbox/Bot/VBoxBot/TextEdit").clear()
 		currentDial = dict._Dialogues[currentDial].next[0]
 		time_delay = dict._Dialogues[currentDial].time
 		timer.set_wait_time(time_delay)
