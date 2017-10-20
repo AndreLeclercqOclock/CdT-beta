@@ -535,7 +535,6 @@ func _on_Bouton0_pressed():
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	print("Fin du timer")
-	get_node("vbox/Bot/VBoxBot/Bouton0/Sprite0").set_texture(load("res://img/bouton_base.jpg"))
 	clean()
 	print("Bouton n°0 activé")
 # AUTO SAVE

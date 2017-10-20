@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="42" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
+<resource_file type="PackedScene" subresource_count="46" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
 	<ext_resource path="res://scr/scr_json_scenario.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://img/bouton_base.jpg" type="Texture" index="9"></ext_resource>
-	<ext_resource path="res://img/avatar.png" type="Texture" index="3"></ext_resource>
-	<ext_resource path="res://img/Fond_général.jpg" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://img/footer.jpg" type="Texture" index="10"></ext_resource>
 	<ext_resource path="res://img/header.jpg" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://img/Fond_général.jpg" type="Texture" index="1"></ext_resource>
 	<ext_resource path="res://img/fond_message_large.png" type="Texture" index="7"></ext_resource>
-	<ext_resource path="res://font/DEJAVUSANSMONO.TTF" type="DynamicFontData" index="6"></ext_resource>
-	<ext_resource path="res://font/DEJAVUSANS.TTF" type="DynamicFontData" index="5"></ext_resource>
-	<ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" index="8"></ext_resource>
+	<ext_resource path="res://img/avatar.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://img/bouton_base.jpg" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://img/footer.jpg" type="Texture" index="10"></ext_resource>
 	<ext_resource path="res://font/DEJAVUSANSCONDENSED-BOLD.TTF" type="DynamicFontData" index="4"></ext_resource>
+	<ext_resource path="res://font/DEJAVUSANSMONO.TTF" type="DynamicFontData" index="6"></ext_resource>
+	<ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" index="8"></ext_resource>
+	<ext_resource path="res://font/DEJAVUSANS.TTF" type="DynamicFontData" index="5"></ext_resource>
 	<resource type="DynamicFont" path="local://32">
 		<int name="font/size"> 65 </int>
 		<bool name="font/use_mipmaps"> False </bool>
@@ -33,7 +33,7 @@
 		<resource name="fallback/0"></resource>
 	</resource>
 	<resource type="DynamicFont" path="local://31">
-		<int name="font/size"> 35 </int>
+		<int name="font/size"> 20 </int>
 		<bool name="font/use_mipmaps"> False </bool>
 		<bool name="font/use_filter"> True </bool>
 		<resource name="font/font" external="6">  </resource>
@@ -99,6 +99,13 @@
 		<real name="content_margin/bottom"> -1 </real>
 
 	</resource>
+	<resource type="StyleBoxEmpty" path="local://60">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+
+	</resource>
 	<resource type="DynamicFont" path="local://36">
 		<int name="font/size"> 40 </int>
 		<bool name="font/use_mipmaps"> False </bool>
@@ -128,6 +135,13 @@
 
 	</resource>
 	<resource type="StyleBoxEmpty" path="local://47">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+
+	</resource>
+	<resource type="StyleBoxEmpty" path="local://57">
 		<real name="content_margin/left"> -1 </real>
 		<real name="content_margin/right"> -1 </real>
 		<real name="content_margin/top"> -1 </real>
@@ -169,6 +183,13 @@
 		<real name="content_margin/bottom"> -1 </real>
 
 	</resource>
+	<resource type="StyleBoxEmpty" path="local://58">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+
+	</resource>
 	<resource type="DynamicFont" path="local://38">
 		<int name="font/size"> 40 </int>
 		<bool name="font/use_mipmaps"> False </bool>
@@ -198,6 +219,13 @@
 
 	</resource>
 	<resource type="StyleBoxEmpty" path="local://55">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+
+	</resource>
+	<resource type="StyleBoxEmpty" path="local://59">
 		<real name="content_margin/left"> -1 </real>
 		<real name="content_margin/right"> -1 </real>
 		<real name="content_margin/top"> -1 </real>
@@ -242,12 +270,12 @@
 			<string> "conn_count" </string>
 			<int> 6 </int>
 			<string> "conns" </string>
-			<int_array  len="36"> 				11, 1, 108, 107, 2, 0, 24, 1, 108, 109, 2, 0, 26, 1, 108, 110, 2, 0, 28, 1, 108, 111, 2, 0, 30, 1, 108, 112, 2, 0, 32, 1, 114, 113, 2, 0 </int_array>
+			<int_array  len="36"> 				11, 1, 110, 109, 2, 0, 24, 1, 110, 111, 2, 0, 26, 1, 110, 112, 2, 0, 28, 1, 110, 113, 2, 0, 30, 1, 110, 114, 2, 0, 32, 1, 116, 115, 2, 0 </int_array>
 			<string> "editable_instances" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="115">
+			<string_array  len="117">
 				<string> "World" </string>
 				<string> "Node" </string>
 				<string> "Interpreteur JSON Scénario" </string>
@@ -275,7 +303,6 @@
 				<string> "alignment" </string>
 				<string> "VBoxContainer" </string>
 				<string> "Top" </string>
-				<string> "editor/display_folded" </string>
 				<string> "Container" </string>
 				<string> "TextureFrame 2" </string>
 				<string> "expand" </string>
@@ -309,6 +336,7 @@
 				<string> "flat" </string>
 				<string> "Button" </string>
 				<string> "Mid" </string>
+				<string> "editor/display_folded" </string>
 				<string> "DialBox" </string>
 				<string> "scroll/horizontal" </string>
 				<string> "scroll/vertical" </string>
@@ -332,11 +360,14 @@
 				<string> "Bot" </string>
 				<string> "VBoxBot" </string>
 				<string> "Bouton0" </string>
+				<string> "size_flags/stretch_ratio" </string>
 				<string> "custom_styles/hover" </string>
 				<string> "custom_styles/pressed" </string>
 				<string> "custom_styles/focus" </string>
 				<string> "custom_styles/disabled" </string>
+				<string> "custom_styles/normal" </string>
 				<string> "Bouton" </string>
+				<string> "Sprite0" </string>
 				<string> "Bouton1" </string>
 				<string> "Sprite1" </string>
 				<string> "Bouton2" </string>
@@ -344,7 +375,6 @@
 				<string> "Bouton3" </string>
 				<string> "Sprite3" </string>
 				<string> "TextEdit" </string>
-				<string> "custom_styles/normal" </string>
 				<string> "placeholder/alpha" </string>
 				<string> "focus_mode" </string>
 				<string> "caret/caret_blink" </string>
@@ -370,9 +400,9 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="1055"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 18, 2, -1, 15, 3, 0, 4, 0, 5, 1, 6, 2, 7, 3, 8, 3, 9, 4, 10, 4, 11, 4, 12, 4, 13, 5, 14, 5, 15, 5, 16, 5, 17, 6, 0, 1, 0, 19, 19, -1, 3, 20, 2, 21, 7, 22, 8, 0, 1, 0, 25, 23, -1, 9, 5, 1, 6, 1, 7, 3, 8, 3, 9, 9, 10, 9, 11, 10, 12, 11, 24, 12, 0, 3, 0, 28, 26, -1, 9, 27, 2, 5, 1, 6, 1, 7, 13, 8, 13, 9, 4, 10, 4, 11, 14, 12, 4, 0, 4, 0, 19, 19, -1, 3, 20, 2, 21, 15, 22, 16, 0, 4, 0, 32, 29, -1, 11, 5, 2, 6, 2, 7, 13, 8, 13, 9, 17, 10, 18, 11, 19, 12, 20, 22, 21, 30, 2, 31, 12, 0, 4, 0, 40, 33, -1, 15, 34, 3, 3, 3, 5, 1, 6, 2, 7, 13, 8, 13, 9, 22, 10, 23, 11, 24, 12, 25, 35, 26, 36, 2, 37, 27, 38, 28, 39, 29, 0, 4, 0, 40, 41, -1, 17, 34, 3, 42, 3, 3, 3, 4, 3, 5, 1, 6, 2, 7, 13, 8, 13, 9, 22, 10, 30, 11, 31, 12, 32, 35, 33, 36, 2, 37, 27, 38, 28, 39, 29, 0, 4, 0, 49, 43, -1, 14, 5, 2, 6, 2, 7, 13, 8, 12, 9, 34, 10, 35, 11, 36, 12, 37, 44, 38, 45, 39, 46, 13, 39, 29, 47, 12, 48, 28, 0, 4, 0, 49, 50, -1, 15, 51, 40, 5, 2, 6, 2, 7, 13, 8, 12, 9, 41, 10, 42, 11, 43, 12, 44, 44, 45, 45, 39, 52, 0, 39, 29, 47, 12, 48, 28, 0, 4, 0, 59, 53, -1, 14, 5, 1, 6, 2, 7, 13, 8, 13, 9, 46, 10, 47, 11, 48, 12, 49, 44, 50, 54, 1, 55, 13, 56, 51, 57, 52, 58, 1, 0, 3, 0, 28, 60, -1, 9, 27, 2, 5, 1, 6, 2, 7, 12, 8, 13, 9, 53, 10, 54, 11, 53, 12, 54, 0, 12, 0, 64, 61, -1, 12, 3, 0, 4, 0, 5, 1, 6, 2, 7, 12, 8, 12, 9, 55, 10, 56, 11, 57, 12, 58, 62, 1, 63, 2, 0, 13, 0, 25, 65, -1, 11, 66, 59, 5, 1, 6, 1, 7, 12, 8, 12, 9, 4, 10, 4, 11, 60, 12, 4, 67, 12, 24, 12, 0, 14, 0, 49, 68, -1, 19, 27, 2, 69, 1, 70, 4, 66, 61, 5, 2, 6, 2, 7, 12, 8, 3, 9, 62, 10, 63, 11, 64, 12, 65, 44, 66, 45, 67, 52, 0, 71, 2, 39, 29, 47, 12, 48, 28, 0, 15, 0, 19, 72, -1, 6, 73, 68, 20, 2, 21, 69, 74, 1, 22, 70, 75, 1, 0, 14, 0, 49, 76, -1, 18, 69, 1, 73, 4, 66, 71, 5, 2, 6, 2, 7, 12, 8, 3, 9, 72, 10, 73, 11, 74, 12, 75, 44, 76, 45, 77, 52, 0, 71, 2, 39, 29, 47, 12, 48, 28, 0, 14, 0, 49, 77, -1, 20, 69, 1, 73, 4, 66, 71, 5, 2, 6, 2, 7, 3, 8, 3, 9, 4, 10, 78, 11, 60, 12, 79, 44, 76, 45, 80, 78, 3, 46, 0, 52, 0, 71, 2, 39, 29, 47, 12, 48, 28, 0, 14, 0, 49, 79, -1, 19, 27, 2, 69, 1, 70, 4, 66, 61, 5, 2, 6, 2, 7, 12, 8, 3, 9, 62, 10, 4, 11, 64, 12, 63, 44, 66, 45, 81, 52, 0, 71, 2, 39, 29, 47, 12, 48, 28, 0, 19, 0, 19, 72, -1, 6, 73, 68, 20, 2, 21, 82, 74, 1, 22, 70, 75, 1, 0, 14, 0, 49, 80, -1, 19, 69, 1, 73, 4, 66, 83, 5, 2, 6, 2, 7, 12, 8, 3, 9, 62, 10, 4, 11, 64, 12, 23, 44, 84, 45, 85, 46, 13, 52, 0, 71, 2, 39, 29, 47, 12, 48, 28, 0, 3, 0, 28, 81, -1, 8, 5, 1, 6, 1, 7, 13, 8, 13, 9, 4, 10, 86, 11, 14, 12, 86, 0, 22, 0, 25, 82, -1, 10, 5, 1, 6, 1, 7, 13, 8, 13, 9, 87, 10, 88, 11, 10, 12, 89, 67, 90, 24, 12, 0, 23, 0, 59, 83, -1, 20, 69, 1, 66, 91, 5, 2, 6, 2, 7, 12, 8, 12, 9, 72, 10, 4, 11, 92, 12, 93, 84, 94, 85, 95, 86, 96, 87, 97, 44, 98, 45, 99, 54, 1, 55, 12, 56, 51, 58, 2, 1, 88, 24, 0, 19, 19, -1, 3, 20, 2, 22, 100, 75, 1, 0, 23, 0, 59, 89, -1, 20, 69, 1, 66, 91, 5, 2, 6, 2, 7, 12, 8, 12, 9, 72, 10, 4, 11, 101, 12, 102, 84, 103, 85, 104, 86, 105, 87, 106, 44, 107, 45, 99, 54, 1, 55, 12, 56, 51, 58, 2, 1, 88, 26, 0, 19, 90, -1, 4, 20, 2, 21, 108, 22, 100, 75, 1, 0, 23, 0, 59, 91, -1, 21, 27, 2, 69, 1, 66, 91, 5, 2, 6, 2, 7, 12, 8, 12, 9, 72, 10, 4, 11, 101, 12, 102, 84, 109, 85, 110, 86, 111, 87, 112, 44, 113, 45, 99, 54, 1, 55, 12, 56, 51, 58, 2, 1, 88, 28, 0, 19, 92, -1, 4, 20, 2, 21, 108, 22, 100, 75, 1, 0, 23, 0, 59, 93, -1, 21, 27, 2, 69, 1, 66, 91, 5, 2, 6, 2, 7, 12, 8, 12, 9, 72, 10, 4, 11, 101, 12, 102, 84, 114, 85, 115, 86, 116, 87, 117, 44, 118, 45, 99, 54, 1, 55, 12, 56, 51, 58, 2, 1, 88, 30, 0, 19, 94, -1, 4, 20, 2, 21, 108, 22, 100, 75, 1, 0, 22, 0, 101, 95, -1, 17, 69, 1, 51, 119, 5, 1, 6, 2, 7, 13, 8, 13, 9, 120, 10, 121, 11, 122, 12, 123, 86, 124, 96, 125, 45, 99, 97, 68, 98, 13, 99, 1, 100, 126, 0, 22, 0, 19, 19, -1, 3, 20, 2, 21, 127, 22, 128, 0, 1, 0, 102, 102, -1, 4, 103, 0, 104, 29, 105, 2, 106, 1, 0 </int_array>
+			<int_array  len="1061"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 18, 2, -1, 15, 3, 0, 4, 0, 5, 1, 6, 2, 7, 3, 8, 3, 9, 4, 10, 4, 11, 4, 12, 4, 13, 5, 14, 5, 15, 5, 16, 5, 17, 6, 0, 1, 0, 19, 19, -1, 3, 20, 2, 21, 7, 22, 8, 0, 1, 0, 25, 23, -1, 9, 5, 1, 6, 1, 7, 3, 8, 3, 9, 9, 10, 9, 11, 10, 12, 11, 24, 12, 0, 3, 0, 27, 26, -1, 8, 5, 1, 6, 1, 7, 13, 8, 13, 9, 4, 10, 4, 11, 14, 12, 4, 0, 4, 0, 19, 19, -1, 3, 20, 2, 21, 15, 22, 16, 0, 4, 0, 31, 28, -1, 11, 5, 2, 6, 2, 7, 13, 8, 13, 9, 17, 10, 18, 11, 19, 12, 20, 22, 21, 29, 2, 30, 12, 0, 4, 0, 39, 32, -1, 15, 33, 3, 3, 3, 5, 1, 6, 2, 7, 13, 8, 13, 9, 22, 10, 23, 11, 24, 12, 25, 34, 26, 35, 2, 36, 27, 37, 28, 38, 29, 0, 4, 0, 39, 40, -1, 17, 33, 3, 41, 3, 3, 3, 4, 3, 5, 1, 6, 2, 7, 13, 8, 13, 9, 22, 10, 30, 11, 31, 12, 32, 34, 33, 35, 2, 36, 27, 37, 28, 38, 29, 0, 4, 0, 48, 42, -1, 14, 5, 2, 6, 2, 7, 13, 8, 12, 9, 34, 10, 35, 11, 36, 12, 37, 43, 38, 44, 39, 45, 13, 38, 29, 46, 12, 47, 28, 0, 4, 0, 48, 49, -1, 16, 50, 40, 5, 2, 6, 2, 7, 13, 8, 12, 9, 41, 10, 17, 11, 42, 12, 43, 43, 44, 44, 39, 45, 0, 51, 0, 38, 29, 46, 12, 47, 28, 0, 4, 0, 58, 52, -1, 14, 5, 1, 6, 2, 7, 13, 8, 13, 9, 45, 10, 46, 11, 47, 12, 48, 43, 49, 53, 1, 54, 13, 55, 50, 56, 51, 57, 1, 0, 3, 0, 27, 59, -1, 9, 60, 2, 5, 1, 6, 2, 7, 12, 8, 13, 9, 52, 10, 53, 11, 52, 12, 53, 0, 12, 0, 64, 61, -1, 12, 3, 0, 4, 0, 5, 1, 6, 2, 7, 12, 8, 12, 9, 54, 10, 55, 11, 56, 12, 57, 62, 1, 63, 2, 0, 13, 0, 25, 65, -1, 11, 66, 58, 5, 1, 6, 1, 7, 12, 8, 12, 9, 4, 10, 4, 11, 59, 12, 4, 67, 12, 24, 12, 0, 14, 0, 48, 68, -1, 19, 60, 2, 69, 1, 70, 4, 66, 60, 5, 2, 6, 2, 7, 12, 8, 3, 9, 61, 10, 62, 11, 63, 12, 64, 43, 65, 44, 66, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 15, 0, 19, 72, -1, 6, 73, 67, 20, 2, 21, 68, 74, 1, 22, 69, 75, 1, 0, 14, 0, 48, 76, -1, 18, 69, 1, 73, 4, 66, 70, 5, 2, 6, 2, 7, 12, 8, 3, 9, 71, 10, 72, 11, 73, 12, 74, 43, 75, 44, 76, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 14, 0, 48, 77, -1, 20, 69, 1, 73, 4, 66, 70, 5, 2, 6, 2, 7, 3, 8, 3, 9, 4, 10, 77, 11, 59, 12, 78, 43, 75, 44, 79, 78, 3, 45, 0, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 14, 0, 48, 79, -1, 19, 60, 2, 69, 1, 70, 4, 66, 60, 5, 2, 6, 2, 7, 12, 8, 3, 9, 61, 10, 4, 11, 63, 12, 62, 43, 65, 44, 80, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 19, 0, 19, 72, -1, 6, 73, 67, 20, 2, 21, 81, 74, 1, 22, 69, 75, 1, 0, 14, 0, 48, 80, -1, 19, 69, 1, 73, 4, 66, 82, 5, 2, 6, 2, 7, 12, 8, 3, 9, 61, 10, 4, 11, 63, 12, 23, 43, 83, 44, 84, 45, 13, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 3, 0, 27, 81, -1, 8, 5, 1, 6, 1, 7, 13, 8, 13, 9, 4, 10, 85, 11, 14, 12, 85, 0, 22, 0, 25, 82, -1, 10, 5, 1, 6, 1, 7, 13, 8, 13, 9, 86, 10, 87, 11, 10, 12, 88, 67, 89, 24, 12, 0, 23, 0, 58, 83, -1, 21, 69, 1, 66, 90, 5, 2, 6, 2, 7, 12, 8, 12, 84, 4, 9, 71, 10, 4, 11, 91, 12, 92, 85, 93, 86, 94, 87, 95, 88, 96, 89, 97, 43, 98, 53, 1, 54, 12, 55, 50, 57, 1, 1, 90, 24, 0, 19, 91, -1, 4, 20, 2, 74, 1, 22, 99, 75, 1, 0, 23, 0, 58, 92, -1, 21, 60, 2, 69, 1, 66, 90, 5, 2, 6, 2, 7, 12, 8, 12, 9, 71, 10, 4, 11, 100, 12, 101, 85, 102, 86, 103, 87, 104, 88, 105, 89, 106, 43, 107, 53, 1, 54, 12, 55, 50, 57, 1, 1, 90, 26, 0, 19, 93, -1, 4, 20, 2, 21, 108, 22, 99, 75, 1, 0, 23, 0, 58, 94, -1, 21, 60, 2, 69, 1, 66, 90, 5, 2, 6, 2, 7, 12, 8, 12, 9, 71, 10, 4, 11, 100, 12, 101, 85, 109, 86, 110, 87, 111, 88, 112, 89, 113, 43, 114, 53, 1, 54, 12, 55, 50, 57, 1, 1, 90, 28, 0, 19, 95, -1, 4, 20, 2, 21, 108, 22, 99, 75, 1, 0, 23, 0, 58, 96, -1, 21, 60, 2, 69, 1, 66, 90, 5, 2, 6, 2, 7, 12, 8, 12, 9, 71, 10, 4, 11, 100, 12, 101, 85, 115, 86, 116, 87, 117, 88, 118, 89, 119, 43, 120, 53, 1, 54, 12, 55, 50, 57, 1, 1, 90, 30, 0, 19, 97, -1, 4, 20, 2, 21, 108, 22, 99, 75, 1, 0, 22, 0, 103, 98, -1, 17, 69, 1, 50, 121, 5, 1, 6, 2, 7, 13, 8, 13, 9, 122, 10, 123, 11, 124, 12, 125, 87, 126, 89, 127, 44, 128, 99, 67, 100, 13, 101, 1, 102, 129, 0, 22, 0, 19, 19, -1, 3, 20, 2, 21, 130, 22, 131, 0, 1, 0, 104, 104, -1, 4, 105, 0, 106, 29, 107, 2, 108, 1, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="129" shared="false">
+			<array  len="132" shared="false">
 				<int> 1 </int>
 				<bool> False </bool>
 				<bool> True </bool>
@@ -414,10 +444,9 @@
 				<resource  resource_type="DynamicFont" path="local://34">  </resource>
 				<color> 0.941406, 0.941406, 0.941406, 1 </color>
 				<vector2> 1.4, 1.4 </vector2>
-				<real> 803 </real>
-				<real> 21 </real>
-				<real> 948 </real>
-				<real> 64 </real>
+				<real> 825 </real>
+				<real> 970 </real>
+				<real> 92 </real>
 				<resource  resource_type="DynamicFont" path="local://31">  </resource>
 				<real> 818 </real>
 				<real> 108 </real>
@@ -470,8 +499,8 @@
 				<resource  resource_type="StyleBox" path="local://41">  </resource>
 				<resource  resource_type="StyleBox" path="local://42">  </resource>
 				<resource  resource_type="StyleBox" path="local://43">  </resource>
+				<resource  resource_type="StyleBox" path="local://60">  </resource>
 				<resource  resource_type="DynamicFont" path="local://36">  </resource>
-				<color> 1, 0.972549, 0.972549, 1 </color>
 				<resource  external="9">  </resource>
 				<real> 969 </real>
 				<real> 91 </real>
@@ -479,17 +508,20 @@
 				<resource  resource_type="StyleBox" path="local://45">  </resource>
 				<resource  resource_type="StyleBox" path="local://46">  </resource>
 				<resource  resource_type="StyleBox" path="local://47">  </resource>
+				<resource  resource_type="StyleBox" path="local://57">  </resource>
 				<resource  resource_type="DynamicFont" path="local://37">  </resource>
 				<vector2> -3, 0 </vector2>
 				<resource  resource_type="StyleBox" path="local://48">  </resource>
 				<resource  resource_type="StyleBox" path="local://49">  </resource>
 				<resource  resource_type="StyleBox" path="local://50">  </resource>
 				<resource  resource_type="StyleBox" path="local://51">  </resource>
+				<resource  resource_type="StyleBox" path="local://58">  </resource>
 				<resource  resource_type="DynamicFont" path="local://38">  </resource>
 				<resource  resource_type="StyleBox" path="local://52">  </resource>
 				<resource  resource_type="StyleBox" path="local://53">  </resource>
 				<resource  resource_type="StyleBox" path="local://54">  </resource>
 				<resource  resource_type="StyleBox" path="local://55">  </resource>
+				<resource  resource_type="StyleBox" path="local://59">  </resource>
 				<resource  resource_type="DynamicFont" path="local://39">  </resource>
 				<vector2> 3, 3 </vector2>
 				<real> 50 </real>
@@ -498,6 +530,7 @@
 				<real> 1490 </real>
 				<resource  resource_type="StyleBox" path="local://14">  </resource>
 				<resource  resource_type="StyleBox" path="local://13">  </resource>
+				<color> 1, 0.972549, 0.972549, 1 </color>
 				<real> 0.65 </real>
 				<vector2> 528.424, 1673.18 </vector2>
 				<resource  external="10">  </resource>
