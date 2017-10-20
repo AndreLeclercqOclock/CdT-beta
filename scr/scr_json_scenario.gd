@@ -136,8 +136,8 @@ func _ready():
 				get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 				label.show()
 				print("Affiche l'heure")
-				label.set_text(str(timeIG))
-				label.set("visibility/self_opacity",1)
+				label.set_text(str(" - ",timeIG))
+				label.set("visibility/opacity",1)
 				var labelH = label.get_text()
 				# Ecrit la ligne de dialogue
 				for y in range(dict._Dialogues[currentDial].content.size()):
@@ -146,24 +146,28 @@ func _ready():
 					var label = labelbase.duplicate()
 					print("Configuration du label")
 					label.set_name(str("label",y))
+					var labelbg = str("vbox/Mid/DialBox/VBoxMid/label",y,"/LabelBG")
+					print(labelbg)
 					get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 					label.show()
 					print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[y])
-					label.set_text(str(dict._Dialogues[currentDial].content[y]))
+					label.set_text(str(" ",dict._Dialogues[currentDial].content[y]))
 				# Ajustement de la taille du label
 					var labelsize = label.get_line_count()
 					if labelsize == 1:
-						label.set_size(Vector2(825,55))
-						label.set("rect/min_size",Vector2(825,55))
+						label.set_size(Vector2(925,50))
+						label.set("rect/min_size",Vector2(925,50))
+						get_node(labelbg).set("transform/scale",Vector2(1,1))
 					elif labelsize == 2:
-						label.set_size(Vector2(825,110))
-						label.set("rect/min_size",Vector2(825,110))
+						label.set_size(Vector2(925,110))
+						label.set("rect/min_size",Vector2(925,110))
+						get_node(labelbg).set("transform/scale",Vector2(1,2))
 				# Auto Scroll
 					yield(get_tree(), "idle_frame")
 					get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
 					vscroll = vscroll+label.get_size().height+20
 					get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
-					label.set("visibility/self_opacity",1)
+					label.set("visibility/opacity",1)
 		# Ecrit la ligne de réponse
 			elif dict._Dialogues[currentDial].ref == 2:
 			# Ecrit la ligne de Dialogue
@@ -180,11 +184,11 @@ func _ready():
 				var labelsize = label.get_line_count()
 				print(str("Nombre de ligne :",labelsize))
 				if labelsize == 1:
-					label.set_size(Vector2(825,55))
-					label.set("rect/min_size",Vector2(825,55))
+					label.set_size(Vector2(925,55))
+					label.set("rect/min_size",Vector2(925,55))
 				elif labelsize == 2:
-					label.set_size(Vector2(825,110))
-					label.set("rect/min_size",Vector2(825,110))
+					label.set_size(Vector2(925,110))
+					label.set("rect/min_size",Vector2(925,110))
 				print(str("Taille du label :",label.get_size()))
 			# Auto Scroll
 				print("Scroll")
@@ -272,7 +276,7 @@ func start():
 		get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 		label.show()
 		print("Affiche l'heure")
-		label.set_text(timeIG)
+		label.set_text(str(" - ",timeIG))
 		var labelH = label.get_text()
 # Auto Scroll
 		print("Scroll")
@@ -286,7 +290,7 @@ func start():
 		time_delay = 0.05
 		status()
 		for i in range(9):
-			label.set("visibility/self_opacity",visible)
+			label.set("visibility/opacity",visible)
 			visible = visible + 0.10
 			timer.set_wait_time(time_delay)
 			timer.start()
@@ -368,20 +372,24 @@ func start():
 			var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelDial")
 			var label = labelbase.duplicate()
 			print("Configuration du label")
-			label.set_name(str("label",dict._Dialogues[currentDial],i))
+			label.set_name(str("label",i))
+			var labelname = label.get_name()
+			var labelbg = str("vbox/Mid/DialBox/VBoxMid/",labelname,"/LabelBG")
 			get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 			label.show()
 			print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[i])
-			label.set_text(str(dict._Dialogues[currentDial].content[i]))
+			label.set_text(str(" ",dict._Dialogues[currentDial].content[i]))
 # Ajustement de la taille du label
 			var labelsize = label.get_line_count()
 			print(str("Nombre de ligne :",labelsize))
 			if labelsize == 1:
-				label.set_size(Vector2(825,55))
-				label.set("rect/min_size",Vector2(825,55))
+				label.set_size(Vector2(925,50))
+				label.set("rect/min_size",Vector2(925,50))
+				get_node(labelbg).set("transform/scale",Vector2(1,1))
 			elif labelsize == 2:
-				label.set_size(Vector2(825,110))
-				label.set("rect/min_size",Vector2(825,110))
+				label.set_size(Vector2(925,110))
+				label.set("rect/min_size",Vector2(925,110))
+				get_node(labelbg).set("transform/scale",Vector2(1,2))
 			print(str("Taille du label :",label.get_size()))
 
 
@@ -395,7 +403,7 @@ func start():
 			print("Affichage")
 			var visible = 0
 			for i in range(9):
-				label.set("visibility/self_opacity",visible)
+				label.set("visibility/opacity",visible)
 				visible = visible + 0.10
 				time_delay = 0.05
 				timer.set_wait_time(time_delay)
@@ -473,11 +481,11 @@ func start():
 		var labelsize = label.get_line_count()
 		print(str("Nombre de ligne :",labelsize))
 		if labelsize == 1:
-			label.set_size(Vector2(825,55))
-			label.set("rect/min_size",Vector2(825,55))
+			label.set_size(Vector2(925,55))
+			label.set("rect/min_size",Vector2(925,55))
 		elif labelsize == 2:
-			label.set_size(Vector2(825,110))
-			label.set("rect/min_size",Vector2(825,110))
+			label.set_size(Vector2(925,110))
+			label.set("rect/min_size",Vector2(925,110))
 		print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
@@ -544,11 +552,11 @@ func _on_Bouton0_pressed():
 	var labelsize = label.get_line_count()
 	print(str("Nombre de ligne :",labelsize))
 	if labelsize == 1:
-		label.set_size(Vector2(825,55))
-		label.set("rect/min_size",Vector2(825,55))
+		label.set_size(Vector2(925,55))
+		label.set("rect/min_size",Vector2(925,55))
 	elif labelsize == 2:
-		label.set_size(Vector2(825,110))
-		label.set("rect/min_size",Vector2(825,110))
+		label.set_size(Vector2(925,110))
+		label.set("rect/min_size",Vector2(925,110))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
@@ -604,11 +612,11 @@ func _on_Bouton1_pressed():
 	var labelsize = label.get_line_count()
 	print(str("Nombre de ligne :",labelsize))
 	if labelsize == 1:
-		label.set_size(Vector2(825,55))
-		label.set("rect/min_size",Vector2(825,55))
+		label.set_size(Vector2(925,55))
+		label.set("rect/min_size",Vector2(925,55))
 	elif labelsize == 2:
-		label.set_size(Vector2(825,110))
-		label.set("rect/min_size",Vector2(825,110))
+		label.set_size(Vector2(925,110))
+		label.set("rect/min_size",Vector2(925,110))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
@@ -665,11 +673,11 @@ func _on_Bouton2_pressed():
 	var labelsize = label.get_line_count()
 	print(str("Nombre de ligne :",labelsize))
 	if labelsize == 1:
-		label.set_size(Vector2(825,55))
-		label.set("rect/min_size",Vector2(825,55))
+		label.set_size(Vector2(925,55))
+		label.set("rect/min_size",Vector2(925,55))
 	elif labelsize == 2:
-		label.set_size(Vector2(825,110))
-		label.set("rect/min_size",Vector2(825,110))
+		label.set_size(Vector2(925,110))
+		label.set("rect/min_size",Vector2(925,110))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
@@ -727,11 +735,11 @@ func _on_Bouton3_pressed():
 	var labelsize = label.get_line_count()
 	print(str("Nombre de ligne :",labelsize))
 	if labelsize == 1:
-		label.set_size(Vector2(825,55))
-		label.set("rect/min_size",Vector2(825,55))
+		label.set_size(Vector2(925,55))
+		label.set("rect/min_size",Vector2(925,55))
 	elif labelsize == 2:
-		label.set_size(Vector2(825,110))
-		label.set("rect/min_size",Vector2(825,110))
+		label.set_size(Vector2(925,110))
+		label.set("rect/min_size",Vector2(925,110))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
