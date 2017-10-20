@@ -529,6 +529,12 @@ func start():
 # Gestion des boutons de choix multipes
 # BOUTON 0
 func _on_Bouton0_pressed():
+	get_node("vbox/Bot/VBoxBot/Bouton0/Sprite").set_texture(load("res://img/bouton_clic.jpg"))
+	print("Temporisation : ",time_delay," seconde(s)")
+	timer.set_wait_time(0.1)
+	timer.start()
+	yield(get_node("Timer"), "timeout")
+	print("Fin du timer")
 	clean()
 	print("Bouton n°0 activé")
 # AUTO SAVE
@@ -588,6 +594,12 @@ func _on_Bouton0_pressed():
 
 # BOUTON 1
 func _on_Bouton1_pressed():
+	get_node("vbox/Bot/VBoxBot/Bouton1/Sprite1").set_texture(load("res://img/bouton_clic.jpg"))
+	print("Temporisation : ",time_delay," seconde(s)")
+	timer.set_wait_time(0.1)
+	timer.start()
+	yield(get_node("Timer"), "timeout")
+	print("Fin du timer")
 	clean()
 	print("Bouton n°1 activé")
 # AUTO SAVE
@@ -648,6 +660,12 @@ func _on_Bouton1_pressed():
 
 # BOUTON 2
 func _on_Bouton2_pressed():
+	get_node("vbox/Bot/VBoxBot/Bouton2/Sprite2").set_texture(load("res://img/bouton_clic.jpg"))
+	print("Temporisation : ",time_delay," seconde(s)")
+	timer.set_wait_time(0.1)
+	timer.start()
+	yield(get_node("Timer"), "timeout")
+	print("Fin du timer")
 	clean()
 	print("Bouton n°2 activé")
 
@@ -710,6 +728,12 @@ func _on_Bouton2_pressed():
 
 # BOUTON 3
 func _on_Bouton3_pressed():
+	get_node("vbox/Bot/VBoxBot/Bouton3/Sprite3").set_texture(load("res://img/bouton_clic.jpg"))
+	print("Temporisation : ",time_delay," seconde(s)")
+	timer.set_wait_time(0.1)
+	timer.start()
+	yield(get_node("Timer"), "timeout")
+	print("Fin du timer")
 	clean()
 	print("Bouton n°3 activé")
 
