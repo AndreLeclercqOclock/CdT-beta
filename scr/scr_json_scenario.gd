@@ -313,12 +313,12 @@ func start():
 			get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 			label.show()
 			print("Message système 'Ecrit un message'")
-			label.set_text("écrit un message...")
+			#label.set_text("écrit un message...")
 # Auto Scroll
 			print("Scroll")
 			yield(get_tree(), "idle_frame")
 			get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-			vscroll = vscroll+label.get_size().height+20
+			vscroll = vscroll+10+20
 			get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
 # Affichage Smoothie
 			print("Affichage")
@@ -326,7 +326,7 @@ func start():
 			time_delay = 0.05
 			status()
 			for i in range(9):
-				label.set("visibility/self_opacity",visible)
+				label.set("visibility/opacity",visible)
 				visible = visible + 0.10
 				timer.set_wait_time(time_delay)
 				timer.start()
