@@ -855,8 +855,8 @@ func status():
 
 # Reset de la sauvegarde
 func _on_resetSave_pressed():
-	Directory.new().remove("user://savelogs.json")
-	get_tree().reload_current_scene()
+	get_tree().change_scene("res://scn/option.tscn")
+	global.backoption = "res://scn/base.tscn.xml"
 
 # SYSTEME DE SAUVEGARDE
 func system_save():
@@ -914,9 +914,6 @@ func system_exit():
 		dataRep = null
 		dataNextTime = unixTime + int(time_delay)
 		system_save()
-
-#func _exit_tree():
-#	system_exit()
 
 func _notification(notification_signal):
 	if notification_signal == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
