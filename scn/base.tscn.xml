@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="70" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
 	<ext_resource path="res://scr/scr_json_scenario.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture04.png" type="Texture" index="13"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture07.png" type="Texture" index="16"></ext_resource>
 	<ext_resource path="res://img/bouton_base.jpg" type="Texture" index="32"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture00.png" type="Texture" index="9"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture03.png" type="Texture" index="12"></ext_resource>
 	<ext_resource path="res://img/fond_message_large.png" type="Texture" index="7"></ext_resource>
-	<ext_resource path="res://img/avatar.png" type="Texture" index="3"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture05.png" type="Texture" index="14"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture17.png" type="Texture" index="26"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture02.png" type="Texture" index="11"></ext_resource>
-	<ext_resource path="res://img/footer.jpg" type="Texture" index="33"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture12.png" type="Texture" index="21"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture11.png" type="Texture" index="20"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture18.png" type="Texture" index="27"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture16.png" type="Texture" index="25"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" index="31"></ext_resource>
-	<ext_resource path="res://img/Fond_général.jpg" type="Texture" index="1"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture15.png" type="Texture" index="24"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture13.png" type="Texture" index="22"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture19.png" type="Texture" index="28"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture10.png" type="Texture" index="19"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture00.png" type="Texture" index="9"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture14.png" type="Texture" index="23"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture06.png" type="Texture" index="15"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture18.png" type="Texture" index="27"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture03.png" type="Texture" index="12"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture09.png" type="Texture" index="18"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture20.png" type="Texture" index="29"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture11.png" type="Texture" index="20"></ext_resource>
+	<ext_resource path="res://img/Fond_general.jpg" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture10.png" type="Texture" index="19"></ext_resource>
+	<ext_resource path="res://img/footer.jpg" type="Texture" index="33"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" index="31"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture06.png" type="Texture" index="15"></ext_resource>
 	<ext_resource path="res://img/header.jpg" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture02.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture17.png" type="Texture" index="26"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture12.png" type="Texture" index="21"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture16.png" type="Texture" index="25"></ext_resource>
+	<ext_resource path="res://img/avatar.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture13.png" type="Texture" index="22"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture05.png" type="Texture" index="14"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture08.png" type="Texture" index="17"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture01.png" type="Texture" index="10"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture21.png" type="Texture" index="30"></ext_resource>
-	<ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" index="8"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture01.png" type="Texture" index="10"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture04.png" type="Texture" index="13"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture07.png" type="Texture" index="16"></ext_resource>
 	<ext_resource path="res://font/DEJAVUSANSMONO.TTF" type="DynamicFontData" index="6"></ext_resource>
-	<ext_resource path="res://font/DEJAVUSANS.TTF" type="DynamicFontData" index="5"></ext_resource>
+	<ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" index="8"></ext_resource>
 	<ext_resource path="res://font/DEJAVUSANSCONDENSED-BOLD.TTF" type="DynamicFontData" index="4"></ext_resource>
+	<ext_resource path="res://font/DEJAVUSANS.TTF" type="DynamicFontData" index="5"></ext_resource>
 	<resource type="DynamicFont" path="local://32">
 		<int name="font/size"> 65 </int>
 		<bool name="font/use_mipmaps"> False </bool>
@@ -469,9 +469,9 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="1090"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 18, 2, -1, 15, 3, 0, 4, 0, 5, 1, 6, 2, 7, 3, 8, 3, 9, 4, 10, 4, 11, 4, 12, 4, 13, 5, 14, 5, 15, 5, 16, 5, 17, 6, 0, 1, 0, 19, 19, -1, 3, 20, 2, 21, 7, 22, 8, 0, 1, 0, 25, 23, -1, 9, 5, 1, 6, 1, 7, 3, 8, 3, 9, 9, 10, 9, 11, 10, 12, 11, 24, 12, 0, 3, 0, 27, 26, -1, 8, 5, 1, 6, 1, 7, 13, 8, 13, 9, 4, 10, 4, 11, 14, 12, 4, 0, 4, 0, 19, 19, -1, 3, 20, 2, 21, 15, 22, 16, 0, 4, 0, 31, 28, -1, 11, 5, 2, 6, 2, 7, 13, 8, 13, 9, 17, 10, 18, 11, 19, 12, 20, 22, 21, 29, 2, 30, 12, 0, 4, 0, 39, 32, -1, 15, 33, 3, 3, 3, 5, 1, 6, 2, 7, 13, 8, 13, 9, 22, 10, 23, 11, 24, 12, 25, 34, 26, 35, 2, 36, 27, 37, 28, 38, 29, 0, 4, 0, 39, 40, -1, 17, 33, 3, 41, 3, 3, 3, 4, 3, 5, 1, 6, 2, 7, 13, 8, 13, 9, 22, 10, 30, 11, 31, 12, 32, 34, 33, 35, 2, 36, 27, 37, 28, 38, 29, 0, 4, 0, 48, 42, -1, 14, 5, 2, 6, 2, 7, 13, 8, 12, 9, 34, 10, 35, 11, 36, 12, 37, 43, 38, 44, 39, 45, 13, 38, 29, 46, 12, 47, 28, 0, 4, 0, 48, 49, -1, 16, 50, 40, 5, 2, 6, 2, 7, 13, 8, 12, 9, 41, 10, 17, 11, 42, 12, 43, 43, 44, 44, 39, 45, 0, 51, 0, 38, 29, 46, 12, 47, 28, 0, 4, 0, 58, 52, -1, 14, 5, 1, 6, 2, 7, 13, 8, 13, 9, 45, 10, 46, 11, 47, 12, 48, 43, 49, 53, 1, 54, 13, 55, 50, 56, 51, 57, 1, 0, 3, 0, 27, 59, -1, 9, 60, 2, 5, 1, 6, 2, 7, 12, 8, 13, 9, 52, 10, 53, 11, 52, 12, 53, 0, 12, 0, 64, 61, -1, 13, 60, 2, 3, 0, 4, 0, 5, 1, 6, 2, 7, 12, 8, 12, 9, 54, 10, 55, 11, 56, 12, 57, 62, 1, 63, 2, 0, 13, 0, 25, 65, -1, 12, 60, 2, 66, 58, 5, 1, 6, 1, 7, 12, 8, 12, 9, 4, 10, 4, 11, 59, 12, 4, 67, 12, 24, 12, 0, 14, 0, 48, 68, -1, 19, 60, 2, 69, 1, 70, 4, 66, 60, 5, 2, 6, 2, 7, 12, 8, 3, 9, 61, 10, 4, 11, 62, 12, 63, 43, 64, 44, 65, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 15, 0, 19, 72, -1, 6, 73, 66, 20, 2, 21, 67, 74, 1, 22, 68, 75, 1, 0, 14, 0, 48, 76, -1, 19, 60, 2, 69, 1, 70, 4, 66, 69, 5, 2, 6, 2, 7, 12, 8, 3, 9, 70, 10, 4, 11, 71, 12, 72, 43, 73, 44, 74, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 17, 0, 83, 77, -1, 6, 21, 75, 78, 76, 79, 77, 80, 78, 81, 79, 82, 2, 0, 14, 0, 48, 84, -1, 20, 69, 1, 73, 4, 66, 69, 5, 2, 6, 2, 7, 3, 8, 3, 9, 4, 10, 80, 11, 59, 12, 81, 43, 73, 44, 82, 85, 3, 45, 0, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 14, 0, 48, 86, -1, 19, 60, 2, 69, 1, 70, 4, 66, 60, 5, 2, 6, 2, 7, 12, 8, 3, 9, 61, 10, 4, 11, 62, 12, 63, 43, 64, 44, 83, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 20, 0, 19, 72, -1, 6, 73, 66, 20, 2, 21, 84, 74, 1, 22, 68, 75, 1, 0, 14, 0, 48, 87, -1, 19, 69, 1, 73, 4, 66, 85, 5, 2, 6, 2, 7, 12, 8, 3, 9, 61, 10, 4, 11, 62, 12, 23, 43, 86, 44, 87, 45, 13, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 3, 0, 27, 88, -1, 9, 60, 2, 5, 1, 6, 1, 7, 13, 8, 13, 9, 4, 10, 88, 11, 14, 12, 88, 0, 23, 0, 25, 89, -1, 10, 5, 1, 6, 1, 7, 13, 8, 13, 9, 89, 10, 90, 11, 10, 12, 91, 67, 92, 24, 12, 0, 24, 0, 58, 90, -1, 22, 60, 2, 69, 1, 66, 93, 5, 2, 6, 2, 7, 12, 8, 12, 91, 4, 9, 94, 10, 4, 11, 95, 12, 96, 92, 97, 93, 98, 94, 99, 95, 100, 96, 101, 43, 102, 53, 1, 54, 12, 55, 50, 57, 1, 1, 97, 25, 0, 19, 98, -1, 4, 20, 2, 74, 1, 22, 103, 75, 1, 0, 24, 0, 58, 99, -1, 21, 60, 2, 69, 1, 66, 93, 5, 2, 6, 2, 7, 12, 8, 12, 9, 94, 10, 4, 11, 104, 12, 105, 92, 106, 93, 107, 94, 108, 95, 109, 96, 110, 43, 111, 53, 1, 54, 12, 55, 50, 57, 1, 1, 97, 27, 0, 19, 100, -1, 4, 20, 2, 21, 112, 22, 103, 75, 1, 0, 24, 0, 58, 101, -1, 21, 60, 2, 69, 1, 66, 93, 5, 2, 6, 2, 7, 12, 8, 12, 9, 94, 10, 4, 11, 104, 12, 105, 92, 113, 93, 114, 94, 115, 95, 116, 96, 117, 43, 118, 53, 1, 54, 12, 55, 50, 57, 1, 1, 97, 29, 0, 19, 102, -1, 4, 20, 2, 21, 112, 22, 103, 75, 1, 0, 24, 0, 58, 103, -1, 21, 60, 2, 69, 1, 66, 93, 5, 2, 6, 2, 7, 12, 8, 12, 9, 94, 10, 4, 11, 104, 12, 105, 92, 119, 93, 120, 94, 121, 95, 122, 96, 123, 43, 124, 53, 1, 54, 12, 55, 50, 57, 1, 1, 97, 31, 0, 19, 104, -1, 4, 20, 2, 21, 112, 22, 103, 75, 1, 0, 23, 0, 110, 105, -1, 17, 69, 1, 50, 125, 5, 1, 6, 2, 7, 13, 8, 13, 9, 72, 10, 126, 11, 127, 12, 128, 94, 129, 96, 130, 44, 131, 106, 66, 107, 13, 108, 1, 109, 132, 0, 23, 0, 19, 19, -1, 3, 20, 2, 21, 133, 22, 134, 0, 1, 0, 111, 111, -1, 4, 112, 0, 113, 29, 114, 2, 115, 1, 0 </int_array>
+			<int_array  len="1090"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 18, 2, -1, 15, 3, 0, 4, 0, 5, 1, 6, 2, 7, 3, 8, 3, 9, 4, 10, 4, 11, 4, 12, 4, 13, 5, 14, 5, 15, 5, 16, 5, 17, 6, 0, 1, 0, 19, 19, -1, 3, 20, 2, 21, 7, 22, 8, 0, 1, 0, 25, 23, -1, 9, 5, 1, 6, 1, 7, 3, 8, 3, 9, 9, 10, 9, 11, 10, 12, 11, 24, 12, 0, 3, 0, 27, 26, -1, 8, 5, 1, 6, 1, 7, 13, 8, 13, 9, 4, 10, 4, 11, 14, 12, 4, 0, 4, 0, 19, 19, -1, 3, 20, 2, 21, 15, 22, 16, 0, 4, 0, 31, 28, -1, 11, 5, 2, 6, 2, 7, 13, 8, 13, 9, 17, 10, 18, 11, 19, 12, 20, 22, 21, 29, 2, 30, 12, 0, 4, 0, 39, 32, -1, 15, 33, 3, 3, 3, 5, 1, 6, 2, 7, 13, 8, 13, 9, 22, 10, 23, 11, 24, 12, 25, 34, 26, 35, 2, 36, 27, 37, 28, 38, 29, 0, 4, 0, 39, 40, -1, 17, 33, 3, 41, 3, 3, 3, 4, 3, 5, 1, 6, 2, 7, 13, 8, 13, 9, 22, 10, 30, 11, 31, 12, 32, 34, 33, 35, 2, 36, 27, 37, 28, 38, 29, 0, 4, 0, 48, 42, -1, 14, 5, 2, 6, 2, 7, 13, 8, 12, 9, 34, 10, 35, 11, 36, 12, 37, 43, 38, 44, 39, 45, 13, 38, 29, 46, 12, 47, 28, 0, 4, 0, 48, 49, -1, 16, 50, 40, 5, 2, 6, 2, 7, 13, 8, 12, 9, 41, 10, 17, 11, 42, 12, 43, 43, 44, 44, 39, 45, 0, 51, 0, 38, 29, 46, 12, 47, 28, 0, 4, 0, 58, 52, -1, 14, 5, 1, 6, 2, 7, 13, 8, 13, 9, 45, 10, 46, 11, 47, 12, 48, 43, 49, 53, 1, 54, 13, 55, 50, 56, 51, 57, 1, 0, 3, 0, 27, 59, -1, 9, 60, 2, 5, 1, 6, 2, 7, 12, 8, 13, 9, 52, 10, 53, 11, 52, 12, 53, 0, 12, 0, 64, 61, -1, 13, 60, 2, 3, 0, 4, 0, 5, 1, 6, 2, 7, 12, 8, 12, 9, 54, 10, 55, 11, 56, 12, 57, 62, 1, 63, 2, 0, 13, 0, 25, 65, -1, 12, 60, 2, 66, 58, 5, 1, 6, 1, 7, 12, 8, 12, 9, 4, 10, 4, 11, 59, 12, 4, 67, 12, 24, 12, 0, 14, 0, 48, 68, -1, 19, 60, 2, 69, 1, 70, 4, 66, 60, 5, 2, 6, 2, 7, 12, 8, 3, 9, 61, 10, 4, 11, 62, 12, 63, 43, 64, 44, 65, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 15, 0, 19, 72, -1, 6, 73, 66, 20, 2, 21, 67, 74, 1, 22, 68, 75, 1, 0, 14, 0, 48, 76, -1, 19, 60, 2, 69, 1, 70, 4, 66, 69, 5, 2, 6, 2, 7, 12, 8, 3, 9, 70, 10, 4, 11, 71, 12, 72, 43, 73, 44, 74, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 17, 0, 83, 77, -1, 6, 21, 75, 78, 76, 79, 77, 80, 78, 81, 3, 82, 2, 0, 14, 0, 48, 84, -1, 20, 69, 1, 73, 4, 66, 69, 5, 2, 6, 2, 7, 3, 8, 3, 9, 4, 10, 79, 11, 59, 12, 80, 43, 73, 44, 81, 85, 3, 45, 0, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 14, 0, 48, 86, -1, 19, 60, 2, 69, 1, 70, 4, 66, 60, 5, 2, 6, 2, 7, 12, 8, 3, 9, 61, 10, 4, 11, 62, 12, 63, 43, 64, 44, 82, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 20, 0, 19, 72, -1, 6, 73, 66, 20, 2, 21, 83, 74, 1, 22, 68, 75, 1, 0, 14, 0, 48, 87, -1, 19, 69, 1, 73, 4, 66, 84, 5, 2, 6, 2, 7, 12, 8, 3, 9, 61, 10, 4, 11, 62, 12, 23, 43, 85, 44, 86, 45, 13, 51, 0, 71, 2, 38, 29, 46, 12, 47, 28, 0, 3, 0, 27, 88, -1, 9, 60, 2, 5, 1, 6, 1, 7, 13, 8, 13, 9, 4, 10, 87, 11, 14, 12, 87, 0, 23, 0, 25, 89, -1, 10, 5, 1, 6, 1, 7, 13, 8, 13, 9, 88, 10, 89, 11, 10, 12, 90, 67, 91, 24, 12, 0, 24, 0, 58, 90, -1, 22, 60, 2, 69, 1, 66, 92, 5, 2, 6, 2, 7, 12, 8, 12, 91, 4, 9, 93, 10, 4, 11, 94, 12, 95, 92, 96, 93, 97, 94, 98, 95, 99, 96, 100, 43, 101, 53, 1, 54, 12, 55, 50, 57, 1, 1, 97, 25, 0, 19, 98, -1, 4, 20, 2, 74, 1, 22, 102, 75, 1, 0, 24, 0, 58, 99, -1, 21, 60, 2, 69, 1, 66, 92, 5, 2, 6, 2, 7, 12, 8, 12, 9, 93, 10, 4, 11, 103, 12, 104, 92, 105, 93, 106, 94, 107, 95, 108, 96, 109, 43, 110, 53, 1, 54, 12, 55, 50, 57, 1, 1, 97, 27, 0, 19, 100, -1, 4, 20, 2, 21, 111, 22, 102, 75, 1, 0, 24, 0, 58, 101, -1, 21, 60, 2, 69, 1, 66, 92, 5, 2, 6, 2, 7, 12, 8, 12, 9, 93, 10, 4, 11, 103, 12, 104, 92, 112, 93, 113, 94, 114, 95, 115, 96, 116, 43, 117, 53, 1, 54, 12, 55, 50, 57, 1, 1, 97, 29, 0, 19, 102, -1, 4, 20, 2, 21, 111, 22, 102, 75, 1, 0, 24, 0, 58, 103, -1, 21, 60, 2, 69, 1, 66, 92, 5, 2, 6, 2, 7, 12, 8, 12, 9, 93, 10, 4, 11, 103, 12, 104, 92, 118, 93, 119, 94, 120, 95, 121, 96, 122, 43, 123, 53, 1, 54, 12, 55, 50, 57, 1, 1, 97, 31, 0, 19, 104, -1, 4, 20, 2, 21, 111, 22, 102, 75, 1, 0, 23, 0, 110, 105, -1, 17, 69, 1, 50, 124, 5, 1, 6, 2, 7, 13, 8, 13, 9, 72, 10, 125, 11, 126, 12, 127, 94, 128, 96, 129, 44, 130, 106, 66, 107, 13, 108, 1, 109, 131, 0, 23, 0, 19, 19, -1, 3, 20, 2, 21, 132, 22, 133, 0, 1, 0, 111, 111, -1, 4, 112, 0, 113, 29, 114, 2, 115, 1, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="135" shared="false">
+			<array  len="134" shared="false">
 				<int> 1 </int>
 				<bool> False </bool>
 				<bool> True </bool>
@@ -550,7 +550,6 @@
 				<vector2> 2, 2 </vector2>
 				<resource  resource_type="SpriteFrames" path="local://61">  </resource>
 				<string> "default" </string>
-				<int> 5 </int>
 				<real> 113 </real>
 				<real> 163 </real>
 				<color> 0.820313, 0.35368, 0.0737, 1 </color>
