@@ -162,6 +162,10 @@ func _ready():
 						label.set_size(Vector2(925,110))
 						label.set("rect/min_size",Vector2(925,110))
 						get_node(labelbg).set("transform/scale",Vector2(1,2))
+					elif labelsize == 3:
+						label.set_size(Vector2(925,165))
+						label.set("rect/min_size",Vector2(925,165))
+						get_node(labelbg).set("transform/scale",Vector2(1,3))
 				# Auto Scroll
 					yield(get_tree(), "idle_frame")
 					get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
@@ -189,6 +193,9 @@ func _ready():
 				elif labelsize == 2:
 					label.set_size(Vector2(925,110))
 					label.set("rect/min_size",Vector2(925,110))
+				elif labelsize == 3:
+					label.set_size(Vector2(925,165))
+					label.set("rect/min_size",Vector2(925,165))
 				print(str("Taille du label :",label.get_size()))
 			# Auto Scroll
 				print("Scroll")
@@ -390,6 +397,10 @@ func start():
 				label.set_size(Vector2(925,110))
 				label.set("rect/min_size",Vector2(925,110))
 				get_node(labelbg).set("transform/scale",Vector2(1,2))
+			elif labelsize == 3:
+				label.set_size(Vector2(925,165))
+				label.set("rect/min_size",Vector2(925,165))
+				get_node(labelbg).set("transform/scale",Vector2(1,3))
 			print(str("Taille du label :",label.get_size()))
 
 
@@ -564,6 +575,9 @@ func _on_Bouton0_pressed():
 	elif labelsize == 2:
 		label.set_size(Vector2(925,110))
 		label.set("rect/min_size",Vector2(925,110))
+	elif labelsize == 3:
+		label.set_size(Vector2(925,165))
+		label.set("rect/min_size",Vector2(925,165))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
@@ -601,6 +615,7 @@ func _on_Bouton1_pressed():
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	print("Fin du timer")
+	get_node("vbox/Bot/VBoxBot/Bouton1/Sprite1").set_texture(load("res://img/bouton_base.jpg"))
 	clean()
 	print("Bouton n°1 activé")
 # AUTO SAVE
@@ -630,6 +645,9 @@ func _on_Bouton1_pressed():
 	elif labelsize == 2:
 		label.set_size(Vector2(925,110))
 		label.set("rect/min_size",Vector2(925,110))
+	elif labelsize == 3:
+		label.set_size(Vector2(925,165))
+		label.set("rect/min_size",Vector2(925,165))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
@@ -667,6 +685,7 @@ func _on_Bouton2_pressed():
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	print("Fin du timer")
+	get_node("vbox/Bot/VBoxBot/Bouton2/Sprite2").set_texture(load("res://img/bouton_base.jpg"))
 	clean()
 	print("Bouton n°2 activé")
 
@@ -697,6 +716,9 @@ func _on_Bouton2_pressed():
 	elif labelsize == 2:
 		label.set_size(Vector2(925,110))
 		label.set("rect/min_size",Vector2(925,110))
+	elif labelsize == 3:
+		label.set_size(Vector2(925,165))
+		label.set("rect/min_size",Vector2(925,165))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
@@ -735,6 +757,7 @@ func _on_Bouton3_pressed():
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	print("Fin du timer")
+	get_node("vbox/Bot/VBoxBot/Bouton3/Sprite3").set_texture(load("res://img/bouton_base.jpg"))
 	clean()
 	print("Bouton n°3 activé")
 
@@ -765,6 +788,9 @@ func _on_Bouton3_pressed():
 	elif labelsize == 2:
 		label.set_size(Vector2(925,110))
 		label.set("rect/min_size",Vector2(925,110))
+	elif labelsize == 3:
+		label.set_size(Vector2(925,165))
+		label.set("rect/min_size",Vector2(925,165))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
