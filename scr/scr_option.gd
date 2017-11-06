@@ -3,11 +3,11 @@ extends Control
 
 func _on_Credits_pressed():
 	get_tree().change_scene("res://scn/credits.tscn")
-	global.backcredit = "res://scn/option.tscn"
+	GLOBAL.backcredit = "res://scn/option.tscn"
 
 
 func _on_Retour_pressed():
-	get_tree().change_scene(global.backoption)
+	get_tree().change_scene(GLOBAL.backoption)
 
 
 func _on_Youtube_pressed():

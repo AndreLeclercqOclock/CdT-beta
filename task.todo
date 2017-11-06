@@ -7,19 +7,19 @@
         2.8:
             ✔ Création d'une ToDo List @done (2017-11-6 16:10:49)
             ✔ Suppression des fichiers inutiles @done (2017-11-6 16:22:56)
-            ☐ Supression des morceaux de codes inutiles
-            ☐ Réorganisation des variables
-            ☐ Créations des fichiers auto load
-                ☐ Chargement du fichier de Config
-                ☐ Chargement du fichier localisation
-                ☐ Chargement du fichier de sauvegarde
-            ☐ Amélioration du fichier Config.json
-            ☐ Création du fichier de localisation
-            ☐ Optimisation des Nodes
-                ☐ Boutons de réponses
-                ☐ Label de texte (dialogues)
-                ☐ Label de texte (réponses)
-            ☐ OS. set_low_processor_usage_mode(true)
+            ✔ Supression des morceaux de codes inutiles @done (2017-11-6 16:33:32)
+            ✔ Réorganisation des variables @done (2017-11-6 16:35:54)
+            ☐ Créations des fichiers auto load @high @today 
+                ✔ Chargement du fichier de Config @done (2017-11-6 17:02:51)
+                ☐ Chargement du fichier localisation 
+                ☐ Chargement du fichier de sauvegarde 
+            ☐ Amélioration du fichier Config.json @low 
+            ☐ Création du fichier de localisation @low
+            ☐ Optimisation des Nodes @high 
+                ☐ Boutons de réponses @high 
+                ☐ Label de texte (dialogues) @high 
+                ☐ Label de texte (réponses) @high 
+            ☐ OS. set_low_processor_usage_mode(true) @low 
         
         2.9:
             ☐ Ajout message system

@@ -15,7 +15,6 @@ var time_delay = 1
 var content = null
 var dial = []
 var size = null
-var configFile = "config.json"
 var scenarioFile = null
 var version = null
 var stateSave = null
@@ -53,37 +52,15 @@ func _ready():
 	print("...................................................................................")
 	print("#### LANCEMENT DU JEU ####")
 
-# Récupération de la config
-	print("Récupération de la configutation")
-	print("Ouverture du JSON")
-	var file = File.new()
-	file.open(str("res://json/",configFile), File.READ)
-	dict.parse_json(file.get_as_text())
-	file.close()
-	print("Fermeture du JSON")
-# Récupération des variables dans le fichiers de configuration
-	scenarioFile = dict._Config.scenarioFile
-	currentDial = dict._Config.firstDial
-	firstDial = dict._Config.firstDial
-	stateSave = dict._Config.stateSave
-	version = dict._Config.version
-
-# Ouverture / Parse / Fermeture du fichier JSON
-	print("Initialisation du scénario")
-	print("Ouverture du JSON")
-	var file = File.new()
-	file.open(str("res://json/",scenarioFile), File.READ)
-	dict.parse_json(file.get_as_text())
-	file.close()
-	print("Fermeture du JSON")
 
 #	Vérification de l'existence du fichier de sauvegarde
 	print("Check du SaveLog")
 	var file2check = File.new()
 	var fileExists = file2check.file_exists("user://savelogs.json")
+	var dict = LOAD.dict
 # Chargement de la sauvegarde
 	print("Chargement de la sauvegarde")
-	if fileExists == true and stateSave == true:
+	if fileExists == true and LOAD.stateSave == true:
 # Récupération de la sauvegarde
 		print("Chargement de la sauvegarde")
 		print("Ouverture du JSON")
@@ -211,7 +188,7 @@ func _ready():
 
 # Affichage de la version de dev en JEU
 	print("Affichage version en jeu")
-	get_node("vbox/Top/version").set_text(str(version))
+	get_node("vbox/Top/version").set_text(str(LOAD.version))
 
 # Lancement du script
 	print("Lancement du script")
@@ -219,8 +196,8 @@ func _ready():
 		launch = 0
 		print("Auto-Sauvegarde")
 		unixTime = OS.get_unix_time()
-		time_delay = dict._Dialogues[currentDial].time
-		dataDial = currentDial
+		time_delay = LOAD.dict._Dialogues[LOAD.firstDial].time
+		dataDial = LOAD.firstDial
 		dataRep = null
 		dataNextTime = unixTime + int(time_delay)
 		currentNextTime = OS.get_unix_time()
@@ -255,6 +232,7 @@ func start():
 
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
+	dict = LOAD.dict
 	if dict._Dialogues[currentDial].ref == 1 :
 		print("#### DIALOGUES REF : 1 ####")
 # Horodatage
@@ -768,7 +746,7 @@ func status():
 # Reset de la sauvegarde
 func _on_resetSave_pressed():
 	get_tree().change_scene("res://scn/option.tscn")
-	global.backoption = "res://scn/base.tscn.xml"
+	GLOBAL.backoption = "res://scn/base.tscn.xml"
 
 # SYSTEME DE SAUVEGARDE
 func system_save():
