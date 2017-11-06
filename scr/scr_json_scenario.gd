@@ -12,30 +12,20 @@ var save = {}
 var currentDial = null
 var timer = null
 var time_delay = 1
-var image = null
-var video = null
 var content = null
-var wait = false
 var dial = []
 var size = null
-var online = 1
 var configFile = "config.json"
 var scenarioFile = null
 var version = null
 var stateSave = null
-var date = null
 var data = null
 var dataDial = null
 var dataRep = null
-var dataTime = null
 var firstDial = null
-var temp = null
 var currentRep = null
 var currentTime = null
 var vscroll = 50
-var currentHour = null
-var currentMinute = null
-var currentSecond = null
 var saveDial = []
 var saveRep = []
 var saveTime = []
@@ -47,8 +37,6 @@ var saveNextTime = []
 var dataNextTime = null
 var currentNextTime = 0
 var unixTime = OS.get_unix_time()
-var saveUnixTime = []
-var save_size = null
 var launch = 1
 var timeIG = null
 var calcultime = 0
@@ -244,8 +232,6 @@ func _ready():
 
 # Affichage de l'heure
 	set_process(true)
-
-
 
 func _process(delta):
 	saveTime = OS.get_unix_time()
@@ -462,79 +448,6 @@ func start():
 		timer.stop()
 		print("Fin de la création des boutons")
 
-# Gestion des dialogues de ref 3 [REPONSES VIA TEXTE PRECIS]
-	if dict._Dialogues[currentDial].ref == 3:
-		print("#### DIALOGUES REF : 3 ####")
-		print("Affichage boite de dialogue")
-		get_node("vbox/Bot/VBoxBot/TextEdit").show()
-		print("Nettoyage de la boite de dialogue")
-		get_node("vbox/Bot/VBoxBot/TextEdit").clear()
-		timer.stop()
-
-
-
-											## MESSAGES SYSTEM ##
-# Les messages systèmes
-	if dict._Dialogues[currentDial].ref == 4 :
-		print("#### DIALOGUES REF : 4 ####")
-# Ecrit la ligne de Dialogue
-		print("Création du label")
-		var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelSys")
-		var label = labelbase.duplicate()
-		print("Configuration du label")
-		label.set_name(str("labelsys",0))
-		get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
-		label.show()
-		print("Ecrit la ligne de dialogue : ",dict._Dialogues[currentDial].content[0])
-		label.set_text(str(dict._Dialogues[currentDial].content[0]))
-
-# Ajustement de la taille du label
-		var labelsize = label.get_line_count()
-		print(str("Nombre de ligne :",labelsize))
-		if labelsize == 1:
-			label.set_size(Vector2(925,55))
-			label.set("rect/min_size",Vector2(925,55))
-		elif labelsize == 2:
-			label.set_size(Vector2(925,110))
-			label.set("rect/min_size",Vector2(925,110))
-		print(str("Taille du label :",label.get_size()))
-
-# Auto Scroll
-		print("Scroll")
-		yield(get_tree(), "idle_frame")
-		get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-		vscroll = vscroll+label.get_size().height+20
-		get_node("vbox/Mid/DialBox").set_v_scroll(vscroll)
-# Affichage Smoothie
-		print("Affichage")
-		var visible = 0
-		for i in range(9):
-			label.set("visibility/self_opacity",visible)
-			visible = visible + 0.10
-			time_delay = 0.05
-			timer.set_wait_time(time_delay)
-			timer.start()
-			yield(get_node("Timer"), "timeout")
-
-			currentDial = dict._Dialogues[currentDial].next[0]
-			time_delay = dict._Dialogues[currentDial].time
-
-# Temporisation
-		time_delay = 0.75
-		print("Temporisation : ",time_delay," seconde(s)")
-		timer.set_wait_time(time_delay)
-		timer.start()
-		yield(get_node("Timer"), "timeout")
-		print("Fin du timer")
-		print("Fin de la ligne")
-
-# Clos la boucle et passe au next
-		timer.set_wait_time(time_delay)
-		print("Lancement du timer",time_delay," seconde(s)")
-		timer.start()
-		yield(get_node("Timer"), "timeout")
-		print("Fin du timer")
-		start()
 
 										## BOUTONS REPONSES ##
 # Gestion des boutons de choix multipes
@@ -828,38 +741,12 @@ func clean():
 		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(true)
 		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",false)
 
-									## BOITE DE DIALOGUE REPONSES ECRITE ##
-# Boite de dialogue pour écrire la réponse demandée.
-func _on_TextEdit_text_entered( text ):
-	if get_node("vbox/Bot/VBoxBot/TextEdit").get_text() == dict._Dialogues[currentDial].content[0]:
-		get_node("vbox/Mid/Dialogues").push_align(2)
-		get_node("vbox/Mid/Dialogues").add_text(str("Moi : ",dict._Dialogues[currentDial].content[0]))
-		get_node("vbox/Bot/VBoxBot/TextEdit").hide()
-		get_node("vbox/Bot/VBoxBot/TextEdit").clear()
-		currentDial = dict._Dialogues[currentDial].next[0]
-		time_delay = dict._Dialogues[currentDial].time
-		timer.set_wait_time(time_delay)
-		print("Lancement du timer",time_delay," seconde(s)")
-		timer.start()
-		yield(get_node("Timer"), "timeout")
-		print("Fin du timer")
-		start()
-	else:
-		currentDial = dict._Dialogues[currentDial].next[1]
-		time_delay = dict._Dialogues[currentDial].time
-		timer.set_wait_time(time_delay)
-		print("Lancement du timer",time_delay," seconde(s)")
-		timer.start()
-		yield(get_node("Timer"), "timeout")
-		print("Fin du timer")
-		start()
 
 		## FONCTIONS DIVERSES ##
 # Toutes les fonctions utiles
 func status():
 # Status de l'interlocuteur
 	print("Status de l'interlocuteur")
-	var statusOld = get_node("vbox/Top/Etat").get_text()
 	# En ligne
 	if time_delay <= 30:
 		get_node("vbox/Top/Etat").clear()
@@ -876,7 +763,6 @@ func status():
 	elif time_delay > 300:
 		get_node("vbox/Top/Etat").clear()
 		get_node("vbox/Top/Etat").add_text("Status : hors-ligne")
-	var statusNew = get_node("vbox/Top/Etat").get_text()
 	return
 
 # Reset de la sauvegarde

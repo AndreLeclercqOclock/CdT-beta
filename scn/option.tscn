@@ -9,7 +9,6 @@
 [ext_resource path="res://img/twitter.jpg" type="Texture" id=7]
 [ext_resource path="res://img/youtube.jpg" type="Texture" id=8]
 
-
 [sub_resource type="DynamicFont" id=1]
 
 font/size = 100
@@ -73,7 +72,6 @@ max_lines_visible = -1
 
 [node name="Reset" type="TextureButton" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -109,7 +107,6 @@ max_lines_visible = -1
 
 [node name="Site" type="TextureButton" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -199,7 +196,6 @@ params/stretch_mode = 0
 
 [node name="Retour" type="TextureButton" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -234,7 +230,6 @@ max_lines_visible = -1
 
 [node name="Quitter" type="TextureButton" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -269,7 +264,6 @@ max_lines_visible = -1
 
 [node name="Credits" type="TextureButton" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

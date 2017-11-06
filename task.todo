@@ -6,7 +6,7 @@
     Alpha:
         2.8:
             ✔ Création d'une ToDo List @done (2017-11-6 16:10:49)
-            ☐ Suppression des fichiers inutiles
+            ✔ Suppression des fichiers inutiles @done (2017-11-6 16:22:56)
             ☐ Supression des morceaux de codes inutiles
             ☐ Réorganisation des variables
             ☐ Créations des fichiers auto load
