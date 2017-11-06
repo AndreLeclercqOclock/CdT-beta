@@ -1,0 +1,26 @@
+    Project:
+        ☐ Alpha
+        ☐ Beta
+        ☐ Release
+
+    Alpha:
+        2.8:
+            ✔ Création d'une ToDo List @done (2017-11-6 16:10:49)
+            ☐ Suppression des fichiers inutiles
+            ☐ Supression des morceaux de codes inutiles
+            ☐ Réorganisation des variables
+            ☐ Créations des fichiers auto load
+                ☐ Chargement du fichier de Config
+                ☐ Chargement du fichier localisation
+                ☐ Chargement du fichier de sauvegarde
+            ☐ Amélioration du fichier Config.json
+            ☐ Création du fichier de localisation
+            ☐ Optimisation des Nodes
+                ☐ Boutons de réponses
+                ☐ Label de texte (dialogues)
+                ☐ Label de texte (réponses)
+            ☐ OS. set_low_processor_usage_mode(true)
+        
+        2.9:
+            ☐ Ajout message system
+            ☐ Optimiser le poids des ressources (images)
