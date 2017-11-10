@@ -13,6 +13,12 @@ var version = null
 
 var vscroll = null
 
+var ref = null
+var content = null
+var next = null
+var time = null
+var dial = null
+
 var currentDial = null
 var currentRep = null
 var currentNextTime = null
@@ -188,10 +194,17 @@ func _ready():
 		dataRep = null
 		dataNextTime = unixTime + int(time_delay)
 		currentNextTime = OS.get_unix_time()
+		currentDial = firstDial
 		#system_save()
 		#start()
 	elif fileExists == true and currentNextTime <= OS.get_unix_time():
 		currentDial = dict._Dialogues[currentDial].next
 		launch = 1
 	print("FIN DU SCRIPT !!!")
-	print(str("CURRENT DIAL : ",currentDial))
+
+	# Variables du scénario
+	ref = dict._Dialogues[currentDial].ref
+	content = dict._Dialogues[currentDial].content
+	next = dict._Dialogues[currentDial].next
+	time = dict._Dialogues[currentDial].time
+	dial = dict._Dialogues[currentDial]
