@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="70" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
 	<ext_resource path="res://scr/scr_json_scenario.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture18.png" type="Texture" index="27"></ext_resource>
 	<ext_resource path="res://img/bouton_base.jpg" type="Texture" index="32"></ext_resource>
-	<ext_resource path="res://img/header.jpg" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture15.png" type="Texture" index="24"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture12.png" type="Texture" index="21"></ext_resource>
+	<ext_resource path="res://img/fond_message_large.png" type="Texture" index="7"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture07.png" type="Texture" index="16"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture09.png" type="Texture" index="18"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture00.png" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture16.png" type="Texture" index="25"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture11.png" type="Texture" index="20"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture21.png" type="Texture" index="30"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture02.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" index="31"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture08.png" type="Texture" index="17"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture05.png" type="Texture" index="14"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture20.png" type="Texture" index="29"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture14.png" type="Texture" index="23"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture19.png" type="Texture" index="28"></ext_resource>
+	<ext_resource path="res://img/header.jpg" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://img/footer.jpg" type="Texture" index="33"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture18.png" type="Texture" index="27"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture03.png" type="Texture" index="12"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture17.png" type="Texture" index="26"></ext_resource>
 	<ext_resource path="res://img/Fond_general.jpg" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture08.png" type="Texture" index="17"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture14.png" type="Texture" index="23"></ext_resource>
-	<ext_resource path="res://img/fond_message_large.png" type="Texture" index="7"></ext_resource>
-	<ext_resource path="res://img/footer.jpg" type="Texture" index="33"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture06.png" type="Texture" index="15"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture05.png" type="Texture" index="14"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture15.png" type="Texture" index="24"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture13.png" type="Texture" index="22"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture16.png" type="Texture" index="25"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture07.png" type="Texture" index="16"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" index="31"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture20.png" type="Texture" index="29"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture10.png" type="Texture" index="19"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture19.png" type="Texture" index="28"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture12.png" type="Texture" index="21"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture09.png" type="Texture" index="18"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture00.png" type="Texture" index="9"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture11.png" type="Texture" index="20"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture21.png" type="Texture" index="30"></ext_resource>
-	<ext_resource path="res://img/load/activite_ecriture01.png" type="Texture" index="10"></ext_resource>
 	<ext_resource path="res://img/avatar.png" type="Texture" index="3"></ext_resource>
 	<ext_resource path="res://img/load/activite_ecriture04.png" type="Texture" index="13"></ext_resource>
-	<ext_resource path="res://font/DEJAVUSANSMONO.TTF" type="DynamicFontData" index="6"></ext_resource>
+	<ext_resource path="res://img/load/activite_ecriture01.png" type="Texture" index="10"></ext_resource>
 	<ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" index="8"></ext_resource>
-	<ext_resource path="res://font/DEJAVUSANS.TTF" type="DynamicFontData" index="5"></ext_resource>
 	<ext_resource path="res://font/DEJAVUSANSCONDENSED-BOLD.TTF" type="DynamicFontData" index="4"></ext_resource>
+	<ext_resource path="res://font/DEJAVUSANSMONO.TTF" type="DynamicFontData" index="6"></ext_resource>
+	<ext_resource path="res://font/DEJAVUSANS.TTF" type="DynamicFontData" index="5"></ext_resource>
 	<resource type="DynamicFont" path="local://32">
 		<int name="font/size"> 65 </int>
 		<bool name="font/use_mipmaps"> False </bool>

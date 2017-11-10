@@ -6,12 +6,17 @@ var launch = 1
 var dict = {}
 var save = {}
 
+var saveDial = []
+var saveRep = []
+var saveTime = []
+var saveNextTime = []
+
 var scenarioFile = null
 var firstDial = null
 var stateSave = null
 var version = null
 
-var vscroll = null
+var vscroll = 50
 
 var ref = null
 var content = null
@@ -24,11 +29,6 @@ var currentRep = null
 var currentNextTime = null
 var currentTime = null
 
-var saveTime = null
-var saveDial = null
-var saveRep = null
-var saveNextTime = null
-
 var dataDial = null
 var dataRep = null
 var dataNextTime = null
@@ -37,6 +37,8 @@ var timeIG = null
 var time_delay = null
 var file2check = File.new()
 var fileExists = file2check.file_exists("user://savelogs.json")
+
+var scene = preload("res://scn/base.tscn.xml")
 
 
 func _ready():
@@ -78,29 +80,29 @@ func _ready():
 		var file = File.new()
 		#file.open_encrypted_with_pass("user://savelogs.json", File.READ, "reg65er9g84zertg1zs9ert8g4")
 		file.open("user://savelogs.json", File.READ)
-		save.parse_json(file.get_line())
+		dict.parse_json(file.get_line())
 		file.close()
 		print("Fermeture du JSON")
 
 		print("Récupération des dialogues")
-		for i in save._Save.dial:
+		for i in dict._Save.dial:
 			saveDial.append(i)
 		print(saveDial)
 		print("Récupération des réponses")
-		for i in save._Save.rep:
+		for i in dict._Save.rep:
 			saveRep.append(i)
 		print(saveRep)
 		print("Récupération des Timers")
-		for i in save._Save.nexttime:
+		for i in dict._Save.nexttime:
 			saveNextTime.append(i)
 		print(saveNextTime)
 	# Réécriture de la Sauvegarde
 		print("Réécriture de la sauvegarde")
 		vscroll = get_node("vbox/Mid/DialBox").get_size().height
-		for i in range(save._Save.dial.size()):
-			currentDial = save._Save.dial[i]
-			currentRep = save._Save.rep[i]
-			currentNextTime = save._Save.nexttime[i]
+		for i in range(dict._Save.dial.size()):
+			currentDial = dict._Save.dial[i]
+			currentRep = dict._Save.rep[i]
+			currentNextTime = dict._Save.nexttime[i]
 			if dict._Dialogues[currentDial].ref == 1 and currentNextTime <= OS.get_unix_time():
 				# Ecrit l'heure
 				print("Horodatage")
@@ -203,8 +205,4 @@ func _ready():
 	print("FIN DU SCRIPT !!!")
 
 	# Variables du scénario
-	ref = dict._Dialogues[currentDial].ref
-	content = dict._Dialogues[currentDial].content
-	next = dict._Dialogues[currentDial].next
-	time = dict._Dialogues[currentDial].time
-	dial = dict._Dialogues[currentDial]
+	dial = dict._Dialogues
