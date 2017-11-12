@@ -12,7 +12,7 @@
             ☐ Créations des fichiers auto load @high @today 
                 ✔ Chargement du fichier de Config @done (2017-11-6 17:02:51)
                 ☐ Chargement du fichier localisation 
-                ☐ Chargement du fichier de sauvegarde 
+                ✔ Chargement du fichier de sauvegarde @done (2017-11-12 18:34:27)
             ☐ Amélioration du fichier Config.json @low 
             ☐ Création du fichier de localisation @low
             ☐ Optimisation des Nodes @high 
@@ -28,3 +28,4 @@
 
     Divers:
         ☐ Démarrer l'aventure <-> Continuer l'aventure.
+        ☐ Ajuster le système de calcule de l'heure.
