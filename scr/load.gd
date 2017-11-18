@@ -15,6 +15,7 @@ var scenarioFile = null
 var firstDial = null
 var stateSave = null
 var version = null
+var language = null
 
 var vscroll = 50
 
@@ -57,6 +58,7 @@ func _ready():
 	firstDial = dict._Config.firstDial
 	stateSave = dict._Config.stateSave
 	version = dict._Config.version
+	language = dict._Config.language
 
 	# Ouverture / Parse / Fermeture du fichier JSON
 	print("Initialisation du scénario")

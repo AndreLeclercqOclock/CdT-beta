@@ -3,6 +3,7 @@
     "scenarioFile" : "protoTest_fr.json",
     "firstDial" : "dial001",
     "stateSave" : true,
-    "version" : "Ver : alpha 2.7"
+    "version" : "Ver : alpha 2.7",
+    "language" : "langFR_fr.json"
   }
 }

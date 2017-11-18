@@ -1,0 +1,27 @@
+{
+    "_Language" : {
+        "Config" : {
+            "scenarioFile" : "protoTest_fr.json"
+        },
+        "Menu" : {
+            "text001" : "Démarrer l'aventure",
+            "text002" : "Continuer l'aventure",
+            "text003" : "Options",
+            "text004" : "Crédits"
+        },
+        "Game" : {
+            "text001" : "En Ligne",
+            "text002" : "Occupé",
+            "text003" : "Absent",
+            "text004" : "Hors Ligne",
+            "text005" : "Options",
+            "text006" : "Status"
+        },
+        "Options" : {
+            "text001" : "Effacer la sauvegarde",
+            "text002" : "Crédits",
+            "text003" : "Retour",
+            "text004" : "Quitter"
+        }
+    }
+  }

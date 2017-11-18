@@ -14,11 +14,11 @@
                 ☐ Chargement du fichier localisation 
                 ✔ Chargement du fichier de sauvegarde @done (2017-11-12 18:34:27)
             ☐ Amélioration du fichier Config.json @low 
-            ☐ Création du fichier de localisation @low
-            ☐ Optimisation des Nodes @high 
+            ☐ Création du fichier de localisation @High
+            ☐ Optimisation des Nodes @low 
                 ✔ Boutons de réponses @high @done (2017-11-12 20:57:31)
-                ☐ Label de texte (dialogues) @high
-                ☐ Label de texte (réponses) @high 
+                ☐ Label de texte (dialogues) @low 
+                ☐ Label de texte (réponses) @low 
             ☐ OS. set_low_processor_usage_mode(true) @low 
             ☐ Création d'une popup de chargement @low 
             ☐ Amélioration de la scrollbar @low
