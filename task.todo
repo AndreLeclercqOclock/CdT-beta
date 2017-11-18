@@ -9,18 +9,20 @@
             ✔ Suppression des fichiers inutiles @done (2017-11-6 16:22:56)
             ✔ Supression des morceaux de codes inutiles @done (2017-11-6 16:33:32)
             ✔ Réorganisation des variables @done (2017-11-6 16:35:54)
-            ☐ Créations des fichiers auto load @high @today 
+            ☐ Créations des fichiers auto load @high  
                 ✔ Chargement du fichier de Config @done (2017-11-6 17:02:51)
                 ☐ Chargement du fichier localisation 
                 ✔ Chargement du fichier de sauvegarde @done (2017-11-12 18:34:27)
             ☐ Amélioration du fichier Config.json @low 
             ☐ Création du fichier de localisation @low
             ☐ Optimisation des Nodes @high 
-                ☐ Boutons de réponses @high 
-                ☐ Label de texte (dialogues) @high 
+                ✔ Boutons de réponses @high @done (2017-11-12 20:57:31)
+                ☐ Label de texte (dialogues) @high
                 ☐ Label de texte (réponses) @high 
             ☐ OS. set_low_processor_usage_mode(true) @low 
-        
+            ☐ Création d'une popup de chargement @low 
+            ☐ Amélioration de la scrollbar @low
+
         2.9:
             ☐ Ajout message system
             ☐ Optimiser le poids des ressources (images)
@@ -29,3 +31,7 @@
     Divers:
         ☐ Démarrer l'aventure <-> Continuer l'aventure.
         ☐ Ajuster le système de calcule de l'heure.
+        ☐ Créations des Bookmarks
+        ☐ Réorganisation des scripts
+
+

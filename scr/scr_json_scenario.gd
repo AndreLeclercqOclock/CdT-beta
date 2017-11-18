@@ -85,7 +85,7 @@ func _ready():
 					get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 					label.show()
 					print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[y])
-					label.set_text(str(" ",LOAD.dial[LOAD.currentDial].content[y]))
+					label.set_text(str(LOAD.dial[LOAD.currentDial].content[y]))
 				# Ajustement de la taille du label
 					var labelsize = label.get_line_count()
 					if labelsize == 1:
@@ -308,7 +308,7 @@ func start():
 			get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 			label.show()
 			print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[i])
-			label.set_text(str(" ",LOAD.dial[LOAD.currentDial].content[i]))
+			label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
 # Ajustement de la taille du label
 			var labelsize = label.get_line_count()
 			print(str("Nombre de ligne :",labelsize))
@@ -384,7 +384,7 @@ func start():
 		print("Création de ",LOAD.dial[LOAD.currentDial].content.size()," bouton(s)")
 		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
 			print("Création du bouton n°",LOAD.dial[LOAD.currentDial].button[i])
-			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_text(str(LOAD.dial[LOAD.currentDial].button[i]))
+			get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(LOAD.dial[LOAD.currentDial].button[i]))
 			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
 			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
 		timer.stop()
@@ -395,13 +395,11 @@ func start():
 # Gestion des boutons de choix multipes
 # BOUTON 0
 func _on_Bouton0_pressed():
-	get_node("vbox/Bot/VBoxBot/Bouton0/Sprite0").set_texture(load("res://img/bouton_clic.jpg"))
 	print("Temporisation : ",LOAD.time_delay," seconde(s)")
 	timer.set_wait_time(0.1)
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	print("Fin du timer")
-	get_node("vbox/Bot/VBoxBot/Bouton0/Sprite0").set_texture(load("res://img/bouton_base.jpg"))
 	clean()
 	print("Bouton n°0 activé")
 # AUTO SAVE
@@ -464,13 +462,11 @@ func _on_Bouton0_pressed():
 
 # BOUTON 1
 func _on_Bouton1_pressed():
-	get_node("vbox/Bot/VBoxBot/Bouton1/Sprite1").set_texture(load("res://img/bouton_clic.jpg"))
 	print("Temporisation : ",LOAD.time_delay," seconde(s)")
 	timer.set_wait_time(0.1)
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	print("Fin du timer")
-	get_node("vbox/Bot/VBoxBot/Bouton1/Sprite1").set_texture(load("res://img/bouton_base.jpg"))
 	clean()
 	print("Bouton n°1 activé")
 # AUTO SAVE
@@ -534,13 +530,11 @@ func _on_Bouton1_pressed():
 
 # BOUTON 2
 func _on_Bouton2_pressed():
-	get_node("vbox/Bot/VBoxBot/Bouton2/Sprite2").set_texture(load("res://img/bouton_clic.jpg"))
 	print("Temporisation : ",LOAD.time_delay," seconde(s)")
 	timer.set_wait_time(0.1)
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	print("Fin du timer")
-	get_node("vbox/Bot/VBoxBot/Bouton2/Sprite2").set_texture(load("res://img/bouton_base.jpg"))
 	clean()
 	print("Bouton n°2 activé")
 
@@ -606,13 +600,11 @@ func _on_Bouton2_pressed():
 
 # BOUTON 3
 func _on_Bouton3_pressed():
-	get_node("vbox/Bot/VBoxBot/Bouton3/Sprite3").set_texture(load("res://img/bouton_clic.jpg"))
 	print("Temporisation : ",time_delay," seconde(s)")
 	timer.set_wait_time(0.1)
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	print("Fin du timer")
-	get_node("vbox/Bot/VBoxBot/Bouton3/Sprite3").set_texture(load("res://img/bouton_base.jpg"))
 	clean()
 	print("Bouton n°3 activé")
 
@@ -679,7 +671,7 @@ func _on_Bouton3_pressed():
 func clean():
 	print("Suppression des boutons")
 	for i in range(4):
-		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_text("")
+		get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text("")
 		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(true)
 		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",false)
 
