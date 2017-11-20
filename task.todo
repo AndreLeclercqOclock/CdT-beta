@@ -9,12 +9,12 @@
             ✔ Suppression des fichiers inutiles @done (2017-11-6 16:22:56)
             ✔ Supression des morceaux de codes inutiles @done (2017-11-6 16:33:32)
             ✔ Réorganisation des variables @done (2017-11-6 16:35:54)
-            ☐ Créations des fichiers auto load @high  
+            ✔ Créations des fichiers auto load @done (2017-11-20 15:22:24)
                 ✔ Chargement du fichier de Config @done (2017-11-6 17:02:51)
-                ☐ Chargement du fichier localisation 
+                ✔ Chargement du fichier localisation @done (2017-11-20 15:22:20)
                 ✔ Chargement du fichier de sauvegarde @done (2017-11-12 18:34:27)
             ☐ Amélioration du fichier Config.json @low 
-            ☐ Création du fichier de localisation @High
+            ✔ Création du fichier de localisation @done (2017-11-20 15:22:17)
             ✔ Optimisation du code (réponses) @done (2017-11-20 13:12:20)
             ☐ Optimisation des Nodes @low 
                 ✔ Boutons de réponses @high @done (2017-11-12 20:57:31)
