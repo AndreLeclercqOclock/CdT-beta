@@ -40,6 +40,7 @@ var timezone = 0
 var realtime = 0
 var buttonPressed = null
 
+############################### PREPARATION DU SCRIPT ###############################
 
 # Ready
 func _ready():
@@ -419,8 +420,7 @@ func _on_Bouton3_pressed():
 	buttonPressed = 3
 	button_action()
 
-
-		## FONCTIONS DIVERSES ##
+############################### LES FONCTIONS ###############################
 # Toutes les fonctions utiles
 # Fonctions
 
