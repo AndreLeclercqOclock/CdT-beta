@@ -56,7 +56,6 @@ margin/right = 598.0
 margin/bottom = 75.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Démarrer l'aventure"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -64,7 +63,6 @@ max_lines_visible = -1
 
 [node name="Option" type="TextureButton" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -93,7 +91,6 @@ margin/right = 269.0
 margin/bottom = 94.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Options"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -101,7 +98,6 @@ max_lines_visible = -1
 
 [node name="Credits" type="TextureButton" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -130,7 +126,6 @@ margin/right = 263.0
 margin/bottom = 95.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Crédits"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0

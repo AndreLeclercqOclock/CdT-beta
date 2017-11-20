@@ -5,17 +5,20 @@ var launch = 1
 
 var dict = {}
 var save = {}
+var lang = {}
 
 var saveDial = []
 var saveRep = []
 var saveTime = []
 var saveNextTime = []
+var menuText = []
+var gameText = []
+var optionsText = []
 
 var scenarioFile = null
 var firstDial = null
 var stateSave = null
 var version = null
-var language = null
 
 var vscroll = 50
 
@@ -43,6 +46,10 @@ var fileExists = file2check.file_exists("user://savelogs.json")
 var scene = null
 var node = null
 
+var languageCode = 0
+var languageSelect = null
+
+
 func _ready():
     # Récupération de la config
 	print("Récupération de la configutation")
@@ -54,12 +61,36 @@ func _ready():
 	print("Fermeture du JSON")
 
 	# Récupération des variables dans le fichiers de configuration
-	scenarioFile = dict._Config.scenarioFile
 	firstDial = dict._Config.firstDial
 	stateSave = dict._Config.stateSave
 	version = dict._Config.version
-	language = dict._Config.language
 
+	if languageCode == 0:
+		languageSelect = dict._Config.FR_fr
+	elif languageCode == 1:
+		languageSelect = dict._Config.EN_en
+
+	
+	# Récupération de la langue
+	print("Récupération de la configutation")
+	print("Ouverture du JSON")
+	var file = File.new()
+	file.open(str("res://json/",languageSelect), File.READ)
+	lang.parse_json(file.get_as_text())
+	file.close()
+	print("Fermeture du JSON")
+
+	for i in lang._Language.Menu:
+		menuText.append(i)
+
+	for i in lang._Language.Game:
+		gameText.append(i)
+
+	for i in lang._Language.Options:
+		optionsText.append(i)
+	
+	scenarioFile = lang._Language.Config.scenarioFile
+	
 	# Ouverture / Parse / Fermeture du fichier JSON
 	print("Initialisation du scénario")
 	print("Ouverture du JSON")
@@ -69,12 +100,14 @@ func _ready():
 	file.close()
 	print("Fermeture du JSON")
 	
-	#	Vérification de l'existence du fichier de sauvegarde
+	
+
+	# Vérification de l'existence du fichier de sauvegarde
 	print("Check du SaveLog")
 	file2check = File.new()
 	fileExists = file2check.file_exists("user://savelogs.json")
 	
-	#dict = LOAD.dict
+
 	# Chargement de la sauvegarde
 	print("Chargement de la sauvegarde")
 	
@@ -104,6 +137,8 @@ func _ready():
 		loadsave = dict._Save
 	
 
+	
+
 	# Lancement du script
 	print("Lancement du script")
 	if fileExists == false:
@@ -117,9 +152,9 @@ func _ready():
 		currentNextTime = OS.get_unix_time()
 		currentDial = firstDial
 		
-
-	print("FIN DU SCRIPT !!!")
-
 	# Variables du scénario
 	dial = dict._Dialogues
+
+	print("FIN DU SCRIPT !!!")
+	
 	

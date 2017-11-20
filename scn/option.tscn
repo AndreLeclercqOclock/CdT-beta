@@ -72,6 +72,7 @@ max_lines_visible = -1
 
 [node name="Reset" type="TextureButton" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -99,7 +100,6 @@ margin/top = 20.0
 margin/right = 706.0
 margin/bottom = 60.0
 custom_fonts/font = SubResource( 2 )
-text = "Effacer la sauvegarde"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -107,6 +107,7 @@ max_lines_visible = -1
 
 [node name="Site" type="TextureButton" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -196,6 +197,7 @@ params/stretch_mode = 0
 
 [node name="Retour" type="TextureButton" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -223,13 +225,13 @@ margin/top = 26.0
 margin/right = 391.0
 margin/bottom = 86.0
 custom_fonts/font = SubResource( 3 )
-text = "Retour"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
 [node name="Quitter" type="TextureButton" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -257,13 +259,13 @@ margin/top = 26.0
 margin/right = 391.0
 margin/bottom = 86.0
 custom_fonts/font = SubResource( 3 )
-text = "Quitter"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
 [node name="Credits" type="TextureButton" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -291,7 +293,6 @@ margin/top = 22.0
 margin/right = 483.0
 margin/bottom = 62.0
 custom_fonts/font = SubResource( 4 )
-text = "Crédits"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

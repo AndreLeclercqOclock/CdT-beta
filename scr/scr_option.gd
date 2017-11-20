@@ -1,5 +1,10 @@
 extends Control
 
+func _ready():
+	get_node("Reset/Label1").set_text(str(LOAD.optionsText[0]))
+	get_node("Credits/Label").set_text(str(LOAD.optionsText[1]))
+	get_node("Retour/Label").set_text(str(LOAD.optionsText[2]))
+	get_node("Quitter/Label").set_text(str(LOAD.optionsText[3]))
 
 func _on_Credits_pressed():
 	get_tree().change_scene("res://scn/credits.tscn")

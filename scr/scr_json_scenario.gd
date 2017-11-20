@@ -51,6 +51,7 @@ func _ready():
 	print("...................................................................................")
 	print("#### LANCEMENT DU JEU ####")
 
+
 	if LOAD.fileExists == true and LOAD.stateSave == true:
 		# Réécriture de la Sauvegarde
 		print("Réécriture de la sauvegarde")
@@ -509,19 +510,19 @@ func status():
 	# En ligne
 	if LOAD.time_delay <= 30:
 		get_node("vbox/Top/Etat").clear()
-		get_node("vbox/Top/Etat").add_text("Status : en ligne")
+		get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",LOAD.gameText[0]))
 	# Occupé
 	elif LOAD.time_delay > 30 and LOAD.time_delay <= 180:
 		get_node("vbox/Top/Etat").clear()
-		get_node("vbox/Top/Etat").add_text("Status : occupé")
+		get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",LOAD.gameText[1]))
 	# Absent
 	elif LOAD.time_delay > 180 and LOAD.time_delay <= 300:
 		get_node("vbox/Top/Etat").clear()
-		get_node("vbox/Top/Etat").add_text("Status : absent")
+		get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",LOAD.gameText[2]))
 	# Hors Ligne
 	elif LOAD.time_delay > 300:
 		get_node("vbox/Top/Etat").clear()
-		get_node("vbox/Top/Etat").add_text("Status : hors-ligne")
+		get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",LOAD.gameText[3]))
 	return
 
 # Reset Save
