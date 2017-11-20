@@ -20,7 +20,7 @@
                 ☐ Label de texte (dialogues) @low 
                 ☐ Label de texte (réponses) @low 
             ☐ OS. set_low_processor_usage_mode(true) @low 
-            ☐ Création d'une popup de chargement @low 
+            ✔ Création d'une popup de chargement @done (2017-11-18 11:01:24)
             ☐ Amélioration de la scrollbar @low
 
         2.9:
