@@ -22,6 +22,7 @@
             ☐ OS. set_low_processor_usage_mode(true) @low 
             ✔ Création d'une popup de chargement @done (2017-11-18 11:01:24)
             ☐ Amélioration de la scrollbar @low
+            ☐ Debug double réponse @high @today 
 
         2.9:
             ☐ Ajout message system

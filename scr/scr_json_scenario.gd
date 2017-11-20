@@ -6,8 +6,7 @@
 
 extends Control
 
-# Déclaration de Variables
-#var dict = {}
+# Variables
 var save = {}
 var currentDial = null
 var timer = null
@@ -34,15 +33,15 @@ var minuteIG = "0"
 var secondIG = "0"
 var saveNextTime = []
 var dataNextTime = null
-#var currentNextTime = 0
 var unixTime = OS.get_unix_time()
 var timeIG = null
 var calcultime = 0
 var timezone = 0
 var realtime = 0
+var buttonPressed = null
 
 
-# Initialisation des bases du script
+# Ready
 func _ready():
 	print("Crédits")
 	print("Script par LEIFER KOPF // leifer.kopf@gmail.com")
@@ -169,6 +168,7 @@ func _ready():
 # Affichage de l'heure
 	set_process(true)
 
+# Process
 func _process(delta):
 	LOAD.saveTime = OS.get_unix_time()
 	system_time()
@@ -184,6 +184,7 @@ func _process(delta):
 
 ############################### DEBUT DU SCRIPT ###############################
 # Fonction ou reboucle le script quand il repart du début
+# Start
 func start():
 	print("Début du processus d'interpretation du JSON")
 	status()
@@ -191,7 +192,7 @@ func start():
 
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
-
+# Dialogues 
 	if LOAD.dial[LOAD.currentDial].ref == 1 :
 		print("#### DIALOGUES REF : 1 ####")
 # Horodatage
@@ -345,9 +346,8 @@ func start():
 				yield(get_node("Timer"), "timeout")
 
 # Temporisation
-			LOAD.time_delay = 0.75
-			print("Temporisation : ",LOAD.time_delay," seconde(s)")
-			timer.set_wait_time(LOAD.time_delay)
+			print("Temporisation : 0.75 seconde(s)")
+			timer.set_wait_time(0.75)
 			timer.start()
 			yield(get_node("Timer"), "timeout")
 			print("Fin du timer")
@@ -378,6 +378,7 @@ func start():
 			system_save()
 
 									## REPONSES ##
+# Réponses
 # Gestion des dialogues de ref 2 [REPONSES CHOIX MULTIPLES]
 	if LOAD.dial[LOAD.currentDial].ref == 2 :
 		print("#### DIALOGUES REF : 2 ####")
@@ -392,156 +393,56 @@ func start():
 
 
 										## BOUTONS REPONSES ##
+# Boutons
 # Gestion des boutons de choix multipes
 # BOUTON 0
 func _on_Bouton0_pressed():
-	print("Temporisation : ",LOAD.time_delay," seconde(s)")
-	timer.set_wait_time(0.1)
-	timer.start()
-	yield(get_node("Timer"), "timeout")
-	print("Fin du timer")
-	clean()
 	print("Bouton n°0 activé")
-# AUTO SAVE
-	LOAD.dataDial = LOAD.currentDial
-	LOAD.dataRep = 0
-	LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
-	system_save()
-
-# Ecrit la ligne de Dialogue
-	print("Création du label")
-	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
-	var label = labelbase.duplicate()
-	print("Configuration du label")
-	label.set_name(str("label",LOAD.dial[LOAD.currentDial],0))
-	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
-	label.show()
-	print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[0])
-	label.set_text(str(LOAD.dial[LOAD.currentDial].content[0]))
-
-# Ajustement de la taille du label
-	var labelsize = label.get_line_count()
-	print(str("Nombre de ligne :",labelsize))
-	if labelsize == 1:
-		label.set_size(Vector2(925,55))
-		label.set("rect/min_size",Vector2(925,55))
-	elif labelsize == 2:
-		label.set_size(Vector2(925,110))
-		label.set("rect/min_size",Vector2(925,110))
-	elif labelsize == 3:
-		label.set_size(Vector2(925,165))
-		label.set("rect/min_size",Vector2(925,165))
-	print(str("Taille du label :",label.get_size()))
-
-# Auto Scroll
-	print("Scroll")
-	yield(get_tree(), "idle_frame")
-	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-	LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
-	get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
-# Affichage Smoothie
-	print("Affichage")
-	var visible = 0
-	for i in range(9):
-		label.set("visibility/self_opacity",visible)
-		visible = visible + 0.10
-		LOAD.time_delay = 0.05
-		timer.set_wait_time(LOAD.time_delay)
-		timer.start()
-		yield(get_node("Timer"), "timeout")
-
-	LOAD.currentDial = LOAD.dial[LOAD.currentDial].next[0]
-	LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
-	#AUTO SAVE
-	LOAD.dataDial = LOAD.currentDial
-	LOAD.dataRep = null
-	LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
-	system_save()
-	LOAD.launch = 1
-	print("Lancement du timer",LOAD.time_delay," seconde(s)")
+	buttonPressed = 0
+	button_action()
 
 # BOUTON 1
 func _on_Bouton1_pressed():
-	print("Temporisation : ",LOAD.time_delay," seconde(s)")
-	timer.set_wait_time(0.1)
-	timer.start()
-	yield(get_node("Timer"), "timeout")
-	print("Fin du timer")
-	clean()
 	print("Bouton n°1 activé")
-# AUTO SAVE
-	print("Auto-Sauvegarde")
-	LOAD.dataDial = LOAD.currentDial
-	LOAD.dataRep = 1
-	LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
-	system_save()
-
-# Ecrit la ligne de Dialogue
-	print("Création du label")
-	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
-	var label = labelbase.duplicate()
-	print("Configuration du label")
-	label.set_name(str("label",LOAD.dial[LOAD.currentDial],1))
-	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
-	label.show()
-	print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[1])
-	label.set_text(str(LOAD.dial[LOAD.currentDial].content[1]))
-
-# Ajustement de la taille du label
-	var labelsize = label.get_line_count()
-	print(str("Nombre de ligne :",labelsize))
-	if labelsize == 1:
-		label.set_size(Vector2(925,55))
-		label.set("rect/min_size",Vector2(925,55))
-	elif labelsize == 2:
-		label.set_size(Vector2(925,110))
-		label.set("rect/min_size",Vector2(925,110))
-	elif labelsize == 3:
-		label.set_size(Vector2(925,165))
-		label.set("rect/min_size",Vector2(925,165))
-	print(str("Taille du label :",label.get_size()))
-
-# Auto Scroll
-	print("Scroll")
-	yield(get_tree(), "idle_frame")
-	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-	LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
-	get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
-# Affichage Smoothie
-	print("Affichage")
-	var visible = 0
-	for i in range(9):
-		label.set("visibility/self_opacity",visible)
-		visible = visible + 0.10
-		LOAD.time_delay = 0.05
-		timer.set_wait_time(LOAD.time_delay)
-		timer.start()
-		yield(get_node("Timer"), "timeout")
-
-	LOAD.currentDial = LOAD.dial[LOAD.currentDial].next[1]
-	LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
-	#AUTO SAVE
-	LOAD.dataDial = LOAD.currentDial
-	LOAD.dataRep = null
-	LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
-	system_save()
-	LOAD.launch = 1
-	print("Lancement du timer",LOAD.time_delay," seconde(s)")
+	buttonPressed = 1
+	button_action()
 
 # BOUTON 2
 func _on_Bouton2_pressed():
-	print("Temporisation : ",LOAD.time_delay," seconde(s)")
+	print("Bouton n°2 activé")
+	buttonPressed = 2
+	button_action()
+
+# BOUTON 3
+func _on_Bouton3_pressed():
+	print("Bouton n°3 activé")
+	buttonPressed = 3
+	button_action()
+
+
+		## FONCTIONS DIVERSES ##
+# Toutes les fonctions utiles
+# Fonctions
+
+# Nettoyage des boutons inutiles
+# Clean
+func clean():
 	timer.set_wait_time(0.1)
 	timer.start()
 	yield(get_node("Timer"), "timeout")
 	print("Fin du timer")
-	clean()
-	print("Bouton n°2 activé")
+	print("Suppression des boutons")
+	for i in range(4):
+		get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text("")
+		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(true)
+		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",false)
+	return
 
-# AUTO SAVE
-	print("Auto-Sauvegarde")
+# Button Action
+func button_action():
+	# AUTO SAVE
 	LOAD.dataDial = LOAD.currentDial
-	LOAD.dataRep = 2
+	LOAD.dataRep = buttonPressed
 	LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
 	system_save()
 
@@ -550,81 +451,24 @@ func _on_Bouton2_pressed():
 	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
 	var label = labelbase.duplicate()
 	print("Configuration du label")
-	label.set_name(str("label",LOAD.dial[LOAD.currentDial],2))
+	label.set_name(str("label",LOAD.dial[LOAD.currentDial],buttonPressed))
 	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 	label.show()
-	print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[2])
-	label.set_text(str(LOAD.dial[LOAD.currentDial].content[2]))
+	print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[buttonPressed])
+	label.set_text(str(LOAD.dial[LOAD.currentDial].content[buttonPressed]))
 
-# Ajustement de la taille du label
-	var labelsize = label.get_line_count()
-	print(str("Nombre de ligne :",labelsize))
-	if labelsize == 1:
-		label.set_size(Vector2(925,55))
-		label.set("rect/min_size",Vector2(925,55))
-	elif labelsize == 2:
-		label.set_size(Vector2(925,110))
-		label.set("rect/min_size",Vector2(925,110))
-	elif labelsize == 3:
-		label.set_size(Vector2(925,165))
-		label.set("rect/min_size",Vector2(925,165))
-	print(str("Taille du label :",label.get_size()))
-
-# Auto Scroll
-	print("Scroll")
-	yield(get_tree(), "idle_frame")
-	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-	LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
-	get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
-# Affichage Smoothie
-	print("Affichage")
-	var visible = 0
-	for i in range(9):
-		label.set("visibility/self_opacity",visible)
-		visible = visible + 0.10
-		LOAD.time_delay = 0.05
-		timer.set_wait_time(LOAD.time_delay)
-		timer.start()
-		yield(get_node("Timer"), "timeout")
-
-
-	LOAD.currentDial = LOAD.dial[LOAD.currentDial].next[2]
+	LOAD.currentDial = LOAD.dial[LOAD.currentDial].next[buttonPressed]
 	LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
 	#AUTO SAVE
 	LOAD.dataDial = LOAD.currentDial
 	LOAD.dataRep = null
 	LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
+	LOAD.currentNextTime = LOAD.dataNextTime
 	system_save()
 	LOAD.launch = 1
-	print("Lancement du timer",LOAD.time_delay," seconde(s)")
 
-# BOUTON 3
-func _on_Bouton3_pressed():
-	print("Temporisation : ",time_delay," seconde(s)")
-	timer.set_wait_time(0.1)
-	timer.start()
-	yield(get_node("Timer"), "timeout")
-	print("Fin du timer")
+	print("Nettoyage des boutons")
 	clean()
-	print("Bouton n°3 activé")
-
-# AUTO SAVE
-	print("Auto-Sauvegarde")
-	LOAD.dataDial = LOAD.currentDial
-	LOAD.dataRep = 3
-	LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
-	system_save()
-
-# Ecrit une ligne de Dialogue
-	print("Création du label")
-	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
-	var label = labelbase.duplicate()
-	print("Configuration du label")
-	label.set_name(str("label",LOAD.dial[LOAD.currentDial],3))
-	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
-	label.show()
-	print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[3])
-	label.set_text(str(LOAD.dial[LOAD.currentDial].content[3]))
 
 # Ajustement de la taille du label
 	var labelsize = label.get_line_count()
@@ -656,28 +500,9 @@ func _on_Bouton3_pressed():
 		timer.set_wait_time(time_delay)
 		timer.start()
 		yield(get_node("Timer"), "timeout")
+	return
 
-	LOAD.currentDial = LOAD.dial[LOAD.currentDial].next[3]
-	LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
-	#AUTO SAVE
-	LOAD.dataDial = LOAD.currentDial
-	LOAD.dataRep = null
-	LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
-	system_save()
-	LOAD.launch = 1
-	print("Lancement du timer",LOAD.time_delay," seconde(s)")
-
-# Nettoyage des boutons inutiles
-func clean():
-	print("Suppression des boutons")
-	for i in range(4):
-		get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text("")
-		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(true)
-		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",false)
-
-
-		## FONCTIONS DIVERSES ##
-# Toutes les fonctions utiles
+# Status
 func status():
 # Status de l'interlocuteur
 	print("Status de l'interlocuteur")
@@ -699,11 +524,13 @@ func status():
 		get_node("vbox/Top/Etat").add_text("Status : hors-ligne")
 	return
 
+# Reset Save
 # Reset de la sauvegarde
 func _on_resetSave_pressed():
 	get_tree().change_scene("res://scn/option.tscn")
 	GLOBAL.backoption = "res://scn/base.tscn.xml"
 
+# System Save
 # SYSTEME DE SAUVEGARDE
 func system_save():
 	print("Auto-Sauvegarde")
@@ -721,6 +548,7 @@ func system_save():
 	file.close()
 	return
 
+# System Time
 func system_time():
 	# Récupération de l'heure du système
 	var timeSys = OS.get_datetime_from_unix_time(LOAD.saveTime)
@@ -750,6 +578,7 @@ func system_time():
 	LOAD.timeIG = str(hourIG,":",minuteIG,":",secondIG)
 	return
 
+# System Exit
 func system_exit():
 	var nextDial = LOAD.dial[LOAD.currentDial].next
 	if LOAD.dial[LOAD.currentDial].ref == 1 and LOAD.dial[nextDial].ref == 1:
