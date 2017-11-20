@@ -52,7 +52,7 @@ var languageSelect = null
 
 func _ready():
 	# Low CPU usage
-	OS.set_low_processor_usage_mode(true)
+	#OS.set_low_processor_usage_mode(true)
 
     # Récupération de la config
 	print("Récupération de la configutation")
