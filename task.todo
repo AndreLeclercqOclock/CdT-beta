@@ -13,27 +13,28 @@
                 ✔ Chargement du fichier de Config @done (2017-11-6 17:02:51)
                 ✔ Chargement du fichier localisation @done (2017-11-20 15:22:20)
                 ✔ Chargement du fichier de sauvegarde @done (2017-11-12 18:34:27)
-            ☐ Amélioration du fichier Config.json @low 
+            ✔ Amélioration du fichier Config.json @done (2017-11-20 15:23:40)
             ✔ Création du fichier de localisation @done (2017-11-20 15:22:17)
             ✔ Optimisation du code (réponses) @done (2017-11-20 13:12:20)
-            ☐ Optimisation des Nodes @low 
+            ✔ Optimisation des Nodes @done (2017-11-20 15:28:56)
                 ✔ Boutons de réponses @high @done (2017-11-12 20:57:31)
-                ☐ Label de texte (dialogues) @low 
-                ☐ Label de texte (réponses) @low 
-            ☐ OS. set_low_processor_usage_mode(true) @low 
+                ✔ Label de texte (dialogues) @done (2017-11-20 15:28:53)
+                ✔ Label de texte (réponses) @done (2017-11-20 15:28:55)
+            ✔ OS. set_low_processor_usage_mode(true) @done (2017-11-20 15:27:41)
             ✔ Création d'une popup de chargement @done (2017-11-18 11:01:24)
-            ☐ Amélioration de la scrollbar @low
             ✔ Debug double réponse @done (2017-11-20 13:28:14)
+            ✔ Démarrer l'aventure <-> Continuer l'aventure. @done (2017-11-20 15:23:47)
+            ✔ Créations des Bookmarks @done (2017-11-20 15:23:53)
+            ✔ Réorganisation des scripts @done (2017-11-20 15:23:55)
 
         2.9:
             ☐ Ajout message system
             ☐ Optimiser le poids des ressources (images)
-
+            ☐ Amélioration de la scrollbar 
+            ☐ Ajuster le système de calcule de l'heure.
+            ☐ Optimiser le fond des messages de dialogues
 
     Divers:
-        ☐ Démarrer l'aventure <-> Continuer l'aventure.
-        ☐ Ajuster le système de calcule de l'heure.
-        ☐ Créations des Bookmarks
-        ☐ Réorganisation des scripts
+        
 
 
