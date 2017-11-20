@@ -378,7 +378,7 @@
 				<vector2> 2, 2 </vector2>
 				<resource  resource_type="SpriteFrames" path="local://61">  </resource>
 				<string> "default" </string>
-				<int> 21 </int>
+				<int> 11 </int>
 				<real> 113 </real>
 				<real> 163 </real>
 				<color> 0.820313, 0.35368, 0.0737, 1 </color>

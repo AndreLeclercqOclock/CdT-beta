@@ -583,11 +583,10 @@ func system_exit():
 	var nextDial = LOAD.dial[LOAD.currentDial].next
 	if LOAD.dial[LOAD.currentDial].ref == 1 and LOAD.dial[nextDial].ref == 1:
 		print("Auto-Sauvegarde")
-		unixTime = OS.get_unix_time()
-		time_delay = LOAD.dict._Dialogues[nextDial].time
-		dataDial = nextDial
-		dataRep = null
-		dataNextTime = unixTime + int(time_delay)
+		LOAD.time_delay = LOAD.dial[nextDial].time
+		LOAD.dataDial = nextDial
+		LOAD.dataRep = null
+		LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
 		system_save()
 
 func _notification(notification_signal):
