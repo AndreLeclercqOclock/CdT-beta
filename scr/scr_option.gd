@@ -29,6 +29,7 @@ func _on_Site_pressed():
 func _on_Reset_pressed():
 	Directory.new().remove("user://savelogs.json")
 	get_tree().reload_current_scene()
+	LOAD._ready()
 
 
 func _on_Quitter_pressed():

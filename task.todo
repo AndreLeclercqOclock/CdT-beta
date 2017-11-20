@@ -15,6 +15,7 @@
                 ✔ Chargement du fichier de sauvegarde @done (2017-11-12 18:34:27)
             ☐ Amélioration du fichier Config.json @low 
             ☐ Création du fichier de localisation @High
+            ✔ Optimisation du code (réponses) @done (2017-11-20 13:12:20)
             ☐ Optimisation des Nodes @low 
                 ✔ Boutons de réponses @high @done (2017-11-12 20:57:31)
                 ☐ Label de texte (dialogues) @low 
@@ -22,7 +23,7 @@
             ☐ OS. set_low_processor_usage_mode(true) @low 
             ✔ Création d'une popup de chargement @done (2017-11-18 11:01:24)
             ☐ Amélioration de la scrollbar @low
-            ☐ Debug double réponse @high @today 
+            ✔ Debug double réponse @done (2017-11-20 13:28:14)
 
         2.9:
             ☐ Ajout message system
