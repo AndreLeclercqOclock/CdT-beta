@@ -51,6 +51,10 @@ func _ready():
 	print("...................................................................................")
 	print("#### LANCEMENT DU JEU ####")
 
+	# Texte Popup Options
+	get_node("Popup/VBox/Reset/Label").set_text(str(LOAD.optionsText[0]))
+	get_node("Popup/VBox/Retour/Label").set_text(str(LOAD.optionsText[2]))
+	get_node("Popup/VBox/Quitter/Label").set_text(str(LOAD.optionsText[3]))
 
 	if LOAD.fileExists == true and LOAD.stateSave == true:
 		# Réécriture de la Sauvegarde
@@ -528,8 +532,9 @@ func status():
 # Reset Save
 # Reset de la sauvegarde
 func _on_resetSave_pressed():
-	get_tree().change_scene("res://scn/option.tscn")
-	GLOBAL.backoption = "res://scn/base.tscn.xml"
+	#get_tree().change_scene("res://scn/option.tscn")
+	#GLOBAL.backoption = "res://scn/base.tscn.xml"
+	get_node("Popup").popup()
 
 # System Save
 # SYSTEME DE SAUVEGARDE
@@ -593,3 +598,27 @@ func system_exit():
 func _notification(notification_signal):
 	if notification_signal == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
 		system_exit()
+
+func _on_Reset_pressed():
+	Directory.new().remove("user://savelogs.json")
+	get_tree().reload_current_scene()
+	LOAD._ready()
+
+
+func _on_Site_pressed():
+	OS.shell_open("http://www.chroniquesdetalos.com")
+
+func _on_Twitter_pressed():
+	OS.shell_open("https://twitter.com/ChroniquesTalos")
+
+func _on_Facebook_pressed():
+	OS.shell_open("https://www.facebook.com/chroniquesdetalos/")
+
+func _on_Youtube_pressed():
+	OS.shell_open("https://www.youtube.com/channel/UCi_4enQ0P4U7XKdcP9340cg")
+
+func _on_Retour_pressed():
+	get_node("Popup").hide()
+
+func _on_Quitter_pressed():
+	get_tree().quit()

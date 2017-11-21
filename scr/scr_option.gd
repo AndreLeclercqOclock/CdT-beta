@@ -13,6 +13,7 @@ func _on_Credits_pressed():
 
 func _on_Retour_pressed():
 	get_tree().change_scene(GLOBAL.backoption)
+	LOAD._ready()
 
 
 func _on_Youtube_pressed():
@@ -35,7 +36,6 @@ func _on_Reset_pressed():
 	Directory.new().remove("user://savelogs.json")
 	get_tree().reload_current_scene()
 	LOAD._ready()
-
 
 func _on_Quitter_pressed():
 	get_tree().change_scene("res://scn/base.tscn.xml")

@@ -139,19 +139,15 @@ func _ready():
 		print(saveNextTime)
 		loadsave = dict._Save
 	
-
-	
-
 	# Lancement du script
 	print("Lancement du script")
 	if fileExists == false:
 		launch = 0
 		print("Auto-Sauvegarde")
-		var unixTime = OS.get_unix_time()
 		time_delay = dict._Dialogues[firstDial].time
 		dataDial = firstDial
 		dataRep = null
-		dataNextTime = unixTime + int(time_delay)
+		dataNextTime = OS.get_unix_time() + int(time_delay)
 		currentNextTime = OS.get_unix_time()
 		currentDial = firstDial
 		
