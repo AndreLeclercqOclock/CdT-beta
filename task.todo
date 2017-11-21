@@ -26,9 +26,9 @@
             ✔ Démarrer l'aventure <-> Continuer l'aventure. @done (2017-11-20 15:23:47)
             ✔ Créations des Bookmarks @done (2017-11-20 15:23:53)
             ✔ Réorganisation des scripts @done (2017-11-20 15:23:55)
-            ☐ DEBUG DE LA VERSION 2.8 @high @today 
-                ☐ Options Popup (scene game)
-                ☐ Options Popup (scene menu)
+            ✔ DEBUG DE LA VERSION 2.8 @done (2017-11-21 13:50:35)
+                ✔ Options Popup (scene game) @done (2017-11-21 13:50:18)
+                ✔ Options Popup (scene menu) @done (2017-11-21 13:50:19)
 
         2.9:
             ☐ Ajout message system
