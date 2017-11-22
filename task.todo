@@ -32,16 +32,17 @@
 
         2.9:
             ☐ Ajout message system
-            ☐ Optimiser le poids des ressources (images)
-            ☐ Test sur OS.low
-            ☐ Amélioration de la scrollbar 
-            ☐ Ajuster le système de calcule de l'heure.
+                ☐ Ref 3 JSON
+                ☐ Label spécifique
             ☐ Optimiser le fond des messages de dialogues
             ☐ Ajouter sons
             ☐ Ajouter ambiance sonore
             ☐ Optimiser les morts
 
     Divers:
-        
+        ☐ Test sur OS.low
+        ☐ Ajuster le système de calcule de l'heure.
+        ☐ Amélioration de la scrollbar
+        ☐ Optimiser le poids des ressources (images)
 
 
