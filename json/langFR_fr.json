@@ -2,8 +2,8 @@
     "_Language" : {
         "Config" : {
             "scenarioFile" : [
-                "chapter01_FR.json",
-                "chapter02_FR.json"
+                "chapter01_FR",
+                "chapter02_FR"
             ]
         },
         "Menu" : [

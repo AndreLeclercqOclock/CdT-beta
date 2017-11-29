@@ -36,6 +36,7 @@ var currentRep = null
 var currentNextTime = null
 var currentTime = null
 
+var data = null
 var dataDial = null
 var dataRep = null
 var dataNextTime = null
@@ -135,11 +136,13 @@ func _ready():
 		file.close()
 		chapterSave = 1
 
-	
+		
+
+func _load_chapter():
 	# Vérification de l'existence du fichier de sauvegarde
 	print("Check du SaveLog")
 	file2check = File.new()
-	fileExists = file2check.file_exists("user://saveglobal.json")
+	fileExists = file2check.file_exists(str("user://save",scenarioFile,".json"))
 
 	if fileExists == true and stateSave == true:
 		# Récupération de la sauvegarde globale
@@ -147,7 +150,7 @@ func _ready():
 		print("Ouverture du JSON")
 		var file = File.new()
 		#file.open_encrypted_with_pass("user://savelogs.json", File.READ, "reg65er9g84zertg1zs9ert8g4")
-		file.open("user://saveglobal.json", File.READ)
+		file.open(str("user://save",scenarioFile,".json"), File.READ)
 		dict.parse_json(file.get_line())
 		file.close()
 		print("Fermeture du JSON")
@@ -170,7 +173,7 @@ func _ready():
 	print("Initialisation du scénario")
 	print("Ouverture du JSON")
 	var file = File.new()
-	file.open(str("res://json/",scenarioFile), File.READ)
+	file.open(str("res://json/",scenarioFile,".json"), File.READ)
 	dict.parse_json(file.get_as_text())
 	file.close()
 	print("Fermeture du JSON")
@@ -186,7 +189,7 @@ func _ready():
 		dataNextTime = OS.get_unix_time() + int(time_delay)
 		currentNextTime = OS.get_unix_time()
 		currentDial = firstDial
-		
+
 	# Variables du scénario
 	dial = dict._Dialogues
 

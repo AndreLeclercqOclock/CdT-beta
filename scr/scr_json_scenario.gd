@@ -549,7 +549,7 @@ func system_save():
 	data = {"_Save" : {"dial" : LOAD.saveDial,"rep" : LOAD.saveRep, "nexttime" : LOAD.saveNextTime}}
 	var file = File.new()
 	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-	file.open("user://savelogs.json", File.WRITE)
+	file.open(str("user://save",LOAD.scenarioFile,".json"), File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 	return
