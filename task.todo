@@ -31,18 +31,34 @@
                 ✔ Options Popup (scene menu) @done (2017-11-21 13:50:19)
 
         2.9:
-            ☐ Ajout message system
-                ☐ Ref 3 JSON
+            ☐ Ajout messages systems
+                ☐ Message système "changement de status"
+                ☐ Message système "connexion perdue"
                 ☐ Label spécifique
+            ☐ Ajout du témoin de couleur pour le status de l'interlocuteur
             ☐ Optimiser le fond des messages de dialogues
-            ☐ Ajouter sons
-            ☐ Ajouter ambiance sonore
-            ☐ Optimiser les morts
+            ☐ Sons & Musiques
+                ☐ Ajouter sons (wav)
+                ☐ Ajouter ambiance sonore (wav)
+                ☐ Adaptation du JSON scénario pour les trigger sons
+            ☐ Optimiser les "morts"
+            ☐ Ajuster le système de calcule de l'heure.
+            ☐ Optimiser le poids des ressources
+                ☐ Images
+                ☐ Sons
+            ☐ Ajustement des menus
+                ☐ Menu choix des chapitres
+            ☐ Réorganisation des fichiers JSON et des scripts
+            ☐ Ecran de chargement au lancement de l'aventure
+            ☐ Réécriture des crédits
+            ☐ Ecriture des remericements
+
+            
+
 
     Divers:
         ☐ Test sur OS.low
-        ☐ Ajuster le système de calcule de l'heure.
         ☐ Amélioration de la scrollbar
-        ☐ Optimiser le poids des ressources (images)
+
 
 

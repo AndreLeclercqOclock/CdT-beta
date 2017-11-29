@@ -848,7 +848,7 @@
    "content": [
     "Ah, voilà.",
     "L’illustration de ce passage représente le même disque bleu que sur la frise.",
-    "Je pense qu'il d'agit du moyen qu'employait Jean de Malemont pour s'échapper."
+    "Je pense qu'il s'agit du moyen qu'employait Jean de Malemont pour s'échapper."
    ],
    "next": "dial904"
   },
@@ -1813,7 +1813,7 @@
   },
   "rep9999": {
    "ref": 2,
-   "time": 10,
+   "time": 1,
    "button": ["Rejouer"],
    "content": ["Rejouer"],
    "next": [
@@ -1823,7 +1823,7 @@
   },
   "rep9998": {
    "ref": 2,
-   "time": 10,
+   "time": 1,
    "button": ["Rejouer"],
    "content": ["Rejouer"],
    "next": [
@@ -1833,7 +1833,7 @@
   },
   "rep9997": {
    "ref": 2,
-   "time": 10,
+   "time": 1,
    "button": ["Rejouer"],
    "content": ["Rejouer"],
    "next": [
@@ -1843,7 +1843,7 @@
   },
   "rep9996": {
    "ref": 2,
-   "time": 10,
+   "time": 1,
    "button": ["Rejouer"],
    "content": ["Rejouer"],
    "next": [

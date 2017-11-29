@@ -14,11 +14,13 @@ var saveNextTime = []
 var menuText = []
 var gameText = []
 var optionsText = []
+var chapter = []
 
 var scenarioFile = null
 var firstDial = null
 var stateSave = null
 var version = null
+var chapterSave = null
 
 var vscroll = 50
 
@@ -41,13 +43,15 @@ var dataNextTime = null
 var timeIG = null
 var time_delay = 0
 var file2check = File.new()
-var fileExists = file2check.file_exists("user://savelogs.json")
+var fileExists = file2check.file_exists("user://saveglobal.json")
 
 var scene = null
 var node = null
 
 var languageCode = 0
 var languageSelect = null
+
+var chapterNumber = 0
 
 
 func _ready():
@@ -92,40 +96,63 @@ func _ready():
 	for i in lang._Language.Options:
 		optionsText.append(i)
 	
-	scenarioFile = lang._Language.Config.scenarioFile
+	for i in lang._Language.Config.scenarioFile:
+		chapter.append(i)
+		chapterNumber = chapterNumber+1
 	
-	# Ouverture / Parse / Fermeture du fichier JSON
-	print("Initialisation du scénario")
-	print("Ouverture du JSON")
-	var file = File.new()
-	file.open(str("res://json/",scenarioFile), File.READ)
-	dict.parse_json(file.get_as_text())
-	file.close()
-	print("Fermeture du JSON")
-	
-	
+		
 
 	# Vérification de l'existence du fichier de sauvegarde
 	print("Check du SaveLog")
 	file2check = File.new()
-	fileExists = file2check.file_exists("user://savelogs.json")
+	fileExists = file2check.file_exists("user://saveglobal.json")
 	
 
 	# Chargement de la sauvegarde
 	print("Chargement de la sauvegarde")
 	
 	if fileExists == true and stateSave == true:
-	# Récupération de la sauvegarde
+	# Récupération de la sauvegarde globale
 		print("Chargement de la sauvegarde")
 		print("Ouverture du JSON")
 		var file = File.new()
 		#file.open_encrypted_with_pass("user://savelogs.json", File.READ, "reg65er9g84zertg1zs9ert8g4")
-		file.open("user://savelogs.json", File.READ)
+		file.open("user://saveglobal.json", File.READ)
 		dict.parse_json(file.get_line())
 		file.close()
 		print("Fermeture du JSON")
 
-		print("Récupération des dialogues")
+		print("Récupération du chapitre en cours")
+		chapterSave = dict._SaveGlobal.chapter
+
+
+	if fileExists == false:
+		data = {"_SaveGlobal" : {"chapter" : 1}}
+		var file = File.new()
+		#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+		file.open("user://saveglobal.json", File.WRITE)
+		file.store_line(data.to_json())
+		file.close()
+		chapterSave = 1
+
+	
+	# Vérification de l'existence du fichier de sauvegarde
+	print("Check du SaveLog")
+	file2check = File.new()
+	fileExists = file2check.file_exists("user://saveglobal.json")
+
+	if fileExists == true and stateSave == true:
+		# Récupération de la sauvegarde globale
+		print("Chargement de la sauvegarde")
+		print("Ouverture du JSON")
+		var file = File.new()
+		#file.open_encrypted_with_pass("user://savelogs.json", File.READ, "reg65er9g84zertg1zs9ert8g4")
+		file.open("user://saveglobal.json", File.READ)
+		dict.parse_json(file.get_line())
+		file.close()
+		print("Fermeture du JSON")
+		
+		print("Récupération du dialogue en cours")
 		for i in dict._Save.dial:
 			saveDial.append(i)
 		print(saveDial)
@@ -138,6 +165,15 @@ func _ready():
 			saveNextTime.append(i)
 		print(saveNextTime)
 		loadsave = dict._Save
+
+	# Ouverture / Parse / Fermeture du fichier JSON
+	print("Initialisation du scénario")
+	print("Ouverture du JSON")
+	var file = File.new()
+	file.open(str("res://json/",scenarioFile), File.READ)
+	dict.parse_json(file.get_as_text())
+	file.close()
+	print("Fermeture du JSON")
 	
 	# Lancement du script
 	print("Lancement du script")
