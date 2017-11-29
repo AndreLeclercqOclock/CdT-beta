@@ -1,13 +1,17 @@
 {
     "_Language" : {
         "Config" : {
-            "scenarioFile" : "protoTest_fr.json"
+            "scenarioFile" : [
+                "chapter01_FR.json",
+                "chapter02_FR.json"
+            ]
         },
         "Menu" : [
             "Démarrer l'aventure",
             "Continuer l'aventure",
             "Options",
-            "Crédits"
+            "Crédits",
+            "Chapitre"
         ]
         ,
         "Game" :[ 
