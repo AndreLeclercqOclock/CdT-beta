@@ -200,6 +200,7 @@ func start():
 # Gestion des dialogues de ref 1 [DIALOGUES]
 # Dialogues 
 	if LOAD.dial[LOAD.currentDial].ref == 1 :
+		last_dial()
 		print("#### DIALOGUES REF : 1 ####")
 # Horodatage
 		print("Horodatage")
@@ -582,6 +583,18 @@ func system_time():
 		secondIG = secondSys
 
 	LOAD.timeIG = str(hourIG,":",minuteIG,":",secondIG)
+	return
+
+# Vérification FIN
+func last_dial():
+	if LOAD.loadChapter >= LOAD.chapterSave and LOAD.currentDial == LOAD.lastDial:
+		LOAD.chapterSave = LOAD.chapterSave+1
+		LOAD.data = {"_SaveGlobal" : {"chapter" : LOAD.chapterSave}}
+		var file = File.new()
+		#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+		file.open("user://saveglobal.json", File.WRITE)
+		file.store_line(LOAD.data.to_json())
+		file.close()
 	return
 
 # System Exit

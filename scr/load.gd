@@ -5,7 +5,9 @@ var launch = 1
 
 var dict = {}
 var save = {}
+var saveg = {}
 var lang = {}
+var conf = {}
 
 var saveDial = []
 var saveRep = []
@@ -18,6 +20,7 @@ var chapter = []
 
 var scenarioFile = null
 var firstDial = null
+var lastDial = null
 var stateSave = null
 var version = null
 var chapterSave = null
@@ -53,6 +56,7 @@ var languageCode = 0
 var languageSelect = null
 
 var chapterNumber = 0
+var loadChapter = null
 
 
 func _ready():
@@ -64,19 +68,18 @@ func _ready():
 	print("Ouverture du JSON")
 	var file = File.new()
 	file.open(str("res://json/config.json"), File.READ)
-	dict.parse_json(file.get_as_text())
+	conf.parse_json(file.get_as_text())
 	file.close()
 	print("Fermeture du JSON")
 
 	# Récupération des variables dans le fichiers de configuration
-	firstDial = dict._Config.firstDial
-	stateSave = dict._Config.stateSave
-	version = dict._Config.version
+	stateSave = conf._Config.stateSave
+	version = conf._Config.version
 
 	if languageCode == 0:
-		languageSelect = dict._Config.FR_fr
+		languageSelect = conf._Config.FR_fr
 	elif languageCode == 1:
-		languageSelect = dict._Config.EN_en
+		languageSelect = conf._Config.EN_en
 
 	
 	# Récupération de la langue
@@ -119,12 +122,12 @@ func _ready():
 		var file = File.new()
 		#file.open_encrypted_with_pass("user://savelogs.json", File.READ, "reg65er9g84zertg1zs9ert8g4")
 		file.open("user://saveglobal.json", File.READ)
-		dict.parse_json(file.get_line())
+		saveg.parse_json(file.get_line())
 		file.close()
 		print("Fermeture du JSON")
 
 		print("Récupération du chapitre en cours")
-		chapterSave = dict._SaveGlobal.chapter
+		chapterSave = saveg._SaveGlobal.chapter
 
 
 	if fileExists == false:
@@ -135,6 +138,7 @@ func _ready():
 		file.store_line(data.to_json())
 		file.close()
 		chapterSave = 1
+
 
 		
 
@@ -151,24 +155,25 @@ func _load_chapter():
 		var file = File.new()
 		#file.open_encrypted_with_pass("user://savelogs.json", File.READ, "reg65er9g84zertg1zs9ert8g4")
 		file.open(str("user://save",scenarioFile,".json"), File.READ)
-		dict.parse_json(file.get_line())
+		save.parse_json(file.get_line())
 		file.close()
 		print("Fermeture du JSON")
 		
 		print("Récupération du dialogue en cours")
-		for i in dict._Save.dial:
+		for i in save._Save.dial:
 			saveDial.append(i)
 		print(saveDial)
 		print("Récupération des réponses")
-		for i in dict._Save.rep:
+		for i in save._Save.rep:
 			saveRep.append(i)
 		print(saveRep)
 		print("Récupération des Timers")
-		for i in dict._Save.nexttime:
+		for i in save._Save.nexttime:
 			saveNextTime.append(i)
 		print(saveNextTime)
-		loadsave = dict._Save
+		loadsave = save._Save
 
+	print(str("NOM DU SCENARIO",scenarioFile))
 	# Ouverture / Parse / Fermeture du fichier JSON
 	print("Initialisation du scénario")
 	print("Ouverture du JSON")
@@ -177,22 +182,25 @@ func _load_chapter():
 	dict.parse_json(file.get_as_text())
 	file.close()
 	print("Fermeture du JSON")
-	
+
+	# Variables du scénario
+	dial = dict._Dialogues
+	firstDial = dict._Dialogues.config.firstDial
+	lastDial = dict._Dialogues.config.lastDial
+
 	# Lancement du script
 	print("Lancement du script")
 	if fileExists == false:
 		launch = 0
 		print("Auto-Sauvegarde")
-		time_delay = dict._Dialogues[firstDial].time
+		time_delay = 1
 		dataDial = firstDial
 		dataRep = null
 		dataNextTime = OS.get_unix_time() + int(time_delay)
 		currentNextTime = OS.get_unix_time()
 		currentDial = firstDial
 
-	# Variables du scénario
-	dial = dict._Dialogues
-
+	get_tree().change_scene("res://scn/base.tscn.xml")
 	print("FIN DU SCRIPT !!!")
 	
 	

@@ -17,8 +17,9 @@ func _ready():
 		
 		
 
-func button_pressed(i):
-	LOAD.scenarioFile = str("LOAD.lang._Language.Config.scenarioFile[i]")
+func button_pressed(i,y):
+	LOAD.scenarioFile = i
+	LOAD.loadChapter = y
 	LOAD._load_chapter()
 
 
@@ -31,10 +32,13 @@ func _on_Start_pressed():
 		newButton = button.duplicate()
 		get_node("SelectChapter/VBoxContainer").add_child(newButton)
 		newButton.show()
+		#if y <= LOAD.chapterSave:
+		#	newButton.set_disabled(false)
+		newButton.set_disabled(y > LOAD.chapterSave)
 		newButton.set_name(str("Button",i))
 		newLabel = newButton.get_node("Label")
 		newLabel.set_text(str(LOAD.menuText[4]," ",y))
-		newButton.connect("pressed", self, "button_pressed", [i])
+		newButton.connect("pressed", self, "button_pressed", [i,y])
 		
 		
 	

@@ -16,6 +16,10 @@
   "name": {
    "name": "Pr. Latrémon"
   },
+  "config": {
+    "firstDial": "dial001",
+    "lastDial" : "dial102"
+   },
   "dial001": {
    "ref": 1,
    "time": 1,

@@ -1,6 +1,5 @@
 {
   "_Config" : {
-    "firstDial" : "dial001",
     "stateSave" : true,
     "version" : "Ver : alpha 2.8",
     "FR_fr" : "langFR_fr.json",

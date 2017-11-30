@@ -46,8 +46,13 @@
             ☐ Optimiser le poids des ressources
                 ☐ Images
                 ☐ Sons
-            ☐ Ajustement des menus
-                ☐ Menu choix des chapitres
+            ☐ Multi-chapitre
+                ✔ Menu choix des chapitres @done (2017-11-30 09:46:49)
+                ✔ Système chargement du chapite @done (2017-11-30 12:11:47)
+                ✔ Sauvegarde pour chaque chapitre @done (2017-11-30 12:18:03)
+                ☐ Bouton reset save pour chaque chapitre
+                ☐ Retour au menu
+                ✔ Débloquer le bon chapitre @done (2017-11-30 16:30:01)
             ☐ Réorganisation des fichiers JSON et des scripts
             ☐ Ecran de chargement au lancement de l'aventure
             ☐ Réécriture des crédits
