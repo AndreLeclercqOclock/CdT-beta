@@ -25,8 +25,8 @@
         "Options" :[ 
             "Effacer la sauvegarde",
             "Crédits",
-            "Retour",
-            "Quitter"
+            "Reprendre",
+            "Retour Menu"
         ]
     }
   }

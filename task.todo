@@ -31,39 +31,38 @@
                 ✔ Options Popup (scene menu) @done (2017-11-21 13:50:19)
 
         2.9:
-            ☐ Ajout messages systems
+            ☐ Ajout messages systems @high 
                 ☐ Message système "changement de status"
                 ☐ Message système "connexion perdue"
                 ☐ Label spécifique
-            ☐ Ajout du témoin de couleur pour le status de l'interlocuteur
-            ☐ Optimiser le fond des messages de dialogues
-            ☐ Sons & Musiques
+                ☐ Ref Json spécifique
+                ☐ Ajout du témoin de couleur pour le status de l'interlocuteur
+            ☐ Sons & Musiques @high
                 ☐ Ajouter sons (wav)
                 ☐ Ajouter ambiance sonore (wav)
                 ☐ Adaptation du JSON scénario pour les trigger sons
-            ☐ Optimiser les "morts"
-            ☐ Ajuster le système de calcule de l'heure.
-            ☐ Optimiser le poids des ressources
-                ☐ Images
-                ☐ Sons
-            ☐ Multi-chapitre
+            ☐ Multi-chapitre @high 
                 ✔ Menu choix des chapitres @done (2017-11-30 09:46:49)
                 ✔ Système chargement du chapite @done (2017-11-30 12:11:47)
                 ✔ Sauvegarde pour chaque chapitre @done (2017-11-30 12:18:03)
-                ☐ Bouton reset save pour chaque chapitre
-                ☐ Retour au menu
+                ✔ Bouton reset save pour chaque chapitre @done (2017-11-30 17:28:01)
+                ☐ Retour au menu (sauvegarde auto)
                 ✔ Débloquer le bon chapitre @done (2017-11-30 16:30:01)
-            ☐ Réorganisation des fichiers JSON et des scripts
-            ☐ Ecran de chargement au lancement de l'aventure
-            ☐ Réécriture des crédits
-            ☐ Ecriture des remericements
-
-            
-
+            ☐ Divers @low 
+                ☐ Réorganisation des fichiers JSON et des scripts
+                ☐ Optimiser les "morts"
+                ☐ Ajuster le système de calcule de l'heure.
+                ☐ Optimiser le fond des messages de dialogues
+                ☐ Ecran de chargement au lancement de l'aventure
+                ☐ Réécriture des crédits
+                ☐ Ecriture des remericements
 
     Divers:
         ☐ Test sur OS.low
         ☐ Amélioration de la scrollbar
+        ☐ Optimiser le poids des ressources
+            ☐  Images
+            ☐ Sons
 
 
 

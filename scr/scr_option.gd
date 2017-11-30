@@ -33,7 +33,7 @@ func _on_Site_pressed():
 
 
 func _on_Reset_pressed():
-	Directory.new().remove("user://savelogs.json")
+	Directory.new().remove("user://saveglobal.json")
 	get_tree().reload_current_scene()
 	LOAD._ready()
 

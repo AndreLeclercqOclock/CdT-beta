@@ -18,7 +18,7 @@
   },
   "config": {
     "firstDial": "dial001",
-    "lastDial" : "dial102"
+    "lastDial" : "dialFIN05"
    },
   "dial001": {
    "ref": 1,

@@ -613,11 +613,11 @@ func _notification(notification_signal):
 		system_exit()
 
 func _on_Reset_pressed():
-	Directory.new().remove("user://savelogs.json")
-	get_tree().reload_current_scene()
+	Directory.new().remove(str("user://save",LOAD.scenarioFile,".json"))
 	LOAD._ready()
-
-
+	LOAD._load_chapter()
+	get_tree().reload_current_scene()
+	
 func _on_Site_pressed():
 	OS.shell_open("http://www.chroniquesdetalos.com")
 
@@ -634,4 +634,6 @@ func _on_Retour_pressed():
 	get_node("Popup").hide()
 
 func _on_Quitter_pressed():
-	get_tree().quit()
+	#get_tree().quit()
+	#system_exit()
+	get_tree().change_scene("res://scn/menu.tscn")
