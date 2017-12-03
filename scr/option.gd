@@ -38,5 +38,5 @@ func _on_Reset_pressed():
 	LOAD._ready()
 
 func _on_Quitter_pressed():
-	get_tree().change_scene("res://scn/base.tscn.xml")
+	get_tree().change_scene("res://scn/base.tscn")
 	get_tree().quit()

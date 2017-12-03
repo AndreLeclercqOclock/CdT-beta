@@ -200,7 +200,7 @@ func _load_chapter():
 		currentNextTime = OS.get_unix_time()
 		currentDial = firstDial
 
-	get_tree().change_scene("res://scn/base.tscn.xml")
+	get_tree().change_scene("res://scn/base.tscn")
 	print("FIN DU SCRIPT !!!")
 	
 	

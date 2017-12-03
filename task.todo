@@ -31,7 +31,7 @@
                 ✔ Options Popup (scene menu) @done (2017-11-21 13:50:19)
 
         2.9:
-            ☐ Ajout messages systems @high 
+            ☐ Ajout messages systemes @high 
                 ☐ Message système "changement de status"
                 ☐ Message système "connexion perdue"
                 ☐ Label spécifique
@@ -41,27 +41,28 @@
                 ☐ Ajouter sons (wav)
                 ☐ Ajouter ambiance sonore (wav)
                 ☐ Adaptation du JSON scénario pour les trigger sons
-            ☐ Multi-chapitre @high 
+            ✔ Multi-chapitre @high @done (2017-12-1 10:14:14)
                 ✔ Menu choix des chapitres @done (2017-11-30 09:46:49)
                 ✔ Système chargement du chapite @done (2017-11-30 12:11:47)
                 ✔ Sauvegarde pour chaque chapitre @done (2017-11-30 12:18:03)
                 ✔ Bouton reset save pour chaque chapitre @done (2017-11-30 17:28:01)
-                ☐ Retour au menu (sauvegarde auto)
+                ✔ Retour au menu (sauvegarde auto) @done (2017-12-1 10:14:12)
                 ✔ Débloquer le bon chapitre @done (2017-11-30 16:30:01)
             ☐ Divers @low 
-                ☐ Réorganisation des fichiers JSON et des scripts
+                ✔ Réorganisation des fichiers JSON et des scripts @done (2017-12-3 21:07:35)
                 ☐ Optimiser les "morts"
                 ☐ Ajuster le système de calcule de l'heure.
                 ☐ Optimiser le fond des messages de dialogues
                 ☐ Ecran de chargement au lancement de l'aventure
                 ☐ Réécriture des crédits
                 ☐ Ecriture des remericements
+                ☐ Améliorer la popup du choix des chapitres
 
     Divers:
         ☐ Test sur OS.low
         ☐ Amélioration de la scrollbar
         ☐ Optimiser le poids des ressources
-            ☐  Images
+            ☐ Images
             ☐ Sons
 
 

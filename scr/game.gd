@@ -39,6 +39,7 @@ var calcultime = 0
 var timezone = 0
 var realtime = 0
 var buttonPressed = null
+var status = null
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -226,7 +227,7 @@ func start():
 		print("Affichage")
 		var visible = 0
 		LOAD.time_delay = 0.05
-		status()
+		#status()
 		for i in range(9):
 			label.set("visibility/opacity",visible)
 			visible = visible + 0.10
@@ -262,7 +263,7 @@ func start():
 			print("Affichage")
 			var visible = 0
 			LOAD.time_delay = 0.05
-			status()
+			#status()
 			for i in range(9):
 				label.set("visibility/opacity",visible)
 				visible = visible + 0.10
@@ -375,7 +376,7 @@ func start():
 		print("Lancement du timer",LOAD.time_delay," seconde(s)")
 		LOAD.currentNextTime = OS.get_unix_time() + int(LOAD.time_delay)
 		LOAD.launch = 1
-		status()
+		#status()
 		if LOAD.dial[LOAD.currentDial].ref == 1:
 			print("Auto-Sauvegarde")
 			unixTime = OS.get_unix_time()
@@ -520,15 +521,45 @@ func status():
 	elif LOAD.time_delay > 30 and LOAD.time_delay <= 180:
 		get_node("vbox/Top/Etat").clear()
 		get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",LOAD.gameText[1]))
+		status = LOAD.gameText[1]
+		message_system()
 	# Absent
 	elif LOAD.time_delay > 180 and LOAD.time_delay <= 300:
 		get_node("vbox/Top/Etat").clear()
 		get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",LOAD.gameText[2]))
+		status = LOAD.gameText[2]
+		message_system()
 	# Hors Ligne
 	elif LOAD.time_delay > 300:
 		get_node("vbox/Top/Etat").clear()
 		get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",LOAD.gameText[3]))
+		status = LOAD.gameText[3]
+		message_system()
 	return
+
+# Message système status interlocuteur
+func message_system():
+	print("Création du label")
+	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelSys")
+	var label = labelbase.duplicate()
+	print("Configuration du label")
+	label.set_name(str("label",LOAD.currentDial))
+	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+	label.show()
+	label.set_text(str(LOAD.gameText[6],status))
+
+	print("Affichage")
+	var visible = 0
+	for i in range(9):
+		label.set("visibility/self_opacity",visible)
+		visible = visible + 0.10
+		time_delay = 0.05
+		timer.set_wait_time(time_delay)
+		timer.start()
+		yield(get_node("Timer"), "timeout")
+	return
+
+
 
 # Reset Save
 # Reset de la sauvegarde
@@ -636,4 +667,8 @@ func _on_Retour_pressed():
 func _on_Quitter_pressed():
 	#get_tree().quit()
 	#system_exit()
+	LOAD.saveDial = []
+	LOAD.saveRep = []
+	LOAD.saveTime = []
+	LOAD.saveNextTime = []
 	get_tree().change_scene("res://scn/menu.tscn")

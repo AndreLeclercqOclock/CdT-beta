@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=1]
 
-[ext_resource path="res://scr/scr_menu.gd" type="Script" id=1]
+[ext_resource path="res://scr/menu.gd" type="Script" id=1]
 [ext_resource path="res://img/bouton_base.jpg" type="Texture" id=2]
 [ext_resource path="res://img/bouton_clic.jpg" type="Texture" id=3]
 [ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=4]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=1]
 
-[ext_resource path="res://scr/scr_credits.gd" type="Script" id=1]
+[ext_resource path="res://scr/credits.gd" type="Script" id=1]
 [ext_resource path="res://img/Fond_general.jpg" type="Texture" id=2]
 [ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://img/bouton_base.jpg" type="Texture" id=4]

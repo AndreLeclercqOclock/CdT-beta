@@ -20,7 +20,8 @@
             "Absent",
             "Hors Ligne",
             "Options",
-            "Status"
+            "Status",
+            ">> Votre interlocuteur est "
         ],
         "Options" :[ 
             "Effacer la sauvegarde",
