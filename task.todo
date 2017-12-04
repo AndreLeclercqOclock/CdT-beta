@@ -31,12 +31,13 @@
                 ✔ Options Popup (scene menu) @done (2017-11-21 13:50:19)
 
         2.9:
-            ☐ Ajout messages systemes @high 
-                ☐ Message système "changement de status"
-                ☐ Message système "connexion perdue"
-                ☐ Label spécifique
-                ☐ Ref Json spécifique
-                ☐ Ajout du témoin de couleur pour le status de l'interlocuteur
+            ✔ Ajout messages systemes @done (2017-12-4 16:47:46)
+                ✔ Messages systèmes automatiques @done (2017-12-4 15:31:09)
+                ✔ Messages systèmes via JSON @done (2017-12-4 15:53:56)
+                ✔ Création du label system @done (2017-12-4 15:31:04)
+                ✔ Refonte système de status de l'interlocuteur @done (2017-12-4 15:30:57)
+                ✔ Sauvegarde / Chargement des messages systèmes JSON @done (2017-12-4 15:54:02)
+                ✔ Sauvegarde / Chargement des messages systèmes automatiques @done (2017-12-4 16:47:41)
             ☐ Sons & Musiques @high
                 ☐ Ajouter sons (wav)
                 ☐ Ajouter ambiance sonore (wav)
@@ -50,13 +51,15 @@
                 ✔ Débloquer le bon chapitre @done (2017-11-30 16:30:01)
             ☐ Divers @low 
                 ✔ Réorganisation des fichiers JSON et des scripts @done (2017-12-3 21:07:35)
-                ☐ Optimiser les "morts"
-                ☐ Ajuster le système de calcule de l'heure.
-                ☐ Optimiser le fond des messages de dialogues
-                ☐ Ecran de chargement au lancement de l'aventure
-                ☐ Réécriture des crédits
-                ☐ Ecriture des remericements
-                ☐ Améliorer la popup du choix des chapitres
+                ☐ Optimiser les "morts" @low 
+                ☐ Ajuster le système de calcule de l'heure. @critical 
+                ☐ Optimiser le fond des messages de dialogues @low 
+                ☐ Ecran de chargement au lancement de l'aventure @high 
+                ☐ Réécriture des crédits @low 
+                ☐ Ecriture des remericements @low 
+                ☐ Améliorer la popup du choix des chapitres @high 
+                ☐ Ajout du témoin de couleur pour le status de l'interlocuteur @low 
+                ☐ Ajustement des timers messages systèmes
 
     Divers:
         ☐ Test sur OS.low

@@ -39,7 +39,10 @@ var calcultime = 0
 var timezone = 0
 var realtime = 0
 var buttonPressed = null
-var status = null
+var statusText = null
+var status = 0
+var statusNext = 0
+var visible = 1
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -57,6 +60,11 @@ func _ready():
 	get_node("Popup/VBox/Retour/Label").set_text(str(LOAD.optionsText[2]))
 	get_node("Popup/VBox/Quitter/Label").set_text(str(LOAD.optionsText[3]))
 
+	# Initialisation du Timer
+	print("Initialitation du Timer")
+	timer = get_node("Timer")
+	timer.set_wait_time(LOAD.time_delay)
+
 	if LOAD.fileExists == true and LOAD.stateSave == true:
 		# Réécriture de la Sauvegarde
 		print("Réécriture de la sauvegarde")
@@ -65,7 +73,13 @@ func _ready():
 			LOAD.currentDial = LOAD.loadsave.dial[i]
 			LOAD.currentRep = LOAD.loadsave.rep[i]
 			LOAD.currentNextTime = LOAD.loadsave.nexttime[i]
+			# Vérification du status
+			LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
+			status()
 			if LOAD.dial[LOAD.currentDial].ref == 1 and LOAD.currentNextTime <= OS.get_unix_time():
+				# Vérification du status
+				LOAD.time_delay = 0
+				status()
 				# Ecrit l'heure
 				print("Horodatage")
 				LOAD.saveTime = LOAD.currentNextTime
@@ -112,6 +126,7 @@ func _ready():
 					LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
 					get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 					label.set("visibility/opacity",1)
+
 		# Ecrit la ligne de réponse
 			elif LOAD.dial[LOAD.currentDial].ref == 2:
 			# Ecrit la ligne de Dialogue
@@ -144,17 +159,31 @@ func _ready():
 				LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
 				get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 				label.set("visibility/self_opacity",1)
+			elif LOAD.dial[LOAD.currentDial].ref == 3:
+				# Ecriture du message système
+				for i in range(LOAD.dial[LOAD.currentDial].content.size()):
+					print("Création du label")
+					var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelSys")
+					var label = labelbase.duplicate()
+					print("Configuration du label")
+					label.set_name(str("label",LOAD.currentDial))
+					get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+					label.show()
+					label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
+					label.set("visibility/opacity",1)
+					# Auto scroll
+					print("Scroll")
+					yield(get_tree(), "idle_frame")
+					get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+					LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
+					get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
+					
 			LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
 		print("Fin du chargement")
 		print("Réécriture Dialogues dans le JSON")
 	if LOAD.fileExists == true and LOAD.currentNextTime <= OS.get_unix_time():
 		LOAD.currentDial = LOAD.dial[LOAD.currentDial].next
 		LOAD.launch = 1
-
-# Initialisation du Timer
-	print("Initialitation du Timer")
-	timer = get_node("Timer")
-	timer.set_wait_time(LOAD.time_delay)
 
 # Calcule time zone
 	timezone = OS.get_datetime_from_unix_time(OS.get_unix_time()).hour
@@ -177,6 +206,7 @@ func _ready():
 
 # Process
 func _process(delta):
+	
 	LOAD.saveTime = OS.get_unix_time()
 	system_time()
 	# Affichage de l'heure
@@ -193,14 +223,16 @@ func _process(delta):
 # Fonction ou reboucle le script quand il repart du début
 # Start
 func start():
+	visible = 0
 	print("Début du processus d'interpretation du JSON")
-	status()
 
 
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
 # Dialogues 
 	if LOAD.dial[LOAD.currentDial].ref == 1 :
+		LOAD.time_delay = 0
+		status()
 		last_dial()
 		print("#### DIALOGUES REF : 1 ####")
 # Horodatage
@@ -400,6 +432,61 @@ func start():
 		print("Fin de la création des boutons")
 
 
+									## MESSAGE SYSTEM ##	
+
+	if LOAD.dial[LOAD.currentDial].ref == 3:
+		# Ecriture du message système
+		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
+			print("Création du label")
+			var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelSys")
+			var label = labelbase.duplicate()
+			print("Configuration du label")
+			label.set_name(str("label",LOAD.currentDial))
+			get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+			label.show()
+			label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
+		
+			# Auto scroll
+			print("Scroll")
+			yield(get_tree(), "idle_frame")
+			get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+			LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
+			get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
+
+			# Affichage Smoothie
+			print("Affichage")
+			var visible = 0
+			for i in range(9):
+				label.set("visibility/self_opacity",visible)
+				visible = visible + 0.10
+				time_delay = 0.05
+				timer.set_wait_time(time_delay)
+				timer.start()
+				yield(get_node("Timer"), "timeout")
+
+		#AUTO SAVE
+		if LOAD.currentDial == LOAD.firstDial:
+			print("Auto-Sauvegarde")
+			unixTime = OS.get_unix_time()
+			LOAD.dataDial = LOAD.currentDial
+			LOAD.dataRep = null
+			LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
+			system_save()
+		print("Fin du dialogue")
+		LOAD.currentDial = LOAD.dial[LOAD.currentDial].next
+		LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
+		print("Lancement du timer",LOAD.time_delay," seconde(s)")
+		LOAD.currentNextTime = OS.get_unix_time() + int(LOAD.time_delay)
+		LOAD.launch = 1
+		#status()
+		if LOAD.dial[LOAD.currentDial].ref == 3:
+			print("Auto-Sauvegarde")
+			unixTime = OS.get_unix_time()
+			LOAD.dataDial = LOAD.currentDial
+			LOAD.dataRep = null
+			LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
+			system_save()
+
 										## BOUTONS REPONSES ##
 # Boutons
 # Gestion des boutons de choix multipes
@@ -447,6 +534,7 @@ func clean():
 
 # Button Action
 func button_action():
+	
 	# AUTO SAVE
 	LOAD.dataDial = LOAD.currentDial
 	LOAD.dataRep = buttonPressed
@@ -507,6 +595,8 @@ func button_action():
 		timer.set_wait_time(time_delay)
 		timer.start()
 		yield(get_node("Timer"), "timeout")
+	
+	status()
 	return
 
 # Status
@@ -515,30 +605,32 @@ func status():
 	print("Status de l'interlocuteur")
 	# En ligne
 	if LOAD.time_delay <= 30:
-		get_node("vbox/Top/Etat").clear()
-		get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",LOAD.gameText[0]))
+		statusText = LOAD.gameText[0]
+		status = 1
 	# Occupé
 	elif LOAD.time_delay > 30 and LOAD.time_delay <= 180:
-		get_node("vbox/Top/Etat").clear()
-		get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",LOAD.gameText[1]))
-		status = LOAD.gameText[1]
-		message_system()
+		statusText = LOAD.gameText[1]
+		status = 2
 	# Absent
 	elif LOAD.time_delay > 180 and LOAD.time_delay <= 300:
-		get_node("vbox/Top/Etat").clear()
-		get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",LOAD.gameText[2]))
-		status = LOAD.gameText[2]
-		message_system()
+		statusText = LOAD.gameText[2]
+		status = 3
 	# Hors Ligne
 	elif LOAD.time_delay > 300:
-		get_node("vbox/Top/Etat").clear()
-		get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",LOAD.gameText[3]))
-		status = LOAD.gameText[3]
+		statusText = LOAD.gameText[3]
+		status = 4
+
+	# Vérification du changement de status
+	if status != statusNext:
 		message_system()
+		statusNext = status
 	return
 
 # Message système status interlocuteur
 func message_system():
+	print("Modification vignette status")
+	get_node("vbox/Top/Etat").clear()
+	get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",statusText))
 	print("Création du label")
 	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelSys")
 	var label = labelbase.duplicate()
@@ -546,17 +638,25 @@ func message_system():
 	label.set_name(str("label",LOAD.currentDial))
 	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 	label.show()
-	label.set_text(str(LOAD.gameText[6],status))
-
+	label.set_text(str(LOAD.gameText[6],statusText))
+	# Affichage smoothie
 	print("Affichage")
-	var visible = 0
-	for i in range(9):
-		label.set("visibility/self_opacity",visible)
-		visible = visible + 0.10
-		time_delay = 0.05
-		timer.set_wait_time(time_delay)
-		timer.start()
-		yield(get_node("Timer"), "timeout")
+	if visible == 0:
+		for i in range(10):
+			label.set("visibility/opacity",visible)
+			visible = visible + 0.10
+			time_delay = 0.05
+			timer.set_wait_time(time_delay)
+			timer.start()
+			yield(get_node("Timer"), "timeout")
+	else:
+		label.set("visibility/opacity",0.90)
+	# Auto scroll
+	print("Scroll")
+	yield(get_tree(), "idle_frame")
+	get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+	LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
+	get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 	return
 
 
