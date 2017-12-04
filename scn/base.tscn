@@ -671,7 +671,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 12 )
 animation = "default"
-frame = 3
+frame = 11
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
