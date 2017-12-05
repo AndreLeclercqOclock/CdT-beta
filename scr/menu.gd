@@ -46,8 +46,6 @@ func _on_Start_pressed():
 	
 
 func _on_Option_pressed():
-	#get_tree().change_scene("res://scn/option.tscn")
-	#GLOBAL.backoption = "res://scn/menu.tscn"
 	get_node("Options").popup()
 
 	# Textes OPTIONS
