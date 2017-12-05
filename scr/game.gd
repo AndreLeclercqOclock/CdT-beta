@@ -43,7 +43,10 @@ var statusText = null
 var status = 0
 var statusNext = 0
 var visible = 1
+
 var sound = 0
+var triggerName = null
+var triggerVol = 0
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -62,7 +65,7 @@ func _ready():
 	get_node("Popup/VBox/Quitter/Label").set_text(str(LOAD.optionsText[3]))
 
 	# Son d'ambiance
-	get_node("SampleBKG").play("bkg_long")
+	get_node("SampleBKG").play("bkg_main_game")
 
 	# Initialisation du Timer
 	print("Initialitation du Timer")
@@ -193,7 +196,8 @@ func _ready():
 	if LOAD.fileExists == true and LOAD.currentNextTime <= OS.get_unix_time():
 		LOAD.currentDial = LOAD.dial[LOAD.currentDial].next
 		LOAD.launch = 1
-
+	
+	
 # Calcule time zone
 	timezone = OS.get_datetime_from_unix_time(OS.get_unix_time()).hour
 	realtime = OS.get_time().hour
@@ -208,8 +212,9 @@ func _ready():
 	get_node("vbox/Top/version").set_text(str(LOAD.version))
 
 	if LOAD.fileExists == false:
+		get_node("SampleMSG").set_default_volume_db(0)
 		start()
-
+		
 # Affichage de l'heure
 	set_process(true)
 
@@ -245,6 +250,9 @@ func start():
 		last_dial()
 		# Attribution du type de son
 		sound = 1
+		# Vérification d'un trigger son
+		if LOAD.dial[LOAD.currentDial].sound[0] == 1:
+			trigger_sound()
 		print("#### DIALOGUES REF : 1 ####")
 # Horodatage
 		print("Horodatage")
@@ -759,6 +767,14 @@ func sample_msg():
 	elif sound == 3:
 		get_node("SampleMSG").play("msg_sys")
 	return
+
+# Système de trigger son
+func trigger_sound():
+	triggerName = str(LOAD.dial[LOAD.currentDial].sound[1])
+	triggerVol = LOAD.dial[LOAD.currentDial].sound[2]
+	get_node("SampleTRG").set_default_volume_db(triggerVol)
+	get_node("SampleTRG").play(triggerName)
+
 
 # System Exit
 func system_exit():

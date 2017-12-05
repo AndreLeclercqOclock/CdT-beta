@@ -15,7 +15,8 @@ func _ready():
 	get_node("Option/Label1").set_text(str(LOAD.menuText[2]))
 	get_node("Credits/Label2").set_text(str(LOAD.menuText[3]))
 		
-		
+	# Son d'ambiance
+	get_node("SampleBKGmenu").play("bkg_main_menu")
 
 func button_pressed(i,y):
 	LOAD.scenarioFile = i

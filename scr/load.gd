@@ -174,6 +174,7 @@ func _load_chapter():
 		loadsave = save._Save
 
 	print(str("NOM DU SCENARIO",scenarioFile))
+	# RECUPERATION DU SCENARIO
 	# Ouverture / Parse / Fermeture du fichier JSON
 	print("Initialisation du scénario")
 	print("Ouverture du JSON")

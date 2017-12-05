@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=1]
+[gd_scene load_steps=65 format=1]
 
 [ext_resource path="res://scr/game.gd" type="Script" id=1]
 [ext_resource path="res://img/bouton_base.jpg" type="Texture" id=2]
@@ -41,7 +41,8 @@
 [ext_resource path="res://snd/msg_received.smp" type="Sample" id=39]
 [ext_resource path="res://snd/msg_send.smp" type="Sample" id=40]
 [ext_resource path="res://snd/msg_sys.smp" type="Sample" id=41]
-[ext_resource path="res://snd/bkg_long.smp" type="Sample" id=42]
+[ext_resource path="res://snd/bkg_main_game.smp" type="Sample" id=42]
+[ext_resource path="res://snd/trg_stress02.smp" type="Sample" id=43]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -191,11 +192,20 @@ samples/msg_sys = {
 
 [sub_resource type="SampleLibrary" id=19]
 
-samples/bkg_long = {
+samples/bkg_main_game = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 42 )
+}
+
+[sub_resource type="SampleLibrary" id=21]
+
+samples/trg_stress02 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 43 )
 }
 
 [sub_resource type="DynamicFont" id=20]
@@ -1024,8 +1034,26 @@ default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
 
+[node name="SampleTRG" type="SamplePlayer" parent="Game"]
+
+config/polyphony = 1
+config/samples = SubResource( 21 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
+
 [node name="Loading" type="Popup" parent="Game"]
 
+editor/display_folded = true
 visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true

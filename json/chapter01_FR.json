@@ -33,7 +33,8 @@
     "Mais, je ne sais même pas si le réseau passe ici...",
     "Y'a quelqu'un ?"
    ],
-   "next": "rep101"
+   "next": "rep101",
+   "sound": [0,"null",0]
   },
   "dial102": {
    "ref": 1,
@@ -44,7 +45,8 @@
     "À moins que...",
     "Vous n'êtes pas dans le souterrain avec moi, quand même ?"
    ],
-   "next": "rep102"
+   "next": "rep102",
+   "sound": [0,"null",0]
   },
   "dial103": {
    "ref": 1,
@@ -53,7 +55,8 @@
     "Oui, j'aurai dû commencer par là, désolé.",
     "C'est à dire que je ne suis pas dans une situation qui pousse aux civilités."
    ],
-   "next": "dial200"
+   "next": "dial200",
+   "sound": [0,"null",0]
   },
   "dial104": {
    "ref": 1,
@@ -63,7 +66,8 @@
     "Je suis dans des catacombes, et je me suis perdu.",
     "Mais je manque à toutes les politesses."
    ],
-   "next": "dial200"
+   "next": "dial200",
+   "sound": [0,"null",0]
   },
   "dial200": {
    "ref": 1,
@@ -76,7 +80,8 @@
     "Mais, je suis tombé il y a quelques mois sur un manuscrit intéressant.",
     "Connaissez-vous Jean de Malemont ?"
    ],
-   "next": "rep200"
+   "next": "rep200",
+   "sound": [0,"null",0]
   },
   "dial201": {
    "ref": 1,
@@ -89,7 +94,8 @@
     "Et je n'ai pas pu résister à l'envie de voir par moi-même",
     "si son tombeau est bien là où le manuscrit le mentionnait."
    ],
-   "next": "rep201"
+   "next": "rep201",
+   "sound": [0,"null",0]
   },
   "dial202": {
    "ref": 1,
@@ -99,7 +105,8 @@
     "Mais ce n'est qu'un nom. Ce n'était pas un «méchant».",
     "Enfin, je ne crois pas..."
    ],
-   "next": "dial300"
+   "next": "dial300",
+   "sound": [0,"null",0]
   },
   "dial203": {
    "ref": 1,
@@ -112,7 +119,8 @@
     "Ha ha ha !",
     "Je ne vous en veux pas."
    ],
-   "next": "dial300"
+   "next": "dial300",
+   "sound": [0,"null",0]
   },
   "dial300": {
    "ref": 1,
@@ -126,7 +134,8 @@
     "Après tout, il faut bien qu'ils aient leur utilité.",
     "Enfin bref…"
    ],
-   "next": "dial301"
+   "next": "dial301",
+   "sound": [0,"null",0]
   },
   "dial301": {
    "ref": 1,
@@ -142,7 +151,8 @@
     "Et j'ai lancé cette application de discussion en réseau.",
     "Mais si vous pouviez m'aider, ce serait tellement aimable de votre part..."
    ],
-   "next": "rep301"
+   "next": "rep301",
+   "sound": [0,"null",0]
   },
   "dial302": {
    "ref": 1,
@@ -154,7 +164,8 @@
     "Je vais essayer de me débrouiller par moi-même.",
     "Adieu."
    ],
-   "next": "rep302"
+   "next": "rep302",
+   "sound": [0,"null",0]
   },
   "dial303": {
    "ref": 1,
@@ -176,7 +187,8 @@
     "Et je ne trouve plus mes repères.",
     "Je suis perdu."
    ],
-   "next": "rep303"
+   "next": "rep303",
+   "sound": [0,"null",0]
   },
   "dial400": {
    "ref": 1,
@@ -188,7 +200,8 @@
     "Mais j'ignore s'il s'agit d'un passage.",
     "Vous feriez quoi, à ma place ?"
    ],
-   "next": "rep400"
+   "next": "rep400",
+   "sound": [0,"null",0]
   },
   "dial401": {
    "ref": 1,
@@ -201,13 +214,15 @@
     "Bon, je vais épargner mon souffle.",
     "Je vous recontacte quand je trouve quelque chose."
    ],
-   "next": "dial402"
+   "next": "dial402",
+   "sound": [0,"null",0]
   },
   "dial402": {
    "ref": 1,
    "time": 150,
    "content": ["Heu, vous êtes là ?"],
-   "next": "rep402"
+   "next": "rep402",
+   "sound": [0,"null",0]
   },
   "dial403": {
    "ref": 1,
@@ -221,7 +236,8 @@
     "J'ai peut-être loupé quelque chose ?",
     "J'ai du mal à croire que j'ai pu tourner en rond."
    ],
-   "next": "rep403"
+   "next": "rep403",
+   "sound": [0,"null",0]
   },
   "dial404": {
    "ref": 1,
@@ -232,13 +248,15 @@
     "Je suis désolé. Je vais arrêter de vous assommer avec mes aphorismes de vieil universitaire.",
     "Je vous tiens au courant de mon exploration."
    ],
-   "next": "dial405"
+   "next": "dial405",
+   "sound": [0,"null",0]
   },
   "dial405": {
    "ref": 1,
    "time": 70,
    "content": ["Oh, non..."],
-   "next": "rep405"
+   "next": "rep405",
+   "sound": [0,"null",0]
   },
   "dial406": {
    "ref": 1,
@@ -247,7 +265,8 @@
     "Bingo.",
     "Je n'y crois pas."
    ],
-   "next": "dial407"
+   "next": "dial407",
+   "sound": [0,"null",0]
   },
   "dial407": {
    "ref": 1,
@@ -262,7 +281,8 @@
     "Bon.",
     "Je n'ai plus le choix, n'est-ce pas ?"
    ],
-   "next": "rep407"
+   "next": "rep407",
+   "sound": [0,"null",0]
   },
   "dial500": {
    "ref": 1,
@@ -275,13 +295,15 @@
     "Enfin, j'espère.",
     "À tout de suite !"
    ],
-   "next": "dial501"
+   "next": "dial501",
+   "sound": [0,"null",0]
   },
   "dial501": {
    "ref": 1,
    "time": 60,
    "content": ["Oh, bon sang !"],
-   "next": "rep501"
+   "next": "rep501",
+   "sound": [0,"null",0]
   },
   "dial502": {
    "ref": 1,
@@ -293,7 +315,8 @@
     "C'est fou !",
     "Vous n'allez pas me croire."
    ],
-   "next": "dial503"
+   "next": "dial503",
+   "sound": [0,"null",0]
   },
   "dial503": {
    "ref": 1,

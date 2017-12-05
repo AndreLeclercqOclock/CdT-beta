@@ -38,11 +38,13 @@
                 ✔ Refonte système de status de l'interlocuteur @done (2017-12-4 15:30:57)
                 ✔ Sauvegarde / Chargement des messages systèmes JSON @done (2017-12-4 15:54:02)
                 ✔ Sauvegarde / Chargement des messages systèmes automatiques @done (2017-12-4 16:47:41)
-            ☐ Sons & Musiques @high
+            ✔ Sons & Musiques @done (2017-12-5 14:21:39)
                 ✔ Importer sons messages (wav) @done (2017-12-5 10:58:07)
                 ✔ Importer ambiance sonore (wav) @done (2017-12-5 11:30:24)
-                ☐ Importer thème menu principale
-                ☐ Adaptation du JSON scénario pour les trigger sons
+                ✔ Importer thème menu principale @done (2017-12-5 13:33:09)
+                ✔ Adaptation du JSON scénario pour les trigger sons @done (2017-12-5 14:21:36)
+                    ✔ Ajout du tableau de configuration du trigger @done (2017-12-5 14:21:33)
+                    ✔ Création du script pour lire le tableau JSON @done (2017-12-5 14:21:35)
             ✔ Multi-chapitre @high @done (2017-12-1 10:14:14)
                 ✔ Menu choix des chapitres @done (2017-11-30 09:46:49)
                 ✔ Système chargement du chapite @done (2017-11-30 12:11:47)
@@ -55,7 +57,7 @@
                 ☐ Optimiser les "morts" & "Fin(s) du chapitre" @low 
                 ☐ Ajuster le système de calcule de l'heure. @critical 
                 ☐ Optimiser le fond des messages de dialogues @low 
-                ☐ Ecran de chargement au lancement de l'aventure @high 
+                ✔ Ecran de chargement au lancement de l'aventure @done (2017-12-5 11:51:50)
                 ☐ Réécriture des crédits @low 
                 ☐ Ecriture des remericements @low 
                 ☐ Améliorer la popup du choix des chapitres @high 
@@ -69,6 +71,8 @@
         ☐ Optimiser le poids des ressources
             ☐ Images
             ☐ Sons
-
+        ☐ Création menu audio
+            ☐ Sons notification (messages)
+            ☐ Sons ambiances (thèmes & ambiances)
 
 
