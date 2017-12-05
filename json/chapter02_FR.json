@@ -6,11 +6,11 @@
   "Disclaimer": "L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).",
   "Contact Leifer": "leifer.kopf@gmail.com",
   "Contact Nootilus": "vcorlaix@nootilus.com",
-  "Version": "v0.12"
+  "Version": "v0.13"
  },
  "_Dialogues": {
   "_Comment": {
-   "Ref": "Dialogue = 1 ; Reponse choix multiple = 2 ; Reponse texte précis = 3 ; Image = 4",
+   "Ref": "Dialogue = 1 ; Reponse choix multiple = 2 ; Message système = 3 ; Image = 4",
    "Time": "En secondes"
   },
   "name": {
@@ -1719,7 +1719,7 @@
 	"next": "dialFIN02"
 },
   "dialFIN01": {
-   "ref": 1,
+   "ref": 3,
    "time": 10,
    "content": [
    "<Connexion perdue>",
@@ -1732,7 +1732,7 @@
    "next": "rep9997"
   },
   "dialFIN02": {
-   "ref": 1,
+   "ref": 3,
    "time": 10,
    "content": [
    "<Connexion perdue>",
@@ -1745,7 +1745,7 @@
    "next": "rep9998"
   },
   "dialFIN03": {
-   "ref": 1,
+   "ref": 3,
    "time": 10,
    "content": [
    "<Connexion terminée>",

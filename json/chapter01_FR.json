@@ -6,11 +6,11 @@
   "Disclaimer": "L'ensemble du contenu de ce document est la propriété de GalaaDScript, il ne peut être utilisé, même partiellement sans accord préalable de GalaaDScript (Filliale du groupe AE-Com).",
   "Contact Leifer": "leifer.kopf@gmail.com",
   "Contact Nootilus": "vcorlaix@nootilus.com",
-  "Version": "v0.39"
+  "Version": "v0.40"
  },
  "_Dialogues": {
   "_Comment": {
-   "Ref": "Dialogue = 1 ; Reponse choix multiple = 2 ; Reponse texte précis = 3 ; Image = 4",
+   "Ref": "Dialogue = 1 ; Reponse choix multiple = 2 ; Message système = 3 ; Image = 4",
    "Time": "En secondes"
   },
   "name": {
@@ -1169,7 +1169,7 @@
    "next": "dialFIN06"
   },
   "dialFIN01": {
-   "ref": 1,
+   "ref": 3,
    "time": 10,
    "content": [
    "<Connexion perdue>",
@@ -1181,10 +1181,10 @@
     " ",
     "Cliquez « Rejouer » pour recommencer la partie."
    ],
-   "next": "rep9999"
+   "next": "rep9998"
   },
   "dialFIN02": {
-   "ref": 1,
+   "ref": 3,
    "time": 10,
    "content": [
     "<Connexion perdue>",
@@ -1198,7 +1198,7 @@
    "next": "rep9998"
   },
   "dialFIN03": {
-   "ref": 1,
+   "ref": 3,
    "time": 10,
    "content": [
     "<Connexion perdue>",
@@ -1213,7 +1213,7 @@
    "next": "rep9998"
   },
   "dialFIN03b": {
-   "ref": 1,
+   "ref": 3,
    "time": 10,
    "content": [
     "<Connexion perdue>",
@@ -1228,7 +1228,7 @@
    "next": "rep9996"
   },
   "dialFIN04": {
-   "ref": 1,
+   "ref": 3,
    "time": 10,
    "content": [
     "<Connexion perdue>",
@@ -1242,7 +1242,7 @@
    "next": "rep9997"
   },
   "dialFIN05": {
-   "ref": 1,
+   "ref": 3,
    "time": 10,
    "content": [
     "<Connexion perdue>",
@@ -1250,14 +1250,13 @@
     "Michel Latrémon a disparu dans une autre dimension.",
     "Malgré sa disparition, vous l'avez aidé à rester vivant.",
     "Qui sait, peut-être trouvera-t-il le moyen de rentrer dans notre monde ?",
-    "Voulez-vous recommencer et faire d'autres choix ?",
     " ",
-    "Cliquez « Rejouer » pour recommencer la partie."
+    "Cliquez sur « Revenir au menu » pour accéder au chapitre 2."
    ],
    "next": "rep9999"
   },
   "dialFIN06": {
-   "ref": 1,
+   "ref": 3,
    "time": 10,
    "content": [
     "<Connexion perdue>",
@@ -1818,8 +1817,8 @@
   "rep9999": {
    "ref": 2,
    "time": 1,
-   "button": ["Rejouer"],
-   "content": ["Rejouer"],
+   "button": ["Revenir au menu"],
+   "content": ["Revenir au menu"],
    "next": [
     "dial001",
     "dial001"
@@ -1854,15 +1853,6 @@
     "dial905",
     "dial001"
    ]
-  },
-  "_Medias_Vidéos": {
-   "_Comment": "Inutilisé pour cette version"
-  },
-  "vid001": {
-   "ref": 5,
-   "time": 2,
-   "content": "sample.ogv",
-   "next": "rep005"
   }
  }
 }
