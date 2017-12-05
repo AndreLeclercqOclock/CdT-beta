@@ -43,6 +43,7 @@ var statusText = null
 var status = 0
 var statusNext = 0
 var visible = 1
+var sound = 0
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -59,6 +60,9 @@ func _ready():
 	get_node("Popup/VBox/Reset/Label").set_text(str(LOAD.optionsText[0]))
 	get_node("Popup/VBox/Retour/Label").set_text(str(LOAD.optionsText[2]))
 	get_node("Popup/VBox/Quitter/Label").set_text(str(LOAD.optionsText[3]))
+
+	# Son d'ambiance
+	get_node("SampleBKG").play("bkg_long")
 
 	# Initialisation du Timer
 	print("Initialitation du Timer")
@@ -234,6 +238,8 @@ func start():
 		LOAD.time_delay = 0
 		status()
 		last_dial()
+		# Attribution du type de son
+		sound = 1
 		print("#### DIALOGUES REF : 1 ####")
 # Horodatage
 		print("Horodatage")
@@ -266,7 +272,6 @@ func start():
 			timer.set_wait_time(LOAD.time_delay)
 			timer.start()
 			yield(get_node("Timer"), "timeout")
-
 #Création de la node LABEL
 		print("Traitement du Dialogue")
 		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
@@ -336,8 +341,10 @@ func start():
 			timer.start()
 			yield(get_node("Timer"), "timeout")
 			label.queue_free()
-			print("Fin du timer")
-
+			print("Fin du timer")		
+# Trigger son message reçu
+			sample_msg()
+			sound = 0
 # Ecrit la ligne de dialogue
 			print("Création du label")
 			var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelDial")
@@ -437,6 +444,9 @@ func start():
 	if LOAD.dial[LOAD.currentDial].ref == 3:
 		# Ecriture du message système
 		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
+			# Trigger son message système
+			sound = 3
+			sample_msg()
 			print("Création du label")
 			var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelSys")
 			var label = labelbase.duplicate()
@@ -540,6 +550,9 @@ func button_action():
 	LOAD.dataRep = buttonPressed
 	LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
 	system_save()
+# Trigger son message envoyé
+	sound = 2
+	sample_msg()
 
 # Ecrit une ligne de Dialogue
 	print("Création du label")
@@ -628,6 +641,9 @@ func status():
 
 # Message système status interlocuteur
 func message_system():
+	# Trigger son message système
+	sound = 3
+	sample_msg()
 	print("Modification vignette status")
 	get_node("vbox/Top/Etat").clear()
 	get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",statusText))
@@ -726,6 +742,16 @@ func last_dial():
 		file.open("user://saveglobal.json", File.WRITE)
 		file.store_line(LOAD.data.to_json())
 		file.close()
+	return
+
+# Système de sample MESSAGES
+func sample_msg():
+	if sound == 1:
+		get_node("SampleMSG").play("msg_received")
+	elif sound == 2:
+		get_node("SampleMSG").play("msg_send")
+	elif sound == 3:
+		get_node("SampleMSG").play("msg_sys")
 	return
 
 # System Exit

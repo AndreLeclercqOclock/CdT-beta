@@ -39,7 +39,7 @@
                 ✔ Sauvegarde / Chargement des messages systèmes JSON @done (2017-12-4 15:54:02)
                 ✔ Sauvegarde / Chargement des messages systèmes automatiques @done (2017-12-4 16:47:41)
             ☐ Sons & Musiques @high
-                ☐ Importer sons (wav)
+                ✔ Importer sons messages (wav) @done (2017-12-5 10:58:07)
                 ☐ Importer ambiance sonore (wav)
                 ☐ Adaptation du JSON scénario pour les trigger sons
             ✔ Multi-chapitre @high @done (2017-12-1 10:14:14)
@@ -51,7 +51,7 @@
                 ✔ Débloquer le bon chapitre @done (2017-11-30 16:30:01)
             ☐ Divers @low 
                 ✔ Réorganisation des fichiers JSON et des scripts @done (2017-12-3 21:07:35)
-                ☐ Optimiser les "morts" @low 
+                ☐ Optimiser les "morts" & "Fin(s) du chapitre" @low 
                 ☐ Ajuster le système de calcule de l'heure. @critical 
                 ☐ Optimiser le fond des messages de dialogues @low 
                 ☐ Ecran de chargement au lancement de l'aventure @high 
