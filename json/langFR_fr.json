@@ -10,7 +10,7 @@
             "Démarrer l'aventure",
             "Continuer l'aventure",
             "Options",
-            "Crédits",
+            "Quitter",
             "Chapitre"
         ]
         ,
@@ -28,7 +28,29 @@
             "Effacer la sauvegarde",
             "Crédits",
             "Reprendre",
-            "Retour Menu"
+            "Retour Menu",
+            "ChroniquesDeTalos.com",
+            "http://www.chroniquesdetalos.com"
+        ],
+        "Credits" :[
+            "Direction Artistique & Scénario : Vincent Corlaix (@nootilus)
+GameDesign & Développement : Leifer Kopf (@LeiferKopf)
+Communication : Dimitri Régnier (@irw1n44)
+            
+Jeu conçu avec Godot Engine 2.1
+            
+Remerciements :
+À notre communauté naissante, mais passionnée ; Nathan 'GDQuest' Lovato, Binogure, Tilican
+            
+Remerciements spéciaux :
+            
+De Leifer : à mon amoureuse, Betsy qui m'a soutenu chaque jour même lorsque j'étais insupportable.
+            
+De Nootilus : à ceux qui m’entourent et aiment ce que je crée, en priorité à ma Douce. Aux amis qui participent de (très) près et de loin à cette aventure dans l’aventure. Aux beta-joueurs et joueurs, parce que bon, sans vous… ;)
+
+De Dimitri : à ceux qui croient en moi, mes amis et ma famille. À tout ceux qui pensent que les histoires peuvent sauver le monde.
+            
+Et surtout, merci à vous d'avoir joué à cet Opus !"
         ]
     }
   }

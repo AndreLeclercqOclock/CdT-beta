@@ -5,6 +5,7 @@ var buttonCheck = null
 var newButton = null
 var newLabel = null
 var y = 0
+var addWeb = null
 
 func _ready():
 	if LOAD.fileExists == false:
@@ -13,7 +14,7 @@ func _ready():
 		get_node("Start/Label").set_text(str(LOAD.menuText[1]))
 
 	get_node("Option/Label1").set_text(str(LOAD.menuText[2]))
-	get_node("Credits/Label2").set_text(str(LOAD.menuText[3]))
+	get_node("Quitter/Label2").set_text(str(LOAD.menuText[3]))
 		
 	# Son d'ambiance
 	get_node("SampleBKGmenu").play("bkg_main_menu")
@@ -45,10 +46,53 @@ func _on_Start_pressed():
 	
 
 func _on_Option_pressed():
-	get_tree().change_scene("res://scn/option.tscn")
-	GLOBAL.backoption = "res://scn/menu.tscn"
+	#get_tree().change_scene("res://scn/option.tscn")
+	#GLOBAL.backoption = "res://scn/menu.tscn"
+	get_node("Options").popup()
 
-
+	# Textes OPTIONS
+	get_node("Options/VBox/Reset/Label").set_text(str(LOAD.optionsText[0]))
+	get_node("Options/VBox/Credits/Label").set_text(str(LOAD.optionsText[1]))
+	get_node("Options/VBox/Retour/Label").set_text(str(LOAD.optionsText[3]))
+	get_node("Options/VBox/Site/Label").set_text(str(LOAD.optionsText[4]))
+	addWeb = str(LOAD.optionsText[5])
+	
 func _on_Credits_pressed():
-	get_tree().change_scene("res://scn/credits.tscn")
-	GLOBAL.backcredit = "res://scn/menu.tscn"
+	get_node("Options").hide()
+	get_node("Credits").popup()
+
+	# Textes CREDITS
+	get_node("Credits/ScrollContainer/RichTextLabel").set_text(str(LOAD.creditsText[0]))
+	get_node("Credits/Label").set_text(str(LOAD.optionsText[1]))
+	get_node("Credits/RetourCredits/Label").set_text(str(LOAD.optionsText[3]))
+
+func _on_Retour_pressed():
+	get_node("Options").hide()
+
+
+func _on_Youtube_pressed():
+	OS.shell_open("https://www.youtube.com/channel/UCi_4enQ0P4U7XKdcP9340cg")
+
+
+func _on_Twitter_pressed():
+	OS.shell_open("https://twitter.com/ChroniquesTalos")
+
+
+func _on_Facebook_pressed():
+	OS.shell_open("https://www.facebook.com/chroniquesdetalos/")
+
+
+func _on_Site_pressed():
+	OS.shell_open(addWeb)
+
+
+func _on_Reset_pressed():
+	Directory.new().remove("user://saveglobal.json")
+	get_tree().reload_current_scene()
+	LOAD._ready()
+
+func _on_Quitter_pressed():
+	get_tree().quit()
+
+func _on_RetourCredits_pressed():
+	get_node("Credits").hide()

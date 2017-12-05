@@ -72,7 +72,6 @@ max_lines_visible = -1
 
 [node name="Reset" type="TextureButton" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

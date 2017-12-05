@@ -7,8 +7,11 @@ func _ready():
 	get_node("Quitter/Label").set_text(str(LOAD.optionsText[3]))
 
 func _on_Credits_pressed():
-	get_tree().change_scene("res://scn/credits.tscn")
-	GLOBAL.backcredit = "res://scn/option.tscn"
+	get_node("Options").hide()
+	get_node("Credits").popup()
+
+	# Textes CREDITS
+	get_node("Credits/ScrollContainer/RichTextLabel").set_text(str(LOAD.creditsText[0]))
 
 
 func _on_Retour_pressed():

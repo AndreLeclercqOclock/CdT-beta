@@ -41,7 +41,7 @@
             ✔ Sons & Musiques @done (2017-12-5 14:21:39)
                 ✔ Importer sons messages (wav) @done (2017-12-5 10:58:07)
                 ✔ Importer ambiance sonore (wav) @done (2017-12-5 11:30:24)
-                ✔ Importer thème menu principale @done (2017-12-5 13:33:09)
+                ✔ Importer thème menu principale (wav) @done (2017-12-5 13:33:09)
                 ✔ Adaptation du JSON scénario pour les trigger sons @done (2017-12-5 14:21:36)
                     ✔ Ajout du tableau de configuration du trigger @done (2017-12-5 14:21:33)
                     ✔ Création du script pour lire le tableau JSON @done (2017-12-5 14:21:35)
@@ -56,14 +56,15 @@
                 ✔ Réorganisation des fichiers JSON et des scripts @done (2017-12-3 21:07:35)
                 ☐ Optimiser les "morts" & "Fin(s) du chapitre" @low 
                 ☐ Ajuster le système de calcule de l'heure. @critical 
-                ☐ Optimiser le fond des messages de dialogues @low 
                 ✔ Ecran de chargement au lancement de l'aventure @done (2017-12-5 11:51:50)
                 ☐ Réécriture des crédits @low 
                 ☐ Ecriture des remericements @low 
+                ☐ Refonte Options & Crédits (scène => popup) @high @today
                 ☐ Améliorer la popup du choix des chapitres @high 
                 ☐ Ajout du témoin de couleur pour le status de l'interlocuteur @low 
                 ☐ Ajustement des timers messages systèmes @low 
                 ☐ Refonte du menu (image => textes) @high 
+            ☐ DEBUG ALPHA 2.9 @critical @high
 
     Divers:
         ☐ Test sur OS.low
@@ -74,5 +75,6 @@
         ☐ Création menu audio
             ☐ Sons notification (messages)
             ☐ Sons ambiances (thèmes & ambiances)
+        ☐ Création du thème UI
 
 

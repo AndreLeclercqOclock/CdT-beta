@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=22 format=1]
 
 [ext_resource path="res://scr/menu.gd" type="Script" id=1]
 [ext_resource path="res://img/bouton_base.jpg" type="Texture" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://img/fond_menu.jpg" type="Texture" id=5]
 [ext_resource path="res://img/fond_message_large.png" type="Texture" id=6]
 [ext_resource path="res://snd/bkg_main_menu.smp" type="Sample" id=7]
+[ext_resource path="res://img/facebook.jpg" type="Texture" id=8]
+[ext_resource path="res://img/twitter.jpg" type="Texture" id=9]
+[ext_resource path="res://img/youtube.jpg" type="Texture" id=10]
+[ext_resource path="res://img/Fond_general.jpg" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -30,6 +34,55 @@ samples/bkg_main_menu = {
 "priority": 0,
 "sample": ExtResource( 7 )
 }
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=9]
+
+font/size = 100
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=8]
+
+font/size = 35
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=10]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 4 )
 
 [node name="Menu" type="Control"]
 
@@ -115,7 +168,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Credits" type="TextureButton" parent="."]
+[node name="Quitter" type="TextureButton" parent="."]
 
 editor/display_folded = true
 focus/ignore_mouse = false
@@ -134,7 +187,7 @@ textures/pressed = ExtResource( 3 )
 params/resize_mode = 1
 params/stretch_mode = 0
 
-[node name="Label2" type="Label" parent="Credits"]
+[node name="Label2" type="Label" parent="Quitter"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -154,13 +207,14 @@ max_lines_visible = -1
 [node name="Sprite" type="Sprite" parent="."]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 0.975372, 0 )
+transform/pos = Vector2( 0.975342, 0 )
 texture = ExtResource( 5 )
 centered = false
 
 [node name="SelectChapter" type="Popup" parent="."]
 
 editor/display_folded = true
+visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -249,10 +303,376 @@ default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
 
+[node name="Options" type="Popup" parent="."]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1065.0
+margin/bottom = 1919.0
+popup/exclusive = false
+
+[node name="VBox" type="VBoxContainer" parent="Options"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 126.0
+margin/top = 385.0
+margin/right = 979.0
+margin/bottom = 1386.0
+custom_constants/separation = 65
+alignment = 1
+
+[node name="Reset" type="TextureButton" parent="Options/VBox"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 74.0
+margin/right = 853.0
+margin/bottom = 158.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 2 )
+textures/pressed = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="Label" type="Label" parent="Options/VBox/Reset"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 840.0
+margin/bottom = 84.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Credits" type="TextureButton" parent="Options/VBox"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 223.0
+margin/right = 853.0
+margin/bottom = 307.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 2 )
+textures/pressed = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="Label" type="Label" parent="Options/VBox/Credits"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 840.0
+margin/bottom = 84.0
+custom_fonts/font = SubResource( 5 )
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Site" type="TextureButton" parent="Options/VBox"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 372.0
+margin/right = 853.0
+margin/bottom = 456.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 2 )
+textures/pressed = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="Label" type="Label" parent="Options/VBox/Site"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 840.0
+margin/bottom = 84.0
+custom_fonts/font = SubResource( 6 )
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBox" type="HBoxContainer" parent="Options/VBox"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 521.0
+margin/right = 853.0
+margin/bottom = 777.0
+custom_constants/separation = 30
+alignment = 1
+
+[node name="Facebook" type="TextureButton" parent="Options/VBox/HBox"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = 0.0
+margin/right = 268.0
+margin/bottom = 256.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 8 )
+params/resize_mode = 0
+params/scale = Vector2( 2, 2 )
+params/stretch_mode = 0
+
+[node name="Twitter" type="TextureButton" parent="Options/VBox/HBox"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 298.0
+margin/top = 0.0
+margin/right = 554.0
+margin/bottom = 256.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 9 )
+params/resize_mode = 0
+params/scale = Vector2( 2, 2 )
+params/stretch_mode = 0
+
+[node name="Youtube" type="TextureButton" parent="Options/VBox/HBox"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 584.0
+margin/top = 0.0
+margin/right = 840.0
+margin/bottom = 256.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 10 )
+params/resize_mode = 0
+params/scale = Vector2( 2, 2 )
+params/stretch_mode = 0
+
+[node name="Retour" type="TextureButton" parent="Options/VBox"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 842.0
+margin/right = 853.0
+margin/bottom = 926.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 2 )
+textures/pressed = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="Label" type="Label" parent="Options/VBox/Retour"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 841.0
+margin/bottom = 85.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="Options"]
+
+visibility/behind_parent = true
+texture = ExtResource( 11 )
+centered = false
+
+[node name="Credits" type="Popup" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1067.0
+margin/bottom = 1912.0
+popup/exclusive = false
+
+[node name="Label" type="Label" parent="Credits"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 84.0
+margin/top = 101.0
+margin/right = 975.0
+margin/bottom = 273.0
+custom_fonts/font = SubResource( 9 )
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Credits"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 77.0
+margin/top = 320.0
+margin/right = 1023.0
+margin/bottom = 1669.0
+scroll/horizontal = true
+scroll/vertical = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/ScrollContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 946.0
+margin/bottom = 1349.0
+custom_fonts/normal_font = SubResource( 8 )
+bbcode/enabled = true
+bbcode/bbcode = ""
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Sprite" type="Sprite" parent="Credits"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 3.4248, -3.42477 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="RetourCredits" type="TextureButton" parent="Credits"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 123.0
+margin/top = 1699.0
+margin/right = 963.0
+margin/bottom = 1783.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 2 )
+textures/pressed = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="Label" type="Label" parent="Credits/RetourCredits"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 842.0
+margin/bottom = 85.0
+custom_fonts/font = SubResource( 10 )
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 
 [connection signal="pressed" from="Option" to="." method="_on_Option_pressed"]
 
-[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="Quitter" to="." method="_on_Quitter_pressed"]
+
+[connection signal="pressed" from="Options/VBox/Reset" to="." method="_on_Reset_pressed"]
+
+[connection signal="pressed" from="Options/VBox/Credits" to="." method="_on_Credits_pressed"]
+
+[connection signal="pressed" from="Options/VBox/Site" to="." method="_on_Site_pressed"]
+
+[connection signal="pressed" from="Options/VBox/HBox/Facebook" to="." method="_on_Facebook_pressed"]
+
+[connection signal="pressed" from="Options/VBox/HBox/Twitter" to="." method="_on_Twitter_pressed"]
+
+[connection signal="pressed" from="Options/VBox/HBox/Youtube" to="." method="_on_Youtube_pressed"]
+
+[connection signal="pressed" from="Options/VBox/Retour" to="." method="_on_Retour_pressed"]
+
+[connection signal="pressed" from="Credits/RetourCredits" to="." method="_on_RetourCredits_pressed"]
 
 

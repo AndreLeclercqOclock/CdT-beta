@@ -16,6 +16,7 @@ var saveNextTime = []
 var menuText = []
 var gameText = []
 var optionsText = []
+var creditsText = []
 var chapter = []
 
 var scenarioFile = null
@@ -99,6 +100,9 @@ func _ready():
 
 	for i in lang._Language.Options:
 		optionsText.append(i)
+
+	for i in lang._Language.Credits:
+		creditsText.append(i)
 	
 	for i in lang._Language.Config.scenarioFile:
 		chapter.append(i)
