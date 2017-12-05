@@ -70,6 +70,9 @@ func _ready():
 	timer.set_wait_time(0.01)
 
 	if LOAD.fileExists == true and LOAD.stateSave == true:
+		# Ecran de chargement
+		get_node("Loading").popup()
+		get_node("Loading/Label").set_text(LOAD.gameText[7])
 		# Réécriture de la Sauvegarde
 		print("Réécriture de la sauvegarde")
 		LOAD.vscroll = get_node("vbox/Mid/DialBox").get_size().height
@@ -185,6 +188,8 @@ func _ready():
 			LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
 		print("Fin du chargement")
 		print("Réécriture Dialogues dans le JSON")
+		get_node("SampleMSG").set_default_volume_db(0)
+		get_node("Loading").hide()
 	if LOAD.fileExists == true and LOAD.currentNextTime <= OS.get_unix_time():
 		LOAD.currentDial = LOAD.dial[LOAD.currentDial].next
 		LOAD.launch = 1

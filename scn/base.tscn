@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=1]
+[gd_scene load_steps=63 format=1]
 
 [ext_resource path="res://scr/game.gd" type="Script" id=1]
 [ext_resource path="res://img/bouton_base.jpg" type="Texture" id=2]
@@ -197,6 +197,13 @@ samples/bkg_long = {
 "priority": 0,
 "sample": ExtResource( 42 )
 }
+
+[sub_resource type="DynamicFont" id=20]
+
+font/size = 60
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 4 )
 
 [node name="World" type="Node"]
 
@@ -707,7 +714,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 12 )
 animation = "default"
-frame = 12
+frame = 9
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
@@ -987,7 +994,7 @@ autostart = false
 
 config/polyphony = 1
 config/samples = SubResource( 18 )
-default/volume_db = 0.0
+default/volume_db = -80.0
 default/pitch_scale = 1.0
 default/pan = 0.0
 default/depth = 0.0
@@ -1016,6 +1023,44 @@ default/filter/gain = 1.0
 default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
+
+[node name="Loading" type="Popup" parent="Game"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 16.0
+margin/top = 16.0
+margin/right = 1096.0
+margin/bottom = 1936.0
+popup/exclusive = true
+
+[node name="Sprite" type="Sprite" parent="Game/Loading"]
+
+texture = ExtResource( 9 )
+centered = false
+
+[node name="Label" type="Label" parent="Game/Loading"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1068.0
+margin/bottom = 1883.0
+custom_fonts/font = SubResource( 20 )
+text = "CHARGEMENT"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [connection signal="pressed" from="Game/Popup/VBox/Reset" to="Game" method="_on_Reset_pressed"]
 

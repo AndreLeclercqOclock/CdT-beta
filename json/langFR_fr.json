@@ -21,7 +21,8 @@
             "Hors Ligne",
             "Options",
             "Status",
-            ">> Votre interlocuteur est "
+            ">> Votre interlocuteur est ",
+            "Chargement..."
         ],
         "Options" :[ 
             "Effacer la sauvegarde",
