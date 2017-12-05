@@ -39,8 +39,8 @@
                 ✔ Sauvegarde / Chargement des messages systèmes JSON @done (2017-12-4 15:54:02)
                 ✔ Sauvegarde / Chargement des messages systèmes automatiques @done (2017-12-4 16:47:41)
             ☐ Sons & Musiques @high
-                ☐ Ajouter sons (wav)
-                ☐ Ajouter ambiance sonore (wav)
+                ☐ Importer sons (wav)
+                ☐ Importer ambiance sonore (wav)
                 ☐ Adaptation du JSON scénario pour les trigger sons
             ✔ Multi-chapitre @high @done (2017-12-1 10:14:14)
                 ✔ Menu choix des chapitres @done (2017-11-30 09:46:49)
@@ -59,7 +59,8 @@
                 ☐ Ecriture des remericements @low 
                 ☐ Améliorer la popup du choix des chapitres @high 
                 ☐ Ajout du témoin de couleur pour le status de l'interlocuteur @low 
-                ☐ Ajustement des timers messages systèmes
+                ☐ Ajustement des timers messages systèmes @low 
+                ☐ Refonte du menu (image => textes) @high 
 
     Divers:
         ☐ Test sur OS.low
