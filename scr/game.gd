@@ -67,7 +67,7 @@ func _ready():
 	# Initialisation du Timer
 	print("Initialitation du Timer")
 	timer = get_node("Timer")
-	timer.set_wait_time(LOAD.time_delay)
+	timer.set_wait_time(0.01)
 
 	if LOAD.fileExists == true and LOAD.stateSave == true:
 		# Réécriture de la Sauvegarde
@@ -82,7 +82,7 @@ func _ready():
 			status()
 			if LOAD.dial[LOAD.currentDial].ref == 1 and LOAD.currentNextTime <= OS.get_unix_time():
 				# Vérification du status
-				LOAD.time_delay = 0
+				LOAD.time_delay = 1
 				status()
 				# Ecrit l'heure
 				print("Horodatage")
@@ -235,7 +235,7 @@ func start():
 # Gestion des dialogues de ref 1 [DIALOGUES]
 # Dialogues 
 	if LOAD.dial[LOAD.currentDial].ref == 1 :
-		LOAD.time_delay = 0
+		LOAD.time_delay = 1
 		status()
 		last_dial()
 		# Attribution du type de son
@@ -423,6 +423,7 @@ func start():
 			LOAD.dataRep = null
 			LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
 			system_save()
+			status()
 
 									## REPONSES ##
 # Réponses

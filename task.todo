@@ -40,7 +40,8 @@
                 ✔ Sauvegarde / Chargement des messages systèmes automatiques @done (2017-12-4 16:47:41)
             ☐ Sons & Musiques @high
                 ✔ Importer sons messages (wav) @done (2017-12-5 10:58:07)
-                ☐ Importer ambiance sonore (wav)
+                ✔ Importer ambiance sonore (wav) @done (2017-12-5 11:30:24)
+                ☐ Importer thème menu principale
                 ☐ Adaptation du JSON scénario pour les trigger sons
             ✔ Multi-chapitre @high @done (2017-12-1 10:14:14)
                 ✔ Menu choix des chapitres @done (2017-11-30 09:46:49)
