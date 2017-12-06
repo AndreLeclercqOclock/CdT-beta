@@ -43,12 +43,11 @@ var statusText = null
 var status = 0
 var statusNext = 0
 var visible = 1
-
 var led = null
-
 var sound = 0
 var triggerName = null
 var triggerVol = 0
+var lastRep = null
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -445,15 +444,18 @@ func start():
 # Réponses
 # Gestion des dialogues de ref 2 [REPONSES CHOIX MULTIPLES]
 	if LOAD.dial[LOAD.currentDial].ref == 2 :
-		print("#### DIALOGUES REF : 2 ####")
-		print("Création de ",LOAD.dial[LOAD.currentDial].content.size()," bouton(s)")
-		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
-			print("Création du bouton n°",LOAD.dial[LOAD.currentDial].button[i])
-			get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(LOAD.dial[LOAD.currentDial].button[i]))
-			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
-			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
-		timer.stop()
-		print("Fin de la création des boutons")
+		if lastRep == LOAD.dial[LOAD.currentDial]:
+			pass
+		else:
+			print("#### DIALOGUES REF : 2 ####")
+			print("Création de ",LOAD.dial[LOAD.currentDial].content.size()," bouton(s)")
+			for i in range(LOAD.dial[LOAD.currentDial].content.size()):
+				print("Création du bouton n°",LOAD.dial[LOAD.currentDial].button[i])
+				get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(LOAD.dial[LOAD.currentDial].button[i]))
+				get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
+				get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
+			timer.stop()
+			print("Fin de la création des boutons")
 
 
 									## MESSAGE SYSTEM ##	
@@ -777,6 +779,7 @@ func last_dial():
 		file.open("user://saveglobal.json", File.WRITE)
 		file.store_line(LOAD.data.to_json())
 		file.close()
+		lastRep = LOAD.currentDial.next
 	return
 
 # Système de sample MESSAGES

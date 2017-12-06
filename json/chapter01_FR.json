@@ -17,7 +17,7 @@
    "name": "Pr. Latrémon"
   },
   "config": {
-    "firstDial": "dial001",
+    "firstDial": "dialFIN05",
     "lastDial" : "dialFIN05"
    },
   "dial001": {

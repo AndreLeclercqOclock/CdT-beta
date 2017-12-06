@@ -490,6 +490,7 @@ texture = ExtResource( 9 )
 
 [node name="vbox" type="VBoxContainer" parent="Game"]
 
+editor/display_folded = true
 rect/min_size = Vector2( 1080, 1920 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -631,6 +632,7 @@ texture = ExtResource( 15 )
 
 [node name="Mid" type="Container" parent="Game/vbox"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 0
@@ -642,6 +644,7 @@ margin/bottom = 4.0
 
 [node name="DialBox" type="ScrollContainer" parent="Game/vbox/Mid"]
 
+editor/display_folded = true
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -657,6 +660,7 @@ scroll/vertical = true
 
 [node name="VBoxMid" type="VBoxContainer" parent="Game/vbox/Mid/DialBox"]
 
+editor/display_folded = true
 rect/min_size = Vector2( 1070, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -728,7 +732,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 12 )
 animation = "default"
-frame = 6
+frame = 13
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]

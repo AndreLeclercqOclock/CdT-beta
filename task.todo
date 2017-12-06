@@ -66,8 +66,7 @@
                     ☐ Affichage bouton "Chapitre Suivant".
                 ☐ Ajuster le système de calcule de l'heure. @critical 
                 ✔ Ecran de chargement au lancement de l'aventure @done (2017-12-5 11:51:50)
-                ☐ Réécriture des crédits @low 
-                ☐ Ecriture des remericements @low 
+                ☐ Réécriture des crédits & remerciements @low
                 ✔ Refonte Options & Crédits (scène => popup) @done (2017-12-5 16:21:54)
                 ✔ Améliorer la popup du choix des chapitres @done (2017-12-6 12:42:03)
                     ✔ Ajouter Fond de la Popup @done (2017-12-6 12:41:55)
@@ -75,10 +74,11 @@
                     ✔ Ajout bouton "Retour au menu" @done (2017-12-6 12:41:58)
                 ✔ Ajout du témoin de couleur pour le status de l'interlocuteur @done (2017-12-6 13:13:03)
                 ✔ Ajustement des timers messages systèmes @done (2017-12-6 15:14:44)
-                ☐ Refonte du menu (image => textes) @high
                 ✔ Ajouter les trigger son dans les JSON @done (2017-12-6 09:42:20)
                 ✔ Supprimer le cache au reset de la sauvegarde @done (2017-12-6 13:44:49)
             ☐ DEBUG ALPHA 2.9 @critical @high
+                ✔ Affichage messages système @done (2017-12-6 16:05:44)
+                ✔ Bug du cache des logs save @done (2017-12-6 16:08:33)
 
     Divers:
         ☐ Test sur OS.low
@@ -90,5 +90,6 @@
             ☐ Sons notification (messages)
             ☐ Sons ambiances (thèmes & ambiances)
         ☐ Création du thème GUI
+        ☐ Refonte du menu (image => textes)
 
 
