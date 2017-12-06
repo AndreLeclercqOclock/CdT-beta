@@ -63,7 +63,8 @@
                 ☐ Améliorer la popup du choix des chapitres @high 
                 ☐ Ajout du témoin de couleur pour le status de l'interlocuteur @low 
                 ☐ Ajustement des timers messages systèmes @low 
-                ☐ Refonte du menu (image => textes) @high 
+                ☐ Refonte du menu (image => textes) @high
+                ✔ Ajouter les trigger son dans les JSON @done (2017-12-6 09:42:20)
             ☐ DEBUG ALPHA 2.9 @critical @high
 
     Divers:

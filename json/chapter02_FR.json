@@ -29,7 +29,8 @@
 	"— Kernel verification : error, out of date",
 	">>> Force kernel upload. Ok."
    ],
-   "next": "dial001b"
+   "next": "dial001b",
+   "sound": [0,"null",0]
   },
   "dial001b": {
    "ref": 3,
@@ -43,7 +44,8 @@
 	"— AE.open.lib – ok",
 	"— System reboot."
    ],
-   "next": "dial001c"
+   "next": "dial001c",
+   "sound": [0,"null",0]
   },
   "dial001c": {
    "ref": 3,
@@ -53,7 +55,8 @@
 	">>> Tuning polyfrequencies",
 	"— Please wait."
    ],
-   "next": "dial001d"
+   "next": "dial001d",
+   "sound": [0,"null",0]
   },
   "dial001d": {
    "ref": 3,
@@ -65,7 +68,8 @@
 	">>> Tuning complete.",
 	"… parce que là, l’écran dit « Connexion active », alors c’est que ça doit marcher, non?"
    ],
-   "next": "rep001"
+   "next": "rep001",
+   "sound": [0,"null",0]
   },
 "dial002": {
    "ref": 1,
@@ -75,7 +79,8 @@
     "C’est moi ! Michel ! Le professeur Latrémon !",
     "Ne me dites pas que vous m’avez déjà oublié ?"
    ],
-   "next": "rep002"
+   "next": "rep002",
+   "sound": [0,"null",0]
   },
   "dial004a": {
 	"ref": 1,
@@ -84,7 +89,8 @@
 		"Vous me taquinez !",
 		"Ça n’est pas très sympa. Surtout après ce que je viens de vivre."
 	],
-	"next": "dial004b"
+	"next": "dial004b",
+	"sound": [0,"null",0]
 },
 "dial003a": {
 	"ref": 1,
@@ -93,7 +99,8 @@
 		"Bien sûr ! Qui voulez-vous que ce soit ?",
 		"Vous connaissez beaucoup de monde capable de vous appeler d’une autre dimention ?"
 	],
-	"next": "dial004b"
+	"next": "dial004b",
+	"sound": [0,"null",0]
 },
 "dial003b": {
 	"ref": 1,
@@ -103,7 +110,8 @@
 		"Je ne maîtrise pas bien la technologie.",
 		"Mais ce bidule est etrèmement déroutant."
 	],
-	"next": "dial004b"
+	"next": "dial004b",
+	"sound": [0,"null",0]
 },
 "dial004b": {
 	"ref": 1,
@@ -114,7 +122,8 @@
 		"À vrai dire, je l’ai cru moi aussi.",
 		"Quelle drôle d’expérience, vraiment."
 	],
-	"next": "rep004"
+	"next": "rep004",
+	"sound": [0,"null",0]
 },
 "dial005": {
 	"ref": 1,
@@ -124,7 +133,8 @@
 		"Et puis, j’ai perdu connaissance. J’ai lâché mon petit téléphone.",
 		"Et je me suis réveillé ici."
 	],
-	"next": "rep005"
+	"next": "rep005",
+	"sound": [0,"null",0]
 },
 "dial006": {
 	"ref": 1,
@@ -136,13 +146,15 @@
 		"C’est une sorte de petite tablette. Je l’ai démarrée, et, en farfouillant dans les réglages, j’ai fini par lancer un programme me proposant de joindre un numéro de téléphone.",
 		"J’ai donc entré le vôtre. Heureusement que je m’en souvenais."
 	],
-	"next": "rep006"
+	"next": "rep006",
+	"sound": [0,"null",0]
 },
 "dial007a": {
 	"ref": 1,
 	"time": 3,
 	"content": ["Vous n’allez pas me croire."],
-	"next": "dial007b"
+	"next": "dial007b",
+	"sound": [0,"null",0]
 },
 "dial007b": {
 	"ref": 1,
@@ -153,7 +165,8 @@
 		"Je me suis dit un moment que j’avais été téléporté dans un coin de campagne, quelque part loin de tout.",
 		"Mais j’ai vite réalisé que j’étais loin. Vraiment très loin."
 	],
-	"next": "rep007"
+	"next": "rep007",
+	"sound": [0,"null",0]
 },
 "dial007c": {
 	"ref": 1,
@@ -163,7 +176,8 @@
 		"C’est vrai que j’ai une tendance à l’exagération.",
 		"Mais si vous pouviez voir ce que je vois…"
 	],
-	"next": "dial010"
+	"next": "dial010",
+	"sound": [0,"null",0]
 },
 "dial008a": {
 	"ref": 1,
@@ -173,7 +187,8 @@
 		"Je n’y connais rien en matière de trucs militaires, mais il y a des insignes et des immatriculations qui font très officielles.",
 		"Par exemple : AEc. unit D-771 «Pandion», ça vous dit quelque chose ?"
 	],
-	"next": "rep008"
+	"next": "rep008",
+	"sound": [0,"null",0]
 },
 "dial008b": {
 	"ref": 1,
@@ -183,7 +198,8 @@
 		"Le point de départ de tout cela est quand même un immense manque de chance.",
 		"Ou de maladresse. Enfin bref."
 	],
-	"next": "dial010"
+	"next": "dial010",
+	"sound": [0,"null",0]
 },
 "dial009a": {
 	"ref": 1,
@@ -192,13 +208,15 @@
 		"Tout comme moi. Me voilà rassuré.",
 		"Bon."
 	],
-	"next": "dial010"
+	"next": "dial010",
+	"sound": [0,"null",0]
 },
 "dial009b": {
 	"ref": 1,
 	"time": 2,
 	"content": ["Bon, Si vous le dites."],
-	"next": "dial010"
+	"next": "dial010",
+	"sound": [0,"null",0]
 },
 "dial009c": {
 	"ref": 1,
@@ -208,13 +226,15 @@
 		"Ou pas.",
 		"Enfin…"
 	],
-	"next": "dial010"
+	"next": "dial010",
+	"sound": [0,"null",0]
 },
 "dial010": {
 	"ref": 1,
 	"time": 2,
 	"content": ["Je pense ne pas me tromper en concluant être loin de chez moi, en voyant dans ce ciel d’été idéal deux lunes."],
-	"next": "rep010"
+	"next": "rep010",
+	"sound": [0,"null",0]
 },
 "dial011a": {
 	"ref": 1,
@@ -225,7 +245,8 @@
 		"Mais cessez d’en vouloir à l’intégrité de mon crâne.",
 		"Je ne délire pas. Sincèrement."
 	],
-	"next": "rep011"
+	"next": "rep011",
+	"sound": [0,"null",0]
 },
 "dial011b": {
 	"ref": 1,
@@ -235,7 +256,8 @@
 		"Cet endroit a bien deux satellites en orbite.",
 		"C’est très joli, cela dit.."
 	],
-	"next": "rep011"
+	"next": "rep011",
+	"sound": [0,"null",0]
 },
 "dial012": {
 	"ref": 1,
@@ -249,7 +271,8 @@
 		"Et, le plus intéressant ; derrière cette clôture se dresse un très grand bâtiment, à plusieurs étages.",
 		"Voilà. J’ai peut-être loupé quelque chose, mais à cette distance c’est tout ce que je peux voir."
 	],
-	"next": "rep012"
+	"next": "rep012",
+	"sound": [0,"null",0]
 },
 "dial013a": {
 	"ref": 1,
@@ -259,7 +282,8 @@
 		"C’est herbeux et un peu humide. Je vais essayer de ne pas glisser.",
 		"Il ne manquerait plus que je me casse la hanche. Nous serions bien."
 	],
-	"next": "dial014"
+	"next": "dial014",
+	"sound": [0,"null",0]
 },
 "dial013b": {
 	"ref": 1,
@@ -269,7 +293,8 @@
 		"Le bâtiment de l’autre côté de la varrée m’attire parce qu’il s’agit d’une construction évidemment humaine et relativement moderne.",
 		"Sincèrement, j’espère y trouver de l’aide et le moyen de rentrer chez moi."
 	],
-	"next": "dial014"
+	"next": "dial014",
+	"sound": [0,"null",0]
 },
 "dial013c": {
 	"ref": 1,
@@ -278,7 +303,8 @@
 		"Donc, en route.",
 		"La pente est assez inclinée. Laissez-moi quelques minutes les mains libres, que j’évite de descendre le talus en mode luge… sans luge."
 	],
-	"next": "dial014"
+	"next": "dial014",
+	"sound": [0,"null",0]
 },
 "dial014": {
 	"ref": 1,
@@ -288,19 +314,22 @@
 		"Mon horizon est maintenant bouché. Cela me donne le sentiment étrange que le décor est artificiel.",
 		"Pour autant, c’est peut-être le cas, qui sait ? Dans un lieu où deux lunes traversent le ciel, à quelles autres étrangetés puis-je m’attendre ?"
 	],
-	"next": "rep014"
+	"next": "rep014",
+	"sound": [0,"null",0]
 },
 "dial014a": {
 	"ref": 1,
 	"time": 2,
 	"content": ["La belle affaire, je n’ai pas mon brevet de pilote."],
-	"next": "dial015a"
+	"next": "dial015a",
+	"sound": [0,"null",0]
 },
 "dial014b": {
 	"ref": 1,
 	"time": 2,
 	"content": ["Hum. Vraiment ?"],
-	"next": "dial015a"
+	"next": "dial015a",
+	"sound": [0,"null",0]
 },
 "dial014c": {
 	"ref": 1,
@@ -309,13 +338,15 @@
 		"Ne parlez pas de malheur.",
 		"Je n’ai pas de protection en mithril sur moi."
 	],
-	"next": "dial015a"
+	"next": "dial015a",
+	"sound": [0,"null",0]
 },
 "dial014d": {
 	"ref": 1,
 	"time": 2,
 	"content": ["Et pourquoi pas quelques Daleks, tant qu’on y est ?"],
-	"next": "dial015a"
+	"next": "dial015a",
+	"sound": [0,"null",0]
 },
 "dial015a": {
 	"ref": 1,
@@ -327,7 +358,8 @@
 		"Je me sens beaucoup moins seul, dans cet environnement étrange. Moins seul et moins perdu.",
 		"Merci d’être là."
 	],
-	"next": "dial015b"
+	"next": "dial015b",
+	"sound": [0,"null",0]
 },
 "dial015b": {
 	"ref": 1,
@@ -337,7 +369,8 @@
 		"La rivière me barre tout l’horizon. Je pourrais la longer vers la gauche, ou la remonter vers la droite.",
 		"Vous savez, il y a également cet ilot, à peu près en face de moi. Qu’en pensez-vous ?"
 	],
-	"next": "rep015"
+	"next": "rep015",
+	"sound": [0,"null",0]
 },
 "dial016": {
 	"ref": 1,
@@ -346,7 +379,8 @@
 		"Bien prit, capt’ain.",
 		"Donnez-moi un moment. Je vous recontacte s’il y a quelque chose d’intéressant."
 	],
-	"next": "dial016a"
+	"next": "dial016a",
+	"sound": [0,"null",0]
 },
 "dial016a": {
 	"ref": 1,
@@ -358,7 +392,8 @@
 		"La rivière plonge dans une sorte de tunnel fermé par une grille métallique.",
 		"Je ne vois rien de spécial ici."
 	],
-	"next": "dial016b"
+	"next": "dial016b",
+	"sound": [0,"null",0]
 },
 "dial016b": {
 	"ref": 1,
@@ -367,7 +402,8 @@
 		"Il n’y a vraiment aucun intérêt à rester ici. Je retourne sur mes pas.",
 		"À très bientôt, cher ami."
 	],
-	"next": "dial019"
+	"next": "dial019",
+	"sound": [0,"null",0]
 },
 "dial017": {
 	"ref": 1,
@@ -377,7 +413,8 @@
 		"Allons donc voir ce que cet endroit bizarre et pourtant serein a à nous offrir.",
 		"Je vais marcher tranquillement en sifflotant un air sans queue ni tête, et je vous reprend si je tombe sur quelque chose d’insolite."
 	],
-	"next": "dial017a"
+	"next": "dial017a",
+	"sound": [0,"null",0]
 },
 "dial017a": {
 	"ref": 1,
@@ -390,7 +427,8 @@
 		"Ici le talus est bien trop haut pour l’escalader. Et je me trouve devant un bassin dans lequel une magnifique cascade déverse des hectolitres d’eau que j’imagine glacée.",
 		"Ne me demandez pas pourquoi."
 	],
-	"next": "dial017b"
+	"next": "dial017b",
+	"sound": [0,"null",0]
 },
 "dial017b": {
 	"ref": 1,
@@ -399,13 +437,15 @@
 		"Bref, si j’avais un panier à picnic bien garni, c’est ici que je m’installerais.",
 		"Mais, pour le moment, cet idyllique endroit n’a aucun intérêt. Je rebrousse chemin."
 	],
-	"next": "dial019"
+	"next": "dial019",
+	"sound": [0,"null",0]
 },
 "dial018a": {
 	"ref": 1,
 	"time": 2,
 	"content": ["Je vais vous faire une confession ; c’est ce que je voulais aller voir."],
-	"next": "dial018b"
+	"next": "dial018b",
+	"sound": [0,"null",0]
 },
 "dial018b": {
 	"ref": 1,
@@ -415,7 +455,8 @@
 		"Reste l’îlot. C’est donc là que je vais.",
 		"C’est décidé !"
 	],
-	"next": "dial020"
+	"next": "dial020",
+	"sound": [0,"null",0]
 },
 "dial019": {
 	"ref": 1,
@@ -427,7 +468,8 @@
 		"Vous me suivez ?",
 		"Bien sûr que vous m’accompagnez, ha ha ha !"
 	],
-	"next": "dial020"
+	"next": "dial020",
+	"sound": [0,"null",0]
 },
 "dial020": {
 	"ref": 1,
@@ -440,7 +482,8 @@
 		"L’ilot n’est pas très grand. Il doit faire à peine quelques dizaines de mètres carrés, mais la végétation y est très dense.",
 		"Entre les bouleaux et les saules pleureurs et les buissons épais, j’ai du mal à deviner les bords de l’autre côté."
 	],
-	"next": "dial020a"
+	"next": "dial020a",
+	"sound": [0,"null",0]
 },
 "dial020a": {
 	"ref": 1,
@@ -451,7 +494,8 @@
 		"De l’autre, le sentier semble plus ou moins longer la berge.",
 		"J’hésite…"
 	],
-	"next": "rep020"
+	"next": "rep020",
+	"sound": [0,"null",0]
 },
 "dial021a": {
 	"ref": 1,
@@ -461,7 +505,8 @@
 		"Allez, je vous laisse tranquille pendant que je joue les docteurs Livingstone.",
 		"Si je vois quelque chose d’intéressant, vous serez le premier averti !"
 	],
-	"next": "dial021c"
+	"next": "dial021c",
+	"sound": [0,"null",0]
 },
 "dial021d": {
 	"ref": 1,
@@ -473,7 +518,8 @@
 		"Petit insolent, je vais vous montrer de quel bois est fait Michel Latrémon !",
 		"Allez, hop, en avant !"
 	],
-	"next": "dial021c"
+	"next": "dial021c",
+	"sound": [0,"null",0]
 },
 "dial021c": {
 	"ref": 1,
@@ -485,7 +531,8 @@
 		"J’aimerais tant vous montrer ce que j’ai découvert !",
 		"J’en ai presque la larme à l’œil."
 	],
-	"next": "rep021"
+	"next": "rep021",
+	"sound": [0,"null",0]
 },
 "dial022": {
 	"ref": 1,
@@ -496,7 +543,8 @@
 		"D’autant que mes chaussures sont encore humides des catacombes.",
 		"Si seulement j’avais trouvé des chaussures militaires dans la tente."
 	],
-	"next": "dial022a"
+	"next": "dial022a",
+	"sound": [0,"null",0]
 },
 "dial022a": {
 	"ref": 1,
@@ -509,7 +557,8 @@
 		"D’abord, presque en face de moi, j’aperçois un escalier menant à une clôture. J’imagine qu’il s’agit de l’entrée du bâtiment que j’ai vu depuis le campement.",
 		"Plus à ma gauche, il me semble apercevoir l’entrée d’un tunnel ou d’une grotte."
 	],
-	"next": "dial022b"
+	"next": "dial022b",
+	"sound": [0,"null",0]
 },
 "dial022b": {
 	"ref": 1,
@@ -519,7 +568,8 @@
 		"L’avantage, c’est que sa largeur ici est assez étroite.",
 		"L’inconvénient, c’est que le débit me semble assez rapide, et je n’arrive pas à jauger le fond."
 	],
-	"next": "dial022c"
+	"next": "dial022c",
+	"sound": [0,"null",0]
 },
 "dial022c": {
 	"ref": 1,
@@ -530,7 +580,8 @@
 		"Je suis sûr qu’elle peut supporter mon poids.",
 		"Mais c’est un aller simple. Une fois que j’aurai atterri de l’autre côté, je n’aurai aucun moyen de retour."
 	],
-	"next": "dial022d"
+	"next": "dial022d",
+	"sound": [0,"null",0]
 },
 "dial022d": {
 	"ref": 1,
@@ -539,7 +590,8 @@
 		"Ne prenez pas cela comme une interro surprise, mais plutôt comme un exercice pratique sur le terrain.",
 		"Si vous étiez là, à ma place, vous opteriez pour quoi ?"
 	],
-	"next": "rep022"
+	"next": "rep022",
+	"sound": [0,"null",0]
 },
 "dial023": {
 	"ref": 1,
@@ -550,7 +602,8 @@
 		"Sur la dalle a été sculpté un gisant.",
 		"Et, s’il n’y avait pas de nom sur la stèle, le doute serait pourtant à peine permis."
 	],
-	"next": "rep023"
+	"next": "rep023",
+	"sound": [0,"null",0]
 },
 "dial024a": {
 	"ref": 1,
@@ -559,7 +612,8 @@
 		"Bien joué.",
 		"Vous semblez finalement plus éveillé que la plupart de mes étudiants."
 	],
-	"next": "dial024b"
+	"next": "dial024b",
+	"sound": [0,"null",0]
 },
 "dial024b": {
 	"ref": 1,
@@ -569,7 +623,8 @@
 		"Vous avez le don de me divertir, en tout cas.",
 		"C’est un tombeau chrétien, disais-je. Et il y a une stèle gravée."
 	],
-	"next": "dial025"
+	"next": "dial025",
+	"sound": [0,"null",0]
 },
 "dial025": {
 	"ref": 1,
@@ -581,7 +636,8 @@
 		"Il y avait autre chose gravée en dessous, en plus petite, mais le temps a érodé la pierre et, sans matériel adéquat, je ne peux rien déchiffrer.",
 		"Tant pis."
 	],
-	"next": "dial025a"
+	"next": "dial025a",
+	"sound": [0,"null",0]
 },
 "dial025a": {
 	"ref": 1,
@@ -593,7 +649,8 @@
 		"Néanmoins, il a échappé au bûcher. C’est déjà ça.",
 		"Je pense que je n’ai plus rien à faire ici, en tout cas."
 	],
-	"next": "dial025b"
+	"next": "dial025b",
+	"sound": [0,"null",0]
 },
 "dial025b": {
 	"ref": 1,
@@ -603,7 +660,8 @@
 		"Vous suivez ?",
 		"Ha ha ha, pardonnez-moi. Je ne m’en lasse pas."
 	],
-	"next": "dial025c"
+	"next": "dial025c",
+	"sound": [0,"null",0]
 },
 "dial025c": {
 	"ref": 1,
@@ -617,7 +675,8 @@
 		"J’imagine qu’il s’agit de l’entrée du bâtiment que j’ai vu depuis le campement.",
 		"Plus à ma gauche, il me semble apercevoir l’entrée d’un tunnel ou d’une grotte."
 	],
-	"next": "dial025d"
+	"next": "dial025d",
+	"sound": [0,"null",0]
 },
 "dial025d": {
 	"ref": 1,
@@ -627,7 +686,8 @@
 		"L’avantage, c’est que sa largeur ici est assez étroite.",
 		"L’inconvénient, c’est que le débit me semble assez rapide, et je n’arrive pas à jauger le fond."
 	],
-	"next": "dial025e"
+	"next": "dial025e",
+	"sound": [0,"null",0]
 },
 "dial025e": {
 	"ref": 1,
@@ -638,7 +698,8 @@
 		"Mais c’est un aller simple.",
 		"Une fois que j’aurai atterri de l’autre côté, je n’aurai aucun moyen de retour."
 	],
-	"next": "dial025f"
+	"next": "dial025f",
+	"sound": [0,"null",0]
 },
 "dial025f": {
 	"ref": 1,
@@ -647,7 +708,8 @@
 		"Ne prenez pas cela comme une interro surprise, mais plutôt comme un exercice pratique sur le terrain.",
 		"Si vous étiez là, à ma place, vous opteriez pour quoi ?"
 	],
-	"next": "rep025"
+	"next": "rep025",
+	"sound": [0,"null",0]
 },
 "dial026": {
 	"ref": 1,
@@ -658,7 +720,8 @@
 		"On devrait créer des centres de loisirs proposant ce genre d’activités.",
 		"Ça serait une chouette idée, non ?"
 	],
-	"next": "rep026"
+	"next": "rep026",
+	"sound": [0,"null",0]
 },
 "dial026a": {
 	"ref": 1,
@@ -668,7 +731,8 @@
 		"Décidément, je ne suis jamais au courant de rien.",
 		"Enfin…"
 	],
-	"next": "dial027"
+	"next": "dial027",
+	"sound": [0,"null",0]
 },
 "dial026b": {
 	"ref": 1,
@@ -678,7 +742,8 @@
 		"Encore faudrait-il que je revienne chez nous.",
 		"Et pour cela…"
 	],
-	"next": "dial027"
+	"next": "dial027",
+	"sound": [0,"null",0]
 },
 "dial027": {
 	"ref": 1,
@@ -688,7 +753,8 @@
 		"Je vous mets dans ma poche, le temps d’arriver jusqu’à la branche.",
 		"Tâchez de ne pas vous inquiéter pour moi !"
 	],
-	"next": "dial027a"
+	"next": "dial027a",
+	"sound": [0,"null",0]
 },
 "dial027a": {
 	"ref": 1,
@@ -701,7 +767,8 @@
 		"D’ici, le courant du petit bras de la rivière semble vraiment terrible.",
 		"Bon, je reprends ma reptation."
 	],
-	"next": "dial027b"
+	"next": "dial027b",
+	"sound": [0,"null",0]
 },
 "dial027b": {
 	"ref": 1,
@@ -716,7 +783,8 @@
 		"J’espère ne pas avoir oublié mes clés de voiture derrière moi.",
 		"C’était drôle, non ?"
 	],
-	"next": "rep027"
+	"next": "rep027",
+	"sound": [0,"null",0]
 },
 "dial028a": {
 	"ref": 1,
@@ -726,7 +794,8 @@
 		"Hum… Attendez une minute…",
 		"Oh. Peu importe."
 	],
-	"next": "dial028b"
+	"next": "dial028b",
+	"sound": [0,"null",0]
 },
 "dial028b": {
 	"ref": 1,
@@ -736,7 +805,8 @@
 		"Mais j’essaye de rester positif.",
 		"Allons, voyons quelle sera notre prochaine étape !"
 	],
-	"next": "dial028b"
+	"next": "dial028b",
+	"sound": [0,"null",0]
 },
 "dial029": {
 	"ref": 1,
@@ -746,7 +816,8 @@
 		"Cela dit, c’est du pile ou face.",
 		"Vous avez une pièce ?"
 	],
-	"next": "rep029"
+	"next": "rep029",
+	"sound": [0,"null",0]
 },
 "dial029b": {
 	"ref": 1,
@@ -756,7 +827,8 @@
 		"Je vais voir cette grotte.",
 		"À tout de suite !"
 	],
-	"next": "dial030"
+	"next": "dial030",
+	"sound": [0,"null",0]
 },
 "dial030": {
 	"ref": 1,
@@ -767,7 +839,8 @@
 		"Encore moins si une entité pandimensionnelle est à ma poursuite.",
 		"Bon, je vous refais la conversation quand je suis devant."
 	],
-	"next": "dial030a"
+	"next": "dial030a",
+	"sound": [0,"null",0]
 },
 "dial030a": {
 	"ref": 1,
@@ -780,7 +853,8 @@
 		"Mais la grotte est fermée par une belle grille.",
 		"Certes elle semble vieille, passablement rouillée, mais très épaisse et encore très solide."
 	],
-	"next": "rep030"
+	"next": "rep030",
+	"sound": [0,"null",0]
 },
 "dial031a": {
 	"ref": 1,
@@ -790,7 +864,8 @@
 		"Moi et mes petits muscles d’universitaire contre des barreaux d’acier qui ont tenu des dizaines d’années ?",
 		"Ma foi, qui ne tente rien ?"
 	],
-	"next": "dial031b"
+	"next": "dial031b",
+	"sound": [0,"null",0]
 },
 "dial031b": {
 	"ref": 1,
@@ -800,7 +875,8 @@
 		"Pas de miracle, hein ?",
 		"Rien à faire, elle ne bouge même pas."
 	],
-	"next": "rep031a"
+	"next": "rep031a",
+	"sound": [0,"null",0]
 },
 "dial031c": {
 	"ref": 1,
@@ -810,7 +886,8 @@
 		"J’avais oublié que j’avais récupéré cette belle lampe-torche au campement.",
 		"Voyons voir…"
 	],
-	"next": "dial031d"
+	"next": "dial031d",
+	"sound": [0,"null",0]
 },
 "dial031d": {
 	"ref": 1,
@@ -821,7 +898,8 @@
 		"Un sol de terre battue, des parois brutes, des fientes de chauve-souris…",
 		"Rien d’intéressant, j’en ai peur."
 	],
-	"next": "dial031d"
+	"next": "dial031d",
+	"sound": [0,"null",0]
 },
 "dial032a": {
 	"ref": 1,
@@ -831,7 +909,8 @@
 		"J’avais oublié que j’avais récupéré cette belle lampe-torche au campement.",
 		"Voyons voir…"
 	],
-	"next": "dial032b"
+	"next": "dial032b",
+	"sound": [0,"null",0]
 },
 "dial032b": {
 	"ref": 1,
@@ -842,7 +921,8 @@
 		"Un sol de terre battue, des parois brutes, des fientes de chauve-souris…",
 		"Rien d’intéressant, j’en ai peur."
 	],
-	"next": "rep032a"
+	"next": "rep032a",
+	"sound": [0,"null",0]
 },
 "dial032c": {
 	"ref": 1,
@@ -851,7 +931,8 @@
 		"Hum. Moi et mes petits muscles d’universitaire contre des barreaux d’acier qui ont tenu des dizaines d’années ?",
 		"Ma foi, qui ne tente rien…"
 	],
-	"next": "dial032d"
+	"next": "dial032d",
+	"sound": [0,"null",0]
 },
 "dial032d": {
 	"ref": 1,
@@ -861,7 +942,8 @@
 		"Ça n’est pas une surprise.",
 		"Mais, rien à faire."
 	],
-	"next": "dial033"
+	"next": "dial033",
+	"sound": [0,"null",0]
 },
 "dial033": {
 	"ref": 1,
@@ -872,7 +954,8 @@
 		"Je vais aller voir la clôture.",
 		"Je vous retrouve devant."
 	],
-	"next": "dial034"
+	"next": "dial034",
+	"sound": [0,"null",0]
 },
 "dial034": {
 	"ref": 1,
@@ -882,13 +965,15 @@
 		"Allons inspecter les abords de cette clôture.",
 		"Je vous raconte ce que j’ai devant les yeux dès que j’y suis."
 	],
-	"next": "dial034a"
+	"next": "dial034a",
+	"sound": [0,"null",0]
 },
 "dial034a": {
 	"ref": 1,
 	"time": 60,
 	"content": ["Hello, encore avec moi ?"],
-	"next": "dial034a"
+	"next": "dial034a",
+	"sound": [0,"null",0]
 },
 "dial035": {
 	"ref": 1,
@@ -902,7 +987,8 @@
 		"On dirait que quelqu’un a y a trouvé de quoi installer une entreprise fructueuse.",
 		"Cela veut dire deux choses…"
 	],
-	"next": "rep025"
+	"next": "rep025",
+	"sound": [0,"null",0]
 },
 "dial035a": {
 	"ref": 1,
@@ -911,7 +997,8 @@
 		"Exactement.",
 		"Et, surtout, quelque chose ici a suffisamment d’intérêt pour y installer de grosses infrastructures."
 	],
-	"next": "dial036"
+	"next": "dial036",
+	"sound": [0,"null",0]
 },
 "dial035b": {
 	"ref": 1,
@@ -920,7 +1007,8 @@
 		"Exact.",
 		"Mais par quel moyen sont-ils parvenus à suivre Malemont, même des siècles plus tard ?"
 	],
-	"next": "dial036"
+	"next": "dial036",
+	"sound": [0,"null",0]
 },
 "dial036": {
 	"ref": 1,
@@ -931,7 +1019,8 @@
 		"Et j’espère bien trouver quelqu’un qui pourra m’aider à revenir.",
 		"Vous êtes plutôt bière ou whisky, que je sache quoi vous offrir à mon retour, pour toute l’aide que vous m’avez offerte jusqu’ici ?"
 	],
-	"next": "rep036"
+	"next": "rep036",
+	"sound": [0,"null",0]
 },
 "dial036a": {
 	"ref": 1,
@@ -940,7 +1029,8 @@
 		"Voilà qui est parlé !",
 		"Je tâcherai de m’en souvenir."
 	],
-	"next": "dial037"
+	"next": "dial037",
+	"sound": [0,"null",0]
 },
 "dial036b": {
 	"ref": 1,
@@ -949,7 +1039,8 @@
 		"Un choix intéressant, et pas du tout déplaisant.",
 		"Je trouverai bien une bouteille à votre goût dans ma cave."
 	],
-	"next": "dial037"
+	"next": "dial037",
+	"sound": [0,"null",0]
 },
 "dial036c": {
 	"ref": 1,
@@ -959,7 +1050,8 @@
 		"Nous avons besoin de rester concentrés.",
 		"Je ne suis pas encore sorti d’affaires."
 	],
-	"next": "dial037a"
+	"next": "dial037a",
+	"sound": [0,"null",0]
 },
 "dial037": {
 	"ref": 1,
@@ -971,7 +1063,8 @@
 		"J’ai l’impression qu’il conduit à une petite construction.",
 		"Mais d’ici, je ne peux en être sûr."
 	],
-	"next": "dial037a"
+	"next": "dial037a",
+	"sound": [0,"null",0]
 },
 "dial037a": {
 	"ref": 1,
@@ -981,7 +1074,8 @@
 		"Il ferme l’accès au grand bâtiment que j’avais repéré de l’autre côté.",
 		"L’endroit a tout d’une caserne militaire ; la clôture fait au moins deux mètres de haut et se termine par des barbelés."
 	],
-	"next": "rep037"
+	"next": "rep037",
+	"sound": [0,"null",0]
 },
 "dial038": {
 	"ref": 1,
@@ -990,7 +1084,8 @@
 		"Bien entendu.",
 		"Voyons voir de plus près…"
 	],
-	"next": "rep037"
+	"next": "rep037",
+	"sound": [0,"null",0]
 },
 "dial038a": {
 	"ref": 1,
@@ -1003,7 +1098,8 @@
 		"Malheureusement, cette cabine se situe entre les deux battants.",
 		"Je ne peux pas m’y rendre."
 	],
-	"next": "rep038"
+	"next": "rep038",
+	"sound": [0,"null",0]
 },
 "dial039": {
 	"ref": 1,
@@ -1013,7 +1109,8 @@
 		"Vraiment ?",
 		"Après la description que je vous en ai faite ?"
 	],
-	"next": "rep039"
+	"next": "rep039",
+	"sound": [0,"null",0]
 },
 "dial040": {
 	"ref": 1,
@@ -1023,7 +1120,8 @@
 		"Vous m’avez plutôt bien conseillé, jusqu’ici.",
 		"Je dois trouver un endroit où je peux tenter d’enjamber cette clôture."
 	],
-	"next": "dial040a"
+	"next": "dial040a",
+	"sound": [0,"null",0]
 },
 "dial040a": {
 	"ref": 1,
@@ -1034,7 +1132,8 @@
 		"Je glisse le communicateur dans ma poche de veste.",
 		"Normalement, vous devriez continuer à m’entendre."
 	],
-	"next": "dial040b"
+	"next": "dial040b",
+	"sound": [0,"null",0]
 },
 "dial040b": {
 	"ref": 1,
@@ -1043,7 +1142,8 @@
 		"Allons-y…",
 		"Han !…"
 	],
-	"next": "dial040c"
+	"next": "dial040c",
+	"sound": [0,"null",0]
 },
 "dial040c": {
 	"ref": 1,
@@ -1053,7 +1153,8 @@
 		"…mais…",
 		"Ahhh…"
 	],
-	"next": "dial040d"
+	"next": "dial040d",
+	"sound": [0,"null",0]
 },
 "dial040d": {
 	"ref": 1,
@@ -1064,7 +1165,8 @@
 		"Ce sont des lames de rasoir.",
 		"Non, vraiment, je ne suis pas sûr de pouvoir passer."
 	],
-	"next": "rep040"
+	"next": "rep040",
+	"sound": [0,"null",0]
 },
 "dial041": {
 	"ref": 1,
@@ -1073,13 +1175,15 @@
 		"Oui. C’est plus prudent.",
 		"Je redescends."
 	],
-	"next": "dial042"
+	"next": "dial042",
+	"sound": [0,"null",0]
 },
 "dial042": {
 	"ref": 1,
 	"time": 20,
 	"content": ["Bon, voyons donc où mène ce fameux sentier."],
-	"next": "dial043"
+	"next": "dial043",
+	"sound": [0,"null",0]
 },
 "dial043": {
 	"ref": 1,
@@ -1091,7 +1195,8 @@
 		"C’est un petit cottage, une cabane en pierre et bois, avec ce qui a dû être un potager, et un puits.",
 		"Quelqu’un a vécu ici il y a longtemps."
 	],
-	"next": "rep043"
+	"next": "rep043",
+	"sound": [0,"null",0]
 },
 "dial044a": {
 	"ref": 1,
@@ -1102,7 +1207,8 @@
 		"Le jardin est redevenu sauvage.",
 		"Et la porte est béante, presque entièrement dégondée, et le bois est complètement vermoulu."
 	],
-	"next": "dial044d"
+	"next": "dial044d",
+	"sound": [0,"null",0]
 },
 "dial044b": {
 	"ref": 1,
@@ -1111,7 +1217,8 @@
 		"Qui résisterait à l’envie d’aller visiter, voyons ?",
 		"Après ce que j’ai vécu pour parvenir jusqu’ici, ce n’est pas une bicoque en ruine qui va m’intimider !"
 	],
-	"next": "dial044d"
+	"next": "dial044d",
+	"sound": [0,"null",0]
 },
 "dial044c": {
 	"ref": 1,
@@ -1123,7 +1230,8 @@
 		"Après, ce sont des buissons et grands arbustes qui forment un véritable mur végétal.",
 		"Allez, j’entre."
 	],
-	"next": "dial044d"
+	"next": "dial044d",
+	"sound": [0,"null",0]
 },
 "dial044d": {
 	"ref": 1,
@@ -1134,7 +1242,8 @@
 		"Le jardin est redevenu sauvage.",
 		"Et la porte est béante, presque entièrement dégondée, et le bois est complètement vermoulu."
 	],
-	"next": "dial045"
+	"next": "dial045",
+	"sound": [0,"null",0]
 },
 "dial045": {
 	"ref": 1,
@@ -1147,7 +1256,8 @@
 		"J’ai l’impression d’être l’Incroyable Hulk !",
 		"Groahr !"
 	],
-	"next": "rep045"
+	"next": "rep045",
+	"sound": [0,"null",0]
 },
 "dial045a": {
 	"ref": 1,
@@ -1156,7 +1266,8 @@
 		"C’est ça, faites le malin.",
 		"Maintenant en tout cas, je sais dans quel domaine vous êtes expert."
 	],
-	"next": "dial046"
+	"next": "dial046",
+	"sound": [0,"null",0]
 },
 "dial045b": {
 	"ref": 1,
@@ -1166,7 +1277,8 @@
 		"Oui, vous avez raison.",
 		"Bon, voyons ce que nous avons ici."
 	],
-	"next": "dial046"
+	"next": "dial046",
+	"sound": [0,"null",0]
 },
 "dial046": {
 	"ref": 1,
@@ -1179,7 +1291,8 @@
 		"Le temps et l’humidité n’ont rien épargné.",
 		"Je ne crois pas trouver grand-chose d’intéressant ici."
 	],
-	"next": "rep046"
+	"next": "rep046",
+	"sound": [0,"null",0]
 },
 "dial047": {
 	"ref": 1,
@@ -1189,7 +1302,8 @@
 		"Mais ce n’est guère plus que trois planches encore vaguement dressées.",
 		"Si je respire trop près, elles vont s’effondrer."
 	],
-	"next": "rep047"
+	"next": "rep047",
+	"sound": [0,"null",0]
 },
 "dial048": {
 	"ref": 1,
@@ -1199,7 +1313,8 @@
 		"Il s’agit donc d’un rectangle de planches vermoulues dans lequel stagne ce qui a dû être un jour un matelas, mais qui est désormais un amas de choses verdâtre, spongieuse et malodorante.",
 		"En tout cas, je refuse d’y toucher."
 	],
-	"next": "rep048"
+	"next": "rep048",
+	"sound": [0,"null",0]
 },
 "dial049": {
 	"ref": 1,
@@ -1212,7 +1327,8 @@
 		"Il est magnifiquement ouvragé.",
 		"Pour tout vous dire, il me rappelle les frises découvertes dans les catacombes."
 	],
-	"next": "rep049"
+	"next": "rep049",
+	"sound": [0,"null",0]
 },
 "dial050a": {
 	"ref": 1,
@@ -1224,7 +1340,8 @@
 		"C’est de la pierre sculptée, mais dans cette pénombre, le poli de la pierre m’a fait croire à du bois.",
 		"Extraordinaire."
 	],
-	"next": "dial050b"
+	"next": "dial050b",
+	"sound": [0,"null",0]
 },
 "dial050b": {
 	"ref": 1,
@@ -1235,7 +1352,8 @@
 		"En son fond gisent les choses. »",
 		"Hum. C’est un peu cryptique."
 	],
-	"next": "rep050"
+	"next": "rep050",
+	"sound": [0,"null",0]
 },
 "dial051a": {
 	"ref": 1,
@@ -1245,7 +1363,8 @@
 		"Bon, ça ne nous avance en rien.",
 		"Et vous savez aussi bien que moi qu’il nous faut l’ouvrir pour comprendre."
 	],
-	"next": "dial052"
+	"next": "dial052",
+	"sound": [0,"null",0]
 },
 "dial051b": {
 	"ref": 1,
@@ -1255,13 +1374,15 @@
 		"Je vais finir par penser que vous êtes plus malin que moi.",
 		"Si ne je peux pas rentrer, je vous donnerai ma place à l’université."
 	],
-	"next": "dial051c"
+	"next": "dial051c",
+	"sound": [0,"null",0]
 },
 "dial051c": {
 	"ref": 1,
 	"time": 10,
 	"content": ["Et baste, faisons cela !"],
-	"next": "dial052"
+	"next": "dial052",
+	"sound": [0,"null",0]
 },
 "dial052": {
 	"ref": 1,
@@ -1272,7 +1393,8 @@
 		"Bon sang que c’est lourd !",
 		"Oh !"
 	],
-	"next": "dial052a"
+	"next": "dial052a",
+	"sound": [0,"null",0]
 },
 "dial052a": {
 	"ref": 1,
@@ -1285,7 +1407,8 @@
 		"Ça m’a l’air solide. Je descends.",
 		"Je vous retrouve en bas."
 	],
-	"next": "dial052a"
+	"next": "dial052a",
+	"sound": [0,"null",0]
 },
 "dial053": {
 	"ref": 1,
@@ -1297,7 +1420,8 @@
 		"Bon.",
 		"Au moins, j’ai une belle lampe torche puissante. C’est déjà ça."
 	],
-	"next": "dial053a"
+	"next": "dial053a",
+	"sound": [0,"null",0]
 },
 "dial053a": {
 	"ref": 1,
@@ -1308,7 +1432,8 @@
 		"Les deux autres sont complètement obscurs. L’un est en face de moi, et le dernier à ma droite.",
 		"Par lequel je commence ?"
 	],
-	"next": "rep053"
+	"next": "rep053",
+	"sound": [0,"null",0]
 },
 "dial054": {
 	"ref": 1,
@@ -1317,7 +1442,8 @@
 		"Allons-y…",
 		"Il y a un coude à quelques pas."
 	],
-	"next": "dial054a"
+	"next": "dial054a",
+	"sound": [0,"null",0]
 },
 "dial054a": {
 	"ref": 1,
@@ -1329,7 +1455,8 @@
 		"Donc, cul-de-sac.",
 		"Bon. Mauvaise pioche."
 	],
-	"next": "rep053"
+	"next": "rep053",
+	"sound": [0,"null",0]
 },
 "dial055": {
 	"ref": 1,
@@ -1344,7 +1471,8 @@
 		"C’est émouvant.",
 		"Mais ça reste néanmoins un cul-de-sac."
 	],
-	"next": "rep053"
+	"next": "rep053",
+	"sound": [0,"null",0]
 },
 "dial056a": {
 	"ref": 1,
@@ -1353,7 +1481,8 @@
 		"Et pourquoi pas ?",
 		"Allons voir ce qui nous attend par là…"
 	],
-	"next": "dial057"
+	"next": "dial057",
+	"sound": [0,"null",0]
 },
 "dial056b": {
 	"ref": 1,
@@ -1364,7 +1493,8 @@
 		"Bon, puisque c’est comme cela, je prends à ma dextre.",
 		"Na !"
 	],
-	"next": "dial057"
+	"next": "dial057",
+	"sound": [0,"null",0]
 },
 "dial057": {
 	"ref": 1,
@@ -1376,7 +1506,8 @@
 		"Je vois au loin que la structure change.",
 		"Je vais m’approcher."
 	],
-	"next": "dial057a"
+	"next": "dial057a",
+	"sound": [0,"null",0]
 },
 "dial057a": {
 	"ref": 1,
@@ -1388,7 +1519,8 @@
 		"Le sol a été bétonné, il y a des tuyaux le long des murs, et même quelques câbles.",
 		"J’avance."
 	],
-	"next": "dial057a"
+	"next": "dial057a",
+	"sound": [0,"null",0]
 },
 "dial057b": {
 	"ref": 1,
@@ -1399,7 +1531,8 @@
 		"Il est donc possible que je puisse trouver comment approcher le bâtiment par ici.",
 		"J’avance."
 	],
-	"next": "dial057c"
+	"next": "dial057c",
+	"sound": [0,"null",0]
 },
 "dial057c": {
 	"ref": 1,
@@ -1409,13 +1542,15 @@
 		"Le drain principal continue tout droit.",
 		"Mais il y a un petit tunnel, plus étroit et plus bas, qui part perpendiculairement, à ma droite."
 	],
-	"next": "rep057"
+	"next": "rep057",
+	"sound": [0,"null",0]
 },
 "dial058": {
 	"ref": 1,
 	"time": 2,
 	"content": ["Ok, continuons tout droit."],
-	"next": "dial058a"
+	"next": "dial058a",
+	"sound": [0,"null",0]
 },
 "dial058a": {
 	"ref": 1,
@@ -1428,7 +1563,8 @@
 		"Enfin.",
 		"Rebroussons donc chemin et tentons le petit tunnel…"
 	],
-	"next": "dial059a"
+	"next": "dial059a",
+	"sound": [0,"null",0]
 },
 "dial059": {
 	"ref": 1,
@@ -1437,7 +1573,8 @@
 		"Ce n’est pas la taille qui compte, n’est-ce pas ?",
 		"Allez, on y va."
 	],
-	"next": "dial059a"
+	"next": "dial059a",
+	"sound": [0,"null",0]
 },
 "dial059a": {
 	"ref": 1,
@@ -1448,7 +1585,8 @@
 		"Mais, en réalité, ça pue !",
 		"Bref, c’est un égout."
 	],
-	"next": "rep059"
+	"next": "rep059",
+	"sound": [0,"null",0]
 },
 "dial060": {
 	"ref": 1,
@@ -1458,7 +1596,8 @@
 		"On a connu pire.",
 		"J’avance."
 	],
-	"next": "dial060a"
+	"next": "dial060a",
+	"sound": [0,"null",0]
 },
 "dial060a": {
 	"ref": 1,
@@ -1471,7 +1610,8 @@
 		"Il y a des échelons qui mènent à une plaque.",
 		"Je grimpe…"
 	],
-	"next": "dial060b"
+	"next": "dial060b",
+	"sound": [0,"null",0]
 },
 "dial060b": {
 	"ref": 1,
@@ -1483,7 +1623,8 @@
 		"… tout en prenant garde à ne pas glisser.",
 		"Ouf !"
 	],
-	"next": "dial060b"
+	"next": "dial060b",
+	"sound": [0,"null",0]
 },
 "dial060c": {
 	"ref": 1,
@@ -1495,7 +1636,8 @@
 		"Pouvoir se déplier, respirer un air frais et sans odeurs nauséabondes !",
 		"Un réel plaisir !"
 	],
-	"next": "dial060d"
+	"next": "dial060d",
+	"sound": [0,"null",0]
 },
 "dial060d": {
 	"ref": 1,
@@ -1507,7 +1649,8 @@
 		"Latrémon est dans la place !",
 		"Vous ne trouvez pas ça drôle ?"
 	],
-	"next": "rep060"
+	"next": "rep060",
+	"sound": [0,"null",0]
 },
 "dial061a": {
 	"ref": 1,
@@ -1517,7 +1660,8 @@
 		"Ha ha ha !",
 		"Vous n’imaginez pas depuis combien de temps j’ai envie de dire une chose pareille !"
 	],
-	"next": "dial062"
+	"next": "dial062",
+	"sound": [0,"null",0]
 },
 "dial061b": {
 	"ref": 1,
@@ -1527,7 +1671,8 @@
 		"Vous me gâchez mon plaisir.",
 		"Enfin, ce n’est rien."
 	],
-	"next": "dial062"
+	"next": "dial062",
+	"sound": [0,"null",0]
 },
 "dial061c": {
 	"ref": 1,
@@ -1536,7 +1681,8 @@
 		"Exactement !",
 		"Ah, quel plaisir !"
 	],
-	"next": "dial062"
+	"next": "dial062",
+	"sound": [0,"null",0]
 },
 "dial062": {
 	"ref": 1,
@@ -1547,7 +1693,8 @@
 		"Ensuite, si vous êtes toujours là, je vous propose que nous explorions un peu cet endroit.",
 		"Histoire de voir si nous pouvons trouver quelqu’un ou quelque chose susceptible de me ramener à la maison."
 	],
-	"next": "dial062a"
+	"next": "dial062a",
+	"sound": [0,"null",0]
 },
 "dial062a": {
 	"ref": 1,
@@ -1556,13 +1703,15 @@
 		"Merci de votre aide, l’ami.",
 		"Et à très bientôt !"
 	],
-	"next": "dial062a"
+	"next": "dial062a",
+	"sound": [0,"null",0]
 },
 "dial800": {
 	"ref": 1,
 	"time": 2,
 	"content": ["Ah. Pourquoi pas ?"],
-	"next": "dial800a"
+	"next": "dial800a",
+	"sound": [0,"null",0]
 },
 "dial800a": {
 	"ref": 1,
@@ -1571,7 +1720,8 @@
 		"OH-HÉ !",
 		"IL Y A QUELQU’UN ?"
 	],
-	"next": "dial800b"
+	"next": "dial800b",
+	"sound": [0,"null",0]
 },
 "dial800b": {
 	"ref": 1,
@@ -1580,7 +1730,8 @@
 		"HÉ-OH !",
 		"YOU-HOUH !"
 	],
-	"next": "dial800c"
+	"next": "dial800c",
+	"sound": [0,"null",0]
 },
 "dial800c": {
 	"ref": 1,
@@ -1591,7 +1742,8 @@
 		"J’ai agité les bras devant les caméras comme si j’étais possédé par un démon épileptique.",
 		"Je crois qu’il n’y a personne, ici."
 	],
-	"next": "rep038"
+	"next": "rep038",
+	"sound": [0,"null",0]
 },
 "dial900": {
 	"ref": 1,
@@ -1602,7 +1754,8 @@
 		"J’espère que le reste ne va pas s’effondrer dans le mouvement…",
 		"Oufff !…"
 	],
-	"next": "dial900a"
+	"next": "dial900a",
+	"sound": [0,"null",0]
 },
 "dial900a": {
 	"ref": 1,
@@ -1613,7 +1766,8 @@
 		"Connaissant votre humour, je suis sûr que vous m’auriez réclamé un portrait... en pied.",
 		"Allez, il est temps de voir à quelle température ce charmant ruisseau se trouve."
 	],
-	"next": "dial900b"
+	"next": "dial900b",
+	"sound": [0,"null",0]
 },
 "dial900b": {
 	"ref": 1,
@@ -1626,7 +1780,8 @@
 		"Et le sol s’enfonce rapidement.",
 		"Je n’ai fait que trois pas, et j’ai déjà de l’eau jusqu’aux genoux."
 	],
-	"next": "dial900c"
+	"next": "dial900c",
+	"sound": [0,"null",0]
 },
 "dial900c": {
 	"ref": 1,
@@ -1641,7 +1796,8 @@
 		"Je ne sens déjà plus mes pieds.",
 		"J’ai peur de…"
 	],
-	"next": "dial900d"
+	"next": "dial900d",
+	"sound": [0,"null",0]
 },
 "dial900d": {
 	"ref": 1,
@@ -1652,7 +1808,8 @@
 		"Je…",
 		"Aaah !"
 	],
-	"next": "dialFIN01"
+	"next": "dialFIN01",
+	"sound": [0,"null",0]
 },
 "dial901a": {
 	"ref": 1,
@@ -1661,7 +1818,8 @@
 		"Je suis à moitié coincé, je vais avoir du mal à retirer ma veste…",
 		"Attendez…"
 	],
-	"next": "dial901b"
+	"next": "dial901b",
+	"sound": [0,"null",0]
 },
 "dial901b": {
 	"ref": 1,
@@ -1671,7 +1829,8 @@
 		"Je…",
 		"AAAH !…"
 	],
-	"next": "dial901c"
+	"next": "dial901c",
+	"sound": [0,"null",0]
 },
 
 "dial901c": {
@@ -1682,7 +1841,8 @@
 		"Je me suis blessé la main en profondeur.",
 		"Je vais essayer de…"
 	],
-	"next": "dial901d"
+	"next": "dial901d",
+	"sound": [0,"null",0]
 },
 "dial901d": {
 	"ref": 1,
@@ -1692,7 +1852,8 @@
 		"Oh, bon sang !…",
 		"Je…"
 	],
-	"next": "dial901e"
+	"next": "dial901e",
+	"sound": [0,"null",0]
 },
 "dial901e": {
 	"ref": 1,
@@ -1705,7 +1866,8 @@
 		"…glisse…",
 		"…oh bon d…"
 	],
-	"next": "dial901f"
+	"next": "dial901f",
+	"sound": [0,"null",0]
 },
 "dial901f": {
 	"ref": 1,
@@ -1716,7 +1878,8 @@
 		"Mon cou…",
 		"…"
 	],
-	"next": "dialFIN02"
+	"next": "dialFIN02",
+	"sound": [0,"null",0]
 },
   "dialFIN01": {
    "ref": 3,
@@ -1729,7 +1892,8 @@
     " ",
     "Cliquez « Rejouer » pour recommencer la partie."
    ],
-   "next": "rep9997"
+   "next": "rep9997",
+   "sound": [0,"null",0]
   },
   "dialFIN02": {
    "ref": 3,
@@ -1742,7 +1906,8 @@
     " ",
     "Cliquez « Rejouer » pour recommencer la partie."
    ],
-   "next": "rep9998"
+   "next": "rep9998",
+   "sound": [0,"null",0]
   },
   "dialFIN03": {
    "ref": 3,
@@ -1756,7 +1921,11 @@
     " ",
     "Cliquez « Rejouer » pour recommencer la partie."
    ],
-   "next": "rep9999"
+   "next": "rep9999",
+   "sound": [0,"null",0]
+  },
+  "_Reponses": {
+   "_Comment": "..."
   },
   "rep001": {
    "ref": 2,

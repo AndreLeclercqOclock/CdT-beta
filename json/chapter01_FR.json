@@ -330,7 +330,8 @@
     "On construisait rarement en dessous de l'existant.",
     "Pourtant, il y a là quelque chose digne de troubler le vieil historien que je suis."
    ],
-   "next": "rep503"
+   "next": "rep503",
+   "sound": [0,"null",0]
   },
   "dial504": {
    "ref": 1,
@@ -340,7 +341,8 @@
     "Mais pardonnez mon émotion.",
     "Je suis devant quelque chose d'incompréhensible, historiquement parlant."
    ],
-   "next": "dial505"
+   "next": "dial505",
+   "sound": [0,"null",0]
   },
   "dial505": {
    "ref": 1,
@@ -358,7 +360,8 @@
     "Il y a un texte en latin, en dessous.",
     "Laissez-moi quelques minutes, que je le traduise."
    ],
-   "next": "dial506"
+   "next": "dial506",
+   "sound": [0,"null",0]
   },
   "dial506": {
    "ref": 1,
@@ -367,7 +370,8 @@
     "Hon hon...",
     "Très intéressant."
    ],
-   "next": "rep506"
+   "next": "rep506",
+   "sound": [0,"null",0]
   },
   "dial507": {
    "ref": 1,
@@ -377,7 +381,8 @@
     "Le naturel revient vite au galop devant un tel morceau d'histoire.",
     "Surtout une histoire oubliée et si étrange."
    ],
-   "next": "dial508"
+   "next": "dial508",
+   "sound": [0,"null",0]
   },
   "dial508": {
    "ref": 1,
@@ -388,7 +393,8 @@
     "Il porte un nom. Malheureusement, même si ça ressemble à du latin, cela ne veut rien dire, pour moi.",
     "Le «Libris Daemonaticaspius»."
    ],
-   "next": "rep508"
+   "next": "rep508",
+   "sound": [0,"null",0]
   },
   "dial509": {
    "ref": 1,
@@ -400,7 +406,8 @@
     "Tout ce que l'esprit humain de l'époque ne comprenait pas était forcément d'origine divine ou démoniaque.",
     "Enfin, bref..."
    ],
-   "next": "dial510"
+   "next": "dial510",
+   "sound": [0,"null",0]
   },
   "dial510": {
    "ref": 1,
@@ -410,7 +417,8 @@
     "Je n'arrive pas à traduire ce passage plus clairement.",
     "Et... Oh !"
    ],
-   "next": "rep510"
+   "next": "rep510",
+   "sound": [0,"null",0]
   },
   "dial511": {
    "ref": 1,
@@ -420,7 +428,8 @@
     "D'après ce texte, le «Libris Daemonaticaspius» serait ici même, dans cette crypte.",
     "C'est inespéré !"
    ],
-   "next": "rep511"
+   "next": "rep511",
+   "sound": [0,"null",0]
   },
   "dial512": {
    "ref": 1,
@@ -431,7 +440,8 @@
     "Mais plus encore.",
     "Si ses pouvoirs sont réels, je suis sauvé !"
    ],
-   "next": "dial600"
+   "next": "dial600",
+   "sound": [0,"null",0]
   },
   "dial513": {
    "ref": 1,
@@ -447,7 +457,8 @@
     "Quand ils apprendront comment je me suis retrouvé bêtement enfermé ici,",
     "les moqueries ne manqueront pas de pleuvoir."
    ],
-   "next": "dial600"
+   "next": "dial600",
+   "sound": [0,"null",0]
   },
   "dial600": {
    "ref": 1,
@@ -457,7 +468,8 @@
     "Je n'ai pas d'autre choix que de tenter de trouver cette crypte.",
     "Il serait fort dommage pour moi que je n'y déniche pas un passage menant à l'extérieur."
    ],
-   "next": "rep600"
+   "next": "rep600",
+   "sound": [0,"null",0]
   },
   "dial601": {
    "ref": 1,
@@ -467,7 +479,8 @@
     "Merci de me soutenir, je me sens moins seul, ici.",
     "Allez. Hardi, compagnon !"
    ],
-   "next": "dial603"
+   "next": "dial603",
+   "sound": [0,"null",0]
   },
   "dial602": {
    "ref": 1,
@@ -481,7 +494,8 @@
     "Mais je tiens à vous remercier pour votre sollicitude.",
     "Merci de m'accompagner, ça m'aide vraiment beaucoup."
    ],
-   "next": "dial603"
+   "next": "dial603",
+   "sound": [0,"null",0]
   },
   "dial603": {
    "ref": 1,
@@ -501,7 +515,8 @@
     " ",
     "Qu'est-ce que vous me conseillez ?"
    ],
-   "next": "rep603"
+   "next": "rep603",
+   "sound": [0,"null",0]
   },
   "dial700": {
    "ref": 1,
@@ -510,7 +525,8 @@
     "Alors soit, grimpons cet escalier !",
     "Je vous recontacte quand je suis arrivé... quelque part."
    ],
-   "next": "dial701"
+   "next": "dial701",
+   "sound": [0,"null",0]
   },
   "dial701": {
    "ref": 1,
@@ -524,13 +540,15 @@
     "Bref, me voilà dans la crypte.",
     "Enfin. Au-dessus, plutôt."
    ],
-   "next": "rep701"
+   "next": "rep701",
+   "sound": [0,"null",0]
   },
   "dial702": {
    "ref": 1,
    "time": 2,
    "content": ["Oui, je le vois. Il est là."],
-   "next": "dial703"
+   "next": "dial703",
+   "sound": [0,"null",0]
   },
   "dial703": {
    "ref": 1,
@@ -546,7 +564,8 @@
     "Je ne peux pas le louper, ses dorures reflètent la lumière de ma torche.",
     "Il est magnifique !"
    ],
-   "next": "rep703"
+   "next": "rep703",
+   "sound": [0,"null",0]
   },
   "dial704": {
    "ref": 1,
@@ -557,7 +576,8 @@
     "Qu'est-ce que...",
     "Ah !..."
    ],
-   "next": "rep704"
+   "next": "rep704",
+   "sound": [0,"null",0]
   },
   "dial705": {
    "ref": 1,
@@ -568,7 +588,8 @@
     "Il y a ... quelque chose devant moi.",
     "Sur la mezzanine, à quelques mètres."
    ],
-   "next": "rep705"
+   "next": "rep705",
+   "sound": [0,"null",0]
   },
   "dial706": {
    "ref": 1,
@@ -579,7 +600,8 @@
     "Celle de la frise. Celle qui suit Jean de Malemont !",
     "Alors, tout est vrai !"
    ],
-   "next": "rep706"
+   "next": "rep706",
+   "sound": [0,"null",0]
   },
   "dial707": {
    "ref": 1,
@@ -588,7 +610,8 @@
     "Ah ! Oui !",
     "Je fonce !"
    ],
-   "next": "dial717"
+   "next": "dial717",
+   "sound": [0,"null",0]
   },
   "dial717": {
    "ref": 1,
@@ -601,7 +624,8 @@
     "Elle s'effondre, je...",
     "... haaaa !..."
    ],
-   "next": "dialFIN02"
+   "next": "dialFIN02",
+   "sound": [0,"null",0]
   },
   "dial708": {
    "ref": 1,
@@ -611,7 +635,8 @@
     "J'enjambe et je saute !",
     "Aaaah !..."
    ],
-   "next": "dial718"
+   "next": "dial718",
+   "sound": [0,"null",0]
   },
   "dial718": {
    "ref": 1,
@@ -622,7 +647,8 @@
     "Ça fait un mal de chien !",
     "Ouch."
    ],
-   "next": "dial728"
+   "next": "dial728",
+   "sound": [0,"null",0]
   },
   "dial728": {
    "ref": 1,
@@ -636,7 +662,8 @@
     "L'autre bonne nouvelle, c'est que je suis dans la crypte.",
     "Près du livre."
    ],
-   "next": "dial900"
+   "next": "dial900",
+   "sound": [0,"null",0]
   },
   "dial709": {
    "ref": 1,
@@ -645,13 +672,15 @@
     "Ok, je...",
     "Je ne bouge pas."
    ],
-   "next": "dial719"
+   "next": "dial719",
+   "sound": [0,"null",0]
   },
   "dial719": {
    "ref": 1,
    "time": 20,
    "content": ["Ah, elle..."],
-   "next": "dial729"
+   "next": "dial729",
+   "sound": [0,"null",0]
   },
   "dial729": {
    "ref": 1,
@@ -667,7 +696,8 @@
     "Ahhh ha ha ha !",
     "Héhéhéhéhé... Hiiiiiiiiiii !"
    ],
-   "next": "dialFIN03"
+   "next": "dialFIN03",
+   "sound": [0,"null",0]
   },
   "dial800": {
    "ref": 1,
@@ -679,7 +709,8 @@
     "Si j'attrape des rhumatismes, je leur donnerais votre nom.",
     "Allez, un peu de courage."
    ],
-   "next": "dial801"
+   "next": "dial801",
+   "sound": [0,"null",0]
   },
   "dial801": {
    "ref": 1,
@@ -694,7 +725,8 @@
     "Mais je n'ai que ça aux pieds, et c'est franchement désagréable.",
     "Je me demande si c'était une si bonne idée."
    ],
-   "next": "dial802"
+   "next": "dial802",
+   "sound": [0,"null",0]
   },
   "dial802": {
    "ref": 1,
@@ -703,7 +735,8 @@
     "Vous me croyez si vous voulez, mais j'ai de l'eau jusqu'à la taille.",
     "Et je ne vois toujours pas la sortie."
    ],
-   "next": "rep802"
+   "next": "rep802",
+   "sound": [0,"null",0]
   },
   "dial803": {
    "ref": 1,
@@ -713,7 +746,8 @@
     "Je remonte vers la salle de la frise.",
     "Et j'essayerai l'autre passage."
    ],
-   "next": "dial813"
+   "next": "dial813",
+   "sound": [0,"null",0]
   },
   "dial813": {
    "ref": 1,
@@ -723,13 +757,15 @@
     "J'ai les pieds et les fesses trempés et glacés, mais je respire encore.",
     "Il ne me reste plus qu'à grimper ces marches pour me réchauffer."
    ],
-   "next": "dial700"
+   "next": "dial700",
+   "sound": [0,"null",0]
   },
   "dial804": {
    "ref": 1,
    "time": 2,
    "content": ["D'accord. Je continue."],
-   "next": "dial814"
+   "next": "dial814",
+   "sound": [0,"null",0]
   },
   "dial814": {
    "ref": 1,
@@ -740,7 +776,8 @@
     "Je suis obligé de garder les bras tendus pour éviter de noyer la lampe et le téléphone.",
     "Cette situation commence à m'inquiéter."
    ],
-   "next": "rep804"
+   "next": "rep804",
+   "sound": [0,"null",0]
   },
   "dial820": {
    "ref": 1,
@@ -753,7 +790,8 @@
     " ",
     "Une minute..."
    ],
-   "next": "dial821"
+   "next": "dial821",
+   "sound": [0,"null",0]
   },
   "dial821": {
    "ref": 1,
@@ -763,7 +801,8 @@
     "Non, bien sûr. Suis-je bête.",
     "Je..."
    ],
-   "next": "dial822"
+   "next": "dial822",
+   "sound": [0,"null",0]
   },
   "dial822": {
    "ref": 1,
@@ -779,7 +818,8 @@
     "Oh mon Dieu !",
     "Je..."
    ],
-   "next": "rep820"
+   "next": "rep820",
+   "sound": [0,"null",0]
   },
   "dial823": {
    "ref": 1,
@@ -789,7 +829,8 @@
     "Oh, non !",
     "Rien à faire, je file d'ici !"
    ],
-   "next": "dial824"
+   "next": "dial824",
+   "sound": [0,"null",0]
   },
   "dial824": {
    "ref": 1,
@@ -805,7 +846,8 @@
     "Resp... Noy...",
     "..."
    ],
-   "next": "dialFIN04"
+   "next": "dialFIN04",
+   "sound": [0,"null",0]
   },
   "dial830": {
    "ref": 1,
@@ -818,7 +860,8 @@
     "mais je préfère voir où je vais que de papoter avec vous.",
     "Je vous recontacte dès que possible."
    ],
-   "next": "dial831"
+   "next": "dial831",
+   "sound": [0,"null",0]
   },
   "dial831": {
    "ref": 1,
@@ -839,7 +882,8 @@
     "Lorsque je l'éclaire avec ma torche, cela jette des éclats merveilleux.",
     "Je m'approche."
    ],
-   "next": "dial900"
+   "next": "dial900",
+   "sound": [0,"null",0]
   },
   "dial900": {
    "ref": 1,
@@ -853,7 +897,8 @@
     "Mon cœur bat la chamade.",
     "J'espère que je ne vais par faire un malaise."
    ],
-   "next": "rep900"
+   "next": "rep900",
+   "sound": [0,"null",0]
   },
   "dial901": {
    "ref": 1,
@@ -867,7 +912,8 @@
     "Peu importe.",
     "Voyons..."
    ],
-   "next": "dial902"
+   "next": "dial902",
+   "sound": [0,"null",0]
   },
   "dial902": {
    "ref": 1,
@@ -877,7 +923,8 @@
     "L’illustration de ce passage représente le même disque bleu que sur la frise.",
     "Je pense qu'il s'agit du moyen qu'employait Jean de Malemont pour s'échapper."
    ],
-   "next": "dial904"
+   "next": "dial904",
+   "sound": [0,"null",0]
   },
   "dial903": {
    "ref": 1,
@@ -889,7 +936,8 @@
     "Han !",
     "Bouh, qu'il est lourd !"
    ],
-   "next": "dial904"
+   "next": "dial904",
+   "sound": [0,"null",0]
   },
   "dial904": {
    "ref": 1,
@@ -899,7 +947,8 @@
     "Qu'est-ce que...",
     "Oh, non !"
    ],
-   "next": "rep904"
+   "next": "rep904",
+   "sound": [0,"null",0]
   },
   "dial905": {
    "ref": 1,
@@ -917,7 +966,8 @@
     "On dirait qu'elle attend quelque chose.",
     "Le livre peut-être ?"
    ],
-   "next": "rep905"
+   "next": "rep905",
+   "sound": [0,"null",0]
   },
   "dial910": {
    "ref": 1,
@@ -926,7 +976,8 @@
     "Oui, vous avez raison.",
     "Je cherche le passage."
    ],
-   "next": "dial911"
+   "next": "dial911",
+   "sound": [0,"null",0]
   },
   "dial911": {
    "ref": 1,
@@ -936,7 +987,8 @@
     "Oh, bon sang.",
     "L'Ombre ne bouge pas, mais elle me flanque une de ces frousses !"
    ],
-   "next": "rep910"
+   "next": "rep910",
+   "sound": [0,"null",0]
   },
   "dial912": {
    "ref": 1,
@@ -945,7 +997,8 @@
     "Oui, oui !",
     "Ah, voilà..."
    ],
-   "next": "dial914"
+   "next": "dial914",
+   "sound": [0,"null",0]
   },
   "dial913": {
    "ref": 1,
@@ -954,7 +1007,8 @@
     "Vous avez raison.",
     "J'ai l'impression que ça pourrait me rendre fou."
    ],
-   "next": "dial914"
+   "next": "dial914",
+   "sound": [0,"null",0]
   },
   "dial914": {
    "ref": 1,
@@ -967,7 +1021,8 @@
     "«Maunai ihim tireurepa te,",
     "Artlu ihim tipicca non !»"
    ],
-   "next": "dial915"
+   "next": "dial915",
+   "sound": [0,"null",0]
   },
   "dial915": {
    "ref": 1,
@@ -981,7 +1036,8 @@
     "La fumée semble se solidifier à mesure qu'elle prend la forme d'un disque.",
     "Et... Whow !"
    ],
-   "next": "dial916"
+   "next": "dial916",
+   "sound": [0,"null",0]
   },
   "dial916": {
    "ref": 1,
@@ -995,7 +1051,8 @@
     "La lueur est d'un bleu doux, comme un ciel d'été.",
     "C'est la sortie ! Je vais pouvoir sortir !"
    ],
-   "next": "rep916"
+   "next": "rep916",
+   "sound": [0,"null",0]
   },
   "dial917": {
    "ref": 1,
@@ -1005,7 +1062,8 @@
     "Merci, mon ami !",
     "Je vous retrouve de l'autre côté."
    ],
-   "next": "dial919"
+   "next": "dial919",
+   "sound": [0,"null",0]
   },
   "dial918": {
    "ref": 1,
@@ -1016,7 +1074,8 @@
     "Je suis sûr que c'est le passage.",
     "Jean a dû l'utiliser un bon nombre de fois."
    ],
-   "next": "dial919"
+   "next": "dial919",
+   "sound": [0,"null",0]
   },
   "dial919": {
    "ref": 1,
@@ -1025,7 +1084,8 @@
     "Je vais garder le téléphone à la main, peut-être ne seront-nous pas coupés.",
     "J'y vais."
    ],
-   "next": "dial920"
+   "next": "dial920",
+   "sound": [0,"null",0]
   },
   "dial920": {
    "ref": 1,
@@ -1035,7 +1095,8 @@
     "Comme si le disque exerçait sa propre gravité.",
     "C'est hypnotique, mais pas effrayant. Pas comme l'Ombre, avant sa transformation."
    ],
-   "next": "dial921"
+   "next": "dial921",
+   "sound": [0,"null",0]
   },
   "dial921": {
    "ref": 1,
@@ -1053,7 +1114,8 @@
     "Noooon !",
     "..."
    ],
-   "next": "dialFIN05"
+   "next": "dialFIN05",
+   "sound": [0,"null",0]
   },
   "dial950": {
    "ref": 1,
@@ -1065,7 +1127,8 @@
     "ou un ectoplasme,",
     "ou le spectre de Malemont..."
    ],
-   "next": "rep950"
+   "next": "rep950",
+   "sound": [0,"null",0]
   },
   "dial951": {
    "ref": 1,
@@ -1076,13 +1139,15 @@
     "Allons-y.",
     "Je prend une bonne respiration."
    ],
-   "next": "dial952"
+   "next": "dial952",
+   "sound": [0,"null",0]
   },
   "dial952": {
    "ref": 1,
    "time": 6,
    "content": ["— Salutations, ô Entité !"],
-   "next": "rep952"
+   "next": "rep952",
+   "sound": [0,"null",0]
   },
   "dial953": {
    "ref": 1,
@@ -1091,7 +1156,8 @@
     "Chut, taisez-vous !",
     "Ne la vexez pas."
    ],
-   "next": "dial954"
+   "next": "dial954",
+   "sound": [0,"null",0]
   },
   "dial954": {
    "ref": 1,
@@ -1101,7 +1167,8 @@
     "— Peut-être protégez-vous le trésor de Malemont.",
     "— Je ne cherche qu'à sortir d'ici."
    ],
-   "next": "dial955"
+   "next": "dial955",
+   "sound": [0,"null",0]
   },
   "dial955": {
    "ref": 1,
@@ -1111,7 +1178,8 @@
     "Elle...",
     "Elle bouge."
    ],
-   "next": "dial956"
+   "next": "dial956",
+   "sound": [0,"null",0]
   },
   "dial956": {
    "ref": 1,
@@ -1126,7 +1194,8 @@
     "Ahhhhh... !",
     "..."
    ],
-   "next": "dial957"
+   "next": "dial957",
+   "sound": [0,"null",0]
   },
   "dial957": {
    "ref": 1,
@@ -1141,7 +1210,8 @@
     "Un bleu horrible, sanguin !",
     "Ha ha ha ha !"
    ],
-   "next": "dialFIN03b"
+   "next": "dialFIN03b",
+   "sound": [0,"null",0]
   },
   "dial980": {
    "ref": 1,
@@ -1150,19 +1220,22 @@
     "Oui !",
     "Je vais la contourner."
    ],
-   "next": "dial981"
+   "next": "dial981",
+   "sound": [0,"null",0]
   },
   "dial981": {
    "ref": 1,
    "time": 3,
    "content": ["...Courir..."],
-   "next": "dial982"
+   "next": "dial982",
+   "sound": [0,"null",0]
   },
   "dial982": {
    "ref": 1,
    "time": 2,
    "content": ["...Pas de sortie..."],
-   "next": "dial983"
+   "next": "dial983",
+   "sound": [0,"null",0]
   },
   "dial983": {
    "ref": 1,
@@ -1173,7 +1246,8 @@
     "Ma cheville !",
     "...Peut plus marcher..."
    ],
-   "next": "dial984"
+   "next": "dial984",
+   "sound": [0,"null",0]
   },
   "dial984": {
    "ref": 1,
@@ -1189,7 +1263,8 @@
     "Ahhhh !",
     "..."
    ],
-   "next": "dialFIN06"
+   "next": "dialFIN06",
+   "sound": [0,"null",0]
   },
   "dialFIN01": {
    "ref": 3,
@@ -1204,7 +1279,8 @@
     " ",
     "Cliquez « Rejouer » pour recommencer la partie."
    ],
-   "next": "rep9998"
+   "next": "rep9998",
+   "sound": [0,"null",0]
   },
   "dialFIN02": {
    "ref": 3,
@@ -1218,7 +1294,8 @@
     " ",
     "Cliquez « Rejouer » pour recommencer la partie."
    ],
-   "next": "rep9998"
+   "next": "rep9998",
+   "sound": [0,"null",0]
   },
   "dialFIN03": {
    "ref": 3,
@@ -1233,7 +1310,8 @@
     " ",
     "Cliquez « Rejouer » pour recommencer la partie."
    ],
-   "next": "rep9998"
+   "next": "rep9998",
+   "sound": [0,"null",0]
   },
   "dialFIN03b": {
    "ref": 3,
@@ -1248,7 +1326,8 @@
     " ",
     "Cliquez « Rejouer » pour recommencer la partie."
    ],
-   "next": "rep9996"
+   "next": "rep9996",
+   "sound": [0,"null",0]
   },
   "dialFIN04": {
    "ref": 3,
@@ -1262,7 +1341,8 @@
     " ",
     "Cliquez « Rejouer » pour recommencer la partie."
    ],
-   "next": "rep9997"
+   "next": "rep9997",
+   "sound": [0,"null",0]
   },
   "dialFIN05": {
    "ref": 3,
@@ -1276,7 +1356,8 @@
     " ",
     "Cliquez sur « Revenir au menu » pour accéder au chapitre 2."
    ],
-   "next": "rep9999"
+   "next": "rep9999",
+   "sound": [0,"null",0]
   },
   "dialFIN06": {
    "ref": 3,
@@ -1290,7 +1371,8 @@
     " ",
     "Cliquez « Rejouer » pour recommencer la partie."
    ],
-   "next": "rep9996"
+   "next": "rep9996",
+   "sound": [0,"null",0]
   },
   "_Reponses": {
    "_Comment": "..."
