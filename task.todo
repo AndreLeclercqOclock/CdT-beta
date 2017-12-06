@@ -54,17 +54,30 @@
                 ✔ Débloquer le bon chapitre @done (2017-11-30 16:30:01)
             ☐ Divers @low 
                 ✔ Réorganisation des fichiers JSON et des scripts @done (2017-12-3 21:07:35)
-                ☐ Optimiser les "morts" & "Fin(s) du chapitre" @low 
+                ☐ Optimiser les "morts" @high 
+                    ☐ Afficher la dernière entrée du tableau
+                    ☐ Comparer la dernière entrée du tableau
+                    ☐ Effacer la dernière entrée du tableau
+                    ☐ Enregistrer le nouveau tableau
+                    ☐ Recharger le nouveau tableau
+                ☐ Refonte fin du chapitre @high
+                    ☐ Vérification de l'arrivée à la fin du chapitre.
+                    ☐ Affichage bouton "Retour Menu".
+                    ☐ Affichage bouton "Chapitre Suivant".
                 ☐ Ajuster le système de calcule de l'heure. @critical 
                 ✔ Ecran de chargement au lancement de l'aventure @done (2017-12-5 11:51:50)
                 ☐ Réécriture des crédits @low 
                 ☐ Ecriture des remericements @low 
                 ✔ Refonte Options & Crédits (scène => popup) @done (2017-12-5 16:21:54)
-                ☐ Améliorer la popup du choix des chapitres @high 
-                ☐ Ajout du témoin de couleur pour le status de l'interlocuteur @low 
-                ☐ Ajustement des timers messages systèmes @low 
+                ✔ Améliorer la popup du choix des chapitres @done (2017-12-6 12:42:03)
+                    ✔ Ajouter Fond de la Popup @done (2017-12-6 12:41:55)
+                    ✔ Ajouter titre de la popup "Choix des Chapitres" @done (2017-12-6 12:41:57)
+                    ✔ Ajout bouton "Retour au menu" @done (2017-12-6 12:41:58)
+                ✔ Ajout du témoin de couleur pour le status de l'interlocuteur @done (2017-12-6 13:13:03)
+                ✔ Ajustement des timers messages systèmes @done (2017-12-6 15:14:44)
                 ☐ Refonte du menu (image => textes) @high
                 ✔ Ajouter les trigger son dans les JSON @done (2017-12-6 09:42:20)
+                ✔ Supprimer le cache au reset de la sauvegarde @done (2017-12-6 13:44:49)
             ☐ DEBUG ALPHA 2.9 @critical @high
 
     Divers:
@@ -73,9 +86,9 @@
         ☐ Optimiser le poids des ressources
             ☐ Images
             ☐ Sons
-        ☐ Création menu audio
+        ☐ Création options audio
             ☐ Sons notification (messages)
             ☐ Sons ambiances (thèmes & ambiances)
-        ☐ Création du thème UI
+        ☐ Création du thème GUI
 
 

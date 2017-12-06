@@ -44,6 +44,8 @@ var status = 0
 var statusNext = 0
 var visible = 1
 
+var led = null
+
 var sound = 0
 var triggerName = null
 var triggerVol = 0
@@ -276,7 +278,7 @@ func start():
 		get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 # Affichage Smoothie
 		print("Affichage")
-		var visible = 0
+		visible = 0
 		LOAD.time_delay = 0.05
 		#status()
 		for i in range(9):
@@ -311,7 +313,7 @@ func start():
 			get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 # Affichage Smoothie
 			print("Affichage")
-			var visible = 0
+			visible = 0
 			LOAD.time_delay = 0.05
 			#status()
 			for i in range(9):
@@ -394,9 +396,10 @@ func start():
 			get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
 			LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
 			get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
+
 # Affichage Smoothie
 			print("Affichage")
-			var visible = 0
+			visible = 0
 			for i in range(9):
 				label.set("visibility/opacity",visible)
 				visible = visible + 0.10
@@ -470,6 +473,11 @@ func start():
 			label.show()
 			label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
 		
+			# Temporisation
+			timer.set_wait_time(1.25)
+			timer.start()
+			yield(get_node("Timer"), "timeout")
+
 			# Auto scroll
 			print("Scroll")
 			yield(get_tree(), "idle_frame")
@@ -479,14 +487,15 @@ func start():
 
 			# Affichage Smoothie
 			print("Affichage")
-			var visible = 0
-			for i in range(9):
-				label.set("visibility/self_opacity",visible)
-				visible = visible + 0.10
-				time_delay = 0.05
-				timer.set_wait_time(time_delay)
-				timer.start()
-				yield(get_node("Timer"), "timeout")
+			#visible = 1
+			label.set("visibility/opacity",1)
+			#for i in range(2):
+				#label.set("visibility/self_opacity",visible)
+				#visible = visible + 0.50
+				#time_delay = 0.05
+				#timer.set_wait_time(time_delay)
+				#timer.start()
+				#yield(get_node("Timer"), "timeout")
 
 		#AUTO SAVE
 		if LOAD.currentDial == LOAD.firstDial:
@@ -614,7 +623,7 @@ func button_action():
 	get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 # Affichage Smoothie
 	print("Affichage")
-	var visible = 0
+	visible = 0
 	for i in range(9):
 		label.set("visibility/self_opacity",visible)
 		visible = visible + 0.10
@@ -622,7 +631,6 @@ func button_action():
 		timer.set_wait_time(time_delay)
 		timer.start()
 		yield(get_node("Timer"), "timeout")
-	
 	status()
 	return
 
@@ -633,18 +641,22 @@ func status():
 	# En ligne
 	if LOAD.time_delay <= 30:
 		statusText = LOAD.gameText[0]
+		led = "res://img/LED_enligne.png"
 		status = 1
 	# Occupé
 	elif LOAD.time_delay > 30 and LOAD.time_delay <= 180:
 		statusText = LOAD.gameText[1]
+		led = "res://img/LED_occupe.png"
 		status = 2
 	# Absent
 	elif LOAD.time_delay > 180 and LOAD.time_delay <= 300:
 		statusText = LOAD.gameText[2]
+		led = "res://img/LED_absent.png"
 		status = 3
 	# Hors Ligne
 	elif LOAD.time_delay > 300:
 		statusText = LOAD.gameText[3]
+		led = "res://img/LED_horsligne.png"
 		status = 4
 
 	# Vérification du changement de status
@@ -658,6 +670,9 @@ func message_system():
 	# Trigger son message système
 	sound = 3
 	sample_msg()
+	# Modification de la LED
+	get_node("vbox/Top/LED").set_texture(load(led))
+	# Message système
 	print("Modification vignette status")
 	get_node("vbox/Top/Etat").clear()
 	get_node("vbox/Top/Etat").add_text(str(LOAD.gameText[5]," : ",statusText))
@@ -669,6 +684,7 @@ func message_system():
 	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 	label.show()
 	label.set_text(str(LOAD.gameText[6],statusText))
+	
 	# Affichage smoothie
 	print("Affichage")
 	if visible == 0:
@@ -680,7 +696,13 @@ func message_system():
 			timer.start()
 			yield(get_node("Timer"), "timeout")
 	else:
-		label.set("visibility/opacity",0.90)
+		label.set("visibility/opacity",1)
+
+	# Temporisation
+	timer.set_wait_time(0.75)
+	timer.start()
+	yield(get_node("Timer"), "timeout")
+
 	# Auto scroll
 	print("Scroll")
 	yield(get_tree(), "idle_frame")
@@ -694,8 +716,6 @@ func message_system():
 # Reset Save
 # Reset de la sauvegarde
 func _on_resetSave_pressed():
-	#get_tree().change_scene("res://scn/option.tscn")
-	#GLOBAL.backoption = "res://scn/base.tscn.xml"
 	get_node("Popup").popup()
 
 # System Save
@@ -793,6 +813,10 @@ func _notification(notification_signal):
 
 func _on_Reset_pressed():
 	Directory.new().remove(str("user://save",LOAD.scenarioFile,".json"))
+	LOAD.saveDial = []
+	LOAD.saveRep = []
+	LOAD.saveTime = []
+	LOAD.saveNextTime = []
 	LOAD._ready()
 	LOAD._load_chapter()
 	get_tree().reload_current_scene()
@@ -813,8 +837,6 @@ func _on_Retour_pressed():
 	get_node("Popup").hide()
 
 func _on_Quitter_pressed():
-	#get_tree().quit()
-	#system_exit()
 	LOAD.saveDial = []
 	LOAD.saveRep = []
 	LOAD.saveTime = []

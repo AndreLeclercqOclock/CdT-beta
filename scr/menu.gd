@@ -19,6 +19,22 @@ func _ready():
 	# Son d'ambiance
 	get_node("SampleBKGmenu").play("bkg_main_menu")
 
+	# Textes SelectChapter
+	get_node("SelectChapter/Label").set_text(str(LOAD.menuText[5]))
+	get_node("SelectChapter/RetourChapitres/Label").set_text(str(LOAD.optionsText[3]))
+
+	# Textes OPTIONS
+	get_node("Options/VBox/Reset/Label").set_text(str(LOAD.optionsText[0]))
+	get_node("Options/VBox/Credits/Label").set_text(str(LOAD.optionsText[1]))
+	get_node("Options/VBox/Retour/Label").set_text(str(LOAD.optionsText[3]))
+	get_node("Options/VBox/Site/Label").set_text(str(LOAD.optionsText[4]))
+	addWeb = str(LOAD.optionsText[5])
+	
+	# Textes CREDITS
+	get_node("Credits/ScrollContainer/RichTextLabel").set_text(str(LOAD.creditsText[0]))
+	get_node("Credits/Label").set_text(str(LOAD.optionsText[1]))
+	get_node("Credits/RetourCredits/Label").set_text(str(LOAD.optionsText[3]))
+
 func button_pressed(i,y):
 	LOAD.scenarioFile = i
 	LOAD.loadChapter = y
@@ -34,8 +50,6 @@ func _on_Start_pressed():
 		newButton = button.duplicate()
 		get_node("SelectChapter/VBoxContainer").add_child(newButton)
 		newButton.show()
-		#if y <= LOAD.chapterSave:
-		#	newButton.set_disabled(false)
 		newButton.set_disabled(y > LOAD.chapterSave)
 		newButton.set_name(str("Button",i))
 		newLabel = newButton.get_node("Label")
@@ -48,21 +62,9 @@ func _on_Start_pressed():
 func _on_Option_pressed():
 	get_node("Options").popup()
 
-	# Textes OPTIONS
-	get_node("Options/VBox/Reset/Label").set_text(str(LOAD.optionsText[0]))
-	get_node("Options/VBox/Credits/Label").set_text(str(LOAD.optionsText[1]))
-	get_node("Options/VBox/Retour/Label").set_text(str(LOAD.optionsText[3]))
-	get_node("Options/VBox/Site/Label").set_text(str(LOAD.optionsText[4]))
-	addWeb = str(LOAD.optionsText[5])
-	
 func _on_Credits_pressed():
 	get_node("Options").hide()
 	get_node("Credits").popup()
-
-	# Textes CREDITS
-	get_node("Credits/ScrollContainer/RichTextLabel").set_text(str(LOAD.creditsText[0]))
-	get_node("Credits/Label").set_text(str(LOAD.optionsText[1]))
-	get_node("Credits/RetourCredits/Label").set_text(str(LOAD.optionsText[3]))
 
 func _on_Retour_pressed():
 	get_node("Options").hide()
@@ -94,3 +96,11 @@ func _on_Quitter_pressed():
 
 func _on_RetourCredits_pressed():
 	get_node("Credits").hide()
+
+
+func _on_RetourChapitres_pressed():
+	for i in LOAD.lang._Language.Config.scenarioFile:
+		button = get_node(str("SelectChapter/VBoxContainer/Button",i))
+		button.queue_free()
+		y = 0
+	get_node("SelectChapter").hide()

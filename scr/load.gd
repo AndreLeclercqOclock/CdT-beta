@@ -135,13 +135,13 @@ func _ready():
 
 
 	if fileExists == false:
-		data = {"_SaveGlobal" : {"chapter" : 1}}
+		data = {"_SaveGlobal" : {"chapter" : 2}}
 		var file = File.new()
 		#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 		file.open("user://saveglobal.json", File.WRITE)
 		file.store_line(data.to_json())
 		file.close()
-		chapterSave = 1
+		chapterSave = 2
 
 
 		

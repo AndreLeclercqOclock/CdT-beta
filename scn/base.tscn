@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=1]
+[gd_scene load_steps=66 format=1]
 
 [ext_resource path="res://scr/game.gd" type="Script" id=1]
 [ext_resource path="res://img/bouton_base.jpg" type="Texture" id=2]
@@ -14,35 +14,36 @@
 [ext_resource path="res://font/DEJAVUSANSCONDENSED-BOLD.TTF" type="DynamicFontData" id=12]
 [ext_resource path="res://font/DEJAVUSANS.TTF" type="DynamicFontData" id=13]
 [ext_resource path="res://font/DEJAVUSANSMONO.TTF" type="DynamicFontData" id=14]
-[ext_resource path="res://img/load/activite_ecriture00.png" type="Texture" id=15]
-[ext_resource path="res://img/load/activite_ecriture01.png" type="Texture" id=16]
-[ext_resource path="res://img/load/activite_ecriture02.png" type="Texture" id=17]
-[ext_resource path="res://img/load/activite_ecriture03.png" type="Texture" id=18]
-[ext_resource path="res://img/load/activite_ecriture04.png" type="Texture" id=19]
-[ext_resource path="res://img/load/activite_ecriture05.png" type="Texture" id=20]
-[ext_resource path="res://img/load/activite_ecriture06.png" type="Texture" id=21]
-[ext_resource path="res://img/load/activite_ecriture07.png" type="Texture" id=22]
-[ext_resource path="res://img/load/activite_ecriture08.png" type="Texture" id=23]
-[ext_resource path="res://img/load/activite_ecriture09.png" type="Texture" id=24]
-[ext_resource path="res://img/load/activite_ecriture10.png" type="Texture" id=25]
-[ext_resource path="res://img/load/activite_ecriture11.png" type="Texture" id=26]
-[ext_resource path="res://img/load/activite_ecriture12.png" type="Texture" id=27]
-[ext_resource path="res://img/load/activite_ecriture13.png" type="Texture" id=28]
-[ext_resource path="res://img/load/activite_ecriture14.png" type="Texture" id=29]
-[ext_resource path="res://img/load/activite_ecriture15.png" type="Texture" id=30]
-[ext_resource path="res://img/load/activite_ecriture16.png" type="Texture" id=31]
-[ext_resource path="res://img/load/activite_ecriture17.png" type="Texture" id=32]
-[ext_resource path="res://img/load/activite_ecriture18.png" type="Texture" id=33]
-[ext_resource path="res://img/load/activite_ecriture19.png" type="Texture" id=34]
-[ext_resource path="res://img/load/activite_ecriture20.png" type="Texture" id=35]
-[ext_resource path="res://img/load/activite_ecriture21.png" type="Texture" id=36]
-[ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" id=37]
-[ext_resource path="res://img/footer.jpg" type="Texture" id=38]
-[ext_resource path="res://snd/msg_received.smp" type="Sample" id=39]
-[ext_resource path="res://snd/msg_send.smp" type="Sample" id=40]
-[ext_resource path="res://snd/msg_sys.smp" type="Sample" id=41]
-[ext_resource path="res://snd/bkg_main_game.smp" type="Sample" id=42]
-[ext_resource path="res://snd/trg_stress02.smp" type="Sample" id=43]
+[ext_resource path="res://img/LED_enligne.png" type="Texture" id=15]
+[ext_resource path="res://img/load/activite_ecriture00.png" type="Texture" id=16]
+[ext_resource path="res://img/load/activite_ecriture01.png" type="Texture" id=17]
+[ext_resource path="res://img/load/activite_ecriture02.png" type="Texture" id=18]
+[ext_resource path="res://img/load/activite_ecriture03.png" type="Texture" id=19]
+[ext_resource path="res://img/load/activite_ecriture04.png" type="Texture" id=20]
+[ext_resource path="res://img/load/activite_ecriture05.png" type="Texture" id=21]
+[ext_resource path="res://img/load/activite_ecriture06.png" type="Texture" id=22]
+[ext_resource path="res://img/load/activite_ecriture07.png" type="Texture" id=23]
+[ext_resource path="res://img/load/activite_ecriture08.png" type="Texture" id=24]
+[ext_resource path="res://img/load/activite_ecriture09.png" type="Texture" id=25]
+[ext_resource path="res://img/load/activite_ecriture10.png" type="Texture" id=26]
+[ext_resource path="res://img/load/activite_ecriture11.png" type="Texture" id=27]
+[ext_resource path="res://img/load/activite_ecriture12.png" type="Texture" id=28]
+[ext_resource path="res://img/load/activite_ecriture13.png" type="Texture" id=29]
+[ext_resource path="res://img/load/activite_ecriture14.png" type="Texture" id=30]
+[ext_resource path="res://img/load/activite_ecriture15.png" type="Texture" id=31]
+[ext_resource path="res://img/load/activite_ecriture16.png" type="Texture" id=32]
+[ext_resource path="res://img/load/activite_ecriture17.png" type="Texture" id=33]
+[ext_resource path="res://img/load/activite_ecriture18.png" type="Texture" id=34]
+[ext_resource path="res://img/load/activite_ecriture19.png" type="Texture" id=35]
+[ext_resource path="res://img/load/activite_ecriture20.png" type="Texture" id=36]
+[ext_resource path="res://img/load/activite_ecriture21.png" type="Texture" id=37]
+[ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" id=38]
+[ext_resource path="res://img/footer.jpg" type="Texture" id=39]
+[ext_resource path="res://snd/msg_received.smp" type="Sample" id=40]
+[ext_resource path="res://snd/msg_send.smp" type="Sample" id=41]
+[ext_resource path="res://snd/msg_sys.smp" type="Sample" id=42]
+[ext_resource path="res://snd/bkg_main_game.smp" type="Sample" id=43]
+[ext_resource path="res://snd/trg_stress02.smp" type="Sample" id=44]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -128,7 +129,7 @@ font/font = ExtResource( 13 )
 [sub_resource type="SpriteFrames" id=12]
 
 animations = [ {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
 "loop": true,
 "name": "default",
 "speed": 15.0
@@ -175,19 +176,19 @@ samples/msg_received = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 39 )
+"sample": ExtResource( 40 )
 }
 samples/msg_send = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 40 )
+"sample": ExtResource( 41 )
 }
 samples/msg_sys = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 41 )
+"sample": ExtResource( 42 )
 }
 
 [sub_resource type="SampleLibrary" id=19]
@@ -196,7 +197,7 @@ samples/bkg_main_game = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 42 )
+"sample": ExtResource( 43 )
 }
 
 [sub_resource type="SampleLibrary" id=20]
@@ -205,7 +206,7 @@ samples/trg_stress02 = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 43 )
+"sample": ExtResource( 44 )
 }
 
 [sub_resource type="DynamicFont" id=21]
@@ -623,9 +624,13 @@ shortcut = null
 text = "OPTIONS"
 flat = false
 
+[node name="LED" type="Sprite" parent="Game/vbox/Top"]
+
+transform/pos = Vector2( 742.338, 159.881 )
+texture = ExtResource( 15 )
+
 [node name="Mid" type="Container" parent="Game/vbox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 0
@@ -705,7 +710,7 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 0
 size_flags/vertical = 3
-margin/left = 73.0
+margin/left = 122.0
 margin/top = 0.0
 margin/right = 947.0
 margin/bottom = 50.0
@@ -723,7 +728,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 12 )
 animation = "default"
-frame = 11
+frame = 1
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
@@ -990,7 +995,7 @@ max_lines_visible = -1
 
 visibility/behind_parent = true
 transform/pos = Vector2( 541.646, 1671.41 )
-texture = ExtResource( 38 )
+texture = ExtResource( 39 )
 
 [node name="Timer" type="Timer" parent="Game"]
 
