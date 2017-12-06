@@ -687,16 +687,17 @@ func message_system():
 	
 	# Affichage smoothie
 	print("Affichage")
-	if visible == 0:
-		for i in range(10):
-			label.set("visibility/opacity",visible)
-			visible = visible + 0.10
-			time_delay = 0.05
-			timer.set_wait_time(time_delay)
-			timer.start()
-			yield(get_node("Timer"), "timeout")
-	else:
-		label.set("visibility/opacity",1)
+	label.set("visibility/opacity",1)
+	#if visible == 0:
+	#	for i in range(10):
+	#		label.set("visibility/opacity",visible)
+	#		visible = visible + 0.10
+	#		time_delay = 0.05
+	#		timer.set_wait_time(time_delay)
+	#		timer.start()
+	#		yield(get_node("Timer"), "timeout")
+	#else:
+	#	label.set("visibility/opacity",1)
 
 	# Temporisation
 	timer.set_wait_time(0.75)
