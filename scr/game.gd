@@ -48,6 +48,8 @@ var sound = 0
 var triggerName = null
 var triggerVol = 0
 var lastRep = null
+var bg_sound = null
+var bg_sound_vol = null
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -66,7 +68,9 @@ func _ready():
 	get_node("Popup/VBox/Quitter/Label").set_text(str(LOAD.optionsText[3]))
 
 	# Son d'ambiance
-	get_node("SampleBKG").play("bkg_main_game")
+	bg_sound = LOAD.firstBGS
+	bg_sound_vol = 0
+	background_sound()
 
 	# Initialisation du Timer
 	print("Initialitation du Timer")
@@ -254,6 +258,10 @@ func start():
 		# Vérification d'un trigger son
 		if LOAD.dial[LOAD.currentDial].sound[0] == 1:
 			trigger_sound()
+		if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
+			bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
+			bg_sound_vol = LOAD.dial[LOAD.currentDial].bgsound[2]
+			background_sound()
 		print("#### DIALOGUES REF : 1 ####")
 # Horodatage
 		print("Horodatage")
@@ -799,6 +807,10 @@ func trigger_sound():
 	get_node("SampleTRG").set_default_volume_db(triggerVol)
 	get_node("SampleTRG").play(triggerName)
 
+# Système de sons d'ambiance (background sound)
+func background_sound():
+	get_node("SampleBKG").set_default_volume_db(bg_sound_vol)
+	get_node("SampleBKG").play(bg_sound)
 
 # System Exit
 func system_exit():

@@ -17,8 +17,9 @@
    "name": "Pr. Latrémon"
   },
   "config": {
-    "firstDial": "dialFIN05",
-    "lastDial" : "dialFIN05"
+    "firstDial": "dial001",
+    "lastDial" : "dialFIN05",
+    "firstBGSound" : "bkg_ch01_01"
    },
   "dial001": {
    "ref": 1,
@@ -34,7 +35,8 @@
     "Y'a quelqu'un ?"
    ],
    "next": "rep101",
-   "sound": [0,"null",0]
+   "sound": [0,"null",0],
+   "bgsound": [0,"null",0]
   },
   "dial102": {
    "ref": 1,
@@ -46,7 +48,8 @@
     "Vous n'êtes pas dans le souterrain avec moi, quand même ?"
    ],
    "next": "rep102",
-   "sound": [0,"null",0]
+   "sound": [0,"null",0],
+   "bgsound": [1,"trg_stress02",0]
   },
   "dial103": {
    "ref": 1,
@@ -56,7 +59,8 @@
     "C'est à dire que je ne suis pas dans une situation qui pousse aux civilités."
    ],
    "next": "dial200",
-   "sound": [0,"null",0]
+   "sound": [0,"null",0],
+   "bgsound": [1,"bkg_ch01_01",0]
   },
   "dial104": {
    "ref": 1,
@@ -67,7 +71,8 @@
     "Mais je manque à toutes les politesses."
    ],
    "next": "dial200",
-   "sound": [0,"null",0]
+   "sound": [0,"null",0],
+   "bgsound": [0,"null",0]
   },
   "dial200": {
    "ref": 1,
