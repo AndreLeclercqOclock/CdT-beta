@@ -50,6 +50,8 @@ var triggerVol = 0
 var lastRep = null
 var bg_sound = null
 var bg_sound_vol = null
+var bg_volume = null
+var diff_volume = null
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -67,15 +69,16 @@ func _ready():
 	get_node("Popup/VBox/Retour/Label").set_text(str(LOAD.optionsText[2]))
 	get_node("Popup/VBox/Quitter/Label").set_text(str(LOAD.optionsText[3]))
 
-	# Son d'ambiance
-	bg_sound = LOAD.firstBGS
-	bg_sound_vol = 0
-	background_sound()
-
 	# Initialisation du Timer
 	print("Initialitation du Timer")
 	timer = get_node("Timer")
 	timer.set_wait_time(0.01)
+	
+	# Son d'ambiance
+	bg_sound = LOAD.firstBGS
+	bg_sound_vol = 0
+	background_sound()
+	
 
 	if LOAD.fileExists == true and LOAD.stateSave == true:
 		# Ecran de chargement
@@ -809,8 +812,14 @@ func trigger_sound():
 
 # Système de sons d'ambiance (background sound)
 func background_sound():
+	bg_volume = get_node("SampleBKG").get_default_volume_db()
+	diff_volume = bg_volume - (-30)
+	for i in range(diff_volume):
+		get_node("SampleBKG").set_default_volume_db(bg_volume)
+		bg_volume -= 1
 	get_node("SampleBKG").set_default_volume_db(bg_sound_vol)
 	get_node("SampleBKG").play(bg_sound)
+	return
 
 # System Exit
 func system_exit():

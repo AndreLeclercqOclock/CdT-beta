@@ -70,10 +70,11 @@
                 ✔ Ajustement des timers messages systèmes @done (2017-12-6 15:14:44)
                 ✔ Ajouter les trigger son dans les JSON @done (2017-12-6 09:42:20)
                 ✔ Supprimer le cache au reset de la sauvegarde @done (2017-12-6 13:44:49)
-                ☐ Ajouter trigger JSON scénario pour sons d'ambiance @high @today
+                ✔ Ajouter trigger JSON scénario pour sons d'ambiance @done (2017-12-7 17:08:17)
             ☐ DEBUG ALPHA 2.9 @critical @high
                 ✔ Affichage messages système @done (2017-12-6 16:05:44)
                 ✔ Bug du cache des logs save @done (2017-12-6 16:08:33)
+                ☐ Optimiser la transition d'un BG Sound à un autre
 
     Divers:
         ☐ Test sur OS.low
