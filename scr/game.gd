@@ -50,8 +50,6 @@ var triggerVol = 0
 var lastRep = null
 var bg_sound = null
 var bg_sound_vol = null
-var bg_volume = null
-var diff_volume = null
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -73,11 +71,6 @@ func _ready():
 	print("Initialitation du Timer")
 	timer = get_node("Timer")
 	timer.set_wait_time(0.01)
-	
-	# Son d'ambiance
-	bg_sound = LOAD.firstBGS
-	bg_sound_vol = 0
-	background_sound()
 	
 
 	if LOAD.fileExists == true and LOAD.stateSave == true:
@@ -253,9 +246,9 @@ func start():
 # Gestion des dialogues de ref 1 [DIALOGUES]
 # Dialogues 
 	if LOAD.dial[LOAD.currentDial].ref == 1 :
+		last_dial()
 		LOAD.time_delay = 1
 		status()
-		last_dial()
 		# Attribution du type de son
 		sound = 1
 		# Vérification d'un trigger son
@@ -455,8 +448,8 @@ func start():
 # Réponses
 # Gestion des dialogues de ref 2 [REPONSES CHOIX MULTIPLES]
 	if LOAD.dial[LOAD.currentDial].ref == 2 :
-		if lastRep == LOAD.dial[LOAD.currentDial]:
-			pass
+		if lastRep == LOAD.currentDial:
+			print("DERNIER REP")
 		else:
 			print("#### DIALOGUES REF : 2 ####")
 			print("Création de ",LOAD.dial[LOAD.currentDial].content.size()," bouton(s)")
@@ -472,6 +465,7 @@ func start():
 									## MESSAGE SYSTEM ##	
 
 	if LOAD.dial[LOAD.currentDial].ref == 3:
+		last_dial()
 		# Ecriture du message système
 		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
 			# Trigger son message système
@@ -782,15 +776,17 @@ func system_time():
 
 # Vérification FIN
 func last_dial():
-	if LOAD.loadChapter >= LOAD.chapterSave and LOAD.currentDial == LOAD.lastDial:
-		LOAD.chapterSave = LOAD.chapterSave+1
-		LOAD.data = {"_SaveGlobal" : {"chapter" : LOAD.chapterSave}}
-		var file = File.new()
-		#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-		file.open("user://saveglobal.json", File.WRITE)
-		file.store_line(LOAD.data.to_json())
-		file.close()
-		lastRep = LOAD.currentDial.next
+	if LOAD.currentDial == LOAD.lastDial:
+		lastRep = LOAD.dial[LOAD.currentDial].next
+		print(str("LASTREP : ",lastRep))
+		if LOAD.loadChapter >= LOAD.chapterSave:
+			LOAD.chapterSave = LOAD.chapterSave+1
+			LOAD.data = {"_SaveGlobal" : {"chapter" : LOAD.chapterSave}}
+			var file = File.new()
+			#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+			file.open("user://saveglobal.json", File.WRITE)
+			file.store_line(LOAD.data.to_json())
+			file.close()
 	return
 
 # Système de sample MESSAGES
@@ -812,11 +808,6 @@ func trigger_sound():
 
 # Système de sons d'ambiance (background sound)
 func background_sound():
-	bg_volume = get_node("SampleBKG").get_default_volume_db()
-	diff_volume = bg_volume - (-30)
-	for i in range(diff_volume):
-		get_node("SampleBKG").set_default_volume_db(bg_volume)
-		bg_volume -= 1
 	get_node("SampleBKG").set_default_volume_db(bg_sound_vol)
 	get_node("SampleBKG").play(bg_sound)
 	return

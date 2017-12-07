@@ -55,7 +55,7 @@
             ☐ Divers @low 
                 ✔ Réorganisation des fichiers JSON et des scripts @done (2017-12-3 21:07:35)
                 ☐ Refonte fin du chapitre @high @today
-                    ☐ Vérification de l'arrivée à la fin du chapitre.
+                    ✔ Vérification de l'arrivée à la fin du chapitre. @done (2017-12-7 21:49:17)
                     ☐ Affichage bouton "Retour Menu".
                     ☐ Affichage bouton "Chapitre Suivant".
                 ☐ Ajuster le système de calcule de l'heure. @critical 
@@ -74,7 +74,7 @@
             ☐ DEBUG ALPHA 2.9 @critical @high
                 ✔ Affichage messages système @done (2017-12-6 16:05:44)
                 ✔ Bug du cache des logs save @done (2017-12-6 16:08:33)
-                ☐ Optimiser la transition d'un BG Sound à un autre
+                ✔ Optimiser la transition d'un BG Sound à un autre @done (2017-12-7 21:07:59)
 
     Divers:
         ☐ Test sur OS.low
@@ -93,5 +93,11 @@
             ☐ Effacer la dernière entrée du tableau
             ☐ Enregistrer le nouveau tableau
             ☐ Recharger le nouveau tableau
+        ☐ Création Panel Dev
+            ☐ Affichage des references
+            ☐ Affichage du next
+            ☐ Affichage du timer
+            ☐ Désactivation du timer
+            ☐ Choix du dialogue à afficher
 
 

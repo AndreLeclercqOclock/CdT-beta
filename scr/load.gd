@@ -22,7 +22,6 @@ var chapter = []
 var scenarioFile = null
 var firstDial = null
 var lastDial = null
-var firstBGS = null
 var stateSave = null
 var version = null
 var chapterSave = null
@@ -191,7 +190,6 @@ func _load_chapter():
 	dial = dict._Dialogues
 	firstDial = dict._Dialogues.config.firstDial
 	lastDial = dict._Dialogues.config.lastDial
-	firstBGS = str(dict._Dialogues.config.firstBGSound)
 
 	# Lancement du script
 	print("Lancement du script")

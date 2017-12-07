@@ -18,8 +18,7 @@
   },
   "config": {
     "firstDial": "dial001",
-	"lastDial" : "dialFIN03",
-	"firstBGSound" : "bkg_ch01_01"
+	"lastDial" : "dialFIN03"
    },
   "dial001": {
    "ref": 3,
