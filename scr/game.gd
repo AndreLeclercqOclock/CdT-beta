@@ -72,6 +72,10 @@ func _ready():
 	timer = get_node("Timer")
 	timer.set_wait_time(0.01)
 	
+	# Calcule time zone
+	timezone = OS.get_datetime_from_unix_time(OS.get_unix_time()).hour
+	realtime = OS.get_time().hour
+	calcultime = realtime - timezone
 
 	if LOAD.fileExists == true and LOAD.stateSave == true:
 		# Ecran de chargement
@@ -198,11 +202,6 @@ func _ready():
 		LOAD.currentDial = LOAD.dial[LOAD.currentDial].next
 		LOAD.launch = 1
 	
-	
-# Calcule time zone
-	timezone = OS.get_datetime_from_unix_time(OS.get_unix_time()).hour
-	realtime = OS.get_time().hour
-	calcultime = realtime - timezone
 
 # Affichage du nom de l'interlocuteur
 	print("Affichage du nom")
@@ -759,11 +758,7 @@ func system_time():
 	var hourSys = timeSys.hour
 	var minuteSys = timeSys.minute
 	var secondSys = timeSys.second
-
-	if calcultime < 0:
-		hourSys = hourSys - calcultime
-	else:
-		hourSys = hourSys + calcultime
+	hourSys = hourSys + (calcultime)
 
 	# Ajustement de l'heure
 	if hourSys < 10:

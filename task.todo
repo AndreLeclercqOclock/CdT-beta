@@ -52,12 +52,12 @@
                 ✔ Bouton reset save pour chaque chapitre @done (2017-11-30 17:28:01)
                 ✔ Retour au menu (sauvegarde auto) @done (2017-12-1 10:14:12)
                 ✔ Débloquer le bon chapitre @done (2017-11-30 16:30:01)
-            ☐ Divers @low 
+            ✔ Divers @done (2017-12-8 16:59:30)
                 ✔ Réorganisation des fichiers JSON et des scripts @done (2017-12-3 21:07:35)
                 ✔ Refonte fin du chapitre @done (2017-12-8 16:12:59)
                     ✔ Vérification de l'arrivée à la fin du chapitre. @done (2017-12-7 21:49:17)
                     ✔ Affichage bouton "Retour Menu". @done (2017-12-8 16:12:48)
-                ☐ Ajuster le système de calcule de l'heure. @critical 
+                ✔ Ajuster le système de calcule de l'heure. @done (2017-12-8 16:59:25)
                 ✔ Ecran de chargement au lancement de l'aventure @done (2017-12-5 11:51:50)
                 ✔ Réécriture des crédits & remerciements @done (2017-12-7 14:04:47)
                 ✔ Refonte Options & Crédits (scène => popup) @done (2017-12-5 16:21:54)
