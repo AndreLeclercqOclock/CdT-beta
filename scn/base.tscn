@@ -199,6 +199,12 @@ samples/bkg_ch01_01 = {
 "priority": 0,
 "sample": ExtResource( 43 )
 }
+samples/trg_stress02 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 44 )
+}
 
 [sub_resource type="SampleLibrary" id=20]
 
@@ -732,7 +738,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 12 )
 animation = "default"
-frame = 10
+frame = 19
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]

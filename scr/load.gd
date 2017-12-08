@@ -18,6 +18,7 @@ var gameText = []
 var optionsText = []
 var creditsText = []
 var chapter = []
+var actualBGSound = null
 
 var scenarioFile = null
 var firstDial = null
@@ -173,6 +174,8 @@ func _load_chapter():
 		for i in save._Save.nexttime:
 			saveNextTime.append(i)
 		print(saveNextTime)
+		print("Récupération du son d'ambiance")
+		actualBGSound = save._Save.actualBGSound
 		loadsave = save._Save
 
 	print(str("NOM DU SCENARIO",scenarioFile))
@@ -202,6 +205,7 @@ func _load_chapter():
 		dataNextTime = OS.get_unix_time() + int(time_delay)
 		currentNextTime = OS.get_unix_time()
 		currentDial = firstDial
+		actualBGSound = dict._Dialogues.config.firstBGSound
 
 	get_tree().change_scene("res://scn/base.tscn")
 	print("FIN DU SCRIPT !!!")

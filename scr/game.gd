@@ -196,6 +196,7 @@ func _ready():
 			LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
 		print("Fin du chargement")
 		print("Réécriture Dialogues dans le JSON")
+		get_node("SampleBKG").play(str(LOAD.actualBGSound))
 		get_node("SampleMSG").set_default_volume_db(0)
 		get_node("Loading").hide()
 	if LOAD.fileExists == true and LOAD.currentNextTime <= OS.get_unix_time():
@@ -440,6 +441,9 @@ func start():
 			LOAD.dataDial = LOAD.currentDial
 			LOAD.dataRep = null
 			LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
+			if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
+				bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
+			LOAD.actualBGSound = bg_sound
 			system_save()
 			status()
 
@@ -462,11 +466,11 @@ func start():
 
 	if LOAD.dial[LOAD.currentDial].ref == 3:
 		last_dial()
+		# Trigger son message système
+		sound = 3
+		sample_msg()
 		# Ecriture du message système
 		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
-			# Trigger son message système
-			sound = 3
-			sample_msg()
 			print("Création du label")
 			var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelSys")
 			var label = labelbase.duplicate()
@@ -475,6 +479,7 @@ func start():
 			get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 			label.show()
 			label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
+			label.set("visibility/opacity",1)
 		
 			# Temporisation
 			timer.set_wait_time(1.25)
@@ -488,17 +493,6 @@ func start():
 			LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
 			get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 
-			# Affichage Smoothie
-			print("Affichage")
-			#visible = 1
-			label.set("visibility/opacity",1)
-			#for i in range(2):
-				#label.set("visibility/self_opacity",visible)
-				#visible = visible + 0.50
-				#time_delay = 0.05
-				#timer.set_wait_time(time_delay)
-				#timer.start()
-				#yield(get_node("Timer"), "timeout")
 
 		#AUTO SAVE
 		if LOAD.currentDial == LOAD.firstDial:
@@ -521,6 +515,9 @@ func start():
 			LOAD.dataDial = LOAD.currentDial
 			LOAD.dataRep = null
 			LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
+			if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
+				bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
+			LOAD.actualBGSound = bg_sound
 			system_save()
 
 										## BOUTONS REPONSES ##
@@ -578,6 +575,9 @@ func button_action():
 	LOAD.dataDial = LOAD.currentDial
 	LOAD.dataRep = buttonPressed
 	LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
+	#if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
+	#	bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
+	LOAD.actualBGSound = bg_sound
 	system_save()
 # Trigger son message envoyé
 	sound = 2
@@ -601,6 +601,9 @@ func button_action():
 	LOAD.dataRep = null
 	LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
 	LOAD.currentNextTime = LOAD.dataNextTime
+	if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
+		bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
+	LOAD.actualBGSound = bg_sound
 	system_save()
 	LOAD.launch = 1
 
@@ -743,7 +746,7 @@ func system_save():
 	print(LOAD.saveDial)
 	print(LOAD.saveRep)
 	print(LOAD.saveNextTime)
-	data = {"_Save" : {"dial" : LOAD.saveDial,"rep" : LOAD.saveRep, "nexttime" : LOAD.saveNextTime}}
+	data = {"_Save" : {"dial" : LOAD.saveDial,"rep" : LOAD.saveRep, "nexttime" : LOAD.saveNextTime, "actualBGSound" : LOAD.actualBGSound}}
 	var file = File.new()
 	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.open(str("user://save",LOAD.scenarioFile,".json"), File.WRITE)
@@ -824,6 +827,9 @@ func system_exit():
 		LOAD.dataDial = nextDial
 		LOAD.dataRep = null
 		LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
+		if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
+			bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
+		LOAD.actualBGSound = bg_sound
 		system_save()
 
 func _notification(notification_signal):
