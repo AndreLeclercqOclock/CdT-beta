@@ -105,7 +105,8 @@ func _ready():
 				get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 				label.show()
 				print("Affiche l'heure")
-				label.set_text(str(" - ",LOAD.timeIG))
+				#label.set_text(str(" - ",LOAD.timeIG))
+				label.set_text(str(" - ",LOAD.timeIG," : ",LOAD.currentDial," : ",LOAD.dial[LOAD.currentDial].next))
 				label.set("visibility/opacity",1)
 				var labelH = label.get_text()
 				# Ecrit la ligne de dialogue
@@ -271,7 +272,8 @@ func start():
 		get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 		label.show()
 		print("Affiche l'heure")
-		label.set_text(str(" - ",LOAD.timeIG))
+		#label.set_text(str(" - ",LOAD.timeIG))
+		label.set_text(str(" - ",LOAD.timeIG," : ",LOAD.currentDial,"=>",LOAD.dial[LOAD.currentDial].next))
 		var labelH = label.get_text()
 # Auto Scroll
 		print("Scroll")
