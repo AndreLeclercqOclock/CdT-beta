@@ -54,10 +54,9 @@
                 ✔ Débloquer le bon chapitre @done (2017-11-30 16:30:01)
             ☐ Divers @low 
                 ✔ Réorganisation des fichiers JSON et des scripts @done (2017-12-3 21:07:35)
-                ☐ Refonte fin du chapitre @high @today
+                ✔ Refonte fin du chapitre @done (2017-12-8 16:12:59)
                     ✔ Vérification de l'arrivée à la fin du chapitre. @done (2017-12-7 21:49:17)
-                    ☐ Affichage bouton "Retour Menu".
-                    ☐ Affichage bouton "Chapitre Suivant".
+                    ✔ Affichage bouton "Retour Menu". @done (2017-12-8 16:12:48)
                 ☐ Ajuster le système de calcule de l'heure. @critical 
                 ✔ Ecran de chargement au lancement de l'aventure @done (2017-12-5 11:51:50)
                 ✔ Réécriture des crédits & remerciements @done (2017-12-7 14:04:47)
@@ -75,6 +74,8 @@
                 ✔ Affichage messages système @done (2017-12-6 16:05:44)
                 ✔ Bug du cache des logs save @done (2017-12-6 16:08:33)
                 ✔ Optimiser la transition d'un BG Sound à un autre @done (2017-12-7 21:07:59)
+                ☐ Reprise du son d'ambiance au chargement du jeu
+                ☐ Réglage son message système (ajuster le déclencheur)
 
     Divers:
         ☐ Test sur OS.low

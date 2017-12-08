@@ -448,18 +448,15 @@ func start():
 # Réponses
 # Gestion des dialogues de ref 2 [REPONSES CHOIX MULTIPLES]
 	if LOAD.dial[LOAD.currentDial].ref == 2 :
-		if lastRep == LOAD.currentDial:
-			print("DERNIER REP")
-		else:
-			print("#### DIALOGUES REF : 2 ####")
-			print("Création de ",LOAD.dial[LOAD.currentDial].content.size()," bouton(s)")
-			for i in range(LOAD.dial[LOAD.currentDial].content.size()):
-				print("Création du bouton n°",LOAD.dial[LOAD.currentDial].button[i])
-				get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(LOAD.dial[LOAD.currentDial].button[i]))
-				get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
-				get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
-			timer.stop()
-			print("Fin de la création des boutons")
+		print("#### DIALOGUES REF : 2 ####")
+		print("Création de ",LOAD.dial[LOAD.currentDial].content.size()," bouton(s)")
+		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
+			print("Création du bouton n°",LOAD.dial[LOAD.currentDial].button[i])
+			get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(LOAD.dial[LOAD.currentDial].button[i]))
+			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
+			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
+		timer.stop()
+		print("Fin de la création des boutons")
 
 
 									## MESSAGE SYSTEM ##	
@@ -532,9 +529,12 @@ func start():
 # Gestion des boutons de choix multipes
 # BOUTON 0
 func _on_Bouton0_pressed():
-	print("Bouton n°0 activé")
-	buttonPressed = 0
-	button_action()
+	if lastRep == LOAD.currentDial:
+		button_end()
+	else:
+		print("Bouton n°0 activé")
+		buttonPressed = 0
+		button_action()
 
 # BOUTON 1
 func _on_Bouton1_pressed():
@@ -640,6 +640,14 @@ func button_action():
 		yield(get_node("Timer"), "timeout")
 	status()
 	return
+
+# Bouton de fin (retour menu)
+func button_end():
+	LOAD.saveDial = []
+	LOAD.saveRep = []
+	LOAD.saveTime = []
+	LOAD.saveNextTime = []
+	get_tree().change_scene("res://scn/menu.tscn")
 
 # Status
 func status():
