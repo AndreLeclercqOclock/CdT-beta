@@ -496,7 +496,6 @@ texture = ExtResource( 9 )
 
 [node name="vbox" type="VBoxContainer" parent="Game"]
 
-editor/display_folded = true
 rect/min_size = Vector2( 1080, 1920 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -638,7 +637,6 @@ texture = ExtResource( 15 )
 
 [node name="Mid" type="Container" parent="Game/vbox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 0
@@ -650,7 +648,6 @@ margin/bottom = 4.0
 
 [node name="DialBox" type="ScrollContainer" parent="Game/vbox/Mid"]
 
-editor/display_folded = true
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -666,7 +663,6 @@ scroll/vertical = true
 
 [node name="VBoxMid" type="VBoxContainer" parent="Game/vbox/Mid/DialBox"]
 
-editor/display_folded = true
 rect/min_size = Vector2( 1070, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -738,7 +734,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 12 )
 animation = "default"
-frame = 8
+frame = 19
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
@@ -769,6 +765,7 @@ max_lines_visible = -1
 visibility/self_opacity = 0.6
 visibility/behind_parent = true
 transform/pos = Vector2( -28.6394, -3.01465 )
+transform/scale = Vector2( 1, 2 )
 z/relative = false
 texture = ExtResource( 8 )
 centered = false
@@ -818,6 +815,7 @@ max_lines_visible = -1
 
 [node name="Bot" type="Container" parent="Game/vbox"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -829,6 +827,7 @@ margin/bottom = 8.0
 
 [node name="VBoxBot" type="VBoxContainer" parent="Game/vbox/Bot"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -844,6 +843,7 @@ alignment = 0
 "Bouton",
 ]]
 
+editor/display_folded = true
 visibility/visible = false
 rect/min_size = Vector2( 840, 85 )
 focus/ignore_mouse = true
@@ -978,6 +978,8 @@ margin/bottom = 91.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+textures/normal = ExtResource( 2 )
+textures/pressed = ExtResource( 3 )
 params/resize_mode = 0
 params/stretch_mode = 0
 

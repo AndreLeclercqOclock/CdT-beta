@@ -133,9 +133,17 @@ func _ready():
 						label.set("rect/min_size",Vector2(925,110))
 						get_node(labelbg).set("transform/scale",Vector2(1,2))
 					elif labelsize == 3:
-						label.set_size(Vector2(925,165))
-						label.set("rect/min_size",Vector2(925,165))
+						label.set_size(Vector2(925,170))
+						label.set("rect/min_size",Vector2(925,170))
 						get_node(labelbg).set("transform/scale",Vector2(1,3))
+					elif labelsize == 4:
+						label.set_size(Vector2(925,230))
+						label.set("rect/min_size",Vector2(925,230))
+						get_node(labelbg).set("transform/scale",Vector2(1,4))
+					elif labelsize == 5:
+						label.set_size(Vector2(925,290))
+						label.set("rect/min_size",Vector2(925,290))
+						get_node(labelbg).set("transform/scale",Vector2(1,5))
 				# Auto Scroll
 					yield(get_tree(), "idle_frame")
 					get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
@@ -389,9 +397,17 @@ func start():
 				label.set("rect/min_size",Vector2(925,110))
 				get_node(labelbg).set("transform/scale",Vector2(1,2))
 			elif labelsize == 3:
-				label.set_size(Vector2(925,165))
-				label.set("rect/min_size",Vector2(925,165))
+				label.set_size(Vector2(925,170))
+				label.set("rect/min_size",Vector2(925,170))
 				get_node(labelbg).set("transform/scale",Vector2(1,3))
+			elif labelsize == 4:
+				label.set_size(Vector2(925,230))
+				label.set("rect/min_size",Vector2(925,230))
+				get_node(labelbg).set("transform/scale",Vector2(1,4))
+			elif labelsize == 5:
+				label.set_size(Vector2(925,290))
+				label.set("rect/min_size",Vector2(925,290))
+				get_node(labelbg).set("transform/scale",Vector2(1,5))
 			print(str("Taille du label :",label.get_size()))
 
 

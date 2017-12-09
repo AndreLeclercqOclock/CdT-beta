@@ -76,7 +76,9 @@
                 ✔ Optimiser la transition d'un BG Sound à un autre @done (2017-12-7 21:07:59)
                 ✔ Reprise du son d'ambiance au chargement du jeu @done (2017-12-8 18:42:45)
                 ✔ Réglage son message système (ajuster le déclencheur) @done (2017-12-8 18:46:58)
-                ☐ DEBUG scénario
+                ☐ DEBUG scénario @today
+                    ✔ Problème d'affichage de lignes (textes trop longs) @done (2017-12-9 11:56:52)
+                ✔ Bug d'affichage du quatrième bouton @done (2017-12-9 11:44:29)
 
     Divers:
         ☐ Test sur OS.low
