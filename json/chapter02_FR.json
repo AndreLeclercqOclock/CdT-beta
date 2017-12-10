@@ -875,7 +875,7 @@
 		"Mais j’essaye de rester positif.",
 		"Allons, voyons quelle sera notre prochaine étape !"
 	],
-	"next": "dial028b",
+	"next": "dial029",
 	"sound": [0,"null",0],
 	"bgsound": [0,"null",0]
 },
@@ -976,7 +976,7 @@
 		"Un sol de terre battue, des parois brutes, des fientes de chauve-souris…",
 		"Rien d’intéressant, j’en ai peur."
 	],
-	"next": "dial031d",
+	"next": "dial032d",
 	"sound": [0,"null",0],
 	"bgsound": [0,"null",0]
 },
@@ -1313,7 +1313,7 @@
 		"Le jardin est redevenu sauvage.",
 		"Et la porte est béante, presque entièrement dégondée, et le bois est complètement vermoulu."
 	],
-	"next": "dial044d",
+	"next": "dial045",
 	"sound": [0,"null",0],
 	"bgsound": [0,"null",0]
 },
@@ -2796,7 +2796,7 @@
    "button": ["Rejouer"],
    "content": ["Rejouer"],
    "next": [
-    "dial025",
+    "dial022b",
     "dial001"
    ]
   },

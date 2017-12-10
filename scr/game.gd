@@ -173,8 +173,14 @@ func _ready():
 					label.set_size(Vector2(925,110))
 					label.set("rect/min_size",Vector2(925,110))
 				elif labelsize == 3:
-					label.set_size(Vector2(925,165))
-					label.set("rect/min_size",Vector2(925,165))
+					label.set_size(Vector2(925,170))
+					label.set("rect/min_size",Vector2(925,170))
+				elif labelsize == 4:
+					label.set_size(Vector2(925,230))
+					label.set("rect/min_size",Vector2(925,230))
+				elif labelsize == 5:
+					label.set_size(Vector2(925,290))
+					label.set("rect/min_size",Vector2(925,290))
 				print(str("Taille du label :",label.get_size()))
 			# Auto Scroll
 				print("Scroll")
@@ -638,8 +644,14 @@ func button_action():
 		label.set_size(Vector2(925,110))
 		label.set("rect/min_size",Vector2(925,110))
 	elif labelsize == 3:
-		label.set_size(Vector2(925,165))
-		label.set("rect/min_size",Vector2(925,165))
+		label.set_size(Vector2(925,170))
+		label.set("rect/min_size",Vector2(925,170))
+	elif labelsize == 4:
+		label.set_size(Vector2(925,230))
+		label.set("rect/min_size",Vector2(925,230))
+	elif labelsize == 5:
+		label.set_size(Vector2(925,290))
+		label.set("rect/min_size",Vector2(925,290))
 	print(str("Taille du label :",label.get_size()))
 
 # Auto Scroll
