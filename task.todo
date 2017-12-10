@@ -76,9 +76,15 @@
                 ✔ Optimiser la transition d'un BG Sound à un autre @done (2017-12-7 21:07:59)
                 ✔ Reprise du son d'ambiance au chargement du jeu @done (2017-12-8 18:42:45)
                 ✔ Réglage son message système (ajuster le déclencheur) @done (2017-12-8 18:46:58)
+                ✔ Bug d'affichage du quatrième bouton @done (2017-12-9 11:44:29)
                 ☐ DEBUG scénario @today
                     ✔ Problème d'affichage de lignes (textes trop longs) @done (2017-12-9 11:56:52)
-                ✔ Bug d'affichage du quatrième bouton @done (2017-12-9 11:44:29)
+                    ✔ Correction de la boucle en DIAL005 @done (2017-12-10 12:48:58)
+                    ✔ Correction DIAL003A @done (2017-12-10 12:49:00)
+                    ✔ Correction DIAL013B @done (2017-12-10 12:49:00)
+                    ✔ Correction de la boucle DIAL020A @done (2017-12-10 12:49:01)
+                    ✔ Correction de la boucle DIAL034 @done (2017-12-10 12:49:02)
+                
 
     Divers:
         ☐ Test sur OS.low

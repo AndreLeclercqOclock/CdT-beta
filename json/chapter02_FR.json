@@ -104,7 +104,7 @@
 	"time": 2,
 	"content": [
 		"Bien sûr ! Qui voulez-vous que ce soit ?",
-		"Vous connaissez beaucoup de monde capable de vous appeler d’une autre dimention ?"
+		"Vous connaissez beaucoup de monde capable de vous appeler d’une autre dimension ?"
 	],
 	"next": "dial004b",
 	"sound": [0,"null",0],
@@ -315,7 +315,7 @@
 	"time": 2,
 	"content": [
 		"Très honnêtement, je ressent l’atavisme de mon espèce.",
-		"Le bâtiment de l’autre côté de la varrée m’attire parce qu’il s’agit d’une construction évidemment humaine et relativement moderne.",
+		"Le bâtiment de l’autre côté de la vallée m’attire parce qu’il s’agit d’une construction évidemment humaine et relativement moderne.",
 		"Sincèrement, j’espère y trouver de l’aide et le moyen de rentrer chez moi."
 	],
 	"next": "dial014",
@@ -1057,7 +1057,7 @@
 	"ref": 1,
 	"time": 60,
 	"content": ["Hello, encore avec moi ?"],
-	"next": "dial034a",
+	"next": "rep034",
 	"sound": [0,"null",0],
 	"bgsound": [0,"null",0]
 },
@@ -1073,7 +1073,7 @@
 		"On dirait que quelqu’un a y a trouvé de quoi installer une entreprise fructueuse.",
 		"Cela veut dire deux choses…"
 	],
-	"next": "rep025",
+	"next": "rep035",
 	"sound": [0,"null",0],
 	"bgsound": [0,"null",0]
 },
@@ -1179,7 +1179,7 @@
 		"Bien entendu.",
 		"Voyons voir de plus près…"
 	],
-	"next": "rep037",
+	"next": "dial038a",
 	"sound": [0,"null",0],
 	"bgsound": [0,"null",0]
 },
@@ -1530,13 +1530,13 @@
 		"Ça m’a l’air solide. Je descends.",
 		"Je vous retrouve en bas."
 	],
-	"next": "dial052a",
+	"next": "dial053",
 	"sound": [0,"null",0],
 	"bgsound": [0,"null",0]
 },
 "dial053": {
 	"ref": 1,
-	"time": 2,
+	"time": 8,
 	"content": [
 		"Nous y voilà.",
 		"Retour dans les catacombes.",
@@ -1651,7 +1651,7 @@
 		"Le sol a été bétonné, il y a des tuyaux le long des murs, et même quelques câbles.",
 		"J’avance."
 	],
-	"next": "dial057a",
+	"next": "dial057b",
 	"sound": [0,"null",0],
 	"bgsound": [0,"null",0]
 },
@@ -1764,7 +1764,7 @@
 		"… tout en prenant garde à ne pas glisser.",
 		"Ouf !"
 	],
-	"next": "dial060b",
+	"next": "dial060c",
 	"sound": [0,"null",0],
 	"bgsound": [0,"null",0]
 },
@@ -1851,7 +1851,7 @@
 		"Merci de votre aide, l’ami.",
 		"Et à très bientôt !"
 	],
-	"next": "dial062a",
+	"next": "dialFIN03",
 	"sound": [0,"null",0],
 	"bgsound": [0,"null",0]
 },
@@ -2085,7 +2085,7 @@
     "Félicitations, vous l’avez bien guidé.",
 	"Retrouvez-le bientôt dans le chapitre 3 !",
     " ",
-    "Cliquez « Rejouer » pour recommencer la partie."
+    "Cliquez « Retour » pour revenir au menu."
    ],
    "next": "rep9999",
    "sound": [0,"null",0],
@@ -2157,7 +2157,7 @@
 		"Où êtes-vous maintenant ? Plus dans les catacombes, j’imagine."
 	],
 	"next": [
-		"dial005",
+		"dial006",
 		"dial007a"
 	]
 },
@@ -2812,11 +2812,10 @@
   },
   "rep9999": {
    "ref": 2,
-   "time": 2,
-   "button": ["Rejouer"],
-   "content": ["Rejouer"],
+   "time": 1,
+   "button": ["Revenir au menu"],
+   "content": ["Revenir au menu"],
    "next": [
-    "dial001",
     "dial001"
    ]
   }
