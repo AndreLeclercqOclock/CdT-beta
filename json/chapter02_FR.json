@@ -1902,10 +1902,10 @@
 	"ref": 1,
 	"time": 3,
 	"content": [
-		"Han !",
-		"La porte résiste un peu, le bois est gonflé d’humidité.",
-		"J’espère que le reste ne va pas s’effondrer dans le mouvement…",
-		"Oufff !…"
+		"Bien. Qui ne tente rien n’a rien.",
+		"Je sais, mes aphorismes sont ridicules. Mais, je dois le confesser…",
+		"Je n’ai pas très envie de me mouiller plus encore.",
+		"Enfin… Allons-y."
 	],
 	"next": "dial900a",
 	"sound": [0,"null",0],
@@ -2512,7 +2512,7 @@
 	"time": 1,
 	"button": [
 		"Une bonne bière.",
-		"Un whiskey.",
+		"Un bourbon.",
 		"Un soda.",
 		"Rien, merci."
 	],
