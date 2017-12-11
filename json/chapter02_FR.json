@@ -318,7 +318,7 @@
 		"Le bâtiment de l’autre côté de la vallée m’attire parce qu’il s’agit d’une construction évidemment humaine et relativement moderne.",
 		"Sincèrement, j’espère y trouver de l’aide et le moyen de rentrer chez moi."
 	],
-	"next": "dial014",
+	"next": "dial013c",
 	"sound": [0,"null",0],
 	"bgsound": [0,"null",0]
 },
@@ -335,7 +335,7 @@
 },
 "dial014": {
 	"ref": 1,
-	"time": 30,
+	"time": 31,
 	"content": [
 		"Bien. Je suis arrivé dans le creux de ce cratère.",
 		"Mon horizon est maintenant bouché. Cela me donne le sentiment étrange que le décor est artificiel.",
@@ -1248,7 +1248,7 @@
 },
 "dial040c": {
 	"ref": 1,
-	"time": 30,
+	"time": 31,
 	"content": [
 		"Je suis presque arrivé en haut…",
 		"…mais…",
@@ -2186,7 +2186,7 @@
 	],
 	"content": [
 		"Pourquoi ? Qu’est-ce qui vous fait dire ça ?",
-		"Michel, vous exagérez encore V"
+		"Michel, vous exagérez encore !"
 	],
 	"next": [
 		"dial010",

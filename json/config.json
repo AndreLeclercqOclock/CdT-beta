@@ -1,7 +1,7 @@
 {
   "_Config" : {
     "stateSave" : true,
-    "version" : "Ver : alpha 2.9.1",
+    "version" : "Ver : alpha 2.9.2",
     "FR_fr" : "langFR_fr.json",
     "EN_en" : "langEN_en.json"
   }
