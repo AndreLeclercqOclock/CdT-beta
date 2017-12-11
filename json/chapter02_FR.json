@@ -276,7 +276,7 @@
 	"content": [
 		"J’en suis sûr, comme vous le seriez si vous étiez à ma place.",
 		"Cet endroit a bien deux satellites en orbite.",
-		"C’est très joli, cela dit.."
+		"C’est très joli, cela dit."
 	],
 	"next": "rep011",
 	"sound": [0,"null",0],
@@ -666,7 +666,7 @@
 		"Bien joué.",
 		"Vous semblez finalement plus éveillé que la plupart de mes étudiants."
 	],
-	"next": "dial024b",
+	"next": "dial025",
 	"sound": [0,"null",0],
 	"bgsound": [0,"null",0]
 },

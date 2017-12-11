@@ -77,7 +77,7 @@
                 ✔ Reprise du son d'ambiance au chargement du jeu @done (2017-12-8 18:42:45)
                 ✔ Réglage son message système (ajuster le déclencheur) @done (2017-12-8 18:46:58)
                 ✔ Bug d'affichage du quatrième bouton @done (2017-12-9 11:44:29)
-                ☐ Bug de scrolling auto sur des ref3
+                ☐ Bug de scrolling auto sur des ref=3
                 ☐ DEBUG scénario @today
                     ✔ Problème d'affichage de lignes (textes trop longs) @done (2017-12-9 11:56:52)
                     ✔ Correction de la boucle en DIAL005 @done (2017-12-10 12:48:58)
