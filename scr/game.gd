@@ -309,14 +309,14 @@ func start():
 			yield(get_node("Timer"), "timeout")
 #Création de la node LABEL
 ########### REFONTE #############
-		#print("Traitement du Dialogue")
-		#actualContent = LOAD.dial[LOAD.currentDial].content[0]
-		#print(str("CURRENTRIAL ACTUEL : ",actualContent))
-		#actualContent = actualContent.split("\r\n\r\n")
-		#print(str("CURRENTRIAL ACTUEL : ",actualContent))
-		#print(str("CURRENTDIAL SIZE : ",actualContent.size())) 
-		#for i in range(actualContent.size()):
-		#	print(str("CURRENTRIAL ACTUEL : ",actualContent[i]))
+		print("Traitement du Dialogue")
+		actualContent = LOAD.dial[LOAD.currentDial].content[0]
+		print(str("CURRENTRIAL ACTUEL : ",actualContent))
+		actualContent = actualContent.split("\r\n\r\n")
+		print(str("CURRENTRIAL ACTUEL : ",actualContent))
+		print(str("CURRENTDIAL SIZE : ",actualContent.size())) 
+		for i in range(actualContent.size()):
+			print(str("CURRENTRIAL ACTUEL : ",actualContent[i]))
 		
 		
 		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
