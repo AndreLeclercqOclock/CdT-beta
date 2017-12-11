@@ -50,6 +50,7 @@ var triggerVol = 0
 var lastRep = null
 var bg_sound = null
 var bg_sound_vol = null
+var actualContent = []
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -307,7 +308,17 @@ func start():
 			timer.start()
 			yield(get_node("Timer"), "timeout")
 #Création de la node LABEL
-		print("Traitement du Dialogue")
+########### REFONTE #############
+		#print("Traitement du Dialogue")
+		#actualContent = LOAD.dial[LOAD.currentDial].content[0]
+		#print(str("CURRENTRIAL ACTUEL : ",actualContent))
+		#actualContent = actualContent.split("\r\n")
+		#print(str("CURRENTRIAL ACTUEL : ",actualContent))
+		#print(str("CURRENTDIAL SIZE : ",actualContent.size())) 
+		#for i in range(actualContent.size()):
+		#	print(str("CURRENTRIAL ACTUEL : ",actualContent[i]))
+		
+		
 		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
 # Calcule le nombre de charactères
 			print("Calcule du nombre de charactère dans la phrase")
@@ -504,11 +515,6 @@ func start():
 			label.show()
 			label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
 			label.set("visibility/opacity",1)
-		
-			# Temporisation
-			timer.set_wait_time(1.25)
-			timer.start()
-			yield(get_node("Timer"), "timeout")
 
 			# Auto scroll
 			print("Scroll")
@@ -516,6 +522,11 @@ func start():
 			get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
 			LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
 			get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
+		
+			# Temporisation
+			timer.set_wait_time(1.25)
+			timer.start()
+			yield(get_node("Timer"), "timeout")
 
 
 		#AUTO SAVE
