@@ -75,7 +75,7 @@ font/font = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=5]
 
-font/size = 65
+font/size = 50
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 12 )
@@ -509,7 +509,6 @@ alignment = 0
 
 [node name="Top" type="Container" parent="Game/vbox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -734,7 +733,6 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 12 )
 animation = "default"
-frame = 15
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]

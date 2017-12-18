@@ -70,7 +70,7 @@
                 ✔ Ajouter les trigger son dans les JSON @done (2017-12-6 09:42:20)
                 ✔ Supprimer le cache au reset de la sauvegarde @done (2017-12-6 13:44:49)
                 ✔ Ajouter trigger JSON scénario pour sons d'ambiance @done (2017-12-7 17:08:17)
-            ☐ DEBUG ALPHA 2.9 @critical @high
+            ✔ DEBUG ALPHA 2.9 @done (2017-12-18 12:51:54)
                 ✔ Affichage messages système @done (2017-12-6 16:05:44)
                 ✔ Bug du cache des logs save @done (2017-12-6 16:08:33)
                 ✔ Optimiser la transition d'un BG Sound à un autre @done (2017-12-7 21:07:59)
@@ -78,7 +78,7 @@
                 ✔ Réglage son message système (ajuster le déclencheur) @done (2017-12-8 18:46:58)
                 ✔ Bug d'affichage du quatrième bouton @done (2017-12-9 11:44:29)
                 ✔ Bug de scrolling auto sur des ref=3 @done (2017-12-11 17:02:07)
-                ☐ DEBUG scénario @today
+                ✔ DEBUG scénario @done (2017-12-18 12:51:50)
                     ✔ Problème d'affichage de lignes (textes trop longs) @done (2017-12-9 11:56:52)
                     ✔ Correction de la boucle en DIAL005 @done (2017-12-10 12:48:58)
                     ✔ Correction DIAL003A @done (2017-12-10 12:49:00)
@@ -86,7 +86,35 @@
                     ✔ Correction de la boucle DIAL020A @done (2017-12-10 12:49:01)
                     ✔ Correction de la boucle DIAL034 @done (2017-12-10 12:49:02)
                     ✔ Correction de divers boucles et dialogues @done (2017-12-10 17:59:21)
-                
+    Béta:
+        1.0:
+            ☐ Adaptation du script pour le JSON Articy
+                ✔ Lecture des strings (séparation des lignes) @done (2017-12-12 09:52:24)
+                ✔ Récupération des Variables Globales @done (2017-12-18 18:53:22)
+                ✔ Récupération des textes dialogues @done (2017-12-18 18:53:40)
+                ✔ Récupération des templates config (son/timer...) @done (2017-12-18 18:56:37)
+                ☐ Passer au Dialogue suivant
+                ☐ Récupération des Réponses
+                ☐ Récupération des messages système scénario
+                ☐ Chargement des sauvegardes
+            ☐ Création du thème GUI
+                ☐ Refonte Menu
+                ☐ Refonte Jeu
+            ☐ Création de la version Navigateur
+                ☐ Adaptation de l'application
+                ☐ Selection des Chapitre bridé au premier Chapitre de l'Opus 0
+            ☐ Divers
+                ☐ Amélioration des options
+                    ☐ Sons notification (messages)
+                    ☐ Sons ambiances (thèmes & ambiances)
+                    ☐ Choix de la langue
+                ☐ Création Panel Dev
+                    ✔ Affichage des references @done (2017-12-18 14:11:19)
+                    ✔ Affichage du next @done (2017-12-18 14:11:21)
+                    ☐ Affichage du timer
+                    ☐ Désactivation du timer
+                    ☐ Choix du dialogue à afficher
+            
 
     Divers:
         ☐ Test sur OS.low
@@ -94,10 +122,6 @@
         ☐ Optimiser le poids des ressources
             ☐ Images
             ☐ Sons
-        ☐ Création options audio
-            ☐ Sons notification (messages)
-            ☐ Sons ambiances (thèmes & ambiances)
-        ☐ Création du thème GUI
         ☐ Refonte du menu (image => textes)
         ☐ Optimiser les "morts"
             ☐ Afficher la dernière entrée du tableau
@@ -105,11 +129,6 @@
             ☐ Effacer la dernière entrée du tableau
             ☐ Enregistrer le nouveau tableau
             ☐ Recharger le nouveau tableau
-        ☐ Création Panel Dev
-            ☐ Affichage des references
-            ☐ Affichage du next
-            ☐ Affichage du timer
-            ☐ Désactivation du timer
-            ☐ Choix du dialogue à afficher
+        
 
 

@@ -50,7 +50,18 @@ var triggerVol = 0
 var lastRep = null
 var bg_sound = null
 var bg_sound_vol = null
-var actualContent = []
+var actualContent = null
+var Type = null
+var Text = null
+var Target = null
+var ConfigTimer = null
+var ConfigSoundTRG = null
+var ConfigVolumeTRG = null
+var ConfigSoundBKG = null
+var ConfigVolumeBKG = null
+var buttonName = null
+var buttonText = []
+var TargetPin = null
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -111,18 +122,23 @@ func _ready():
 				label.set("visibility/opacity",1)
 				var labelH = label.get_text()
 				# Ecrit la ligne de dialogue
-				for y in range(LOAD.dial[LOAD.currentDial].content.size()):
+				print("Traitement du Dialogue")
+				actualContent = LOAD.dial[LOAD.currentDial].content
+				actualContent = actualContent.split("\r\n")
+				for sentence in actualContent:
+				#for y in range(LOAD.dial[LOAD.currentDial].content.size()):
 					print("Création du label")
 					var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelDial")
 					var label = labelbase.duplicate()
 					print("Configuration du label")
-					label.set_name(str("label",y))
-					var labelbg = str("vbox/Mid/DialBox/VBoxMid/label",y,"/LabelBG")
+					label.set_name(str("label",sentence))
+					var labelbg = str("vbox/Mid/DialBox/VBoxMid/label",sentence,"/LabelBG")
 					print(labelbg)
 					get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 					label.show()
-					print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[y])
-					label.set_text(str(LOAD.dial[LOAD.currentDial].content[y]))
+					#print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[y])
+					#label.set_text(str(LOAD.dial[LOAD.currentDial].content[y]))
+					label.set_text(sentence)
 				# Ajustement de la taille du label
 					var labelsize = label.get_line_count()
 					if labelsize == 1:
@@ -222,7 +238,7 @@ func _ready():
 
 # Affichage du nom de l'interlocuteur
 	print("Affichage du nom")
-	get_node("vbox/Top/Name").add_text(str(LOAD.dict._Dialogues.name.name))
+	get_node("vbox/Top/Name").add_text(str(LOAD.namePNJ))
 
 # Affichage de la version de dev en JEU
 	print("Affichage version en jeu")
@@ -257,22 +273,48 @@ func start():
 	visible = 0
 	print("Début du processus d'interpretation du JSON")
 
+# Récupération des données
+	for item in LOAD.dial:
+		if item.Type == "DialogueTemplate":
+			if item.Properties.DisplayName == LOAD.currentDial:
+					Type = item.Type
+					Text = item.Properties.Text
+					Target = item.Properties.OutputPins[0].Connections[0].Target
+					ConfigTimer = item.Template.Config.Timer
+					ConfigSoundTRG = item.Template.Config.soundTRG
+					ConfigVolumeTRG = item.Template.Config.volumeTRG
+					ConfigSoundBKG = item.Template.Config.soundBKG
+					ConfigVolumeBKG = item.Template.Config.volumeBKG
+		if item.Type == "ReponseTemplate":
+			if item.Properties.DisplayName == LOAD.currentDial:
+				for i in range(item.Properties.OutputPins.size()):
+					TargetPin = item.Properties.OutputPins[i].Id
+					if item.Properties.OutputPins[0].Connections[0].TargetPin == TargetPin:
+						buttonName = item.Properties.MenuText
+						buttonText.append(item.Properties.Text)
+						get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(buttonName))
+						get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
+						get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
+					timer.stop()
+		else: pass
 
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
 # Dialogues 
-	if LOAD.dial[LOAD.currentDial].ref == 1 :
+	if Type == "DialogueTemplate" :
 		last_dial()
 		LOAD.time_delay = 1
 		status()
 		# Attribution du type de son
 		sound = 1
 		# Vérification d'un trigger son
-		if LOAD.dial[LOAD.currentDial].sound[0] == 1:
+		if ConfigSoundTRG != "":
+			triggerName = ConfigSoundTRG
+			triggerVol = ConfigVolumeTRG
 			trigger_sound()
-		if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
-			bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
-			bg_sound_vol = LOAD.dial[LOAD.currentDial].bgsound[2]
+		if ConfigSoundBKG != "":
+			bg_sound = str(ConfigSoundBKG)
+			bg_sound_vol = ConfigVolumeBKG
 			background_sound()
 		print("#### DIALOGUES REF : 1 ####")
 # Horodatage
@@ -287,8 +329,8 @@ func start():
 		get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 		label.show()
 		print("Affiche l'heure")
-		#label.set_text(str(" - ",LOAD.timeIG))
-		label.set_text(str(" - ",LOAD.timeIG," : ",LOAD.currentDial,"=>",LOAD.dial[LOAD.currentDial].next))
+		label.set_text(str(" - ",LOAD.timeIG))
+		#label.set_text(str(" - ",LOAD.timeIG," : ",LOAD.currentDial,"=>",LOAD.dial[LOAD.currentDial].next))
 		var labelH = label.get_text()
 # Auto Scroll
 		print("Scroll")
@@ -310,20 +352,18 @@ func start():
 #Création de la node LABEL
 ########### REFONTE #############
 		print("Traitement du Dialogue")
-		actualContent = LOAD.dial[LOAD.currentDial].content[0]
-		print(str("CURRENTRIAL ACTUEL : ",actualContent))
+		actualContent = Text
 		actualContent = actualContent.split("\r\n\r\n")
-		print(str("CURRENTRIAL ACTUEL : ",actualContent))
-		print(str("CURRENTDIAL SIZE : ",actualContent.size())) 
-		for i in range(actualContent.size()):
-			print(str("CURRENTRIAL ACTUEL : ",actualContent[i]))
-		
-		
-		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
+		for sentence in actualContent:
+			print(str("CURRENTDIAL ACTUEL : ",sentence))
+	
+	
+		#for i in range(LOAD.dial[LOAD.currentDial].content.size()):
 # Calcule le nombre de charactères
 			print("Calcule du nombre de charactère dans la phrase")
-			dial = [LOAD.dial[LOAD.currentDial].content[i]]
-			size = (dial[0].length())/20
+			#dial = [LOAD.dial[LOAD.currentDial].content[i]]
+			#dial = actualContent[i]
+			size = (sentence.length())/20
 			print("Définition du temps d'écriture en secondes")
 # Affiche le status "Ecrit un message"
 			print("Création du label")
@@ -395,13 +435,14 @@ func start():
 			var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelDial")
 			var label = labelbase.duplicate()
 			print("Configuration du label")
-			label.set_name(str("label",i))
+			label.set_name(str("label"))
 			var labelname = label.get_name()
 			var labelbg = str("vbox/Mid/DialBox/VBoxMid/",labelname,"/LabelBG")
 			get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 			label.show()
-			print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[i])
-			label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
+			#print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[i])
+			label.set_text(sentence)
+			#label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
 # Ajustement de la taille du label
 			var labelsize = label.get_line_count()
 			print(str("Nombre de ligne :",labelsize))
@@ -464,96 +505,98 @@ func start():
 			LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
 			system_save()
 		print("Fin du dialogue")
-		LOAD.currentDial = LOAD.dial[LOAD.currentDial].next
-		LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
+		for item in LOAD.dial:
+			if item.Properties.Id == Target:
+				LOAD.currentDial = item.Properties.DisplayName
+				LOAD.time_delay = item.Template.Config.Timer
+				if item.Type == "DialogueTemplate":
+					print("Auto-Sauvegarde")
+					unixTime = OS.get_unix_time()
+					LOAD.dataDial = LOAD.currentDial
+					LOAD.dataRep = null
+					LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
+					if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
+						bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
+					LOAD.actualBGSound = bg_sound
+					system_save()
+					status()
 		print("Lancement du timer",LOAD.time_delay," seconde(s)")
 		LOAD.currentNextTime = OS.get_unix_time() + int(LOAD.time_delay)
 		LOAD.launch = 1
-		#status()
-		if LOAD.dial[LOAD.currentDial].ref == 1:
-			print("Auto-Sauvegarde")
-			unixTime = OS.get_unix_time()
-			LOAD.dataDial = LOAD.currentDial
-			LOAD.dataRep = null
-			LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
-			if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
-				bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
-			LOAD.actualBGSound = bg_sound
-			system_save()
-			status()
+			
 
 									## REPONSES ##
 # Réponses
 # Gestion des dialogues de ref 2 [REPONSES CHOIX MULTIPLES]
-	if LOAD.dial[LOAD.currentDial].ref == 2 :
-		print("#### DIALOGUES REF : 2 ####")
-		print("Création de ",LOAD.dial[LOAD.currentDial].content.size()," bouton(s)")
-		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
-			print("Création du bouton n°",LOAD.dial[LOAD.currentDial].button[i])
-			get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(LOAD.dial[LOAD.currentDial].button[i]))
-			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
-			get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
-		timer.stop()
-		print("Fin de la création des boutons")
+	#if LOAD.dial[LOAD.currentDial].ref == 2 :
+	#	print("#### DIALOGUES REF : 2 ####")
+	#	print("Création de ",LOAD.dial[LOAD.currentDial].content.size()," bouton(s)")
+	#	for i in range(LOAD.dial[LOAD.currentDial].content.size()):
+	#		print("Création du bouton n°",LOAD.dial[LOAD.currentDial].button[i])
+	#		get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(LOAD.dial[LOAD.currentDial].button[i]))
+	#		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
+	#		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
+	#	timer.stop()
+	#	print("Fin de la création des boutons")
 
 
 									## MESSAGE SYSTEM ##	
 
-	if LOAD.dial[LOAD.currentDial].ref == 3:
-		last_dial()
-		# Trigger son message système
-		sound = 3
-		sample_msg()
-		# Ecriture du message système
-		for i in range(LOAD.dial[LOAD.currentDial].content.size()):
-			print("Création du label")
-			var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelSys")
-			var label = labelbase.duplicate()
-			print("Configuration du label")
-			label.set_name(str("label",LOAD.currentDial))
-			get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
-			label.show()
-			label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
-			label.set("visibility/opacity",1)
+	#if LOAD.dial[LOAD.currentDial].ref == 3:
+	#	last_dial()
+	#	# Trigger son message système
+	#	sound = 3
+	#	sample_msg()
+	#	# Ecriture du message système
+	#	for i in range(LOAD.dial[LOAD.currentDial].content.size()):
+	#		print("Création du label")
+	#		var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelSys")
+	#		var label = labelbase.duplicate()
+	#		print("Configuration du label")
+	#		label.set_name(str("label",LOAD.currentDial))
+	#		get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+	#		label.show()
+	#		label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
+	#		label.set("visibility/opacity",1)
 
-			# Auto scroll
-			print("Scroll")
-			yield(get_tree(), "idle_frame")
-			get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-			LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
-			get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
-		
-			# Temporisation
-			timer.set_wait_time(1.25)
-			timer.start()
-			yield(get_node("Timer"), "timeout")
+	#		# Auto scroll
+	#		print("Scroll")
+	#		yield(get_tree(), "idle_frame")
+	#		get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+	#		LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
+	#		get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
+	#	
+	#		# Temporisation
+	#		timer.set_wait_time(1.25)
+	#		timer.start()
+	#		yield(get_node("Timer"), "timeout")
 
 
 		#AUTO SAVE
-		if LOAD.currentDial == LOAD.firstDial:
-			print("Auto-Sauvegarde")
-			unixTime = OS.get_unix_time()
-			LOAD.dataDial = LOAD.currentDial
-			LOAD.dataRep = null
-			LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
-			system_save()
-		print("Fin du dialogue")
-		LOAD.currentDial = LOAD.dial[LOAD.currentDial].next
-		LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
-		print("Lancement du timer",LOAD.time_delay," seconde(s)")
-		LOAD.currentNextTime = OS.get_unix_time() + int(LOAD.time_delay)
-		LOAD.launch = 1
+	#	if LOAD.currentDial == LOAD.firstDial:
+	#		print("Auto-Sauvegarde")
+	#		unixTime = OS.get_unix_time()
+	#		LOAD.dataDial = LOAD.currentDial
+	#		LOAD.dataRep = null
+	#		LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
+	#		system_save()
+	#	print("Fin du dialogue")
+	#	LOAD.currentDial = LOAD.dial[LOAD.currentDial].next
+	#	LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
+	#	print("Lancement du timer",LOAD.time_delay," seconde(s)")
+	#	LOAD.currentNextTime = OS.get_unix_time() + int(LOAD.time_delay)
+	#	LOAD.launch = 1
 		#status()
-		if LOAD.dial[LOAD.currentDial].ref == 3:
-			print("Auto-Sauvegarde")
-			unixTime = OS.get_unix_time()
-			LOAD.dataDial = LOAD.currentDial
-			LOAD.dataRep = null
-			LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
-			if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
-				bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
-			LOAD.actualBGSound = bg_sound
-			system_save()
+	#	if LOAD.dial[LOAD.currentDial].ref == 3:
+	#		print("Auto-Sauvegarde")
+	#		unixTime = OS.get_unix_time()
+	#		LOAD.dataDial = LOAD.currentDial
+	#		LOAD.dataRep = null
+	#		LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
+	#		if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
+	#			bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
+	#		LOAD.actualBGSound = bg_sound
+	#		system_save()
 
 										## BOUTONS REPONSES ##
 # Boutons
@@ -848,8 +891,6 @@ func sample_msg():
 
 # Système de trigger son
 func trigger_sound():
-	triggerName = str(LOAD.dial[LOAD.currentDial].sound[1])
-	triggerVol = LOAD.dial[LOAD.currentDial].sound[2]
 	get_node("SampleTRG").set_default_volume_db(triggerVol)
 	get_node("SampleTRG").play(triggerName)
 

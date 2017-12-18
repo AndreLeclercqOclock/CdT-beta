@@ -19,6 +19,7 @@ var optionsText = []
 var creditsText = []
 var chapter = []
 var actualBGSound = null
+var globalVariables = []
 
 var scenarioFile = null
 var firstDial = null
@@ -26,6 +27,8 @@ var lastDial = null
 var stateSave = null
 var version = null
 var chapterSave = null
+var namePNJ = null
+var firstBGSound = null
 
 var vscroll = 50
 
@@ -188,11 +191,19 @@ func _load_chapter():
 	dict.parse_json(file.get_as_text())
 	file.close()
 	print("Fermeture du JSON")
+	
+	for item in dict.GlobalVariables[0].Variables:
+		if item.Variable == "firstDial":
+			firstDial = item.Value
+		if item.Variable == "lastDial":
+			lastDial = item.Value
+		if item.Variable == "namePNJ":
+			namePNJ = item.Value 
+		if item.Variable == "firstBGSound":
+			firstBGSound = item.Value 
 
 	# Variables du scénario
-	dial = dict._Dialogues
-	firstDial = dict._Dialogues.config.firstDial
-	lastDial = dict._Dialogues.config.lastDial
+	dial = dict.Packages[0].Models
 
 	# Lancement du script
 	print("Lancement du script")
@@ -205,7 +216,7 @@ func _load_chapter():
 		dataNextTime = OS.get_unix_time() + int(time_delay)
 		currentNextTime = OS.get_unix_time()
 		currentDial = firstDial
-		actualBGSound = dict._Dialogues.config.firstBGSound
+		actualBGSound = firstBGSound
 
 	get_tree().change_scene("res://scn/base.tscn")
 	print("FIN DU SCRIPT !!!")
