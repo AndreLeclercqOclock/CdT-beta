@@ -275,254 +275,259 @@ func start():
 
 # Récupération des données
 	for item in LOAD.dial:
-		if item.Type == "DialogueTemplate":
-			if item.Properties.DisplayName == LOAD.currentDial:
-					Type = item.Type
-					Text = item.Properties.Text
-					Target = item.Properties.OutputPins[0].Connections[0].Target
-					ConfigTimer = item.Template.Config.Timer
-					ConfigSoundTRG = item.Template.Config.soundTRG
-					ConfigVolumeTRG = item.Template.Config.volumeTRG
-					ConfigSoundBKG = item.Template.Config.soundBKG
-					ConfigVolumeBKG = item.Template.Config.volumeBKG
-		if item.Type == "ReponseTemplate":
-			if item.Properties.DisplayName == LOAD.currentDial:
-				for i in range(item.Properties.OutputPins.size()):
-					TargetPin = item.Properties.OutputPins[i].Id
-					if item.Properties.OutputPins[0].Connections[0].TargetPin == TargetPin:
-						buttonName = item.Properties.MenuText
-						buttonText.append(item.Properties.Text)
-						get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(buttonName))
-						get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
-						get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
-					timer.stop()
-		else: pass
-
+		if item.Properties.has("DisplayName") and item.Properties.DisplayName == LOAD.currentDial:
+			if item.Type == "DialogueTemplate":
+				Type = item.Type
+				Text = item.Properties.Text
+				Target = item.Properties.OutputPins[0].Connections[0].Target
+				ConfigTimer = item.Template.Config.Timer
+				ConfigSoundTRG = item.Template.Config.soundTRG
+				ConfigVolumeTRG = item.Template.Config.volumeTRG
+				ConfigSoundBKG = item.Template.Config.soundBKG
+				ConfigVolumeBKG = item.Template.Config.volumeBKG
+			
+		
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
 # Dialogues 
-	if Type == "DialogueTemplate" :
-		last_dial()
-		LOAD.time_delay = 1
-		status()
-		# Attribution du type de son
-		sound = 1
-		# Vérification d'un trigger son
-		if ConfigSoundTRG != "":
-			triggerName = ConfigSoundTRG
-			triggerVol = ConfigVolumeTRG
-			trigger_sound()
-		if ConfigSoundBKG != "":
-			bg_sound = str(ConfigSoundBKG)
-			bg_sound_vol = ConfigVolumeBKG
-			background_sound()
-		print("#### DIALOGUES REF : 1 ####")
-# Horodatage
-		print("Horodatage")
-		print("Création du label")
-		LOAD.saveTime = LOAD.currentNextTime
-		system_time()
-		var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelTime")
-		var label = labelbase.duplicate()
-		print("Configuration du label")
-		label.set_name("LabelTime")
-		get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
-		label.show()
-		print("Affiche l'heure")
-		label.set_text(str(" - ",LOAD.timeIG))
-		#label.set_text(str(" - ",LOAD.timeIG," : ",LOAD.currentDial,"=>",LOAD.dial[LOAD.currentDial].next))
-		var labelH = label.get_text()
-# Auto Scroll
-		print("Scroll")
-		yield(get_tree(), "idle_frame")
-		get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-		LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
-		get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
-# Affichage Smoothie
-		print("Affichage")
-		visible = 0
-		LOAD.time_delay = 0.05
-		#status()
-		for i in range(9):
-			label.set("visibility/opacity",visible)
-			visible = visible + 0.10
-			timer.set_wait_time(LOAD.time_delay)
-			timer.start()
-			yield(get_node("Timer"), "timeout")
-#Création de la node LABEL
-########### REFONTE #############
-		print("Traitement du Dialogue")
-		actualContent = Text
-		actualContent = actualContent.split("\r\n\r\n")
-		for sentence in actualContent:
-			print(str("CURRENTDIAL ACTUEL : ",sentence))
-	
-	
-		#for i in range(LOAD.dial[LOAD.currentDial].content.size()):
-# Calcule le nombre de charactères
-			print("Calcule du nombre de charactère dans la phrase")
-			#dial = [LOAD.dial[LOAD.currentDial].content[i]]
-			#dial = actualContent[i]
-			size = (sentence.length())/20
-			print("Définition du temps d'écriture en secondes")
-# Affiche le status "Ecrit un message"
-			print("Création du label")
-			var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelStat")
-			var label = labelbase.duplicate()
-			print("Configuration du label")
-			label.set_name("LabelStatuts")
-			get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
-			label.show()
-			print("Message système 'Ecrit un message'")
-			#label.set_text("écrit un message...")
-# Auto Scroll
-			print("Scroll")
-			yield(get_tree(), "idle_frame")
-			get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-			LOAD.vscroll = LOAD.vscroll+10+20
-			get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
-# Affichage Smoothie
-			print("Affichage")
-			visible = 0
-			LOAD.time_delay = 0.05
-			#status()
-			for i in range(9):
-				label.set("visibility/opacity",visible)
-				visible = visible + 0.10
-				timer.set_wait_time(LOAD.time_delay)
-				timer.start()
-				yield(get_node("Timer"), "timeout")
-
-# Fourchettes en fonction de la taille du texte.
-		# Inférieur à 0 seconde
-			if size <= 0:
-				size = 0.5
-		# Entre 0 & 2 secondes
-			elif size > 0 and size <= 2:
-				size = 1.5
-		# Entre 2 & 5 secondes
-			elif size > 2 and size <= 5:
-				size = 3.5
-		# Entre 5 & 10 secondes
-			elif size > 5 and size <= 10:
-				size = 5
-		# Supérieur à 10 secondes
-			elif size > 10:
-				size = 7
-			print("Temps d'écriture : ",size," seconde(s)")
-
-# Lance le timer en fonction du nombre de char dans le content
-			print("Lancement du timer",LOAD.time_delay," seconde(s)")
-			LOAD.time_delay = size
-			timer.set_wait_time(LOAD.time_delay)
-			timer.start()
-			yield(get_node("Timer"), "timeout")
-			print("Fin du timer")
-
-# Temporisation courte entre le message système et le texte
-			print("Temporisation : ",LOAD.time_delay," seconde(s)")
-			LOAD.time_delay = 0.2
-			timer.set_wait_time(LOAD.time_delay)
-			timer.start()
-			yield(get_node("Timer"), "timeout")
-			label.queue_free()
-			print("Fin du timer")		
-# Trigger son message reçu
-			sample_msg()
-			sound = 0
-# Ecrit la ligne de dialogue
-			print("Création du label")
-			var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelDial")
-			var label = labelbase.duplicate()
-			print("Configuration du label")
-			label.set_name(str("label"))
-			var labelname = label.get_name()
-			var labelbg = str("vbox/Mid/DialBox/VBoxMid/",labelname,"/LabelBG")
-			get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
-			label.show()
-			#print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[i])
-			label.set_text(sentence)
-			#label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
-# Ajustement de la taille du label
-			var labelsize = label.get_line_count()
-			print(str("Nombre de ligne :",labelsize))
-			if labelsize == 1:
-				label.set_size(Vector2(925,50))
-				label.set("rect/min_size",Vector2(925,50))
-				get_node(labelbg).set("transform/scale",Vector2(1,1))
-			elif labelsize == 2:
-				label.set_size(Vector2(925,110))
-				label.set("rect/min_size",Vector2(925,110))
-				get_node(labelbg).set("transform/scale",Vector2(1,2))
-			elif labelsize == 3:
-				label.set_size(Vector2(925,170))
-				label.set("rect/min_size",Vector2(925,170))
-				get_node(labelbg).set("transform/scale",Vector2(1,3))
-			elif labelsize == 4:
-				label.set_size(Vector2(925,230))
-				label.set("rect/min_size",Vector2(925,230))
-				get_node(labelbg).set("transform/scale",Vector2(1,4))
-			elif labelsize == 5:
-				label.set_size(Vector2(925,290))
-				label.set("rect/min_size",Vector2(925,290))
-				get_node(labelbg).set("transform/scale",Vector2(1,5))
-			print(str("Taille du label :",label.get_size()))
-
-
-# Auto Scroll
-			print("Scroll")
-			yield(get_tree(), "idle_frame")
-			get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
-			LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
-			get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
-
-# Affichage Smoothie
-			print("Affichage")
-			visible = 0
-			for i in range(9):
-				label.set("visibility/opacity",visible)
-				visible = visible + 0.10
+			#if Type == "DialogueTemplate" :
+				last_dial()
+				LOAD.time_delay = 1
+				status()
+				# Attribution du type de son
+				sound = 1
+				# Vérification d'un trigger son
+				if ConfigSoundTRG != "":
+					triggerName = ConfigSoundTRG
+					triggerVol = ConfigVolumeTRG
+					trigger_sound()
+				if ConfigSoundBKG != "":
+					bg_sound = str(ConfigSoundBKG)
+					bg_sound_vol = ConfigVolumeBKG
+					background_sound()
+				print("#### DIALOGUES REF : 1 ####")
+		# Horodatage
+				print("Horodatage")
+				print("Création du label")
+				LOAD.saveTime = LOAD.currentNextTime
+				system_time()
+				var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelTime")
+				var label = labelbase.duplicate()
+				print("Configuration du label")
+				label.set_name("LabelTime")
+				get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+				label.show()
+				print("Affiche l'heure")
+				label.set_text(str(" - ",LOAD.timeIG))
+				#label.set_text(str(" - ",LOAD.timeIG," : ",LOAD.currentDial,"=>",LOAD.dial[LOAD.currentDial].next))
+				var labelH = label.get_text()
+		# Auto Scroll
+				print("Scroll")
+				yield(get_tree(), "idle_frame")
+				get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+				LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
+				get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
+		# Affichage Smoothie
+				print("Affichage")
+				visible = 0
 				LOAD.time_delay = 0.05
-				timer.set_wait_time(LOAD.time_delay)
-				timer.start()
-				yield(get_node("Timer"), "timeout")
+				#status()
+				for i in range(9):
+					label.set("visibility/opacity",visible)
+					visible = visible + 0.10
+					timer.set_wait_time(LOAD.time_delay)
+					timer.start()
+					yield(get_node("Timer"), "timeout")
+		#Création de la node LABEL
+		########### REFONTE #############
+				print("Traitement du Dialogue")
+				actualContent = Text
+				actualContent = actualContent.split("\r\n\r\n")
+				for sentence in actualContent:
+					print(str("CURRENTDIAL ACTUEL : ",sentence))
+			
+			
+				#for i in range(LOAD.dial[LOAD.currentDial].content.size()):
+		# Calcule le nombre de charactères
+					print("Calcule du nombre de charactère dans la phrase")
+					#dial = [LOAD.dial[LOAD.currentDial].content[i]]
+					#dial = actualContent[i]
+					size = (sentence.length())/20
+					print("Définition du temps d'écriture en secondes")
+		# Affiche le status "Ecrit un message"
+					print("Création du label")
+					var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelStat")
+					var label = labelbase.duplicate()
+					print("Configuration du label")
+					label.set_name("LabelStatuts")
+					get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+					label.show()
+					print("Message système 'Ecrit un message'")
+					#label.set_text("écrit un message...")
+		# Auto Scroll
+					print("Scroll")
+					yield(get_tree(), "idle_frame")
+					get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+					LOAD.vscroll = LOAD.vscroll+10+20
+					get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
+		# Affichage Smoothie
+					print("Affichage")
+					visible = 0
+					LOAD.time_delay = 0.05
+					#status()
+					for i in range(9):
+						label.set("visibility/opacity",visible)
+						visible = visible + 0.10
+						timer.set_wait_time(LOAD.time_delay)
+						timer.start()
+						yield(get_node("Timer"), "timeout")
 
-# Temporisation
-			print("Temporisation : 0.75 seconde(s)")
-			timer.set_wait_time(0.75)
-			timer.start()
-			yield(get_node("Timer"), "timeout")
-			print("Fin du timer")
-			print("Fin de la ligne")
+		# Fourchettes en fonction de la taille du texte.
+				# Inférieur à 0 seconde
+					if size <= 0:
+						size = 0.5
+				# Entre 0 & 2 secondes
+					elif size > 0 and size <= 2:
+						size = 1.5
+				# Entre 2 & 5 secondes
+					elif size > 2 and size <= 5:
+						size = 3.5
+				# Entre 5 & 10 secondes
+					elif size > 5 and size <= 10:
+						size = 5
+				# Supérieur à 10 secondes
+					elif size > 10:
+						size = 7
+					print("Temps d'écriture : ",size," seconde(s)")
 
-# Clos la boucle et passe au next
-		#AUTO SAVE
-		if LOAD.currentDial == LOAD.firstDial:
-			print("Auto-Sauvegarde")
-			unixTime = OS.get_unix_time()
-			LOAD.dataDial = LOAD.currentDial
-			LOAD.dataRep = null
-			LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
-			system_save()
-		print("Fin du dialogue")
-		for item in LOAD.dial:
-			if item.Properties.Id == Target:
-				LOAD.currentDial = item.Properties.DisplayName
-				LOAD.time_delay = item.Template.Config.Timer
-				if item.Type == "DialogueTemplate":
+		# Lance le timer en fonction du nombre de char dans le content
+					print("Lancement du timer",LOAD.time_delay," seconde(s)")
+					LOAD.time_delay = size
+					timer.set_wait_time(LOAD.time_delay)
+					timer.start()
+					yield(get_node("Timer"), "timeout")
+					print("Fin du timer")
+
+		# Temporisation courte entre le message système et le texte
+					print("Temporisation : ",LOAD.time_delay," seconde(s)")
+					LOAD.time_delay = 0.2
+					timer.set_wait_time(LOAD.time_delay)
+					timer.start()
+					yield(get_node("Timer"), "timeout")
+					label.queue_free()
+					print("Fin du timer")		
+		# Trigger son message reçu
+					sample_msg()
+					sound = 0
+		# Ecrit la ligne de dialogue
+					print("Création du label")
+					var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelDial")
+					var label = labelbase.duplicate()
+					print("Configuration du label")
+					label.set_name(str("label"))
+					var labelname = label.get_name()
+					var labelbg = str("vbox/Mid/DialBox/VBoxMid/",labelname,"/LabelBG")
+					get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
+					label.show()
+					#print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[i])
+					label.set_text(sentence)
+					#label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
+		# Ajustement de la taille du label
+					var labelsize = label.get_line_count()
+					print(str("Nombre de ligne :",labelsize))
+					if labelsize == 1:
+						label.set_size(Vector2(925,50))
+						label.set("rect/min_size",Vector2(925,50))
+						get_node(labelbg).set("transform/scale",Vector2(1,1))
+					elif labelsize == 2:
+						label.set_size(Vector2(925,110))
+						label.set("rect/min_size",Vector2(925,110))
+						get_node(labelbg).set("transform/scale",Vector2(1,2))
+					elif labelsize == 3:
+						label.set_size(Vector2(925,170))
+						label.set("rect/min_size",Vector2(925,170))
+						get_node(labelbg).set("transform/scale",Vector2(1,3))
+					elif labelsize == 4:
+						label.set_size(Vector2(925,230))
+						label.set("rect/min_size",Vector2(925,230))
+						get_node(labelbg).set("transform/scale",Vector2(1,4))
+					elif labelsize == 5:
+						label.set_size(Vector2(925,290))
+						label.set("rect/min_size",Vector2(925,290))
+						get_node(labelbg).set("transform/scale",Vector2(1,5))
+					print(str("Taille du label :",label.get_size()))
+
+
+		# Auto Scroll
+					print("Scroll")
+					yield(get_tree(), "idle_frame")
+					get_node("vbox/Mid/DialBox").set_enable_v_scroll(true)
+					LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
+					get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
+
+		# Affichage Smoothie
+					print("Affichage")
+					visible = 0
+					for i in range(9):
+						label.set("visibility/opacity",visible)
+						visible = visible + 0.10
+						LOAD.time_delay = 0.05
+						timer.set_wait_time(LOAD.time_delay)
+						timer.start()
+						yield(get_node("Timer"), "timeout")
+
+		# Temporisation
+					print("Temporisation : 0.75 seconde(s)")
+					timer.set_wait_time(0.75)
+					timer.start()
+					yield(get_node("Timer"), "timeout")
+					print("Fin du timer")
+					print("Fin de la ligne")
+
+		# Clos la boucle et passe au next
+				#AUTO SAVE
+				if LOAD.currentDial == LOAD.firstDial:
 					print("Auto-Sauvegarde")
 					unixTime = OS.get_unix_time()
 					LOAD.dataDial = LOAD.currentDial
 					LOAD.dataRep = null
 					LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
-					if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
-						bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
-					LOAD.actualBGSound = bg_sound
 					system_save()
-					status()
-		print("Lancement du timer",LOAD.time_delay," seconde(s)")
-		LOAD.currentNextTime = OS.get_unix_time() + int(LOAD.time_delay)
-		LOAD.launch = 1
+				print("Fin du dialogue")
+				for item in LOAD.dial:
+					if item.Properties.Id == Target:
+						LOAD.currentDial = item.Properties.DisplayName
+						LOAD.time_delay = item.Template.Config.Timer
+						if item.Type == "DialogueTemplate":
+							print("Auto-Sauvegarde")
+							unixTime = OS.get_unix_time()
+							LOAD.dataDial = LOAD.currentDial
+							LOAD.dataRep = null
+							LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
+							if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
+								bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
+							LOAD.actualBGSound = bg_sound
+							system_save()
+							status()
+				print("Lancement du timer",LOAD.time_delay," seconde(s)")
+				LOAD.currentNextTime = OS.get_unix_time() + int(LOAD.time_delay)
+				LOAD.launch = 1
+			
+			elif item.Type == "ReponseTemplate":
+				for i in range(item.Properties.OutputPins.size()):
+					TargetPin = item.Properties.OutputPins[i].Id
+					print(TargetPin)
+					for caribou in LOAD.dial:
+						if caribou.Properties.has("OutputPins") and caribou.Properties.OutputPins[0].has("Connections") and caribou.Properties.OutputPins[0].Connections[0].TargetPin == TargetPin:
+							print("ENTREE DANS LE IF TARGETPIN")
+							buttonName = caribou.Properties.MenuText
+							buttonText.append(caribou.Properties.Text)
+							print(str("buttonName : ",buttonName))
+							print(str("buttonText : ",buttonText))
+							get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(buttonName))
+							get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
+							get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
+							timer.stop()
 			
 
 									## REPONSES ##
