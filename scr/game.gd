@@ -62,6 +62,7 @@ var ConfigVolumeBKG = null
 var buttonName = null
 var buttonText = []
 var TargetPin = null
+var buttonTarget = []
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -504,8 +505,8 @@ func start():
 							LOAD.dataDial = LOAD.currentDial
 							LOAD.dataRep = null
 							LOAD.dataNextTime = unixTime + int(LOAD.time_delay)
-							if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
-								bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
+							if ConfigSoundBKG != "":
+								bg_sound = ConfigSoundBKG
 							LOAD.actualBGSound = bg_sound
 							system_save()
 							status()
@@ -516,6 +517,7 @@ func start():
 			elif item.Type == "ReponseTemplate":
 				for i in range(item.Properties.OutputPins.size()):
 					TargetPin = item.Properties.OutputPins[i].Id
+					buttonTarget.append(item.Properties.OutputPins[i].Connections[0].TargetPin)
 					print(TargetPin)
 					for caribou in LOAD.dial:
 						if caribou.Properties.has("OutputPins") and caribou.Properties.OutputPins[0].has("Connections") and caribou.Properties.OutputPins[0].Connections[0].TargetPin == TargetPin:
@@ -524,10 +526,11 @@ func start():
 							buttonText.append(caribou.Properties.Text)
 							print(str("buttonName : ",buttonName))
 							print(str("buttonText : ",buttonText))
+							print(str("buttonTarget : ",buttonTarget))
 							get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(buttonName))
 							get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
 							get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
-							timer.stop()
+						timer.stop()
 			
 
 									## REPONSES ##
@@ -671,24 +674,33 @@ func button_action():
 	var labelbase = get_node("vbox/Mid/DialBox/VBoxMid/LabelRep")
 	var label = labelbase.duplicate()
 	print("Configuration du label")
-	label.set_name(str("label",LOAD.dial[LOAD.currentDial],buttonPressed))
+	label.set_name(str("label",buttonText,buttonPressed))
 	get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 	label.show()
-	print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[buttonPressed])
-	label.set_text(str(LOAD.dial[LOAD.currentDial].content[buttonPressed]))
-
-	LOAD.currentDial = LOAD.dial[LOAD.currentDial].next[buttonPressed]
-	LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
+	print("Ecrit la ligne de dialogue : ",buttonText[buttonPressed])
+	label.set_text(str(buttonText[buttonPressed]))
+	print(str("buttonTarget : ",buttonTarget[buttonPressed]))
+	for orignal in LOAD.dial:
+		if orignal.Properties.InputPins[0].Id == buttonTarget[buttonPressed]:
+			print("IF buttonTarget")
+			LOAD.currentDial = orignal.Properties.DisplayName
+			LOAD.time_delay = orignal.Template.Config.Timer
+	
+	print(str("currentDial : ",LOAD.currentDial))
+	print(str("timeDelay : ",LOAD.time_delay))
 	#AUTO SAVE
 	LOAD.dataDial = LOAD.currentDial
 	LOAD.dataRep = null
 	LOAD.dataNextTime = OS.get_unix_time() + int(LOAD.time_delay)
 	LOAD.currentNextTime = LOAD.dataNextTime
-	if LOAD.dial[LOAD.currentDial].bgsound[0] == 1:
-		bg_sound = str(LOAD.dial[LOAD.currentDial].bgsound[1])
+	if ConfigSoundBKG != "":
+		bg_sound = ConfigSoundBKG
 	LOAD.actualBGSound = bg_sound
 	system_save()
 	LOAD.launch = 1
+
+	buttonText = []
+	buttonTarget = []
 
 	print("Nettoyage des boutons")
 	clean()
