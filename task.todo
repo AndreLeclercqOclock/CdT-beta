@@ -1,5 +1,5 @@
     Project:
-        ☐ Alpha
+        ✔ Alpha @done (2017-12-20 09:54:09)
         ☐ Beta
         ☐ Release
 
@@ -96,9 +96,26 @@
                 ✔ Passer au Dialogue suivant @done (2017-12-19 18:00:28)
                 ✔ Récupération des Réponses @done (2017-12-19 18:00:30)
                 ✔ Récupération des Sons @done (2017-12-19 18:43:36)
-                ☐ Récupération des messages système scénario
-                ☐ Chargement des sauvegardes
+                ✔ Création des templates @done (2017-12-20 15:22:43)
+                    ✔ Template Dialogues @done (2017-12-20 14:37:13)
+                    ✔ Template Réponses @done (2017-12-20 14:37:15)
+                    ✔ Template Message Système @done (2017-12-20 15:22:42)
+                ✔ Récupération des messages système scénario @done (2017-12-20 15:22:52)
+                ✔ Chargement des sauvegardes @done (2017-12-20 18:37:36)
+                    ✔ Chargement Dialogues @done (2017-12-20 17:06:14)
+                    ✔ Chargement Réponses @done (2017-12-20 17:06:22)
+                    ✔ Chargement Messages Systèmes @done (2017-12-20 17:06:30)
+                    ✔ Chargement pendant un temps d'attente @done (2017-12-20 18:37:33)
+                ☐ Fin des chapitres
+                ✔ Système exit @done (2017-12-20 21:24:43)
+                ☐ Nettoyage du script
+                ✔ Création des templates par défaut @done (2017-12-20 21:24:47)
+                ☐ Réattribution des templates des projets déjà existants
+                    ☐ Chapitre 1
+                    ☐ Chapitre 2
+                    ☐ Chapitre 3
             ☐ Création du thème GUI
+                ☐ Création d'un Theme
                 ☐ Refonte Menu
                 ☐ Refonte Jeu
             ☐ Création de la version Navigateur

@@ -13,7 +13,7 @@
         {
           "Variable": "lastDial",
           "Type": "String",
-          "Value": "dial200",
+          "Value": "dialFIN05",
           "Description": "Dernier dialogue du chapitre"
         },
         {
@@ -25,7 +25,7 @@
         {
           "Variable": "namePNJ",
           "Type": "String",
-          "Value": "Pr. Latrémon",
+          "Value": "Pr. Latrémont",
           "Description": "Nom de l'interlocuteur"
         }
       ]
@@ -106,8 +106,7 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "bkg_ch01_01",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
@@ -180,8 +179,7 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
@@ -254,8 +252,7 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
@@ -328,8 +325,7 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
@@ -402,8 +398,7 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
@@ -476,8 +471,7 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
@@ -550,8 +544,7 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
@@ -624,8 +617,7 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
@@ -698,8 +690,7 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
@@ -772,141 +763,12 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
         {
           "Type": "DialogueTemplate",
-          "Properties": {
-            "TechnicalName": "FFr_BFCB5E5A",
-            "Id": "0x100000000001D1C",
-            "Parent": "0x300000043CE43F7",
-            "Attachments": [],
-            "DisplayName": "dial921",
-            "PreviewImage": {
-              "ViewBox": {
-                "x": 0.0,
-                "y": 0.0,
-                "w": 0.0,
-                "h": 0.0
-              },
-              "Mode": "FromAsset",
-              "Asset": "0x10000000000015B"
-            },
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "Je crois que je ne vais plus pouvoir résister longtemps.\r\n\r\nJe vais être aspiré.\r\n\r\nMerci, merci pour votre aide !\r\n\r\nJe commence à voir l'autre côté.\r\n\r\nC'est...\r\n\r\nL'attraction est trop forte, maintenant.\r\n\r\nMais...\r\n\r\nÇa ne ressemble pas...\r\n\r\nCe n'est pas notre monde !\r\n\r\nNoooon !\r\n\r\n...",
-            "ExternalId": "",
-            "Position": {
-              "x": 29700.0,
-              "y": -375.0
-            },
-            "ZIndex": 257.0,
-            "Size": {
-              "w": 275.0,
-              "h": 200.0
-            },
-            "ShortId": 3217776218,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000000001D1D",
-                "Owner": "0x100000000001D1C"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000000001D1E",
-                "Owner": "0x100000000001D1C",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000000001D25",
-                    "Target": "0x100000000001D24"
-                  }
-                ]
-              }
-            ]
-          },
-          "Template": {
-            "Config": {
-              "Timer": 1.0,
-              "soundTRG": "",
-              "volumeTRG": 0.0,
-              "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
-            }
-          }
-        },
-        {
-          "Type": "DialogueTemplate",
-          "Properties": {
-            "TechnicalName": "FFr_06D1FB70",
-            "Id": "0x100000000001D24",
-            "Parent": "0x300000043CE43F7",
-            "Attachments": [],
-            "DisplayName": "dialFIN05",
-            "PreviewImage": {
-              "ViewBox": {
-                "x": 0.0,
-                "y": 0.0,
-                "w": 0.0,
-                "h": 0.0
-              },
-              "Mode": "FromAsset",
-              "Asset": "0x1000000000015D6"
-            },
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "<Connexion perdue>\r\n\r\n\r\n\r\nMichel Latrémon a disparu dans une autre dimension.\r\n\r\nMalgré sa disparition, vous l'avez aidé à rester vivant.\r\n\r\nQui sait, peut-être trouvera-t-il le moyen de rentrer dans notre monde ?\r\n\r\n\r\n\r\nCliquez sur « Revenir au menu » pour accéder au chapitre 2.",
-            "ExternalId": "",
-            "Position": {
-              "x": 30050.0,
-              "y": -375.0
-            },
-            "ZIndex": 257.0,
-            "Size": {
-              "w": 275.0,
-              "h": 200.0
-            },
-            "ShortId": 114424688,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000000001D25",
-                "Owner": "0x100000000001D24"
-              }
-            ]
-          },
-          "Template": {
-            "Config": {
-              "Timer": 1.0,
-              "soundTRG": "",
-              "volumeTRG": 0.0,
-              "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
-            }
-          }
-        },
-        {
-          "Type": "FlowFragment",
           "Properties": {
             "TechnicalName": "FFr_9CC20B79",
             "Id": "0x1000000000016E1",
@@ -967,10 +829,19 @@
                 ]
               }
             ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "soundTRG": "",
+              "volumeTRG": 0.0,
+              "soundBKG": "",
+              "volumeBKG": 0.0
+            }
           }
         },
         {
-          "Type": "FlowFragment",
+          "Type": "DialogueTemplate",
           "Properties": {
             "TechnicalName": "FFr_09A6F009",
             "Id": "0x1000000000016E8",
@@ -1031,10 +902,19 @@
                 ]
               }
             ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "soundTRG": "",
+              "volumeTRG": 0.0,
+              "soundBKG": "",
+              "volumeBKG": 0.0
+            }
           }
         },
         {
-          "Type": "FlowFragment",
+          "Type": "DialogueTemplate",
           "Properties": {
             "TechnicalName": "FFr_1D2EE4CF",
             "Id": "0x100000000001729",
@@ -1095,6 +975,68 @@
                 ]
               }
             ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "soundTRG": "",
+              "volumeTRG": 0.0,
+              "soundBKG": "",
+              "volumeBKG": 0.0
+            }
+          }
+        },
+        {
+          "Type": "DialogueTemplate",
+          "Properties": {
+            "TechnicalName": "FFr_D4BF4DE1",
+            "Id": "0x100000000001DF0",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "dialFIN01",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000000000015D6"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "<Connexion perdue>\r\n\r\n\r\n\r\nVous n'avez pas voulu aider le professeur à sortir des catacombes.\r\n\r\nC'est de la non-assistance à personne en danger, savez-vous ?\r\n\r\nD'autant que personne ne l'a revu depuis.\r\n\r\nVous avez sa disparition sur la conscience...\r\n\r\n\r\n\r\nCliquez « Rejouer » pour recommencer la partie.",
+            "ExternalId": "",
+            "Position": {
+              "x": 5175.0,
+              "y": 550.0
+            },
+            "ZIndex": 298.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 3569307105,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000001DF3",
+                "Owner": "0x100000000001DF0"
+              }
+            ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "soundTRG": "",
+              "volumeTRG": 0.0,
+              "soundBKG": "",
+              "volumeBKG": 0.0
+            }
           }
         },
         {
@@ -5781,6 +5723,114 @@
         {
           "Type": "FlowFragment",
           "Properties": {
+            "TechnicalName": "FFr_BFCB5E5A",
+            "Id": "0x100000000001D1C",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "dial921",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x10000000000015B"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Je crois que je ne vais plus pouvoir résister longtemps.\r\n\r\nJe vais être aspiré.\r\n\r\nMerci, merci pour votre aide !\r\n\r\nJe commence à voir l'autre côté.\r\n\r\nC'est...\r\n\r\nL'attraction est trop forte, maintenant.\r\n\r\nMais...\r\n\r\nÇa ne ressemble pas...\r\n\r\nCe n'est pas notre monde !\r\n\r\nNoooon !\r\n\r\n...",
+            "ExternalId": "",
+            "Position": {
+              "x": 29700.0,
+              "y": -375.0
+            },
+            "ZIndex": 257.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 3217776218,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000001D1D",
+                "Owner": "0x100000000001D1C"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000001D1E",
+                "Owner": "0x100000000001D1C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000001D25",
+                    "Target": "0x100000000001D24"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_06D1FB70",
+            "Id": "0x100000000001D24",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "dialFIN05",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000000000015D6"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "<Connexion perdue>\r\n\r\n\r\n\r\nMichel Latrémon a disparu dans une autre dimension.\r\n\r\nMalgré sa disparition, vous l'avez aidé à rester vivant.\r\n\r\nQui sait, peut-être trouvera-t-il le moyen de rentrer dans notre monde ?\r\n\r\n\r\n\r\nCliquez sur « Revenir au menu » pour accéder au chapitre 2.",
+            "ExternalId": "",
+            "Position": {
+              "x": 30050.0,
+              "y": -375.0
+            },
+            "ZIndex": 257.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 114424688,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000001D25",
+                "Owner": "0x100000000001D24"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
             "TechnicalName": "FFr_88574212",
             "Id": "0x100000000001D2C",
             "Parent": "0x300000043CE43F7",
@@ -6673,50 +6723,6 @@
           }
         },
         {
-          "Type": "FlowFragment",
-          "Properties": {
-            "TechnicalName": "FFr_D4BF4DE1",
-            "Id": "0x100000000001DF0",
-            "Parent": "0x300000043CE43F7",
-            "Attachments": [],
-            "DisplayName": "dialFIN01",
-            "PreviewImage": {
-              "ViewBox": {
-                "x": 0.0,
-                "y": 0.0,
-                "w": 0.0,
-                "h": 0.0
-              },
-              "Mode": "FromAsset",
-              "Asset": "0x1000000000015D6"
-            },
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "<Connexion perdue>\r\n\r\n\r\n\r\nVous n'avez pas voulu aider le professeur à sortir des catacombes.\r\n\r\nC'est de la non-assistance à personne en danger, savez-vous ?\r\n\r\nD'autant que personne ne l'a revu depuis.\r\n\r\nVous avez sa disparition sur la conscience...\r\n\r\n\r\n\r\nCliquez « Rejouer » pour recommencer la partie.",
-            "ExternalId": "",
-            "Position": {
-              "x": 5175.0,
-              "y": 550.0
-            },
-            "ZIndex": 298.0,
-            "Size": {
-              "w": 275.0,
-              "h": 200.0
-            },
-            "ShortId": 3569307105,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000000001DF3",
-                "Owner": "0x100000000001DF0"
-              }
-            ]
-          }
-        },
-        {
           "Type": "ReponseTemplate",
           "Properties": {
             "TechnicalName": "Dlg_9133C5C9",
@@ -6816,8 +6822,7 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
@@ -6921,8 +6926,7 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
@@ -7044,13 +7048,12 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
+              "volumeBKG": 0.0
             }
           }
         },
         {
-          "Type": "ReponseTemplate",
+          "Type": "Dialogue",
           "Properties": {
             "TechnicalName": "Dlg_AE4729B5",
             "Id": "0x100000000001695",
@@ -7142,20 +7145,10 @@
                 ]
               }
             ]
-          },
-          "Template": {
-            "Config": {
-              "Timer": 1.0,
-              "soundTRG": "",
-              "volumeTRG": 0.0,
-              "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
-            }
           }
         },
         {
-          "Type": "ReponseTemplate",
+          "Type": "Dialogue",
           "Properties": {
             "TechnicalName": "Dlg_D289E4B9",
             "Id": "0x1000000000016C0",
@@ -7247,16 +7240,6 @@
                 ]
               }
             ]
-          },
-          "Template": {
-            "Config": {
-              "Timer": 1.0,
-              "soundTRG": "",
-              "volumeTRG": 0.0,
-              "soundBKG": "",
-              "volumeBKG": 0.0,
-              "MessageSystem": false
-            }
           }
         },
         {
