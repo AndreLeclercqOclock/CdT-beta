@@ -108,10 +108,10 @@
                     ✔ Chargement pendant un temps d'attente @done (2017-12-20 18:37:33)
                 ☐ Fin des chapitres
                 ✔ Système exit @done (2017-12-20 21:24:43)
-                ☐ Nettoyage du script
+                ✔ Nettoyage du script @done (2017-12-20 21:59:51)
                 ✔ Création des templates par défaut @done (2017-12-20 21:24:47)
                 ☐ Réattribution des templates des projets déjà existants
-                    ☐ Chapitre 1
+                    ✔ Chapitre 1 @done (2017-12-20 21:56:41)
                     ☐ Chapitre 2
                     ☐ Chapitre 3
             ☐ Création du thème GUI

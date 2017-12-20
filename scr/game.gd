@@ -94,8 +94,8 @@ func _ready():
 
 	if LOAD.fileExists == true and LOAD.stateSave == true:
 		# Ecran de chargement
-		#get_node("Loading").popup()
-		#get_node("Loading/Label").set_text(LOAD.gameText[7])
+		get_node("Loading").popup()
+		get_node("Loading/Label").set_text(LOAD.gameText[7])
 		# Réécriture de la Sauvegarde
 		print("Réécriture de la sauvegarde")
 		LOAD.vscroll = get_node("vbox/Mid/DialBox").get_size().height
@@ -292,7 +292,6 @@ func start():
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
 # Dialogues 
-			#if Type == "DialogueTemplate" :
 				if item.Template.Config.MessageSystem == false:
 					last_dial()
 					LOAD.time_delay = 1
@@ -349,11 +348,8 @@ func start():
 					for sentence in actualContent:
 						print(str("CURRENTDIAL ACTUEL : ",sentence))
 				
-					#for i in range(LOAD.dial[LOAD.currentDial].content.size()):
 			# Calcule le nombre de charactères
 						print("Calcule du nombre de charactère dans la phrase")
-						#dial = [LOAD.dial[LOAD.currentDial].content[i]]
-						#dial = actualContent[i]
 						size = (sentence.length())/20
 						print("Définition du temps d'écriture en secondes")
 			# Affiche le status "Ecrit un message"
@@ -365,7 +361,6 @@ func start():
 						get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 						label.show()
 						print("Message système 'Ecrit un message'")
-						#label.set_text("écrit un message...")
 			# Auto Scroll
 						print("Scroll")
 						yield(get_tree(), "idle_frame")
@@ -376,7 +371,6 @@ func start():
 						print("Affichage")
 						visible = 0
 						LOAD.time_delay = 0.05
-						#status()
 						for i in range(9):
 							label.set("visibility/opacity",visible)
 							visible = visible + 0.10
@@ -431,9 +425,7 @@ func start():
 						var labelbg = str("vbox/Mid/DialBox/VBoxMid/",labelname,"/LabelBG")
 						get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 						label.show()
-						#print("Ecrit la ligne de dialogue : ",LOAD.dial[LOAD.currentDial].content[i])
 						label.set_text(sentence)
-						#label.set_text(str(LOAD.dial[LOAD.currentDial].content[i]))
 			# Ajustement de la taille du label
 						var labelsize = label.get_line_count()
 						print(str("Nombre de ligne :",labelsize))
@@ -790,16 +782,6 @@ func message_system():
 	# Affichage smoothie
 	print("Affichage")
 	label.set("visibility/opacity",1)
-	#if visible == 0:
-	#	for i in range(10):
-	#		label.set("visibility/opacity",visible)
-	#		visible = visible + 0.10
-	#		time_delay = 0.05
-	#		timer.set_wait_time(time_delay)
-	#		timer.start()
-	#		yield(get_node("Timer"), "timeout")
-	#else:
-	#	label.set("visibility/opacity",1)
 
 	# Temporisation
 	timer.set_wait_time(0.75)
@@ -813,8 +795,6 @@ func message_system():
 	LOAD.vscroll = LOAD.vscroll+label.get_size().height+20
 	get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 	return
-
-
 
 # Reset Save
 # Reset de la sauvegarde
