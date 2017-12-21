@@ -6,7 +6,7 @@
 [ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://img/fond_menu.jpg" type="Texture" id=5]
 [ext_resource path="res://img/Fond_general.jpg" type="Texture" id=6]
-[ext_resource path="res://snd/bkg_main_menu.smp" type="Sample" id=7]
+[ext_resource path="res://snd/Bkg_main_menu.smp" type="Sample" id=7]
 [ext_resource path="res://img/facebook.jpg" type="Texture" id=8]
 [ext_resource path="res://img/twitter.jpg" type="Texture" id=9]
 [ext_resource path="res://img/youtube.jpg" type="Texture" id=10]
@@ -41,7 +41,7 @@ font/font = ExtResource( 4 )
 
 [sub_resource type="SampleLibrary" id=5]
 
-samples/bkg_main_menu = {
+samples/Bkg_main_menu = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,

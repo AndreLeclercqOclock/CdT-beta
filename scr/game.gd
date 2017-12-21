@@ -733,12 +733,12 @@ func status():
 # Status de l'interlocuteur
 	print("Status de l'interlocuteur")
 	# En ligne
-	if LOAD.time_delay <= 30:
+	if LOAD.time_delay < 30:
 		statusText = LOAD.gameText[0]
 		led = "res://img/LED_enligne.png"
 		status = 1
 	# Occupé
-	elif LOAD.time_delay > 30 and LOAD.time_delay <= 180:
+	elif LOAD.time_delay >= 30 and LOAD.time_delay <= 180:
 		statusText = LOAD.gameText[1]
 		led = "res://img/LED_occupe.png"
 		status = 2

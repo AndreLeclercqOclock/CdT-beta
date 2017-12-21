@@ -107,11 +107,12 @@
                     ✔ Chargement Messages Systèmes @done (2017-12-20 17:06:30)
                     ✔ Chargement pendant un temps d'attente @done (2017-12-20 18:37:33)
                 ☐ Fin des chapitres
+                ☐ Cul de sac
                 ✔ Système exit @done (2017-12-20 21:24:43)
                 ✔ Nettoyage du script @done (2017-12-20 21:59:51)
                 ✔ Création des templates par défaut @done (2017-12-20 21:24:47)
-                ☐ Réattribution des templates des projets déjà existants
-                    ✔ Chapitre 1 @done (2017-12-20 21:56:41)
+                ☐ Réattribution des templates des projets déjà existants @today 
+                    ✔ Chapitre 1 @done (2017-12-21 12:47:39)
                     ☐ Chapitre 2
                     ☐ Chapitre 3
             ☐ Création du thème GUI
