@@ -874,7 +874,7 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "",
+            "Text": "Ah.\r\n\r\nTrès bien.\r\n\r\nDésolé de vous avoir dérangé.\r\n\r\nJe vais essayer de me débrouiller par moi-même.\r\n\r\nAdieu.",
             "ExternalId": "",
             "Position": {
               "x": 4425.0,
@@ -3783,6 +3783,26 @@
                 "Id": "0x100000000001ACC",
                 "Owner": "0x100000000001ACB"
               }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002079",
+                "Owner": "0x100000000001ACB",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000002072",
+                    "Target": "0x100000000002062"
+                  }
+                ]
+              }
             ]
           },
           "Template": {
@@ -3792,7 +3812,7 @@
               "volumeTRG": 0.0,
               "soundBKG": "Bkg_ThemeFin",
               "volumeBKG": 0.0,
-              "MessageSystem": false
+              "MessageSystem": true
             }
           }
         },
@@ -4207,6 +4227,26 @@
                 "Id": "0x100000000001AFD",
                 "Owner": "0x100000000001AFC"
               }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002093",
+                "Owner": "0x100000000001AFC",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000208C",
+                    "Target": "0x10000000000207C"
+                  }
+                ]
+              }
             ]
           },
           "Template": {
@@ -4216,7 +4256,7 @@
               "volumeTRG": 0.0,
               "soundBKG": "Bkg_ThemeFin",
               "volumeBKG": 0.0,
-              "MessageSystem": false
+              "MessageSystem": true
             }
           }
         },
@@ -5149,6 +5189,26 @@
                 "Id": "0x100000000001BC9",
                 "Owner": "0x100000000001BC8"
               }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020AD",
+                "Owner": "0x100000000001BC8",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020A6",
+                    "Target": "0x100000000002096"
+                  }
+                ]
+              }
             ]
           },
           "Template": {
@@ -5158,7 +5218,7 @@
               "volumeTRG": 0.0,
               "soundBKG": "Bkg_ThemeFin",
               "volumeBKG": 0.0,
-              "MessageSystem": false
+              "MessageSystem": true
             }
           }
         },
@@ -6535,6 +6595,26 @@
                 "Id": "0x100000000001D25",
                 "Owner": "0x100000000001D24"
               }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020C7",
+                "Owner": "0x100000000001D24",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020C0",
+                    "Target": "0x1000000000020B0"
+                  }
+                ]
+              }
             ]
           },
           "Template": {
@@ -6544,7 +6624,7 @@
               "volumeTRG": 0.0,
               "soundBKG": "Bkg_ThemeFin",
               "volumeBKG": 0.0,
-              "MessageSystem": false
+              "MessageSystem": true
             }
           }
         },
@@ -7112,7 +7192,20 @@
               {
                 "Text": "",
                 "Id": "0x100000000001DB4",
-                "Owner": "0x100000000001DB2"
+                "Owner": "0x100000000001DB2",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000001DBB",
+                    "Target": "0x100000000001DBA"
+                  }
+                ]
               }
             ]
           },
@@ -7168,6 +7261,26 @@
                 "Id": "0x100000000001DBB",
                 "Owner": "0x100000000001DBA"
               }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020CA",
+                "Owner": "0x100000000001DBA",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020DB",
+                    "Target": "0x1000000000020CB"
+                  }
+                ]
+              }
             ]
           },
           "Template": {
@@ -7177,7 +7290,7 @@
               "volumeTRG": 0.0,
               "soundBKG": "Bkg_ThemeFin",
               "volumeBKG": 0.0,
-              "MessageSystem": false
+              "MessageSystem": true
             }
           }
         },
@@ -7523,7 +7636,20 @@
               {
                 "Text": "",
                 "Id": "0x100000000001DE3",
-                "Owner": "0x100000000001DE1"
+                "Owner": "0x100000000001DE1",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000001DEA",
+                    "Target": "0x100000000001DE9"
+                  }
+                ]
               }
             ]
           },
@@ -7579,6 +7705,26 @@
                 "Id": "0x100000000001DEA",
                 "Owner": "0x100000000001DE9"
               }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020FB",
+                "Owner": "0x100000000001DE9",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020F4",
+                    "Target": "0x1000000000020E4"
+                  }
+                ]
+              }
             ]
           },
           "Template": {
@@ -7588,7 +7734,7 @@
               "volumeTRG": 0.0,
               "soundBKG": "Bkg_ThemeFin",
               "volumeBKG": 0.0,
-              "MessageSystem": false
+              "MessageSystem": true
             }
           }
         },
@@ -7615,7 +7761,7 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "<Connexion perdue>\r\n\r\n\r\n\r\nVous n'avez pas voulu aider le professeur à sortir des catacombes.\r\n\r\nC'est de la non-assistance à personne en danger, savez-vous ?\r\n\r\nD'autant que personne ne l'a revu depuis.\r\n\r\nVous avez sa disparition sur la conscience...\r\n\r\n\r\n\r\nCliquez « Rejouer » pour recommencer la partie.",
+            "Text": "<Connexion perdue>\r\n\r\n\r\n\r\nVous n'avez pas voulu aider le professeur à sortir des catacombes.\r\n\r\nC'est de la non-assistance à personne en danger, savez-vous ?\r\n\r\nD'autant que personne ne l'a revu depuis.\r\n\r\nVous avez sa disparition sur la conscience...\r\n\r\nCliquez « Rejouer » pour retourner au CheckPoint.",
             "ExternalId": "",
             "Position": {
               "x": 5175.0,
@@ -7633,6 +7779,26 @@
                 "Id": "0x100000000001DF3",
                 "Owner": "0x100000000001DF0"
               }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002041",
+                "Owner": "0x100000000001DF0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000002045",
+                    "Target": "0x100000000002042"
+                  }
+                ]
+              }
             ]
           },
           "Template": {
@@ -7642,7 +7808,7 @@
               "volumeTRG": 0.0,
               "soundBKG": "Bkg_ThemeFin",
               "volumeBKG": 0.0,
-              "MessageSystem": false
+              "MessageSystem": true
             }
           }
         },
@@ -11190,6 +11356,602 @@
               "soundTRG": "",
               "volumeTRG": 0.0,
               "soundBKG": "",
+              "volumeBKG": 0.0,
+              "MessageSystem": false
+            }
+          }
+        },
+        {
+          "Type": "ReponseTemplate",
+          "Properties": {
+            "TechnicalName": "Dlg_21470E3C",
+            "Id": "0x100000000002042",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "rep9998",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000000000015CC"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "rep9998",
+            "ExternalId": "",
+            "Position": {
+              "x": 5567.0,
+              "y": 550.0
+            },
+            "ZIndex": 300.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 558304828,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002045",
+                "Owner": "0x100000000002042",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000002051",
+                    "Target": "0x10000000000204F"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002046",
+                "Owner": "0x100000000002042",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000016BA",
+                    "Target": "0x1000000000016B7"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "soundTRG": "",
+              "volumeTRG": 0.0,
+              "soundBKG": "Bkg_Grotte",
+              "volumeBKG": 0.0,
+              "MessageSystem": false
+            }
+          }
+        },
+        {
+          "Type": "ReponseTemplate",
+          "Properties": {
+            "TechnicalName": "Dlg_074B3FEB",
+            "Id": "0x100000000002062",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "rep9997",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000000000015CC"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "rep9997",
+            "ExternalId": "",
+            "Position": {
+              "x": 22442.0,
+              "y": -350.0
+            },
+            "ZIndex": 300.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 122372075,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002072",
+                "Owner": "0x100000000002062",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000002064",
+                    "Target": "0x100000000002063"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002073",
+                "Owner": "0x100000000002062",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000001A75",
+                    "Target": "0x100000000001A74"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "soundTRG": "",
+              "volumeTRG": 0.0,
+              "soundBKG": "Bkg_Salle",
+              "volumeBKG": 0.0,
+              "MessageSystem": false
+            }
+          }
+        },
+        {
+          "Type": "ReponseTemplate",
+          "Properties": {
+            "TechnicalName": "Dlg_372CFAA4",
+            "Id": "0x10000000000207C",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "rep9996",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000000000015CC"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "rep9996",
+            "ExternalId": "",
+            "Position": {
+              "x": 22817.0,
+              "y": 250.0
+            },
+            "ZIndex": 300.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 925694628,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000208C",
+                "Owner": "0x10000000000207C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000207E",
+                    "Target": "0x10000000000207D"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000208D",
+                "Owner": "0x10000000000207C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000001A75",
+                    "Target": "0x100000000001A74"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "soundTRG": "",
+              "volumeTRG": 0.0,
+              "soundBKG": "Bkg_Salle",
+              "volumeBKG": 0.0,
+              "MessageSystem": false
+            }
+          }
+        },
+        {
+          "Type": "ReponseTemplate",
+          "Properties": {
+            "TechnicalName": "Dlg_F79A0C1D",
+            "Id": "0x100000000002096",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "rep9995",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000000000015CC"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "rep9995",
+            "ExternalId": "",
+            "Position": {
+              "x": 22042.0,
+              "y": 1025.0
+            },
+            "ZIndex": 300.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 4154067997,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020A6",
+                "Owner": "0x100000000002096",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000002098",
+                    "Target": "0x100000000002097"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020A7",
+                "Owner": "0x100000000002096",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000001992",
+                    "Target": "0x100000000001991"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "soundTRG": "",
+              "volumeTRG": 0.0,
+              "soundBKG": "Bkg_Salle",
+              "volumeBKG": 0.0,
+              "MessageSystem": false
+            }
+          }
+        },
+        {
+          "Type": "ReponseTemplate",
+          "Properties": {
+            "TechnicalName": "Dlg_088D58E6",
+            "Id": "0x1000000000020B0",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "rep9994",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000000000015CC"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "rep9994",
+            "ExternalId": "",
+            "Position": {
+              "x": 30417.0,
+              "y": -375.0
+            },
+            "ZIndex": 300.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 143481062,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020C0",
+                "Owner": "0x1000000000020B0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020B2",
+                    "Target": "0x1000000000020B1"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020C1",
+                "Owner": "0x1000000000020B0"
+              }
+            ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "soundTRG": "",
+              "volumeTRG": 0.0,
+              "soundBKG": "Bkg_Grotte",
+              "volumeBKG": 0.0,
+              "MessageSystem": false
+            }
+          }
+        },
+        {
+          "Type": "ReponseTemplate",
+          "Properties": {
+            "TechnicalName": "Dlg_256804A3",
+            "Id": "0x1000000000020CB",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "rep9993",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000000000015CC"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "rep9993",
+            "ExternalId": "",
+            "Position": {
+              "x": 29717.0,
+              "y": 25.0
+            },
+            "ZIndex": 300.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 627573923,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020DB",
+                "Owner": "0x1000000000020CB",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020CD",
+                    "Target": "0x1000000000020CC"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020DC",
+                "Owner": "0x1000000000020CB",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000001C49",
+                    "Target": "0x100000000001C46"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "soundTRG": "",
+              "volumeTRG": 0.0,
+              "soundBKG": "Bkg_Crypte",
+              "volumeBKG": 0.0,
+              "MessageSystem": false
+            }
+          }
+        },
+        {
+          "Type": "ReponseTemplate",
+          "Properties": {
+            "TechnicalName": "Dlg_C4014A3D",
+            "Id": "0x1000000000020E4",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "rep9992",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000000000015CC"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "rep9992",
+            "ExternalId": "",
+            "Position": {
+              "x": 27817.0,
+              "y": 300.0
+            },
+            "ZIndex": 300.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 3288418877,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020F4",
+                "Owner": "0x1000000000020E4",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020E6",
+                    "Target": "0x1000000000020E5"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020F5",
+                "Owner": "0x1000000000020E4",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000001C49",
+                    "Target": "0x100000000001C46"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "soundTRG": "",
+              "volumeTRG": 0.0,
+              "soundBKG": "Bkg_Crypte",
               "volumeBKG": 0.0,
               "MessageSystem": false
             }
@@ -15046,6 +15808,391 @@
           }
         },
         {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_C44AEC9C",
+            "Id": "0x100000000002055",
+            "Parent": "0x100000000002042",
+            "MenuText": "Rejouer",
+            "StageDirections": "",
+            "Speaker": "0x100000000000157",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Retour au CheckPoint",
+            "ExternalId": "",
+            "Position": {
+              "x": -700.0,
+              "y": 450.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3293244572,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002058",
+                "Owner": "0x100000000002055"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002059",
+                "Owner": "0x100000000002055",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000002046",
+                    "Target": "0x100000000002042"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_F74ADF32",
+            "Id": "0x100000000002069",
+            "Parent": "0x100000000002062",
+            "MenuText": "Rejouer",
+            "StageDirections": "",
+            "Speaker": "0x100000000000157",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Retour au CheckPoint",
+            "ExternalId": "",
+            "Position": {
+              "x": -700.0,
+              "y": 450.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 4148879154,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000206A",
+                "Owner": "0x100000000002069"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000206B",
+                "Owner": "0x100000000002069",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000002073",
+                    "Target": "0x100000000002062"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_D2051637",
+            "Id": "0x100000000002083",
+            "Parent": "0x10000000000207C",
+            "MenuText": "Rejouer",
+            "StageDirections": "",
+            "Speaker": "0x100000000000157",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Retour au CheckPoint",
+            "ExternalId": "",
+            "Position": {
+              "x": -700.0,
+              "y": 450.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3523548727,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002084",
+                "Owner": "0x100000000002083"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002085",
+                "Owner": "0x100000000002083",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000208D",
+                    "Target": "0x10000000000207C"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_9A8123DE",
+            "Id": "0x10000000000209D",
+            "Parent": "0x100000000002096",
+            "MenuText": "Rejouer",
+            "StageDirections": "",
+            "Speaker": "0x100000000000157",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Retour au CheckPoint",
+            "ExternalId": "",
+            "Position": {
+              "x": -700.0,
+              "y": 450.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2592154590,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000209E",
+                "Owner": "0x10000000000209D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000209F",
+                "Owner": "0x10000000000209D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020A7",
+                    "Target": "0x100000000002096"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_B5CF2594",
+            "Id": "0x1000000000020B7",
+            "Parent": "0x1000000000020B0",
+            "MenuText": "Revenir au menu",
+            "StageDirections": "",
+            "Speaker": "0x100000000000157",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Fin du Chapitre 1",
+            "ExternalId": "",
+            "Position": {
+              "x": -700.0,
+              "y": 450.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3050251668,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020B8",
+                "Owner": "0x1000000000020B7"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020B9",
+                "Owner": "0x1000000000020B7",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020C1",
+                    "Target": "0x1000000000020B0"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_68B06E1F",
+            "Id": "0x1000000000020D2",
+            "Parent": "0x1000000000020CB",
+            "MenuText": "Rejouer",
+            "StageDirections": "",
+            "Speaker": "0x100000000000157",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Retour au CheckPoint",
+            "ExternalId": "",
+            "Position": {
+              "x": -700.0,
+              "y": 450.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1756392991,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020D3",
+                "Owner": "0x1000000000020D2"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020D4",
+                "Owner": "0x1000000000020D2",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020DC",
+                    "Target": "0x1000000000020CB"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_B7211B52",
+            "Id": "0x1000000000020EB",
+            "Parent": "0x1000000000020E4",
+            "MenuText": "Rejouer",
+            "StageDirections": "",
+            "Speaker": "0x100000000000157",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Retour au CheckPoint",
+            "ExternalId": "",
+            "Position": {
+              "x": -700.0,
+              "y": 450.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3072400210,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020EC",
+                "Owner": "0x1000000000020EB"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020ED",
+                "Owner": "0x1000000000020EB",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020F5",
+                    "Target": "0x1000000000020E4"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
           "Type": "Hub",
           "Properties": {
             "TechnicalName": "Hub_0B63883A",
@@ -17279,6 +18426,377 @@
                     "Label": "",
                     "TargetPin": "0x100000000001D8A",
                     "Target": "0x100000000001D87"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Hub",
+          "Properties": {
+            "TechnicalName": "Hub_A9DD43D0",
+            "Id": "0x100000000002063",
+            "Parent": "0x100000000002062",
+            "DisplayName": "rep9997",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -1000.0,
+              "y": 525.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 175.0,
+              "h": 50.0
+            },
+            "ShortId": 2849850320,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002064",
+                "Owner": "0x100000000002063"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002065",
+                "Owner": "0x100000000002063",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000206A",
+                    "Target": "0x100000000002069"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Hub",
+          "Properties": {
+            "TechnicalName": "Hub_AE5D4CFF",
+            "Id": "0x10000000000204F",
+            "Parent": "0x100000000002042",
+            "DisplayName": "rep9998",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -1000.0,
+              "y": 525.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 175.0,
+              "h": 50.0
+            },
+            "ShortId": 2925350143,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002051",
+                "Owner": "0x10000000000204F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002052",
+                "Owner": "0x10000000000204F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000002058",
+                    "Target": "0x100000000002055"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Hub",
+          "Properties": {
+            "TechnicalName": "Hub_55DC81A0",
+            "Id": "0x10000000000207D",
+            "Parent": "0x10000000000207C",
+            "DisplayName": "rep9996",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -1000.0,
+              "y": 525.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 175.0,
+              "h": 50.0
+            },
+            "ShortId": 1440514464,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000207E",
+                "Owner": "0x10000000000207D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000207F",
+                "Owner": "0x10000000000207D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000002084",
+                    "Target": "0x100000000002083"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Hub",
+          "Properties": {
+            "TechnicalName": "Hub_4A23886A",
+            "Id": "0x100000000002097",
+            "Parent": "0x100000000002096",
+            "DisplayName": "rep9995",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -1000.0,
+              "y": 525.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 175.0,
+              "h": 50.0
+            },
+            "ShortId": 1243842666,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002098",
+                "Owner": "0x100000000002097"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000002099",
+                "Owner": "0x100000000002097",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000209E",
+                    "Target": "0x10000000000209D"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Hub",
+          "Properties": {
+            "TechnicalName": "Hub_65F5003B",
+            "Id": "0x1000000000020B1",
+            "Parent": "0x1000000000020B0",
+            "DisplayName": "rep9994",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -1000.0,
+              "y": 525.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 175.0,
+              "h": 50.0
+            },
+            "ShortId": 1710555195,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020B2",
+                "Owner": "0x1000000000020B1"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020B3",
+                "Owner": "0x1000000000020B1",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020B8",
+                    "Target": "0x1000000000020B7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Hub",
+          "Properties": {
+            "TechnicalName": "Hub_634580AD",
+            "Id": "0x1000000000020CC",
+            "Parent": "0x1000000000020CB",
+            "DisplayName": "rep9993",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -1000.0,
+              "y": 525.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 175.0,
+              "h": 50.0
+            },
+            "ShortId": 1665499309,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020CD",
+                "Owner": "0x1000000000020CC"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020CE",
+                "Owner": "0x1000000000020CC",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020D3",
+                    "Target": "0x1000000000020D2"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Hub",
+          "Properties": {
+            "TechnicalName": "Hub_364E98DE",
+            "Id": "0x1000000000020E5",
+            "Parent": "0x1000000000020E4",
+            "DisplayName": "rep9992",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -1000.0,
+              "y": 525.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 175.0,
+              "h": 50.0
+            },
+            "ShortId": 911120606,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020E6",
+                "Owner": "0x1000000000020E5"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000020E7",
+                "Owner": "0x1000000000020E5",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000020EC",
+                    "Target": "0x1000000000020EB"
                   }
                 ]
               }

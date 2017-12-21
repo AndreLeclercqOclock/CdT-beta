@@ -42,9 +42,9 @@
 [ext_resource path="res://snd/msg_received.smp" type="Sample" id=40]
 [ext_resource path="res://snd/msg_send.smp" type="Sample" id=41]
 [ext_resource path="res://snd/msg_sys.smp" type="Sample" id=42]
-[ext_resource path="res://snd/Bkg Grotte.smp" type="Sample" id=43]
-[ext_resource path="res://snd/Bkg_Crypte.smp" type="Sample" id=44]
-[ext_resource path="res://snd/Bkg_Eau.smp" type="Sample" id=45]
+[ext_resource path="res://snd/Bkg_Crypte.smp" type="Sample" id=43]
+[ext_resource path="res://snd/Bkg_Eau.smp" type="Sample" id=44]
+[ext_resource path="res://snd/Bkg_Grotte.smp" type="Sample" id=45]
 [ext_resource path="res://snd/Bkg_Salle.smp" type="Sample" id=46]
 [ext_resource path="res://snd/Bkg_SalleHaute.smp" type="Sample" id=47]
 [ext_resource path="res://snd/Bkg_ThemeFin.smp" type="Sample" id=48]
@@ -206,19 +206,19 @@ samples/msg_sys = {
 
 [sub_resource type="SampleLibrary" id=19]
 
-"samples/Bkg Grotte" = {
+samples/Bkg_Crypte = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 43 )
 }
-samples/Bkg_Crypte = {
+samples/Bkg_Eau = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 44 )
 }
-samples/Bkg_Eau = {
+samples/Bkg_Grotte = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
@@ -821,7 +821,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 12 )
 animation = "default"
-frame = 15
+frame = 4
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]

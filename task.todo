@@ -107,7 +107,7 @@
                     ✔ Chargement Messages Systèmes @done (2017-12-20 17:06:30)
                     ✔ Chargement pendant un temps d'attente @done (2017-12-20 18:37:33)
                 ☐ Fin des chapitres
-                ☐ Cul de sac
+                ✔ Cul de sac @done (2017-12-21 14:49:03)
                 ✔ Système exit @done (2017-12-20 21:24:43)
                 ✔ Nettoyage du script @done (2017-12-20 21:59:51)
                 ✔ Création des templates par défaut @done (2017-12-20 21:24:47)
@@ -133,6 +133,7 @@
                     ☐ Affichage du timer
                     ☐ Désactivation du timer
                     ☐ Choix du dialogue à afficher
+                ☐ Ajouter lecture de sons BKG sur les réponses
             
 
     Divers:

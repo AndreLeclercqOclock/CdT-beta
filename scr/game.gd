@@ -47,7 +47,7 @@ var led = null
 var sound = 0
 var triggerName = null
 var triggerVol = 0
-var lastRep = null
+var lastRep = false
 var bg_sound = null
 var bg_sound_vol = null
 var actualContent = null
@@ -96,6 +96,8 @@ func _ready():
 		# Ecran de chargement
 		get_node("Loading").popup()
 		get_node("Loading/Label").set_text(LOAD.gameText[7])
+		# Mise en sourdine du son d'ambiance
+		get_node("SampleBKG").set_default_volume_db(-30)
 		# Réécriture de la Sauvegarde
 		print("Réécriture de la sauvegarde")
 		LOAD.vscroll = get_node("vbox/Mid/DialBox").get_size().height
@@ -106,11 +108,13 @@ func _ready():
 			for item in LOAD.dial:
 				if item.Properties.has("DisplayName") and item.Properties.DisplayName == LOAD.currentDial:
 					if item.Type == "DialogueTemplate":
+						last_dial()
 						origin = 1
 						Type = item.Type
 						Text = item.Properties.Text
 						Target = item.Properties.OutputPins[0].Connections[0].Target
 						ConfigTimer = item.Template.Config.Timer
+
 						# Vérification du status
 						LOAD.time_delay = ConfigTimer
 						status()
@@ -233,6 +237,10 @@ func _ready():
 			get_node("SampleBKG").play(str(LOAD.actualBGSound))
 			get_node("SampleMSG").set_default_volume_db(0)
 			get_node("Loading").hide()
+			
+			# Ajustement du volume d'ambiance après chargement
+			get_node("SampleBKG").set_default_volume_db(0)
+
 	if LOAD.fileExists == true and LOAD.currentNextTime <= OS.get_unix_time():
 		find_next_target()
 		LOAD.launch = 1
@@ -288,7 +296,16 @@ func start():
 				ConfigSoundBKG = item.Template.Config.soundBKG
 				ConfigVolumeBKG = item.Template.Config.volumeBKG
 			
-		
+				# Vérification d'un trigger son
+				if ConfigSoundTRG != "":
+					triggerName = ConfigSoundTRG
+					triggerVol = ConfigVolumeTRG
+					trigger_sound()
+				if ConfigSoundBKG != "":
+					bg_sound = ConfigSoundBKG
+					bg_sound_vol = ConfigVolumeBKG
+					background_sound()
+
 									## DIALOGUES ##
 # Gestion des dialogues de ref 1 [DIALOGUES]
 # Dialogues 
@@ -298,15 +315,7 @@ func start():
 					status()
 					# Attribution du type de son
 					sound = 1
-					# Vérification d'un trigger son
-					if ConfigSoundTRG != "":
-						triggerName = ConfigSoundTRG
-						triggerVol = ConfigVolumeTRG
-						trigger_sound()
-					if ConfigSoundBKG != "":
-						bg_sound = str(ConfigSoundBKG)
-						bg_sound_vol = ConfigVolumeBKG
-						background_sound()
+					
 					print("#### DIALOGUES REF : 1 ####")
 			# Horodatage
 					print("Horodatage")
@@ -536,12 +545,17 @@ func start():
 				origin = 1
 				find_next_target()
 				
-				
+			##### REPONSES #####
 			
 			elif item.Type == "ReponseTemplate":
 				for i in range(item.Properties.OutputPins.size()):
+					if lastRep == false:
+						buttonTarget.append(item.Properties.OutputPins[i].Connections[0].TargetPin)
 					TargetPin = item.Properties.OutputPins[i].Id
-					buttonTarget.append(item.Properties.OutputPins[i].Connections[0].TargetPin)
+					ConfigSoundTRG = item.Template.Config.soundTRG
+					ConfigVolumeTRG = item.Template.Config.volumeTRG
+					ConfigSoundBKG = item.Template.Config.soundBKG
+					ConfigVolumeBKG = item.Template.Config.volumeBKG
 					print(TargetPin)
 					for caribou in LOAD.dial:
 						if caribou.Properties.has("OutputPins") and caribou.Properties.OutputPins[0].has("Connections") and caribou.Properties.OutputPins[0].Connections[0].TargetPin == TargetPin:
@@ -559,7 +573,7 @@ func start():
 # Gestion des boutons de choix multipes
 # BOUTON 0
 func _on_Bouton0_pressed():
-	if lastRep == LOAD.currentDial:
+	if lastRep == true:
 		button_end()
 	else:
 		print("Bouton n°0 activé")
@@ -605,6 +619,16 @@ func clean():
 # Button Action
 func button_action():
 	
+	# Vérification d'un trigger son
+	if ConfigSoundTRG != "":
+		triggerName = ConfigSoundTRG
+		triggerVol = ConfigVolumeTRG
+		trigger_sound()
+	if ConfigSoundBKG != "":
+		bg_sound = ConfigSoundBKG
+		bg_sound_vol = ConfigVolumeBKG
+		background_sound()
+
 	# AUTO SAVE
 	LOAD.dataDial = LOAD.currentDial
 	LOAD.dataRep = buttonPressed
@@ -848,7 +872,7 @@ func system_time():
 # Vérification FIN
 func last_dial():
 	if LOAD.currentDial == LOAD.lastDial:
-		lastRep = Target
+		lastRep = true
 		print(str("LASTREP : ",lastRep))
 		if LOAD.loadChapter >= LOAD.chapterSave:
 			LOAD.chapterSave = LOAD.chapterSave+1
