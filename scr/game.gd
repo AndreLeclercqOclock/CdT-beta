@@ -938,9 +938,7 @@ func _on_Reset_pressed():
 	LOAD.saveRep = []
 	LOAD.saveTime = []
 	LOAD.saveNextTime = []
-	LOAD._ready()
 	LOAD._load_chapter()
-	get_tree().reload_current_scene()
 	
 func _on_Site_pressed():
 	OS.shell_open("http://www.chroniquesdetalos.com")
