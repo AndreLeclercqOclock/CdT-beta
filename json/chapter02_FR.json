@@ -19,7 +19,7 @@
         {
           "Variable": "lastDial",
           "Type": "String",
-          "Value": "dial062a",
+          "Value": "dialFIN03",
           "Description": "Dernier dialogue du chapitre"
         },
         {
@@ -714,6 +714,82 @@
             "Config": {
               "Timer": 1.0,
               "MessageSystem": false,
+              "soundTRG": "",
+              "soundBKG": "",
+              "volumeTRG": 0.0,
+              "volumeBKG": 0.0
+            }
+          }
+        },
+        {
+          "Type": "DialogueTemplate",
+          "Properties": {
+            "TechnicalName": "Dlg_03007EDC",
+            "Id": "0x100000000001785",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [
+              "0x100000000000288"
+            ],
+            "DisplayName": "dialFIN03",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x10000000000015B"
+            },
+            "Color": {
+              "r": 0.7647059,
+              "g": 0.149019614,
+              "b": 0.0
+            },
+            "Text": "<Connexion terminée>\r\n\r\nMichel Latrémon, sain et sauf, a coupé la communication.\r\n\r\nFélicitations, vous l’avez bien guidé.\r\n\r\nRetrouvez-le bientôt dans le chapitre 3 !",
+            "ExternalId": "",
+            "Position": {
+              "x": 36567.0,
+              "y": 4375.0
+            },
+            "ZIndex": 618.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 50364124,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000001786",
+                "Owner": "0x100000000001785"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000001787",
+                "Owner": "0x100000000001785",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000177E",
+                    "Target": "0x10000000000176F"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "MessageSystem": true,
               "soundTRG": "",
               "soundBKG": "",
               "volumeTRG": 0.0,
@@ -4852,7 +4928,7 @@
               "g": 0.0470588244,
               "b": 0.0470588244
             },
-            "Text": "FIN NOYADE",
+            "Text": "<Connexion perdue>\r\n\r\nMichel Latrémon a glissé et a été emporté par le courant.\r\n\r\nIl est mort noyé…\r\n\r\nCliquez « Retour au Checkpoint » pour continuer l'aventure",
             "ExternalId": "",
             "Position": {
               "x": 16592.0,
@@ -8422,7 +8498,7 @@
               "g": 0.0470588244,
               "b": 0.0470588244
             },
-            "Text": "FIN EMPALÉ",
+            "Text": "<Connexion perdue>\r\n\r\nMichel Latrémon, blessé aux mains, a lâché prise.\r\n\r\nIl a glissé et s’est ouvert l’aorte sur les barbelés.\r\n\r\nCliquez « Retour au Checkpoint » pour continuer l'aventure",
             "ExternalId": "",
             "Position": {
               "x": 27592.0,
@@ -12266,8 +12342,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x10000000000177E",
-                    "Target": "0x10000000000176F"
+                    "TargetPin": "0x100000000001786",
+                    "Target": "0x100000000001785"
                   }
                 ]
               }
@@ -12582,7 +12658,7 @@
               "Timer": 1.0,
               "MessageSystem": true,
               "soundTRG": "",
-              "soundBKG": "Bkg_Grotte",
+              "soundBKG": "",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
             }
@@ -12614,7 +12690,7 @@
             "Text": "rep9997",
             "ExternalId": "",
             "Position": {
-              "x": 36542.0,
+              "x": 36942.0,
               "y": 4375.0
             },
             "ZIndex": 570.0,
