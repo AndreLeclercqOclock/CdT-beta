@@ -2,7 +2,6 @@
     "_Language" : {
         "Config" : {
             "scenarioFile" : [
-                "chapter01_FR-articy",
                 "chapter01_FR",
                 "chapter02_FR"
             ]

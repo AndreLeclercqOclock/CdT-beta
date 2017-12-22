@@ -191,7 +191,11 @@ func _ready():
 						buttonTarget.append(item.Properties.OutputPins[LOAD.currentRep].Connections[0].TargetPin)
 						for caribou in LOAD.dial:
 							if caribou.Properties.has("OutputPins") and caribou.Properties.OutputPins[0].has("Connections") and caribou.Properties.OutputPins[0].Connections[0].TargetPin == TargetPin:
-								buttonText.append(caribou.Properties.Text)
+								if caribou.Properties.Text == "":
+									buttonText.append(caribou.Properties.MenuText)
+								else:
+									buttonText.append(caribou.Properties.Text)
+								
 
 						# Ecrit la ligne de Dialogue
 						print("Création du label")
@@ -561,7 +565,10 @@ func start():
 						if caribou.Properties.has("OutputPins") and caribou.Properties.OutputPins[0].has("Connections") and caribou.Properties.OutputPins[0].Connections[0].TargetPin == TargetPin:
 							print("ENTREE DANS LE IF TARGETPIN")
 							buttonName = caribou.Properties.MenuText
-							buttonText.append(caribou.Properties.Text)
+							if caribou.Properties.Text == "":
+								buttonText.append(caribou.Properties.MenuText)
+							else:
+								buttonText.append(caribou.Properties.Text)
 							get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(buttonName))
 							get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
 							get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
