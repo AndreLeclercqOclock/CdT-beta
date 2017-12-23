@@ -119,9 +119,10 @@
                 ☐ Création d'un Theme
                 ☐ Refonte Menu
                 ☐ Refonte Jeu
-            ☐ Création de la version Navigateur
-                ☐ Adaptation de l'application
-                ☐ Selection des Chapitre bridé au premier Chapitre de l'Opus 0
+            ✔ Création de la version Navigateur @done (2017-12-23 11:11:10)
+                ✔ Adaptation de l'application @done (2017-12-23 11:11:07)
+                ✔ Selection des Chapitre bridé au premier Chapitre de l'Opus 0 @done (2017-12-23 11:11:09)
+                ☐ Ajout de la démo dans le site des Chroniques
             ☐ Divers
                 ☐ Amélioration des options
                     ☐ Sons notification (messages)
