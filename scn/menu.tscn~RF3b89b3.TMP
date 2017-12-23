@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=1]
+[gd_scene load_steps=24 format=1]
 
 [ext_resource path="res://scr/menu.gd" type="Script" id=1]
 [ext_resource path="res://img/bouton_base.jpg" type="Texture" id=2]
@@ -7,9 +7,10 @@
 [ext_resource path="res://img/fond_menu.jpg" type="Texture" id=5]
 [ext_resource path="res://img/Fond_general.jpg" type="Texture" id=6]
 [ext_resource path="res://snd/Bkg_main_menu.smp" type="Sample" id=7]
-[ext_resource path="res://img/facebook.jpg" type="Texture" id=8]
-[ext_resource path="res://img/twitter.jpg" type="Texture" id=9]
-[ext_resource path="res://img/youtube.jpg" type="Texture" id=10]
+[ext_resource path="res://snd/Bkg_main_menu.wav" type="Sample" id=8]
+[ext_resource path="res://img/facebook.jpg" type="Texture" id=9]
+[ext_resource path="res://img/twitter.jpg" type="Texture" id=10]
+[ext_resource path="res://img/youtube.jpg" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -46,6 +47,12 @@ samples/Bkg_main_menu = {
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 7 )
+}
+samples/Bkg_main_menu_1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 8 )
 }
 
 [sub_resource type="DynamicFont" id=6]
@@ -533,7 +540,7 @@ margin/bottom = 256.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 8 )
+textures/normal = ExtResource( 9 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -551,7 +558,7 @@ margin/bottom = 256.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 9 )
+textures/normal = ExtResource( 10 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -569,7 +576,7 @@ margin/bottom = 256.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 10 )
+textures/normal = ExtResource( 11 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
