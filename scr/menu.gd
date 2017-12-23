@@ -17,7 +17,7 @@ func _ready():
 	get_node("Quitter/Label2").set_text(str(LOAD.menuText[3]))
 		
 	# Son d'ambiance
-	get_node("SampleBKGmenu").play("Bkg_main_menu")
+	get_node("SampleBKGmenu").play("Bkg_main_menu_1")
 
 	# Textes SelectChapter
 	get_node("SelectChapter/Label").set_text(str(LOAD.menuText[5]))

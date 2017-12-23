@@ -2,8 +2,7 @@
     "_Language" : {
         "Config" : {
             "scenarioFile" : [
-                "chapter01_FR",
-                "chapter02_FR"
+                "chapter01_FR"
             ]
         },
         "Menu" : [
