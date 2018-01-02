@@ -329,6 +329,13 @@ custom_constants/margin_left = 16
 custom_constants/margin_bottom = 16
 script/script = ExtResource( 1 )
 
+[node name="Tween" type="Tween" parent="Game"]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
 [node name="Popup" type="Popup" parent="Game"]
 
 editor/display_folded = true
@@ -879,7 +886,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 12 )
 animation = "default"
-frame = 14
+frame = 6
 playing = true
 
 [node name="Tween" type="Tween" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelStat"]
@@ -981,6 +988,7 @@ max_lines_visible = -1
 
 [node name="Bot" type="Container" parent="Game/vbox"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -1266,13 +1274,6 @@ uppercase = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-
-[node name="Tween" type="Tween" parent="Game"]
-
-playback/process_mode = 1
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
 
 [connection signal="pressed" from="Game/Popup/VBox/Sound/MusicButton" to="Game" method="_on_MusicButton_pressed"]
 

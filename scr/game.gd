@@ -951,7 +951,7 @@ func soundOptions():
 		imgTexture = load("res://img/music_ON.png")
 		get_node("Popup/VBox/Sound/MusicButton").set("textures/normal", imgTexture)
 		if get_node("SampleBKG").is_active() == 0:
-			get_node("SampleBKG").play(str(LOAD.actualBGSound)) 
+			get_node("SampleBKG").play(LOAD.actualBGSound) 
 	elif LOAD.MusicButton == 0:
 		imgTexture = load("res://img/music_OFF.png")
 		get_node("Popup/VBox/Sound/MusicButton").set("textures/normal", imgTexture)

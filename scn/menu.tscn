@@ -756,6 +756,13 @@ params/resize_mode = 0
 params/scale = Vector2( 0.8, 0.8 )
 params/stretch_mode = 0
 
+[node name="Tween" type="Tween" parent="."]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 
 [connection signal="pressed" from="Option" to="." method="_on_Option_pressed"]

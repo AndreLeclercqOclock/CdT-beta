@@ -9,6 +9,7 @@ var addWeb = null
 var imgTexture = null
 
 func _ready():
+
 	if LOAD.fileExists == false:
 		get_node("Start/Label").set_text(str(LOAD.menuText[0]))
 	else:
@@ -61,7 +62,7 @@ func soundOptions():
 		imgTexture = load("res://img/music_ON.png")
 		get_node("MusicButton").set("textures/normal", imgTexture)
 		if get_node("SampleBKGmenu").is_active() == 0:
-			get_node("SampleBKGmenu").play("Bkg_main_menu") 
+			get_node("SampleBKGmenu").play("Bkg_main_menu")
 	elif LOAD.MusicButton == 0:
 		imgTexture = load("res://img/music_OFF.png")
 		get_node("MusicButton").set("textures/normal", imgTexture)

@@ -66,6 +66,12 @@ var loadChapter = null
 var MusicButton = null
 var SoundButton = null
 
+var tween = null
+var targetNode = null
+var tweenType = null
+var tweenStart = null
+var tweenEnd = null
+var tweenTime = null
 
 func _ready():
 	# Low CPU usage
@@ -230,4 +236,8 @@ func saveGlobal():
 	file.store_line(data.to_json())
 	file.close()
 	
-	
+func system_tween():
+	if tween != null:
+		tween.interpolate_property(targetNode, tweenType, tweenStart, tweenEnd, tweenTime, Tween.TRANS_LINEAR, Tween.EASE_IN)
+		tween.start()
+	return
