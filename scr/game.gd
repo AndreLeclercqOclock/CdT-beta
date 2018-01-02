@@ -243,7 +243,12 @@ func _ready():
 			print("Fin du chargement")
 			print("Réécriture Dialogues dans le JSON")
 		soundOptions()
-		get_node("Loading").hide()
+		targetNode = get_node("Loading")
+		tweenType = "visibility/opacity"
+		tweenStart = 1
+		tweenEnd = 0
+		tweenTime = 0.5
+		system_tween()
 			
 
 	if LOAD.fileExists == true and LOAD.currentNextTime <= OS.get_unix_time():
@@ -278,6 +283,10 @@ func _process(delta):
 		print("Fin du timer")
 		LOAD.launch = 0
 		start()
+	
+	if get_node("Loading").get("visibility/opacity") == 0:
+		get_node("Loading").hide()
+		get_node("Loading").set("visibility/opacity", 1)
 
 
 
