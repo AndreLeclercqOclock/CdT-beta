@@ -6,6 +6,7 @@ var newButton = null
 var newLabel = null
 var y = 0
 var addWeb = null
+var imgTexture = null
 
 func _ready():
 	if LOAD.fileExists == false:
@@ -16,8 +17,6 @@ func _ready():
 	get_node("Option/Label1").set_text(str(LOAD.menuText[2]))
 	get_node("Quitter/Label2").set_text(str(LOAD.menuText[3]))
 		
-	# Son d'ambiance
-	get_node("SampleBKGmenu").play("Bkg_main_menu")
 
 	# Textes SelectChapter
 	get_node("SelectChapter/Label").set_text(str(LOAD.menuText[5]))
@@ -34,6 +33,8 @@ func _ready():
 	get_node("Credits/ScrollContainer/RichTextLabel").set_text(str(LOAD.creditsText[0]))
 	get_node("Credits/Label").set_text(str(LOAD.optionsText[1]))
 	get_node("Credits/RetourCredits/Label").set_text(str(LOAD.optionsText[3]))
+
+	soundOptions()
 
 func button_pressed(i,y):
 	LOAD.scenarioFile = i
@@ -56,7 +57,24 @@ func _on_Start_pressed():
 		newLabel.set_text(str(LOAD.menuText[4]," ",y))
 		newButton.connect("pressed", self, "button_pressed", [i,y])
 		
-		
+func soundOptions():
+	if LOAD.MusicButton == 1:
+		imgTexture = load("res://img/music_ON.png")
+		get_node("MusicButton").set("textures/normal", imgTexture)
+		if get_node("SampleBKGmenu").is_active() == 0:
+			get_node("SampleBKGmenu").play("Bkg_main_menu") 
+	elif LOAD.MusicButton == 0:
+		imgTexture = load("res://img/music_OFF.png")
+		get_node("MusicButton").set("textures/normal", imgTexture)
+		if get_node("SampleBKGmenu").is_active() == 1:
+			get_node("SampleBKGmenu").stop_all()
+	if LOAD.SoundButton == 1:
+		imgTexture = load("res://img/sound_ON.png")
+		get_node("SoundButton").set("textures/normal", imgTexture)
+	elif LOAD.SoundButton == 0:
+		imgTexture = load("res://img/sound_OFF.png")
+		get_node("SoundButton").set("textures/normal", imgTexture)
+	return
 	
 
 func _on_Option_pressed():
@@ -104,3 +122,22 @@ func _on_RetourChapitres_pressed():
 		button.queue_free()
 		y = 0
 	get_node("SelectChapter").hide()
+
+func _on_MusicButton_pressed():
+	if LOAD.MusicButton == 1:
+		LOAD.MusicButton = 0
+		soundOptions()
+	elif LOAD.MusicButton == 0:
+		LOAD.MusicButton = 1
+		soundOptions()
+	return
+	
+	
+func _on_SoundButton_pressed():
+	if LOAD.SoundButton == 1:
+		LOAD.SoundButton = 0
+		soundOptions()
+	elif LOAD.SoundButton == 0:
+		LOAD.SoundButton = 1
+		soundOptions()
+	return

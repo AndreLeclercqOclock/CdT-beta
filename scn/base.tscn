@@ -723,6 +723,7 @@ texture = ExtResource( 15 )
 
 [node name="Mid" type="Container" parent="Game/vbox"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 0
@@ -734,6 +735,7 @@ margin/bottom = 4.0
 
 [node name="DialBox" type="ScrollContainer" parent="Game/vbox/Mid"]
 
+editor/display_folded = true
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -749,6 +751,7 @@ scroll/vertical = true
 
 [node name="VBoxMid" type="VBoxContainer" parent="Game/vbox/Mid/DialBox"]
 
+editor/display_folded = true
 rect/min_size = Vector2( 1070, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -763,6 +766,7 @@ alignment = 0
 
 [node name="LabelTime" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
 
+editor/display_folded = true
 visibility/visible = false
 visibility/opacity = 0.0
 rect/min_size = Vector2( 925, 55 )
@@ -800,6 +804,7 @@ playback/speed = 1.0
 
 [node name="LabelStat" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
 
+editor/display_folded = true
 visibility/visible = false
 visibility/opacity = 0.0
 rect/min_size = Vector2( 825, 50 )
@@ -825,7 +830,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 12 )
 animation = "default"
-frame = 8
+frame = 22
 playing = true
 
 [node name="Tween" type="Tween" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelStat"]
@@ -837,6 +842,7 @@ playback/speed = 1.0
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
 
+editor/display_folded = true
 visibility/visible = false
 visibility/opacity = 0.0
 rect/min_size = Vector2( 925, 55 )
@@ -875,6 +881,7 @@ playback/speed = 1.0
 
 [node name="LabelRep" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
 
+editor/display_folded = true
 visibility/visible = false
 visibility/opacity = 0.0
 rect/min_size = Vector2( 925, 100 )

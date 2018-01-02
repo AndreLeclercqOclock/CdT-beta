@@ -63,6 +63,9 @@ var languageSelect = null
 var chapterNumber = 0
 var loadChapter = null
 
+var MusicButton = 1
+var SoundButton = 1
+
 
 func _ready():
 	# Low CPU usage
