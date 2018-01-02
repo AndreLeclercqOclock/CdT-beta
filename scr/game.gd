@@ -66,11 +66,13 @@ var buttonTarget = []
 var origin = null
 var labelNode = null
 var imgTexture = null
+var devMode = 1
 
 ############################### PREPARATION DU SCRIPT ###############################
 
 # Ready
 func _ready():
+
 	print("Crédits")
 	print("Script par LEIFER KOPF // leifer.kopf@gmail.com")
 	print("Scénario par VINCENT CORLAIX  // vcorlaix@nootilus.com")
@@ -131,8 +133,10 @@ func _ready():
 								get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 								label.show()
 								print("Affiche l'heure")
-								label.set_text(str(" - ",LOAD.timeIG))
-								#label.set_text(str(" - ",LOAD.timeIG," : ",LOAD.currentDial))
+								if devMode == 0:
+									label.set_text(str(" - ",LOAD.timeIG))
+								else:
+									label.set_text(str(" - ",LOAD.timeIG," : ",LOAD.currentDial))
 								label.set("visibility/opacity",1)
 								var labelH = label.get_text()
 								labelNode = "vbox/Mid/DialBox/VBoxMid/LabelDial"
@@ -338,8 +342,10 @@ func start():
 					get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 					label.show()
 					print("Affiche l'heure")
-					label.set_text(str(" - ",LOAD.timeIG))
-					#label.set_text(str(" - ",LOAD.timeIG," : ",LOAD.currentDial))
+					if devMode == 0:
+						label.set_text(str(" - ",LOAD.timeIG))
+					else:
+						label.set_text(str(" - ",LOAD.timeIG," : ",LOAD.currentDial))
 					var labelH = label.get_text()
 			# Auto Scroll
 					print("Scroll")
