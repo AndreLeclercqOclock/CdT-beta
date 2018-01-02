@@ -130,6 +130,7 @@ func _on_MusicButton_pressed():
 	elif LOAD.MusicButton == 0:
 		LOAD.MusicButton = 1
 		soundOptions()
+	LOAD.saveGlobal()
 	return
 	
 	
@@ -140,4 +141,6 @@ func _on_SoundButton_pressed():
 	elif LOAD.SoundButton == 0:
 		LOAD.SoundButton = 1
 		soundOptions()
+	LOAD.saveGlobal()
 	return
+

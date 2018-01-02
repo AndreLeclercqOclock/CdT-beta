@@ -63,8 +63,8 @@ var languageSelect = null
 var chapterNumber = 0
 var loadChapter = null
 
-var MusicButton = 1
-var SoundButton = 1
+var MusicButton = null
+var SoundButton = null
 
 
 func _ready():
@@ -138,16 +138,16 @@ func _ready():
 
 		print("Récupération du chapitre en cours")
 		chapterSave = saveg._SaveGlobal.chapter
+		MusicButton = saveg._SaveGlobal.music 
+		SoundButton = saveg._SaveGlobal.sound 
 
 
 	if fileExists == false:
-		data = {"_SaveGlobal" : {"chapter" : 2}}
-		var file = File.new()
-		#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-		file.open("user://saveglobal.json", File.WRITE)
-		file.store_line(data.to_json())
-		file.close()
+		MusicButton = 1
+		SoundButton = 1
 		chapterSave = 2
+		saveGlobal()
+		
 
 
 func _load_chapter():
@@ -221,6 +221,13 @@ func _load_chapter():
 		actualBGSound = firstBGSound
 
 	get_tree().change_scene("res://scn/base.tscn")
-	print("FIN DU SCRIPT !!!")
+	
+func saveGlobal():
+	data = {"_SaveGlobal" : {"chapter" : chapterSave,"sound" : SoundButton, "music" : MusicButton}}
+	var file = File.new()
+	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
+	file.open("user://saveglobal.json", File.WRITE)
+	file.store_line(data.to_json())
+	file.close()
 	
 	

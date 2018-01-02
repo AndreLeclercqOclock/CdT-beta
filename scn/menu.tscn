@@ -39,7 +39,7 @@ font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="SampleLibrary" id=5]
+[sub_resource type="SampleLibrary" id=13]
 
 samples/Bkg_main_menu = {
 "db": 0.0,
@@ -355,7 +355,7 @@ max_lines_visible = -1
 [node name="SampleBKGmenu" type="SamplePlayer" parent="."]
 
 config/polyphony = 1
-config/samples = SubResource( 5 )
+config/samples = SubResource( 13 )
 default/volume_db = 0.0
 default/pitch_scale = 1.0
 default/pan = 0.0

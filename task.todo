@@ -135,11 +135,10 @@
                 ☐ Affichage du timer
                 ☐ Désactivation du timer
                 ☐ Choix du dialogue à afficher
-            ☐ Amélioration des options
-                ☐ Sons notification (messages)
-                ☐ Sons ambiances (thèmes & ambiances)
-                ☐ Choix de la langue
-                ☐ Sauvegarde des préférences
+            ✔ Amélioration des options audio @done (2018-1-2 13:58:46)
+                ✔ Sons notification (messages) @done (2018-1-2 13:05:03)
+                ✔ Sons ambiances (thèmes & ambiances) @done (2018-1-2 13:05:03)
+                ✔ Sauvegarde des préférences @done (2018-1-2 13:58:39)
             ☐ Divers
                 ✔ Optimisation de l'affichage "smoothie" des textes @done (2018-1-2 12:26:11)
 

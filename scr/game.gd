@@ -68,6 +68,7 @@ var labelNode = null
 var start_vis = 0
 var end_vis = 1
 var tween = null
+var imgTexture = null
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -99,8 +100,6 @@ func _ready():
 		# Ecran de chargement
 		get_node("Loading").popup()
 		get_node("Loading/Label").set_text(LOAD.gameText[7])
-		# Mise en sourdine du son d'ambiance
-		get_node("SampleBKG").set_default_volume_db(-30)
 		# Réécriture de la Sauvegarde
 		print("Réécriture de la sauvegarde")
 		LOAD.vscroll = get_node("vbox/Mid/DialBox").get_size().height
@@ -241,12 +240,12 @@ func _ready():
 				#LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
 			print("Fin du chargement")
 			print("Réécriture Dialogues dans le JSON")
-			get_node("SampleBKG").play(str(LOAD.actualBGSound))
-			get_node("SampleMSG").set_default_volume_db(0)
+			if LOAD.MusicButton == 1:
+				get_node("SampleBKG").play(str(LOAD.actualBGSound))
+				get_node("SampleMSG").set_default_volume_db(0)
+			soundOptions()
 			get_node("Loading").hide()
 			
-			# Ajustement du volume d'ambiance après chargement
-			get_node("SampleBKG").set_default_volume_db(0)
 
 	if LOAD.fileExists == true and LOAD.currentNextTime <= OS.get_unix_time():
 		find_next_target()
@@ -263,6 +262,7 @@ func _ready():
 
 	if LOAD.fileExists == false:
 		get_node("SampleMSG").set_default_volume_db(0)
+		soundOptions()
 		start()
 		
 # Affichage de l'heure
@@ -927,23 +927,47 @@ func last_dial():
 
 # Système de sample MESSAGES
 func sample_msg():
-	if sound == 1:
-		get_node("SampleMSG").play("msg_received")
-	elif sound == 2:
-		get_node("SampleMSG").play("msg_send")
-	elif sound == 3:
-		get_node("SampleMSG").play("msg_sys")
+	if LOAD.SoundButton == 1:
+		if sound == 1:
+			get_node("SampleMSG").play("msg_received")
+		elif sound == 2:
+			get_node("SampleMSG").play("msg_send")
+		elif sound == 3:
+			get_node("SampleMSG").play("msg_sys")
 	return
 
 # Système de trigger son
 func trigger_sound():
-	get_node("SampleTRG").set_default_volume_db(triggerVol)
-	get_node("SampleTRG").play(triggerName)
+	if LOAD.MusicButton == 1:
+		get_node("SampleTRG").set_default_volume_db(triggerVol)
+		get_node("SampleTRG").play(triggerName)
+	return
 
 # Système de sons d'ambiance (background sound)
 func background_sound():
-	get_node("SampleBKG").set_default_volume_db(bg_sound_vol)
-	get_node("SampleBKG").play(bg_sound)
+	if LOAD.MusicButton == 1:
+		get_node("SampleBKG").set_default_volume_db(bg_sound_vol)
+		get_node("SampleBKG").play(bg_sound)
+	return
+
+# System Option Sons
+func soundOptions():
+	if LOAD.MusicButton == 1:
+		imgTexture = load("res://img/music_ON.png")
+		get_node("Popup/VBox/Sound/MusicButton").set("textures/normal", imgTexture)
+		if get_node("SampleBKG").is_active() == 0:
+			get_node("SampleBKG").play(str(LOAD.actualBGSound)) 
+	elif LOAD.MusicButton == 0:
+		imgTexture = load("res://img/music_OFF.png")
+		get_node("Popup/VBox/Sound/MusicButton").set("textures/normal", imgTexture)
+		if get_node("SampleBKG").is_active() == 1:
+			get_node("SampleBKG").stop_all()
+	if LOAD.SoundButton == 1:
+		imgTexture = load("res://img/sound_ON.png")
+		get_node("Popup/VBox/Sound/SoundButton").set("textures/normal", imgTexture)
+	elif LOAD.SoundButton == 0:
+		imgTexture = load("res://img/sound_OFF.png")
+		get_node("Popup/VBox/Sound/SoundButton").set("textures/normal", imgTexture)
 	return
 
 # System Exit
@@ -995,3 +1019,25 @@ func _on_Quitter_pressed():
 	LOAD.saveTime = []
 	LOAD.saveNextTime = []
 	get_tree().change_scene("res://scn/menu.tscn")
+
+
+func _on_MusicButton_pressed():
+	if LOAD.MusicButton == 1:
+		LOAD.MusicButton = 0
+		soundOptions()
+	elif LOAD.MusicButton == 0:
+		LOAD.MusicButton = 1
+		soundOptions()
+	LOAD.saveGlobal()
+	return
+
+
+func _on_SoundButton_pressed():
+	if LOAD.SoundButton == 1:
+		LOAD.SoundButton = 0
+		soundOptions()
+	elif LOAD.SoundButton == 0:
+		LOAD.SoundButton = 1
+		soundOptions()
+	LOAD.saveGlobal()
+	return
