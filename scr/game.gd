@@ -65,10 +65,13 @@ var TargetPin = null
 var buttonTarget = []
 var origin = null
 var labelNode = null
-var start_vis = 0
-var end_vis = 1
+var tweenStart = null
+var tweenEnd = null
 var tween = null
 var imgTexture = null
+var targetNode = null
+var tweenType = null
+var tweenTime = null
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -330,9 +333,6 @@ func start():
 					label.set_name("LabelTime")
 					get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 					label.show()
-					tween = get_node("vbox/Mid/DialBox/VBoxMid/LabelTime/Tween").duplicate()
-					tween.set_name("Tween")
-					label.add_child(tween)
 					print("Affiche l'heure")
 					label.set_text(str(" - ",LOAD.timeIG))
 					#label.set_text(str(" - ",LOAD.timeIG," : ",LOAD.currentDial))
@@ -345,10 +345,13 @@ func start():
 					get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 			# Affichage Smoothie
 					print("Affichage")
-					start_vis = 0
-					end_vis = 1
-					tween.interpolate_property(label, "visibility/opacity", start_vis, end_vis, 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN)
-					tween.start()
+					targetNode = label
+					tweenType = "visibility/opacity"
+					tweenStart = 0
+					tweenEnd = 1
+					tweenTime = 1.0
+					system_tween()
+					
 			#Création de la node LABEL
 			########### REFONTE #############
 					print("Traitement du Dialogue")
@@ -381,10 +384,12 @@ func start():
 						get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 			# Affichage Smoothie
 						print("Affichage")
-						start_vis = 0
-						end_vis = 1
-						tween.interpolate_property(label, "visibility/opacity", start_vis, end_vis, 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN)
-						tween.start()
+						targetNode = label
+						tweenType = "visibility/opacity"
+						tweenStart = 0
+						tweenEnd = 1
+						tweenTime = 1.0
+						system_tween()
 
 			# Fourchettes en fonction de la taille du texte.
 					# Inférieur à 0 seconde
@@ -471,10 +476,12 @@ func start():
 
 				# Affichage Smoothie
 						print("Affichage")
-						start_vis = 0
-						end_vis = 1
-						tween.interpolate_property(label, "visibility/opacity", start_vis, end_vis, 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN)
-						tween.start()
+						targetNode = label
+						tweenType = "visibility/opacity"
+						tweenStart = 0
+						tweenEnd = 1
+						tweenTime = 1.0
+						system_tween()
 
 				# Temporisation
 						print("Temporisation : 0.75 seconde(s)")
@@ -565,7 +572,12 @@ func start():
 								buttonText.append(caribou.Properties.Text)
 							get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(buttonName))
 							get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
-							get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",true)
+							targetNode = get_node(str("vbox/Bot/VBoxBot/Bouton",i))
+							tweenType = "visibility/opacity"
+							tweenStart = 0
+							tweenEnd = 1
+							tweenTime = 1.0
+							system_tween()
 						timer.stop()
 
 
@@ -612,9 +624,15 @@ func clean():
 	print("Fin du timer")
 	print("Suppression des boutons")
 	for i in range(4):
-		get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text("")
 		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(true)
-		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set("visibility/visible",false)
+		if get_node(str("vbox/Bot/VBoxBot/Bouton",i)).get("visibility/opacity") == 1:
+			targetNode = get_node(str("vbox/Bot/VBoxBot/Bouton",i))
+			tweenType = "visibility/opacity"
+			tweenStart = 1
+			tweenEnd = 0
+			tweenTime = 0.2
+			system_tween()
+			get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text("")
 	return
 
 # Button Action
@@ -707,10 +725,12 @@ func button_action():
 	get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 # Affichage Smoothie
 	print("Affichage")
-	start_vis = 0
-	end_vis = 1
-	tween.interpolate_property(label, "visibility/opacity", start_vis, end_vis, 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN)
-	tween.start()
+	targetNode = label
+	tweenType = "visibility/opacity"
+	tweenStart = 0
+	tweenEnd = 1
+	tweenTime = 1.0
+	system_tween()
 	status()
 	return
 
@@ -824,6 +844,13 @@ func message_system():
 # Reset de la sauvegarde
 func _on_resetSave_pressed():
 	get_node("Popup").popup()
+
+# Utilisation du Tween
+func system_tween():
+	tween = get_node("Tween")
+	tween.interpolate_property(targetNode, tweenType, tweenStart, tweenEnd, tweenTime, Tween.TRANS_LINEAR, Tween.EASE_IN)
+	tween.start()
+	return
 
 # System Save
 # SYSTEME DE SAUVEGARDE
