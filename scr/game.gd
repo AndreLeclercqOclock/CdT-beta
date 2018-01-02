@@ -239,11 +239,8 @@ func _ready():
 						buttonTarget = []
 			print("Fin du chargement")
 			print("Réécriture Dialogues dans le JSON")
-			if LOAD.MusicButton == 1:
-				get_node("SampleBKG").play(str(LOAD.actualBGSound))
-				get_node("SampleMSG").set_default_volume_db(0)
-			soundOptions()
-			get_node("Loading").hide()
+		soundOptions()
+		get_node("Loading").hide()
 			
 
 	if LOAD.fileExists == true and LOAD.currentNextTime <= OS.get_unix_time():
@@ -261,7 +258,6 @@ func _ready():
 
 	if LOAD.fileExists == false:
 		get_node("SampleMSG").set_default_volume_db(0)
-		soundOptions()
 		start()
 		
 # Affichage de l'heure
@@ -960,7 +956,8 @@ func _on_Reset_pressed():
 	LOAD.saveTime = []
 	LOAD.saveNextTime = []
 	LOAD._load_chapter()
-	
+	return
+
 func _on_Site_pressed():
 	OS.shell_open("http://www.chroniquesdetalos.com")
 
