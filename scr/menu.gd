@@ -43,7 +43,6 @@ func button_pressed(i,y):
 
 
 func _on_Start_pressed():
-	#get_tree().change_scene("res://scn/base.tscn.xml")
 	get_node("SelectChapter").popup()
 	for i in LOAD.lang._Language.Config.scenarioFile:
 		y = y+1

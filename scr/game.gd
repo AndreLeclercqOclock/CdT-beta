@@ -237,7 +237,6 @@ func _ready():
 						label.set("visibility/opacity",1)
 						buttonText = []
 						buttonTarget = []
-				#LOAD.time_delay = LOAD.dial[LOAD.currentDial].time
 			print("Fin du chargement")
 			print("Réécriture Dialogues dans le JSON")
 			if LOAD.MusicButton == 1:
@@ -350,19 +349,10 @@ func start():
 					get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 			# Affichage Smoothie
 					print("Affichage")
-					#visible = 0
-					#LOAD.time_delay = 0.05
 					start_vis = 0
 					end_vis = 1
 					tween.interpolate_property(label, "visibility/opacity", start_vis, end_vis, 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN)
 					tween.start()
-					#status()
-					#for i in range(9):
-					#	label.set("visibility/opacity",visible)
-					#	visible = visible + 0.10
-					#	timer.set_wait_time(LOAD.time_delay)
-					#	timer.start()
-					#	yield(get_node("Timer"), "timeout")
 			#Création de la node LABEL
 			########### REFONTE #############
 					print("Traitement du Dialogue")
@@ -395,19 +385,10 @@ func start():
 						get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 			# Affichage Smoothie
 						print("Affichage")
-						#visible = 0
-						#LOAD.time_delay = 0.05
 						start_vis = 0
 						end_vis = 1
 						tween.interpolate_property(label, "visibility/opacity", start_vis, end_vis, 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN)
 						tween.start()
-						#status()
-						#for i in range(9):
-						#	label.set("visibility/opacity",visible)
-						#	visible = visible + 0.10
-						#	timer.set_wait_time(LOAD.time_delay)
-						#	timer.start()
-						#	yield(get_node("Timer"), "timeout")
 
 			# Fourchettes en fonction de la taille du texte.
 					# Inférieur à 0 seconde
@@ -494,19 +475,10 @@ func start():
 
 				# Affichage Smoothie
 						print("Affichage")
-						#visible = 0
-						#LOAD.time_delay = 0.05
 						start_vis = 0
 						end_vis = 1
 						tween.interpolate_property(label, "visibility/opacity", start_vis, end_vis, 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN)
 						tween.start()
-						#status()
-						#for i in range(9):
-						#	label.set("visibility/opacity",visible)
-						#	visible = visible + 0.10
-						#	timer.set_wait_time(LOAD.time_delay)
-						#	timer.start()
-						#	yield(get_node("Timer"), "timeout")
 
 				# Temporisation
 						print("Temporisation : 0.75 seconde(s)")
@@ -739,19 +711,10 @@ func button_action():
 	get_node("vbox/Mid/DialBox").set_v_scroll(LOAD.vscroll)
 # Affichage Smoothie
 	print("Affichage")
-	#visible = 0
-	#LOAD.time_delay = 0.05
 	start_vis = 0
 	end_vis = 1
 	tween.interpolate_property(label, "visibility/opacity", start_vis, end_vis, 1.0, Tween.TRANS_LINEAR, Tween.EASE_IN)
 	tween.start()
-	#status()
-	#for i in range(9):
-	#	label.set("visibility/opacity",visible)
-	#	visible = visible + 0.10
-	#	timer.set_wait_time(LOAD.time_delay)
-	#	timer.start()
-	#	yield(get_node("Timer"), "timeout")
 	status()
 	return
 
