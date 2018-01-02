@@ -144,8 +144,16 @@ func _ready():
 
 		print("Récupération du chapitre en cours")
 		chapterSave = saveg._SaveGlobal.chapter
-		MusicButton = saveg._SaveGlobal.music 
-		SoundButton = saveg._SaveGlobal.sound 
+		if saveg._SaveGlobal.has("music"):
+			MusicButton = saveg._SaveGlobal.music
+		else:
+			MusicButton = 1
+			saveGlobal()
+		if saveg._SaveGlobal.has("sound"):
+			SoundButton = saveg._SaveGlobal.sound
+		else:
+			SoundButton = 1
+			saveGlobal()
 
 
 	if fileExists == false:
