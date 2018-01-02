@@ -582,7 +582,6 @@ texture = ExtResource( 9 )
 
 [node name="vbox" type="VBoxContainer" parent="Game"]
 
-editor/display_folded = true
 rect/min_size = Vector2( 1080, 1920 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -764,7 +763,6 @@ alignment = 0
 
 [node name="LabelTime" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
 
-editor/display_folded = true
 visibility/visible = false
 visibility/opacity = 0.0
 rect/min_size = Vector2( 925, 55 )
@@ -793,9 +791,15 @@ z/relative = false
 texture = ExtResource( 8 )
 centered = false
 
+[node name="Tween" type="Tween" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelTime"]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
 [node name="LabelStat" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
 
-editor/display_folded = true
 visibility/visible = false
 visibility/opacity = 0.0
 rect/min_size = Vector2( 825, 50 )
@@ -821,12 +825,18 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 12 )
 animation = "default"
-frame = 4
+frame = 8
 playing = true
+
+[node name="Tween" type="Tween" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelStat"]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
 
-editor/display_folded = true
 visibility/visible = false
 visibility/opacity = 0.0
 rect/min_size = Vector2( 925, 55 )
@@ -856,10 +866,17 @@ z/relative = false
 texture = ExtResource( 8 )
 centered = false
 
+[node name="Tween" type="Tween" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelDial"]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
 [node name="LabelRep" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
 
 visibility/visible = false
-visibility/self_opacity = 0.0
+visibility/opacity = 0.0
 rect/min_size = Vector2( 925, 100 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -877,6 +894,13 @@ autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="Tween" type="Tween" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelRep"]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
 
 [node name="LabelSys" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
 

@@ -115,29 +115,32 @@
                     ✔ Chapitre 1 @done (2017-12-21 16:05:03)
                     ✔ Chapitre 2 @done (2017-12-22 16:23:14)
                     ✔ Chapitre 3 @done (2017-12-22 16:23:15)
+            ✔ Création de la version Navigateur @done (2017-12-31 16:21:31)
+                ✔ Adaptation de l'application @done (2017-12-23 11:11:07)
+                ✔ Selection des Chapitre bridé au premier Chapitre de l'Opus 0 @done (2017-12-23 11:11:09).
+                ✔ Adaptation des sons & musiques pour la version HTML (oggVORBIS) @done (2017-12-31 16:19:35)
+                ✔ Ajout de la démo dans le site des Chroniques @done (2017-12-31 16:19:36)
+                ✔ Ajouter bouton (temporaire) pour la gestion du son & musique @done (2017-12-31 16:20:07)
+            ✔ Divers @done (2017-12-31 16:22:57)
+                ✔ Amélioration de la reset des sauvegarde @done (2017-12-22 18:02:19)
+                ✔ Ajouter lecture de sons BKG sur les réponses @done (2017-12-21 16:10:41)
+        1.1:
             ☐ Création du thème GUI
                 ☐ Création d'un Theme
                 ☐ Refonte Menu
                 ☐ Refonte Jeu
-            ✔ Création de la version Navigateur @done (2017-12-23 11:11:10)
-                ✔ Adaptation de l'application @done (2017-12-23 11:11:07)
-                ✔ Selection des Chapitre bridé au premier Chapitre de l'Opus 0 @done (2017-12-23 11:11:09)
-                ☐ Ajout de la démo dans le site des Chroniques
+            ☐ Création Panel Dev
+                ☐ Affichage des references
+                ☐ Affichage du next
+                ☐ Affichage du timer
+                ☐ Désactivation du timer
+                ☐ Choix du dialogue à afficher
+            ☐ Amélioration des options
+                ☐ Sons notification (messages)
+                ☐ Sons ambiances (thèmes & ambiances)
+                ☐ Choix de la langue
             ☐ Divers
-                ☐ Amélioration des options
-                    ☐ Sons notification (messages)
-                    ☐ Sons ambiances (thèmes & ambiances)
-                    ☐ Choix de la langue
-                ☐ Optimisation de l'affichage "smoothie" des textes
-                ✔ Amélioration de la reset des sauvegarde @done (2017-12-22 18:02:19)
-                ☐ Création Panel Dev
-                    ☐ Affichage des references
-                    ☐ Affichage du next
-                    ☐ Affichage du timer
-                    ☐ Désactivation du timer
-                    ☐ Choix du dialogue à afficher
-                ✔ Ajouter lecture de sons BKG sur les réponses @done (2017-12-21 16:10:41)
-            
+                ✔ Optimisation de l'affichage "smoothie" des textes @done (2018-1-2 12:26:11)
 
     Divers:
         ✘ Test sur OS.low @cancelled (2017-12-19 18:44:41)
@@ -146,6 +149,7 @@
             ☐ Images
             ☐ Sons
         ☐ Refonte du menu (image => textes)
+        ☐ Outils de nettoyage du JSON (python ? godot ?)
         ☐ Optimiser les "morts"
             ☐ Afficher la dernière entrée du tableau
             ☐ Comparer la dernière entrée du tableau
