@@ -1,9 +1,9 @@
 [gd_scene load_steps=23 format=1]
 
 [ext_resource path="res://scr/menu.gd" type="Script" id=1]
-[ext_resource path="res://img/bouton_base.jpg" type="Texture" id=2]
-[ext_resource path="res://img/bouton_clic.jpg" type="Texture" id=3]
-[ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://img/bouton_base.jpg" type="Texture" id=3]
+[ext_resource path="res://img/bouton_clic.jpg" type="Texture" id=4]
 [ext_resource path="res://img/fond_menu.jpg" type="Texture" id=5]
 [ext_resource path="res://img/Fond_general.jpg" type="Texture" id=6]
 [ext_resource path="res://snd/Bkg_main_menu.smp" type="Sample" id=7]
@@ -16,28 +16,28 @@
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 4 )
+font/font = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 4 )
+font/font = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
 
 font/size = 80
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 4 )
+font/font = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=4]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 4 )
+font/font = ExtResource( 2 )
 
 [sub_resource type="SampleLibrary" id=5]
 
@@ -53,49 +53,49 @@ samples/Bkg_main_menu = {
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 4 )
+font/font = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=7]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 4 )
+font/font = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=8]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 4 )
+font/font = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=9]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 4 )
+font/font = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=10]
 
 font/size = 100
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 4 )
+font/font = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=11]
 
 font/size = 35
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 4 )
+font/font = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=12]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 4 )
+font/font = ExtResource( 2 )
 
 [node name="Menu" type="Control"]
 
@@ -109,7 +109,7 @@ margin/right = 40.0
 margin/bottom = 40.0
 script/script = ExtResource( 1 )
 
-[node name="Start" type="TextureButton" parent="."]
+[node name="Start" type="Button" parent="."]
 
 editor/display_folded = true
 focus/ignore_mouse = false
@@ -123,10 +123,7 @@ margin/bottom = 1671.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
-textures/pressed = ExtResource( 3 )
-params/resize_mode = 1
-params/stretch_mode = 0
+flat = false
 
 [node name="Label" type="Label" parent="Start"]
 
@@ -159,8 +156,8 @@ margin/bottom = 1856.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
-textures/pressed = ExtResource( 3 )
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
 params/resize_mode = 1
 params/stretch_mode = 0
 
@@ -195,8 +192,8 @@ margin/bottom = 1855.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
-textures/pressed = ExtResource( 3 )
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
 params/resize_mode = 1
 params/stretch_mode = 0
 
@@ -268,9 +265,9 @@ disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
-textures/pressed = ExtResource( 3 )
-textures/disabled = ExtResource( 3 )
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
+textures/disabled = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -330,8 +327,8 @@ margin/bottom = 1687.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
-textures/pressed = ExtResource( 3 )
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -410,8 +407,8 @@ margin/bottom = 158.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
-textures/pressed = ExtResource( 3 )
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -447,8 +444,8 @@ margin/bottom = 307.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
-textures/pressed = ExtResource( 3 )
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -484,8 +481,8 @@ margin/bottom = 456.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
-textures/pressed = ExtResource( 3 )
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -589,8 +586,8 @@ margin/bottom = 926.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
-textures/pressed = ExtResource( 3 )
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -699,8 +696,8 @@ margin/bottom = 1783.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
-textures/pressed = ExtResource( 3 )
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 

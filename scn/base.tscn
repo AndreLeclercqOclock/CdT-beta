@@ -1,122 +1,1165 @@
-[gd_scene load_steps=81 format=1]
+[gd_scene load_steps=91 format=1]
 
-[ext_resource path="res://scr/game.gd" type="Script" id=1]
-[ext_resource path="res://img/music_ON.png" type="Texture" id=2]
-[ext_resource path="res://img/sound_ON.png" type="Texture" id=3]
-[ext_resource path="res://img/bouton_base.jpg" type="Texture" id=4]
-[ext_resource path="res://img/bouton_clic.jpg" type="Texture" id=5]
-[ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://img/twitter.jpg" type="Texture" id=7]
-[ext_resource path="res://img/facebook.jpg" type="Texture" id=8]
-[ext_resource path="res://img/youtube.jpg" type="Texture" id=9]
-[ext_resource path="res://img/fond_message_large.png" type="Texture" id=10]
-[ext_resource path="res://img/Fond_general.jpg" type="Texture" id=11]
-[ext_resource path="res://img/header.jpg" type="Texture" id=12]
-[ext_resource path="res://img/avatar.png" type="Texture" id=13]
-[ext_resource path="res://font/DEJAVUSANSCONDENSED-BOLD.TTF" type="DynamicFontData" id=14]
-[ext_resource path="res://font/DEJAVUSANS.TTF" type="DynamicFontData" id=15]
-[ext_resource path="res://font/DEJAVUSANSMONO.TTF" type="DynamicFontData" id=16]
-[ext_resource path="res://img/LED_enligne.png" type="Texture" id=17]
-[ext_resource path="res://img/load/activite_ecriture00.png" type="Texture" id=18]
-[ext_resource path="res://img/load/activite_ecriture01.png" type="Texture" id=19]
-[ext_resource path="res://img/load/activite_ecriture02.png" type="Texture" id=20]
-[ext_resource path="res://img/load/activite_ecriture03.png" type="Texture" id=21]
-[ext_resource path="res://img/load/activite_ecriture04.png" type="Texture" id=22]
-[ext_resource path="res://img/load/activite_ecriture05.png" type="Texture" id=23]
-[ext_resource path="res://img/load/activite_ecriture06.png" type="Texture" id=24]
-[ext_resource path="res://img/load/activite_ecriture07.png" type="Texture" id=25]
-[ext_resource path="res://img/load/activite_ecriture08.png" type="Texture" id=26]
-[ext_resource path="res://img/load/activite_ecriture09.png" type="Texture" id=27]
-[ext_resource path="res://img/load/activite_ecriture10.png" type="Texture" id=28]
-[ext_resource path="res://img/load/activite_ecriture11.png" type="Texture" id=29]
-[ext_resource path="res://img/load/activite_ecriture12.png" type="Texture" id=30]
-[ext_resource path="res://img/load/activite_ecriture13.png" type="Texture" id=31]
-[ext_resource path="res://img/load/activite_ecriture14.png" type="Texture" id=32]
-[ext_resource path="res://img/load/activite_ecriture15.png" type="Texture" id=33]
-[ext_resource path="res://img/load/activite_ecriture16.png" type="Texture" id=34]
-[ext_resource path="res://img/load/activite_ecriture17.png" type="Texture" id=35]
-[ext_resource path="res://img/load/activite_ecriture18.png" type="Texture" id=36]
-[ext_resource path="res://img/load/activite_ecriture19.png" type="Texture" id=37]
-[ext_resource path="res://img/load/activite_ecriture20.png" type="Texture" id=38]
-[ext_resource path="res://img/load/activite_ecriture21.png" type="Texture" id=39]
-[ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" id=40]
-[ext_resource path="res://img/footer.jpg" type="Texture" id=41]
-[ext_resource path="res://snd/msg_received.smp" type="Sample" id=42]
-[ext_resource path="res://snd/msg_send.smp" type="Sample" id=43]
-[ext_resource path="res://snd/msg_sys.smp" type="Sample" id=44]
-[ext_resource path="res://snd/Bkg_Crypte.smp" type="Sample" id=45]
-[ext_resource path="res://snd/Bkg_Eau.smp" type="Sample" id=46]
-[ext_resource path="res://snd/Bkg_Grotte.smp" type="Sample" id=47]
-[ext_resource path="res://snd/Bkg_Salle.smp" type="Sample" id=48]
-[ext_resource path="res://snd/Bkg_SalleHaute.smp" type="Sample" id=49]
-[ext_resource path="res://snd/Bkg_ThemeFin.smp" type="Sample" id=50]
-[ext_resource path="res://snd/Trg_Breath.smp" type="Sample" id=51]
-[ext_resource path="res://snd/Trg_Breath_Short.smp" type="Sample" id=52]
-[ext_resource path="res://snd/Trg_Chute.smp" type="Sample" id=53]
-[ext_resource path="res://snd/Trg_Effondrement.smp" type="Sample" id=54]
-[ext_resource path="res://snd/Trg_Hole.smp" type="Sample" id=55]
-[ext_resource path="res://snd/Trg_Loquet.smp" type="Sample" id=56]
-[ext_resource path="res://snd/Trg_Noyade.smp" type="Sample" id=57]
-[ext_resource path="res://snd/Trg_Ombre.smp" type="Sample" id=58]
-[ext_resource path="res://snd/Trg_Tableaux.smp" type="Sample" id=59]
+[ext_resource path="res://font/Roboto-Light.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://img/texture.png" type="Texture" id=2]
+[ext_resource path="res://scr/game.gd" type="Script" id=3]
+[ext_resource path="res://img/avatar.png" type="Texture" id=4]
+[ext_resource path="res://font/DEJAVUSANSMONO.TTF" type="DynamicFontData" id=5]
+[ext_resource path="res://font/DEJAVUSANS.TTF" type="DynamicFontData" id=6]
+[ext_resource path="res://img/LED_enligne.png" type="Texture" id=7]
+[ext_resource path="res://font/Roboto-Bold.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://img/load/activite_ecriture00.png" type="Texture" id=9]
+[ext_resource path="res://img/load/activite_ecriture01.png" type="Texture" id=10]
+[ext_resource path="res://img/load/activite_ecriture02.png" type="Texture" id=11]
+[ext_resource path="res://img/load/activite_ecriture03.png" type="Texture" id=12]
+[ext_resource path="res://img/load/activite_ecriture04.png" type="Texture" id=13]
+[ext_resource path="res://img/load/activite_ecriture05.png" type="Texture" id=14]
+[ext_resource path="res://img/load/activite_ecriture06.png" type="Texture" id=15]
+[ext_resource path="res://img/load/activite_ecriture07.png" type="Texture" id=16]
+[ext_resource path="res://img/load/activite_ecriture08.png" type="Texture" id=17]
+[ext_resource path="res://img/load/activite_ecriture09.png" type="Texture" id=18]
+[ext_resource path="res://img/load/activite_ecriture10.png" type="Texture" id=19]
+[ext_resource path="res://img/load/activite_ecriture11.png" type="Texture" id=20]
+[ext_resource path="res://img/load/activite_ecriture12.png" type="Texture" id=21]
+[ext_resource path="res://img/load/activite_ecriture13.png" type="Texture" id=22]
+[ext_resource path="res://img/load/activite_ecriture14.png" type="Texture" id=23]
+[ext_resource path="res://img/load/activite_ecriture15.png" type="Texture" id=24]
+[ext_resource path="res://img/load/activite_ecriture16.png" type="Texture" id=25]
+[ext_resource path="res://img/load/activite_ecriture17.png" type="Texture" id=26]
+[ext_resource path="res://img/load/activite_ecriture18.png" type="Texture" id=27]
+[ext_resource path="res://img/load/activite_ecriture19.png" type="Texture" id=28]
+[ext_resource path="res://img/load/activite_ecriture20.png" type="Texture" id=29]
+[ext_resource path="res://img/load/activite_ecriture21.png" type="Texture" id=30]
+[ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" id=31]
+[ext_resource path="res://img/footer.jpg" type="Texture" id=32]
+[ext_resource path="res://snd/msg_received.smp" type="Sample" id=33]
+[ext_resource path="res://snd/msg_send.smp" type="Sample" id=34]
+[ext_resource path="res://snd/msg_sys.smp" type="Sample" id=35]
+[ext_resource path="res://snd/Bkg_Crypte.smp" type="Sample" id=36]
+[ext_resource path="res://snd/Bkg_Eau.smp" type="Sample" id=37]
+[ext_resource path="res://snd/Bkg_Grotte.smp" type="Sample" id=38]
+[ext_resource path="res://snd/Bkg_Salle.smp" type="Sample" id=39]
+[ext_resource path="res://snd/Bkg_SalleHaute.smp" type="Sample" id=40]
+[ext_resource path="res://snd/Bkg_ThemeFin.smp" type="Sample" id=41]
+[ext_resource path="res://snd/Trg_Breath.smp" type="Sample" id=42]
+[ext_resource path="res://snd/Trg_Breath_Short.smp" type="Sample" id=43]
+[ext_resource path="res://snd/Trg_Chute.smp" type="Sample" id=44]
+[ext_resource path="res://snd/Trg_Effondrement.smp" type="Sample" id=45]
+[ext_resource path="res://snd/Trg_Hole.smp" type="Sample" id=46]
+[ext_resource path="res://snd/Trg_Loquet.smp" type="Sample" id=47]
+[ext_resource path="res://snd/Trg_Noyade.smp" type="Sample" id=48]
+[ext_resource path="res://snd/Trg_Ombre.smp" type="Sample" id=49]
+[ext_resource path="res://snd/Trg_Tableaux.smp" type="Sample" id=50]
+[ext_resource path="res://img/Fond_general.jpg" type="Texture" id=51]
+[ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=52]
+[ext_resource path="res://img/music_ON.png" type="Texture" id=53]
+[ext_resource path="res://img/sound_ON.png" type="Texture" id=54]
+[ext_resource path="res://img/bouton_base.jpg" type="Texture" id=55]
+[ext_resource path="res://img/bouton_clic.jpg" type="Texture" id=56]
+[ext_resource path="res://img/twitter.jpg" type="Texture" id=57]
+[ext_resource path="res://img/facebook.jpg" type="Texture" id=58]
+[ext_resource path="res://img/youtube.jpg" type="Texture" id=59]
+[ext_resource path="res://img/fond_message_large.png" type="Texture" id=60]
 
 [sub_resource type="DynamicFont" id=1]
 
-font/size = 40
+font/size = 16
 font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 6 )
+font/use_filter = false
+font/font = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="StyleBoxFlat" id=2]
 
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 6 )
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 1 )
+light_color = Color( 0.8, 0.8, 0.8, 1 )
+dark_color = Color( 0.8, 0.8, 0.8, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="StyleBoxTexture" id=3]
 
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 6 )
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 13, 167, 158, 40 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="StyleBoxTexture" id=4]
 
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 6 )
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 13, 167, 158, 40 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="StyleBoxTexture" id=5]
 
-font/size = 50
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 14 )
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 13, 167, 158, 40 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 1.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="StyleBoxTexture" id=6]
 
-font/size = 35
-font/use_mipmaps = true
-font/use_filter = true
-font/font = ExtResource( 15 )
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 13, 167, 158, 40 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
 
 [sub_resource type="DynamicFont" id=7]
 
-font/size = 20
+font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 16 )
+font/font = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="Theme" id=8]
 
-font/size = 30
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 16 )
+Button/colors/font_color = Color( 0.913725, 0.929412, 0.94902, 1 )
+Button/colors/font_color_disabled = Color( 0.101563, 0.101563, 0.101563, 1 )
+Button/colors/font_color_hover = Color( 0.608093, 0.624359, 0.640625, 1 )
+Button/colors/font_color_pressed = Color( 0.470588, 0.486275, 0.501961, 1 )
+Button/constants/hseparation = 0
+Button/fonts/font = SubResource( 1 )
+Button/styles/disabled = SubResource( 2 )
+Button/styles/focus = SubResource( 3 )
+Button/styles/hover = SubResource( 4 )
+Button/styles/normal = SubResource( 5 )
+Button/styles/pressed = SubResource( 6 )
+ButtonGroup/styles/panel = null
+CheckBox/colors/font_color = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_hover = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+CheckBox/constants/check_vadjust = 0
+CheckBox/constants/hseparation = 0
+CheckBox/fonts/font = null
+CheckBox/icons/checked = null
+CheckBox/icons/radio_checked = null
+CheckBox/icons/radio_unchecked = null
+CheckBox/icons/unchecked = null
+CheckBox/styles/disabled = null
+CheckBox/styles/focus = null
+CheckBox/styles/hover = null
+CheckBox/styles/normal = null
+CheckBox/styles/pressed = null
+CheckButton/colors/font_color = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+CheckButton/constants/check_vadjust = 0
+CheckButton/constants/hseparation = 0
+CheckButton/fonts/font = null
+CheckButton/icons/off = null
+CheckButton/icons/on = null
+CheckButton/styles/disabled = null
+CheckButton/styles/focus = null
+CheckButton/styles/hover = null
+CheckButton/styles/normal = null
+CheckButton/styles/pressed = null
+ColorPicker/constants/color_width = 0
+ColorPicker/constants/hseparator = 0
+ColorPicker/constants/label_width = 0
+ColorPicker/constants/value_height = 0
+ColorPicker/constants/value_width = 0
+ColorPicker/icons/add_preset = null
+ColorPicker/icons/screen_picker = null
+ColorPickerButton/colors/font_color = Color( 0, 0, 0, 1 )
+ColorPickerButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+ColorPickerButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+ColorPickerButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+ColorPickerButton/constants/hseparation = 0
+ColorPickerButton/fonts/font = null
+ColorPickerButton/styles/disabled = null
+ColorPickerButton/styles/focus = null
+ColorPickerButton/styles/hover = null
+ColorPickerButton/styles/normal = null
+ColorPickerButton/styles/pressed = null
+Dialogs/constants/button_margin = 0
+Dialogs/constants/margin = 0
+Editor/colors/fg_error = Color( 0, 0, 0, 1 )
+Editor/colors/fg_selected = Color( 0, 0, 0, 1 )
+Editor/colors/prop_category = Color( 0, 0, 0, 1 )
+Editor/colors/prop_section = Color( 0, 0, 0, 1 )
+Editor/colors/prop_subsection = Color( 0, 0, 0, 1 )
+EditorFonts/fonts/doc = null
+EditorFonts/fonts/doc_source = null
+EditorFonts/fonts/doc_title = null
+EditorFonts/fonts/source = null
+EditorIcons/icons/AcceptDialog = null
+EditorIcons/icons/Add = null
+EditorIcons/icons/AddTrack = null
+EditorIcons/icons/Anchor = null
+EditorIcons/icons/AnimExport = null
+EditorIcons/icons/AnimExportAll = null
+EditorIcons/icons/AnimGet = null
+EditorIcons/icons/AnimGetHl = null
+EditorIcons/icons/AnimImport = null
+EditorIcons/icons/AnimImportAll = null
+EditorIcons/icons/AnimSet = null
+EditorIcons/icons/AnimSetHl = null
+EditorIcons/icons/AnimatedSprite = null
+EditorIcons/icons/AnimatedSprite3D = null
+EditorIcons/icons/Animation = null
+EditorIcons/icons/AnimationNode = null
+EditorIcons/icons/AnimationPlay = null
+EditorIcons/icons/AnimationPlayer = null
+EditorIcons/icons/AnimationSet = null
+EditorIcons/icons/AnimationTree = null
+EditorIcons/icons/AnimationTreePlayer = null
+EditorIcons/icons/Area = null
+EditorIcons/icons/Area2D = null
+EditorIcons/icons/ArrayData = null
+EditorIcons/icons/ArrayFloat = null
+EditorIcons/icons/ArrayInt = null
+EditorIcons/icons/ArrayString = null
+EditorIcons/icons/ArrayVariant = null
+EditorIcons/icons/ArrowLeft = null
+EditorIcons/icons/ArrowLeftDisabled = null
+EditorIcons/icons/ArrowRight = null
+EditorIcons/icons/ArrowRightDisabled = null
+EditorIcons/icons/ArrowUp = null
+EditorIcons/icons/ArrowUpDisabled = null
+EditorIcons/icons/AtlasTexture = null
+EditorIcons/icons/AudioStreamGibberish = null
+EditorIcons/icons/AudioStreamMPC = null
+EditorIcons/icons/AudioStreamOGGVorbis = null
+EditorIcons/icons/AudioStreamOpus = null
+EditorIcons/icons/AudioStreamSpeex = null
+EditorIcons/icons/AutoPlay = null
+EditorIcons/icons/BCSFX = null
+EditorIcons/icons/BGColorFX = null
+EditorIcons/icons/BGImageFX = null
+EditorIcons/icons/Back = null
+EditorIcons/icons/BackBufferCopy = null
+EditorIcons/icons/BackDisabled = null
+EditorIcons/icons/BackNo = null
+EditorIcons/icons/Bake = null
+EditorIcons/icons/BakedLight = null
+EditorIcons/icons/BakedLightInstance = null
+EditorIcons/icons/BakedLightSampler = null
+EditorIcons/icons/BitmapFont = null
+EditorIcons/icons/Blend = null
+EditorIcons/icons/Bone = null
+EditorIcons/icons/BoneAttachment = null
+EditorIcons/icons/BoneTrack = null
+EditorIcons/icons/Bool = null
+EditorIcons/icons/BoxShape = null
+EditorIcons/icons/Button = null
+EditorIcons/icons/ButtonGroup = null
+EditorIcons/icons/Camera = null
+EditorIcons/icons/Camera2D = null
+EditorIcons/icons/CanvasItem = null
+EditorIcons/icons/CanvasItemMaterial = null
+EditorIcons/icons/CanvasItemShader = null
+EditorIcons/icons/CanvasItemShaderGraph = null
+EditorIcons/icons/CanvasLayer = null
+EditorIcons/icons/CanvasModulate = null
+EditorIcons/icons/CapsuleShape = null
+EditorIcons/icons/CapsuleShape2D = null
+EditorIcons/icons/CenterContainer = null
+EditorIcons/icons/CharacterBody = null
+EditorIcons/icons/CharacterCamera = null
+EditorIcons/icons/CheckBox = null
+EditorIcons/icons/CheckButton = null
+EditorIcons/icons/Checkerboard = null
+EditorIcons/icons/CircleShape2D = null
+EditorIcons/icons/ClassList = null
+EditorIcons/icons/Click2Edit = null
+EditorIcons/icons/Close = null
+EditorIcons/icons/CloseHover = null
+EditorIcons/icons/Collapse = null
+EditorIcons/icons/CollapseHl = null
+EditorIcons/icons/Collision = null
+EditorIcons/icons/Collision2D = null
+EditorIcons/icons/CollisionPolygon = null
+EditorIcons/icons/CollisionPolygon2D = null
+EditorIcons/icons/CollisionShape = null
+EditorIcons/icons/CollisionShape2D = null
+EditorIcons/icons/Color = null
+EditorIcons/icons/ColorFrame = null
+EditorIcons/icons/ColorPick = null
+EditorIcons/icons/ColorPicker = null
+EditorIcons/icons/ColorPickerButton = null
+EditorIcons/icons/ColorRamp = null
+EditorIcons/icons/ConcavePolygonShape = null
+EditorIcons/icons/ConcavePolygonShape2D = null
+EditorIcons/icons/ConeTwistJoint = null
+EditorIcons/icons/ConfirmationDialog = null
+EditorIcons/icons/Connect = null
+EditorIcons/icons/ConnectionAndGroups = null
+EditorIcons/icons/Console = null
+EditorIcons/icons/Container = null
+EditorIcons/icons/Control = null
+EditorIcons/icons/ControlAlignBottomCenter = null
+EditorIcons/icons/ControlAlignBottomLeft = null
+EditorIcons/icons/ControlAlignBottomRight = null
+EditorIcons/icons/ControlAlignBottomWide = null
+EditorIcons/icons/ControlAlignCenter = null
+EditorIcons/icons/ControlAlignCenterLeft = null
+EditorIcons/icons/ControlAlignCenterRight = null
+EditorIcons/icons/ControlAlignLeftCenter = null
+EditorIcons/icons/ControlAlignLeftWide = null
+EditorIcons/icons/ControlAlignRightCenter = null
+EditorIcons/icons/ControlAlignRightWide = null
+EditorIcons/icons/ControlAlignTopCenter = null
+EditorIcons/icons/ControlAlignTopLeft = null
+EditorIcons/icons/ControlAlignTopRight = null
+EditorIcons/icons/ControlAlignTopWide = null
+EditorIcons/icons/ControlAlignWide = null
+EditorIcons/icons/ControlHcenterWide = null
+EditorIcons/icons/ControlVcenterWide = null
+EditorIcons/icons/ConvexPolygonShape = null
+EditorIcons/icons/ConvexPolygonShape2D = null
+EditorIcons/icons/CreateNewSceneFrom = null
+EditorIcons/icons/CubeGridMap = null
+EditorIcons/icons/Curve = null
+EditorIcons/icons/CurveClose = null
+EditorIcons/icons/CurveConstant = null
+EditorIcons/icons/CurveCreate = null
+EditorIcons/icons/CurveCurve = null
+EditorIcons/icons/CurveDelete = null
+EditorIcons/icons/CurveEdit = null
+EditorIcons/icons/CurveIn = null
+EditorIcons/icons/CurveInOut = null
+EditorIcons/icons/CurveLinear = null
+EditorIcons/icons/CurveOut = null
+EditorIcons/icons/CurveOutIn = null
+EditorIcons/icons/CylinderShape = null
+EditorIcons/icons/DOFBlurFX = null
+EditorIcons/icons/DampedSpringJoint2D = null
+EditorIcons/icons/Debug = null
+EditorIcons/icons/DebugContinue = null
+EditorIcons/icons/DebugNext = null
+EditorIcons/icons/DebugStep = null
+EditorIcons/icons/DefaultProjectIcon = null
+EditorIcons/icons/Del = null
+EditorIcons/icons/DependencyChanged = null
+EditorIcons/icons/DependencyChangedHl = null
+EditorIcons/icons/DependencyLocalChanged = null
+EditorIcons/icons/DependencyLocalChangedHl = null
+EditorIcons/icons/DependencyOk = null
+EditorIcons/icons/DependencyOkHl = null
+EditorIcons/icons/DirectionalLight = null
+EditorIcons/icons/DocCodeFont = null
+EditorIcons/icons/DocFont = null
+EditorIcons/icons/DocTitleFont = null
+EditorIcons/icons/Down = null
+EditorIcons/icons/Dummy = null
+EditorIcons/icons/Duplicate = null
+EditorIcons/icons/DynamicCharacterBody = null
+EditorIcons/icons/DynamicCustomBody = null
+EditorIcons/icons/DynamicFont = null
+EditorIcons/icons/DynamicFontData = null
+EditorIcons/icons/DynamicRigidBody = null
+EditorIcons/icons/Edit = null
+EditorIcons/icons/EditKey = null
+EditorIcons/icons/EditPivot = null
+EditorIcons/icons/EditResource = null
+EditorIcons/icons/EditSmall = null
+EditorIcons/icons/Editor2D = null
+EditorIcons/icons/Editor3DHandle = null
+EditorIcons/icons/EditorFocus = null
+EditorIcons/icons/EditorHandle = null
+EditorIcons/icons/EditorNode = null
+EditorIcons/icons/EditorPivot = null
+EditorIcons/icons/EditorPlugin = null
+EditorIcons/icons/EditorRect2D = null
+EditorIcons/icons/EmptyControl = null
+EditorIcons/icons/Enum = null
+EditorIcons/icons/Error = null
+EditorIcons/icons/ErrorSign = null
+EditorIcons/icons/EventPlayer = null
+EditorIcons/icons/Expand = null
+EditorIcons/icons/ExpandHl = null
+EditorIcons/icons/Favorites = null
+EditorIcons/icons/File = null
+EditorIcons/icons/FileBig = null
+EditorIcons/icons/FileDialog = null
+EditorIcons/icons/FileList = null
+EditorIcons/icons/FileServer = null
+EditorIcons/icons/FileServerActive = null
+EditorIcons/icons/FileThumbnail = null
+EditorIcons/icons/Filesystem = null
+EditorIcons/icons/FixedMaterial = null
+EditorIcons/icons/FogFX = null
+EditorIcons/icons/Folder = null
+EditorIcons/icons/FolderBig = null
+EditorIcons/icons/FolderScene = null
+EditorIcons/icons/Font = null
+EditorIcons/icons/Forward = null
+EditorIcons/icons/ForwardNo = null
+EditorIcons/icons/Func = null
+EditorIcons/icons/GDScript = null
+EditorIcons/icons/GammaFX = null
+EditorIcons/icons/Generic6DOFJoint = null
+EditorIcons/icons/GizmoDirectionalLight = null
+EditorIcons/icons/GizmoLight = null
+EditorIcons/icons/GizmoListener = null
+EditorIcons/icons/GizmoSpatialSamplePlayer = null
+EditorIcons/icons/GizmoSpatialStreamPlayer = null
+EditorIcons/icons/GlowFX = null
+EditorIcons/icons/Godot = null
+EditorIcons/icons/GodotAssetDefault = null
+EditorIcons/icons/GraphColorRamp = null
+EditorIcons/icons/GraphComment = null
+EditorIcons/icons/GraphCubeUniform = null
+EditorIcons/icons/GraphCurveMap = null
+EditorIcons/icons/GraphDefaultTexture = null
+EditorIcons/icons/GraphEdit = null
+EditorIcons/icons/GraphInput = null
+EditorIcons/icons/GraphNode = null
+EditorIcons/icons/GraphRgb = null
+EditorIcons/icons/GraphRgbOp = null
+EditorIcons/icons/GraphRgbUniform = null
+EditorIcons/icons/GraphScalar = null
+EditorIcons/icons/GraphScalarInterp = null
+EditorIcons/icons/GraphScalarOp = null
+EditorIcons/icons/GraphScalarUniform = null
+EditorIcons/icons/GraphScalarsToVec = null
+EditorIcons/icons/GraphTexscreen = null
+EditorIcons/icons/GraphTextureUniform = null
+EditorIcons/icons/GraphTime = null
+EditorIcons/icons/GraphVecDp = null
+EditorIcons/icons/GraphVecInterp = null
+EditorIcons/icons/GraphVecLength = null
+EditorIcons/icons/GraphVecOp = null
+EditorIcons/icons/GraphVecScalarOp = null
+EditorIcons/icons/GraphVecToScalars = null
+EditorIcons/icons/GraphVecsToXform = null
+EditorIcons/icons/GraphVector = null
+EditorIcons/icons/GraphVectorUniform = null
+EditorIcons/icons/GraphXform = null
+EditorIcons/icons/GraphXformMult = null
+EditorIcons/icons/GraphXformScalarFunc = null
+EditorIcons/icons/GraphXformToVecs = null
+EditorIcons/icons/GraphXformUniform = null
+EditorIcons/icons/GraphXformVecFunc = null
+EditorIcons/icons/GraphXformVecImult = null
+EditorIcons/icons/GraphXformVecMult = null
+EditorIcons/icons/Grid = null
+EditorIcons/icons/GridContainer = null
+EditorIcons/icons/GridMap = null
+EditorIcons/icons/GridMapFloor = null
+EditorIcons/icons/GrooveJoint2D = null
+EditorIcons/icons/Group = null
+EditorIcons/icons/Groups = null
+EditorIcons/icons/HBoxContainer = null
+EditorIcons/icons/HButtonArray = null
+EditorIcons/icons/HScrollBar = null
+EditorIcons/icons/HSeparator = null
+EditorIcons/icons/HSlider = null
+EditorIcons/icons/HSplitContainer = null
+EditorIcons/icons/HTTPRequest = null
+EditorIcons/icons/Headphones = null
+EditorIcons/icons/Help = null
+EditorIcons/icons/Hidden = null
+EditorIcons/icons/HingeJoint = null
+EditorIcons/icons/History = null
+EditorIcons/icons/Hsize = null
+EditorIcons/icons/Iapi = null
+EditorIcons/icons/Image = null
+EditorIcons/icons/ImageTexture = null
+EditorIcons/icons/ImmediateGeometry = null
+EditorIcons/icons/ImportCheck = null
+EditorIcons/icons/ImportFail = null
+EditorIcons/icons/InfluenceZone = null
+EditorIcons/icons/Instance = null
+EditorIcons/icons/InstanceOptions = null
+EditorIcons/icons/Integer = null
+EditorIcons/icons/InterpCubic = null
+EditorIcons/icons/InterpLinear = null
+EditorIcons/icons/InterpRaw = null
+EditorIcons/icons/InterpolatedCamera = null
+EditorIcons/icons/InvalidKey = null
+EditorIcons/icons/InverseKinematics = null
+EditorIcons/icons/ItemList = null
+EditorIcons/icons/JoyAxis = null
+EditorIcons/icons/JoyButton = null
+EditorIcons/icons/Joystick = null
+EditorIcons/icons/Key = null
+EditorIcons/icons/KeyCall = null
+EditorIcons/icons/KeyHover = null
+EditorIcons/icons/KeyInvalid = null
+EditorIcons/icons/KeyInvalidHover = null
+EditorIcons/icons/KeyNext = null
+EditorIcons/icons/KeySelected = null
+EditorIcons/icons/KeyValue = null
+EditorIcons/icons/KeyXform = null
+EditorIcons/icons/Keyboard = null
+EditorIcons/icons/Keying = null
+EditorIcons/icons/KinematicBody = null
+EditorIcons/icons/KinematicBody2D = null
+EditorIcons/icons/Label = null
+EditorIcons/icons/Light2D = null
+EditorIcons/icons/LightMap = null
+EditorIcons/icons/LightOccluder2D = null
+EditorIcons/icons/Lightr = null
+EditorIcons/icons/LineEdit = null
+EditorIcons/icons/LineShape2D = null
+EditorIcons/icons/LinkButton = null
+EditorIcons/icons/ListSelect = null
+EditorIcons/icons/Listener = null
+EditorIcons/icons/LiveDebug = null
+EditorIcons/icons/Load = null
+EditorIcons/icons/Lock = null
+EditorIcons/icons/Logo = null
+EditorIcons/icons/LogoSmall = null
+EditorIcons/icons/Loop = null
+EditorIcons/icons/MainPlay = null
+EditorIcons/icons/MainStop = null
+EditorIcons/icons/MarginContainer = null
+EditorIcons/icons/MaterialPreviewCube = null
+EditorIcons/icons/MaterialPreviewCubeOff = null
+EditorIcons/icons/MaterialPreviewLight1 = null
+EditorIcons/icons/MaterialPreviewLight1Off = null
+EditorIcons/icons/MaterialPreviewLight2 = null
+EditorIcons/icons/MaterialPreviewLight2Off = null
+EditorIcons/icons/MaterialPreviewSphere = null
+EditorIcons/icons/MaterialPreviewSphereOff = null
+EditorIcons/icons/MaterialShader = null
+EditorIcons/icons/MaterialShaderGraph = null
+EditorIcons/icons/Matrix = null
+EditorIcons/icons/MenuButton = null
+EditorIcons/icons/Mesh = null
+EditorIcons/icons/MeshInstance = null
+EditorIcons/icons/MeshOld = null
+EditorIcons/icons/Meshr = null
+EditorIcons/icons/MirrorX = null
+EditorIcons/icons/MirrorY = null
+EditorIcons/icons/Mouse = null
+EditorIcons/icons/MoveDown = null
+EditorIcons/icons/MoveDownHl = null
+EditorIcons/icons/MovePoint = null
+EditorIcons/icons/MoveUp = null
+EditorIcons/icons/MoveUpHl = null
+EditorIcons/icons/MultiEdit = null
+EditorIcons/icons/MultiLine = null
+EditorIcons/icons/MultiMesh = null
+EditorIcons/icons/MultiMeshInstance = null
+EditorIcons/icons/MultiNodeEdit = null
+EditorIcons/icons/Navigation = null
+EditorIcons/icons/Navigation2D = null
+EditorIcons/icons/NavigationMeshInstance = null
+EditorIcons/icons/NavigationPolygonInstance = null
+EditorIcons/icons/New = null
+EditorIcons/icons/Node = null
+EditorIcons/icons/Node2D = null
+EditorIcons/icons/NodeRealSlot = null
+EditorIcons/icons/NodeVecSlot = null
+EditorIcons/icons/NodeWarning = null
+EditorIcons/icons/NonFavorite = null
+EditorIcons/icons/Object = null
+EditorIcons/icons/OccluderPolygon2D = null
+EditorIcons/icons/OmniLight = null
+EditorIcons/icons/OptionButton = null
+EditorIcons/icons/PHashTranslation = null
+EditorIcons/icons/PackedScene = null
+EditorIcons/icons/PaneDrag = null
+EditorIcons/icons/PaneDragHover = null
+EditorIcons/icons/Panel = null
+EditorIcons/icons/PanelContainer = null
+EditorIcons/icons/PanelTop = null
+EditorIcons/icons/Panels1 = null
+EditorIcons/icons/Panels2 = null
+EditorIcons/icons/Panels2Alt = null
+EditorIcons/icons/Panels3 = null
+EditorIcons/icons/Panels3Alt = null
+EditorIcons/icons/Panels4 = null
+EditorIcons/icons/ParallaxBackground = null
+EditorIcons/icons/ParallaxLayer = null
+EditorIcons/icons/ParticleAttractor2D = null
+EditorIcons/icons/Particles = null
+EditorIcons/icons/Particles2D = null
+EditorIcons/icons/ParticlesFrame = null
+EditorIcons/icons/Patch9Frame = null
+EditorIcons/icons/Path = null
+EditorIcons/icons/Path2D = null
+EditorIcons/icons/PathFollow = null
+EditorIcons/icons/PathFollow2D = null
+EditorIcons/icons/Pause = null
+EditorIcons/icons/PeEdit = null
+EditorIcons/icons/PhysicsJointPin = null
+EditorIcons/icons/Pin = null
+EditorIcons/icons/PinJoint = null
+EditorIcons/icons/PinJoint2D = null
+EditorIcons/icons/PinPressed = null
+EditorIcons/icons/Plane = null
+EditorIcons/icons/PlaneShape = null
+EditorIcons/icons/Play = null
+EditorIcons/icons/PlayBackwards = null
+EditorIcons/icons/PlayCustom = null
+EditorIcons/icons/PlayScene = null
+EditorIcons/icons/PlayStart = null
+EditorIcons/icons/PlayStartBackwards = null
+EditorIcons/icons/Polygon2D = null
+EditorIcons/icons/Popup = null
+EditorIcons/icons/PopupDialog = null
+EditorIcons/icons/PopupMenu = null
+EditorIcons/icons/PopupPanel = null
+EditorIcons/icons/Portal = null
+EditorIcons/icons/Position2D = null
+EditorIcons/icons/Position3D = null
+EditorIcons/icons/PrevScene = null
+EditorIcons/icons/Progress1 = null
+EditorIcons/icons/Progress2 = null
+EditorIcons/icons/Progress3 = null
+EditorIcons/icons/Progress4 = null
+EditorIcons/icons/Progress5 = null
+EditorIcons/icons/Progress6 = null
+EditorIcons/icons/Progress7 = null
+EditorIcons/icons/Progress8 = null
+EditorIcons/icons/ProgressBar = null
+EditorIcons/icons/PropertyEditor = null
+EditorIcons/icons/ProximityGroup = null
+EditorIcons/icons/Quad = null
+EditorIcons/icons/Quat = null
+EditorIcons/icons/Range = null
+EditorIcons/icons/RatingNoStar = null
+EditorIcons/icons/RatingStar = null
+EditorIcons/icons/RayCast = null
+EditorIcons/icons/RayCast2D = null
+EditorIcons/icons/RayShape = null
+EditorIcons/icons/RayShape2D = null
+EditorIcons/icons/Rayito = null
+EditorIcons/icons/Real = null
+EditorIcons/icons/Rect2 = null
+EditorIcons/icons/Rect3 = null
+EditorIcons/icons/RectangleShape2D = null
+EditorIcons/icons/ReferenceFrame = null
+EditorIcons/icons/RegionEdit = null
+EditorIcons/icons/Reload = null
+EditorIcons/icons/ReloadEmpty = null
+EditorIcons/icons/ReloadSmall = null
+EditorIcons/icons/Remote = null
+EditorIcons/icons/RemoteTransform2D = null
+EditorIcons/icons/Remove = null
+EditorIcons/icons/RemoveHl = null
+EditorIcons/icons/RemoveSmall = null
+EditorIcons/icons/Rename = null
+EditorIcons/icons/Reparent = null
+EditorIcons/icons/Replace = null
+EditorIcons/icons/ResizedFile = null
+EditorIcons/icons/ResizedFolder = null
+EditorIcons/icons/ResourcePreloader = null
+EditorIcons/icons/RichTextLabel = null
+EditorIcons/icons/Rid = null
+EditorIcons/icons/RigidBody = null
+EditorIcons/icons/RigidBody2D = null
+EditorIcons/icons/Room = null
+EditorIcons/icons/RoomInstance = null
+EditorIcons/icons/Rotate0 = null
+EditorIcons/icons/Rotate180 = null
+EditorIcons/icons/Rotate270 = null
+EditorIcons/icons/Rotate90 = null
+EditorIcons/icons/Run = null
+EditorIcons/icons/SSAOFX = null
+EditorIcons/icons/Sample = null
+EditorIcons/icons/SamplePlayer = null
+EditorIcons/icons/SamplePlayer2D = null
+EditorIcons/icons/Save = null
+EditorIcons/icons/Scene = null
+EditorIcons/icons/SceneInstance = null
+EditorIcons/icons/SceneTreeEditor = null
+EditorIcons/icons/Script = null
+EditorIcons/icons/ScriptControl = null
+EditorIcons/icons/ScriptCreate = null
+EditorIcons/icons/ScriptError = null
+EditorIcons/icons/ScriptList = null
+EditorIcons/icons/ScriptNode = null
+EditorIcons/icons/ScrollBar = null
+EditorIcons/icons/ScrollContainer = null
+EditorIcons/icons/SegmentShape2D = null
+EditorIcons/icons/Shader = null
+EditorIcons/icons/ShaderMaterial = null
+EditorIcons/icons/Signal = null
+EditorIcons/icons/Skeleton = null
+EditorIcons/icons/Skeletonr = null
+EditorIcons/icons/SkyBoxFX = null
+EditorIcons/icons/SliderJoint = null
+EditorIcons/icons/Slot = null
+EditorIcons/icons/SmallNext = null
+EditorIcons/icons/Snap = null
+EditorIcons/icons/SoundRoomParams = null
+EditorIcons/icons/Spatial = null
+EditorIcons/icons/SpatialAdd = null
+EditorIcons/icons/SpatialSamplePlayer = null
+EditorIcons/icons/SpatialStreamPlayer = null
+EditorIcons/icons/SphereShape = null
+EditorIcons/icons/SpinBox = null
+EditorIcons/icons/Spline = null
+EditorIcons/icons/SpotLight = null
+EditorIcons/icons/Sprite = null
+EditorIcons/icons/Sprite3D = null
+EditorIcons/icons/SquirrelScript = null
+EditorIcons/icons/StaticBody = null
+EditorIcons/icons/StaticBody2D = null
+EditorIcons/icons/Stop = null
+EditorIcons/icons/StreamPlayer = null
+EditorIcons/icons/String = null
+EditorIcons/icons/Surface = null
+EditorIcons/icons/TabContainer = null
+EditorIcons/icons/TabMenu = null
+EditorIcons/icons/Tabs = null
+EditorIcons/icons/TestCube = null
+EditorIcons/icons/TextEdit = null
+EditorIcons/icons/Texture = null
+EditorIcons/icons/TextureButton = null
+EditorIcons/icons/TextureFrame = null
+EditorIcons/icons/TextureProgress = null
+EditorIcons/icons/ThumbnailWait = null
+EditorIcons/icons/TileMap = null
+EditorIcons/icons/Time = null
+EditorIcons/icons/Timer = null
+EditorIcons/icons/ToolButton = null
+EditorIcons/icons/ToolMove = null
+EditorIcons/icons/ToolPan = null
+EditorIcons/icons/ToolRotate = null
+EditorIcons/icons/ToolScale = null
+EditorIcons/icons/ToolSelect = null
+EditorIcons/icons/Tools = null
+EditorIcons/icons/TouchScreenButton = null
+EditorIcons/icons/TrackAddKey = null
+EditorIcons/icons/TrackAddKeyHl = null
+EditorIcons/icons/TrackContinuous = null
+EditorIcons/icons/TrackDiscrete = null
+EditorIcons/icons/TrackMethod = null
+EditorIcons/icons/TrackProp = null
+EditorIcons/icons/TrackTrigger = null
+EditorIcons/icons/TrackValue = null
+EditorIcons/icons/Translation = null
+EditorIcons/icons/Transparent = null
+EditorIcons/icons/Transpose = null
+EditorIcons/icons/Tree = null
+EditorIcons/icons/Tween = null
+EditorIcons/icons/Unbone = null
+EditorIcons/icons/Ungroup = null
+EditorIcons/icons/Unlock = null
+EditorIcons/icons/Up = null
+EditorIcons/icons/Updown = null
+EditorIcons/icons/Uv = null
+EditorIcons/icons/VBoxContainer = null
+EditorIcons/icons/VButtonArray = null
+EditorIcons/icons/VScrollBar = null
+EditorIcons/icons/VSeparator = null
+EditorIcons/icons/VSlider = null
+EditorIcons/icons/VSplitContainer = null
+EditorIcons/icons/Vector = null
+EditorIcons/icons/Vector2 = null
+EditorIcons/icons/VehicleBody = null
+EditorIcons/icons/VehicleWheel = null
+EditorIcons/icons/VideoPlayer = null
+EditorIcons/icons/VideoStreamTheora = null
+EditorIcons/icons/View = null
+EditorIcons/icons/Viewport = null
+EditorIcons/icons/ViewportSprite = null
+EditorIcons/icons/VisibilityArea = null
+EditorIcons/icons/VisibilityEnabler = null
+EditorIcons/icons/VisibilityEnabler2D = null
+EditorIcons/icons/VisibilityNotifier = null
+EditorIcons/icons/VisibilityNotifier2D = null
+EditorIcons/icons/Visible = null
+EditorIcons/icons/Volume = null
+EditorIcons/icons/VuEmpty = null
+EditorIcons/icons/VuFull = null
+EditorIcons/icons/WaitNoPreview = null
+EditorIcons/icons/WaitPreview1 = null
+EditorIcons/icons/WaitPreview2 = null
+EditorIcons/icons/WaitPreview3 = null
+EditorIcons/icons/WaitPreview4 = null
+EditorIcons/icons/WaitPreview5 = null
+EditorIcons/icons/WaitPreview6 = null
+EditorIcons/icons/WaitPreview7 = null
+EditorIcons/icons/WaitPreview8 = null
+EditorIcons/icons/Warning = null
+EditorIcons/icons/WindowDialog = null
+EditorIcons/icons/WorldEnvironment = null
+EditorIcons/icons/YSort = null
+EditorIcons/icons/Zoom = null
+EditorIcons/icons/ZoomLess = null
+EditorIcons/icons/ZoomMore = null
+EditorIcons/icons/ZoomReset = null
+EditorStyles/styles/EditorFocus = null
+FileDialog/colors/files_disabled = Color( 0, 0, 0, 1 )
+FileDialog/icons/folder = null
+FileDialog/icons/reload = null
+Fonts/fonts/large = null
+Fonts/fonts/normal = null
+GraphEdit/icons/minus = null
+GraphEdit/icons/more = null
+GraphEdit/icons/reset = null
+GraphEdit/styles/bg = null
+GraphNode/colors/title_color = Color( 0, 0, 0, 1 )
+GraphNode/constants/close_offset = 0
+GraphNode/constants/port_offset = 0
+GraphNode/constants/separation = 0
+GraphNode/constants/title_offset = 0
+GraphNode/fonts/title_font = null
+GraphNode/icons/close = null
+GraphNode/icons/port = null
+GraphNode/styles/defaultfocus = null
+GraphNode/styles/defaultframe = null
+GraphNode/styles/frame = null
+GraphNode/styles/selectedframe = null
+GridContainer/constants/hseparation = 0
+GridContainer/constants/vseparation = 0
+HBoxContainer/constants/separation = 0
+HButtonArray/colors/font_color = Color( 0, 0, 0, 1 )
+HButtonArray/colors/font_color_selected = Color( 0, 0, 0, 1 )
+HButtonArray/constants/button_separator = 0
+HButtonArray/constants/icon_separator = 0
+HButtonArray/fonts/font = null
+HButtonArray/fonts/font_selected = null
+HButtonArray/styles/focus = null
+HButtonArray/styles/hover = null
+HButtonArray/styles/normal = null
+HButtonArray/styles/selected = null
+HScrollBar/icons/decrement = null
+HScrollBar/icons/decrement_hilite = null
+HScrollBar/icons/increment = null
+HScrollBar/icons/increment_hilite = null
+HScrollBar/styles/grabber = null
+HScrollBar/styles/grabber_hilite = null
+HScrollBar/styles/scroll = null
+HScrollBar/styles/scroll_focus = null
+HSeparator/constants/separation = 0
+HSeparator/styles/separator = null
+HSlider/icons/grabber = null
+HSlider/icons/grabber_hilite = null
+HSlider/icons/tick = null
+HSlider/styles/focus = null
+HSlider/styles/grabber_hilite = null
+HSlider/styles/slider = null
+HSplitContainer/constants/autohide = 0
+HSplitContainer/constants/separation = 0
+HSplitContainer/icons/grabber = null
+HSplitContainer/styles/bg = null
+Icons/icons/close = null
+Icons/icons/logo = null
+ItemList/colors/font_color = Color( 0, 0, 0, 1 )
+ItemList/colors/font_color_selected = Color( 0, 0, 0, 1 )
+ItemList/colors/guide_color = Color( 0, 0, 0, 1 )
+ItemList/constants/hseparation = 0
+ItemList/constants/icon_margin = 0
+ItemList/constants/line_separation = 0
+ItemList/constants/vseparation = 0
+ItemList/fonts/font = null
+ItemList/styles/bg = null
+ItemList/styles/bg_focus = null
+ItemList/styles/cursor = null
+ItemList/styles/cursor_unfocused = null
+ItemList/styles/selected = null
+ItemList/styles/selected_focus = null
+Label/colors/font_color = Color( 0.203922, 0.203922, 0.203922, 1 )
+Label/colors/font_color_shadow = Color( 0.368627, 0.368627, 0.368627, 1 )
+Label/constants/line_spacing = 0
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 0
+Label/fonts/font = SubResource( 7 )
+LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
+LineEdit/colors/selection_color = Color( 0, 0, 0, 1 )
+LineEdit/constants/minimum_spaces = 0
+LineEdit/fonts/font = null
+LineEdit/styles/focus = null
+LineEdit/styles/normal = null
+LineEdit/styles/read_only = null
+LinkButton/colors/font_color = Color( 0, 0, 0, 1 )
+LinkButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+LinkButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+LinkButton/constants/underline_spacing = 0
+LinkButton/fonts/font = null
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 0
+MarginContainer/constants/margin_right = 0
+MarginContainer/constants/margin_top = 0
+MenuButton/colors/font_color = Color( 0, 0, 0, 1 )
+MenuButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+MenuButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+MenuButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+MenuButton/constants/hseparation = 0
+MenuButton/fonts/font = null
+MenuButton/styles/disabled = null
+MenuButton/styles/focus = null
+MenuButton/styles/hover = null
+MenuButton/styles/normal = null
+MenuButton/styles/pressed = null
+OptionButton/colors/font_color = Color( 0, 0, 0, 1 )
+OptionButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+OptionButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+OptionButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+OptionButton/constants/arrow_margin = 0
+OptionButton/constants/hseparation = 0
+OptionButton/fonts/font = null
+OptionButton/icons/arrow = null
+OptionButton/styles/disabled = null
+OptionButton/styles/focus = null
+OptionButton/styles/hover = null
+OptionButton/styles/normal = null
+OptionButton/styles/pressed = null
+Panel/styles/panel = null
+Panel/styles/panelf = null
+Panel/styles/panelnc = null
+PanelContainer/styles/panel = null
+PopupMenu/colors/font_color = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_accel = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_hover = Color( 0, 0, 0, 1 )
+PopupMenu/constants/hseparation = 0
+PopupMenu/constants/vseparation = 0
+PopupMenu/fonts/font = null
+PopupMenu/icons/checked = null
+PopupMenu/icons/submenu = null
+PopupMenu/icons/unchecked = null
+PopupMenu/styles/hover = null
+PopupMenu/styles/panel = null
+PopupMenu/styles/panel_disabled = null
+PopupMenu/styles/separator = null
+PopupPanel/styles/panel = null
+ProgressBar/colors/font_color = Color( 0, 0, 0, 1 )
+ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+ProgressBar/fonts/font = null
+ProgressBar/styles/bg = null
+ProgressBar/styles/fg = null
+ReferenceFrame/styles/border = null
+RichTextLabel/colors/default_color = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/font_color_selected = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/selection_color = Color( 0, 0, 0, 1 )
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/table_hseparation = 0
+RichTextLabel/constants/table_vseparation = 0
+RichTextLabel/fonts/bold_font = null
+RichTextLabel/fonts/bold_italics_font = null
+RichTextLabel/fonts/italics_font = null
+RichTextLabel/fonts/mono_font = null
+RichTextLabel/fonts/normal_font = null
+RichTextLabel/styles/focus = null
+SpinBox/icons/updown = null
+TabContainer/colors/font_color_bg = Color( 0, 0, 0, 1 )
+TabContainer/colors/font_color_fg = Color( 0, 0, 0, 1 )
+TabContainer/constants/hseparation = 0
+TabContainer/constants/label_valign_bg = 0
+TabContainer/constants/label_valign_fg = 0
+TabContainer/constants/side_margin = 0
+TabContainer/constants/top_margin = 0
+TabContainer/fonts/font = null
+TabContainer/icons/decrement = null
+TabContainer/icons/decrement_hilite = null
+TabContainer/icons/increment = null
+TabContainer/icons/increment_hilite = null
+TabContainer/icons/menu = null
+TabContainer/icons/menu_hilite = null
+TabContainer/styles/panel = null
+TabContainer/styles/tab_bg = null
+TabContainer/styles/tab_fg = null
+Tabs/colors/font_color_bg = Color( 0, 0, 0, 1 )
+Tabs/colors/font_color_fg = Color( 0, 0, 0, 1 )
+Tabs/constants/hseparation = 0
+Tabs/constants/label_valign_bg = 0
+Tabs/constants/label_valign_fg = 0
+Tabs/constants/top_margin = 0
+Tabs/fonts/font = null
+Tabs/icons/close = null
+Tabs/icons/decrement = null
+Tabs/icons/decrement_hilite = null
+Tabs/icons/increment = null
+Tabs/icons/increment_hilite = null
+Tabs/styles/button = null
+Tabs/styles/button_pressed = null
+Tabs/styles/panel = null
+Tabs/styles/tab_bg = null
+Tabs/styles/tab_fg = null
+TextEdit/colors/brace_mismatch_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/breakpoint_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/caret_background_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/caret_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_background_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_existing_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_scroll_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_selected_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/current_line_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
+TextEdit/colors/function_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/line_number_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/mark_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/member_variable_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/number_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/selection_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/symbol_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/word_highlighted_color = Color( 0, 0, 0, 1 )
+TextEdit/constants/completion_lines = 0
+TextEdit/constants/completion_max_width = 0
+TextEdit/constants/completion_scroll_width = 0
+TextEdit/constants/line_spacing = 0
+TextEdit/fonts/font = null
+TextEdit/icons/tab = null
+TextEdit/styles/completion = null
+TextEdit/styles/focus = null
+TextEdit/styles/normal = null
+ToolButton/colors/font_color = Color( 0, 0, 0, 1 )
+ToolButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+ToolButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+ToolButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+ToolButton/constants/hseparation = 0
+ToolButton/fonts/font = null
+ToolButton/styles/disabled = null
+ToolButton/styles/focus = null
+ToolButton/styles/hover = null
+ToolButton/styles/normal = null
+ToolButton/styles/pressed = null
+TooltipLabel/colors/font_color = Color( 0, 0, 0, 1 )
+TooltipLabel/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+TooltipLabel/constants/shadow_offset_x = 0
+TooltipLabel/constants/shadow_offset_y = 0
+TooltipLabel/fonts/font = null
+TooltipPanel/styles/panel = null
+Tree/colors/cursor_color = Color( 0, 0, 0, 1 )
+Tree/colors/drop_position_color = Color( 0, 0, 0, 1 )
+Tree/colors/font_color = Color( 0, 0, 0, 1 )
+Tree/colors/font_color_selected = Color( 0, 0, 0, 1 )
+Tree/colors/guide_color = Color( 0, 0, 0, 1 )
+Tree/colors/relationship_line_color = Color( 0, 0, 0, 1 )
+Tree/colors/selection_color = Color( 0, 0, 0, 1 )
+Tree/colors/title_button_color = Color( 0, 0, 0, 1 )
+Tree/constants/button_margin = 0
+Tree/constants/draw_relationship_lines = 0
+Tree/constants/guide_width = 0
+Tree/constants/hseparation = 0
+Tree/constants/item_margin = 0
+Tree/constants/scroll_border = 0
+Tree/constants/scroll_speed = 0
+Tree/constants/vseparation = 0
+Tree/fonts/font = null
+Tree/fonts/title_button_font = null
+Tree/icons/arrow = null
+Tree/icons/arrow_collapsed = null
+Tree/icons/checked = null
+Tree/icons/select_arrow = null
+Tree/icons/unchecked = null
+Tree/icons/updown = null
+Tree/styles/bg = null
+Tree/styles/bg_focus = null
+Tree/styles/button_pressed = null
+Tree/styles/cursor = null
+Tree/styles/cursor_unfocused = null
+Tree/styles/selected = null
+Tree/styles/selected_focus = null
+Tree/styles/title_button_hover = null
+Tree/styles/title_button_normal = null
+Tree/styles/title_button_pressed = null
+VBoxContainer/constants/separation = 0
+VButtonArray/colors/font_color = Color( 0, 0, 0, 1 )
+VButtonArray/colors/font_color_selected = Color( 0, 0, 0, 1 )
+VButtonArray/constants/button_separator = 0
+VButtonArray/constants/icon_separator = 0
+VButtonArray/fonts/font = null
+VButtonArray/fonts/font_selected = null
+VButtonArray/styles/focus = null
+VButtonArray/styles/hover = null
+VButtonArray/styles/normal = null
+VButtonArray/styles/selected = null
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_hilite = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_hilite = null
+VScrollBar/styles/grabber = null
+VScrollBar/styles/grabber_hilite = null
+VScrollBar/styles/scroll = null
+VScrollBar/styles/scroll_focus = null
+VSeparator/constants/separation = 0
+VSeparator/styles/separator = null
+VSlider/icons/grabber = null
+VSlider/icons/grabber_hilite = null
+VSlider/icons/tick = null
+VSlider/styles/grabber_hilite = null
+VSlider/styles/slider = null
+VSplitContainer/constants/autohide = 0
+VSplitContainer/constants/separation = 0
+VSplitContainer/icons/grabber = null
+VSplitContainer/styles/bg = null
+WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
+WindowDialog/constants/close_h_ofs = 0
+WindowDialog/constants/close_v_ofs = 0
+WindowDialog/constants/title_height = 0
+WindowDialog/constants/titlebar_height = 0
+WindowDialog/fonts/title_font = null
+WindowDialog/icons/close = null
+WindowDialog/icons/close_hilite = null
+WindowDialog/styles/panel = null
 
 [sub_resource type="DynamicFont" id=9]
+
+font/size = 50
+font/use_mipmaps = true
+font/use_filter = false
+font/font = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=10]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=11]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=12]
 
 font/size = 26
 extra_spacing/top = 15
@@ -125,44 +1168,21 @@ extra_spacing/char = 2
 extra_spacing/space = 1
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 15 )
-
-[sub_resource type="DynamicFont" id=10]
-
-font/size = 44
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 15 )
-
-[sub_resource type="DynamicFont" id=11]
-
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 15 )
-
-[sub_resource type="SpriteFrames" id=12]
-
-animations = [ {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ) ],
-"loop": true,
-"name": "default",
-"speed": 15.0
-} ]
+font/font = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=13]
 
-font/size = 40
+font/size = 20
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 16 )
+font/font = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=14]
 
 font/size = 40
 font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 6 )
+font/use_filter = false
+font/font = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=15]
 
@@ -171,143 +1191,208 @@ font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=16]
+[sub_resource type="SpriteFrames" id=16]
 
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 6 )
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
 
 [sub_resource type="DynamicFont" id=17]
 
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=18]
+
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 6 )
+font/font = ExtResource( 5 )
 
-[sub_resource type="SampleLibrary" id=18]
+[sub_resource type="DynamicFont" id=19]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=20]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=21]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=22]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 8 )
+
+[sub_resource type="SampleLibrary" id=23]
 
 samples/msg_received = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 42 )
+"sample": ExtResource( 33 )
 }
 samples/msg_send = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 43 )
+"sample": ExtResource( 34 )
 }
 samples/msg_sys = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 44 )
+"sample": ExtResource( 35 )
 }
 
-[sub_resource type="SampleLibrary" id=19]
+[sub_resource type="SampleLibrary" id=24]
 
 samples/Bkg_Crypte = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 45 )
+"sample": ExtResource( 36 )
 }
 samples/Bkg_Eau = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 46 )
+"sample": ExtResource( 37 )
 }
 samples/Bkg_Grotte = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 47 )
+"sample": ExtResource( 38 )
 }
 samples/Bkg_Salle = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 48 )
+"sample": ExtResource( 39 )
 }
 samples/Bkg_SalleHaute = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 49 )
+"sample": ExtResource( 40 )
 }
 samples/Bkg_ThemeFin = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 41 )
+}
+
+[sub_resource type="SampleLibrary" id=25]
+
+samples/Trg_Breath = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 42 )
+}
+samples/Trg_Breath_Short = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 43 )
+}
+samples/Trg_Chute = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 44 )
+}
+samples/Trg_Effondrement = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 45 )
+}
+samples/Trg_Hole = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 46 )
+}
+samples/Trg_Loquet = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 47 )
+}
+samples/Trg_Noyade = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 48 )
+}
+samples/Trg_Ombre = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 49 )
+}
+samples/Trg_Tableaux = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 50 )
 }
 
-[sub_resource type="SampleLibrary" id=20]
-
-samples/Trg_Breath = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 51 )
-}
-samples/Trg_Breath_Short = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 52 )
-}
-samples/Trg_Chute = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 53 )
-}
-samples/Trg_Effondrement = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 54 )
-}
-samples/Trg_Hole = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 55 )
-}
-samples/Trg_Loquet = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 56 )
-}
-samples/Trg_Noyade = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 57 )
-}
-samples/Trg_Ombre = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 58 )
-}
-samples/Trg_Tableaux = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 59 )
-}
-
-[sub_resource type="DynamicFont" id=21]
+[sub_resource type="DynamicFont" id=26]
 
 font/size = 60
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 6 )
+font/font = ExtResource( 52 )
+
+[sub_resource type="DynamicFont" id=27]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 52 )
+
+[sub_resource type="DynamicFont" id=28]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 52 )
+
+[sub_resource type="DynamicFont" id=29]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 52 )
+
+[sub_resource type="DynamicFont" id=30]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 52 )
 
 [node name="World" type="Node"]
 
@@ -319,6 +1404,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 3
+theme/theme = SubResource( 8 )
 margin/left = -9.0
 margin/top = 10.0
 margin/right = -23.0
@@ -327,7 +1413,7 @@ custom_constants/margin_right = 16
 custom_constants/margin_top = 16
 custom_constants/margin_left = 16
 custom_constants/margin_bottom = 16
-script/script = ExtResource( 1 )
+script/script = ExtResource( 3 )
 
 [node name="Tween" type="Tween" parent="Game"]
 
@@ -335,6 +1421,662 @@ playback/process_mode = 1
 playback/active = false
 playback/repeat = false
 playback/speed = 1.0
+
+[node name="vbox" type="VBoxContainer" parent="Game"]
+
+rect/min_size = Vector2( 1080, 1920 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 16.0
+margin/top = 16.0
+margin/right = 1096.0
+margin/bottom = 1936.0
+alignment = 0
+
+[node name="Top" type="Container" parent="Game/vbox"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1080.0
+margin/bottom = 0.0
+
+[node name="Sprite" type="Sprite" parent="Game/vbox/Top"]
+
+visibility/self_opacity = 2.0
+visibility/behind_parent = true
+transform/pos = Vector2( 536.4, 29.184 )
+transform/scale = Vector2( 1.67863, 1.42005 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 17, 314, 654, 80 )
+
+[node name="TextureFrame 2" type="TextureFrame" parent="Game/vbox/Top"]
+
+rect/min_size = Vector2( 100, 100 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = -19.0
+margin/right = 104.0
+margin/bottom = 81.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 0
+
+[node name="Name" type="RichTextLabel" parent="Game/vbox/Top"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 126.0
+margin/top = 3.0
+margin/right = 668.0
+margin/bottom = 66.0
+custom_fonts/normal_font = SubResource( 9 )
+custom_colors/default_color = Color( 0.902344, 0.902344, 0.902344, 1 )
+bbcode/enabled = true
+bbcode/bbcode = ""
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Etat" type="RichTextLabel" parent="Game/vbox/Top"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 131.0
+margin/top = 49.0
+margin/right = 390.0
+margin/bottom = 100.0
+custom_fonts/normal_font = SubResource( 10 )
+custom_colors/default_color = Color( 0.527344, 0.527344, 0.527344, 1 )
+bbcode/enabled = true
+bbcode/bbcode = ""
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="clock" type="Label" parent="Game/vbox/Top"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 680.0
+margin/top = 2.0
+margin/right = 951.0
+margin/bottom = 55.0
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0.941406, 0.941406, 0.941406, 1 )
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="resetSave" type="Button" parent="Game/vbox/Top"]
+
+visibility/self_opacity = 0.0
+visibility/behind_parent = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 946.0
+margin/top = -22.0
+margin/right = 1074.0
+margin/bottom = 91.0
+custom_fonts/font = SubResource( 12 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "OPTIONS"
+flat = false
+
+[node name="Options" type="Sprite" parent="Game/vbox/Top/resetSave"]
+
+transform/pos = Vector2( 64.2236, 53.228 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 500, 10, 59, 59 )
+
+[node name="version" type="Label" parent="Game/vbox/Top"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 683.0
+margin/top = 57.0
+margin/right = 949.0
+margin/bottom = 81.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.941406, 0.941406, 0.941406, 1 )
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LED" type="Sprite" parent="Game/vbox/Top"]
+
+transform/pos = Vector2( 92.0789, 66.0151 )
+texture = ExtResource( 7 )
+
+[node name="Mid" type="Container" parent="Game/vbox"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 2
+margin/left = 540.0
+margin/top = 0.0
+margin/right = 540.0
+margin/bottom = 0.0
+
+[node name="Sprite" type="Sprite" parent="Game/vbox/Mid"]
+
+transform/pos = Vector2( -567.992, 85.9525 )
+transform/scale = Vector2( 1.72653, 1.27824 )
+texture = ExtResource( 2 )
+centered = false
+modulate = Color( 0.518311, 0.573048, 0.6875, 1 )
+region = true
+region_rect = Rect2( 13, 407, 653, 149 )
+
+[node name="DialBox" type="ScrollContainer" parent="Game/vbox/Mid"]
+
+editor/display_folded = true
+visibility/behind_parent = true
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = -555.0
+margin/top = 86.0
+margin/right = -544.0
+margin/bottom = -1759.0
+scroll/horizontal = false
+scroll/vertical = true
+
+[node name="VBoxMid" type="VBoxContainer" parent="Game/vbox/Mid/DialBox"]
+
+editor/display_folded = true
+rect/min_size = Vector2( 1070, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1070.0
+margin/bottom = 0.0
+custom_constants/separation = 20
+alignment = 0
+
+[node name="LabelTime" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
+
+editor/display_folded = true
+visibility/visible = false
+visibility/opacity = 0.0
+rect/min_size = Vector2( 925, 55 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 3
+margin/left = 72.0
+margin/top = 55.0
+margin/right = 997.0
+margin/bottom = 55.0
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0.8, 0.8, 0.8, 1 )
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LabelBG" type="Sprite" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelTime"]
+
+visibility/visible = false
+visibility/behind_parent = true
+transform/pos = Vector2( 3.07346, 0 )
+transform/scale = Vector2( 1.92291, 1 )
+z/relative = false
+texture = ExtResource( 2 )
+centered = false
+region = true
+region_rect = Rect2( 13, 10, 468, 144 )
+
+[node name="LabelStat" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
+
+editor/display_folded = true
+visibility/visible = false
+visibility/opacity = 0.0
+rect/min_size = Vector2( 825, 50 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 3
+margin/left = 122.0
+margin/top = 0.0
+margin/right = 947.0
+margin/bottom = 50.0
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 1, 0.515625, 0, 1 )
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LoadingText" type="AnimatedSprite" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelStat"]
+
+transform/pos = Vector2( 36.3445, 24.3387 )
+transform/scale = Vector2( 2, 2 )
+frames = SubResource( 16 )
+animation = "default"
+frame = 11
+playing = true
+
+[node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
+
+editor/display_folded = true
+visibility/visible = false
+visibility/opacity = 0.0
+anchor/right = 1
+rect/min_size = Vector2( 925, 55 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 3
+margin/left = 72.0
+margin/top = 10.0
+margin/right = 73.0
+margin/bottom = 55.0
+custom_colors/font_color = Color( 0.8, 0.8, 0.8, 1 )
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LabelBG" type="Sprite" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelDial"]
+
+visibility/visible = false
+visibility/behind_parent = true
+transform/pos = Vector2( -28.6394, -3.01465 )
+transform/scale = Vector2( 1, 2 )
+z/relative = false
+texture = ExtResource( 2 )
+centered = false
+region = true
+region_rect = Rect2( 13, 10, 468, 144 )
+
+[node name="LabelRep" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
+
+visibility/visible = false
+visibility/opacity = 0.0
+rect/min_size = Vector2( 925, 100 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 3
+margin/left = 72.0
+margin/top = 10.0
+margin/right = 997.0
+margin/bottom = 100.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0.435294, 0.447059, 0.603922, 1 )
+align = 2
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LabelSys" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
+
+visibility/visible = false
+visibility/opacity = 0.0
+rect/min_size = Vector2( 925, 100 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 3
+margin/left = 72.0
+margin/top = 25.0
+margin/right = 997.0
+margin/bottom = 100.0
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color = Color( 1, 0.513726, 0, 1 )
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Bot" type="Container" parent="Game/vbox"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1080.0
+margin/bottom = 0.0
+
+[node name="Sprite" type="Sprite" parent="Game/vbox/Bot"]
+
+visibility/visible = false
+visibility/behind_parent = true
+transform/pos = Vector2( 541.646, 1671.41 )
+texture = ExtResource( 32 )
+
+[node name="ButtonChoices" type="Button" parent="Game/vbox/Bot"]
+
+editor/display_folded = true
+visibility/self_opacity = 0.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = 1767.0
+margin/right = 1075.0
+margin/bottom = 1892.0
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+
+[node name="Sprite" type="Sprite" parent="Game/vbox/Bot/ButtonChoices"]
+
+visibility/behind_parent = true
+transform/scale = Vector2( 1.65855, 1.51665 )
+texture = ExtResource( 2 )
+centered = false
+region = true
+region_rect = Rect2( 17, 220, 653, 81 )
+
+[node name="Label" type="Label" parent="Game/vbox/Bot/ButtonChoices"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 39.0
+margin/top = 32.0
+margin/right = 760.0
+margin/bottom = 85.0
+text = "Envoyer un message..."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Choices" type="Popup" parent="Game"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 16.0
+margin/top = 16.0
+margin/right = 1096.0
+margin/bottom = 1936.0
+popup/exclusive = true
+
+[node name="LeaveChoices" type="Button" parent="Game/Choices"]
+
+visibility/self_opacity = 0.0
+visibility/behind_parent = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = -24.0
+margin/right = 1074.0
+margin/bottom = 1892.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+
+[node name="Label" type="Label" parent="Game/Choices"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 65.0
+margin/top = 589.0
+margin/right = 996.0
+margin/bottom = 689.0
+text = "Choisissez votre réponse"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="VBox" type="VBoxContainer" parent="Game/Choices"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -10.0
+margin/top = 702.0
+margin/right = 1072.0
+margin/bottom = 1132.0
+custom_constants/separation = 30
+alignment = 1
+
+[node name="Bouton0" type="Button" parent="Game/Choices/VBox" groups=[
+"Bouton",
+]]
+
+visibility/opacity = 0.0
+rect/min_size = Vector2( 840, 85 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+size_flags/stretch_ratio = 0.0
+margin/left = 121.0
+margin/top = 0.0
+margin/right = 961.0
+margin/bottom = 85.0
+custom_fonts/font = SubResource( 19 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+
+[node name="Bouton1" type="Button" parent="Game/Choices/VBox" groups=[
+"Bouton",
+]]
+
+visibility/opacity = 0.0
+rect/min_size = Vector2( 840, 85 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 121.0
+margin/top = 115.0
+margin/right = 961.0
+margin/bottom = 200.0
+custom_fonts/font = SubResource( 20 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+
+[node name="Bouton2" type="Button" parent="Game/Choices/VBox" groups=[
+"Bouton",
+]]
+
+visibility/opacity = 0.0
+rect/min_size = Vector2( 840, 85 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 121.0
+margin/top = 230.0
+margin/right = 961.0
+margin/bottom = 315.0
+custom_fonts/font = SubResource( 21 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+
+[node name="Bouton3" type="Button" parent="Game/Choices/VBox" groups=[
+"Bouton",
+]]
+
+visibility/opacity = 0.0
+rect/min_size = Vector2( 840, 85 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 121.0
+margin/top = 345.0
+margin/right = 961.0
+margin/bottom = 430.0
+custom_fonts/font = SubResource( 22 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+
+[node name="Sprite" type="Sprite" parent="Game/Choices"]
+
+visibility/self_opacity = 0.8
+visibility/behind_parent = true
+transform/pos = Vector2( 63.285, 574.132 )
+transform/scale = Vector2( 2, 1 )
+texture = ExtResource( 2 )
+centered = false
+region = true
+region_rect = Rect2( 13, 10, 468, 144 )
+
+[node name="Timer" type="Timer" parent="Game"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="SampleMSG" type="SamplePlayer" parent="Game"]
+
+config/polyphony = 1
+config/samples = SubResource( 23 )
+default/volume_db = -80.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
+
+[node name="SampleBKG" type="SamplePlayer" parent="Game"]
+
+config/polyphony = 1
+config/samples = SubResource( 24 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
+
+[node name="SampleTRG" type="SamplePlayer" parent="Game"]
+
+config/polyphony = 1
+config/samples = SubResource( 25 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
+
+[node name="Loading" type="Popup" parent="Game"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 16.0
+margin/top = 16.0
+margin/right = 1096.0
+margin/bottom = 1936.0
+popup/exclusive = true
+
+[node name="Sprite" type="Sprite" parent="Game/Loading"]
+
+texture = ExtResource( 51 )
+centered = false
+
+[node name="Label" type="Label" parent="Game/Loading"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1068.0
+margin/bottom = 1883.0
+custom_fonts/font = SubResource( 26 )
+text = "CHARGEMENT"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [node name="Popup" type="Popup" parent="Game"]
 
@@ -389,7 +2131,7 @@ margin/bottom = 171.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 53 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -407,7 +2149,7 @@ margin/bottom = 171.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
+textures/normal = ExtResource( 54 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -426,8 +2168,8 @@ margin/bottom = 295.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 4 )
-textures/pressed = ExtResource( 5 )
+textures/normal = ExtResource( 55 )
+textures/pressed = ExtResource( 56 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -441,7 +2183,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 840.0
 margin/bottom = 84.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 27 )
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -462,8 +2204,8 @@ margin/bottom = 419.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 4 )
-textures/pressed = ExtResource( 5 )
+textures/normal = ExtResource( 55 )
+textures/pressed = ExtResource( 56 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -477,7 +2219,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 840.0
 margin/bottom = 83.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 28 )
 text = "ChroniquesDeTalos.com"
 align = 1
 valign = 1
@@ -512,7 +2254,7 @@ margin/bottom = 128.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 7 )
+textures/normal = ExtResource( 57 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -529,7 +2271,7 @@ margin/bottom = 128.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 8 )
+textures/normal = ExtResource( 58 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -546,7 +2288,7 @@ margin/bottom = 128.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 9 )
+textures/normal = ExtResource( 59 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -564,8 +2306,8 @@ margin/bottom = 711.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 4 )
-textures/pressed = ExtResource( 5 )
+textures/normal = ExtResource( 55 )
+textures/pressed = ExtResource( 56 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -579,7 +2321,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 840.0
 margin/bottom = 83.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 29 )
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -600,8 +2342,8 @@ margin/bottom = 835.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 4 )
-textures/pressed = ExtResource( 5 )
+textures/normal = ExtResource( 55 )
+textures/pressed = ExtResource( 56 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -615,7 +2357,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 841.0
 margin/bottom = 84.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 30 )
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -628,652 +2370,29 @@ visibility/opacity = 0.6
 visibility/behind_parent = true
 transform/pos = Vector2( -48.4626, -23.7219 )
 transform/scale = Vector2( 1.14223, 9.69565 )
-texture = ExtResource( 10 )
+texture = ExtResource( 60 )
 centered = false
 
 [node name="Sprite" type="Sprite" parent="Game"]
 
+visibility/visible = false
 visibility/behind_parent = true
-transform/pos = Vector2( 555.378, 958.026 )
-texture = ExtResource( 11 )
+transform/pos = Vector2( 550.343, 950.473 )
+texture = ExtResource( 51 )
 
-[node name="vbox" type="VBoxContainer" parent="Game"]
+[connection signal="pressed" from="Game/vbox/Top/resetSave" to="Game" method="_on_resetSave_pressed"]
 
-rect/min_size = Vector2( 1080, 1920 )
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 3
-size_flags/vertical = 3
-margin/left = 16.0
-margin/top = 16.0
-margin/right = 1096.0
-margin/bottom = 1936.0
-alignment = 0
+[connection signal="pressed" from="Game/vbox/Bot/ButtonChoices" to="Game" method="_on_ButtonChoices_pressed"]
 
-[node name="Top" type="Container" parent="Game/vbox"]
+[connection signal="pressed" from="Game/Choices/LeaveChoices" to="Game" method="_on_LeaveChoices_pressed"]
 
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 1080.0
-margin/bottom = 0.0
+[connection signal="pressed" from="Game/Choices/VBox/Bouton0" to="Game" method="_on_Bouton0_pressed"]
 
-[node name="Sprite" type="Sprite" parent="Game/vbox/Top"]
+[connection signal="pressed" from="Game/Choices/VBox/Bouton1" to="Game" method="_on_Bouton1_pressed"]
 
-visibility/behind_parent = true
-transform/pos = Vector2( 545.472, 122.5 )
-texture = ExtResource( 12 )
+[connection signal="pressed" from="Game/Choices/VBox/Bouton2" to="Game" method="_on_Bouton2_pressed"]
 
-[node name="TextureFrame 2" type="TextureFrame" parent="Game/vbox/Top"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 71.0
-margin/top = 92.0
-margin/right = 208.0
-margin/bottom = 227.0
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 0
-
-[node name="Name" type="RichTextLabel" parent="Game/vbox/Top"]
-
-anchor/left = 3
-anchor/right = 3
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 272.0
-margin/top = 102.0
-margin/right = -160.0
-margin/bottom = 183.0
-custom_fonts/normal_font = SubResource( 5 )
-bbcode/enabled = true
-bbcode/bbcode = ""
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="Etat" type="RichTextLabel" parent="Game/vbox/Top"]
-
-anchor/left = 3
-anchor/top = 3
-anchor/right = 3
-anchor/bottom = 3
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 272.0
-margin/top = -182.0
-margin/right = -33.0
-margin/bottom = -229.0
-custom_fonts/normal_font = SubResource( 6 )
-bbcode/enabled = true
-bbcode/bbcode = ""
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="version" type="Label" parent="Game/vbox/Top"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 849.0
-margin/top = 205.0
-margin/right = 1035.0
-margin/bottom = 229.0
-custom_fonts/font = SubResource( 7 )
-custom_colors/font_color = Color( 0.941406, 0.941406, 0.941406, 1 )
-align = 2
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="clock" type="Label" parent="Game/vbox/Top"]
-
-rect/scale = Vector2( 1.4, 1.4 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 847.0
-margin/top = 51.0
-margin/right = 992.0
-margin/bottom = 94.0
-custom_fonts/font = SubResource( 8 )
-custom_colors/font_color = Color( 0.941406, 0.941406, 0.941406, 1 )
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="resetSave" type="Button" parent="Game/vbox/Top"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 840.0
-margin/top = 110.0
-margin/right = 1058.0
-margin/bottom = 178.0
-custom_fonts/font = SubResource( 9 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "OPTIONS"
-flat = false
-
-[node name="LED" type="Sprite" parent="Game/vbox/Top"]
-
-transform/pos = Vector2( 742.338, 159.881 )
-texture = ExtResource( 17 )
-
-[node name="Mid" type="Container" parent="Game/vbox"]
-
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 0
-size_flags/vertical = 2
-margin/left = 540.0
-margin/top = 4.0
-margin/right = 540.0
-margin/bottom = 4.0
-
-[node name="DialBox" type="ScrollContainer" parent="Game/vbox/Mid"]
-
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 0
-size_flags/vertical = 0
-margin/left = -539.0
-margin/top = 245.0
-margin/right = -543.0
-margin/bottom = -1439.0
-scroll/horizontal = false
-scroll/vertical = true
-
-[node name="VBoxMid" type="VBoxContainer" parent="Game/vbox/Mid/DialBox"]
-
-editor/display_folded = true
-rect/min_size = Vector2( 1070, 0 )
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 0
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 1070.0
-margin/bottom = 0.0
-custom_constants/separation = 0
-alignment = 0
-
-[node name="LabelTime" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
-
-editor/display_folded = true
-visibility/visible = false
-visibility/opacity = 0.0
-rect/min_size = Vector2( 925, 55 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 0
-size_flags/vertical = 3
-margin/left = 72.0
-margin/top = 0.0
-margin/right = 997.0
-margin/bottom = 55.0
-custom_fonts/font = SubResource( 10 )
-custom_colors/font_color = Color( 0.34902, 0.443137, 0.501961, 1 )
-valign = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="LabelBG" type="Sprite" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelTime"]
-
-visibility/self_opacity = 0.6
-visibility/behind_parent = true
-transform/pos = Vector2( -78.6394, -3.01465 )
-z/relative = false
-texture = ExtResource( 10 )
-centered = false
-
-[node name="Tween" type="Tween" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelTime"]
-
-playback/process_mode = 1
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
-
-[node name="LabelStat" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
-
-editor/display_folded = true
-visibility/visible = false
-visibility/opacity = 0.0
-rect/min_size = Vector2( 825, 50 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 0
-size_flags/vertical = 3
-margin/left = 122.0
-margin/top = 0.0
-margin/right = 947.0
-margin/bottom = 50.0
-custom_fonts/font = SubResource( 11 )
-custom_colors/font_color = Color( 1, 0.515625, 0, 1 )
-valign = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="LoadingText" type="AnimatedSprite" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelStat"]
-
-transform/pos = Vector2( 36.3445, 24.3387 )
-transform/scale = Vector2( 2, 2 )
-frames = SubResource( 12 )
-animation = "default"
-frame = 6
-playing = true
-
-[node name="Tween" type="Tween" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelStat"]
-
-playback/process_mode = 1
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
-
-[node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
-
-editor/display_folded = true
-visibility/visible = false
-visibility/opacity = 0.0
-rect/min_size = Vector2( 925, 55 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 0
-size_flags/vertical = 3
-margin/left = 72.0
-margin/top = 0.0
-margin/right = 997.0
-margin/bottom = 55.0
-custom_fonts/font = SubResource( 10 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-valign = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="LabelBG" type="Sprite" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelDial"]
-
-visibility/self_opacity = 0.6
-visibility/behind_parent = true
-transform/pos = Vector2( -28.6394, -3.01465 )
-transform/scale = Vector2( 1, 2 )
-z/relative = false
-texture = ExtResource( 10 )
-centered = false
-
-[node name="Tween" type="Tween" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelDial"]
-
-playback/process_mode = 1
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
-
-[node name="LabelRep" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
-
-editor/display_folded = true
-visibility/visible = false
-visibility/opacity = 0.0
-rect/min_size = Vector2( 925, 100 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 0
-size_flags/vertical = 3
-margin/left = 72.0
-margin/top = 0.0
-margin/right = 997.0
-margin/bottom = 100.0
-custom_fonts/font = SubResource( 13 )
-custom_colors/font_color = Color( 0.6, 0.6, 0.6, 1 )
-align = 2
-valign = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Tween" type="Tween" parent="Game/vbox/Mid/DialBox/VBoxMid/LabelRep"]
-
-playback/process_mode = 1
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
-
-[node name="LabelSys" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
-
-visibility/visible = false
-visibility/opacity = 0.0
-rect/min_size = Vector2( 925, 100 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 0
-size_flags/vertical = 3
-margin/left = 72.0
-margin/top = 0.0
-margin/right = 997.0
-margin/bottom = 100.0
-custom_fonts/font = SubResource( 13 )
-custom_colors/font_color = Color( 1, 0.513726, 0, 1 )
-valign = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Bot" type="Container" parent="Game/vbox"]
-
-editor/display_folded = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 8.0
-margin/right = 1080.0
-margin/bottom = 8.0
-
-[node name="VBoxBot" type="VBoxContainer" parent="Game/vbox/Bot"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 5.0
-margin/top = 1475.0
-margin/right = 1085.0
-margin/bottom = 1893.0
-custom_constants/separation = 15
-alignment = 0
-
-[node name="Bouton0" type="TextureButton" parent="Game/vbox/Bot/VBoxBot" groups=[
-"Bouton",
-]]
-
-editor/display_folded = true
-visibility/opacity = 0.0
-rect/min_size = Vector2( 840, 85 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 0
-size_flags/vertical = 0
-size_flags/stretch_ratio = 0.0
-margin/left = 120.0
-margin/top = 0.0
-margin/right = 960.0
-margin/bottom = 85.0
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-textures/normal = ExtResource( 4 )
-textures/pressed = ExtResource( 5 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label0" type="Label" parent="Game/vbox/Bot/VBoxBot/Bouton0"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 840.0
-margin/bottom = 85.0
-custom_fonts/font = SubResource( 14 )
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Bouton1" type="TextureButton" parent="Game/vbox/Bot/VBoxBot" groups=[
-"Bouton",
-]]
-
-editor/display_folded = true
-visibility/opacity = 0.0
-rect/min_size = Vector2( 840, 85 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 0
-size_flags/vertical = 0
-margin/left = 120.0
-margin/top = 100.0
-margin/right = 960.0
-margin/bottom = 185.0
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-textures/normal = ExtResource( 4 )
-textures/pressed = ExtResource( 5 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label1" type="Label" parent="Game/vbox/Bot/VBoxBot/Bouton1"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 840.0
-margin/bottom = 85.0
-custom_fonts/font = SubResource( 15 )
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Bouton2" type="TextureButton" parent="Game/vbox/Bot/VBoxBot" groups=[
-"Bouton",
-]]
-
-editor/display_folded = true
-visibility/opacity = 0.0
-rect/min_size = Vector2( 840, 85 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 0
-size_flags/vertical = 0
-margin/left = 120.0
-margin/top = 200.0
-margin/right = 960.0
-margin/bottom = 285.0
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-textures/normal = ExtResource( 4 )
-textures/pressed = ExtResource( 5 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label2" type="Label" parent="Game/vbox/Bot/VBoxBot/Bouton2"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 840.0
-margin/bottom = 85.0
-custom_fonts/font = SubResource( 16 )
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Bouton3" type="TextureButton" parent="Game/vbox/Bot/VBoxBot" groups=[
-"Bouton",
-]]
-
-editor/display_folded = true
-visibility/opacity = 0.0
-rect/min_size = Vector2( 840, 85 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 0
-size_flags/vertical = 0
-margin/left = 120.0
-margin/top = 300.0
-margin/right = 960.0
-margin/bottom = 385.0
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-textures/normal = ExtResource( 4 )
-textures/pressed = ExtResource( 5 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label3" type="Label" parent="Game/vbox/Bot/VBoxBot/Bouton3"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 840.0
-margin/bottom = 85.0
-custom_fonts/font = SubResource( 17 )
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Sprite" type="Sprite" parent="Game/vbox/Bot"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 541.646, 1671.41 )
-texture = ExtResource( 41 )
-
-[node name="Timer" type="Timer" parent="Game"]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = true
-autostart = false
-
-[node name="SampleMSG" type="SamplePlayer" parent="Game"]
-
-config/polyphony = 1
-config/samples = SubResource( 18 )
-default/volume_db = -80.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 1.0
-default/filter/gain = 1.0
-default/reverb_room = 2
-default/reverb_send = 0.0
-default/chorus_send = 0.0
-
-[node name="SampleBKG" type="SamplePlayer" parent="Game"]
-
-config/polyphony = 1
-config/samples = SubResource( 19 )
-default/volume_db = 0.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 1.0
-default/filter/gain = 1.0
-default/reverb_room = 2
-default/reverb_send = 0.0
-default/chorus_send = 0.0
-
-[node name="SampleTRG" type="SamplePlayer" parent="Game"]
-
-config/polyphony = 1
-config/samples = SubResource( 20 )
-default/volume_db = 0.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 1.0
-default/filter/gain = 1.0
-default/reverb_room = 2
-default/reverb_send = 0.0
-default/chorus_send = 0.0
-
-[node name="Loading" type="Popup" parent="Game"]
-
-editor/display_folded = true
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 16.0
-margin/top = 16.0
-margin/right = 1096.0
-margin/bottom = 1936.0
-popup/exclusive = true
-
-[node name="Sprite" type="Sprite" parent="Game/Loading"]
-
-texture = ExtResource( 11 )
-centered = false
-
-[node name="Label" type="Label" parent="Game/Loading"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 1068.0
-margin/bottom = 1883.0
-custom_fonts/font = SubResource( 21 )
-text = "CHARGEMENT"
-align = 1
-valign = 1
-autowrap = true
-uppercase = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+[connection signal="pressed" from="Game/Choices/VBox/Bouton3" to="Game" method="_on_Bouton3_pressed"]
 
 [connection signal="pressed" from="Game/Popup/VBox/Sound/MusicButton" to="Game" method="_on_MusicButton_pressed"]
 
@@ -1292,15 +2411,5 @@ max_lines_visible = -1
 [connection signal="pressed" from="Game/Popup/VBox/Retour" to="Game" method="_on_Retour_pressed"]
 
 [connection signal="pressed" from="Game/Popup/VBox/Quitter" to="Game" method="_on_Quitter_pressed"]
-
-[connection signal="pressed" from="Game/vbox/Top/resetSave" to="Game" method="_on_resetSave_pressed"]
-
-[connection signal="pressed" from="Game/vbox/Bot/VBoxBot/Bouton0" to="Game" method="_on_Bouton0_pressed"]
-
-[connection signal="pressed" from="Game/vbox/Bot/VBoxBot/Bouton1" to="Game" method="_on_Bouton1_pressed"]
-
-[connection signal="pressed" from="Game/vbox/Bot/VBoxBot/Bouton2" to="Game" method="_on_Bouton2_pressed"]
-
-[connection signal="pressed" from="Game/vbox/Bot/VBoxBot/Bouton3" to="Game" method="_on_Bouton3_pressed"]
 
 

@@ -66,7 +66,7 @@ var buttonTarget = []
 var origin = null
 var labelNode = null
 var imgTexture = null
-var devMode = 1
+var devMode = 0
 
 ############################### PREPARATION DU SCRIPT ###############################
 
@@ -560,7 +560,11 @@ func start():
 			##### REPONSES #####
 			
 			elif item.Type == "ReponseTemplate":
+				get_node("vbox/Bot/ButtonChoices").set("disabled", 0)
+				get_node("vbox/Bot/ButtonChoices/Label").set("visibility/visible", 1)
+				print(str("NOMBRE DE BOUTON ?! :::", item.Properties.OutputPins.size()))
 				for i in range(item.Properties.OutputPins.size()):
+					get_node("Choices/Sprite").set("transform/scale", Vector2(2,i+2))
 					if lastRep == false:
 						buttonTarget.append(item.Properties.OutputPins[i].Connections[0].TargetPin)
 					TargetPin = item.Properties.OutputPins[i].Id
@@ -577,10 +581,10 @@ func start():
 								buttonText.append(caribou.Properties.MenuText)
 							else:
 								buttonText.append(caribou.Properties.Text)
-							get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text(str(buttonName))
-							get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(false)
+							get_node(str("Choices/VBox/Bouton",i)).set_text(str(buttonName))
+							get_node(str("Choices/VBox/Bouton",i)).set_ignore_mouse(false)
 							LOAD.tween = get_node("Tween")
-							LOAD.targetNode = get_node(str("vbox/Bot/VBoxBot/Bouton",i))
+							LOAD.targetNode = get_node(str("Choices/VBox/Bouton",i))
 							LOAD.tweenType = "visibility/opacity"
 							LOAD.tweenStart = 0
 							LOAD.tweenEnd = 1
@@ -632,21 +636,23 @@ func clean():
 	print("Fin du timer")
 	print("Suppression des boutons")
 	for i in range(4):
-		get_node(str("vbox/Bot/VBoxBot/Bouton",i)).set_ignore_mouse(true)
-		if get_node(str("vbox/Bot/VBoxBot/Bouton",i)).get("visibility/opacity") == 1:
+		get_node(str("Choices/VBox/Bouton",i)).set_ignore_mouse(true)
+		if get_node(str("Choices/VBox/Bouton",i)).get("visibility/opacity") == 1:
 			LOAD.tween = get_node("Tween")
-			LOAD.targetNode = get_node(str("vbox/Bot/VBoxBot/Bouton",i))
+			LOAD.targetNode = get_node(str("Choices/VBox/Bouton",i))
 			LOAD.tweenType = "visibility/opacity"
 			LOAD.tweenStart = 1
 			LOAD.tweenEnd = 0
 			LOAD.tweenTime = 0.2
 			LOAD.system_tween()
-			get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text("")
+			#get_node(str("vbox/Bot/VBoxBot/Bouton",i,"/Label",i)).set_text("")
 	return
 
 # Button Action
 func button_action():
-	
+	get_node("Choices").hide()
+	get_node("vbox/Bot/ButtonChoices").set("disabled", 1)
+	get_node("vbox/Bot/ButtonChoices/Label").set("visibility/visible", 0)
 	# Vérification d'un trigger son
 	if ConfigSoundTRG != "":
 		triggerName = ConfigSoundTRG
@@ -1029,3 +1035,10 @@ func _on_SoundButton_pressed():
 		soundOptions()
 	LOAD.saveGlobal()
 	return
+
+func _on_ButtonChoices_pressed():
+	get_node("Choices").popup()
+
+
+func _on_LeaveChoices_pressed():
+	get_node("Choices").hide()
