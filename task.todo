@@ -126,12 +126,8 @@
                 ✔ Ajouter lecture de sons BKG sur les réponses @done (2017-12-21 16:10:41)
         1.1:
             ☐ Création du thème GUI
-                ☐ Création d'un Theme
-                    ☐ Boutons
-                    ☐ Boite de Dialogue
-                    ☐ Couleur de fonds
-                    ☐ Police
-                    ☐ Couleur des textes
+                ✔ Création d'un fichier texture unique @done (2018-1-3 17:27:17)
+                ☐ Ajout des anciennes textures dans le fichier unique
                 ☐ Refonte Menu
                 ☐ Refonte Jeu
                     ✔ Interface de jeu @done (2018-1-3 17:11:04)
