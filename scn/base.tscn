@@ -1,65 +1,52 @@
-[gd_scene load_steps=91 format=1]
+[gd_scene load_steps=83 format=1]
 
 [ext_resource path="res://font/Roboto-Light.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://img/texture.png" type="Texture" id=2]
 [ext_resource path="res://scr/game.gd" type="Script" id=3]
-[ext_resource path="res://img/avatar.png" type="Texture" id=4]
-[ext_resource path="res://font/DEJAVUSANSMONO.TTF" type="DynamicFontData" id=5]
+[ext_resource path="res://font/DEJAVUSANSMONO.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://font/Roboto-Bold.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://font/DEJAVUSANS.TTF" type="DynamicFontData" id=6]
-[ext_resource path="res://img/LED_enligne.png" type="Texture" id=7]
-[ext_resource path="res://font/Roboto-Bold.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://img/load/activite_ecriture00.png" type="Texture" id=9]
-[ext_resource path="res://img/load/activite_ecriture01.png" type="Texture" id=10]
-[ext_resource path="res://img/load/activite_ecriture02.png" type="Texture" id=11]
-[ext_resource path="res://img/load/activite_ecriture03.png" type="Texture" id=12]
-[ext_resource path="res://img/load/activite_ecriture04.png" type="Texture" id=13]
-[ext_resource path="res://img/load/activite_ecriture05.png" type="Texture" id=14]
-[ext_resource path="res://img/load/activite_ecriture06.png" type="Texture" id=15]
-[ext_resource path="res://img/load/activite_ecriture07.png" type="Texture" id=16]
-[ext_resource path="res://img/load/activite_ecriture08.png" type="Texture" id=17]
-[ext_resource path="res://img/load/activite_ecriture09.png" type="Texture" id=18]
-[ext_resource path="res://img/load/activite_ecriture10.png" type="Texture" id=19]
-[ext_resource path="res://img/load/activite_ecriture11.png" type="Texture" id=20]
-[ext_resource path="res://img/load/activite_ecriture12.png" type="Texture" id=21]
-[ext_resource path="res://img/load/activite_ecriture13.png" type="Texture" id=22]
-[ext_resource path="res://img/load/activite_ecriture14.png" type="Texture" id=23]
-[ext_resource path="res://img/load/activite_ecriture15.png" type="Texture" id=24]
-[ext_resource path="res://img/load/activite_ecriture16.png" type="Texture" id=25]
-[ext_resource path="res://img/load/activite_ecriture17.png" type="Texture" id=26]
-[ext_resource path="res://img/load/activite_ecriture18.png" type="Texture" id=27]
-[ext_resource path="res://img/load/activite_ecriture19.png" type="Texture" id=28]
-[ext_resource path="res://img/load/activite_ecriture20.png" type="Texture" id=29]
-[ext_resource path="res://img/load/activite_ecriture21.png" type="Texture" id=30]
-[ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" id=31]
-[ext_resource path="res://img/footer.jpg" type="Texture" id=32]
-[ext_resource path="res://snd/msg_received.smp" type="Sample" id=33]
-[ext_resource path="res://snd/msg_send.smp" type="Sample" id=34]
-[ext_resource path="res://snd/msg_sys.smp" type="Sample" id=35]
-[ext_resource path="res://snd/Bkg_Crypte.smp" type="Sample" id=36]
-[ext_resource path="res://snd/Bkg_Eau.smp" type="Sample" id=37]
-[ext_resource path="res://snd/Bkg_Grotte.smp" type="Sample" id=38]
-[ext_resource path="res://snd/Bkg_Salle.smp" type="Sample" id=39]
-[ext_resource path="res://snd/Bkg_SalleHaute.smp" type="Sample" id=40]
-[ext_resource path="res://snd/Bkg_ThemeFin.smp" type="Sample" id=41]
-[ext_resource path="res://snd/Trg_Breath.smp" type="Sample" id=42]
-[ext_resource path="res://snd/Trg_Breath_Short.smp" type="Sample" id=43]
-[ext_resource path="res://snd/Trg_Chute.smp" type="Sample" id=44]
-[ext_resource path="res://snd/Trg_Effondrement.smp" type="Sample" id=45]
-[ext_resource path="res://snd/Trg_Hole.smp" type="Sample" id=46]
-[ext_resource path="res://snd/Trg_Loquet.smp" type="Sample" id=47]
-[ext_resource path="res://snd/Trg_Noyade.smp" type="Sample" id=48]
-[ext_resource path="res://snd/Trg_Ombre.smp" type="Sample" id=49]
-[ext_resource path="res://snd/Trg_Tableaux.smp" type="Sample" id=50]
-[ext_resource path="res://img/Fond_general.jpg" type="Texture" id=51]
-[ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=52]
-[ext_resource path="res://img/music_ON.png" type="Texture" id=53]
-[ext_resource path="res://img/sound_ON.png" type="Texture" id=54]
-[ext_resource path="res://img/bouton_base.jpg" type="Texture" id=55]
-[ext_resource path="res://img/bouton_clic.jpg" type="Texture" id=56]
-[ext_resource path="res://img/twitter.jpg" type="Texture" id=57]
-[ext_resource path="res://img/facebook.jpg" type="Texture" id=58]
-[ext_resource path="res://img/youtube.jpg" type="Texture" id=59]
-[ext_resource path="res://img/fond_message_large.png" type="Texture" id=60]
+[ext_resource path="res://img/load/activite_ecriture00.png" type="Texture" id=7]
+[ext_resource path="res://img/load/activite_ecriture01.png" type="Texture" id=8]
+[ext_resource path="res://img/load/activite_ecriture02.png" type="Texture" id=9]
+[ext_resource path="res://img/load/activite_ecriture03.png" type="Texture" id=10]
+[ext_resource path="res://img/load/activite_ecriture04.png" type="Texture" id=11]
+[ext_resource path="res://img/load/activite_ecriture05.png" type="Texture" id=12]
+[ext_resource path="res://img/load/activite_ecriture06.png" type="Texture" id=13]
+[ext_resource path="res://img/load/activite_ecriture07.png" type="Texture" id=14]
+[ext_resource path="res://img/load/activite_ecriture08.png" type="Texture" id=15]
+[ext_resource path="res://img/load/activite_ecriture09.png" type="Texture" id=16]
+[ext_resource path="res://img/load/activite_ecriture10.png" type="Texture" id=17]
+[ext_resource path="res://img/load/activite_ecriture11.png" type="Texture" id=18]
+[ext_resource path="res://img/load/activite_ecriture12.png" type="Texture" id=19]
+[ext_resource path="res://img/load/activite_ecriture13.png" type="Texture" id=20]
+[ext_resource path="res://img/load/activite_ecriture14.png" type="Texture" id=21]
+[ext_resource path="res://img/load/activite_ecriture15.png" type="Texture" id=22]
+[ext_resource path="res://img/load/activite_ecriture16.png" type="Texture" id=23]
+[ext_resource path="res://img/load/activite_ecriture17.png" type="Texture" id=24]
+[ext_resource path="res://img/load/activite_ecriture18.png" type="Texture" id=25]
+[ext_resource path="res://img/load/activite_ecriture19.png" type="Texture" id=26]
+[ext_resource path="res://img/load/activite_ecriture20.png" type="Texture" id=27]
+[ext_resource path="res://img/load/activite_ecriture21.png" type="Texture" id=28]
+[ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" id=29]
+[ext_resource path="res://snd/msg_received.smp" type="Sample" id=30]
+[ext_resource path="res://snd/msg_send.smp" type="Sample" id=31]
+[ext_resource path="res://snd/msg_sys.smp" type="Sample" id=32]
+[ext_resource path="res://snd/Bkg_Crypte.smp" type="Sample" id=33]
+[ext_resource path="res://snd/Bkg_Eau.smp" type="Sample" id=34]
+[ext_resource path="res://snd/Bkg_Grotte.smp" type="Sample" id=35]
+[ext_resource path="res://snd/Bkg_Salle.smp" type="Sample" id=36]
+[ext_resource path="res://snd/Bkg_SalleHaute.smp" type="Sample" id=37]
+[ext_resource path="res://snd/Bkg_ThemeFin.smp" type="Sample" id=38]
+[ext_resource path="res://snd/Trg_Breath.smp" type="Sample" id=39]
+[ext_resource path="res://snd/Trg_Breath_Short.smp" type="Sample" id=40]
+[ext_resource path="res://snd/Trg_Chute.smp" type="Sample" id=41]
+[ext_resource path="res://snd/Trg_Effondrement.smp" type="Sample" id=42]
+[ext_resource path="res://snd/Trg_Hole.smp" type="Sample" id=43]
+[ext_resource path="res://snd/Trg_Loquet.smp" type="Sample" id=44]
+[ext_resource path="res://snd/Trg_Noyade.smp" type="Sample" id=45]
+[ext_resource path="res://snd/Trg_Ombre.smp" type="Sample" id=46]
+[ext_resource path="res://snd/Trg_Tableaux.smp" type="Sample" id=47]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -1157,32 +1144,27 @@ font/font = ExtResource( 1 )
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 5 )
+font/font = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="AtlasTexture" id=36]
 
-font/size = 26
-extra_spacing/top = 15
-extra_spacing/bottom = 15
-extra_spacing/char = 2
-extra_spacing/space = 1
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 6 )
+atlas = ExtResource( 2 )
+region = Rect2( 500, 10, 59, 59 )
+margin = Rect2( 0, 0, 0, 0 )
 
 [sub_resource type="DynamicFont" id=13]
 
 font/size = 20
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 5 )
+font/font = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=14]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = false
-font/font = ExtResource( 8 )
+font/font = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=15]
 
@@ -1194,7 +1176,7 @@ font/font = ExtResource( 6 )
 [sub_resource type="SpriteFrames" id=16]
 
 animations = [ {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
 "loop": true,
 "name": "default",
 "speed": 15.0
@@ -1205,42 +1187,42 @@ animations = [ {
 font/size = 45
 font/use_mipmaps = false
 font/use_filter = false
-font/font = ExtResource( 8 )
+font/font = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=18]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 5 )
+font/font = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=19]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = false
-font/font = ExtResource( 8 )
+font/font = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=20]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = false
-font/font = ExtResource( 8 )
+font/font = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=21]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = false
-font/font = ExtResource( 8 )
+font/font = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=22]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = false
-font/font = ExtResource( 8 )
+font/font = ExtResource( 5 )
 
 [sub_resource type="SampleLibrary" id=23]
 
@@ -1248,19 +1230,19 @@ samples/msg_received = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 33 )
+"sample": ExtResource( 30 )
 }
 samples/msg_send = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 34 )
+"sample": ExtResource( 31 )
 }
 samples/msg_sys = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 35 )
+"sample": ExtResource( 32 )
 }
 
 [sub_resource type="SampleLibrary" id=24]
@@ -1269,37 +1251,37 @@ samples/Bkg_Crypte = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 36 )
+"sample": ExtResource( 33 )
 }
 samples/Bkg_Eau = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 37 )
+"sample": ExtResource( 34 )
 }
 samples/Bkg_Grotte = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 38 )
+"sample": ExtResource( 35 )
 }
 samples/Bkg_Salle = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 39 )
+"sample": ExtResource( 36 )
 }
 samples/Bkg_SalleHaute = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 40 )
+"sample": ExtResource( 37 )
 }
 samples/Bkg_ThemeFin = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 41 )
+"sample": ExtResource( 38 )
 }
 
 [sub_resource type="SampleLibrary" id=25]
@@ -1308,91 +1290,121 @@ samples/Trg_Breath = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 42 )
+"sample": ExtResource( 39 )
 }
 samples/Trg_Breath_Short = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 43 )
+"sample": ExtResource( 40 )
 }
 samples/Trg_Chute = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 44 )
+"sample": ExtResource( 41 )
 }
 samples/Trg_Effondrement = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 45 )
+"sample": ExtResource( 42 )
 }
 samples/Trg_Hole = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 46 )
+"sample": ExtResource( 43 )
 }
 samples/Trg_Loquet = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 47 )
+"sample": ExtResource( 44 )
 }
 samples/Trg_Noyade = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 48 )
+"sample": ExtResource( 45 )
 }
 samples/Trg_Ombre = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 49 )
+"sample": ExtResource( 46 )
 }
 samples/Trg_Tableaux = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 50 )
+"sample": ExtResource( 47 )
 }
 
 [sub_resource type="DynamicFont" id=26]
 
-font/size = 60
+font/size = 80
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 52 )
+font/font = ExtResource( 1 )
+
+[sub_resource type="AtlasTexture" id=31]
+
+atlas = ExtResource( 2 )
+region = Rect2( 697, 314, 127, 122 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=32]
+
+atlas = ExtResource( 2 )
+region = Rect2( 697, 471, 124, 104 )
+margin = Rect2( 0, 0, 0, 0 )
 
 [sub_resource type="DynamicFont" id=27]
 
-font/size = 40
+font/size = 50
 font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 52 )
+font/use_filter = false
+font/font = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=28]
 
-font/size = 40
+font/size = 50
 font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 52 )
+font/use_filter = false
+font/font = ExtResource( 5 )
+
+[sub_resource type="AtlasTexture" id=33]
+
+atlas = ExtResource( 2 )
+region = Rect2( 857, 156, 128, 128 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=34]
+
+atlas = ExtResource( 2 )
+region = Rect2( 857, 11, 128, 128 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=35]
+
+atlas = ExtResource( 2 )
+region = Rect2( 697, 156, 128, 128 )
+margin = Rect2( 0, 0, 0, 0 )
 
 [sub_resource type="DynamicFont" id=29]
 
-font/size = 40
+font/size = 50
 font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 52 )
+font/use_filter = false
+font/font = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=30]
 
-font/size = 40
+font/size = 50
 font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 52 )
+font/use_filter = false
+font/font = ExtResource( 5 )
 
 [node name="World" type="Node"]
 
@@ -1424,6 +1436,7 @@ playback/speed = 1.0
 
 [node name="vbox" type="VBoxContainer" parent="Game"]
 
+editor/display_folded = true
 rect/min_size = Vector2( 1080, 1920 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -1451,26 +1464,11 @@ margin/bottom = 0.0
 
 visibility/self_opacity = 2.0
 visibility/behind_parent = true
-transform/pos = Vector2( 536.4, 29.184 )
-transform/scale = Vector2( 1.67863, 1.42005 )
+transform/pos = Vector2( 533.739, 29.184 )
+transform/scale = Vector2( 1.67049, 1.42005 )
 texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 17, 314, 654, 80 )
-
-[node name="TextureFrame 2" type="TextureFrame" parent="Game/vbox/Top"]
-
-rect/min_size = Vector2( 100, 100 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 4.0
-margin/top = -19.0
-margin/right = 104.0
-margin/bottom = 81.0
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 0
 
 [node name="Name" type="RichTextLabel" parent="Game/vbox/Top"]
 
@@ -1525,31 +1523,22 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="resetSave" type="Button" parent="Game/vbox/Top"]
+[node name="resetSave" type="TextureButton" parent="Game/vbox/Top"]
 
-visibility/self_opacity = 0.0
-visibility/behind_parent = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 946.0
-margin/top = -22.0
-margin/right = 1074.0
-margin/bottom = 91.0
-custom_fonts/font = SubResource( 12 )
+margin/left = 981.0
+margin/top = -1.0
+margin/right = 1040.0
+margin/bottom = 58.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "OPTIONS"
-flat = false
-
-[node name="Options" type="Sprite" parent="Game/vbox/Top/resetSave"]
-
-transform/pos = Vector2( 64.2236, 53.228 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 500, 10, 59, 59 )
+textures/normal = SubResource( 36 )
+params/resize_mode = 0
+params/stretch_mode = 0
 
 [node name="version" type="Label" parent="Game/vbox/Top"]
 
@@ -1570,12 +1559,23 @@ max_lines_visible = -1
 
 [node name="LED" type="Sprite" parent="Game/vbox/Top"]
 
-transform/pos = Vector2( 92.0789, 66.0151 )
-texture = ExtResource( 7 )
+transform/pos = Vector2( 96.0594, 66.0151 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 573, 69, 48, 49 )
+
+[node name="Avatar" type="Sprite" parent="Game/vbox/Top"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( -1.32684, -23.2197 )
+transform/scale = Vector2( 0.808041, 0.789524 )
+texture = ExtResource( 2 )
+centered = false
+region = true
+region_rect = Rect2( 690, 10, 135, 135 )
 
 [node name="Mid" type="Container" parent="Game/vbox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 0
@@ -1597,7 +1597,6 @@ region_rect = Rect2( 13, 407, 653, 149 )
 
 [node name="DialBox" type="ScrollContainer" parent="Game/vbox/Mid"]
 
-editor/display_folded = true
 visibility/behind_parent = true
 anchor/right = 1
 anchor/bottom = 1
@@ -1608,7 +1607,7 @@ size_flags/vertical = 0
 margin/left = -555.0
 margin/top = 86.0
 margin/right = -544.0
-margin/bottom = -1759.0
+margin/bottom = -1743.0
 scroll/horizontal = false
 scroll/vertical = true
 
@@ -1629,7 +1628,6 @@ alignment = 0
 
 [node name="LabelTime" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
 
-editor/display_folded = true
 visibility/visible = false
 visibility/opacity = 0.0
 rect/min_size = Vector2( 925, 55 )
@@ -1662,7 +1660,6 @@ region_rect = Rect2( 13, 10, 468, 144 )
 
 [node name="LabelStat" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
 
-editor/display_folded = true
 visibility/visible = false
 visibility/opacity = 0.0
 rect/min_size = Vector2( 825, 50 )
@@ -1688,12 +1685,11 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 16 )
 animation = "default"
-frame = 11
+frame = 17
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
 
-editor/display_folded = true
 visibility/visible = false
 visibility/opacity = 0.0
 anchor/right = 1
@@ -1780,13 +1776,6 @@ margin/top = 0.0
 margin/right = 1080.0
 margin/bottom = 0.0
 
-[node name="Sprite" type="Sprite" parent="Game/vbox/Bot"]
-
-visibility/visible = false
-visibility/behind_parent = true
-transform/pos = Vector2( 541.646, 1671.41 )
-texture = ExtResource( 32 )
-
 [node name="ButtonChoices" type="Button" parent="Game/vbox/Bot"]
 
 editor/display_folded = true
@@ -1832,6 +1821,8 @@ max_lines_visible = -1
 
 [node name="Choices" type="Popup" parent="Game"]
 
+editor/display_folded = true
+visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -1878,6 +1869,7 @@ max_lines_visible = -1
 
 [node name="VBox" type="VBoxContainer" parent="Game/Choices"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -2055,8 +2047,13 @@ popup/exclusive = true
 
 [node name="Sprite" type="Sprite" parent="Game/Loading"]
 
-texture = ExtResource( 51 )
+transform/pos = Vector2( -22.3339, -51.8804 )
+transform/scale = Vector2( 2.42223, 13.7736 )
+texture = ExtResource( 2 )
 centered = false
+modulate = Color( 0.211765, 0.239216, 0.270588, 1 )
+region = true
+region_rect = Rect2( 13, 10, 468, 144 )
 
 [node name="Label" type="Label" parent="Game/Loading"]
 
@@ -2065,11 +2062,12 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 0.0
+margin/top = -21.0
 margin/right = 1068.0
-margin/bottom = 1883.0
+margin/bottom = 1862.0
 custom_fonts/font = SubResource( 26 )
-text = "CHARGEMENT"
+custom_colors/font_color = Color( 0.777344, 0.441431, 0.048584, 1 )
+text = "CHARGEMENT..."
 align = 1
 valign = 1
 autowrap = true
@@ -2090,7 +2088,35 @@ margin/left = 16.0
 margin/top = 16.0
 margin/right = 1096.0
 margin/bottom = 1936.0
-popup/exclusive = false
+popup/exclusive = true
+
+[node name="LeaveOptions" type="Button" parent="Game/Popup"]
+
+visibility/self_opacity = 0.0
+visibility/behind_parent = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -12.0
+margin/top = -28.0
+margin/right = 1074.0
+margin/bottom = 1887.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+
+[node name="Sprite" type="Sprite" parent="Game/Popup"]
+
+visibility/self_opacity = 0.8
+visibility/behind_parent = true
+transform/pos = Vector2( 65.8025, 457.138 )
+transform/scale = Vector2( 2, 6.69909 )
+texture = ExtResource( 2 )
+centered = false
+region = true
+region_rect = Rect2( 13, 10, 468, 144 )
 
 [node name="VBox" type="VBoxContainer" parent="Game/Popup"]
 
@@ -2102,7 +2128,7 @@ margin/left = 111.0
 margin/top = 524.0
 margin/right = 951.0
 margin/bottom = 836.0
-custom_constants/separation = 40
+custom_constants/separation = 50
 alignment = 0
 
 [node name="Sound" type="HBoxContainer" parent="Game/Popup/VBox"]
@@ -2114,7 +2140,7 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 840.0
-margin/bottom = 171.0
+margin/bottom = 156.0
 custom_constants/separation = 200
 alignment = 1
 
@@ -2124,16 +2150,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 131.0
+margin/left = 151.0
 margin/top = 0.0
-margin/right = 306.5
-margin/bottom = 171.0
+margin/right = 303.4
+margin/bottom = 156.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 53 )
+textures/normal = SubResource( 31 )
 params/resize_mode = 0
-params/scale = Vector2( 1.5, 1.5 )
+params/scale = Vector2( 1.2, 1.2 )
 params/stretch_mode = 0
 
 [node name="SoundButton" type="TextureButton" parent="Game/Popup/VBox/Sound"]
@@ -2142,104 +2168,63 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 506.0
+margin/left = 503.0
 margin/top = 0.0
-margin/right = 708.5
-margin/bottom = 171.0
+margin/right = 689.0
+margin/bottom = 156.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 54 )
+textures/normal = SubResource( 32 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
 
-[node name="Reset" type="TextureButton" parent="Game/Popup/VBox"]
+[node name="Reset" type="Button" parent="Game/Popup/VBox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 211.0
+margin/top = 206.0
 margin/right = 840.0
-margin/bottom = 295.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 55 )
-textures/pressed = ExtResource( 56 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label" type="Label" parent="Game/Popup/VBox/Reset"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 840.0
-margin/bottom = 84.0
+margin/bottom = 267.0
 custom_fonts/font = SubResource( 27 )
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
 
-[node name="Site" type="TextureButton" parent="Game/Popup/VBox"]
+[node name="Site" type="Button" parent="Game/Popup/VBox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 335.0
+margin/top = 317.0
 margin/right = 840.0
-margin/bottom = 419.0
+margin/bottom = 378.0
+custom_fonts/font = SubResource( 28 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 55 )
-textures/pressed = ExtResource( 56 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label" type="Label" parent="Game/Popup/VBox/Site"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 840.0
-margin/bottom = 83.0
-custom_fonts/font = SubResource( 28 )
 text = "ChroniquesDeTalos.com"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+flat = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Game/Popup/VBox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 459.0
+margin/top = 428.0
 margin/right = 840.0
-margin/bottom = 587.0
-custom_constants/separation = 200
-alignment = 0
+margin/bottom = 620.0
+custom_constants/separation = 130
+alignment = 1
 
 [node name="Twitter" type="TextureButton" parent="Game/Popup/VBox/HBoxContainer"]
 
@@ -2247,15 +2232,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
+margin/left = 2.0
 margin/top = 0.0
-margin/right = 128.0
-margin/bottom = 128.0
+margin/right = 194.0
+margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 57 )
+textures/normal = SubResource( 33 )
 params/resize_mode = 0
+params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
 
 [node name="Facebook" type="TextureButton" parent="Game/Popup/VBox/HBoxContainer"]
@@ -2264,15 +2250,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 328.0
+margin/left = 324.0
 margin/top = 0.0
-margin/right = 456.0
-margin/bottom = 128.0
+margin/right = 516.0
+margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 58 )
+textures/normal = SubResource( 34 )
 params/resize_mode = 0
+params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
 
 [node name="Youtube" type="TextureButton" parent="Game/Popup/VBox/HBoxContainer"]
@@ -2281,104 +2268,49 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 656.0
+margin/left = 646.0
 margin/top = 0.0
-margin/right = 784.0
-margin/bottom = 128.0
+margin/right = 838.0
+margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 59 )
+textures/normal = SubResource( 35 )
 params/resize_mode = 0
+params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
 
-[node name="Retour" type="TextureButton" parent="Game/Popup/VBox"]
+[node name="Retour" type="Button" parent="Game/Popup/VBox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 627.0
+margin/top = 670.0
 margin/right = 840.0
-margin/bottom = 711.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 55 )
-textures/pressed = ExtResource( 56 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label" type="Label" parent="Game/Popup/VBox/Retour"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 840.0
-margin/bottom = 83.0
+margin/bottom = 731.0
 custom_fonts/font = SubResource( 29 )
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
 
-[node name="Quitter" type="TextureButton" parent="Game/Popup/VBox"]
+[node name="Quitter" type="Button" parent="Game/Popup/VBox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 751.0
+margin/top = 781.0
 margin/right = 840.0
-margin/bottom = 835.0
+margin/bottom = 842.0
+custom_fonts/font = SubResource( 30 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 55 )
-textures/pressed = ExtResource( 56 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label" type="Label" parent="Game/Popup/VBox/Quitter"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 841.0
-margin/bottom = 84.0
-custom_fonts/font = SubResource( 30 )
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Sprite" type="Sprite" parent="Game/Popup"]
-
-visibility/opacity = 0.6
-visibility/behind_parent = true
-transform/pos = Vector2( -48.4626, -23.7219 )
-transform/scale = Vector2( 1.14223, 9.69565 )
-texture = ExtResource( 60 )
-centered = false
-
-[node name="Sprite" type="Sprite" parent="Game"]
-
-visibility/visible = false
-visibility/behind_parent = true
-transform/pos = Vector2( 550.343, 950.473 )
-texture = ExtResource( 51 )
+flat = false
 
 [connection signal="pressed" from="Game/vbox/Top/resetSave" to="Game" method="_on_resetSave_pressed"]
 
@@ -2393,6 +2325,8 @@ texture = ExtResource( 51 )
 [connection signal="pressed" from="Game/Choices/VBox/Bouton2" to="Game" method="_on_Bouton2_pressed"]
 
 [connection signal="pressed" from="Game/Choices/VBox/Bouton3" to="Game" method="_on_Bouton3_pressed"]
+
+[connection signal="pressed" from="Game/Popup/LeaveOptions" to="Game" method="_on_LeaveOptions_pressed"]
 
 [connection signal="pressed" from="Game/Popup/VBox/Sound/MusicButton" to="Game" method="_on_MusicButton_pressed"]
 

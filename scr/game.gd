@@ -43,7 +43,6 @@ var statusText = null
 var status = 0
 var statusNext = 0
 var visible = 1
-var led = null
 var sound = 0
 var triggerName = null
 var triggerVol = 0
@@ -81,9 +80,9 @@ func _ready():
 	print("#### LANCEMENT DU JEU ####")
 
 	# Texte Popup Options
-	get_node("Popup/VBox/Reset/Label").set_text(str(LOAD.optionsText[0]))
-	get_node("Popup/VBox/Retour/Label").set_text(str(LOAD.optionsText[2]))
-	get_node("Popup/VBox/Quitter/Label").set_text(str(LOAD.optionsText[3]))
+	get_node("Popup/VBox/Reset").set_text(str(LOAD.optionsText[0]))
+	get_node("Popup/VBox/Retour").set_text(str(LOAD.optionsText[2]))
+	get_node("Popup/VBox/Quitter").set_text(str(LOAD.optionsText[3]))
 
 	# Initialisation du Timer
 	print("Initialitation du Timer")
@@ -151,8 +150,8 @@ func _ready():
 								var labelbase = get_node(labelNode)
 								var label = labelbase.duplicate()
 								print("Configuration du label")
-								label.set_name(str("label",sentence))
-								var labelbg = str("vbox/Mid/DialBox/VBoxMid/label",sentence,"/LabelBG")
+								label.set_name(str("labelDial"))
+								var labelbg = str("vbox/Mid/DialBox/VBoxMid/labelDial/LabelBG")
 								print(labelbg)
 								get_node("vbox/Mid/DialBox/VBoxMid").add_child(label)
 								label.show()
@@ -792,22 +791,26 @@ func status():
 	# En ligne
 	if LOAD.time_delay < 30:
 		statusText = LOAD.gameText[0]
-		led = "res://img/LED_enligne.png"
+		# Modification de la LED
+		get_node("vbox/Top/LED").set_region_rect(Rect2(Vector2(573,69),Vector2(48,49)))
 		status = 1
 	# Occupé
 	elif LOAD.time_delay >= 30 and LOAD.time_delay <= 180:
 		statusText = LOAD.gameText[1]
-		led = "res://img/LED_occupe.png"
+		# Modification de la LED
+		get_node("vbox/Top/LED").set_region_rect(Rect2(Vector2(578,21),Vector2(37,37)))
 		status = 2
 	# Absent
 	elif LOAD.time_delay > 180 and LOAD.time_delay <= 300:
 		statusText = LOAD.gameText[2]
-		led = "res://img/LED_absent.png"
+		# Modification de la LED
+		get_node("vbox/Top/LED").set_region_rect(Rect2(Vector2(634,21),Vector2(37,37)))
 		status = 3
 	# Hors Ligne
 	elif LOAD.time_delay > 300:
 		statusText = LOAD.gameText[3]
-		led = "res://img/LED_horsligne.png"
+		# Modification de la LED
+		get_node("vbox/Top/LED").set_region_rect(Rect2(Vector2(634,75),Vector2(37,37)))
 		status = 4
 
 	# Vérification du changement de status
@@ -821,8 +824,6 @@ func message_system():
 	# Trigger son message système
 	sound = 3
 	sample_msg()
-	# Modification de la LED
-	get_node("vbox/Top/LED").set_texture(load(led))
 	# Message système
 	print("Modification vignette status")
 	get_node("vbox/Top/Etat").clear()
@@ -946,21 +947,17 @@ func background_sound():
 # System Option Sons
 func soundOptions():
 	if LOAD.MusicButton == 1:
-		imgTexture = load("res://img/music_ON.png")
-		get_node("Popup/VBox/Sound/MusicButton").set("textures/normal", imgTexture)
+		get_node("Popup/VBox/Sound/MusicButton").set_modulate(Color("#2873f3"))
 		if get_node("SampleBKG").is_active() == 0:
 			get_node("SampleBKG").play(LOAD.actualBGSound) 
 	elif LOAD.MusicButton == 0:
-		imgTexture = load("res://img/music_OFF.png")
-		get_node("Popup/VBox/Sound/MusicButton").set("textures/normal", imgTexture)
+		get_node("Popup/VBox/Sound/MusicButton").set_modulate(Color("#898989"))
 		if get_node("SampleBKG").is_active() == 1:
 			get_node("SampleBKG").stop_all()
 	if LOAD.SoundButton == 1:
-		imgTexture = load("res://img/sound_ON.png")
-		get_node("Popup/VBox/Sound/SoundButton").set("textures/normal", imgTexture)
+		get_node("Popup/VBox/Sound/SoundButton").set_modulate(Color("#2873f3"))
 	elif LOAD.SoundButton == 0:
-		imgTexture = load("res://img/sound_OFF.png")
-		get_node("Popup/VBox/Sound/SoundButton").set("textures/normal", imgTexture)
+		get_node("Popup/VBox/Sound/SoundButton").set_modulate(Color("#898989"))
 	return
 
 # System Exit
@@ -1042,3 +1039,7 @@ func _on_ButtonChoices_pressed():
 
 func _on_LeaveChoices_pressed():
 	get_node("Choices").hide()
+
+
+func _on_LeaveOptions_pressed():
+	get_node("Popup").hide()

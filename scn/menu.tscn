@@ -1,28 +1,37 @@
-[gd_scene load_steps=23 format=1]
+[gd_scene load_steps=25 format=1]
 
 [ext_resource path="res://scr/menu.gd" type="Script" id=1]
-[ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://img/bouton_base.jpg" type="Texture" id=3]
-[ext_resource path="res://img/bouton_clic.jpg" type="Texture" id=4]
-[ext_resource path="res://img/fond_menu.jpg" type="Texture" id=5]
-[ext_resource path="res://img/Fond_general.jpg" type="Texture" id=6]
-[ext_resource path="res://snd/Bkg_main_menu.smp" type="Sample" id=7]
-[ext_resource path="res://img/facebook.jpg" type="Texture" id=8]
-[ext_resource path="res://img/twitter.jpg" type="Texture" id=9]
-[ext_resource path="res://img/youtube.jpg" type="Texture" id=10]
+[ext_resource path="res://font/Roboto-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://img/texture.png" type="Texture" id=3]
+[ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://snd/Bkg_main_menu.smp" type="Sample" id=5]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=13]
 
 font/size = 40
 font/use_mipmaps = false
-font/use_filter = true
+font/use_filter = false
 font/font = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=14]
 
 font/size = 40
 font/use_mipmaps = false
-font/use_filter = true
+font/use_filter = false
+font/font = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=15]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=25]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
 font/font = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -30,13 +39,13 @@ font/font = ExtResource( 2 )
 font/size = 80
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 2 )
+font/font = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=26]
 
 font/size = 40
 font/use_mipmaps = false
-font/use_filter = true
+font/use_filter = false
 font/font = ExtResource( 2 )
 
 [sub_resource type="SampleLibrary" id=5]
@@ -45,35 +54,53 @@ samples/Bkg_main_menu = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 7 )
+"sample": ExtResource( 5 )
 }
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=16]
 
 font/size = 40
 font/use_mipmaps = false
-font/use_filter = true
+font/use_filter = false
 font/font = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=17]
 
 font/size = 40
 font/use_mipmaps = false
-font/use_filter = true
+font/use_filter = false
 font/font = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=18]
 
 font/size = 40
 font/use_mipmaps = false
-font/use_filter = true
+font/use_filter = false
 font/font = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="AtlasTexture" id=19]
+
+atlas = ExtResource( 3 )
+region = Rect2( 857, 11, 128, 128 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=20]
+
+atlas = ExtResource( 3 )
+region = Rect2( 857, 156, 128, 128 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=21]
+
+atlas = ExtResource( 3 )
+region = Rect2( 697, 156, 128, 128 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="DynamicFont" id=22]
 
 font/size = 40
 font/use_mipmaps = false
-font/use_filter = true
+font/use_filter = false
 font/font = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=10]
@@ -81,21 +108,33 @@ font/font = ExtResource( 2 )
 font/size = 100
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 2 )
+font/font = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=11]
 
 font/size = 35
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 2 )
+font/font = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=27]
 
 font/size = 40
 font/use_mipmaps = false
-font/use_filter = true
+font/use_filter = false
 font/font = ExtResource( 2 )
+
+[sub_resource type="AtlasTexture" id=23]
+
+atlas = ExtResource( 3 )
+region = Rect2( 697, 314, 127, 122 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=24]
+
+atlas = ExtResource( 3 )
+region = Rect2( 697, 471, 124, 104 )
+margin = Rect2( 0, 0, 0, 0 )
 
 [node name="Menu" type="Control"]
 
@@ -111,7 +150,6 @@ script/script = ExtResource( 1 )
 
 [node name="Start" type="Button" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -120,31 +158,14 @@ margin/left = 120.0
 margin/top = 1565.0
 margin/right = 959.0
 margin/bottom = 1671.0
+custom_fonts/font = SubResource( 13 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 flat = false
 
-[node name="Label" type="Label" parent="Start"]
+[node name="Option" type="Button" parent="."]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 228.0
-margin/top = 35.0
-margin/right = 598.0
-margin/bottom = 75.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Option" type="TextureButton" parent="."]
-
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -153,34 +174,14 @@ margin/left = 121.0
 margin/top = 1711.0
 margin/right = 469.0
 margin/bottom = 1856.0
+custom_fonts/font = SubResource( 14 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-params/resize_mode = 1
-params/stretch_mode = 0
+flat = false
 
-[node name="Label1" type="Label" parent="Option"]
+[node name="Quitter" type="Button" parent="."]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 87.0
-margin/top = 54.0
-margin/right = 269.0
-margin/bottom = 94.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Quitter" type="TextureButton" parent="."]
-
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -189,37 +190,11 @@ margin/left = 608.0
 margin/top = 1710.0
 margin/right = 956.0
 margin/bottom = 1855.0
+custom_fonts/font = SubResource( 15 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-params/resize_mode = 1
-params/stretch_mode = 0
-
-[node name="Label2" type="Label" parent="Quitter"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 81.0
-margin/top = 55.0
-margin/right = 263.0
-margin/bottom = 95.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Sprite" type="Sprite" parent="."]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 0.975342, 0 )
-texture = ExtResource( 5 )
-centered = false
+flat = false
 
 [node name="SelectChapter" type="Popup" parent="."]
 
@@ -249,9 +224,8 @@ margin/bottom = 970.0
 custom_constants/separation = 45
 alignment = 0
 
-[node name="Button" type="TextureButton" parent="SelectChapter/VBoxContainer"]
+[node name="Button" type="Button" parent="SelectChapter/VBoxContainer"]
 
-editor/display_folded = true
 visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -260,41 +234,24 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 840.0
-margin/bottom = 84.0
+margin/bottom = 20.0
+custom_fonts/font = SubResource( 25 )
 disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-textures/disabled = ExtResource( 4 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label" type="Label" parent="SelectChapter/VBoxContainer/Button"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 841.0
-margin/bottom = 84.0
-custom_fonts/font = SubResource( 2 )
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+flat = false
 
 [node name="Sprite" type="Sprite" parent="SelectChapter"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( -86.4248, -47.9471 )
-transform/scale = Vector2( 1.00731, 1.00818 )
-texture = ExtResource( 6 )
+transform/scale = Vector2( 2.33139, 13.5047 )
+texture = ExtResource( 3 )
 centered = false
+modulate = Color( 0.288071, 0.323169, 0.363281, 1 )
+region = true
+region_rect = Rect2( 13, 10, 468, 144 )
 
 [node name="Label" type="Label" parent="SelectChapter"]
 
@@ -313,9 +270,8 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="RetourChapitres" type="TextureButton" parent="SelectChapter"]
+[node name="RetourChapitres" type="Button" parent="SelectChapter"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -324,30 +280,11 @@ margin/left = 38.0
 margin/top = 1603.0
 margin/right = 878.0
 margin/bottom = 1687.0
+custom_fonts/font = SubResource( 26 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label" type="Label" parent="SelectChapter/RetourChapitres"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 840.0
-margin/bottom = 84.0
-custom_fonts/font = SubResource( 4 )
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+flat = false
 
 [node name="SampleBKGmenu" type="SamplePlayer" parent="."]
 
@@ -393,83 +330,40 @@ margin/bottom = 1386.0
 custom_constants/separation = 65
 alignment = 1
 
-[node name="Reset" type="TextureButton" parent="Options/VBox"]
+[node name="Reset" type="Button" parent="Options/VBox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 74.0
+margin/top = 134.0
 margin/right = 853.0
-margin/bottom = 158.0
+margin/bottom = 188.0
+custom_fonts/font = SubResource( 16 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-params/resize_mode = 0
-params/stretch_mode = 0
+flat = false
 
-[node name="Label" type="Label" parent="Options/VBox/Reset"]
+[node name="Credits" type="Button" parent="Options/VBox"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 840.0
-margin/bottom = 84.0
-custom_fonts/font = SubResource( 6 )
-align = 1
-valign = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Credits" type="TextureButton" parent="Options/VBox"]
-
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 223.0
+margin/top = 253.0
 margin/right = 853.0
 margin/bottom = 307.0
+custom_fonts/font = SubResource( 17 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-params/resize_mode = 0
-params/stretch_mode = 0
+flat = false
 
-[node name="Label" type="Label" parent="Options/VBox/Credits"]
+[node name="Site" type="Button" parent="Options/VBox"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 840.0
-margin/bottom = 84.0
-custom_fonts/font = SubResource( 7 )
-align = 1
-valign = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Site" type="TextureButton" parent="Options/VBox"]
-
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -477,32 +371,12 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 372.0
 margin/right = 853.0
-margin/bottom = 456.0
+margin/bottom = 426.0
+custom_fonts/font = SubResource( 18 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label" type="Label" parent="Options/VBox/Site"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 840.0
-margin/bottom = 84.0
-custom_fonts/font = SubResource( 8 )
-align = 1
-valign = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+flat = false
 
 [node name="HBox" type="HBoxContainer" parent="Options/VBox"]
 
@@ -512,9 +386,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 521.0
+margin/top = 491.0
 margin/right = 853.0
-margin/bottom = 777.0
+margin/bottom = 747.0
 custom_constants/separation = 30
 alignment = 1
 
@@ -531,7 +405,7 @@ margin/bottom = 256.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 8 )
+textures/normal = SubResource( 19 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -549,7 +423,7 @@ margin/bottom = 256.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 9 )
+textures/normal = SubResource( 20 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -567,53 +441,37 @@ margin/bottom = 256.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 10 )
+textures/normal = SubResource( 21 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
 
-[node name="Retour" type="TextureButton" parent="Options/VBox"]
+[node name="Retour" type="Button" parent="Options/VBox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 842.0
+margin/top = 812.0
 margin/right = 853.0
-margin/bottom = 926.0
+margin/bottom = 866.0
+custom_fonts/font = SubResource( 22 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label" type="Label" parent="Options/VBox/Retour"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 841.0
-margin/bottom = 85.0
-custom_fonts/font = SubResource( 9 )
-align = 1
-valign = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+flat = false
 
 [node name="Sprite" type="Sprite" parent="Options"]
 
+visibility/self_opacity = 0.7
 visibility/behind_parent = true
-texture = ExtResource( 6 )
+transform/pos = Vector2( 63.6227, 407.995 )
+transform/scale = Vector2( 2.04737, 6.81626 )
+texture = ExtResource( 3 )
 centered = false
+region = true
+region_rect = Rect2( 13, 10, 468, 144 )
 
 [node name="Credits" type="Popup" parent="."]
 
@@ -649,6 +507,7 @@ max_lines_visible = -1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Credits"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -679,11 +538,15 @@ percent_visible = 1.0
 [node name="Sprite" type="Sprite" parent="Credits"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 3.4248, -3.42477 )
-texture = ExtResource( 6 )
+transform/pos = Vector2( 6.67444, -8.18472 )
+transform/scale = Vector2( 2.34399, 13.4794 )
+texture = ExtResource( 3 )
 centered = false
+modulate = Color( 0.254608, 0.283447, 0.316406, 1 )
+region = true
+region_rect = Rect2( 13, 10, 468, 144 )
 
-[node name="RetourCredits" type="TextureButton" parent="Credits"]
+[node name="RetourCredits" type="Button" parent="Credits"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -693,31 +556,11 @@ margin/left = 123.0
 margin/top = 1699.0
 margin/right = 963.0
 margin/bottom = 1783.0
+custom_fonts/font = SubResource( 27 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
-textures/pressed = ExtResource( 4 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Label" type="Label" parent="Credits/RetourCredits"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 842.0
-margin/bottom = 85.0
-custom_fonts/font = SubResource( 12 )
-align = 1
-valign = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+flat = false
 
 [node name="MusicButton" type="TextureButton" parent="."]
 
@@ -725,13 +568,14 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 818.0
-margin/top = 108.0
-margin/right = 912.0
-margin/bottom = 199.2
+margin/left = 795.0
+margin/top = 26.0
+margin/right = 897.0
+margin/bottom = 124.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+textures/normal = SubResource( 23 )
 params/resize_mode = 0
 params/scale = Vector2( 0.8, 0.8 )
 params/stretch_mode = 0
@@ -742,13 +586,14 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 950.0
-margin/top = 111.0
-margin/right = 1058.0
-margin/bottom = 198.2
+margin/left = 944.0
+margin/top = 30.0
+margin/right = 1052.0
+margin/bottom = 117.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+textures/normal = SubResource( 24 )
 params/resize_mode = 0
 params/scale = Vector2( 0.8, 0.8 )
 params/stretch_mode = 0

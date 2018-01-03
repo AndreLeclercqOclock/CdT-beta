@@ -11,29 +11,29 @@ var imgTexture = null
 func _ready():
 
 	if LOAD.fileExists == false:
-		get_node("Start/Label").set_text(str(LOAD.menuText[0]))
+		get_node("Start").set_text(str(LOAD.menuText[0]))
 	else:
-		get_node("Start/Label").set_text(str(LOAD.menuText[1]))
+		get_node("Start").set_text(str(LOAD.menuText[1]))
 
-	get_node("Option/Label1").set_text(str(LOAD.menuText[2]))
-	get_node("Quitter/Label2").set_text(str(LOAD.menuText[3]))
+	get_node("Option").set_text(str(LOAD.menuText[2]))
+	get_node("Quitter").set_text(str(LOAD.menuText[3]))
 		
 
 	# Textes SelectChapter
 	get_node("SelectChapter/Label").set_text(str(LOAD.menuText[5]))
-	get_node("SelectChapter/RetourChapitres/Label").set_text(str(LOAD.optionsText[3]))
+	get_node("SelectChapter/RetourChapitres").set_text(str(LOAD.optionsText[3]))
 
 	# Textes OPTIONS
-	get_node("Options/VBox/Reset/Label").set_text(str(LOAD.optionsText[0]))
-	get_node("Options/VBox/Credits/Label").set_text(str(LOAD.optionsText[1]))
-	get_node("Options/VBox/Retour/Label").set_text(str(LOAD.optionsText[3]))
-	get_node("Options/VBox/Site/Label").set_text(str(LOAD.optionsText[4]))
+	get_node("Options/VBox/Reset").set_text(str(LOAD.optionsText[0]))
+	get_node("Options/VBox/Credits").set_text(str(LOAD.optionsText[1]))
+	get_node("Options/VBox/Retour").set_text(str(LOAD.optionsText[3]))
+	get_node("Options/VBox/Site").set_text(str(LOAD.optionsText[4]))
 	addWeb = str(LOAD.optionsText[5])
 	
 	# Textes CREDITS
 	get_node("Credits/ScrollContainer/RichTextLabel").set_text(str(LOAD.creditsText[0]))
 	get_node("Credits/Label").set_text(str(LOAD.optionsText[1]))
-	get_node("Credits/RetourCredits/Label").set_text(str(LOAD.optionsText[3]))
+	get_node("Credits/RetourCredits").set_text(str(LOAD.optionsText[3]))
 
 	soundOptions()
 
@@ -53,27 +53,22 @@ func _on_Start_pressed():
 		newButton.show()
 		newButton.set_disabled(y > LOAD.chapterSave)
 		newButton.set_name(str("Button",i))
-		newLabel = newButton.get_node("Label")
-		newLabel.set_text(str(LOAD.menuText[4]," ",y))
+		newButton.set_text(str(LOAD.menuText[4]," ",y))
 		newButton.connect("pressed", self, "button_pressed", [i,y])
 		
 func soundOptions():
 	if LOAD.MusicButton == 1:
-		imgTexture = load("res://img/music_ON.png")
-		get_node("MusicButton").set("textures/normal", imgTexture)
+		get_node("MusicButton").set_modulate(Color("#2873f3"))
 		if get_node("SampleBKGmenu").is_active() == 0:
 			get_node("SampleBKGmenu").play("Bkg_main_menu")
 	elif LOAD.MusicButton == 0:
-		imgTexture = load("res://img/music_OFF.png")
-		get_node("MusicButton").set("textures/normal", imgTexture)
+		get_node("MusicButton").set_modulate(Color("#898989"))
 		if get_node("SampleBKGmenu").is_active() == 1:
 			get_node("SampleBKGmenu").stop_all()
 	if LOAD.SoundButton == 1:
-		imgTexture = load("res://img/sound_ON.png")
-		get_node("SoundButton").set("textures/normal", imgTexture)
+		get_node("SoundButton").set_modulate(Color("#2873f3"))
 	elif LOAD.SoundButton == 0:
-		imgTexture = load("res://img/sound_OFF.png")
-		get_node("SoundButton").set("textures/normal", imgTexture)
+		get_node("SoundButton").set_modulate(Color("#898989"))
 	return
 	
 
