@@ -27,10 +27,6 @@ func _ready():
 	get_node("SousTitre").set_text(str(LOAD.menuText[3]))
 	get_node("Chroniques").set_text(str(LOAD.menuText[2]))
 
-	# Textes SelectChapter
-	#get_node("SelectChapter/Label").set_text(str(LOAD.menuText[5]))
-	#get_node("SelectChapter/RetourChapitres").set_text(str(LOAD.optionsText[3]))
-
 	# Textes OPTIONS
 	get_node("Options/VBox/Reset").set_text(str(LOAD.optionsText[0]))
 	get_node("Options/VBox/Credits").set_text(str(LOAD.optionsText[1]))
