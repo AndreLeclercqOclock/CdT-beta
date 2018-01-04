@@ -7,9 +7,21 @@ var newLabel = null
 var y = 0
 var addWeb = null
 var imgTexture = null
+var position = null
 
 func _ready():
+	if LOAD.actualChapter == 1:
+		position = 1
+		get_node("Sprite").set_pos(Vector2(position,1))
+		get_node("Chapitre").set_text(str(LOAD.menuText[4]," ",LOAD.actualChapter))
+	else:
+		position = 1080
+		for i in range(LOAD.actualChapter):
+			position -= 1080
+			get_node("Sprite").set_pos(Vector2(position,1))
+			get_node("Chapitre").set_text(str(LOAD.menuText[4]," ",LOAD.actualChapter))
 
+	print(LOAD.actualChapter)
 	if LOAD.fileExists == false:
 		get_node("Start").set_text(str(LOAD.menuText[0]))
 	else:
@@ -36,6 +48,7 @@ func _ready():
 	get_node("Credits/RetourCredits").set_text(str(LOAD.optionsText[3]))
 
 	soundOptions()
+	system_arrow()
 
 func button_pressed(i,y):
 	LOAD.scenarioFile = i
@@ -44,17 +57,20 @@ func button_pressed(i,y):
 
 
 func _on_Start_pressed():
-	get_node("SelectChapter").popup()
-	for i in LOAD.lang._Language.Config.scenarioFile:
-		y = y+1
-		button = get_node("SelectChapter/VBoxContainer/Button")
-		newButton = button.duplicate()
-		get_node("SelectChapter/VBoxContainer").add_child(newButton)
-		newButton.show()
-		newButton.set_disabled(y > LOAD.chapterSave)
-		newButton.set_name(str("Button",i))
-		newButton.set_text(str(LOAD.menuText[4]," ",y))
-		newButton.connect("pressed", self, "button_pressed", [i,y])
+	LOAD.scenarioFile = LOAD.lang._Language.Config.scenarioFile[LOAD.actualChapter-1]
+	LOAD.loadChapter = LOAD.actualChapter
+	LOAD._load_chapter()
+	#get_node("SelectChapter").popup()
+	#for i in LOAD.lang._Language.Config.scenarioFile:
+	#	y = y+1
+	#	button = get_node("SelectChapter/VBoxContainer/Button")
+	#	newButton = button.duplicate()
+	#	get_node("SelectChapter/VBoxContainer").add_child(newButton)
+	#	newButton.show()
+	#	newButton.set_disabled(y > LOAD.chapterSave)
+	#	newButton.set_name(str("Button",i))
+	#	newButton.set_text(str(LOAD.menuText[4]," ",y))
+	#	newButton.connect("pressed", self, "button_pressed", [i,y])
 		
 func soundOptions():
 	if LOAD.MusicButton == 1:
@@ -141,6 +157,9 @@ func _on_SoundButton_pressed():
 
 func _on_RightArrow_pressed():
 	print("RIGHT ARROW PRESSED")
+	LOAD.actualChapter += 1
+	LOAD.saveGlobal()
+	system_arrow()
 	LOAD.tween = get_node("Tween")
 	LOAD.targetNode = get_node("Chapitre")
 	LOAD.tweenType = "visibility/self_opacity"
@@ -151,11 +170,12 @@ func _on_RightArrow_pressed():
 	LOAD.tween = get_node("Tween")
 	LOAD.targetNode = get_node("Sprite")
 	LOAD.tweenType = "transform/pos"
-	LOAD.tweenStart = Vector2(1,1)
-	LOAD.tweenEnd = Vector2(-1080,1)
+	position = get_node("Sprite").get_pos().x
+	LOAD.tweenStart = Vector2(position,1)
+	LOAD.tweenEnd = Vector2(position-1080,1)
 	LOAD.tweenTime = 0.5
 	LOAD.system_tween()
-	get_node("Chapitre").set_text("Chapitre 2")
+	get_node("Chapitre").set_text(str(LOAD.menuText[4]," ",LOAD.actualChapter))
 	LOAD.tween = get_node("Tween")
 	LOAD.targetNode = get_node("Chapitre")
 	LOAD.tweenType = "visibility/self_opacity"
@@ -168,6 +188,9 @@ func _on_RightArrow_pressed():
 
 func _on_LeftArrow_pressed():
 	print("LEFT ARROW PRESSED")
+	LOAD.actualChapter -= 1
+	LOAD.saveGlobal()
+	system_arrow()
 	LOAD.tween = get_node("Tween")
 	LOAD.targetNode = get_node("Chapitre")
 	LOAD.tweenType = "visibility/self_opacity"
@@ -178,11 +201,12 @@ func _on_LeftArrow_pressed():
 	LOAD.tween = get_node("Tween")
 	LOAD.targetNode = get_node("Sprite")
 	LOAD.tweenType = "transform/pos"
-	LOAD.tweenStart = Vector2(-1080,1)
-	LOAD.tweenEnd = Vector2(1,1)
+	position = get_node("Sprite").get_pos().x
+	LOAD.tweenStart = Vector2(position,1)
+	LOAD.tweenEnd = Vector2(position+1080,1)
 	LOAD.tweenTime = 0.5
 	LOAD.system_tween()
-	get_node("Chapitre").set_text("Chapitre 1")
+	get_node("Chapitre").set_text(str(LOAD.menuText[4]," ",LOAD.actualChapter))
 	LOAD.tween = get_node("Tween")
 	LOAD.targetNode = get_node("Chapitre")
 	LOAD.tweenType = "visibility/self_opacity"
@@ -190,3 +214,18 @@ func _on_LeftArrow_pressed():
 	LOAD.tweenEnd = 1
 	LOAD.tweenTime = 2.0
 	LOAD.system_tween()
+	
+func system_arrow():
+	if LOAD.actualChapter == 1:
+		get_node("LeftArrow").hide()
+		get_node("LeftArrow").set("focus/ignore_mouse", true)
+	else:
+		get_node("LeftArrow").show()
+		get_node("LeftArrow").set("focus/ignore_mouse", false)
+
+	if LOAD.actualChapter == LOAD.chapterNumber:
+		get_node("RightArrow").hide()
+		get_node("RightArrow").set("focus/ignore_mouse", true)
+	else:
+		get_node("RightArrow").show()
+		get_node("RightArrow").set("focus/ignore_mouse", false)

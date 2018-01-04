@@ -140,10 +140,10 @@
                     ✔ Création bouton des options @done (2018-1-4 12:52:33)
                     ✔ Ajout de la gestion des sons dans la popup du menu @done (2018-1-4 12:52:34)
                     ✔ Création bouton pour changer de chapitre @done (2018-1-4 12:52:40)
-                    ☐ Création du label Titre
-                    ☐ Création du label Chapitre
+                    ✔ Création du label Titre @done (2018-1-4 15:24:41)
+                    ✔ Création du label Chapitre @done (2018-1-4 15:24:42)
                     ☐ Création du bouton quitter dans la popup options
-                    ☐ Vignette Chroniques de Talos
+                    ✔ Vignette Chroniques de Talos @done (2018-1-4 15:24:45)
                     ☐ Coder le système de gestion des chapitres
                 ✔ Refonte Jeu @done (2018-1-3 20:45:10)
                     ✔ Interface de jeu @done (2018-1-3 17:11:04)

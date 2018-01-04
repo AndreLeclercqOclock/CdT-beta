@@ -62,6 +62,7 @@ var languageSelect = null
 
 var chapterNumber = 0
 var loadChapter = null
+var actualChapter = null
 
 var MusicButton = null
 var SoundButton = null
@@ -154,12 +155,18 @@ func _ready():
 		else:
 			SoundButton = 1
 			saveGlobal()
+		if saveg._SaveGlobal.has("actualChapter"):
+			actualChapter = saveg._SaveGlobal.actualChapter
+		else:
+			actualChapter = 1
+			saveGlobal()
 
 
 	if fileExists == false:
 		MusicButton = 1
 		SoundButton = 1
 		chapterSave = 2
+		actualChapter = 1
 		saveGlobal()
 		
 
@@ -237,7 +244,7 @@ func _load_chapter():
 	get_tree().change_scene("res://scn/base.tscn")
 	
 func saveGlobal():
-	data = {"_SaveGlobal" : {"chapter" : chapterSave,"sound" : SoundButton, "music" : MusicButton}}
+	data = {"_SaveGlobal" : {"chapter" : chapterSave,"actualChapter": actualChapter, "sound" : SoundButton, "music" : MusicButton}}
 	var file = File.new()
 	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.open("user://saveglobal.json", File.WRITE)
