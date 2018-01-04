@@ -1,138 +1,140 @@
-[gd_scene load_steps=25 format=1]
+[gd_scene load_steps=27 format=1]
 
-[ext_resource path="res://scr/menu.gd" type="Script" id=1]
-[ext_resource path="res://font/Roboto-Bold.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://img/texture.png" type="Texture" id=3]
-[ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://snd/Bkg_main_menu.smp" type="Sample" id=5]
+[ext_resource path="res://img/theme.tres" type="Theme" id=1]
+[ext_resource path="res://scr/menu.gd" type="Script" id=2]
+[ext_resource path="res://font/Roboto-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://img/texture.png" type="Texture" id=4]
+[ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://snd/Bkg_main_menu.smp" type="Sample" id=6]
+[ext_resource path="res://img/ecran_titre.jpg" type="Texture" id=7]
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=1]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = false
-font/font = ExtResource( 2 )
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+
+font/size = 80
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 3 )
+
+[sub_resource type="SampleLibrary" id=7]
+
+samples/Bkg_main_menu = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 6 )
+}
 
 [sub_resource type="DynamicFont" id=14]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = false
-font/font = ExtResource( 2 )
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=10]
+
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 3 )
+
+[sub_resource type="AtlasTexture" id=11]
+
+atlas = ExtResource( 4 )
+region = Rect2( 857, 11, 128, 128 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=12]
+
+atlas = ExtResource( 4 )
+region = Rect2( 857, 156, 128, 128 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=13]
+
+atlas = ExtResource( 4 )
+region = Rect2( 697, 156, 128, 128 )
+margin = Rect2( 0, 0, 0, 0 )
 
 [sub_resource type="DynamicFont" id=15]
 
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=25]
-
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=3]
-
-font/size = 80
+font/size = 100
 font/use_mipmaps = false
 font/use_filter = true
-font/font = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=26]
-
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 2 )
-
-[sub_resource type="SampleLibrary" id=5]
-
-samples/Bkg_main_menu = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 5 )
-}
+font/font = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=16]
 
-font/size = 40
+font/size = 35
 font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 2 )
+font/use_filter = true
+font/font = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=17]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = false
-font/font = ExtResource( 2 )
+font/font = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=18]
+[sub_resource type="AtlasTexture" id=18]
 
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 2 )
-
-[sub_resource type="AtlasTexture" id=19]
-
-atlas = ExtResource( 3 )
-region = Rect2( 857, 11, 128, 128 )
-margin = Rect2( 0, 0, 0, 0 )
-
-[sub_resource type="AtlasTexture" id=20]
-
-atlas = ExtResource( 3 )
-region = Rect2( 857, 156, 128, 128 )
-margin = Rect2( 0, 0, 0, 0 )
-
-[sub_resource type="AtlasTexture" id=21]
-
-atlas = ExtResource( 3 )
-region = Rect2( 697, 156, 128, 128 )
-margin = Rect2( 0, 0, 0, 0 )
-
-[sub_resource type="DynamicFont" id=22]
-
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=10]
-
-font/size = 100
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=11]
-
-font/size = 35
-font/use_mipmaps = false
-font/use_filter = true
-font/font = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=27]
-
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 2 )
-
-[sub_resource type="AtlasTexture" id=23]
-
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 697, 314, 127, 122 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=19]
 
-atlas = ExtResource( 3 )
+atlas = ExtResource( 4 )
 region = Rect2( 697, 471, 124, 104 )
 margin = Rect2( 0, 0, 0, 0 )
 
@@ -142,11 +144,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 40.0
 margin/bottom = 40.0
-script/script = ExtResource( 1 )
+script/script = ExtResource( 2 )
 
 [node name="Start" type="Button" parent="."]
 
@@ -158,9 +161,9 @@ margin/left = 120.0
 margin/top = 1565.0
 margin/right = 959.0
 margin/bottom = 1671.0
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 1 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 flat = false
 
@@ -171,12 +174,12 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 121.0
-margin/top = 1711.0
+margin/top = 1750.0
 margin/right = 469.0
-margin/bottom = 1856.0
-custom_fonts/font = SubResource( 14 )
+margin/bottom = 1850.0
+custom_fonts/font = SubResource( 2 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 flat = false
 
@@ -187,12 +190,12 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 608.0
-margin/top = 1710.0
+margin/top = 1750.0
 margin/right = 956.0
-margin/bottom = 1855.0
-custom_fonts/font = SubResource( 15 )
+margin/bottom = 1850.0
+custom_fonts/font = SubResource( 3 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 flat = false
 
@@ -227,6 +230,7 @@ alignment = 0
 [node name="Button" type="Button" parent="SelectChapter/VBoxContainer"]
 
 visibility/visible = false
+rect/min_size = Vector2( 840, 100 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -234,11 +238,11 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 840.0
-margin/bottom = 20.0
-custom_fonts/font = SubResource( 25 )
+margin/bottom = 100.0
+custom_fonts/font = SubResource( 4 )
 disabled = true
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 flat = false
 
@@ -247,7 +251,7 @@ flat = false
 visibility/behind_parent = true
 transform/pos = Vector2( -86.4248, -47.9471 )
 transform/scale = Vector2( 2.33139, 13.5047 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 centered = false
 modulate = Color( 0.288071, 0.323169, 0.363281, 1 )
 region = true
@@ -263,7 +267,7 @@ margin/left = 17.0
 margin/top = 175.0
 margin/right = 875.0
 margin/bottom = 346.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -280,16 +284,16 @@ margin/left = 38.0
 margin/top = 1603.0
 margin/right = 878.0
 margin/bottom = 1687.0
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 6 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 flat = false
 
 [node name="SampleBKGmenu" type="SamplePlayer" parent="."]
 
 config/polyphony = 1
-config/samples = SubResource( 5 )
+config/samples = SubResource( 7 )
 default/volume_db = 0.0
 default/pitch_scale = 1.0
 default/pan = 0.0
@@ -315,10 +319,30 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 1065.0
 margin/bottom = 1919.0
-popup/exclusive = false
+popup/exclusive = true
+
+[node name="Retour" type="Button" parent="Options"]
+
+visibility/self_opacity = 0.0
+visibility/behind_parent = true
+rect/min_size = Vector2( 853, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -1.0
+margin/top = -1.0
+margin/right = 1074.0
+margin/bottom = 1913.0
+custom_fonts/font = SubResource( 14 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
 
 [node name="VBox" type="VBoxContainer" parent="Options"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -327,54 +351,57 @@ margin/left = 126.0
 margin/top = 385.0
 margin/right = 979.0
 margin/bottom = 1386.0
-custom_constants/separation = 65
+custom_constants/separation = 40
 alignment = 1
 
 [node name="Reset" type="Button" parent="Options/VBox"]
 
+rect/min_size = Vector2( 853, 100 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 134.0
+margin/top = 162.0
 margin/right = 853.0
-margin/bottom = 188.0
-custom_fonts/font = SubResource( 16 )
+margin/bottom = 262.0
+custom_fonts/font = SubResource( 8 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 flat = false
 
 [node name="Credits" type="Button" parent="Options/VBox"]
 
+rect/min_size = Vector2( 853, 100 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 253.0
+margin/top = 302.0
 margin/right = 853.0
-margin/bottom = 307.0
-custom_fonts/font = SubResource( 17 )
+margin/bottom = 402.0
+custom_fonts/font = SubResource( 9 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 flat = false
 
 [node name="Site" type="Button" parent="Options/VBox"]
 
+rect/min_size = Vector2( 853, 100 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 372.0
+margin/top = 442.0
 margin/right = 853.0
-margin/bottom = 426.0
-custom_fonts/font = SubResource( 18 )
+margin/bottom = 542.0
+custom_fonts/font = SubResource( 10 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 flat = false
 
@@ -386,9 +413,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 491.0
+margin/top = 582.0
 margin/right = 853.0
-margin/bottom = 747.0
+margin/bottom = 838.0
 custom_constants/separation = 30
 alignment = 1
 
@@ -403,9 +430,9 @@ margin/top = 0.0
 margin/right = 268.0
 margin/bottom = 256.0
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
-textures/normal = SubResource( 19 )
+textures/normal = SubResource( 11 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -421,9 +448,9 @@ margin/top = 0.0
 margin/right = 554.0
 margin/bottom = 256.0
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
-textures/normal = SubResource( 20 )
+textures/normal = SubResource( 12 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
@@ -439,36 +466,20 @@ margin/top = 0.0
 margin/right = 840.0
 margin/bottom = 256.0
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
-textures/normal = SubResource( 21 )
+textures/normal = SubResource( 13 )
 params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
-
-[node name="Retour" type="Button" parent="Options/VBox"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 812.0
-margin/right = 853.0
-margin/bottom = 866.0
-custom_fonts/font = SubResource( 22 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-flat = false
 
 [node name="Sprite" type="Sprite" parent="Options"]
 
 visibility/self_opacity = 0.7
 visibility/behind_parent = true
-transform/pos = Vector2( 63.6227, 407.995 )
-transform/scale = Vector2( 2.04737, 6.81626 )
-texture = ExtResource( 3 )
+transform/pos = Vector2( 63.6227, 471.617 )
+transform/scale = Vector2( 2.04737, 5.75555 )
+texture = ExtResource( 4 )
 centered = false
 region = true
 region_rect = Rect2( 13, 10, 468, 144 )
@@ -497,7 +508,7 @@ margin/left = 84.0
 margin/top = 101.0
 margin/right = 975.0
 margin/bottom = 273.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 15 )
 align = 1
 valign = 1
 autowrap = true
@@ -529,7 +540,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 946.0
 margin/bottom = 1349.0
-custom_fonts/normal_font = SubResource( 11 )
+custom_fonts/normal_font = SubResource( 16 )
 bbcode/enabled = true
 bbcode/bbcode = ""
 visible_characters = -1
@@ -540,7 +551,7 @@ percent_visible = 1.0
 visibility/behind_parent = true
 transform/pos = Vector2( 6.67444, -8.18472 )
 transform/scale = Vector2( 2.34399, 13.4794 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 centered = false
 modulate = Color( 0.254608, 0.283447, 0.316406, 1 )
 region = true
@@ -556,9 +567,9 @@ margin/left = 123.0
 margin/top = 1699.0
 margin/right = 963.0
 margin/bottom = 1783.0
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 17 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 flat = false
 
@@ -573,9 +584,9 @@ margin/top = 26.0
 margin/right = 897.0
 margin/bottom = 124.0
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
-textures/normal = SubResource( 23 )
+textures/normal = SubResource( 18 )
 params/resize_mode = 0
 params/scale = Vector2( 0.8, 0.8 )
 params/stretch_mode = 0
@@ -591,9 +602,9 @@ margin/top = 30.0
 margin/right = 1052.0
 margin/bottom = 117.0
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
-textures/normal = SubResource( 24 )
+textures/normal = SubResource( 19 )
 params/resize_mode = 0
 params/scale = Vector2( 0.8, 0.8 )
 params/stretch_mode = 0
@@ -605,6 +616,12 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
+[node name="Sprite" type="Sprite" parent="."]
+
+visibility/behind_parent = true
+texture = ExtResource( 7 )
+centered = false
+
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 
 [connection signal="pressed" from="Option" to="." method="_on_Option_pressed"]
@@ -612,6 +629,8 @@ playback/speed = 1.0
 [connection signal="pressed" from="Quitter" to="." method="_on_Quitter_pressed"]
 
 [connection signal="pressed" from="SelectChapter/RetourChapitres" to="." method="_on_RetourChapitres_pressed"]
+
+[connection signal="pressed" from="Options/Retour" to="." method="_on_Retour_pressed"]
 
 [connection signal="pressed" from="Options/VBox/Reset" to="." method="_on_Reset_pressed"]
 
@@ -624,8 +643,6 @@ playback/speed = 1.0
 [connection signal="pressed" from="Options/VBox/HBox/Twitter" to="." method="_on_Twitter_pressed"]
 
 [connection signal="pressed" from="Options/VBox/HBox/Youtube" to="." method="_on_Youtube_pressed"]
-
-[connection signal="pressed" from="Options/VBox/Retour" to="." method="_on_Retour_pressed"]
 
 [connection signal="pressed" from="Credits/RetourCredits" to="." method="_on_RetourCredits_pressed"]
 

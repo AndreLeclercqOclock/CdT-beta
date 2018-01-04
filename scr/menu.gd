@@ -26,7 +26,7 @@ func _ready():
 	# Textes OPTIONS
 	get_node("Options/VBox/Reset").set_text(str(LOAD.optionsText[0]))
 	get_node("Options/VBox/Credits").set_text(str(LOAD.optionsText[1]))
-	get_node("Options/VBox/Retour").set_text(str(LOAD.optionsText[3]))
+	#get_node("Options/VBox/Retour").set_text(str(LOAD.optionsText[3]))
 	get_node("Options/VBox/Site").set_text(str(LOAD.optionsText[4]))
 	addWeb = str(LOAD.optionsText[5])
 	
