@@ -130,7 +130,7 @@
             ✔ Divers @done (2017-12-31 16:22:57)
                 ✔ Amélioration de la reset des sauvegarde @done (2017-12-22 18:02:19)
                 ✔ Ajouter lecture de sons BKG sur les réponses @done (2017-12-21 16:10:41)
-        1.1:
+        1.2:
             ✔ Création du thème GUI @done (2018-1-4 16:25:55)
                 ✔ Création d'un fichier texture unique @done (2018-1-3 17:27:17)
                 ✔ Ajout des anciennes textures dans le fichier unique @done (2018-1-3 23:27:41)
@@ -153,9 +153,9 @@
             ✔ Refonte réponses choix multiple @done (2018-1-3 17:10:20)
                 ✔ Création Popup @done (2018-1-3 17:10:16)
                 ✔ Création accès à la Popup @done (2018-1-3 17:10:18)
-            ☐ Optimiser le poids des ressources
+            ✔ Optimiser le poids des ressources @done (2018-1-4 18:40:00)
                 ✔ Images @done (2018-1-4 09:49:51)
-                ☐ Sons
+                ✔ Sons @done (2018-1-4 18:39:59)
             ✔ Amélioration des options audio @done (2018-1-2 13:58:46)
                 ✔ Sons notification (messages) @done (2018-1-2 13:05:03)
                 ✔ Sons ambiances (thèmes & ambiances) @done (2018-1-2 13:05:03)

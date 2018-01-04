@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=1]
+[gd_scene load_steps=55 format=1]
 
 [ext_resource path="res://img/theme.tres" type="Theme" id=1]
 [ext_resource path="res://scr/game.gd" type="Script" id=2]
@@ -30,24 +30,6 @@
 [ext_resource path="res://img/load/activite_ecriture20.png" type="Texture" id=28]
 [ext_resource path="res://img/load/activite_ecriture21.png" type="Texture" id=29]
 [ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" id=30]
-[ext_resource path="res://snd/msg_received.smp" type="Sample" id=31]
-[ext_resource path="res://snd/msg_send.smp" type="Sample" id=32]
-[ext_resource path="res://snd/msg_sys.smp" type="Sample" id=33]
-[ext_resource path="res://snd/Bkg_Crypte.smp" type="Sample" id=34]
-[ext_resource path="res://snd/Bkg_Eau.smp" type="Sample" id=35]
-[ext_resource path="res://snd/Bkg_Grotte.smp" type="Sample" id=36]
-[ext_resource path="res://snd/Bkg_Salle.smp" type="Sample" id=37]
-[ext_resource path="res://snd/Bkg_SalleHaute.smp" type="Sample" id=38]
-[ext_resource path="res://snd/Bkg_ThemeFin.smp" type="Sample" id=39]
-[ext_resource path="res://snd/Trg_Breath.smp" type="Sample" id=40]
-[ext_resource path="res://snd/Trg_Breath_Short.smp" type="Sample" id=41]
-[ext_resource path="res://snd/Trg_Chute.smp" type="Sample" id=42]
-[ext_resource path="res://snd/Trg_Effondrement.smp" type="Sample" id=43]
-[ext_resource path="res://snd/Trg_Hole.smp" type="Sample" id=44]
-[ext_resource path="res://snd/Trg_Loquet.smp" type="Sample" id=45]
-[ext_resource path="res://snd/Trg_Noyade.smp" type="Sample" id=46]
-[ext_resource path="res://snd/Trg_Ombre.smp" type="Sample" id=47]
-[ext_resource path="res://snd/Trg_Tableaux.smp" type="Sample" id=48]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -148,182 +130,65 @@ font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 6 )
 
-[sub_resource type="SampleLibrary" id=15]
-
-samples/msg_received = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 31 )
-}
-samples/msg_send = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 32 )
-}
-samples/msg_sys = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 33 )
-}
-
-[sub_resource type="SampleLibrary" id=16]
-
-samples/Bkg_Crypte = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 34 )
-}
-samples/Bkg_Eau = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 35 )
-}
-samples/Bkg_Grotte = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 36 )
-}
-samples/Bkg_Salle = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 37 )
-}
-samples/Bkg_SalleHaute = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 38 )
-}
-samples/Bkg_ThemeFin = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 39 )
-}
-
-[sub_resource type="SampleLibrary" id=17]
-
-samples/Trg_Breath = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 40 )
-}
-samples/Trg_Breath_Short = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 41 )
-}
-samples/Trg_Chute = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 42 )
-}
-samples/Trg_Effondrement = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 43 )
-}
-samples/Trg_Hole = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 44 )
-}
-samples/Trg_Loquet = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 45 )
-}
-samples/Trg_Noyade = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 46 )
-}
-samples/Trg_Ombre = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 47 )
-}
-samples/Trg_Tableaux = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 48 )
-}
-
-[sub_resource type="DynamicFont" id=18]
+[sub_resource type="DynamicFont" id=15]
 
 font/size = 80
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=16]
 
 atlas = ExtResource( 3 )
 region = Rect2( 697, 314, 127, 122 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=17]
 
 atlas = ExtResource( 3 )
 region = Rect2( 697, 471, 124, 104 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="DynamicFont" id=21]
+[sub_resource type="DynamicFont" id=18]
 
 font/size = 50
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=22]
+[sub_resource type="DynamicFont" id=19]
 
 font/size = 50
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 6 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=20]
 
 atlas = ExtResource( 3 )
 region = Rect2( 857, 156, 128, 128 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=21]
 
 atlas = ExtResource( 3 )
 region = Rect2( 857, 11, 128, 128 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=22]
 
 atlas = ExtResource( 3 )
 region = Rect2( 697, 156, 128, 128 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="DynamicFont" id=26]
+[sub_resource type="DynamicFont" id=23]
 
 font/size = 50
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=27]
+[sub_resource type="DynamicFont" id=24]
 
 font/size = 50
 font/use_mipmaps = false
@@ -360,7 +225,6 @@ playback/speed = 1.0
 
 [node name="vbox" type="VBoxContainer" parent="Game"]
 
-editor/display_folded = true
 rect/min_size = Vector2( 1080, 1920 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -512,7 +376,7 @@ margin/bottom = 0.0
 [node name="Sprite" type="Sprite" parent="Game/vbox/Mid"]
 
 transform/pos = Vector2( -567.992, 85.9525 )
-transform/scale = Vector2( 1.72653, 1.27824 )
+transform/scale = Vector2( 1.72653, 0.459765 )
 texture = ExtResource( 3 )
 centered = false
 modulate = Color( 0.518311, 0.573048, 0.6875, 1 )
@@ -609,7 +473,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 8 )
 animation = "default"
-frame = 9
+frame = 17
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
@@ -904,56 +768,38 @@ wait_time = 1.0
 one_shot = true
 autostart = false
 
-[node name="SampleMSG" type="SamplePlayer" parent="Game"]
+[node name="SampleMSG" type="StreamPlayer" parent="Game"]
 
-config/polyphony = 1
-config/samples = SubResource( 15 )
-default/volume_db = -80.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 1.0
-default/filter/gain = 1.0
-default/reverb_room = 2
-default/reverb_send = 0.0
-default/chorus_send = 0.0
+stream/stream = null
+stream/play = false
+stream/loop = false
+stream/volume_db = 0.0
+stream/autoplay = false
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
 
-[node name="SampleBKG" type="SamplePlayer" parent="Game"]
+[node name="SampleBKG" type="StreamPlayer" parent="Game"]
 
-config/polyphony = 1
-config/samples = SubResource( 16 )
-default/volume_db = 0.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 1.0
-default/filter/gain = 1.0
-default/reverb_room = 2
-default/reverb_send = 0.0
-default/chorus_send = 0.0
+stream/stream = null
+stream/play = false
+stream/loop = true
+stream/volume_db = 0.0
+stream/autoplay = false
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
 
-[node name="SampleTRG" type="SamplePlayer" parent="Game"]
+[node name="SampleTRG" type="StreamPlayer" parent="Game"]
 
-config/polyphony = 1
-config/samples = SubResource( 17 )
-default/volume_db = 0.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 1.0
-default/filter/gain = 1.0
-default/reverb_room = 2
-default/reverb_send = 0.0
-default/chorus_send = 0.0
+stream/stream = null
+stream/play = false
+stream/loop = false
+stream/volume_db = 0.0
+stream/autoplay = false
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
 
 [node name="Loading" type="Popup" parent="Game"]
 
@@ -989,7 +835,7 @@ margin/left = 0.0
 margin/top = -21.0
 margin/right = 1068.0
 margin/bottom = 1862.0
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0.777344, 0.441431, 0.048584, 1 )
 text = "CHARGEMENT..."
 align = 1
@@ -1057,7 +903,6 @@ alignment = 0
 
 [node name="Sound" type="HBoxContainer" parent="Game/Popup/VBox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -1080,9 +925,9 @@ margin/top = 0.0
 margin/right = 303.4
 margin/bottom = 156.0
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
-textures/normal = SubResource( 19 )
+textures/normal = SubResource( 16 )
 params/resize_mode = 0
 params/scale = Vector2( 1.2, 1.2 )
 params/stretch_mode = 0
@@ -1098,9 +943,9 @@ margin/top = 0.0
 margin/right = 689.0
 margin/bottom = 156.0
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
-textures/normal = SubResource( 20 )
+textures/normal = SubResource( 17 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -1116,7 +961,7 @@ margin/left = 0.0
 margin/top = 206.0
 margin/right = 840.0
 margin/bottom = 306.0
-custom_fonts/font = SubResource( 21 )
+custom_fonts/font = SubResource( 18 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1133,7 +978,7 @@ margin/left = 0.0
 margin/top = 356.0
 margin/right = 840.0
 margin/bottom = 456.0
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 19 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1167,7 +1012,7 @@ margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 23 )
+textures/normal = SubResource( 20 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -1185,7 +1030,7 @@ margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 24 )
+textures/normal = SubResource( 21 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -1203,7 +1048,7 @@ margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 25 )
+textures/normal = SubResource( 22 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -1219,7 +1064,7 @@ margin/left = 0.0
 margin/top = 748.0
 margin/right = 840.0
 margin/bottom = 848.0
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 23 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1236,7 +1081,7 @@ margin/left = 0.0
 margin/top = 898.0
 margin/right = 840.0
 margin/bottom = 998.0
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 24 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null

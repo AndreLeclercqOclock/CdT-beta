@@ -67,12 +67,12 @@ func _on_Start_pressed():
 func soundOptions():
 	if LOAD.MusicButton == 1:
 		get_node("Options/VBox/HBox0/MusicButton").set_modulate(Color("#2873f3"))
-		if get_node("SampleBKGmenu").is_active() == 0:
-			get_node("SampleBKGmenu").play("Bkg_main_menu")
+		if get_node("StreamPlayer").is_playing() == 0:
+			get_node("StreamPlayer").play(0)
 	elif LOAD.MusicButton == 0:
 		get_node("Options/VBox/HBox0/MusicButton").set_modulate(Color("#898989"))
-		if get_node("SampleBKGmenu").is_active() == 1:
-			get_node("SampleBKGmenu").stop_all()
+		if get_node("StreamPlayer").is_playing() == 1:
+			get_node("StreamPlayer").stop()
 	if LOAD.SoundButton == 1:
 		get_node("Options/VBox/HBox0/SoundButton").set_modulate(Color("#2873f3"))
 	elif LOAD.SoundButton == 0:

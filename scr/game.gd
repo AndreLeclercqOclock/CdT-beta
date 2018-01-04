@@ -65,6 +65,8 @@ var buttonTarget = []
 var origin = null
 var labelNode = null
 var imgTexture = null
+var actualSound = null
+var sampleMSG = null
 var devMode = 0
 
 ############################### PREPARATION DU SCRIPT ###############################
@@ -239,7 +241,10 @@ func _ready():
 						buttonTarget = []
 			print("Fin du chargement")
 			print("Réécriture Dialogues dans le JSON")
-		soundOptions()
+			actualSound = load(str("res://snd/",LOAD.actualBGSound,".ogg"))
+			get_node("SampleBKG").set_stream(actualSound)
+			if LOAD.MusicButton == 1:
+				get_node("SampleBKG").play(0)
 		LOAD.tween = get_node("Tween")
 		LOAD.targetNode = get_node("Loading")
 		LOAD.tweenType = "visibility/opacity"
@@ -247,7 +252,8 @@ func _ready():
 		LOAD.tweenEnd = 0
 		LOAD.tweenTime = 0.5
 		LOAD.system_tween()
-			
+	
+	soundOptions()
 
 	if LOAD.fileExists == true and LOAD.currentNextTime <= OS.get_unix_time():
 		find_next_target()
@@ -263,7 +269,6 @@ func _ready():
 	get_node("vbox/Top/version").set_text(str(LOAD.version))
 
 	if LOAD.fileExists == false:
-		get_node("SampleMSG").set_default_volume_db(0)
 		start()
 		
 # Affichage de l'heure
@@ -923,37 +928,47 @@ func last_dial():
 func sample_msg():
 	if LOAD.SoundButton == 1:
 		if sound == 1:
-			get_node("SampleMSG").play("msg_received")
+			sampleMSG = load("res://snd/msg_received.ogg")
+			get_node("SampleMSG").set_stream(sampleMSG)
+			get_node("SampleMSG").play(0)
 		elif sound == 2:
-			get_node("SampleMSG").play("msg_send")
+			sampleMSG = load("res://snd/msg_send.ogg")
+			get_node("SampleMSG").set_stream(sampleMSG)
+			get_node("SampleMSG").play(0)
 		elif sound == 3:
-			get_node("SampleMSG").play("msg_sys")
+			sampleMSG = load("res://snd/msg_sys.ogg")
+			get_node("SampleMSG").set_stream(sampleMSG)
+			get_node("SampleMSG").play(0)
 	return
 
 # Système de trigger son
 func trigger_sound():
+	actualSound = load(str("res://snd/",triggerName,".ogg"))
+	get_node("SampleTRG").set_stream(actualSound)
+	get_node("SampleTRG").set("stream/volume_db",triggerVol)
 	if LOAD.MusicButton == 1:
-		get_node("SampleTRG").set_default_volume_db(triggerVol)
-		get_node("SampleTRG").play(triggerName)
+		get_node("SampleTRG").play(0)
 	return
 
 # Système de sons d'ambiance (background sound)
 func background_sound():
+	actualSound = load(str("res://snd/",bg_sound,".ogg"))
+	get_node("SampleBKG").set_stream(actualSound)
+	get_node("SampleBKG").set("stream/volume_db",bg_sound_vol)
 	if LOAD.MusicButton == 1:
-		get_node("SampleBKG").set_default_volume_db(bg_sound_vol)
-		get_node("SampleBKG").play(bg_sound)
+		get_node("SampleBKG").play(0)
 	return
 
 # System Option Sons
 func soundOptions():
 	if LOAD.MusicButton == 1:
 		get_node("Popup/VBox/Sound/MusicButton").set_modulate(Color("#2873f3"))
-		if get_node("SampleBKG").is_active() == 0:
-			get_node("SampleBKG").play(LOAD.actualBGSound) 
+		if get_node("SampleBKG").is_playing() == 0:
+			get_node("SampleBKG").play(0)
 	elif LOAD.MusicButton == 0:
 		get_node("Popup/VBox/Sound/MusicButton").set_modulate(Color("#898989"))
-		if get_node("SampleBKG").is_active() == 1:
-			get_node("SampleBKG").stop_all()
+		if get_node("SampleBKG").is_playing() == 1:
+			get_node("SampleBKG").stop()
 	if LOAD.SoundButton == 1:
 		get_node("Popup/VBox/Sound/SoundButton").set_modulate(Color("#2873f3"))
 	elif LOAD.SoundButton == 0:
