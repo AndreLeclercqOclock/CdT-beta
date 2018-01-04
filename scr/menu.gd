@@ -15,7 +15,7 @@ func _ready():
 	else:
 		get_node("Start").set_text(str(LOAD.menuText[1]))
 
-	get_node("Option").set_text(str(LOAD.menuText[2]))
+	#get_node("Option").set_text(str(LOAD.menuText[2]))
 	get_node("Quitter").set_text(str(LOAD.menuText[3]))
 		
 
@@ -58,17 +58,17 @@ func _on_Start_pressed():
 		
 func soundOptions():
 	if LOAD.MusicButton == 1:
-		get_node("MusicButton").set_modulate(Color("#2873f3"))
+		get_node("Options/VBox/HBox0/MusicButton").set_modulate(Color("#2873f3"))
 		if get_node("SampleBKGmenu").is_active() == 0:
 			get_node("SampleBKGmenu").play("Bkg_main_menu")
 	elif LOAD.MusicButton == 0:
-		get_node("MusicButton").set_modulate(Color("#898989"))
+		get_node("Options/VBox/HBox0/MusicButton").set_modulate(Color("#898989"))
 		if get_node("SampleBKGmenu").is_active() == 1:
 			get_node("SampleBKGmenu").stop_all()
 	if LOAD.SoundButton == 1:
-		get_node("SoundButton").set_modulate(Color("#2873f3"))
+		get_node("Options/VBox/HBox0/SoundButton").set_modulate(Color("#2873f3"))
 	elif LOAD.SoundButton == 0:
-		get_node("SoundButton").set_modulate(Color("#898989"))
+		get_node("Options/VBox/HBox0/SoundButton").set_modulate(Color("#898989"))
 	return
 	
 
@@ -139,3 +139,54 @@ func _on_SoundButton_pressed():
 	LOAD.saveGlobal()
 	return
 
+func _on_RightArrow_pressed():
+	print("RIGHT ARROW PRESSED")
+	LOAD.tween = get_node("Tween")
+	LOAD.targetNode = get_node("Chapitre")
+	LOAD.tweenType = "visibility/self_opacity"
+	LOAD.tweenStart = 1
+	LOAD.tweenEnd = 0
+	LOAD.tweenTime = 2.0
+	LOAD.system_tween()
+	LOAD.tween = get_node("Tween")
+	LOAD.targetNode = get_node("Sprite")
+	LOAD.tweenType = "transform/pos"
+	LOAD.tweenStart = Vector2(1,1)
+	LOAD.tweenEnd = Vector2(-1080,1)
+	LOAD.tweenTime = 0.5
+	LOAD.system_tween()
+	get_node("Chapitre").set_text("Chapitre 2")
+	LOAD.tween = get_node("Tween")
+	LOAD.targetNode = get_node("Chapitre")
+	LOAD.tweenType = "visibility/self_opacity"
+	LOAD.tweenStart = 0
+	LOAD.tweenEnd = 1
+	LOAD.tweenTime = 2.0
+	LOAD.system_tween()
+
+
+
+func _on_LeftArrow_pressed():
+	print("LEFT ARROW PRESSED")
+	LOAD.tween = get_node("Tween")
+	LOAD.targetNode = get_node("Chapitre")
+	LOAD.tweenType = "visibility/self_opacity"
+	LOAD.tweenStart = 1
+	LOAD.tweenEnd = 0
+	LOAD.tweenTime = 2.0
+	LOAD.system_tween()
+	LOAD.tween = get_node("Tween")
+	LOAD.targetNode = get_node("Sprite")
+	LOAD.tweenType = "transform/pos"
+	LOAD.tweenStart = Vector2(-1080,1)
+	LOAD.tweenEnd = Vector2(1,1)
+	LOAD.tweenTime = 0.5
+	LOAD.system_tween()
+	get_node("Chapitre").set_text("Chapitre 1")
+	LOAD.tween = get_node("Tween")
+	LOAD.targetNode = get_node("Chapitre")
+	LOAD.tweenType = "visibility/self_opacity"
+	LOAD.tweenStart = 0
+	LOAD.tweenEnd = 1
+	LOAD.tweenTime = 2.0
+	LOAD.system_tween()

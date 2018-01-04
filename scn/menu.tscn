@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=1]
+[gd_scene load_steps=35 format=1]
 
 [ext_resource path="res://img/theme.tres" type="Theme" id=1]
 [ext_resource path="res://scr/menu.gd" type="Script" id=2]
@@ -6,7 +6,9 @@
 [ext_resource path="res://img/texture.png" type="Texture" id=4]
 [ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://snd/Bkg_main_menu.smp" type="Sample" id=6]
-[ext_resource path="res://img/ecran_titre.jpg" type="Texture" id=7]
+[ext_resource path="res://img/chapter0.jpg" type="Texture" id=7]
+[ext_resource path="res://font/Deadhead Rough.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://font/Roboto-Light.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -15,12 +17,11 @@ font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="AtlasTexture" id=20]
 
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 3 )
+atlas = ExtResource( 4 )
+region = Rect2( 579, 131, 47, 13 )
+margin = Rect2( 0, 0, 0, 0 )
 
 [sub_resource type="DynamicFont" id=3]
 
@@ -65,6 +66,18 @@ font/size = 40
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 3 )
+
+[sub_resource type="AtlasTexture" id=18]
+
+atlas = ExtResource( 4 )
+region = Rect2( 697, 314, 127, 122 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=19]
+
+atlas = ExtResource( 4 )
+region = Rect2( 697, 471, 124, 104 )
+margin = Rect2( 0, 0, 0, 0 )
 
 [sub_resource type="DynamicFont" id=8]
 
@@ -126,17 +139,47 @@ font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 3 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=21]
 
 atlas = ExtResource( 4 )
-region = Rect2( 697, 314, 127, 122 )
+region = Rect2( 17, 167, 46, 39 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=22]
 
 atlas = ExtResource( 4 )
-region = Rect2( 697, 471, 124, 104 )
+region = Rect2( 73, 167, 49, 39 )
 margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="DynamicFont" id=23]
+
+font/size = 125
+extra_spacing/space = 10
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=24]
+
+font/size = 50
+extra_spacing/char = 10
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=25]
+
+font/size = 30
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=26]
+
+font/size = 45
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 9 )
 
 [node name="Menu" type="Control"]
 
@@ -153,6 +196,7 @@ script/script = ExtResource( 2 )
 
 [node name="Start" type="Button" parent="."]
 
+visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -167,24 +211,28 @@ enabled_focus_mode = 0
 shortcut = null
 flat = false
 
-[node name="Option" type="Button" parent="."]
+[node name="Option" type="TextureButton" parent="."]
 
+visibility/self_opacity = 0.8
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 121.0
-margin/top = 1750.0
-margin/right = 469.0
-margin/bottom = 1850.0
-custom_fonts/font = SubResource( 2 )
+margin/left = 921.0
+margin/top = 60.0
+margin/right = 1015.0
+margin/bottom = 88.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-flat = false
+textures/normal = SubResource( 20 )
+params/resize_mode = 0
+params/scale = Vector2( 2, 2 )
+params/stretch_mode = 0
 
 [node name="Quitter" type="Button" parent="."]
 
+visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -354,6 +402,54 @@ margin/bottom = 1386.0
 custom_constants/separation = 40
 alignment = 1
 
+[node name="HBox0" type="HBoxContainer" parent="Options/VBox"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 81.0
+margin/right = 853.0
+margin/bottom = 203.0
+custom_constants/separation = 100
+alignment = 1
+
+[node name="MusicButton" type="TextureButton" parent="Options/VBox/HBox0"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 251.0
+margin/top = 0.0
+margin/right = 378.0
+margin/bottom = 122.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+textures/normal = SubResource( 18 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="SoundButton" type="TextureButton" parent="Options/VBox/HBox0"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 478.0
+margin/top = 0.0
+margin/right = 602.0
+margin/bottom = 122.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+textures/normal = SubResource( 19 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
 [node name="Reset" type="Button" parent="Options/VBox"]
 
 rect/min_size = Vector2( 853, 100 )
@@ -362,9 +458,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 162.0
+margin/top = 243.0
 margin/right = 853.0
-margin/bottom = 262.0
+margin/bottom = 343.0
 custom_fonts/font = SubResource( 8 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -379,9 +475,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 302.0
+margin/top = 383.0
 margin/right = 853.0
-margin/bottom = 402.0
+margin/bottom = 483.0
 custom_fonts/font = SubResource( 9 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -396,9 +492,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 442.0
+margin/top = 523.0
 margin/right = 853.0
-margin/bottom = 542.0
+margin/bottom = 623.0
 custom_fonts/font = SubResource( 10 )
 toggle_mode = false
 enabled_focus_mode = 0
@@ -413,9 +509,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 582.0
+margin/top = 663.0
 margin/right = 853.0
-margin/bottom = 838.0
+margin/bottom = 919.0
 custom_constants/separation = 30
 alignment = 1
 
@@ -477,8 +573,8 @@ params/stretch_mode = 0
 
 visibility/self_opacity = 0.7
 visibility/behind_parent = true
-transform/pos = Vector2( 63.6227, 471.617 )
-transform/scale = Vector2( 2.04737, 5.75555 )
+transform/pos = Vector2( 63.6227, 403.456 )
+transform/scale = Vector2( 2.04737, 7.1112 )
 texture = ExtResource( 4 )
 centered = false
 region = true
@@ -573,42 +669,6 @@ enabled_focus_mode = 0
 shortcut = null
 flat = false
 
-[node name="MusicButton" type="TextureButton" parent="."]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 795.0
-margin/top = 26.0
-margin/right = 897.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-textures/normal = SubResource( 18 )
-params/resize_mode = 0
-params/scale = Vector2( 0.8, 0.8 )
-params/stretch_mode = 0
-
-[node name="SoundButton" type="TextureButton" parent="."]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 944.0
-margin/top = 30.0
-margin/right = 1052.0
-margin/bottom = 117.0
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-textures/normal = SubResource( 19 )
-params/resize_mode = 0
-params/scale = Vector2( 0.8, 0.8 )
-params/stretch_mode = 0
-
 [node name="Tween" type="Tween" parent="."]
 
 playback/process_mode = 1
@@ -619,8 +679,132 @@ playback/speed = 1.0
 [node name="Sprite" type="Sprite" parent="."]
 
 visibility/behind_parent = true
+transform/pos = Vector2( 1, 1 )
 texture = ExtResource( 7 )
 centered = false
+
+[node name="LeftArrow" type="TextureButton" parent="."]
+
+visibility/opacity = 0.5
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1.0
+margin/top = 869.0
+margin/right = 139.0
+margin/bottom = 986.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = SubResource( 21 )
+params/resize_mode = 0
+params/scale = Vector2( 3, 3 )
+params/stretch_mode = 0
+
+[node name="RightArrow" type="TextureButton" parent="."]
+
+visibility/opacity = 0.5
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 941.0
+margin/top = 869.0
+margin/right = 1079.0
+margin/bottom = 986.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = SubResource( 22 )
+params/resize_mode = 0
+params/scale = Vector2( 3, 3 )
+params/stretch_mode = 0
+
+[node name="Titre" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 1.0
+margin/top = 1438.0
+margin/right = 1076.0
+margin/bottom = 1770.0
+custom_fonts/font = SubResource( 23 )
+custom_colors/font_color = Color( 0.878906, 0.878906, 0.878906, 1 )
+custom_colors/font_color_shadow = Color( 0.34375, 0.34375, 0.34375, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "LE TRESOR DE MALEMONT"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Chapitre" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 1.0
+margin/top = 1381.0
+margin/right = 1080.0
+margin/bottom = 1434.0
+custom_fonts/font = SubResource( 24 )
+custom_colors/font_color = Color( 0.824219, 0.824219, 0.824219, 1 )
+text = "Chapitre 1"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Chroniques" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 9.0
+margin/top = 30.0
+margin/right = 367.0
+margin/bottom = 61.0
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color = Color( 0.605469, 0.605469, 0.605469, 1 )
+text = "Chroniques de Talos"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="SousTitre" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 5.0
+margin/top = 1742.0
+margin/right = 1053.0
+margin/bottom = 1884.0
+custom_fonts/font = SubResource( 26 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.234375, 0.234375, 0.234375, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "Scénario : Vincent Corlaix
+Composition : Matthieu Loubière"
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 
@@ -631,6 +815,10 @@ centered = false
 [connection signal="pressed" from="SelectChapter/RetourChapitres" to="." method="_on_RetourChapitres_pressed"]
 
 [connection signal="pressed" from="Options/Retour" to="." method="_on_Retour_pressed"]
+
+[connection signal="pressed" from="Options/VBox/HBox0/MusicButton" to="." method="_on_MusicButton_pressed"]
+
+[connection signal="pressed" from="Options/VBox/HBox0/SoundButton" to="." method="_on_SoundButton_pressed"]
 
 [connection signal="pressed" from="Options/VBox/Reset" to="." method="_on_Reset_pressed"]
 
@@ -646,8 +834,8 @@ centered = false
 
 [connection signal="pressed" from="Credits/RetourCredits" to="." method="_on_RetourCredits_pressed"]
 
-[connection signal="pressed" from="MusicButton" to="." method="_on_MusicButton_pressed"]
+[connection signal="pressed" from="LeftArrow" to="." method="_on_LeftArrow_pressed"]
 
-[connection signal="pressed" from="SoundButton" to="." method="_on_SoundButton_pressed"]
+[connection signal="pressed" from="RightArrow" to="." method="_on_RightArrow_pressed"]
 
 
