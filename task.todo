@@ -156,12 +156,6 @@
             ☐ Optimiser le poids des ressources
                 ✔ Images @done (2018-1-4 09:49:51)
                 ☐ Sons
-            ☐ Création Panel Dev
-                ☐ Affichage des references
-                ☐ Affichage du next
-                ☐ Affichage du timer
-                ☐ Désactivation du timer
-                ☐ Choix du dialogue à afficher
             ✔ Amélioration des options audio @done (2018-1-2 13:58:46)
                 ✔ Sons notification (messages) @done (2018-1-2 13:05:03)
                 ✔ Sons ambiances (thèmes & ambiances) @done (2018-1-2 13:05:03)
@@ -175,17 +169,10 @@
         ✘ Test sur OS.low @cancelled (2017-12-19 18:44:41)
         ☐ Amélioration de la scrollbar
         ☐ Outils de nettoyage du JSON (python ? godot ?)
-        
-        
+        ☐ Création Panel Dev
+                ☐ Affichage des references
+                ☐ Affichage du next
+                ☐ Affichage du timer
+                ☐ Désactivation du timer
+                ☐ Choix du dialogue à afficher
 
-☐ Elements pour le thème
-        ☐ Couleurs
-            ☐ Fond Header
-            ☐ Fond Tchat
-            ☐ Fond Send message
-        ☐ Boutons
-            ☐ Désactivé
-            ☐ Focus (séléctioné)
-            ☐ Hover (survolé)
-            ☐ Normal
-            ☐ Enfoncé
