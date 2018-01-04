@@ -7,10 +7,10 @@
             ]
         },
         "Menu" : [
-            "Démarrer l'aventure",
-            "Continuer l'aventure",
-            "Options",
-            "Quitter",
+            "Vous devez terminer le chapitre",
+            "Le trésor de Malemont",
+            "Chroniques de Talos",
+            "Scénario : Vincent Corlaix\nComposition : Matthieu Loubière",
             "Chapitre",
             "Choix des chapitres"
         ]

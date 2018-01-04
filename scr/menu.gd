@@ -21,24 +21,19 @@ func _ready():
 			get_node("Sprite").set_pos(Vector2(position,1))
 			get_node("Chapitre").set_text(str(LOAD.menuText[4]," ",LOAD.actualChapter))
 
-	print(LOAD.actualChapter)
-	if LOAD.fileExists == false:
-		get_node("Start").set_text(str(LOAD.menuText[0]))
-	else:
-		get_node("Start").set_text(str(LOAD.menuText[1]))
-
-	#get_node("Option").set_text(str(LOAD.menuText[2]))
-	#get_node("Quitter").set_text(str(LOAD.menuText[3]))
 		
+	# Textes Menu
+	get_node("Titre").set_text(str(LOAD.menuText[1]))
+	get_node("SousTitre").set_text(str(LOAD.menuText[3]))
+	get_node("Chroniques").set_text(str(LOAD.menuText[2]))
 
 	# Textes SelectChapter
-	get_node("SelectChapter/Label").set_text(str(LOAD.menuText[5]))
-	get_node("SelectChapter/RetourChapitres").set_text(str(LOAD.optionsText[3]))
+	#get_node("SelectChapter/Label").set_text(str(LOAD.menuText[5]))
+	#get_node("SelectChapter/RetourChapitres").set_text(str(LOAD.optionsText[3]))
 
 	# Textes OPTIONS
 	get_node("Options/VBox/Reset").set_text(str(LOAD.optionsText[0]))
 	get_node("Options/VBox/Credits").set_text(str(LOAD.optionsText[1]))
-	#get_node("Options/VBox/Retour").set_text(str(LOAD.optionsText[3]))
 	get_node("Options/VBox/Site").set_text(str(LOAD.optionsText[4]))
 	addWeb = str(LOAD.optionsText[5])
 	
@@ -237,7 +232,7 @@ func acces_chapter():
 	if LOAD.actualChapter > LOAD.chapterSave:
 		get_node("Start").set("focus/ignore_mouse", true)
 		get_node("PopupSystem").popup()
-		get_node("PopupSystem/Label").set_text(str("Vous devez terminer le chapitre ",LOAD.actualChapter-1))
+		get_node("PopupSystem/Label").set_text(str(LOAD.menuText[0]," ",LOAD.actualChapter-1))
 	else:
 		get_node("Start").set("focus/ignore_mouse", false)
 

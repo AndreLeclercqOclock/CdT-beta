@@ -131,20 +131,20 @@
                 ✔ Amélioration de la reset des sauvegarde @done (2017-12-22 18:02:19)
                 ✔ Ajouter lecture de sons BKG sur les réponses @done (2017-12-21 16:10:41)
         1.1:
-            ☐ Création du thème GUI
+            ✔ Création du thème GUI @done (2018-1-4 16:25:55)
                 ✔ Création d'un fichier texture unique @done (2018-1-3 17:27:17)
                 ✔ Ajout des anciennes textures dans le fichier unique @done (2018-1-3 23:27:41)
                     ✔ Refonte fichier texture Jeu @done (2018-1-3 23:27:39)
                     ✔ Refonte fichier texture Menu @done (2018-1-3 23:27:40)
-                ☐ Refonte Menu
+                ✔ Refonte Menu @done (2018-1-4 16:25:44)
                     ✔ Création bouton des options @done (2018-1-4 12:52:33)
                     ✔ Ajout de la gestion des sons dans la popup du menu @done (2018-1-4 12:52:34)
                     ✔ Création bouton pour changer de chapitre @done (2018-1-4 12:52:40)
                     ✔ Création du label Titre @done (2018-1-4 15:24:41)
                     ✔ Création du label Chapitre @done (2018-1-4 15:24:42)
-                    ☐ Création du bouton quitter dans la popup options
+                    ✔ Création du bouton quitter @done (2018-1-4 16:25:40)
                     ✔ Vignette Chroniques de Talos @done (2018-1-4 15:24:45)
-                    ☐ Coder le système de gestion des chapitres
+                    ✔ Coder le système de gestion des chapitres @done (2018-1-4 16:25:41)
                 ✔ Refonte Jeu @done (2018-1-3 20:45:10)
                     ✔ Interface de jeu @done (2018-1-3 17:11:04)
                     ✔ Popup Réponses @done (2018-1-3 17:23:43)
@@ -168,8 +168,8 @@
                 ✔ Sauvegarde des préférences @done (2018-1-2 13:58:39)
             ☐ Divers
                 ✔ Optimisation de l'affichage "smoothie" des textes @done (2018-1-2 12:26:11)
-                ☐ Refonte du menu (image => textes)
-                ☐ Ajout des nouveaux textes dans le JSON de traduction
+                ✔ Ajout des nouveaux textes dans le JSON de traduction @done (2018-1-4 17:05:34)
+                ✔ Suppression des textes inutiles @done (2018-1-4 16:36:05)
 
     Divers:
         ✘ Test sur OS.low @cancelled (2017-12-19 18:44:41)

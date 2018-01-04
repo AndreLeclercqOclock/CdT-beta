@@ -609,7 +609,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 8 )
 animation = "default"
-frame = 12
+frame = 9
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
@@ -1002,6 +1002,8 @@ max_lines_visible = -1
 
 [node name="Popup" type="Popup" parent="Game"]
 
+editor/display_folded = true
+visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
