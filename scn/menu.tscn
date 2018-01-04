@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=1]
+[gd_scene load_steps=36 format=1]
 
 [ext_resource path="res://img/theme.tres" type="Theme" id=1]
 [ext_resource path="res://scr/menu.gd" type="Script" id=2]
@@ -23,12 +23,11 @@ atlas = ExtResource( 4 )
 region = Rect2( 579, 131, 47, 13 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="AtlasTexture" id=27]
 
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 3 )
+atlas = ExtResource( 4 )
+region = Rect2( 641, 114, 47, 47 )
+margin = Rect2( 0, 0, 0, 0 )
 
 [sub_resource type="DynamicFont" id=4]
 
@@ -139,6 +138,13 @@ font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 3 )
 
+[sub_resource type="DynamicFont" id=28]
+
+font/size = 50
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 5 )
+
 [sub_resource type="AtlasTexture" id=21]
 
 atlas = ExtResource( 4 )
@@ -218,10 +224,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 921.0
-margin/top = 60.0
-margin/right = 1015.0
-margin/bottom = 88.0
+margin/left = 789.0
+margin/top = 61.0
+margin/right = 883.0
+margin/bottom = 87.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -230,22 +236,23 @@ params/resize_mode = 0
 params/scale = Vector2( 2, 2 )
 params/stretch_mode = 0
 
-[node name="Quitter" type="Button" parent="."]
+[node name="Quitter" type="TextureButton" parent="."]
 
-visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 608.0
-margin/top = 1750.0
-margin/right = 956.0
-margin/bottom = 1850.0
-custom_fonts/font = SubResource( 3 )
+margin/left = 953.0
+margin/top = 36.0
+margin/right = 1028.2
+margin/bottom = 111.2
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-flat = false
+textures/normal = SubResource( 27 )
+params/resize_mode = 0
+params/scale = Vector2( 1.6, 1.6 )
+params/stretch_mode = 0
 
 [node name="SelectChapter" type="Popup" parent="."]
 
@@ -390,7 +397,6 @@ flat = false
 
 [node name="VBox" type="VBoxContainer" parent="Options"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -669,6 +675,61 @@ enabled_focus_mode = 0
 shortcut = null
 flat = false
 
+[node name="PopupSystem" type="Popup" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+popup/exclusive = false
+
+[node name="Sprite" type="Sprite" parent="PopupSystem"]
+
+transform/pos = Vector2( 74.9786, 540.754 )
+transform/scale = Vector2( 1.99629, 1.53017 )
+texture = ExtResource( 4 )
+centered = false
+region = true
+region_rect = Rect2( 13, 10, 468, 144 )
+
+[node name="Label" type="Label" parent="PopupSystem"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 75.0
+margin/top = 550.0
+margin/right = 1002.0
+margin/bottom = 761.0
+custom_fonts/font = SubResource( 28 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="PopupSystem"]
+
+visibility/self_opacity = 0.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 7.0
+margin/top = 7.0
+margin/right = 1084.0
+margin/bottom = 1915.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+
 [node name="Tween" type="Tween" parent="."]
 
 playback/process_mode = 1
@@ -835,6 +896,8 @@ max_lines_visible = -1
 [connection signal="pressed" from="Options/VBox/HBox/Youtube" to="." method="_on_Youtube_pressed"]
 
 [connection signal="pressed" from="Credits/RetourCredits" to="." method="_on_RetourCredits_pressed"]
+
+[connection signal="pressed" from="PopupSystem/Button" to="." method="_on_Button_pressed"]
 
 [connection signal="pressed" from="LeftArrow" to="." method="_on_LeftArrow_pressed"]
 

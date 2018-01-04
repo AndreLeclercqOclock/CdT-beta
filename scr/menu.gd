@@ -28,7 +28,7 @@ func _ready():
 		get_node("Start").set_text(str(LOAD.menuText[1]))
 
 	#get_node("Option").set_text(str(LOAD.menuText[2]))
-	get_node("Quitter").set_text(str(LOAD.menuText[3]))
+	#get_node("Quitter").set_text(str(LOAD.menuText[3]))
 		
 
 	# Textes SelectChapter
@@ -49,6 +49,7 @@ func _ready():
 
 	soundOptions()
 	system_arrow()
+	acces_chapter()
 
 func button_pressed(i,y):
 	LOAD.scenarioFile = i
@@ -160,6 +161,7 @@ func _on_RightArrow_pressed():
 	LOAD.actualChapter += 1
 	LOAD.saveGlobal()
 	system_arrow()
+	acces_chapter()
 	LOAD.tween = get_node("Tween")
 	LOAD.targetNode = get_node("Chapitre")
 	LOAD.tweenType = "visibility/self_opacity"
@@ -191,6 +193,7 @@ func _on_LeftArrow_pressed():
 	LOAD.actualChapter -= 1
 	LOAD.saveGlobal()
 	system_arrow()
+	acces_chapter()
 	LOAD.tween = get_node("Tween")
 	LOAD.targetNode = get_node("Chapitre")
 	LOAD.tweenType = "visibility/self_opacity"
@@ -229,3 +232,15 @@ func system_arrow():
 	else:
 		get_node("RightArrow").show()
 		get_node("RightArrow").set("focus/ignore_mouse", false)
+
+func acces_chapter():
+	if LOAD.actualChapter > LOAD.chapterSave:
+		get_node("Start").set("focus/ignore_mouse", true)
+		get_node("PopupSystem").popup()
+		get_node("PopupSystem/Label").set_text(str("Vous devez terminer le chapitre ",LOAD.actualChapter-1))
+	else:
+		get_node("Start").set("focus/ignore_mouse", false)
+
+
+func _on_Button_pressed():
+	get_node("PopupSystem").hide()
