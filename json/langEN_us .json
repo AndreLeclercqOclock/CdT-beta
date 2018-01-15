@@ -1,0 +1,64 @@
+﻿{
+    "_Language" : {
+        "Config" : {
+            "scenarioFile" : [
+                "chapter01_FR",
+                "chapter02_FR"
+            ]
+        },
+        "Menu" : [
+            "You still need to finish Chapter",
+            "The Malemont Treausre",
+            "The Talos Chronicles",
+            "Scenario : Vincent Corlaix\nComposition : Matthieu Loubière",
+            "Chapter",
+            "List of chapters"
+        ]
+        ,
+        "Game" :[ 
+            "Online",
+            "Busy",
+            "Away",
+            "Offline",
+            "Options",
+            "",
+            ">> Your chat partner is ",
+            "Loading..."
+        ],
+        "Options" :[ 
+            "Erase saved game",
+            "Credits",
+            "Continue game",
+            "Return to Menu",
+            "ChroniquesDeTalos.com",
+            "http://www.chroniquesdetalos.com"
+        ],
+        "Credits" :[
+            "Artistic Direction & Scenario: Vincent Corlaix
+GameDesign & Development: Leifer Kopf
+Music & Sound Design: Matthieu Loubière
+English Translation: Georgia Lyon Froman
+Communication Consultant: Dimitri Régnier
+            
+Game desinged using Godot Engine 2.1
+            
+Acknowledgments:
+Nathan 'GDQuest' Lovato, Binogure, Tilican
+            
+Special Thanks:
+            
+From Leifer: To my lovely Betsy, who has supported me every day even when I was insufferable and my family who always supports me, even in my craziest projects.
+            
+From Vincent: To those around me who like what I've created, and especially to my sweetheart. To the friends near and far who joined in this adventure. To the beta-testers and the players, because, well, without you all... ;)   
+
+De Matthieu : To my family, to my friends, to those who put their trust in me and to life for the opportunities it has given me.
+
+De Georgia : To my French friends, and especially to my boyfriend, for helping me find the right words. To my mother, as always. And to the other Barbus for trusting me with thier baby, which has become my baby, too!  
+
+De Dimitri : To those who believe in me, my friends and family. To those who think that stories can save the world.
+            
+And, finally, thank you for playing this Opus !
+Signed Les Barbus."
+        ]
+    }
+  }
