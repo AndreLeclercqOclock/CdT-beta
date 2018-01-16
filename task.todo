@@ -171,13 +171,18 @@
             ☐ Améliorer la popup de chargement.
             ☐ Améliorer les affichages (fade in / fade out)
             ☐ Ajouter popup au premier lancement "Pour une meilleure immersion nous vous conseillons de porter un casque audio"
+            ☐ Créer un panel de préférences au premier lancement du jeu (son / langues...)
+            ✔ Corriger le bug sur le scénario du chapitre 1 @done (2018-1-16 11:08:40)
+            ✔ Unifier le fichier de sauvegarde EN-FR @done (2018-1-16 11:01:46)
+            ✔ Ajout des boutons de changements de langues du jeu @done (2018-1-16 10:06:34)
+                ✔ Menu @done (2018-1-16 11:02:02)
+                ✔ Jeu @done (2018-1-16 11:02:05)
 
 
-
- 
  
     Divers:
         ✘ Test sur OS.low @cancelled (2017-12-19 18:44:41)
+        
         ☐ Amélioration de la scrollbar
         ☐ Outils de nettoyage du JSON (python ? godot ?)
         ☐ Création Panel Dev

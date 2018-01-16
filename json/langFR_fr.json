@@ -21,9 +21,10 @@
             "Absent",
             "Hors Ligne",
             "Options",
-            "",
+            "Choisissez votre réponse",
             ">> Votre interlocuteur est ",
-            "Chargement..."
+            "Chargement...",
+            "Envoyer un message..."
         ],
         "Options" :[ 
             "Effacer la sauvegarde",

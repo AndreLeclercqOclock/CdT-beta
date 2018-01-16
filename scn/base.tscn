@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=1]
+[gd_scene load_steps=57 format=1]
 
 [ext_resource path="res://img/theme.tres" type="Theme" id=1]
 [ext_resource path="res://scr/game.gd" type="Script" id=2]
@@ -149,6 +149,18 @@ atlas = ExtResource( 3 )
 region = Rect2( 697, 471, 124, 104 )
 margin = Rect2( 0, 0, 0, 0 )
 
+[sub_resource type="AtlasTexture" id=25]
+
+atlas = ExtResource( 3 )
+region = Rect2( 821, 819, 200, 200 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=26]
+
+atlas = ExtResource( 3 )
+region = Rect2( 615, 819, 200, 200 )
+margin = Rect2( 0, 0, 0, 0 )
+
 [sub_resource type="DynamicFont" id=18]
 
 font/size = 50
@@ -225,6 +237,7 @@ playback/speed = 1.0
 
 [node name="vbox" type="VBoxContainer" parent="Game"]
 
+editor/display_folded = true
 rect/min_size = Vector2( 1080, 1920 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -364,6 +377,7 @@ region_rect = Rect2( 690, 10, 135, 135 )
 
 [node name="Mid" type="Container" parent="Game/vbox"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 0
@@ -473,7 +487,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 8 )
 animation = "default"
-frame = 17
+frame = 6
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
@@ -602,7 +616,6 @@ margin/left = 39.0
 margin/top = 32.0
 margin/right = 760.0
 margin/bottom = 85.0
-text = "Envoyer un message..."
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -648,7 +661,6 @@ margin/left = 65.0
 margin/top = 589.0
 margin/right = 996.0
 margin/bottom = 689.0
-text = "Choisissez votre réponse"
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -890,6 +902,7 @@ region_rect = Rect2( 13, 10, 468, 144 )
 
 [node name="VBox" type="VBoxContainer" parent="Game/Popup"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -903,6 +916,7 @@ alignment = 0
 
 [node name="Sound" type="HBoxContainer" parent="Game/Popup/VBox"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -910,8 +924,8 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 840.0
-margin/bottom = 156.0
-custom_constants/separation = 200
+margin/bottom = 160.0
+custom_constants/separation = 50
 alignment = 1
 
 [node name="MusicButton" type="TextureButton" parent="Game/Popup/VBox/Sound"]
@@ -920,10 +934,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 151.0
+margin/left = 16.0
 margin/top = 0.0
-margin/right = 303.4
-margin/bottom = 156.0
+margin/right = 168.4
+margin/bottom = 160.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -938,16 +952,52 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 503.0
+margin/left = 218.0
 margin/top = 0.0
-margin/right = 689.0
-margin/bottom = 156.0
+margin/right = 404.0
+margin/bottom = 160.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
 textures/normal = SubResource( 17 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
+params/stretch_mode = 0
+
+[node name="buttonFR" type="TextureButton" parent="Game/Popup/VBox/Sound"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 454.0
+margin/top = 0.0
+margin/right = 614.0
+margin/bottom = 160.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = SubResource( 25 )
+params/resize_mode = 0
+params/scale = Vector2( 0.8, 0.8 )
+params/stretch_mode = 0
+
+[node name="buttonUS" type="TextureButton" parent="Game/Popup/VBox/Sound"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 664.0
+margin/top = 0.0
+margin/right = 824.0
+margin/bottom = 160.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = SubResource( 26 )
+params/resize_mode = 0
+params/scale = Vector2( 0.8, 0.8 )
 params/stretch_mode = 0
 
 [node name="Reset" type="Button" parent="Game/Popup/VBox"]
@@ -958,9 +1008,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 206.0
+margin/top = 210.0
 margin/right = 840.0
-margin/bottom = 306.0
+margin/bottom = 310.0
 custom_fonts/font = SubResource( 18 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -975,9 +1025,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 356.0
+margin/top = 360.0
 margin/right = 840.0
-margin/bottom = 456.0
+margin/bottom = 460.0
 custom_fonts/font = SubResource( 19 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -993,9 +1043,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 506.0
+margin/top = 510.0
 margin/right = 840.0
-margin/bottom = 698.0
+margin/bottom = 702.0
 custom_constants/separation = 130
 alignment = 1
 
@@ -1061,9 +1111,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 748.0
+margin/top = 752.0
 margin/right = 840.0
-margin/bottom = 848.0
+margin/bottom = 852.0
 custom_fonts/font = SubResource( 23 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -1078,9 +1128,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 898.0
+margin/top = 902.0
 margin/right = 840.0
-margin/bottom = 998.0
+margin/bottom = 1002.0
 custom_fonts/font = SubResource( 24 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -1106,6 +1156,10 @@ flat = false
 [connection signal="pressed" from="Game/Popup/VBox/Sound/MusicButton" to="Game" method="_on_MusicButton_pressed"]
 
 [connection signal="pressed" from="Game/Popup/VBox/Sound/SoundButton" to="Game" method="_on_SoundButton_pressed"]
+
+[connection signal="pressed" from="Game/Popup/VBox/Sound/buttonFR" to="Game" method="_on_buttonFR_pressed"]
+
+[connection signal="pressed" from="Game/Popup/VBox/Sound/buttonUS" to="Game" method="_on_buttonUS_pressed"]
 
 [connection signal="pressed" from="Game/Popup/VBox/Reset" to="Game" method="_on_Reset_pressed"]
 

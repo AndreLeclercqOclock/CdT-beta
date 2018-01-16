@@ -2,13 +2,13 @@
     "_Language" : {
         "Config" : {
             "scenarioFile" : [
-                "chapter01_FR",
+                "chapter01_US",
                 "chapter02_FR"
             ]
         },
         "Menu" : [
             "You still need to finish Chapter",
-            "The Malemont Treausre",
+            "The Malemont's Treasure",
             "The Talos Chronicles",
             "Scenario : Vincent Corlaix\nComposition : Matthieu Loubière",
             "Chapter",
@@ -21,9 +21,10 @@
             "Away",
             "Offline",
             "Options",
-            "",
+            "Choose your answer",
             ">> Your chat partner is ",
-            "Loading..."
+            "Loading...",
+            "Send a message..."
         ],
         "Options" :[ 
             "Erase saved game",

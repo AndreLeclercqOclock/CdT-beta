@@ -3,6 +3,6 @@
     "stateSave" : true,
     "version" : "Ver : bêta 1.2",
     "FR_fr" : "langFR_fr.json",
-    "EN_en" : "langEN_en.json"
+    "EN_us" : "langEN_us.json"
   }
 }

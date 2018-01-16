@@ -85,6 +85,8 @@ func _ready():
 	get_node("Popup/VBox/Reset").set_text(str(LOAD.optionsText[0]))
 	get_node("Popup/VBox/Retour").set_text(str(LOAD.optionsText[2]))
 	get_node("Popup/VBox/Quitter").set_text(str(LOAD.optionsText[3]))
+	get_node("Choices/Label").set_text(str(LOAD.gameText[5]))
+	get_node("vbox/Bot/ButtonChoices/Label").set_text(str(LOAD.gameText[8]))
 
 	# Initialisation du Timer
 	print("Initialitation du Timer")
@@ -878,7 +880,7 @@ func system_save():
 	data = {"_Save" : {"dial" : LOAD.saveDial,"rep" : LOAD.saveRep, "nexttime" : LOAD.saveNextTime, "actualBGSound" : LOAD.actualBGSound}}
 	var file = File.new()
 	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-	file.open(str("user://save",LOAD.scenarioFile,".json"), File.WRITE)
+	file.open(str("user://saveChapter",LOAD.actualChapter,".json"), File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 	return
@@ -996,7 +998,7 @@ func _notification(notification_signal):
 		system_exit()
 
 func _on_Reset_pressed():
-	Directory.new().remove(str("user://save",LOAD.scenarioFile,".json"))
+	Directory.new().remove(str("user://saveChapter",LOAD.actualChapter,".json"))
 	LOAD.saveDial = []
 	LOAD.saveRep = []
 	LOAD.saveTime = []
@@ -1058,3 +1060,43 @@ func _on_LeaveChoices_pressed():
 
 func _on_LeaveOptions_pressed():
 	get_node("Popup").hide()
+
+
+func _on_buttonFR_pressed():
+	LOAD.languageCode = 0
+	# Vidage du cache.
+	LOAD.saveDial = []
+	LOAD.saveRep = []
+	LOAD.saveTime = []
+	LOAD.saveNextTime = []
+	LOAD.menuText = []
+	LOAD.gameText = []
+	LOAD.optionsText = []
+	LOAD.creditsText = []
+	LOAD.chapter = []
+	LOAD.chapterNumber = 0
+	LOAD.selectLanguage()
+	LOAD.loadLanguage()
+	LOAD.scenarioFile = LOAD.lang._Language.Config.scenarioFile[LOAD.actualChapter-1]
+	LOAD._load_chapter()
+	return
+
+
+func _on_buttonUS_pressed():
+	LOAD.languageCode = 1
+	# Vidage du cache
+	LOAD.saveDial = []
+	LOAD.saveRep = []
+	LOAD.saveTime = []
+	LOAD.saveNextTime = []
+	LOAD.menuText = []
+	LOAD.gameText = []
+	LOAD.optionsText = []
+	LOAD.creditsText = []
+	LOAD.chapter = []
+	LOAD.chapterNumber = 0
+	LOAD.selectLanguage()
+	LOAD.loadLanguage()
+	LOAD.scenarioFile = LOAD.lang._Language.Config.scenarioFile[LOAD.actualChapter-1]
+	LOAD._load_chapter()
+	return

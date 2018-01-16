@@ -10,34 +10,8 @@ var imgTexture = null
 var position = null
 
 func _ready():
-	if LOAD.actualChapter == 1:
-		position = 1
-		get_node("Sprite").set_pos(Vector2(position,1))
-		get_node("Chapitre").set_text(str(LOAD.menuText[4]," ",LOAD.actualChapter))
-	else:
-		position = 1080
-		for i in range(LOAD.actualChapter):
-			position -= 1080
-			get_node("Sprite").set_pos(Vector2(position,1))
-			get_node("Chapitre").set_text(str(LOAD.menuText[4]," ",LOAD.actualChapter))
 
-		
-	# Textes Menu
-	get_node("Titre").set_text(str(LOAD.menuText[1]))
-	get_node("SousTitre").set_text(str(LOAD.menuText[3]))
-	get_node("Chroniques").set_text(str(LOAD.menuText[2]))
-
-	# Textes OPTIONS
-	get_node("Options/VBox/Reset").set_text(str(LOAD.optionsText[0]))
-	get_node("Options/VBox/Credits").set_text(str(LOAD.optionsText[1]))
-	get_node("Options/VBox/Site").set_text(str(LOAD.optionsText[4]))
-	addWeb = str(LOAD.optionsText[5])
-	
-	# Textes CREDITS
-	get_node("Credits/ScrollContainer/RichTextLabel").set_text(str(LOAD.creditsText[0]))
-	get_node("Credits/Label").set_text(str(LOAD.optionsText[1]))
-	get_node("Credits/RetourCredits").set_text(str(LOAD.optionsText[3]))
-
+	loadText()
 	soundOptions()
 	system_arrow()
 	acces_chapter()
@@ -52,17 +26,6 @@ func _on_Start_pressed():
 	LOAD.scenarioFile = LOAD.lang._Language.Config.scenarioFile[LOAD.actualChapter-1]
 	LOAD.loadChapter = LOAD.actualChapter
 	LOAD._load_chapter()
-	#get_node("SelectChapter").popup()
-	#for i in LOAD.lang._Language.Config.scenarioFile:
-	#	y = y+1
-	#	button = get_node("SelectChapter/VBoxContainer/Button")
-	#	newButton = button.duplicate()
-	#	get_node("SelectChapter/VBoxContainer").add_child(newButton)
-	#	newButton.show()
-	#	newButton.set_disabled(y > LOAD.chapterSave)
-	#	newButton.set_name(str("Button",i))
-	#	newButton.set_text(str(LOAD.menuText[4]," ",y))
-	#	newButton.connect("pressed", self, "button_pressed", [i,y])
 		
 func soundOptions():
 	if LOAD.MusicButton == 1:
@@ -235,3 +198,62 @@ func acces_chapter():
 
 func _on_Button_pressed():
 	get_node("PopupSystem").hide()
+
+
+func _on_buttonFR_pressed():
+	LOAD.languageCode = 0
+	# Vidage du cache
+	LOAD.menuText = []
+	LOAD.gameText = []
+	LOAD.optionsText = []
+	LOAD.creditsText = []
+	LOAD.chapter = []
+	LOAD.chapterNumber = 0
+	LOAD.selectLanguage()
+	LOAD.loadLanguage()
+	loadText()
+	return
+
+
+func _on_buttonUS_pressed():
+	LOAD.languageCode = 1
+	# Vidage du cache
+	LOAD.menuText = []
+	LOAD.gameText = []
+	LOAD.optionsText = []
+	LOAD.creditsText = []
+	LOAD.chapter = []
+	LOAD.chapterNumber = 0
+	LOAD.selectLanguage()
+	LOAD.loadLanguage()
+	loadText()
+	return
+
+func loadText():
+	if LOAD.actualChapter == 1:
+		position = 1
+		get_node("Sprite").set_pos(Vector2(position,1))
+		get_node("Chapitre").set_text(str(LOAD.menuText[4]," ",LOAD.actualChapter))
+	else:
+		position = 1080
+		for i in range(LOAD.actualChapter):
+			position -= 1080
+			get_node("Sprite").set_pos(Vector2(position,1))
+			get_node("Chapitre").set_text(str(LOAD.menuText[4]," ",LOAD.actualChapter))
+
+		
+	# Textes Menu
+	get_node("Titre").set_text(str(LOAD.menuText[1]))
+	get_node("SousTitre").set_text(str(LOAD.menuText[3]))
+	get_node("Chroniques").set_text(str(LOAD.menuText[2]))
+
+	# Textes OPTIONS
+	get_node("Options/VBox/Reset").set_text(str(LOAD.optionsText[0]))
+	get_node("Options/VBox/Credits").set_text(str(LOAD.optionsText[1]))
+	get_node("Options/VBox/Site").set_text(str(LOAD.optionsText[4]))
+	addWeb = str(LOAD.optionsText[5])
+	
+	# Textes CREDITS
+	get_node("Credits/ScrollContainer/RichTextLabel").set_text(str(LOAD.creditsText[0]))
+	get_node("Credits/Label").set_text(str(LOAD.optionsText[1]))
+	get_node("Credits/RetourCredits").set_text(str(LOAD.optionsText[3]))

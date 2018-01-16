@@ -26,7 +26,7 @@ var firstDial = null
 var lastDial = null
 var stateSave = null
 var version = null
-var chapterSave = null
+var chapterSave = 2
 var namePNJ = null
 var firstBGSound = null
 
@@ -61,11 +61,11 @@ var languageCode = 0
 var languageSelect = null
 
 var chapterNumber = 0
-var loadChapter = null
-var actualChapter = null
+var loadChapter = 0
+var actualChapter = 1
 
-var MusicButton = null
-var SoundButton = null
+var MusicButton = 1
+var SoundButton = 1
 
 var tween = null
 var targetNode = null
@@ -89,38 +89,6 @@ func _ready():
 	# Récupération des variables dans le fichiers de configuration
 	stateSave = conf._Config.stateSave
 	version = conf._Config.version
-
-	if languageCode == 0:
-		languageSelect = conf._Config.FR_fr
-	elif languageCode == 1:
-		languageSelect = conf._Config.EN_en
-
-	
-	# Récupération de la langue
-	print("Récupération de la configutation")
-	print("Ouverture du JSON")
-	var file = File.new()
-	file.open(str("res://json/",languageSelect), File.READ)
-	lang.parse_json(file.get_as_text())
-	file.close()
-	print("Fermeture du JSON")
-
-	for i in lang._Language.Menu:
-		menuText.append(i)
-
-	for i in lang._Language.Game:
-		gameText.append(i)
-
-	for i in lang._Language.Options:
-		optionsText.append(i)
-
-	for i in lang._Language.Credits:
-		creditsText.append(i)
-	
-	for i in lang._Language.Config.scenarioFile:
-		chapter.append(i)
-		chapterNumber = chapterNumber+1
-	
 		
 
 	# Vérification de l'existence du fichier de sauvegarde
@@ -160,22 +128,29 @@ func _ready():
 		else:
 			actualChapter = 1
 			saveGlobal()
+		if saveg._SaveGlobal.has("languageCode"):
+			languageCode = saveg._SaveGlobal.languageCode
+		else:
+			languageCode = 0
+			saveGlobal()
 
+	selectLanguage()
+	loadLanguage()
 
 	if fileExists == false:
 		MusicButton = 1
 		SoundButton = 1
 		chapterSave = 2
 		actualChapter = 1
+		languageCode = 0
 		saveGlobal()
 		
-
 
 func _load_chapter():
 	# Vérification de l'existence du fichier de sauvegarde
 	print("Check du SaveLog")
 	file2check = File.new()
-	fileExists = file2check.file_exists(str("user://save",scenarioFile,".json"))
+	fileExists = file2check.file_exists(str("user://saveChapter",actualChapter,".json"))
 
 	if fileExists == true and stateSave == true:
 		# Récupération de la sauvegarde globale
@@ -183,7 +158,7 @@ func _load_chapter():
 		print("Ouverture du JSON")
 		var file = File.new()
 		#file.open_encrypted_with_pass("user://savelogs.json", File.READ, "reg65er9g84zertg1zs9ert8g4")
-		file.open(str("user://save",scenarioFile,".json"), File.READ)
+		file.open(str("user://saveChapter",actualChapter,".json"), File.READ)
 		save.parse_json(file.get_line())
 		file.close()
 		print("Fermeture du JSON")
@@ -244,15 +219,52 @@ func _load_chapter():
 	get_tree().change_scene("res://scn/base.tscn")
 	
 func saveGlobal():
-	data = {"_SaveGlobal" : {"chapter" : chapterSave,"actualChapter": actualChapter, "sound" : SoundButton, "music" : MusicButton}}
+	data = {"_SaveGlobal" : {"chapter" : chapterSave,"actualChapter": actualChapter, "sound" : SoundButton, "music" : MusicButton,"languageCode" : languageCode}}
 	var file = File.new()
 	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
 	file.open("user://saveglobal.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
+	return
 	
 func system_tween():
 	if tween != null:
 		tween.interpolate_property(targetNode, tweenType, tweenStart, tweenEnd, tweenTime, Tween.TRANS_LINEAR, Tween.EASE_IN)
 		tween.start()
+	return
+
+func selectLanguage():
+	if languageCode == 0:
+		languageSelect = conf._Config.FR_fr
+	elif languageCode == 1:
+		languageSelect = conf._Config.EN_us
+	saveGlobal()
+	return
+
+func loadLanguage():
+	# Récupération de la langue
+	print("Récupération de la configutation")
+	print("Ouverture du JSON")
+	print(str("LANGUAGE SELECT : ",languageSelect))
+	var file = File.new()
+	file.open(str("res://json/",languageSelect), File.READ)
+	lang.parse_json(file.get_as_text())
+	file.close()
+	print("Fermeture du JSON")
+
+	for i in lang._Language.Menu:
+		menuText.append(i)
+
+	for i in lang._Language.Game:
+		gameText.append(i)
+
+	for i in lang._Language.Options:
+		optionsText.append(i)
+
+	for i in lang._Language.Credits:
+		creditsText.append(i)
+	
+	for i in lang._Language.Config.scenarioFile:
+		chapter.append(i)
+		chapterNumber = chapterNumber+1
 	return
