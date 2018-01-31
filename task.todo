@@ -173,13 +173,8 @@
                 ☐ Améliorer les affichages (fade in / fade out)
                 ☐ Ajouter popup au premier lancement "Pour une meilleure immersion nous vous conseillons de porter un casque audio"
             ☐ Créer un panel de préférences au premier lancement du jeu (son / langues...)
-<<<<<<< Updated upstream
-            ☐ Ajouter le sound design du chapitre 2
-=======
-            ☐ Ajout des Sons du Chapitre 2
-            ☐ Correction des différents bugs de scénario
->>>>>>> Stashed changes
-            ✔ Corriger le bug sur le scénario du chapitre 1 @done (2018-1-16 11:08:40)
+            ✔ Ajouter le sound design du chapitre 2 @done (2018-1-25 09:00:57)
+            ✔ Correction des différents bugs de scénario Chapitre 1 & 2 @done (2018-1-26 11:12:34)
             ✔ Unifier le fichier de sauvegarde EN-FR @done (2018-1-16 11:01:46)
             ✔ Ajout des boutons de changements de langues du jeu @done (2018-1-16 10:06:34)
                 ✔ Menu @done (2018-1-16 11:02:02)

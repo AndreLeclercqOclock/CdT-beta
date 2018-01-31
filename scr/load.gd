@@ -129,7 +129,8 @@ func _ready():
 			actualChapter = 1
 			saveGlobal()
 		if saveg._SaveGlobal.has("languageCode"):
-			languageCode = saveg._SaveGlobal.languageCode
+			#languageCode = saveg._SaveGlobal.languageCode
+			languageCode = 0
 		else:
 			languageCode = 0
 			saveGlobal()

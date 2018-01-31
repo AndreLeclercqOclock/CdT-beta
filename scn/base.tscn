@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=1]
+[gd_scene load_steps=59 format=1]
 
 [ext_resource path="res://img/theme.tres" type="Theme" id=1]
 [ext_resource path="res://scr/game.gd" type="Script" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://img/load/activite_ecriture20.png" type="Texture" id=28]
 [ext_resource path="res://img/load/activite_ecriture21.png" type="Texture" id=29]
 [ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" id=30]
+[ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=31]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -149,63 +150,70 @@ atlas = ExtResource( 3 )
 region = Rect2( 697, 471, 124, 104 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=18]
 
 atlas = ExtResource( 3 )
 region = Rect2( 821, 819, 200, 200 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=19]
 
 atlas = ExtResource( 3 )
 region = Rect2( 615, 819, 200, 200 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="DynamicFont" id=18]
+[sub_resource type="DynamicFont" id=20]
 
 font/size = 50
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=19]
+[sub_resource type="DynamicFont" id=21]
 
 font/size = 50
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 6 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=22]
 
 atlas = ExtResource( 3 )
 region = Rect2( 857, 156, 128, 128 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=23]
 
 atlas = ExtResource( 3 )
 region = Rect2( 857, 11, 128, 128 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=24]
 
 atlas = ExtResource( 3 )
 region = Rect2( 697, 156, 128, 128 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="DynamicFont" id=23]
+[sub_resource type="DynamicFont" id=25]
 
 font/size = 50
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=24]
+[sub_resource type="DynamicFont" id=26]
 
 font/size = 50
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=27]
+
+font/size = 100
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 31 )
 
 [node name="World" type="Node"]
 
@@ -902,7 +910,6 @@ region_rect = Rect2( 13, 10, 468, 144 )
 
 [node name="VBox" type="VBoxContainer" parent="Game/Popup"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -916,7 +923,6 @@ alignment = 0
 
 [node name="Sound" type="HBoxContainer" parent="Game/Popup/VBox"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -974,13 +980,15 @@ margin/left = 454.0
 margin/top = 0.0
 margin/right = 614.0
 margin/bottom = 160.0
+disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 25 )
+textures/normal = SubResource( 18 )
 params/resize_mode = 0
 params/scale = Vector2( 0.8, 0.8 )
 params/stretch_mode = 0
+params/modulate = Color( 0.494118, 0.494118, 0.494118, 1 )
 
 [node name="buttonUS" type="TextureButton" parent="Game/Popup/VBox/Sound"]
 
@@ -992,13 +1000,15 @@ margin/left = 664.0
 margin/top = 0.0
 margin/right = 824.0
 margin/bottom = 160.0
+disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 26 )
+textures/normal = SubResource( 19 )
 params/resize_mode = 0
 params/scale = Vector2( 0.8, 0.8 )
 params/stretch_mode = 0
+params/modulate = Color( 0.494118, 0.494118, 0.494118, 1 )
 
 [node name="Reset" type="Button" parent="Game/Popup/VBox"]
 
@@ -1011,7 +1021,7 @@ margin/left = 0.0
 margin/top = 210.0
 margin/right = 840.0
 margin/bottom = 310.0
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 20 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1028,7 +1038,7 @@ margin/left = 0.0
 margin/top = 360.0
 margin/right = 840.0
 margin/bottom = 460.0
-custom_fonts/font = SubResource( 19 )
+custom_fonts/font = SubResource( 21 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1062,7 +1072,7 @@ margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 20 )
+textures/normal = SubResource( 22 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -1080,7 +1090,7 @@ margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 21 )
+textures/normal = SubResource( 23 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -1098,7 +1108,7 @@ margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 22 )
+textures/normal = SubResource( 24 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -1114,7 +1124,7 @@ margin/left = 0.0
 margin/top = 752.0
 margin/right = 840.0
 margin/bottom = 852.0
-custom_fonts/font = SubResource( 23 )
+custom_fonts/font = SubResource( 25 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1131,11 +1141,31 @@ margin/left = 0.0
 margin/top = 902.0
 margin/right = 840.0
 margin/bottom = 1002.0
-custom_fonts/font = SubResource( 24 )
+custom_fonts/font = SubResource( 26 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 flat = false
+
+[node name="soon" type="Label" parent="Game/Popup"]
+
+rect/rotation = -15.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 625.0
+margin/top = 525.0
+margin/right = 931.0
+margin/bottom = 625.0
+custom_fonts/font = SubResource( 27 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "bientôt"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [connection signal="pressed" from="Game/vbox/Top/resetSave" to="Game" method="_on_resetSave_pressed"]
 

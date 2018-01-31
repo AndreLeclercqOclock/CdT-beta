@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=1]
+[gd_scene load_steps=35 format=1]
 
 [ext_resource path="res://img/theme.tres" type="Theme" id=1]
 [ext_resource path="res://scr/menu.gd" type="Script" id=2]
@@ -103,43 +103,50 @@ margin = Rect2( 0, 0, 0, 0 )
 
 font/size = 100
 font/use_mipmaps = false
-font/use_filter = true
+font/use_filter = false
 font/font = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=16]
 
-font/size = 35
+font/size = 100
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=17]
 
+font/size = 35
+font/use_mipmaps = false
+font/use_filter = true
+font/font = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=18]
+
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=18]
+[sub_resource type="DynamicFont" id=19]
 
 font/size = 50
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 6 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=20]
 
 atlas = ExtResource( 4 )
 region = Rect2( 17, 167, 46, 39 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=21]
 
 atlas = ExtResource( 4 )
 region = Rect2( 73, 167, 49, 39 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="DynamicFont" id=21]
+[sub_resource type="DynamicFont" id=22]
 
 font/size = 115
 extra_spacing/space = 10
@@ -147,7 +154,7 @@ font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=22]
+[sub_resource type="DynamicFont" id=23]
 
 font/size = 50
 extra_spacing/char = 10
@@ -155,14 +162,14 @@ font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=23]
+[sub_resource type="DynamicFont" id=24]
 
 font/size = 30
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=24]
+[sub_resource type="DynamicFont" id=25]
 
 font/size = 45
 font/use_mipmaps = false
@@ -351,6 +358,7 @@ margin/left = 482.0
 margin/top = 0.0
 margin/right = 602.0
 margin/bottom = 122.0
+disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -358,6 +366,7 @@ textures/normal = SubResource( 7 )
 params/resize_mode = 0
 params/scale = Vector2( 0.6, 0.6 )
 params/stretch_mode = 0
+params/modulate = Color( 0.496094, 0.496094, 0.496094, 1 )
 
 [node name="buttonUS" type="TextureButton" parent="Options/VBox/HBox0"]
 
@@ -369,6 +378,7 @@ margin/left = 702.0
 margin/top = 0.0
 margin/right = 822.0
 margin/bottom = 122.0
+disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -376,6 +386,7 @@ textures/normal = SubResource( 8 )
 params/resize_mode = 0
 params/scale = Vector2( 0.6, 0.6 )
 params/stretch_mode = 0
+params/modulate = Color( 0.494118, 0.494118, 0.494118, 1 )
 
 [node name="Reset" type="Button" parent="Options/VBox"]
 
@@ -507,6 +518,26 @@ centered = false
 region = true
 region_rect = Rect2( 13, 10, 468, 144 )
 
+[node name="soon" type="Label" parent="Options"]
+
+rect/rotation = -15.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 651.0
+margin/top = 449.0
+margin/right = 957.0
+margin/bottom = 549.0
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "bientôt"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="Credits" type="Popup" parent="."]
 
 editor/display_folded = true
@@ -531,7 +562,7 @@ margin/left = 84.0
 margin/top = 101.0
 margin/right = 975.0
 margin/bottom = 273.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 16 )
 align = 1
 valign = 1
 autowrap = true
@@ -563,7 +594,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 946.0
 margin/bottom = 1349.0
-custom_fonts/normal_font = SubResource( 16 )
+custom_fonts/normal_font = SubResource( 17 )
 bbcode/enabled = true
 bbcode/bbcode = ""
 visible_characters = -1
@@ -590,7 +621,7 @@ margin/left = 123.0
 margin/top = 1699.0
 margin/right = 963.0
 margin/bottom = 1783.0
-custom_fonts/font = SubResource( 17 )
+custom_fonts/font = SubResource( 18 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -629,7 +660,7 @@ margin/left = 75.0
 margin/top = 550.0
 margin/right = 1002.0
 margin/bottom = 761.0
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
 valign = 1
@@ -682,7 +713,7 @@ margin/bottom = 1158.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 19 )
+textures/normal = SubResource( 20 )
 params/resize_mode = 0
 params/scale = Vector2( 3, 3 )
 params/stretch_mode = 0
@@ -702,7 +733,7 @@ margin/bottom = 1158.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 20 )
+textures/normal = SubResource( 21 )
 params/resize_mode = 0
 params/scale = Vector2( 3, 3 )
 params/stretch_mode = 0
@@ -717,7 +748,7 @@ margin/left = 2.0
 margin/top = 1438.0
 margin/right = 1077.0
 margin/bottom = 1770.0
-custom_fonts/font = SubResource( 21 )
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color = Color( 0.878906, 0.878906, 0.878906, 1 )
 custom_colors/font_color_shadow = Color( 0.34375, 0.34375, 0.34375, 1 )
 custom_constants/shadow_offset_x = 5
@@ -740,7 +771,7 @@ margin/left = 1.0
 margin/top = 1381.0
 margin/right = 1080.0
 margin/bottom = 1434.0
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 23 )
 custom_colors/font_color = Color( 0.824219, 0.824219, 0.824219, 1 )
 align = 1
 valign = 1
@@ -758,7 +789,7 @@ margin/left = 9.0
 margin/top = 30.0
 margin/right = 367.0
 margin/bottom = 61.0
-custom_fonts/font = SubResource( 23 )
+custom_fonts/font = SubResource( 24 )
 custom_colors/font_color = Color( 0.605469, 0.605469, 0.605469, 1 )
 align = 1
 valign = 1
@@ -777,7 +808,7 @@ margin/left = 5.0
 margin/top = 1742.0
 margin/right = 1053.0
 margin/bottom = 1884.0
-custom_fonts/font = SubResource( 24 )
+custom_fonts/font = SubResource( 25 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0.234375, 0.234375, 0.234375, 1 )
 custom_constants/shadow_offset_x = 3
