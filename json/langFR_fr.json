@@ -3,7 +3,8 @@
         "Config" : {
             "scenarioFile" : [
                 "chapter01_FR",
-                "chapter02_FR"
+                "chapter02_FR",
+                "chapter03_FR"
             ]
         },
         "Menu" : [

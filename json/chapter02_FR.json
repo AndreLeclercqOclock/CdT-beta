@@ -68,7 +68,7 @@
               "x": 17.0,
               "y": 225.0
             },
-            "ZIndex": 9.0,
+            "ZIndex": 10.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -144,7 +144,7 @@
               "x": 17.0,
               "y": 475.0
             },
-            "ZIndex": 10.0,
+            "ZIndex": 11.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -220,7 +220,7 @@
               "x": 17.0,
               "y": 725.0
             },
-            "ZIndex": 11.0,
+            "ZIndex": 12.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -296,7 +296,7 @@
               "x": 1142.0,
               "y": 250.0
             },
-            "ZIndex": 12.0,
+            "ZIndex": 13.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -372,7 +372,7 @@
               "x": 792.0,
               "y": -25.0
             },
-            "ZIndex": 13.0,
+            "ZIndex": 14.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -448,7 +448,7 @@
               "x": 1992.0,
               "y": 175.0
             },
-            "ZIndex": 14.0,
+            "ZIndex": 15.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -524,7 +524,7 @@
               "x": 2742.0,
               "y": 775.0
             },
-            "ZIndex": 15.0,
+            "ZIndex": 16.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -600,7 +600,7 @@
               "x": 3342.0,
               "y": 1025.0
             },
-            "ZIndex": 16.0,
+            "ZIndex": 17.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -676,7 +676,7 @@
               "x": 4117.0,
               "y": 750.0
             },
-            "ZIndex": 17.0,
+            "ZIndex": 18.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -752,7 +752,7 @@
               "x": 4917.0,
               "y": 625.0
             },
-            "ZIndex": 18.0,
+            "ZIndex": 19.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -822,13 +822,13 @@
               "g": 0.2627451,
               "b": 0.654902
             },
-            "Text": "Vous n’allez pas me croire.\r\n\r\nJe me suis réveillé allongé près d’une grande tente. Une sorte de campement militaire.\r\n\r\nC’est là que j’ai trouvé c-et appareil de communication.",
+            "Text": "Vous n’allez pas me croire.\r\n\r\nJe me suis réveillé allongé près d’une grande tente. Une sorte de campement militaire.\r\n\r\nC’est là que j’ai trouvé cet appareil de communication.",
             "ExternalId": "",
             "Position": {
               "x": 2742.0,
               "y": 500.0
             },
-            "ZIndex": 19.0,
+            "ZIndex": 20.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -898,13 +898,13 @@
               "g": 0.2627451,
               "b": 0.654902
             },
-            "Text": "Lorsque je me suis réveillé, j’ai découvert que j’étais allongé à quelques mètres d’un campement.\r\n\r\nC’est plutôt un avant-poste ; une simple tente avec une table et deux chaises pliantes.\r\n\r\nIl y avait un peu de matériel, mais rien de très utile, à part une lampe torche très puissante, et un appareil électronique.\r\n\r\nC’est une sorte de petite tablette. Je l’ai démarrée, et, en farfouillant dans les réglages, j’ai fini par lancer un programme me proposant de joindre un numéro de téléhone.\r\n\r\nJ’ai donc entré le vôtre. Heureusement que je m’en souvenais.",
+            "Text": "Lorsque je me suis réveillé, j’ai découvert que j’étais allongé à quelques mètres d’un campement.\r\n\r\nC’est plutôt un avant-poste ; une simple tente avec une table et deux chaises pliantes.\r\n\r\nIl y avait un peu de matériel, mais rien de très utile, à part une lampe torche très puissante, et un appareil électronique.\r\n\r\nC’est une sorte de petite tablette. Je l’ai démarrée, et, en farfouillant dans les réglages, j’ai fini par lancer un programme me proposant de joindre un numéro de télép-hone.\r\n\r\nJ’ai donc entré le vôtre. Heureusement que je m’en souvenais.",
             "ExternalId": "",
             "Position": {
               "x": 2742.0,
               "y": 75.0
             },
-            "ZIndex": 20.0,
+            "ZIndex": 21.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -980,7 +980,7 @@
               "x": 3542.0,
               "y": 200.0
             },
-            "ZIndex": 40.0,
+            "ZIndex": 41.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1056,7 +1056,7 @@
               "x": 3542.0,
               "y": -50.0
             },
-            "ZIndex": 21.0,
+            "ZIndex": 22.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1132,7 +1132,7 @@
               "x": 4342.0,
               "y": -450.0
             },
-            "ZIndex": 22.0,
+            "ZIndex": 23.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1202,13 +1202,13 @@
               "g": 0.2627451,
               "b": 0.654902
             },
-            "Text": "Bon, Si vous le dites.",
+            "Text": "Bon. Si vous le dites.",
             "ExternalId": "",
             "Position": {
               "x": 4342.0,
               "y": -225.0
             },
-            "ZIndex": 23.0,
+            "ZIndex": 24.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1284,7 +1284,7 @@
               "x": 4342.0,
               "y": 0.0
             },
-            "ZIndex": 24.0,
+            "ZIndex": 25.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1360,7 +1360,7 @@
               "x": 4917.0,
               "y": 875.0
             },
-            "ZIndex": 25.0,
+            "ZIndex": 26.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1430,13 +1430,13 @@
               "g": 0.670588255,
               "b": 0.3254902
             },
-            "Text": "C’est une évidence ; je ne peux pas rester ici indéfiniment.\r\n\r\nJ’ai trouvé des jumelles dans les affaires abandonnées ici. Je vais vous décrire ce que je vois.\r\n\r\nLe campement où je me trouve est situé au sommet d’une déclivité menant à une petite vallée. Si je ne me trompe pas, on dirait un cratère presque circulaire.\r\n\r\nLe fond de ce cratère est coupé en deux par une jolie petite rivière. Il semble qu’il y ait un ilôt boisé là où la rivière est la plus large.\r\n\r\nAu delà, de l’autre côté, j’aperçois une immense clôture qui semble fermer une vaste zone.\r\n\r\nEt, le plus intéressant ; derrière cette clôture se dresse un très grand bâtiment, à plusieurs étages.\r\n\r\nVoilà. J’ai peut-être loupé quelque chose, mais à cette distance c’est tout ce que je peux voir.",
+            "Text": "C’est une évidence ; je ne peux pas rester ici indéfiniment.\r\n\r\nJ’ai trouvé des jumelles dans les affaires abandonnées ici. Je vais vous décrire ce que je vois.\r\n\r\nLe campement où je me trouve est situé au sommet d’une déclivité menant à une petite vallée. Si je ne me trompe pas, on dirait un cratère presque circulaire.\r\n\r\nLe fond de ce cratère est coupé en deux par une jolie petite rivière. Il semble qu’il y ait un ilot boisé là où la rivière est la plus large.\r\n\r\nAu-delà, de l’autre côté, j’aperçois une immense clôture qui semble fermer une vaste zone.\r\n\r\nEt, le plus intéressant ; derrière cette clôture se dresse un très grand bâtiment, à plusieurs étages.\r\n\r\nVoilà. J’ai peut-être loupé quelque chose, mais à cette distance c’est tout ce que je peux voir.",
             "ExternalId": "",
             "Position": {
               "x": 5692.0,
               "y": 750.0
             },
-            "ZIndex": 27.0,
+            "ZIndex": 28.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1512,7 +1512,7 @@
               "x": 6492.0,
               "y": 650.0
             },
-            "ZIndex": 28.0,
+            "ZIndex": 29.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1582,13 +1582,13 @@
               "g": 0.670588255,
               "b": 0.3254902
             },
-            "Text": "Bien. Je suis arrivé dans le creux de ce cratère.\r\n\r\nMon horizon est maintenant bouché. Cela me donne le sentiment étrange que le décor est artificiel.\r\n\r\nPour autant c’est peut-être le cas, qui sait ? Dans un lieu où deux lunes traversent le ciel, à quelles autres étrangetés puis-je m’attendre ?",
+            "Text": "Bien. Je suis arrivé dans le creux de ce cratère.\r\n\r\nMon horizon est maintenant bouché. Cela me donne le sentiment étrange que le décor est artificiel.\r\n\r\nPour autant, c’est peut-être le cas, qui sait ? Dans un lieu où deux lunes traversent le ciel, à quelles autres étrangetés puis-je m’attendre ?",
             "ExternalId": "",
             "Position": {
               "x": 6967.0,
               "y": 500.0
             },
-            "ZIndex": 29.0,
+            "ZIndex": 30.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1658,13 +1658,13 @@
               "g": 0.670588255,
               "b": 0.3254902
             },
-            "Text": "Très honnêtement, je ressent l’atavisme de mon espèce.\r\n\r\nLe bâtiment de l’autre côté de la vallée m’attire parce qu’il s’agit d’une construction évidemment humaine et relativement moderne.\r\n\r\nSincèrement, j’espère y trouver de l’aide et le moyen de rentrer chez moi.",
+            "Text": "Très honnêtement, je ressens l’atavisme de mon espèce.\r\n\r\nLe bâtiment de l’autre côté de la vallée m’attire parce qu’il s’agit d’une construction évidemment humaine et relativement moderne.\r\n\r\nSincèrement, j’espère y trouver de l’aide et le moyen de rentrer chez moi.",
             "ExternalId": "",
             "Position": {
               "x": 6492.0,
               "y": 900.0
             },
-            "ZIndex": 30.0,
+            "ZIndex": 31.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1740,7 +1740,7 @@
               "x": 6492.0,
               "y": 1150.0
             },
-            "ZIndex": 31.0,
+            "ZIndex": 32.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1810,13 +1810,13 @@
               "g": 0.670588255,
               "b": 0.3254902
             },
-            "Text": "Ah, vraiment…\r\n\r\nJ’hésite à classer votre humour entre les catégories \"imporbable\" et \"insupportable\".\r\n\r\nMais vous savez quoi ? Ça me fait du bien.\r\n\r\nJe me sens beaucoup moins seul, dans cet environnement étrange. Moins seul et moins perdu.\r\n\r\nMerci d’être là.",
+            "Text": "Ah, vraiment…\r\n\r\nJ’hésite à classer votre humour entre les catégories \"improbable\" et \"insupportable\".\r\n\r\nMais vous savez quoi ? Ça me fait du bien.\r\n\r\nJe me sens beaucoup moins seul, dans cet environnement étrange. Moins seul et moins perdu.\r\n\r\nMerci d’être là.",
             "ExternalId": "",
             "Position": {
               "x": 8067.0,
               "y": 550.0
             },
-            "ZIndex": 32.0,
+            "ZIndex": 33.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1892,7 +1892,7 @@
               "x": 7692.0,
               "y": 250.0
             },
-            "ZIndex": 35.0,
+            "ZIndex": 36.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -1968,7 +1968,7 @@
               "x": 7692.0,
               "y": 450.0
             },
-            "ZIndex": 36.0,
+            "ZIndex": 37.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2044,7 +2044,7 @@
               "x": 7692.0,
               "y": 650.0
             },
-            "ZIndex": 33.0,
+            "ZIndex": 34.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2120,7 +2120,7 @@
               "x": 7692.0,
               "y": 850.0
             },
-            "ZIndex": 34.0,
+            "ZIndex": 35.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2196,7 +2196,7 @@
               "x": 8417.0,
               "y": 550.0
             },
-            "ZIndex": 37.0,
+            "ZIndex": 38.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2272,7 +2272,7 @@
               "x": 9092.0,
               "y": 225.0
             },
-            "ZIndex": 38.0,
+            "ZIndex": 39.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2342,13 +2342,13 @@
               "g": 0.670588255,
               "b": 0.3254902
             },
-            "Text": "Bien, me voilà arrivé.\r\n\r\nJ’ai suivi la rivière jusqu’à ce qu’elle rencontre le talut du cratère.\r\n\r\nC’est très décevant, vraiment.\r\n\r\nLa rivière plonge dans une sorte de tunnel fermé par une grille métallique. Je ne vois rien de spécial ici.",
+            "Text": "Bien, me voilà arrivé.\r\n\r\nJ’ai suivi la rivière jusqu’à ce qu’elle rencontre le talus du cratère.\r\n\r\nC’est très décevant, vraiment.\r\n\r\nLa rivière plonge dans une sorte de tunnel fermé par une grille métallique. Je ne vois rien de spécial ici.",
             "ExternalId": "",
             "Position": {
               "x": 9442.0,
               "y": 75.0
             },
-            "ZIndex": 39.0,
+            "ZIndex": 40.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2424,7 +2424,7 @@
               "x": 9792.0,
               "y": 75.0
             },
-            "ZIndex": 42.0,
+            "ZIndex": 43.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2494,13 +2494,13 @@
               "g": 0.670588255,
               "b": 0.3254902
             },
-            "Text": "Me voilà de retour.\r\n\r\nEt, vous savez quoi ?\r\n\r\nJe crois que je vais jeter un œil à cet ilôt.\r\n\r\nVous me suivez ?\r\n\r\nBien sûr que vous m’accompagnez, ha ha ha !",
+            "Text": "Me voilà de retour.\r\n\r\nEt, vous savez quoi ?\r\n\r\nJe crois que je vais jeter un œil à cet ilot.\r\n\r\nVous me suivez ?\r\n\r\nBien sûr que vous m’accompagnez, ha ha ha !",
             "ExternalId": "",
             "Position": {
               "x": 10267.0,
               "y": 150.0
             },
-            "ZIndex": 41.0,
+            "ZIndex": 42.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2570,13 +2570,13 @@
               "g": 0.670588255,
               "b": 0.3254902
             },
-            "Text": "Et pourquoi pas ?\r\n\r\nAllons donc voir ce que cet endroit bizarre et pourtant serein a à nous offrir.\r\n\r\nJe vais marcher tranuillement en sifflotant un air sans queue ni tête, et je vous reprend si je tombe sur quelque chose d’insolite.",
+            "Text": "Et pourquoi pas ?\r\n\r\nAllons donc voir ce que cet endroit bizarre et pourtant serein a à nous offrir.\r\n\r\nJe vais marcher tranquillement en sifflotant un air sans queue ni tête, et je vous reprends si je tombe sur quelque chose d’insolite.",
             "ExternalId": "",
             "Position": {
               "x": 9092.0,
               "y": 450.0
             },
-            "ZIndex": 43.0,
+            "ZIndex": 44.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2646,13 +2646,13 @@
               "g": 0.670588255,
               "b": 0.3254902
             },
-            "Text": "Bien.\r\n\r\nC’est très joli, vraiment.\r\n\r\nMais c’est un cul de sac.\r\n\r\nJe suis arrivé devant le talut qui forme le cratère, gardant la rivière à ma droite.\r\n\r\nIci le talut est bien trop haut pour l’escalader. Et je me trouve devant un bassin dans lequel une magnifique cascade déverse des hectolitres d’eau que j’imagine glacée.\r\n\r\nNe me demandez pas pourquoi.",
+            "Text": "Bien.\r\n\r\nC’est très joli, vraiment.\r\n\r\nMais c’est un cul-de-sac.\r\n\r\nJe suis arrivé devant le talus qui forme le cratère, gardant la rivière à ma droite.\r\n\r\nIci, le talus est bien trop haut pour l’escalader. Et je me trouve devant un bassin dans lequel une magnifique cascade déverse des hectolitres d’eau que j’imagine glacée.\r\n\r\nNe me demandez pas pourquoi.",
             "ExternalId": "",
             "Position": {
               "x": 9442.0,
               "y": 450.0
             },
-            "ZIndex": 44.0,
+            "ZIndex": 45.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2722,13 +2722,13 @@
               "g": 0.670588255,
               "b": 0.3254902
             },
-            "Text": "Bref, si j’avais un panier à picnic bien garni, c’est ici que je m’installerais.\r\n\r\nMais, pour le moment, cet idyllique endroit n’a aucun intérêt. Je rebrousse chemin.",
+            "Text": "Bref, si j’avais un panier à pique-nique bien garni, c’est ici que je m’installerais.\r\n\r\nMais, pour le moment, cet idyllique endroit n’a aucun intérêt. Je rebrousse chemin.",
             "ExternalId": "",
             "Position": {
               "x": 9792.0,
               "y": 450.0
             },
-            "ZIndex": 45.0,
+            "ZIndex": 46.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2804,7 +2804,7 @@
               "x": 9092.0,
               "y": 675.0
             },
-            "ZIndex": 46.0,
+            "ZIndex": 47.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2880,7 +2880,7 @@
               "x": 9092.0,
               "y": 900.0
             },
-            "ZIndex": 47.0,
+            "ZIndex": 48.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -2950,13 +2950,13 @@
               "g": 0.23137255,
               "b": 0.3254902
             },
-            "Text": "Me voici donc sur ce petit ilôt.\r\n\r\nC’est plutôt charmant, bucolique.\r\n\r\nPour y accéder, j’ai franchit un petit pont de bois. À vu d’œil, il semble vraiment vieux, mais il est en parfait état.\r\n\r\nÀ vrai dire, cet endroit me donne le sentiment d’être complètement hors du temps.\r\n\r\nL’ilôt n’est pas très grand. Il doit faire à peine quelques dizaines de mètres-carré, mais la végétation y est très dense.\r\n\r\nEntre les bouleaux et les saules pleureurs et les buissons épais, j’ai du mal à deviner les bords de l’autre côté.",
+            "Text": "Me voici donc sur ce petit ilot.\r\n\r\nC’est plutôt charmant, bucolique.\r\n\r\nPour y accéder, j’ai franchi un petit pont de bois. À vu d’œil, il semble vraiment vieux, mais il est en parfait état.\r\n\r\nÀ vrai dire, cet endroit me donne le sentiment d’être complètement hors du temps.\r\n\r\nL’ilot n’est pas très grand. Il doit faire à peine quelques dizaines de mètres carré, mais la végétation y est très dense.\r\n\r\nEntre les bouleaux et les saules pleureurs et les buissons épais, j’ai du mal à deviner les bords de l’autre côté.",
             "ExternalId": "",
             "Position": {
               "x": 10742.0,
               "y": 575.0
             },
-            "ZIndex": 48.0,
+            "ZIndex": 49.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3026,13 +3026,13 @@
               "g": 0.23137255,
               "b": 0.3254902
             },
-            "Text": "Du petit pont un sentier se divise en deux ; d’un côté le chemin se perd dans le sous-bois vers le centre de l’ilôt. De l’autre, le sentier semble plus ou moins longer la berge.\r\n\r\nJ’hésite.",
+            "Text": "Du petit pont, un sentier se divise en deux ; d’un côté le chemin se perd dans le sous-bois vers le centre de l’ilot. De l’autre, le sentier semble plus ou moins longer la berge.\r\n\r\nJ’hésite.",
             "ExternalId": "",
             "Position": {
               "x": 10742.0,
               "y": 800.0
             },
-            "ZIndex": 49.0,
+            "ZIndex": 50.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3102,13 +3102,13 @@
               "g": 0.23137255,
               "b": 0.3254902
             },
-            "Text": "Non, mais !\r\n\r\nVous me croyez impotent ? Trop vieux ?\r\n\r\nJ’ai l’impression de vous entendre : « Allons, papy, ménage-toi ! Toutes ces aventures ne sont plus de ton âge !»\r\n\r\nPetit insolent, je vais vous montrer de quel bois est fait Michel Latrémon !\r\n\r\nAllez, hop, en avant !",
+            "Text": "Non mais !\r\n\r\nVous me croyez impotent ? Trop vieux ?\r\n\r\nJ’ai l’impression de vous entendre : « Allons, papy, ménage-toi ! Toutes ces aventures ne sont plus de ton âge !»\r\n\r\nPetit insolent, je vais vous montrer de quel bois est fait Michel Latrémon !\r\n\r\nAllez, hop, en avant !",
             "ExternalId": "",
             "Position": {
               "x": 11492.0,
               "y": 800.0
             },
-            "ZIndex": 51.0,
+            "ZIndex": 52.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3184,7 +3184,7 @@
               "x": 11492.0,
               "y": 575.0
             },
-            "ZIndex": 50.0,
+            "ZIndex": 51.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3254,13 +3254,13 @@
               "g": 0.23137255,
               "b": 0.3254902
             },
-            "Text": "Incroyable !\r\n\r\nAh, bon sang !\r\n\r\nJ’enrage que cet appareil n’ait pas de caméra.\r\n\r\nJ’aimerai tant vous montrer ce que j’ai découvert !\r\n\r\nJ’en ai presque la larme à l’œil.",
+            "Text": "Incroyable !\r\n\r\nAh, bon sang !\r\n\r\nJ’enrage que cet appareil n’ait pas de caméra.\r\n\r\nJ’aimerais tant vous montrer ce que j’ai découvert !\r\n\r\nJ’en ai presque la larme à l’œil.",
             "ExternalId": "",
             "Position": {
               "x": 11942.0,
               "y": 700.0
             },
-            "ZIndex": 52.0,
+            "ZIndex": 53.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3330,13 +3330,13 @@
               "g": 0.23137255,
               "b": 0.3254902
             },
-            "Text": "C’est une sépulture. Au milieu de cet ilôt, un mausolée a été bâti.\r\n\r\nLe tombeau lui-même est tout ce qu’il y a de plus commun, visiblement d’origine chrétienne.\r\n\r\nSur la dalle a été sculpté un gisant. Et, s’il n’y avait pas de nom sur la stèle, le doute serait pourtant à peine permis.",
+            "Text": "C’est une sépulture. Au milieu de cet ilot, un mausolée a été bâti.\r\n\r\nLe tombeau lui-même est tout ce qu’il y a de plus commun, visiblement d’origine chrétienne.\r\n\r\nSur la dalle a été sculpté un gisant. Et, s’il n’y avait pas de nom sur la stèle, le doute serait pourtant à peine permis.",
             "ExternalId": "",
             "Position": {
               "x": 12717.0,
               "y": 700.0
             },
-            "ZIndex": 53.0,
+            "ZIndex": 54.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3406,13 +3406,13 @@
               "g": 0.23137255,
               "b": 0.3254902
             },
-            "Text": "Bien joué.\r\n\r\nVous Semblez finalement plus éveillé que la plupart de mes étudiants.",
+            "Text": "Bien joué.\r\n\r\nVous semblez finalement plus éveillé que la plupart de mes étudiants.",
             "ExternalId": "",
             "Position": {
               "x": 13467.0,
               "y": 400.0
             },
-            "ZIndex": 54.0,
+            "ZIndex": 55.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3488,7 +3488,7 @@
               "x": 13467.0,
               "y": 800.0
             },
-            "ZIndex": 55.0,
+            "ZIndex": 56.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3564,7 +3564,7 @@
               "x": 11492.0,
               "y": 1275.0
             },
-            "ZIndex": 56.0,
+            "ZIndex": 57.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3640,7 +3640,7 @@
               "x": 14717.0,
               "y": 175.0
             },
-            "ZIndex": 57.0,
+            "ZIndex": 58.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3710,13 +3710,13 @@
               "g": 0.0470588244,
               "b": 0.0470588244
             },
-            "Text": "Je me suis déchaussé, et j’ai remonté mon pantalon au dessus des genoux.\r\n\r\nMaintenant je suis rassuré que cet appareil ne soit pas doté d’un objectif photo.\r\n\r\nConnaissant votre humour, je suis sûr que vous m’auriez réclamé un portrait... en pied.\r\n\r\nAllez, il est temps de voir à quelle température ce charmant ruisseau se trouve.",
+            "Text": "Je me suis déchaussé, et j’ai remonté mon pantalon au-dessus des genoux.\r\n\r\nMaintenant, je suis rassuré que cet appareil ne soit pas doté d’un objectif photo.\r\n\r\nConnaissant votre humour, je suis sûr que vous m’auriez réclamé un portrait... en pied.\r\n\r\nAllez, il est temps de voir à quelle température ce charmant ruisseau se trouve.",
             "ExternalId": "",
             "Position": {
               "x": 15092.0,
               "y": 175.0
             },
-            "ZIndex": 58.0,
+            "ZIndex": 59.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3792,7 +3792,7 @@
               "x": 15467.0,
               "y": 175.0
             },
-            "ZIndex": 59.0,
+            "ZIndex": 60.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3862,13 +3862,13 @@
               "g": 0.0470588244,
               "b": 0.0470588244
             },
-            "Text": "Ho là là…\r\n\r\nJe ne sais pas si vous m’entendez bien.\r\n\r\nJe dois garder les bras au dessus de ma tête.\r\n\r\nMes chaussures dans une main, et cet espèce de téléphone dans l’autre.\r\n\r\nL’eau est bien plus profonde que je ne le craignais. Elle m’arrive presque à la taille.\r\n\r\nEt c’est glacé.\r\n\r\nJe ne sens déjà plus mes pieds.\r\n\r\nJ’ai peur de…",
+            "Text": "Ho là là…\r\n\r\nJe ne sais pas si vous m’entendez bien.\r\n\r\nJe dois garder les bras au dessus de ma tête.\r\n\r\nMes chaussures dans une main, et cette espèce de téléphone dans l’autre.\r\n\r\nL’eau est bien plus profonde que je ne le craignais. Elle m’arrive presque à la taille.\r\n\r\nEt c’est glacé.\r\n\r\nJe ne sens déjà plus mes pieds.\r\n\r\nJ’ai peur de…",
             "ExternalId": "",
             "Position": {
               "x": 15842.0,
               "y": 175.0
             },
-            "ZIndex": 60.0,
+            "ZIndex": 61.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -3944,7 +3944,7 @@
               "x": 16217.0,
               "y": 175.0
             },
-            "ZIndex": 61.0,
+            "ZIndex": 62.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4018,7 +4018,7 @@
               "x": 16592.0,
               "y": 175.0
             },
-            "ZIndex": 62.0,
+            "ZIndex": 63.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4088,13 +4088,13 @@
               "g": 0.23137255,
               "b": 0.3254902
             },
-            "Text": "Façon Trazan !\r\n\r\nHa ha ha !\r\n\r\nOn devrait créer des centres de loisirs proposant ce genre d’activités.\r\n\r\nÇa serait une chouette idée, non ?",
+            "Text": "Façon Tarzan !\r\n\r\nHa ha ha !\r\n\r\nOn devrait créer des centres de loisirs proposant ce genre d’activités.\r\n\r\nÇa serait une chouette idée, non ?",
             "ExternalId": "",
             "Position": {
               "x": 14267.0,
               "y": 950.0
             },
-            "ZIndex": 64.0,
+            "ZIndex": 65.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4170,7 +4170,7 @@
               "x": 15017.0,
               "y": 850.0
             },
-            "ZIndex": 6.0,
+            "ZIndex": 7.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4246,7 +4246,7 @@
               "x": 15017.0,
               "y": 1050.0
             },
-            "ZIndex": 65.0,
+            "ZIndex": 66.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4316,13 +4316,13 @@
               "g": 0.23137255,
               "b": 0.3254902
             },
-            "Text": "Bon, je vais tâcher de grimper.\r\n\r\nJe vous met dans ma poche, le temps d’arriver jusqu’à la branche.\r\n\r\nTâchez de ne pas vous inquiéter pour moi !",
+            "Text": "Bon, je vais tâcher de grimper.\r\n\r\nJe vous mets dans ma poche, le temps d’arriver jusqu’à la branche.\r\n\r\nTâchez de ne pas vous inquiéter pour moi !",
             "ExternalId": "",
             "Position": {
               "x": 15392.0,
               "y": 950.0
             },
-            "ZIndex": 66.0,
+            "ZIndex": 67.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4392,13 +4392,13 @@
               "g": 0.23137255,
               "b": 0.3254902
             },
-            "Text": "Ouf !\r\n\r\nMe voilà à califourchon sur la branche.\r\n\r\nJe vous confirme une chose : elle supportera sans peine mon poids.\r\n\r\nEt je suis vraiment content qu’on ait choisi la voie aérienne.\r\n\r\nD’ici, le courant du petit bras de la rivière semble vraiment terrible.\r\n\r\nBon, je reprend ma reptation.",
+            "Text": "Ouf !\r\n\r\nMe voilà à califourchon sur la branche.\r\n\r\nJe vous confirme une chose : elle supportera sans peine mon poids.\r\n\r\nEt je suis vraiment content qu’on ait choisi la voie aérienne.\r\n\r\nD’ici, le courant du petit bras de la rivière semble vraiment terrible.\r\n\r\nBon, je reprends ma reptation.",
             "ExternalId": "",
             "Position": {
               "x": 15392.0,
               "y": 1250.0
             },
-            "ZIndex": 67.0,
+            "ZIndex": 68.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4468,13 +4468,13 @@
               "g": 0.7647059,
               "b": 0.5019608
             },
-            "Text": "Ah ha !\r\n\r\nMe revoilà sur le bon vieux plancher des vaches.\r\n\r\nJ’avoue que mon cœur s’est accéléré vers la fin, lorsque j’ai atteint le bout de la branche.\r\n\r\nElle a commencé à plier dangereusement.\r\n\r\nMais tout s’est bien passé.\r\n\r\nCela dit, c’est un point de non-retour. La branche a reprit sa position et je n’ai aucun moyen de l’atteindre.\r\n\r\nJ’espère ne pas avoir oublié mes clés de voitures derrière moi.\r\n\r\nC’était drôle, non ?",
+            "Text": "Ah ha !\r\n\r\nMe revoilà sur le bon vieux plancher des vaches.\r\n\r\nJ’avoue que mon cœur s’est accéléré vers la fin, lorsque j’ai atteint le bout de la branche.\r\n\r\nElle a commencé à plier dangereusement.\r\n\r\nMais tout s’est bien passé.\r\n\r\nCela dit, c’est un point de non-retour. La branche a repris sa position et je n’ai aucun moyen de l’atteindre.\r\n\r\nJ’espère ne pas avoir oublié mes clés de voiture derrière moi.\r\n\r\nC’était drôle, non ?",
             "ExternalId": "",
             "Position": {
               "x": 15392.0,
               "y": 1550.0
             },
-            "ZIndex": 68.0,
+            "ZIndex": 69.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4550,7 +4550,7 @@
               "x": 16167.0,
               "y": 1050.0
             },
-            "ZIndex": 70.0,
+            "ZIndex": 71.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4626,7 +4626,7 @@
               "x": 16167.0,
               "y": 1300.0
             },
-            "ZIndex": 69.0,
+            "ZIndex": 70.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4702,7 +4702,7 @@
               "x": 16167.0,
               "y": 1875.0
             },
-            "ZIndex": 71.0,
+            "ZIndex": 72.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4772,13 +4772,13 @@
               "g": 0.607843161,
               "b": 0.7137255
             },
-            "Text": "Bien. Allons voir cette ouverture.\r\n\r\nMais je vous préviens ; je ne suis pas chaud pour recommencer à ramper dans la boue sous des tonnes de roches.\r\n\r\nEncore moins si une entité pan-dimentionnelle est à ma poursuite.\r\n\r\nBon, je vous refait la conversation quand je suis devant.",
+            "Text": "Bien. Allons voir cette ouverture.\r\n\r\nMais je vous préviens ; je ne suis pas chaud pour recommencer à ramper dans la boue sous des tonnes de roches.\r\n\r\nEncore moins si une entité pandimentionnelle est à ma poursuite.\r\n\r\nBon, je reprends cette conversation quand je suis devant.",
             "ExternalId": "",
             "Position": {
               "x": 17092.0,
               "y": 925.0
             },
-            "ZIndex": 72.0,
+            "ZIndex": 73.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4848,13 +4848,13 @@
               "g": 0.607843161,
               "b": 0.7137255
             },
-            "Text": "Hé bien nous y voilà.\r\n\r\nC’est plutôt décevant.\r\n\r\nL’entrée est assez vaste, un peu moins de deux mètres de haut pour un peu plus d’un de large.\r\n\r\nÇa a visiblement été creusé par l’homme. Le tunnel est rectiligne.\r\n\r\nMais la grotte est fermée par une belle grille. Certe elle semble vieille, passablement rouillée, mais très épaisse et encore très solide.",
+            "Text": "Hé bien nous y voilà.\r\n\r\nC’est plutôt décevant.\r\n\r\nL’entrée est assez vaste, un peu moins de deux mètres de haut pour un peu plus d’un de large.\r\n\r\nÇa a visiblement été creusé par l’homme. Le tunnel est rectiligne.\r\n\r\nMais la grotte est fermée par une belle grille. Certes, elle semble vieille, passablement rouillée, mais très épaisse et encore très solide.",
             "ExternalId": "",
             "Position": {
               "x": 17767.0,
               "y": 925.0
             },
-            "ZIndex": 73.0,
+            "ZIndex": 74.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -4930,7 +4930,7 @@
               "x": 18517.0,
               "y": 800.0
             },
-            "ZIndex": 75.0,
+            "ZIndex": 76.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5006,7 +5006,7 @@
               "x": 19117.0,
               "y": 800.0
             },
-            "ZIndex": 77.0,
+            "ZIndex": 78.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5082,7 +5082,7 @@
               "x": 18517.0,
               "y": 1050.0
             },
-            "ZIndex": 80.0,
+            "ZIndex": 81.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5158,7 +5158,7 @@
               "x": 19117.0,
               "y": 1050.0
             },
-            "ZIndex": 79.0,
+            "ZIndex": 80.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5234,7 +5234,7 @@
               "x": 19867.0,
               "y": 800.0
             },
-            "ZIndex": 4.0,
+            "ZIndex": 5.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5304,13 +5304,13 @@
               "g": 0.607843161,
               "b": 0.7137255
             },
-            "Text": "Le tunnel continue sur quelques dizaines de mètres, puis un coude me bouche la vue.\r\n\r\nIl n’y a vraiment rien de notable.\r\n\r\nUn sol de terre battue, des paroies brutes, des fientes de chauve-souris…\r\n\r\nRien d’intéressant, j’en ai peur.",
+            "Text": "Le tunnel continue sur quelques dizaines de mètres, puis un coude me bouche la vue.\r\n\r\nIl n’y a vraiment rien de notable.\r\n\r\nUn sol de terre battue, des parois brutes, des fientes de chauve-souris…\r\n\r\nRien d’intéressant, j’en ai peur.",
             "ExternalId": "",
             "Position": {
               "x": 20467.0,
               "y": 800.0
             },
-            "ZIndex": 1.0,
+            "ZIndex": 2.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5386,7 +5386,7 @@
               "x": 19867.0,
               "y": 1050.0
             },
-            "ZIndex": 76.0,
+            "ZIndex": 77.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5462,7 +5462,7 @@
               "x": 20467.0,
               "y": 1050.0
             },
-            "ZIndex": 78.0,
+            "ZIndex": 79.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5538,7 +5538,7 @@
               "x": 20892.0,
               "y": 925.0
             },
-            "ZIndex": 81.0,
+            "ZIndex": 82.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5560,13 +5560,13 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.286274523,
-                      "g": 0.607843161,
-                      "b": 0.7137255
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000000000A4B",
-                    "Target": "0x100000000000A48"
+                    "TargetPin": "0x10000000000195F",
+                    "Target": "0x10000000000195E"
                   }
                 ]
               }
@@ -5614,7 +5614,7 @@
               "x": 16542.0,
               "y": 1625.0
             },
-            "ZIndex": 82.0,
+            "ZIndex": 83.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5690,7 +5690,7 @@
               "x": 17092.0,
               "y": 1400.0
             },
-            "ZIndex": 83.0,
+            "ZIndex": 85.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5766,7 +5766,7 @@
               "x": 17717.0,
               "y": 1400.0
             },
-            "ZIndex": 84.0,
+            "ZIndex": 86.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5842,7 +5842,7 @@
               "x": 17717.0,
               "y": 1800.0
             },
-            "ZIndex": 86.0,
+            "ZIndex": 88.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5918,7 +5918,7 @@
               "x": 18467.0,
               "y": 1700.0
             },
-            "ZIndex": 87.0,
+            "ZIndex": 89.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -5988,13 +5988,13 @@
               "g": 0.6627451,
               "b": 0.458823532
             },
-            "Text": "Exact. Mais par quel moyen sont-ils parvenu à suivre Malemont, même des siècles plus tard ?",
+            "Text": "Exact. Mais par quel moyen sont-ils parvenus à suivre Malemont, même des siècles plus tard ?",
             "ExternalId": "",
             "Position": {
               "x": 18467.0,
               "y": 1900.0
             },
-            "ZIndex": 88.0,
+            "ZIndex": 90.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6070,7 +6070,7 @@
               "x": 18842.0,
               "y": 1800.0
             },
-            "ZIndex": 89.0,
+            "ZIndex": 91.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6146,7 +6146,7 @@
               "x": 19592.0,
               "y": 1425.0
             },
-            "ZIndex": 90.0,
+            "ZIndex": 92.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6222,7 +6222,7 @@
               "x": 19592.0,
               "y": 1675.0
             },
-            "ZIndex": 92.0,
+            "ZIndex": 94.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6298,7 +6298,7 @@
               "x": 19592.0,
               "y": 2050.0
             },
-            "ZIndex": 91.0,
+            "ZIndex": 93.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6374,7 +6374,7 @@
               "x": 20017.0,
               "y": 1675.0
             },
-            "ZIndex": 93.0,
+            "ZIndex": 95.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6450,7 +6450,7 @@
               "x": 20017.0,
               "y": 1925.0
             },
-            "ZIndex": 94.0,
+            "ZIndex": 96.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6526,7 +6526,7 @@
               "x": 20817.0,
               "y": 1825.0
             },
-            "ZIndex": 96.0,
+            "ZIndex": 98.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6596,13 +6596,13 @@
               "g": 0.5058824,
               "b": 0.305882365
             },
-            "Text": "Au pied de la chose, ce portail est encore plus impressionnant.\r\n\r\nEn fait le portail est même double ; il y a une sorte de sas entre les deux.\r\n\r\nEt tout le périmètre est bardé de fils barbelés et truffé de caméras.\r\n\r\nJe vois aussi une petite cabine, sans doute là où se tenait le planton qui est censé surveiller et autoriser les entrées et sorties.\r\n\r\nMalheureusement, cette cabine se situe entre les deux battants. Je ne peux pas m’y rendre.",
+            "Text": "Au pied de la chose, ce portail est encore plus impressionnant.\r\n\r\nEn fait, le portail est même double ; il y a une sorte de sas entre les deux.\r\n\r\nEt tout le périmètre est bardé de fils barbelés et truffé de caméras.\r\n\r\nJe vois aussi une petite cabine, sans doute là où se tenait le planton qui est censé surveiller et autoriser les entrées et sorties.\r\n\r\nMalheureusement, cette cabine se situe entre les deux battants. Je ne peux pas m’y rendre.",
             "ExternalId": "",
             "Position": {
               "x": 21417.0,
               "y": 1825.0
             },
-            "ZIndex": 95.0,
+            "ZIndex": 97.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6678,7 +6678,7 @@
               "x": 22142.0,
               "y": 1575.0
             },
-            "ZIndex": 97.0,
+            "ZIndex": 99.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6748,13 +6748,13 @@
               "g": 0.5058824,
               "b": 0.305882365
             },
-            "Text": "Bon.\r\n\r\nVous m’aez plutôt bien conseillé.\r\n\r\nJe dois trouver un endroit où je peux tenter d’enjamber cette clôture.",
+            "Text": "Bon.\r\n\r\nVous m’avez plutôt bien conseillé.\r\n\r\nJe dois trouver un endroit où je peux tenter d’enjamber cette clôture.",
             "ExternalId": "",
             "Position": {
               "x": 22867.0,
               "y": 1375.0
             },
-            "ZIndex": 98.0,
+            "ZIndex": 100.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6824,13 +6824,13 @@
               "g": 0.5058824,
               "b": 0.305882365
             },
-            "Text": "Ici peut-être ?\r\n\r\nJe vais tenter d’y monter.\r\n\r\nJe glisse le communicateur dans ma poche de veste. Normalement vous devriez continuer à m’entendre.",
+            "Text": "Ici peut-être ?\r\n\r\nJe vais tenter d’y monter.\r\n\r\nJe glisse le communicateur dans ma poche de veste. Normalement, vous devriez continuer à m’entendre.",
             "ExternalId": "",
             "Position": {
               "x": 23492.0,
               "y": 1375.0
             },
-            "ZIndex": 109.0,
+            "ZIndex": 111.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6906,7 +6906,7 @@
               "x": 23842.0,
               "y": 1375.0
             },
-            "ZIndex": 107.0,
+            "ZIndex": 109.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -6982,7 +6982,7 @@
               "x": 24442.0,
               "y": 1375.0
             },
-            "ZIndex": 106.0,
+            "ZIndex": 108.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7058,7 +7058,7 @@
               "x": 24792.0,
               "y": 1375.0
             },
-            "ZIndex": 108.0,
+            "ZIndex": 110.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7134,7 +7134,7 @@
               "x": 25492.0,
               "y": 1250.0
             },
-            "ZIndex": 105.0,
+            "ZIndex": 107.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7210,7 +7210,7 @@
               "x": 25842.0,
               "y": 1250.0
             },
-            "ZIndex": 101.0,
+            "ZIndex": 103.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7280,13 +7280,13 @@
               "g": 0.0470588244,
               "b": 0.0470588244
             },
-            "Text": "J’ai glissé, et je me suis ratrappé en attrapant un fil à pleine main.\r\n\r\nJe me suis blessé la main en profondeur.\r\n\r\nJe vais essayer de…",
+            "Text": "J’ai glissé, et je me suis rattrapé en attrapant un fil à pleine main.\r\n\r\nJe me suis blessé la main en profondeur.\r\n\r\nJe vais essayer de…",
             "ExternalId": "",
             "Position": {
               "x": 26192.0,
               "y": 1250.0
             },
-            "ZIndex": 100.0,
+            "ZIndex": 102.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7362,7 +7362,7 @@
               "x": 26542.0,
               "y": 1250.0
             },
-            "ZIndex": 99.0,
+            "ZIndex": 101.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7438,7 +7438,7 @@
               "x": 26892.0,
               "y": 1250.0
             },
-            "ZIndex": 104.0,
+            "ZIndex": 106.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7514,7 +7514,7 @@
               "x": 27242.0,
               "y": 1250.0
             },
-            "ZIndex": 103.0,
+            "ZIndex": 105.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7588,7 +7588,7 @@
               "x": 27592.0,
               "y": 1250.0
             },
-            "ZIndex": 63.0,
+            "ZIndex": 64.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7658,13 +7658,13 @@
               "g": 0.5058824,
               "b": 0.305882365
             },
-            "Text": "Oui. C’est plus prudent.\r\n\r\nJe redescend.",
+            "Text": "Oui. C’est plus prudent.\r\n\r\nJe redescends.",
             "ExternalId": "",
             "Position": {
               "x": 25492.0,
               "y": 1500.0
             },
-            "ZIndex": 102.0,
+            "ZIndex": 104.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7740,7 +7740,7 @@
               "x": 22142.0,
               "y": 1825.0
             },
-            "ZIndex": 113.0,
+            "ZIndex": 115.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7816,7 +7816,7 @@
               "x": 22517.0,
               "y": 1825.0
             },
-            "ZIndex": 114.0,
+            "ZIndex": 116.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7892,7 +7892,7 @@
               "x": 22867.0,
               "y": 1825.0
             },
-            "ZIndex": 111.0,
+            "ZIndex": 113.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7962,13 +7962,13 @@
               "g": 0.5058824,
               "b": 0.305882365
             },
-            "Text": "Bon.\r\n\r\nJe me suis époumonné.\r\n\r\nJ’ai agité les bras devant les caméras comme si j’étais possédé par un démon épileptique.\r\n\r\nJe crois qu’il n’y a personne, ici.",
+            "Text": "Bon.\r\n\r\nJe me suis époumoné.\r\n\r\nJ’ai agité les bras devant les caméras comme si j’étais possédé par un démon épileptique.\r\n\r\nJe crois qu’il n’y a personne, ici.",
             "ExternalId": "",
             "Position": {
               "x": 23217.0,
               "y": 1825.0
             },
-            "ZIndex": 112.0,
+            "ZIndex": 114.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -7997,17 +7997,6 @@
                     "Label": "",
                     "TargetPin": "0x1000000000015A0",
                     "Target": "0x10000000000159D"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000000001396",
-                    "Target": "0x100000000001393"
                   }
                 ]
               }
@@ -8055,7 +8044,7 @@
               "x": 22417.0,
               "y": 2325.0
             },
-            "ZIndex": 116.0,
+            "ZIndex": 118.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -8125,13 +8114,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Oh, comme c’est mignon !\r\n\r\nUn paysage de conte de fée.\r\n\r\nOu d’une histoire de Hobbit de m.Tolkien.\r\n\r\nC’est un petit cottage, une cabane en pierre et bois, avec ce qui a dû être un potager, et un puits.\r\n\r\nQuelqu’un a vécu ici il y a longtemps.",
+            "Text": "Oh, comme c’est mignon !\r\n\r\nUn paysage de conte de fées.\r\n\r\nOu d’une histoire de Hobbit de m.Tolkien.\r\n\r\nC’est un petit cottage, une cabane en pierre et bois, avec ce qui a dû être un potager, et un puits.\r\n\r\nQuelqu’un a vécu ici il y a longtemps.",
             "ExternalId": "",
             "Position": {
               "x": 22842.0,
               "y": 2325.0
             },
-            "ZIndex": 126.0,
+            "ZIndex": 128.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -8201,13 +8190,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Ça m’étonnerai fort.\r\n\r\nLe toit est à moitié abandonné.\r\n\r\nLe jardin est redevenu sauvage.\r\n\r\nEt la porte est béante, presque entièrement dégondée, et le bois est complètement vermoulu.",
+            "Text": "Ça m’étonnerait fort.\r\n\r\nLe toit est à moitié abandonné.\r\n\r\nLe jardin est redevenu sauvage.\r\n\r\nEt la porte est béante, presque entièrement dégondée, et le bois est complètement vermoulu.",
             "ExternalId": "",
             "Position": {
               "x": 23542.0,
               "y": 2075.0
             },
-            "ZIndex": 129.0,
+            "ZIndex": 131.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -8283,7 +8272,7 @@
               "x": 23542.0,
               "y": 2325.0
             },
-            "ZIndex": 128.0,
+            "ZIndex": 130.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -8359,7 +8348,7 @@
               "x": 23542.0,
               "y": 2575.0
             },
-            "ZIndex": 127.0,
+            "ZIndex": 129.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -8435,7 +8424,7 @@
               "x": 23917.0,
               "y": 2325.0
             },
-            "ZIndex": 130.0,
+            "ZIndex": 132.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -8511,7 +8500,7 @@
               "x": 23917.0,
               "y": 2575.0
             },
-            "ZIndex": 131.0,
+            "ZIndex": 133.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -8587,7 +8576,7 @@
               "x": 24642.0,
               "y": 2400.0
             },
-            "ZIndex": 132.0,
+            "ZIndex": 134.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -8663,7 +8652,7 @@
               "x": 24642.0,
               "y": 2650.0
             },
-            "ZIndex": 133.0,
+            "ZIndex": 135.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -8739,7 +8728,7 @@
               "x": 24992.0,
               "y": 2525.0
             },
-            "ZIndex": 134.0,
+            "ZIndex": 136.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -8809,13 +8798,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Vous savez, j’ai dit que c’était ure armoire, parce que je devine sa fonction à ce qu’il en reste.\r\n\r\nMais ce n’est guère plus que trois planches encore vaguement dressées.\r\n\r\nSi je respire trop près, elles vont s’effondrer.",
+            "Text": "Vous savez, j’ai dit que c’était une armoire, parce que je devine sa fonction à ce qu’il en reste.\r\n\r\nMais ce n’est guère plus que trois planches encore vaguement dressées.\r\n\r\nSi je respire trop près, elles vont s’effondrer.",
             "ExternalId": "",
             "Position": {
               "x": 25767.0,
               "y": 1975.0
             },
-            "ZIndex": 135.0,
+            "ZIndex": 137.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -8885,13 +8874,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Hmmm…\r\n\r\nIl s’agit donc d’un rectangle de planches vermoulues dans lequel stagne ce qui a dû être un jour un matelas, mais qui est désormais un amas de chose verdâtre, spongieuse et malodorante.\r\n\r\nEn tout cas, je refuse d’y toucher.",
+            "Text": "Hmmm…\r\n\r\nIl s’agit donc d’un rectangle de planches vermoulues dans lequel stagne ce qui a dû être un jour un matelas, mais qui est désormais un amas de choses verdâtre, spongieuse et malodorante.\r\n\r\nEn tout cas, je refuse d’y toucher.",
             "ExternalId": "",
             "Position": {
               "x": 25767.0,
               "y": 2525.0
             },
-            "ZIndex": 136.0,
+            "ZIndex": 138.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -8967,7 +8956,7 @@
               "x": 26567.0,
               "y": 2775.0
             },
-            "ZIndex": 137.0,
+            "ZIndex": 139.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9037,13 +9026,13 @@
               "g": 0.447058827,
               "b": 0.75686276
             },
-            "Text": "Hmm, laissez-moi voir de plus près…\r\n\r\nOh !\r\n\r\nJe comprend mieux son état.\r\n\r\nC’est de la pierre sculptée, mais dans cette pénombre, le poli de la pierre m’a fait croire à du bois.\r\n\r\nExtraordinaire.",
+            "Text": "Hmm, laissez-moi voir de plus près…\r\n\r\nOh !\r\n\r\nJe comprends mieux son état.\r\n\r\nC’est de la pierre sculptée, mais dans cette pénombre, le poli de la pierre m’a fait croire à du bois.\r\n\r\nExtraordinaire.",
             "ExternalId": "",
             "Position": {
               "x": 27292.0,
               "y": 2900.0
             },
-            "ZIndex": 138.0,
+            "ZIndex": 140.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9119,7 +9108,7 @@
               "x": 27892.0,
               "y": 2900.0
             },
-            "ZIndex": 139.0,
+            "ZIndex": 141.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9195,7 +9184,7 @@
               "x": 28642.0,
               "y": 2650.0
             },
-            "ZIndex": 153.0,
+            "ZIndex": 155.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9271,7 +9260,7 @@
               "x": 28642.0,
               "y": 2900.0
             },
-            "ZIndex": 152.0,
+            "ZIndex": 154.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9347,7 +9336,7 @@
               "x": 28642.0,
               "y": 3150.0
             },
-            "ZIndex": 155.0,
+            "ZIndex": 157.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9423,7 +9412,7 @@
               "x": 29292.0,
               "y": 2900.0
             },
-            "ZIndex": 171.0,
+            "ZIndex": 173.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9493,13 +9482,13 @@
               "g": 0.447058827,
               "b": 0.75686276
             },
-            "Text": "Le coffre est creux !\r\n\r\nJe veux dire, il n’y a pas de fond.\r\n\r\nC’est un passage descendant sous le sol de la maison.\r\n\r\nIl y a des échelons scellés contre la paroie.\r\n\r\nÇa m’a l’air solide. Je descend.\r\n\r\nJe vous retrouve en bas.",
+            "Text": "Le coffre est creux !\r\n\r\nJe veux dire, il n’y a pas de fond.\r\n\r\nC’est un passage descendant sous le sol de la maison.\r\n\r\nIl y a des échelons scellés contre la paroi.\r\n\r\nÇa m’a l’air solide. Je descends.\r\n\r\nJe vous retrouve en bas.",
             "ExternalId": "",
             "Position": {
               "x": 29292.0,
               "y": 3100.0
             },
-            "ZIndex": 172.0,
+            "ZIndex": 174.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9569,13 +9558,13 @@
               "g": 0.6627451,
               "b": 0.458823532
             },
-            "Text": "Nous y voilà.\r\n\r\nRetour dans les catacombes.\r\n\r\nAis-le déjà souligné que je suis historien, pas archéologue, bon sang ?\r\n\r\nBon.\r\n\r\nAu moins, j’ai une belle lampe torche puissante. C’est déjà ça.",
+            "Text": "Nous y voilà.\r\n\r\nRetour dans les catacombes.\r\n\r\nAis-je déjà souligné que je suis historien, pas archéologue, bon sang ?\r\n\r\nBon.\r\n\r\nAu moins, j’ai une belle lampe torche puissante. C’est déjà ça.",
             "ExternalId": "",
             "Position": {
               "x": 29892.0,
               "y": 3100.0
             },
-            "ZIndex": 182.0,
+            "ZIndex": 184.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9651,7 +9640,7 @@
               "x": 29892.0,
               "y": 3300.0
             },
-            "ZIndex": 185.0,
+            "ZIndex": 187.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9727,7 +9716,7 @@
               "x": 30667.0,
               "y": 2925.0
             },
-            "ZIndex": 191.0,
+            "ZIndex": 193.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9797,13 +9786,13 @@
               "g": 0.6627451,
               "b": 0.458823532
             },
-            "Text": "Ah.\r\n\r\nLogique, en fait.\r\n\r\nJe suis devant la grille de la grotte.\r\n\r\nDonc, cul de sac.\r\n\r\nBon. Mauvaise pioche.",
+            "Text": "Ah.\r\n\r\nLogique, en fait.\r\n\r\nJe suis devant la grille de la grotte.\r\n\r\nDonc, cul-de-sac.\r\n\r\nBon. Mauvaise pioche.",
             "ExternalId": "",
             "Position": {
               "x": 31292.0,
               "y": 2925.0
             },
-            "ZIndex": 194.0,
+            "ZIndex": 196.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9879,7 +9868,7 @@
               "x": 30667.0,
               "y": 3175.0
             },
-            "ZIndex": 196.0,
+            "ZIndex": 198.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -9949,13 +9938,13 @@
               "g": 0.6627451,
               "b": 0.458823532
             },
-            "Text": "Oh, vous n’êtes pas drôle.\r\n\r\nEt vous vous relâchez.\r\n\r\nBon, puisque c’est comme cela, je prend à ma dextre.\r\n\r\nNa !",
+            "Text": "Oh, vous n’êtes pas drôle.\r\n\r\nEt vous vous relâchez.\r\n\r\nBon, puisque c’est comme cela, je prends à ma dextre.\r\n\r\nNa !",
             "ExternalId": "",
             "Position": {
               "x": 30667.0,
               "y": 3675.0
             },
-            "ZIndex": 199.0,
+            "ZIndex": 201.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10031,7 +10020,7 @@
               "x": 30667.0,
               "y": 3425.0
             },
-            "ZIndex": 200.0,
+            "ZIndex": 202.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10101,13 +10090,13 @@
               "g": 0.6901961,
               "b": 0.545098066
             },
-            "Text": "Oh, non.\r\n\r\nDécidément, je suis condamné à errer sous terre.\r\n\r\nC’est un tunnel, encore.\r\n\r\nJe vois au loin que la sturcture change.\r\n\r\nJe vais m’approcher.",
+            "Text": "Oh, non.\r\n\r\nDécidément, je suis condamné à errer sous terre.\r\n\r\nC’est un tunnel, encore.\r\n\r\nJe vois au loin que la structure change.\r\n\r\nJe vais m’approcher.",
             "ExternalId": "",
             "Position": {
               "x": 31117.0,
               "y": 3425.0
             },
-            "ZIndex": 202.0,
+            "ZIndex": 204.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10183,7 +10172,7 @@
               "x": 31492.0,
               "y": 3425.0
             },
-            "ZIndex": 204.0,
+            "ZIndex": 206.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10259,7 +10248,7 @@
               "x": 31842.0,
               "y": 3425.0
             },
-            "ZIndex": 206.0,
+            "ZIndex": 208.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10335,7 +10324,7 @@
               "x": 32217.0,
               "y": 3425.0
             },
-            "ZIndex": 207.0,
+            "ZIndex": 209.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10411,7 +10400,7 @@
               "x": 32942.0,
               "y": 3300.0
             },
-            "ZIndex": 211.0,
+            "ZIndex": 213.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10487,7 +10476,7 @@
               "x": 33542.0,
               "y": 3300.0
             },
-            "ZIndex": 212.0,
+            "ZIndex": 214.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10563,7 +10552,7 @@
               "x": 32942.0,
               "y": 3550.0
             },
-            "ZIndex": 218.0,
+            "ZIndex": 220.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10633,13 +10622,13 @@
               "g": 0.6,
               "b": 0.772549033
             },
-            "Text": "Une chose est sûre, ce n’est pas l’entrée du château de Versailles.\r\n\r\nPar politesse, je qualifierais l’endroit de malodorant.\r\n\r\nMais, en réalité, ça pue !\r\n\r\nBref, c’est un égoût.",
+            "Text": "Une chose est sûre, ce n’est pas l’entrée du château de Versailles.\r\n\r\nPar politesse, je qualifierais l’endroit de malodorant.\r\n\r\nMais, en réalité, ça pue !\r\n\r\nBref, c’est un égout.",
             "ExternalId": "",
             "Position": {
               "x": 33542.0,
               "y": 3625.0
             },
-            "ZIndex": 219.0,
+            "ZIndex": 221.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10715,7 +10704,7 @@
               "x": 34292.0,
               "y": 3625.0
             },
-            "ZIndex": 223.0,
+            "ZIndex": 225.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10785,13 +10774,13 @@
               "g": 0.6,
               "b": 0.772549033
             },
-            "Text": "Bien.\r\n\r\nMe voilà devant un cul de sac.\r\n\r\nL’égoût continue, naturellement. Mais dans une cavité trop petite pour que j’y rampe.\r\n\r\nPar contre bonne nouvelle.\r\n\r\nIl y a des échelons qui mènent à une plaque.\r\n\r\nJe grimpe…",
+            "Text": "Bien.\r\n\r\nMe voilà devant un cul de sac.\r\n\r\nL’égout continue, naturellement. Mais dans une cavité trop petite pour que j’y rampe.\r\n\r\nPar contre bonne nouvelle.\r\n\r\nIl y a des échelons qui mènent à une plaque.\r\n\r\nJe grimpe…",
             "ExternalId": "",
             "Position": {
               "x": 34292.0,
               "y": 3875.0
             },
-            "ZIndex": 224.0,
+            "ZIndex": 226.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10861,13 +10850,13 @@
               "g": 0.6,
               "b": 0.772549033
             },
-            "Text": "Han !\r\n\r\nDécidément tout ceci n’est plus de mon âge.\r\n\r\nSoulever cette plaque de fonte…\r\n\r\n… tout en prenant garde à ne pas glisser.\r\n\r\nOuf !",
+            "Text": "Han !\r\n\r\nDécidément, tout ceci n’est plus de mon âge.\r\n\r\nSoulever cette plaque de fonte…\r\n\r\n… tout en prenant garde à ne pas glisser.\r\n\r\nOuf !",
             "ExternalId": "",
             "Position": {
               "x": 34292.0,
               "y": 4125.0
             },
-            "ZIndex": 226.0,
+            "ZIndex": 228.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -10937,13 +10926,13 @@
               "g": 0.149019614,
               "b": 0.0
             },
-            "Text": "Me voilà dehors !\r\n\r\nOuf !\r\n\r\nAh, je vous le dit !\r\n\r\nPouvoir se déplier, repirer un air frais et sans odeurs nauséabondes !\r\n\r\nUn réel plaisir !",
+            "Text": "Me voilà dehors !\r\n\r\nOuf !\r\n\r\nAh, je vous le dis !\r\n\r\nPouvoir se déplier, respirer un air frais et sans odeurs nauséabondes !\r\n\r\nUn réel plaisir !",
             "ExternalId": "",
             "Position": {
               "x": 34292.0,
               "y": 4375.0
             },
-            "ZIndex": 225.0,
+            "ZIndex": 227.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -11019,7 +11008,7 @@
               "x": 34667.0,
               "y": 4375.0
             },
-            "ZIndex": 229.0,
+            "ZIndex": 231.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -11089,13 +11078,13 @@
               "g": 0.149019614,
               "b": 0.0
             },
-            "Text": "Tope-là, mec !\r\n\r\nHa ha ha !\r\n\r\nVous n’imaginez pas depuis combien de temps j’ai envie de dire une chose pareille !",
+            "Text": "Tope -là, mec !\r\n\r\nHa ha ha !\r\n\r\nVous n’imaginez pas depuis combien de temps j’ai envie de dire une chose pareille !",
             "ExternalId": "",
             "Position": {
               "x": 35392.0,
               "y": 4125.0
             },
-            "ZIndex": 233.0,
+            "ZIndex": 235.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -11171,7 +11160,7 @@
               "x": 35392.0,
               "y": 4375.0
             },
-            "ZIndex": 235.0,
+            "ZIndex": 237.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -11247,7 +11236,7 @@
               "x": 35392.0,
               "y": 4625.0
             },
-            "ZIndex": 237.0,
+            "ZIndex": 239.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -11317,13 +11306,13 @@
               "g": 0.149019614,
               "b": 0.0
             },
-            "Text": "Bien.\r\n\r\nJe crois que je vais me reposer un peu.\r\n\r\nJe vais m’asseoir ici, contre la clôture, à deux pas de la sortie d’égoût.\r\n\r\nEt je vais en profiter pour étudier un peu ce «Libris Daemonaticaspius».\r\n\r\nJe ne l’ai pas trimballer à travers ce parc naturel edpuis ces catacombes humides pour rien, n’est-ce pas ?\r\n\r\nEt puis, j’aurai peut-être trouvé d’intéressantes informations, d’ici à ce que nous reprenions contact. \r\n\r\nEnsuite, si vous êtes toujours partant pour m’épauler, je propose que nous explorions un peu cet endroit.\r\n\r\nHistoire de voir si nous pouvons trouver quelqu’un ou quelque chose suceptible de me ramener à la maison.",
+            "Text": "Bien.\r\n\r\nJe crois que je vais me reposer un peu.\r\n\r\nJe vais m’asseoir ici, contre la clôture, à deux pas de la sortie d’égout.\r\n\r\nEt je vais en profiter pour étudier un peu ce «Libris Daemonaticaspius».\r\n\r\nJe ne l’ai pas trimballé à travers ce parc naturel depuis ces catacombes humides pour rien, n’est-ce pas ?\r\n\r\nEt puis, j’aurai peut-être trouvé d’intéressantes informations, d’ici à ce que nous reprenions contact. \r\n\r\nEnsuite, si vous êtes toujours partant pour m’épauler, je propose que nous explorions un peu cet endroit.\r\n\r\nHistoire de voir si nous pouvons trouver quelqu’un ou quelque chose susceptible de me ramener à la maison.",
             "ExternalId": "",
             "Position": {
               "x": 35792.0,
               "y": 4375.0
             },
-            "ZIndex": 238.0,
+            "ZIndex": 240.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -11399,7 +11388,7 @@
               "x": 36192.0,
               "y": 4375.0
             },
-            "ZIndex": 241.0,
+            "ZIndex": 243.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -11475,7 +11464,7 @@
               "x": -1547.0,
               "y": 310.45446115165896
             },
-            "ZIndex": 2.0,
+            "ZIndex": 3.0,
             "Size": {
               "w": 345.0,
               "h": 224.0
@@ -11551,7 +11540,7 @@
               "x": -1265.0,
               "y": 573.55277850194375
             },
-            "ZIndex": 3.0,
+            "ZIndex": 4.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -11627,7 +11616,7 @@
               "x": -1015.0,
               "y": 799.55277850194375
             },
-            "ZIndex": 7.0,
+            "ZIndex": 8.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -11703,7 +11692,7 @@
               "x": -758.0,
               "y": 1050.0
             },
-            "ZIndex": 8.0,
+            "ZIndex": 9.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -11774,13 +11763,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Me voilà au bout du chemin.\r\n\r\nJe crois que j’ai fait à peu près la moitié du tour de cette petite île.\r\n\r\nJe vois donc, de l’autre côté de la rivière le reste du cratère.\r\n\r\nEt, franchement, c’est intéressant.\r\n\r\nD’abord, presque en face de moi, j’aperçois un escalier menant à une clôture. J’imagine qu’il s’agit de l’entrée du bâtiment que j’ai vu depuis le campement.\r\n\r\nPlus à ma gauche, il me semble aperçevoir l’entrée d’un tunnel ou d’une grotte.",
+            "Text": "Me voilà au bout du chemin.\r\n\r\nJe crois que j’ai fait à peu près la moitié du tour de cette petite île.\r\n\r\nJe vois donc, de l’autre côté de la rivière le reste du cratère.\r\n\r\nEt, franchement, c’est intéressant.\r\n\r\nD’abord, presque en face de moi, j’aperçois un escalier menant à une clôture. J’imagine qu’il s’agit de l’entrée du bâtiment que j’ai vu depuis le campement.\r\n\r\nPlus à ma gauche, il me semble apercevoir l’entrée d’un tunnel ou d’une grotte.",
             "ExternalId": "",
             "Position": {
               "x": 11917.0,
               "y": 1275.0
             },
-            "ZIndex": 119.0,
+            "ZIndex": 121.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -11851,13 +11840,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Mais avant d’aller gambader dans la prairie tel Laura Ingalls, in me faut encore traverser le bras de la rivière.\r\n\r\nL’avantage, c’est que sa largeur ici est assez étroite.\r\n\r\nL’inconvégnient, c’est que le débit me semble assez rapide, et je n’arrive pas à jauger le fond.",
+            "Text": "Mais avant d’aller gambader dans la prairie telle Laura Ingalls, il me faut encore traverser le bras de la rivière.\r\n\r\nL’avantage, c’est que sa largeur ici est assez étroite.\r\n\r\nL’inconvénient, c’est que le débit me semble assez rapide, et je n’arrive pas à jauger le fond.",
             "ExternalId": "",
             "Position": {
               "x": 11917.0,
               "y": 1525.0
             },
-            "ZIndex": 121.0,
+            "ZIndex": 123.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -11928,13 +11917,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "J’ai également avisé une branche basse surplombant l’eau. L’arbre est assez solide., et la branche épaisse. Je suis sûr qu’elle peut supporter mon poids.\r\n\r\nMais c’est un aller simple. Une fois que j’aurai atterri de l’autre côté, je n’aurai aucun moyen de retour.",
+            "Text": "J’ai également avisé une branche basse surplombant l’eau. L’arbre est assez solide, et la branche épaisse. Je suis sûr qu’elle peut supporter mon poids.\r\n\r\nMais c’est un aller simple. Une fois que j’aurai atterri de l’autre côté, je n’aurai aucun moyen de retour.",
             "ExternalId": "",
             "Position": {
               "x": 11917.0,
               "y": 1775.0
             },
-            "ZIndex": 123.0,
+            "ZIndex": 125.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12011,7 +12000,7 @@
               "x": 11917.0,
               "y": 2025.0
             },
-            "ZIndex": 125.0,
+            "ZIndex": 127.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12081,13 +12070,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "La gravue est en latin. Elle dit :\r\n\r\n« Ci-gît Jehan de Malamorte, sergent templier »\r\n\r\nHmmm…\r\n\r\nIl y avait autre chose gravé en dessous, en plus petit, mais le temps a érodé la pierre et, sans matériel adéquat, je ne peux rien déchiffrer.\r\n\r\nTant pis.",
+            "Text": "La gravure est en latin. Elle dit :\r\n\r\n« Ci-gît Jehan de Malamorte, sergent templier »\r\n\r\nHmmm…\r\n\r\nIl y avait autre chose gravé en dessous, en plus petit, mais le temps a érodé la pierre et, sans matériel adéquat, je ne peux rien déchiffrer.\r\n\r\nTant pis.",
             "ExternalId": "",
             "Position": {
               "x": 13867.0,
               "y": 500.0
             },
-            "ZIndex": 110.0,
+            "ZIndex": 112.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12163,7 +12152,7 @@
               "x": 13867.0,
               "y": 825.0
             },
-            "ZIndex": 115.0,
+            "ZIndex": 117.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12239,7 +12228,7 @@
               "x": 13867.0,
               "y": 1150.0
             },
-            "ZIndex": 117.0,
+            "ZIndex": 119.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12309,13 +12298,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Me voilà au bout du chemin.\r\n\r\nJe crois que j’ai fait à peu près la moitié du tour de cette petite île.\r\n\r\nJe vois donc, de l’autre côté de la rivière le reste du cratère.\r\n\r\nEt, franchement, c’est intéressant.\r\n\r\nD’abord, presque en face de moi, j’aperçois un escalier menant à une clôture. J’imagine qu’il s’agit de l’entrée du bâtiment que j’ai vu depuis le campement.\r\n\r\nPlus à ma gauche, il me semble aperçevoir l’entrée d’un tunnel ou d’une grotte.",
+            "Text": "Me voilà au bout du chemin.\r\n\r\nJe crois que j’ai fait à peu près la moitié du tour de cette petite île.\r\n\r\nJe vois donc, de l’autre côté de la rivière le reste du cratère.\r\n\r\nEt, franchement, c’est intéressant.\r\n\r\nD’abord, presque en face de moi, j’aperçois un escalier menant à une clôture. J’imagine qu’il s’agit de l’entrée du bâtiment que j’ai vu depuis le campement.\r\n\r\nPlus à ma gauche, il me semble apercevoir l’entrée d’un tunnel ou d’une grotte.",
             "ExternalId": "",
             "Position": {
               "x": 13842.0,
               "y": 1500.0
             },
-            "ZIndex": 118.0,
+            "ZIndex": 120.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12391,7 +12380,7 @@
               "x": 13842.0,
               "y": 2475.0
             },
-            "ZIndex": 124.0,
+            "ZIndex": 126.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12461,13 +12450,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Mais avant d’aller gambader dans la prairie tel Laura Ingalls, in me faut encore traverser le bras de la rivière.\r\n\r\nL’avantage, c’est que sa largeur ici est assez étroite.\r\n\r\nL’inconvégnient, c’est que le débit me semble assez rapide, et je n’arrive pas à jauger le fond.",
+            "Text": "Mais avant d’aller gambader dans la prairie telle Laura Ingalls, il me faut encore traverser le bras de la rivière.\r\n\r\nL’avantage, c’est que sa largeur ici est assez étroite.\r\n\r\nL’inconvénient, c’est que le débit me semble assez rapide, et je n’arrive pas à jauger le fond.",
             "ExternalId": "",
             "Position": {
               "x": 13842.0,
               "y": 1850.0
             },
-            "ZIndex": 120.0,
+            "ZIndex": 122.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12537,13 +12526,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "J’ai également avisé une branche basse surplombant l’eau. L’arbre est assez solide., et la branche épaisse. Je suis sûr qu’elle peut supporter mon poids.\r\n\r\nMais c’est un aller simple. Une fois que j’aurai atterri de l’autre côté, je n’aurai aucun moyen de retour.",
+            "Text": "J’ai également avisé une branche basse surplombant l’eau. L’arbre est assez solide, et la branche épaisse. Je suis sûr qu’elle peut supporter mon poids.\r\n\r\nMais c’est un aller simple. Une fois que j’aurai atterri de l’autre côté, je n’aurai aucun moyen de retour.",
             "ExternalId": "",
             "Position": {
               "x": 13842.0,
               "y": 2175.0
             },
-            "ZIndex": 122.0,
+            "ZIndex": 124.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12617,7 +12606,7 @@
               "x": 36567.0,
               "y": 4375.0
             },
-            "ZIndex": 242.0,
+            "ZIndex": 244.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12693,7 +12682,7 @@
               "x": 5142.0,
               "y": -125.0
             },
-            "ZIndex": 154.0,
+            "ZIndex": 156.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12763,13 +12752,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Vous n’avez bien entendu pas pu le voir, mais la chose est devenu le portail qui m’a aspiré ici.\r\n\r\nJe pense qu’elle est restée là-bas.\r\n\r\nJe la crois prisonnière de sa fonction. À la fois gardien et passage.\r\n\r\nJe pense que ce lieu lui est interdit.\r\n\r\nEt, je ne vais pas m’en plaindre.",
+            "Text": "Vous n’avez bien entendu pas pu le voir, mais la chose est devenue le portail qui m’a aspiré ici.\r\n\r\nJe pense qu’elle est restée là-bas.\r\n\r\nJe la crois prisonnière de sa fonction. À la fois gardien et passage.\r\n\r\nJe pense que ce lieu lui est interdit.\r\n\r\nEt, je ne vais pas m’en plaindre.",
             "ExternalId": "",
             "Position": {
               "x": 4792.0,
               "y": -125.0
             },
-            "ZIndex": 156.0,
+            "ZIndex": 158.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12839,13 +12828,13 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Oui, ne vous inquiétez pas.\r\n\r\nJe ne suis pas sûr de n’avoir pas fait une bêtise en l’emportant. Mais ça n’est pas comme si j’avais eu le temps d’y réfléchir.\r\n\r\nNi que je sois un grammairien hors pair qui éviterait les double négations quand il faut.",
+            "Text": "Oui, ne vous inquiétez pas.\r\n\r\nJe ne suis pas sûr de n’avoir pas fait une bêtise en l’emportant. Mais ça n’est pas comme si j’avais eu le temps d’y réfléchir.\r\n\r\nNi que je sois un grammairien hors pair qui éviterait les doubles négations quand il faut.",
             "ExternalId": "",
             "Position": {
               "x": 5892.0,
               "y": -125.0
             },
-            "ZIndex": 167.0,
+            "ZIndex": 169.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -12891,6 +12880,82 @@
           }
         },
         {
+          "Type": "DialogueTemplate",
+          "Properties": {
+            "TechnicalName": "Dlg_D66EF02E",
+            "Id": "0x10000000000195E",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [
+              "0x1000000000001F6"
+            ],
+            "DisplayName": "dial033b",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x10000000000015B"
+            },
+            "Color": {
+              "r": 0.9607843,
+              "g": 0.6627451,
+              "b": 0.458823532
+            },
+            "Text": "Très bien.\r\n\r\nAllons inspecter les abords de cette clôture.\r\n\r\nJe vous raconte ce que j’ai devant les yeux dès que j’y suis.",
+            "ExternalId": "",
+            "Position": {
+              "x": 21267.0,
+              "y": 925.0
+            },
+            "ZIndex": 84.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 3597594670,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000195F",
+                "Owner": "0x10000000000195E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000001960",
+                "Owner": "0x10000000000195E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.286274523,
+                      "g": 0.607843161,
+                      "b": 0.7137255
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000A5A",
+                    "Target": "0x100000000000A57"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 20.0,
+              "MessageSystem": false,
+              "soundTRG": "",
+              "soundBKG": "",
+              "volumeTRG": 0.0,
+              "volumeBKG": 0.0
+            }
+          }
+        },
+        {
           "Type": "ReponseTemplate",
           "Properties": {
             "TechnicalName": "Dlg_7A8102DA",
@@ -12919,7 +12984,7 @@
               "x": 5692.0,
               "y": 450.0
             },
-            "ZIndex": 26.0,
+            "ZIndex": 27.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -13006,7 +13071,7 @@
               "x": 19492.0,
               "y": 800.0
             },
-            "ZIndex": 5.0,
+            "ZIndex": 6.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -13093,7 +13158,7 @@
               "x": 19492.0,
               "y": 1050.0
             },
-            "ZIndex": 74.0,
+            "ZIndex": 75.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -13180,7 +13245,7 @@
               "x": 17717.0,
               "y": 1600.0
             },
-            "ZIndex": 85.0,
+            "ZIndex": 87.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -13267,7 +13332,7 @@
               "x": -408.0,
               "y": 475.0
             },
-            "ZIndex": 244.0,
+            "ZIndex": 246.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -13412,7 +13477,7 @@
               "x": 417.0,
               "y": 225.0
             },
-            "ZIndex": 243.0,
+            "ZIndex": 245.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -13528,7 +13593,7 @@
               "x": 1567.0,
               "y": 250.0
             },
-            "ZIndex": 240.0,
+            "ZIndex": 242.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -13644,7 +13709,7 @@
               "x": 2367.0,
               "y": 175.0
             },
-            "ZIndex": 239.0,
+            "ZIndex": 241.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -13760,7 +13825,7 @@
               "x": 3142.0,
               "y": 75.0
             },
-            "ZIndex": 236.0,
+            "ZIndex": 238.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -13876,7 +13941,7 @@
               "x": 3342.0,
               "y": 775.0
             },
-            "ZIndex": 234.0,
+            "ZIndex": 236.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -13992,7 +14057,7 @@
               "x": 3942.0,
               "y": -225.0
             },
-            "ZIndex": 232.0,
+            "ZIndex": 234.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -14137,7 +14202,7 @@
               "x": 4517.0,
               "y": 750.0
             },
-            "ZIndex": 231.0,
+            "ZIndex": 233.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -14253,7 +14318,7 @@
               "x": 6092.0,
               "y": 750.0
             },
-            "ZIndex": 230.0,
+            "ZIndex": 232.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -14380,7 +14445,7 @@
               "x": 7317.0,
               "y": 500.0
             },
-            "ZIndex": 228.0,
+            "ZIndex": 230.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -14554,7 +14619,7 @@
               "x": 8767.0,
               "y": 550.0
             },
-            "ZIndex": 227.0,
+            "ZIndex": 229.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -14728,7 +14793,7 @@
               "x": 11117.0,
               "y": 800.0
             },
-            "ZIndex": 222.0,
+            "ZIndex": 224.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -14873,7 +14938,7 @@
               "x": 12342.0,
               "y": 700.0
             },
-            "ZIndex": 221.0,
+            "ZIndex": 223.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -14971,7 +15036,7 @@
               "x": 12342.0,
               "y": 1275.0
             },
-            "ZIndex": 220.0,
+            "ZIndex": 222.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -15116,7 +15181,7 @@
               "x": 13067.0,
               "y": 600.0
             },
-            "ZIndex": 217.0,
+            "ZIndex": 219.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -15136,8 +15201,30 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x100000000001221",
-                    "Target": "0x10000000000121F"
+                    "TargetPin": "0x100000000001228",
+                    "Target": "0x100000000001225"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000122E",
+                    "Target": "0x10000000000122B"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000001234",
+                    "Target": "0x100000000001231"
                   }
                 ]
               }
@@ -15239,7 +15326,7 @@
               "x": 14267.0,
               "y": 600.0
             },
-            "ZIndex": 213.0,
+            "ZIndex": 215.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -15355,7 +15442,7 @@
               "x": 14642.0,
               "y": 950.0
             },
-            "ZIndex": 210.0,
+            "ZIndex": 212.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -15471,7 +15558,7 @@
               "x": 15767.0,
               "y": 1550.0
             },
-            "ZIndex": 209.0,
+            "ZIndex": 211.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -15587,7 +15674,7 @@
               "x": 16542.0,
               "y": 1875.0
             },
-            "ZIndex": 208.0,
+            "ZIndex": 210.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -15732,7 +15819,7 @@
               "x": 16567.0,
               "y": 1300.0
             },
-            "ZIndex": 205.0,
+            "ZIndex": 207.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -15848,7 +15935,7 @@
               "x": 18142.0,
               "y": 925.0
             },
-            "ZIndex": 203.0,
+            "ZIndex": 205.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -15964,7 +16051,7 @@
               "x": 18092.0,
               "y": 1800.0
             },
-            "ZIndex": 201.0,
+            "ZIndex": 203.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -16080,7 +16167,7 @@
               "x": 19192.0,
               "y": 1800.0
             },
-            "ZIndex": 198.0,
+            "ZIndex": 200.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -16236,7 +16323,7 @@
               "x": 20392.0,
               "y": 1925.0
             },
-            "ZIndex": 197.0,
+            "ZIndex": 199.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -16352,7 +16439,7 @@
               "x": 21767.0,
               "y": 1825.0
             },
-            "ZIndex": 195.0,
+            "ZIndex": 197.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -16497,7 +16584,7 @@
               "x": 25142.0,
               "y": 1375.0
             },
-            "ZIndex": 193.0,
+            "ZIndex": 195.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -16613,7 +16700,7 @@
               "x": 23192.0,
               "y": 2325.0
             },
-            "ZIndex": 192.0,
+            "ZIndex": 194.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -16758,7 +16845,7 @@
               "x": 24292.0,
               "y": 2525.0
             },
-            "ZIndex": 190.0,
+            "ZIndex": 192.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -16874,7 +16961,7 @@
               "x": 25367.0,
               "y": 2525.0
             },
-            "ZIndex": 189.0,
+            "ZIndex": 191.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -17019,7 +17106,7 @@
               "x": 26117.0,
               "y": 1975.0
             },
-            "ZIndex": 188.0,
+            "ZIndex": 190.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -17135,7 +17222,7 @@
               "x": 26117.0,
               "y": 2525.0
             },
-            "ZIndex": 187.0,
+            "ZIndex": 189.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -17251,7 +17338,7 @@
               "x": 26917.0,
               "y": 2775.0
             },
-            "ZIndex": 186.0,
+            "ZIndex": 188.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -17367,7 +17454,7 @@
               "x": 28242.0,
               "y": 2900.0
             },
-            "ZIndex": 179.0,
+            "ZIndex": 181.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -17512,7 +17599,7 @@
               "x": 30267.0,
               "y": 3300.0
             },
-            "ZIndex": 173.0,
+            "ZIndex": 175.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -17686,7 +17773,7 @@
               "x": 32567.0,
               "y": 3425.0
             },
-            "ZIndex": 160.0,
+            "ZIndex": 162.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -17802,7 +17889,7 @@
               "x": 33917.0,
               "y": 3625.0
             },
-            "ZIndex": 157.0,
+            "ZIndex": 159.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -17900,7 +17987,7 @@
               "x": 35017.0,
               "y": 4375.0
             },
-            "ZIndex": 150.0,
+            "ZIndex": 152.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -18045,7 +18132,7 @@
               "x": 22542.0,
               "y": 1500.0
             },
-            "ZIndex": 141.0,
+            "ZIndex": 143.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -18161,7 +18248,7 @@
               "x": 16992.0,
               "y": 175.0
             },
-            "ZIndex": 216.0,
+            "ZIndex": 218.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -18248,7 +18335,7 @@
               "x": 27967.0,
               "y": 1250.0
             },
-            "ZIndex": 215.0,
+            "ZIndex": 217.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -18335,7 +18422,7 @@
               "x": 36942.0,
               "y": 4375.0
             },
-            "ZIndex": 214.0,
+            "ZIndex": 216.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -18402,7 +18489,7 @@
               "x": 5292.0,
               "y": 725.0
             },
-            "ZIndex": 148.0,
+            "ZIndex": 150.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -18518,7 +18605,7 @@
               "x": 5517.0,
               "y": -125.0
             },
-            "ZIndex": 165.0,
+            "ZIndex": 167.0,
             "Size": {
               "w": 291.0,
               "h": 200.0
@@ -19627,7 +19714,7 @@
             "TechnicalName": "DFr_E981A427",
             "Id": "0x1000000000010C7",
             "Parent": "0x1000000000010AC",
-            "MenuText": "Militaire ou para-militaire ?",
+            "MenuText": "Militaire ou param-ilitaire ?",
             "StageDirections": "",
             "Speaker": "0x100000000000157",
             "Color": {
@@ -19682,7 +19769,7 @@
             "TechnicalName": "DFr_C0750AD0",
             "Id": "0x1000000000010E5",
             "Parent": "0x1000000000010D7",
-            "MenuText": "Vous avez prit un coup sur la tête !",
+            "MenuText": "Vous avez pris un coup sur la tête !",
             "StageDirections": "",
             "Speaker": "0x100000000000157",
             "Color": {
@@ -20075,7 +20162,7 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "À l’arrivée fracassante de la Communauté de l’Anneau poursuivie par des orcs.",
+            "Text": "À l’arrivée fracassante de la Communauté de l’Anneau poursuivie par des orques.",
             "ExternalId": "",
             "Position": {
               "x": 700.0,
@@ -20130,7 +20217,7 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "À l’apparition d’une cabine téléphonique de la police londonnienne.",
+            "Text": "À l’apparition d’une cabine téléphonique de la police londonienne-.",
             "ExternalId": "",
             "Position": {
               "x": 700.0,
@@ -20185,7 +20272,7 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Barre à tribord toute, tiomnnier !",
+            "Text": "Barre à tribord toute, timonier -!",
             "ExternalId": "",
             "Position": {
               "x": 675.0,
@@ -20295,7 +20382,7 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "L’ilot est intriguant, vous ne croyez pas ?",
+            "Text": "L’ilot est intrigant, vous ne croyez pas ?",
             "ExternalId": "",
             "Position": {
               "x": 675.0,
@@ -20460,7 +20547,7 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Ménagez-vous. À votre place je serais épuisé.",
+            "Text": "Ménagez-vous. À votre place, je serais épuisé.",
             "ExternalId": "",
             "Position": {
               "x": 750.0,
@@ -20570,7 +20657,7 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Michel, nous étions d’accord : pas de suspence gratuit.",
+            "Text": "Michel, nous étions d’accord : pas de suspens-e gratuit.",
             "ExternalId": "",
             "Position": {
               "x": 750.0,
@@ -21230,7 +21317,7 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Décidément, vous êtes impayable. Non, vraiment, je ne payerai pas pour votre one-man show.",
+            "Text": "Décidément, vous êtes impayable. Non, vraiment, je ne payerai pas pour votre one-man-show.",
             "ExternalId": "",
             "Position": {
               "x": 725.0,
@@ -21332,7 +21419,7 @@
             "TechnicalName": "DFr_D581DDA8",
             "Id": "0x1000000000012BE",
             "Parent": "0x1000000000012AF",
-            "MenuText": "Je n’ai pas de pièce.",
+            "MenuText": "Je n’ai pas de pièces.",
             "StageDirections": "",
             "Speaker": "0x100000000000157",
             "Color": {
@@ -24035,7 +24122,7 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Vous avez raison. Soyons prudent. Il doit y avoir une autre solution.",
+            "Text": "Vous avez raison. Soyons prudents. Il doit y avoir une autre solution.",
             "ExternalId": "",
             "Position": {
               "x": 750.0,
@@ -24387,81 +24474,6 @@
                     "Label": "",
                     "TargetPin": "0x100000000001854",
                     "Target": "0x100000000001850"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "Hub",
-          "Properties": {
-            "TechnicalName": "Hub_25C6CF09",
-            "Id": "0x10000000000121F",
-            "Parent": "0x100000000001216",
-            "DisplayName": "rep023",
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "",
-            "ExternalId": "",
-            "Position": {
-              "x": 550.0,
-              "y": 400.0
-            },
-            "ZIndex": 0.0,
-            "Size": {
-              "w": 175.0,
-              "h": 50.0
-            },
-            "ShortId": 633786121,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000000001221",
-                "Owner": "0x10000000000121F"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000000001222",
-                "Owner": "0x10000000000121F",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000000001228",
-                    "Target": "0x100000000001225"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x10000000000122E",
-                    "Target": "0x10000000000122B"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000000001234",
-                    "Target": "0x100000000001231"
                   }
                 ]
               }
