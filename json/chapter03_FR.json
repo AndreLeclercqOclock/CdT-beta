@@ -7,7 +7,7 @@
         {
           "Variable": "firstBGSound",
           "Type": "String",
-          "Value": "",
+          "Value": "Bkg_Ch3_Base",
           "Description": "Premier son d'ambiance"
         },
         {
@@ -25,7 +25,7 @@
         {
           "Variable": "namePNJ",
           "Type": "String",
-          "Value": "Pr. Latrémon",
+          "Value": "Michel Latrémon",
           "Description": "Nom de l'interlocuteur"
         }
       ]
@@ -11099,7 +11099,7 @@
               "Timer": 1.0,
               "MessageSystem": false,
               "soundTRG": "",
-              "soundBKG": "",
+              "soundBKG": "Bkg_Ch3_Sous_Sol",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
             }
@@ -11197,7 +11197,7 @@
               "Timer": 1.0,
               "MessageSystem": false,
               "soundTRG": "",
-              "soundBKG": "",
+              "soundBKG": "Bkg_Ch3_Sous_Sol",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
             }
@@ -17034,7 +17034,7 @@
               "Timer": 45.0,
               "MessageSystem": false,
               "soundTRG": "",
-              "soundBKG": "",
+              "soundBKG": "Bkg_Ch3_Hall",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
             }
@@ -35873,7 +35873,7 @@
             "Config": {
               "Timer": 1.0,
               "MessageSystem": false,
-              "soundTRG": "",
+              "soundTRG": "Trg_Ch3_Controle_Commande_1",
               "soundBKG": "",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
@@ -35947,7 +35947,7 @@
             "Config": {
               "Timer": 1.0,
               "MessageSystem": true,
-              "soundTRG": "",
+              "soundTRG": "Trg_Ch3_Reponse_Ordinateur",
               "soundBKG": "",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
@@ -36099,7 +36099,7 @@
             "Config": {
               "Timer": 1.0,
               "MessageSystem": false,
-              "soundTRG": "",
+              "soundTRG": "Trg_Ch3_Controle_Commande_2",
               "soundBKG": "",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
@@ -36173,7 +36173,7 @@
             "Config": {
               "Timer": 1.0,
               "MessageSystem": true,
-              "soundTRG": "",
+              "soundTRG": "Trg_Ch3_Reponse_Ordinateur",
               "soundBKG": "",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
@@ -36325,7 +36325,7 @@
             "Config": {
               "Timer": 1.0,
               "MessageSystem": false,
-              "soundTRG": "",
+              "soundTRG": "Trg_Ch3_Controle_Commande_1",
               "soundBKG": "",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
@@ -36399,7 +36399,7 @@
             "Config": {
               "Timer": 1.0,
               "MessageSystem": true,
-              "soundTRG": "",
+              "soundTRG": "Trg_Ch3_Reponse_Ordinateur",
               "soundBKG": "",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
@@ -37309,7 +37309,7 @@
             "Config": {
               "Timer": 12.0,
               "MessageSystem": false,
-              "soundTRG": "",
+              "soundTRG": "Trg_Ch3_Ouverture_Portail",
               "soundBKG": "",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
@@ -38673,7 +38673,7 @@
             "Config": {
               "Timer": 12.0,
               "MessageSystem": false,
-              "soundTRG": "",
+              "soundTRG": "Trg_Ch3_Ouverture_Portail",
               "soundBKG": "",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
@@ -44055,7 +44055,7 @@
             "Config": {
               "Timer": 12.0,
               "MessageSystem": false,
-              "soundTRG": "",
+              "soundTRG": "Trg_Ch3_Ouverture_Portail",
               "soundBKG": "",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
@@ -45110,7 +45110,7 @@
               "Timer": 1.0,
               "MessageSystem": true,
               "soundTRG": "",
-              "soundBKG": "",
+              "soundBKG": "Theme_Fin",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
             }
@@ -45184,7 +45184,7 @@
               "Timer": 1.0,
               "MessageSystem": true,
               "soundTRG": "",
-              "soundBKG": "",
+              "soundBKG": "Theme_Fin",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
             }
@@ -45258,7 +45258,7 @@
               "Timer": 1.0,
               "MessageSystem": true,
               "soundTRG": "",
-              "soundBKG": "",
+              "soundBKG": "Theme_Fin",
               "volumeTRG": 0.0,
               "volumeBKG": 0.0
             }

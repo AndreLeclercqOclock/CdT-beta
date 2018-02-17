@@ -25,7 +25,7 @@
         {
           "Variable": "namePNJ",
           "Type": "String",
-          "Value": "Pr. Latrémon",
+          "Value": "Michel Latrémon",
           "Description": "Nom de l'interlocuteur"
         }
       ]
