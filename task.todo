@@ -166,19 +166,22 @@
                 ✔ Suppression des textes inutiles @done (2018-1-4 16:36:05)
 
         1.3:
-            ☐ Amélioration de l'UI
-                ☐ Affichage de l'astuce "Cliquez sur l'image pour lancer le chapitre".
-                ☐ Améliorer le visuel du bouton "Envoyer un message..." lorsqu'il est actif.
-                ☐ Améliorer la popup de chargement.
-                ☐ Améliorer les affichages (fade in / fade out)
-                ☐ Ajouter popup au premier lancement "Pour une meilleure immersion nous vous conseillons de porter un casque audio"
-            ☐ Créer un panel de préférences au premier lancement du jeu (son / langues...)
+            ✔ Amélioration de l'UI @done (2018-2-17 11:11:20)
+                ✔ Affichage de l'astuce "Cliquez sur l'image pour lancer le chapitre". @done (2018-2-17 11:10:56)
+                ✔ Améliorer le visuel du bouton "Envoyer un message..." lorsqu'il est actif. @done (2018-2-17 11:10:57)
+                ✔ Améliorer la popup de chargement. @done (2018-2-17 11:10:59)
+                ✔ Améliorer les affichages (fade in / fade out) @done (2018-2-17 11:11:00)
             ✔ Ajouter le sound design du chapitre 2 @done (2018-1-25 09:00:57)
             ✔ Correction des différents bugs de scénario Chapitre 1 & 2 @done (2018-1-26 11:12:34)
             ✔ Unifier le fichier de sauvegarde EN-FR @done (2018-1-16 11:01:46)
             ✔ Ajout des boutons de changements de langues du jeu @done (2018-1-16 10:06:34)
                 ✔ Menu @done (2018-1-16 11:02:02)
                 ✔ Jeu @done (2018-1-16 11:02:05)
+            ✔ Ajouter image Chapitre 3 @done (2018-2-17 11:20:04)
+        1.4:
+            ☐ Créer un panel de préférences au premier lancement du jeu (son / langues...).
+            ☐ Ajouter popup au premier lancement "Pour une meilleure immersion nous vous conseillons de porter un casque audio".
+            ☐ Définir les images définitives de couverture des trois chapitres.
 
 
  

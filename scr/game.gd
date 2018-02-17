@@ -279,6 +279,8 @@ func _ready():
 # Process
 func _process(delta):
 	
+	activate_choices()
+
 	LOAD.saveTime = OS.get_unix_time()
 	system_time()
 	# Affichage de l'heure
@@ -567,7 +569,6 @@ func start():
 			
 			elif item.Type == "ReponseTemplate":
 				get_node("vbox/Bot/ButtonChoices").set("disabled", 0)
-				get_node("vbox/Bot/ButtonChoices/Label").set("visibility/visible", 1)
 				print(str("NOMBRE DE BOUTON ?! :::", item.Properties.OutputPins.size()))
 				for i in range(item.Properties.OutputPins.size()):
 					get_node("Choices/Sprite").set("transform/scale", Vector2(2,i+2))
@@ -658,7 +659,6 @@ func clean():
 func button_action():
 	get_node("Choices").hide()
 	get_node("vbox/Bot/ButtonChoices").set("disabled", 1)
-	get_node("vbox/Bot/ButtonChoices/Label").set("visibility/visible", 0)
 	# Vérification d'un trigger son
 	if ConfigSoundTRG != "":
 		triggerName = ConfigSoundTRG
@@ -1100,3 +1100,24 @@ func _on_buttonUS_pressed():
 	LOAD.scenarioFile = LOAD.lang._Language.Config.scenarioFile[LOAD.actualChapter-1]
 	LOAD._load_chapter()
 	return
+
+func activate_choices():
+	if get_node("vbox/Bot/ButtonChoices").get("disabled") == 0:
+		if get_node("vbox/Bot/ButtonChoices/Label").get("visibility/opacity") == 0:
+			LOAD.tween = get_node("Tween")
+			LOAD.targetNode = get_node("vbox/Bot/ButtonChoices/Label")
+			LOAD.tweenType = "visibility/opacity"
+			LOAD.tweenStart = 0
+			LOAD.tweenEnd = 1
+			LOAD.tweenTime = 0.5
+			LOAD.system_tween()
+		elif get_node("vbox/Bot/ButtonChoices/Label").get("visibility/opacity") == 1:
+			LOAD.tween = get_node("Tween")
+			LOAD.targetNode = get_node("vbox/Bot/ButtonChoices/Label")
+			LOAD.tweenType = "visibility/opacity"
+			LOAD.tweenStart = 1
+			LOAD.tweenEnd = 0
+			LOAD.tweenTime = 1.5
+			LOAD.system_tween()
+	else:
+		get_node("vbox/Bot/ButtonChoices/Label").set("visibility/opacity", 0)

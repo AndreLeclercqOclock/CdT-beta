@@ -13,7 +13,7 @@
         {
           "Variable": "firstDial",
           "Type": "String",
-          "Value": "rep001",
+          "Value": "dial001",
           "Description": "Premier dialogue à lire"
         },
         {
@@ -72,6 +72,13 @@
               "h": 200.0
             },
             "ShortId": 435088799,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000285F",
+                "Owner": "0x1000000000007D0"
+              }
+            ],
             "OutputPins": [
               {
                 "Text": "",
@@ -45409,6 +45416,80 @@
             "Config": {
               "Timer": 5.0,
               "MessageSystem": false,
+              "soundTRG": "",
+              "soundBKG": "",
+              "volumeTRG": 0.0,
+              "volumeBKG": 0.0
+            }
+          }
+        },
+        {
+          "Type": "DialogueTemplate",
+          "Properties": {
+            "TechnicalName": "Dlg_E443DCFF",
+            "Id": "0x100000000002859",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "dial001",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x10000000000011B"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Connexion -----------> OK",
+            "ExternalId": "",
+            "Position": {
+              "x": -133.0,
+              "y": 325.0
+            },
+            "ZIndex": 1281.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 3829652735,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000285C",
+                "Owner": "0x100000000002859"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000285D",
+                "Owner": "0x100000000002859",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000285F",
+                    "Target": "0x1000000000007D0"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "Config": {
+              "Timer": 1.0,
+              "MessageSystem": true,
               "soundTRG": "",
               "soundBKG": "",
               "volumeTRG": 0.0,

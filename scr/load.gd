@@ -26,7 +26,7 @@ var firstDial = null
 var lastDial = null
 var stateSave = null
 var version = null
-var chapterSave = 2
+var chapterSave = 3
 var namePNJ = null
 var firstBGSound = null
 
@@ -70,7 +70,7 @@ var SoundButton = 1
 var tween = null
 var targetNode = null
 var tweenType = null
-var tweenStart = null
+var tweenStart = 0
 var tweenEnd = null
 var tweenTime = null
 
@@ -141,7 +141,7 @@ func _ready():
 	if fileExists == false:
 		MusicButton = 1
 		SoundButton = 1
-		chapterSave = 2
+		chapterSave = 3
 		actualChapter = 1
 		languageCode = 0
 		saveGlobal()

@@ -10,11 +10,14 @@ var imgTexture = null
 var position = null
 
 func _ready():
-
+	set_process(true)
 	loadText()
 	soundOptions()
 	system_arrow()
 	acces_chapter()
+
+func _process(delta):
+	help_message()
 
 func button_pressed(i,y):
 	LOAD.scenarioFile = i
@@ -246,6 +249,7 @@ func loadText():
 	get_node("Titre").set_text(str(LOAD.menuText[1]))
 	get_node("SousTitre").set_text(str(LOAD.menuText[3]))
 	get_node("Chroniques").set_text(str(LOAD.menuText[2]))
+	get_node("help").set_text(str(LOAD.menuText[6]))
 
 	# Textes OPTIONS
 	get_node("Options/VBox/Reset").set_text(str(LOAD.optionsText[0]))
@@ -257,3 +261,21 @@ func loadText():
 	get_node("Credits/ScrollContainer/RichTextLabel").set_text(str(LOAD.creditsText[0]))
 	get_node("Credits/Label").set_text(str(LOAD.optionsText[1]))
 	get_node("Credits/RetourCredits").set_text(str(LOAD.optionsText[3]))
+
+func help_message():
+	if get_node("help").get("visibility/opacity") == 0:
+		LOAD.tween = get_node("Tween")
+		LOAD.targetNode = get_node("help")
+		LOAD.tweenType = "visibility/opacity"
+		LOAD.tweenStart = 0
+		LOAD.tweenEnd = 1
+		LOAD.tweenTime = 1.0
+		LOAD.system_tween()
+	elif get_node("help").get("visibility/opacity") == 1:
+		LOAD.tween = get_node("Tween")
+		LOAD.targetNode = get_node("help")
+		LOAD.tweenType = "visibility/opacity"
+		LOAD.tweenStart = 1
+		LOAD.tweenEnd = 0
+		LOAD.tweenTime = 1.5
+		LOAD.system_tween()
