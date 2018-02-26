@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=1]
+[gd_scene load_steps=62 format=1]
 
 [ext_resource path="res://img/theme.tres" type="Theme" id=1]
 [ext_resource path="res://scr/game.gd" type="Script" id=2]
@@ -32,6 +32,7 @@
 [ext_resource path="res://img/load/activite_ecriture22.png" type="Texture" id=30]
 [ext_resource path="res://font/DEJAVUSANSCONDENSED-BOLD.TTF" type="DynamicFontData" id=31]
 [ext_resource path="res://font/Anke-Regular.ttf" type="DynamicFontData" id=32]
+[ext_resource path="res://img/degrade.png" type="Texture" id=33]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -104,19 +105,12 @@ font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=28]
+[sub_resource type="DynamicFont" id=11]
 
 font/size = 50
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 31 )
-
-[sub_resource type="DynamicFont" id=11]
-
-font/size = 40
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=12]
 
@@ -141,41 +135,41 @@ font/font = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=15]
 
+font/size = 40
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=16]
+
 font/size = 80
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 4 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=17]
 
 atlas = ExtResource( 3 )
 region = Rect2( 697, 314, 127, 122 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=18]
 
 atlas = ExtResource( 3 )
 region = Rect2( 697, 471, 124, 104 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=19]
 
 atlas = ExtResource( 3 )
 region = Rect2( 821, 819, 200, 200 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=20]
 
 atlas = ExtResource( 3 )
 region = Rect2( 615, 819, 200, 200 )
 margin = Rect2( 0, 0, 0, 0 )
-
-[sub_resource type="DynamicFont" id=20]
-
-font/size = 50
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=21]
 
@@ -184,30 +178,30 @@ font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 6 )
 
-[sub_resource type="AtlasTexture" id=22]
-
-atlas = ExtResource( 3 )
-region = Rect2( 857, 156, 128, 128 )
-margin = Rect2( 0, 0, 0, 0 )
-
-[sub_resource type="AtlasTexture" id=23]
-
-atlas = ExtResource( 3 )
-region = Rect2( 857, 11, 128, 128 )
-margin = Rect2( 0, 0, 0, 0 )
-
-[sub_resource type="AtlasTexture" id=24]
-
-atlas = ExtResource( 3 )
-region = Rect2( 697, 156, 128, 128 )
-margin = Rect2( 0, 0, 0, 0 )
-
-[sub_resource type="DynamicFont" id=25]
+[sub_resource type="DynamicFont" id=22]
 
 font/size = 50
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 6 )
+
+[sub_resource type="AtlasTexture" id=23]
+
+atlas = ExtResource( 3 )
+region = Rect2( 857, 156, 128, 128 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=24]
+
+atlas = ExtResource( 3 )
+region = Rect2( 857, 11, 128, 128 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=25]
+
+atlas = ExtResource( 3 )
+region = Rect2( 697, 156, 128, 128 )
+margin = Rect2( 0, 0, 0, 0 )
 
 [sub_resource type="DynamicFont" id=26]
 
@@ -217,6 +211,13 @@ font/use_filter = false
 font/font = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=27]
+
+font/size = 50
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=28]
 
 font/size = 100
 font/use_mipmaps = false
@@ -502,7 +503,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 8 )
 animation = "default"
-frame = 14
+frame = 15
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
@@ -629,7 +630,7 @@ margin/left = 39.0
 margin/top = 9.0
 margin/right = 938.0
 margin/bottom = 115.0
-custom_fonts/font = SubResource( 28 )
+custom_fonts/font = SubResource( 11 )
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -711,7 +712,7 @@ margin/left = 121.0
 margin/top = 0.0
 margin/right = 961.0
 margin/bottom = 100.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -731,7 +732,7 @@ margin/left = 121.0
 margin/top = 130.0
 margin/right = 961.0
 margin/bottom = 230.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -751,7 +752,7 @@ margin/left = 121.0
 margin/top = 260.0
 margin/right = 961.0
 margin/bottom = 360.0
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 14 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -771,7 +772,7 @@ margin/left = 121.0
 margin/top = 390.0
 margin/right = 961.0
 margin/bottom = 490.0
-custom_fonts/font = SubResource( 14 )
+custom_fonts/font = SubResource( 15 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -862,7 +863,7 @@ margin/left = 0.0
 margin/top = -21.0
 margin/right = 1068.0
 margin/bottom = 1862.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 16 )
 custom_colors/font_color = Color( 0.777344, 0.441431, 0.048584, 1 )
 text = "CHARGEMENT..."
 align = 1
@@ -930,6 +931,7 @@ alignment = 0
 
 [node name="Sound" type="HBoxContainer" parent="Game/Popup/VBox"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -954,7 +956,7 @@ margin/bottom = 160.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-textures/normal = SubResource( 16 )
+textures/normal = SubResource( 17 )
 params/resize_mode = 0
 params/scale = Vector2( 1.2, 1.2 )
 params/stretch_mode = 0
@@ -972,7 +974,7 @@ margin/bottom = 160.0
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-textures/normal = SubResource( 17 )
+textures/normal = SubResource( 18 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -991,7 +993,7 @@ disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 18 )
+textures/normal = SubResource( 19 )
 params/resize_mode = 0
 params/scale = Vector2( 0.8, 0.8 )
 params/stretch_mode = 0
@@ -1011,7 +1013,7 @@ disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 19 )
+textures/normal = SubResource( 20 )
 params/resize_mode = 0
 params/scale = Vector2( 0.8, 0.8 )
 params/stretch_mode = 0
@@ -1028,7 +1030,7 @@ margin/left = 0.0
 margin/top = 210.0
 margin/right = 840.0
 margin/bottom = 310.0
-custom_fonts/font = SubResource( 20 )
+custom_fonts/font = SubResource( 21 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1045,7 +1047,7 @@ margin/left = 0.0
 margin/top = 360.0
 margin/right = 840.0
 margin/bottom = 460.0
-custom_fonts/font = SubResource( 21 )
+custom_fonts/font = SubResource( 22 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1079,7 +1081,7 @@ margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 22 )
+textures/normal = SubResource( 23 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -1097,7 +1099,7 @@ margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 23 )
+textures/normal = SubResource( 24 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -1115,7 +1117,7 @@ margin/bottom = 192.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = SubResource( 24 )
+textures/normal = SubResource( 25 )
 params/resize_mode = 0
 params/scale = Vector2( 1.5, 1.5 )
 params/stretch_mode = 0
@@ -1131,7 +1133,7 @@ margin/left = 0.0
 margin/top = 752.0
 margin/right = 840.0
 margin/bottom = 852.0
-custom_fonts/font = SubResource( 25 )
+custom_fonts/font = SubResource( 26 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1148,7 +1150,7 @@ margin/left = 0.0
 margin/top = 902.0
 margin/right = 840.0
 margin/bottom = 1002.0
-custom_fonts/font = SubResource( 26 )
+custom_fonts/font = SubResource( 27 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1165,7 +1167,7 @@ margin/left = 625.0
 margin/top = 525.0
 margin/right = 931.0
 margin/bottom = 625.0
-custom_fonts/font = SubResource( 27 )
+custom_fonts/font = SubResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "bientôt"
 align = 1
@@ -1173,6 +1175,15 @@ valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="degrade" type="Sprite" parent="Game"]
+
+visibility/opacity = 0.0
+transform/pos = Vector2( 13.7381, 1644.36 )
+transform/scale = Vector2( 1, 0.292514 )
+texture = ExtResource( 33 )
+centered = false
+modulate = Color( 1, 0.757202, 0.542969, 1 )
 
 [connection signal="pressed" from="Game/vbox/Top/resetSave" to="Game" method="_on_resetSave_pressed"]
 

@@ -67,6 +67,7 @@ var labelNode = null
 var imgTexture = null
 var actualSound = null
 var sampleMSG = null
+var degrade = 0
 var devMode = 0
 
 ############################### PREPARATION DU SCRIPT ###############################
@@ -880,7 +881,7 @@ func system_save():
 	data = {"_Save" : {"dial" : LOAD.saveDial,"rep" : LOAD.saveRep, "nexttime" : LOAD.saveNextTime, "actualBGSound" : LOAD.actualBGSound}}
 	var file = File.new()
 	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-	file.open(str("user://saveChapter",LOAD.actualChapter,".json"), File.WRITE)
+	file.open(str("user://op0_saveChapter",LOAD.actualChapter,".json"), File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 	return
@@ -998,7 +999,7 @@ func _notification(notification_signal):
 		system_exit()
 
 func _on_Reset_pressed():
-	Directory.new().remove(str("user://saveChapter",LOAD.actualChapter,".json"))
+	Directory.new().remove(str("user://op0_saveChapter",LOAD.actualChapter,".json"))
 	LOAD.saveDial = []
 	LOAD.saveRep = []
 	LOAD.saveTime = []
@@ -1103,6 +1104,7 @@ func _on_buttonUS_pressed():
 
 func activate_choices():
 	if get_node("vbox/Bot/ButtonChoices").get("disabled") == 0:
+		get_node("vbox/Bot/ButtonChoices/Sprite").set("visibility/opacity", 1)
 		if get_node("vbox/Bot/ButtonChoices/Label").get("visibility/opacity") == 0:
 			LOAD.tween = get_node("Tween")
 			LOAD.targetNode = get_node("vbox/Bot/ButtonChoices/Label")
@@ -1119,5 +1121,24 @@ func activate_choices():
 			LOAD.tweenEnd = 0
 			LOAD.tweenTime = 1.5
 			LOAD.system_tween()
+		if degrade == 0:
+			LOAD.tween = get_node("Tween")
+			LOAD.targetNode = get_node("degrade")
+			LOAD.tweenType = "visibility/opacity"
+			LOAD.tweenStart = 0
+			LOAD.tweenEnd = 0.25
+			LOAD.tweenTime = 0.01
+			LOAD.system_tween()
+			degrade = 1
+		elif get_node("degrade").get("visibility/opacity") == 0.25:
+			LOAD.tween = get_node("Tween")
+			LOAD.targetNode = get_node("degrade")
+			LOAD.tweenType = "visibility/opacity"
+			LOAD.tweenStart = 0.25
+			LOAD.tweenEnd = 0
+			LOAD.tweenTime = 0.3
+			LOAD.system_tween()
 	else:
 		get_node("vbox/Bot/ButtonChoices/Label").set("visibility/opacity", 0)
+		get_node("vbox/Bot/ButtonChoices/Sprite").set("visibility/opacity", 0.25)
+		degrade = 0

@@ -74,7 +74,7 @@ func _on_Site_pressed():
 
 
 func _on_Reset_pressed():
-	Directory.new().remove("user://saveglobal.json")
+	Directory.new().remove("user://op0_saveglobal.json")
 	get_tree().reload_current_scene()
 	LOAD._ready()
 

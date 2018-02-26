@@ -26,7 +26,7 @@ var firstDial = null
 var lastDial = null
 var stateSave = null
 var version = null
-var chapterSave = 3
+var chapterSave = 1
 var namePNJ = null
 var firstBGSound = null
 
@@ -52,7 +52,7 @@ var dataNextTime = null
 var timeIG = null
 var time_delay = 0
 var file2check = File.new()
-var fileExists = file2check.file_exists("user://saveglobal.json")
+var fileExists = file2check.file_exists("user://op0_saveglobal.json")
 
 var scene = null
 var node = null
@@ -94,7 +94,7 @@ func _ready():
 	# Vérification de l'existence du fichier de sauvegarde
 	print("Check du SaveLog")
 	file2check = File.new()
-	fileExists = file2check.file_exists("user://saveglobal.json")
+	fileExists = file2check.file_exists("user://op0_saveglobal.json")
 	
 
 	# Chargement de la sauvegarde
@@ -106,7 +106,7 @@ func _ready():
 		print("Ouverture du JSON")
 		var file = File.new()
 		#file.open_encrypted_with_pass("user://savelogs.json", File.READ, "reg65er9g84zertg1zs9ert8g4")
-		file.open("user://saveglobal.json", File.READ)
+		file.open("user://op0_saveglobal.json", File.READ)
 		saveg.parse_json(file.get_line())
 		file.close()
 		print("Fermeture du JSON")
@@ -141,7 +141,7 @@ func _ready():
 	if fileExists == false:
 		MusicButton = 1
 		SoundButton = 1
-		chapterSave = 3
+		chapterSave = 1
 		actualChapter = 1
 		languageCode = 0
 		saveGlobal()
@@ -151,7 +151,7 @@ func _load_chapter():
 	# Vérification de l'existence du fichier de sauvegarde
 	print("Check du SaveLog")
 	file2check = File.new()
-	fileExists = file2check.file_exists(str("user://saveChapter",actualChapter,".json"))
+	fileExists = file2check.file_exists(str("user://op0_saveChapter",actualChapter,".json"))
 
 	if fileExists == true and stateSave == true:
 		# Récupération de la sauvegarde globale
@@ -159,7 +159,7 @@ func _load_chapter():
 		print("Ouverture du JSON")
 		var file = File.new()
 		#file.open_encrypted_with_pass("user://savelogs.json", File.READ, "reg65er9g84zertg1zs9ert8g4")
-		file.open(str("user://saveChapter",actualChapter,".json"), File.READ)
+		file.open(str("user://op0_saveChapter",actualChapter,".json"), File.READ)
 		save.parse_json(file.get_line())
 		file.close()
 		print("Fermeture du JSON")
@@ -223,7 +223,7 @@ func saveGlobal():
 	data = {"_SaveGlobal" : {"chapter" : chapterSave,"actualChapter": actualChapter, "sound" : SoundButton, "music" : MusicButton,"languageCode" : languageCode}}
 	var file = File.new()
 	#file.open_encrypted_with_pass("user://savelogs.json", File.WRITE, "reg65er9g84zertg1zs9ert8g4")
-	file.open("user://saveglobal.json", File.WRITE)
+	file.open("user://op0_saveglobal.json", File.WRITE)
 	file.store_line(data.to_json())
 	file.close()
 	return

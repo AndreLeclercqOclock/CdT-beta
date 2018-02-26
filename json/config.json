@@ -1,7 +1,7 @@
 {
   "_Config" : {
     "stateSave" : true,
-    "version" : "Ver : bêta 1.3",
+    "version" : "Ver : bêta 1.3.2",
     "FR_fr" : "langFR_fr.json",
     "EN_us" : "langEN_us.json"
   }
