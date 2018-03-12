@@ -74,9 +74,15 @@ func _on_Site_pressed():
 
 
 func _on_Reset_pressed():
-	Directory.new().remove("user://op0_saveglobal.json")
+	Directory.new().remove(str("user://op0_saveChapter",LOAD.actualChapter,".json"))
+	LOAD.saveDial = []
+	LOAD.saveRep = []
+	LOAD.saveTime = []
+	LOAD.saveNextTime = []
 	get_tree().reload_current_scene()
 	LOAD._ready()
+	return
+	
 
 func _on_Quitter_pressed():
 	get_tree().quit()

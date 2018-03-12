@@ -694,7 +694,7 @@ playback/speed = 1.0
 [node name="Sprite" type="Sprite" parent="."]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 1, 1 )
+transform/pos = Vector2( 3.27209, -1.27209 )
 texture = ExtResource( 7 )
 centered = false
 

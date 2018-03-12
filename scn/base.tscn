@@ -503,7 +503,7 @@ transform/pos = Vector2( 36.3445, 24.3387 )
 transform/scale = Vector2( 2, 2 )
 frames = SubResource( 8 )
 animation = "default"
-frame = 15
+frame = 3
 playing = true
 
 [node name="LabelDial" type="Label" parent="Game/vbox/Mid/DialBox/VBoxMid"]
@@ -584,6 +584,7 @@ max_lines_visible = -1
 
 [node name="Bot" type="Container" parent="Game/vbox"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -595,6 +596,7 @@ margin/bottom = 0.0
 
 [node name="ButtonChoices" type="Button" parent="Game/vbox/Bot"]
 
+editor/display_folded = true
 visibility/self_opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = true

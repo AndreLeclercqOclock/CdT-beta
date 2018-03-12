@@ -101,7 +101,7 @@ func _ready():
 
 	if LOAD.fileExists == true and LOAD.stateSave == true:
 		# Ecran de chargement
-		get_node("Loading").popup()
+		#get_node("Loading").popup()
 		get_node("Loading/Label").set_text(LOAD.gameText[7])
 		# Réécriture de la Sauvegarde
 		print("Réécriture de la sauvegarde")

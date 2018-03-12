@@ -179,10 +179,14 @@
                 ✔ Jeu @done (2018-1-16 11:02:05)
             ✔ Ajouter image Chapitre 3 @done (2018-2-17 11:20:04)
         1.4:
+            ✔ Définir les images définitives de couverture des trois chapitres. @done (2018-3-12 11:11:05)
+            ✔ Desactivé la popup Chargement @done (2018-3-12 11:46:38)
+            ✔ Refonte du système de suppression de sauvegarde via les menu @done (2018-3-12 12:00:15)
+            ✔ Modifier Image du Chargement (Barbuserie) @done (2018-3-12 11:40:16)
+        1.5:
+            ☐ PORTAGE GODOT 3 @high 
             ☐ Créer un panel de préférences au premier lancement du jeu (son / langues...).
             ☐ Ajouter popup au premier lancement "Pour une meilleure immersion nous vous conseillons de porter un casque audio".
-            ☐ Définir les images définitives de couverture des trois chapitres.
-
 
  
     Divers:

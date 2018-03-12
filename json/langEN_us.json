@@ -2,7 +2,8 @@
     "_Language" : {
         "Config" : {
             "scenarioFile" : [
-                "chapter01_US"
+                "chapter01_US",
+                "chapter02_US"
             ]
         },
         "Menu" : [
@@ -43,7 +44,7 @@ Communication Consultant: Dimitri Régnier
 Game desinged using Godot Engine 2.1
             
 Acknowledgments:
-Nathan 'GDQuest' Lovato, Binogure, Tilican
+Nathan 'GDQuest' Lovato, Binogure, Tilican, Dimitri Régnier
             
 Special Thanks:
             
@@ -54,9 +55,7 @@ From Vincent: To those around me who like what I've created, and especially to m
 De Matthieu : To my family, to my friends, to those who put their trust in me and to life for the opportunities it has given me.
 
 De Georgia : To my French friends, and especially to my boyfriend, for helping me find the right words. To my mother, as always. And to the other Barbus for trusting me with thier baby, which has become my baby, too!  
-
-De Dimitri : To those who believe in me, my friends and family. To those who think that stories can save the world.
-            
+        
 And, finally, thank you for playing this Opus !
 Signed Les Barbus."
         ]
